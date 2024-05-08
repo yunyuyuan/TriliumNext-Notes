@@ -17,11 +17,13 @@ class EtapiError extends Error {
     code: string;
 
     constructor(statusCode: number, code: string, message: string) {
-        super();
+        super(message);
+
+        // Set the prototype explicitly.
+        Object.setPrototypeOf(this, EtapiError.prototype);
 
         this.statusCode = statusCode;
         this.code = code;
-        this.message = message;
     }
 }
 
