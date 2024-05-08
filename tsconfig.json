@@ -8,11 +8,13 @@
 	  "noImplicitAny": true,
 	  "resolveJsonModule": true,
 	  "lib": ["ES2022"],
-	  "downlevelIteration": true
+	  "downlevelIteration": true,
+	  "skipLibCheck": true
 	},
 	"include": [
       "./src/**/*.js",
-	  "./src/**/*.ts"
+	  "./src/**/*.ts",
+    "./*.ts"
 	],
 	"exclude": ["./node_modules/**/*"],
 	"ts-node": {
