@@ -4,10 +4,19 @@
 
 Preliminary disccusions on the successor organization are taking place in [Trilium Next discussions](https://github.com/orgs/TriliumNext/discussions). 
 
-[![Join the chat at https://gitter.im/trilium-notes/Lobby](https://badges.gitter.im/trilium-notes/Lobby.svg)](https://gitter.im/trilium-notes/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [English](https://github.com/zadam/trilium/blob/master/README.md) | [Chinese](https://github.com/zadam/trilium/blob/master/README-ZH_CN.md) | [Russian](https://github.com/zadam/trilium/blob/master/README.ru.md) | [Japanese](https://github.com/zadam/trilium/blob/master/README.ja.md) | [Italian](https://github.com/zadam/trilium/blob/master/README.it.md)
+[English](https://github.com/zadam/trilium/blob/master/README.md) | [Chinese](https://github.com/zadam/trilium/blob/master/README-ZH_CN.md) | [Russian](https://github.com/zadam/trilium/blob/master/README.ru.md) | [Japanese](https://github.com/zadam/trilium/blob/master/README.ja.md) | [Italian](https://github.com/zadam/trilium/blob/master/README.it.md)
 
 
 Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases. 
+
+## Discuss with us
+
+Feel free to join our discussions.
+
+- [XMPP](https://joinjabber.org/): [xmpp:discuss@trilium.thisgreat.party?join](xmpp:discuss@trilium.thisgreat.party?join) ([web link](https://anonymous.cheogram.com/discuss@trilium.thisgreat.party))
+- [Matrix](https://matrix.org/try-matrix/): #trilium:matrix.org ([web link](https://app.element.io/#/room/#trilium:matrix.org))
+
+The two rooms are mirrored, so you can use the protocol of your choice, from the client you prefer, on pretty much any platform under the sun!
 
 See [screenshots](https://github.com/zadam/trilium/wiki/Screenshot-tour) for quick overview:
 
