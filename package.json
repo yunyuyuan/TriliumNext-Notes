@@ -29,7 +29,7 @@
         "build-docs": "npm run build-backend-docs && npm run build-frontend-docs",
         "webpack": "webpack -c webpack.config.js",
         "test-jasmine": "TRILIUM_DATA_DIR=./data-test ts-node ./node_modules/.bin/jasmine",
-        "test-es6": "node -r esm spec-es6/attribute_parser.spec.js ",
+        "test-es6": "ts-node spec-es6/attribute_parser.spec.ts ",
         "test": "npm run test-jasmine && npm run test-es6",
         "postinstall": "rimraf ./node_modules/canvas"
     },
