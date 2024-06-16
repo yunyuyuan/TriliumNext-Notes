@@ -11,7 +11,7 @@ Trilium Notes is a hierarchical note taking application with focus on building l
 
 ## Discuss with us
 
-Feel free to join our official discussions.
+Feel free to join our official discussions and community. We are focused on the development on Trilium, and would love to hear what features, suggestions, or issues you may have!
 
 - [XMPP](https://joinjabber.org/): [xmpp:discuss@trilium.thisgreat.party?join](xmpp:discuss@trilium.thisgreat.party?join) ([web link](https://anonymous.cheogram.com/discuss@trilium.thisgreat.party))
 - [Matrix](https://matrix.org/try-matrix/): #trilium:matrix.org ([web link](https://app.element.io/#/room/#trilium:matrix.org))
