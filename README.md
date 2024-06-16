@@ -11,12 +11,16 @@ Trilium Notes is a hierarchical note taking application with focus on building l
 
 ## Discuss with us
 
-Feel free to join our discussions.
+Feel free to join our official discussions.
 
 - [XMPP](https://joinjabber.org/): [xmpp:discuss@trilium.thisgreat.party?join](xmpp:discuss@trilium.thisgreat.party?join) ([web link](https://anonymous.cheogram.com/discuss@trilium.thisgreat.party))
 - [Matrix](https://matrix.org/try-matrix/): #trilium:matrix.org ([web link](https://app.element.io/#/room/#trilium:matrix.org))
 
-The two rooms are mirrored, so you can use the protocol of your choice, from the client you prefer, on pretty much any platform under the sun!
+The two rooms linked above are mirrored, so you can use either XMPP or Matrix, from any client you prefer, on pretty much any platform under the sun!
+
+### Unofficial Communities
+
+- [Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 
 See [screenshots](https://github.com/zadam/trilium/wiki/Screenshot-tour) for quick overview:
 
