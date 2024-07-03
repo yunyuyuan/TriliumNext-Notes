@@ -24,7 +24,7 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 
 ### Unofficial Communities
 
-    [Trilium Rocks](https://discord.gg/aqdX9mXX4r)
+[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 
 ## 🎁 Features
 
