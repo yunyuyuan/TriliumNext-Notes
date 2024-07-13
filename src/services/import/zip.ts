@@ -20,7 +20,7 @@ import BNote = require('../../becca/entities/bnote');
 import NoteMeta = require('../meta/note_meta');
 import AttributeMeta = require('../meta/attribute_meta');
 import { Stream } from 'stream';
-import { NoteType } from '../../becca/entities/rows';
+import { ALLOWED_NOTE_TYPES, NoteType } from '../../becca/entities/rows';
 
 interface MetaFile {
     files: NoteMeta[]
@@ -231,7 +231,7 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
         if (!parentNoteId) {
             throw new Error("Missing parent note ID.");
         }
-
+        
         const {note} = noteService.createNewNote({
             parentNoteId: parentNoteId,
             title: noteTitle || "",
@@ -462,13 +462,14 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
         }
 
         let type = resolveNoteType(noteMeta?.type);
+        console.log("Resolved note type is ", noteMeta?.type, resolveNoteType(noteMeta?.type));
 
         if (type !== 'file' && type !== 'image') {
             content = content.toString("utf-8");
         }
 
         const noteTitle = utils.getNoteTitle(filePath, taskContext.data?.replaceUnderscoresWithSpaces || false, noteMeta);
-
+        
         content = processNoteContent(noteMeta, type, mime, content, noteTitle || "", filePath);
 
         let note = becca.getNote(noteId);
@@ -653,7 +654,11 @@ function resolveNoteType(type: string | undefined): NoteType {
         return 'webView';
     }
 
-    return "text";
+    if (type && (ALLOWED_NOTE_TYPES as readonly string[]).includes(type)) {
+        return type as NoteType;
+    } else {
+        return "text";
+    }
 }
 
 export = {
