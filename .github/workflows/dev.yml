@@ -1,8 +1,6 @@
 name: Dev
 on:
   push:
-    branches_ignore:
-      - 'feature/fix_build_scripts'
 jobs:
   build_docker:
     name: Build Docker image
