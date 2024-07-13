@@ -3,10 +3,27 @@ on:
   push:
     branches:
       - 'develop'
+      - 'feature/fix_build_scripts'
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 jobs:
+  build_macos_64:
+    name: Build macOS x86_64
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+      - run: npm ci
+      - run: ./bin/build-mac-x64.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trilium-mac-x64.zip
+          path: dist/trilium-mac-x64*.zip
   build_docker:
     name: Build Docker image
     runs-on: ubuntu-latest
