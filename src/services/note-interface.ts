@@ -7,7 +7,7 @@ export interface NoteParams {
     parentNoteId: string;
     templateNoteId?: string;
     title: string;
-    content: string;
+    content: string | Buffer;
     /** text, code, file, image, search, book, relationMap, canvas, webView */
     type: NoteType;
     /** default value is derived from default mimes for type */

@@ -500,10 +500,6 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
             }
         }
         else {
-            if (typeof content !== "string") {
-                throw new Error("Incorrect content type.");
-            }
-
             ({note} = noteService.createNewNote({
                 parentNoteId: parentNoteId,
                 title: noteTitle || "",

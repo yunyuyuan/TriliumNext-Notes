@@ -107,5 +107,5 @@ export interface NoteRow {
     dateModified: string;
     utcDateCreated: string;
     utcDateModified: string;
-    content?: string;
+    content?: string | Buffer;
 }
