@@ -2,7 +2,7 @@
   "name": "trilium",
   "productName": "Trilium Notes",
   "description": "Trilium Notes",
-  "version": "0.63.6",
+  "version": "0.63.7",
   "license": "AGPL-3.0-only",
   "main": "electron.js",
   "bin": {
@@ -32,7 +32,7 @@
     "test-jasmine": "TRILIUM_DATA_DIR=~/trilium/data-test jasmine",
     "test-es6": "node -r esm spec-es6/attribute_parser.spec.js ",
     "test": "npm run test-jasmine && npm run test-es6",
-    "postinstall": "rimraf ./node_modules/canvas && npm run rebuild"
+    "postinstall": "rimraf ./node_modules/canvas"
   },
   "dependencies": {
     "@braintree/sanitize-url": "6.0.4",
