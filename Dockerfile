@@ -24,6 +24,7 @@ COPY server-package.json package.json
 # Copy TypeScript build artifacts into the original directory structure.
 RUN ls
 RUN cp -R build/src/* src/.
+RUN rm -r build
 
 # Install app dependencies
 RUN set -x \
