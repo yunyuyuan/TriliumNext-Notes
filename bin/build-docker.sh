@@ -5,6 +5,9 @@ SERIES=${VERSION:0:4}-latest
 
 cat package.json | grep -v electron > server-package.json
 
+echo "Compiling typescript..."
+npx tsc
+
 sudo docker build -t zadam/trilium:$VERSION --network host -t zadam/trilium:$SERIES .
 
 if [[ $VERSION != *"beta"* ]]; then

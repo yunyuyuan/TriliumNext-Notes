@@ -13,8 +13,7 @@
 	},
 	"include": [
       "./src/**/*.js",
-	  "./src/**/*.ts",
-    "./*.ts"
+	  "./src/**/*.ts"
 	],
 	"exclude": ["./node_modules/**/*"],
 	"ts-node": {
