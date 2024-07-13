@@ -231,7 +231,7 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
         if (!parentNoteId) {
             throw new Error("Missing parent note ID.");
         }
-        
+
         const {note} = noteService.createNewNote({
             parentNoteId: parentNoteId,
             title: noteTitle || "",
@@ -462,14 +462,13 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
         }
 
         let type = resolveNoteType(noteMeta?.type);
-        console.log("Resolved note type is ", noteMeta?.type, resolveNoteType(noteMeta?.type));
 
         if (type !== 'file' && type !== 'image') {
             content = content.toString("utf-8");
         }
 
         const noteTitle = utils.getNoteTitle(filePath, taskContext.data?.replaceUnderscoresWithSpaces || false, noteMeta);
-        
+
         content = processNoteContent(noteMeta, type, mime, content, noteTitle || "", filePath);
 
         let note = becca.getNote(noteId);
