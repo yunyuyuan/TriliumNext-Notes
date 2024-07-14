@@ -1,5 +1,5 @@
-const fs = require("fs-extra");
-const path = require("path");
+import fs from "fs-extra";
+import path from "path";
 
 const DEST_DIR = "./dist";
 const DEST_DIR_SRC = path.join(DEST_DIR, "src");
@@ -15,6 +15,12 @@ async function copyNodeModuleFileOrFolder(source: string) {
 }
 
 const copy = async () => {
+  for (const srcFile of fs.readdirSync("build")) {    
+    const destFile = path.join(DEST_DIR, path.basename(srcFile));
+    console.log(`Copying source ${srcFile} -> ${destFile}.`);
+    fs.copySync(path.join("build", srcFile), destFile, { recursive: true });
+  }
+
   const filesToCopy = ["config-sample.ini"];
   for (const file of filesToCopy) {
     console.log(`Copying ${file}`);
@@ -27,11 +33,11 @@ const copy = async () => {
     await fs.copy(dir, path.join(DEST_DIR, dir));
   }
 
-  const srcDirsToCopy = ["./src/public", "./src/views"];
+  const srcDirsToCopy = ["./src/public", "./src/views", "./build"];
   for (const dir of srcDirsToCopy) {
     console.log(`Copying ${dir}`);
     await fs.copy(dir, path.join(DEST_DIR_SRC, path.basename(dir)));
-  }
+  }  
 
   const nodeModulesFile = [
     "node_modules/react/umd/react.production.min.js",
