@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+shopt -s globstar
+set -e
+
 if [[ $# -eq 0 ]] ; then
     echo "Missing argument of target directory"
     exit 1
@@ -9,25 +12,36 @@ if ! [[ $(which npm) ]]; then
     exit 1
 fi
 
-n exec 18.18.2 npm run webpack || npm run webpack
+# Trigger the TypeScript build
+echo TypeScript build start
+npx tsc
+echo TypeScript build finished
 
+# Copy the TypeScript artifacts
 DIR="$1"
-
 rm -rf "$DIR"
 mkdir -pv "$DIR"
+
+echo Webpack start
+npm run webpack
+echo Webpack finish
 
 echo "Copying Trilium to build directory $DIR"
 
 for d in 'images' 'libraries' 'src' 'db'; do
     cp -r "$d" "$DIR"/
 done
-for f in 'package.json' 'package-lock.json' 'README.md' 'LICENSE' 'config-sample.ini' 'electron.js'; do
+
+for f in 'package.json' 'package-lock.json' 'README.md' 'LICENSE' 'config-sample.ini'; do
     cp "$f" "$DIR"/
 done
-cp webpack-* "$DIR"/      # here warning because there is no 'webpack-*', but webpack.config.js only
+
+script_dir=$(realpath $(dirname $0))
+cp -Rv "$script_dir/../build/src" "$DIR"
+cp "$script_dir/../build/electron.js" "$DIR"
 
 # run in subshell (so we return to original dir)
-(cd $DIR && n exec 18.18.2 npm install --only=prod)
+(cd $DIR && npm install --only=prod)
 
 if [[ -d "$DIR"/node_modules ]]; then
 # cleanup of useless files in dependencies
