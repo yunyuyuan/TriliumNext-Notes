@@ -23,6 +23,22 @@ jobs:
         with:
           name: trilium-mac-x64.zip
           path: dist/trilium-mac-x64*.zip
+  build_darwin-arm64:
+    name: Build macOS aarch64
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+      - run: npm ci
+      - run: ./bin/build-mac-arm64.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trilium-mac-arm64.zip
+          path: dist/trilium-mac-arm64*.zip
   build_linux-x64:
     name: Build Linux x86_64
     runs-on: ubuntu-latest
