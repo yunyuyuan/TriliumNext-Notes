@@ -1666,7 +1666,7 @@ class BNote extends AbstractBeccaEntity<BNote> {
     getPojo(): NotePojo {
         return {
             noteId: this.noteId,
-            title: this.title || undefined,
+            title: this.title,
             isProtected: this.isProtected,
             type: this.type,
             mime: this.mime,
