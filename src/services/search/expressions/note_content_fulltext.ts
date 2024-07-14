@@ -74,7 +74,7 @@ class NoteContentFulltextExp extends Expression {
         }
 
         if (isProtected) {
-            if (!protectedSessionService.isProtectedSessionAvailable() || !content) {
+            if (!protectedSessionService.isProtectedSessionAvailable() || !content || typeof content !== "string") {
                 return;
             }
 
@@ -86,7 +86,7 @@ class NoteContentFulltextExp extends Expression {
             }
         }
 
-        if (!content) {
+        if (!content || typeof content !== "string") {
             return;
         }
 

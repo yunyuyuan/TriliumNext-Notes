@@ -20,7 +20,7 @@ import BNote = require('../../becca/entities/bnote');
 import NoteMeta = require('../meta/note_meta');
 import AttributeMeta = require('../meta/attribute_meta');
 import { Stream } from 'stream';
-import { NoteType } from '../../becca/entities/rows';
+import { ALLOWED_NOTE_TYPES, NoteType } from '../../becca/entities/rows';
 
 interface MetaFile {
     files: NoteMeta[]
@@ -499,10 +499,6 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
             }
         }
         else {
-            if (typeof content !== "string") {
-                throw new Error("Incorrect content type.");
-            }
-
             ({note} = noteService.createNewNote({
                 parentNoteId: parentNoteId,
                 title: noteTitle || "",
@@ -653,7 +649,11 @@ function resolveNoteType(type: string | undefined): NoteType {
         return 'webView';
     }
 
-    return "text";
+    if (type && (ALLOWED_NOTE_TYPES as readonly string[]).includes(type)) {
+        return type as NoteType;
+    } else {
+        return "text";
+    }
 }
 
 export = {
