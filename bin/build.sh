@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 if ! command -v jq &> /dev/null; then
   echo "Missing command: jq"
   exit 1
@@ -42,6 +40,7 @@ cp -r $SRC_DIR ./dist/trilium-windows-x64-src
 cp -r $SRC_DIR ./dist/trilium-mac-x64-src
 cp -r $SRC_DIR ./dist/trilium-mac-arm64-src
 
+set -e
 bin/build-win-x64.sh DONTCOPY
 
 bin/build-mac-x64.sh DONTCOPY

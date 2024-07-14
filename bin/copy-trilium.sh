@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 shopt -s globstar
-set -e
 
 if [[ $# -eq 0 ]] ; then
     echo "Missing argument of target directory"
