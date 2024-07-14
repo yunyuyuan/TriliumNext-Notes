@@ -98,7 +98,7 @@ function createTray() {
     }
 
     tray = new Tray(getIconPath());
-    tray.setToolTip('Trilium Notes')
+    tray.setToolTip('TriliumNext Notes')
     // Restore focus
     tray.on('click', changeVisibility)
     updateTrayMenu();

@@ -204,7 +204,7 @@ const TPL = `
 
         <li class="dropdown-item show-about-dialog-button">
             <span class="bx bx-empty"></span>
-            About Trilium Notes
+            About TriliumNext Notes
         </li>
 
         <li class="dropdown-item update-to-latest-version-button" data-trigger-command="downloadLatestVersion">
