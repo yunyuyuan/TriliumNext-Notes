@@ -7,6 +7,11 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
+if ! command -v jq &> /dev/null; then
+  echo "Missing command: jq"
+  exit 1
+fi
+
 VERSION=$1
 
 if ! [[ ${VERSION} =~ ^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}(-.+)?$ ]] ;
