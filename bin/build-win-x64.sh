@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if ! command -v wine &> /dev/null; then
+  echo "Missing command: wine"
+  exit 1
+fi
+
 SRC_DIR=./dist/trilium-windows-x64-src
 
 if [ "$1" != "DONTCOPY" ]
