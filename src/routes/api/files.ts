@@ -169,6 +169,8 @@ function saveAttachmentToTmpDir(req: Request) {
     return saveToTmpDir(fileName, content, 'attachments', attachment.attachmentId);
 }
 
+const createdTemporaryFiles = new Set<string>();
+
 function saveToTmpDir(fileName: string, content: string | Buffer, entityType: string, entityId: string) {
     const tmpObj = tmp.fileSync({ postfix: fileName });
 
@@ -179,6 +181,8 @@ function saveToTmpDir(fileName: string, content: string | Buffer, entityType: st
     }
 
     fs.closeSync(tmpObj.fd);
+
+    createdTemporaryFiles.add(tmpObj.name);
 
     log.info(`Saved temporary file ${tmpObj.name}`);
 
@@ -202,6 +206,10 @@ function saveToTmpDir(fileName: string, content: string | Buffer, entityType: st
 function uploadModifiedFileToNote(req: Request) {
     const noteId = req.params.noteId;
     const {filePath} = req.body;
+
+    if (!createdTemporaryFiles.has(filePath)) {
+        throw new ValidationError(`File '${filePath}' is not a temporary file.`);
+    }
 
     const note = becca.getNoteOrThrow(noteId);
 
