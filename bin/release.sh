@@ -27,7 +27,8 @@ fi
 
 echo "Releasing Trilium $VERSION"
 
-jq '.version = "'$VERSION'"' package.json|sponge package.json
+jq '.version = "'$VERSION'"' package.json > package.json.tmp
+mv package.json.tmp package.json
 
 git add package.json
 
