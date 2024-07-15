@@ -22,7 +22,7 @@ async function createExtraWindow(extraWindowHash: string) {
     const win = new BrowserWindow({
         width: 1000,
         height: 800,
-        title: 'Trilium Notes',
+        title: 'TriliumNext Notes',
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -60,7 +60,7 @@ async function createMainWindow(app: App) {
         y: mainWindowState.y,
         width: mainWindowState.width,
         height: mainWindowState.height,
-        title: 'Trilium Notes',
+        title: 'TriliumNext Notes',
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -132,7 +132,7 @@ async function createSetupWindow() {
     setupWindow = new BrowserWindow({
         width: 800,
         height: 800,
-        title: 'Trilium Notes Setup',
+        title: 'TriliumNext Notes Setup',
         icon: getIcon(),
         webPreferences: {
             // necessary for e.g. utils.isElectron()

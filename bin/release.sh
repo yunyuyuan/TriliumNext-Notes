@@ -7,6 +7,11 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
+if ! command -v jq &> /dev/null; then
+  echo "Missing command: jq"
+  exit 1
+fi
+
 VERSION=$1
 
 if ! [[ ${VERSION} =~ ^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}(-.+)?$ ]] ;
@@ -22,7 +27,8 @@ fi
 
 echo "Releasing Trilium $VERSION"
 
-jq '.version = "'$VERSION'"' package.json|sponge package.json
+jq '.version = "'$VERSION'"' package.json > package.json.tmp
+mv package.json.tmp package.json
 
 git add package.json
 
@@ -48,6 +54,7 @@ LINUX_X64_BUILD=trilium-linux-x64-$VERSION.tar.xz
 DEBIAN_X64_BUILD=trilium_${VERSION}_amd64.deb
 WINDOWS_X64_BUILD=trilium-windows-x64-$VERSION.zip
 MAC_X64_BUILD=trilium-mac-x64-$VERSION.zip
+MAC_ARM64_BUILD=trilium-mac-arm64-$VERSION.zip
 SERVER_BUILD=trilium-linux-x64-server-$VERSION.tar.xz
 
 echo "Creating release in GitHub"
@@ -68,4 +75,5 @@ gh release create "$TAG" \
     "dist/$LINUX_X64_BUILD" \
     "dist/$WINDOWS_X64_BUILD" \
     "dist/$MAC_X64_BUILD" \
+    "dist/$MAC_ARM64_BUILD" \
     "dist/$SERVER_BUILD"

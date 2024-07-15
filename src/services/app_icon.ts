@@ -10,7 +10,7 @@ import utils = require('./utils');
 
 const template = `[Desktop Entry]
 Type=Application
-Name=Trilium Notes
+Name=TriliumNext Notes
 Icon=#APP_ROOT_DIR#/icon.png
 Exec=#EXE_PATH#
 Categories=Office

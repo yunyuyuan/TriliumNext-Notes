@@ -1644,10 +1644,7 @@ class BNote extends AbstractBeccaEntity<BNote> {
             position
         });
 
-        if (!content) {
-            throw new Error("Attempted to save an attachment with no content.");
-        }
-
+        content = content || "";
         attachment.setContent(content, {forceSave: true});
 
         return attachment;
@@ -1669,7 +1666,7 @@ class BNote extends AbstractBeccaEntity<BNote> {
     getPojo(): NotePojo {
         return {
             noteId: this.noteId,
-            title: this.title || undefined,
+            title: this.title,
             isProtected: this.isProtected,
             type: this.type,
             mime: this.mime,

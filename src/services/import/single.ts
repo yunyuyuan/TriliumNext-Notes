@@ -49,9 +49,6 @@ function importImage(file: File, parentNote: BNote, taskContext: TaskContext) {
 }
 
 function importFile(taskContext: TaskContext, file: File, parentNote: BNote) {
-    if (typeof file.buffer !== "string") {
-        throw new Error("Invalid file content for text.");
-    }
     const originalName = file.originalname;
 
     const {note} = noteService.createNewNote({

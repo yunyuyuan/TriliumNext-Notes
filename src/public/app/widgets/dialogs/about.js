@@ -7,7 +7,7 @@ const TPL = `
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">About Trilium Notes</h5>
+                <h5 class="modal-title mr-auto">About TriliumNext Notes</h5>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0;">
                     <span aria-hidden="true">&times;</span>
@@ -17,7 +17,7 @@ const TPL = `
                 <table class="table table-borderless">
                     <tr>
                         <th>Homepage:</th>
-                        <td><a href="https://github.com/zadam/trilium" class="external">https://github.com/zadam/trilium</a></td>
+                        <td><a href="https://github.com/TriliumNext/Notes" class="external">https://github.com/TriliumNext/Notes</a></td>
                     </tr>
                     <tr>
                         <th>App version:</th>
@@ -70,7 +70,7 @@ export default class AboutDialog extends BasicWidget {
         this.$syncVersion.text(appInfo.syncVersion);
         this.$buildDate.text(appInfo.buildDate);
         this.$buildRevision.text(appInfo.buildRevision);
-        this.$buildRevision.attr('href', `https://github.com/zadam/trilium/commit/${appInfo.buildRevision}`);
+        this.$buildRevision.attr('href', `https://github.com/TriliumNext/Notes/commit/${appInfo.buildRevision}`);
         this.$dataDirectory.text(appInfo.dataDirectory);
     }
 
