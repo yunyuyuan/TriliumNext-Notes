@@ -202,7 +202,9 @@ describe('Search', () => {
 
         function test(query: string, expectedResultCount: number) {
             const searchResults = searchService.findResultsWithQuery(query, searchContext);
-            expect(searchResults.length).toEqual(expectedResultCount);
+            expect(searchResults.length)
+                .withContext(`While searching for ${query} got unexpected result: [${searchResults.join(", ")}]`)
+                .toEqual(expectedResultCount);
 
             if (expectedResultCount === 1) {
                 expect(becca_mocking.findNoteByTitle(searchResults, 'My note')).toBeTruthy();
