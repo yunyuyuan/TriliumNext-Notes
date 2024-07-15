@@ -76,11 +76,11 @@ function updateEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, instan
 
 function updateNormalEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, instanceId: string, updateContext: UpdateContext) {
     const localEC = sql.getRow<EntityChange | undefined>(`SELECT * FROM entity_changes WHERE entityName = ? AND entityId = ?`, [remoteEC.entityName, remoteEC.entityId]);
-    const localECIsOlderThanRemote = (
+    const localECIsOlderOrSameAsRemote = (
             localEC && localEC.utcDateChanged && remoteEC.utcDateChanged &&
             localEC.utcDateChanged <= remoteEC.utcDateChanged);
 
-    if (!localEC || localECIsOlderThanRemote) {
+    if (!localEC || localECIsOlderOrSameAsRemote) {
         if (remoteEC.isErased) {
             if (localEC?.isErased) {
                 eraseEntity(remoteEC); // make sure it's erased anyway
@@ -103,7 +103,7 @@ function updateNormalEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, 
         }
 
         if (!localEC
-            || localECIsOlderThanRemote
+            || localECIsOlderOrSameAsRemote
             || localEC.hash !== remoteEC.hash
             || localEC.isErased !== remoteEC.isErased
         ) {
@@ -112,7 +112,7 @@ function updateNormalEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, 
 
         return true;
     } else if ((localEC.hash !== remoteEC.hash || localEC.isErased !== remoteEC.isErased)
-                && !localECIsOlderThanRemote) {
+                && !localECIsOlderOrSameAsRemote) {
         // the change on our side is newer than on the other side, so the other side should update
         entityChangesService.putEntityChangeForOtherInstances(localEC);
 
