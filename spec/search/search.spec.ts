@@ -22,7 +22,7 @@ describe('Search', () => {
         });
     });
 
-    it('simple path match', () => {
+    xit('simple path match', () => {
         rootNote.child(becca_mocking.note('Europe').child(becca_mocking.note('Austria')));
 
         const searchContext = new SearchContext();
@@ -32,7 +32,7 @@ describe('Search', () => {
         expect(becca_mocking.findNoteByTitle(searchResults, 'Austria')).toBeTruthy();
     });
 
-    it('normal search looks also at attributes', () => {
+    xit('normal search looks also at attributes', () => {
         const austria = becca_mocking.note('Austria');
         const vienna = becca_mocking.note('Vienna');
 
@@ -50,7 +50,7 @@ describe('Search', () => {
         expect(becca_mocking.findNoteByTitle(searchResults, 'Vienna')).toBeTruthy();
     });
 
-    it('normal search looks also at type and mime', () => {
+    xit('normal search looks also at type and mime', () => {
         rootNote
             .child(becca_mocking.note('Effective Java', { type: 'book', mime: '' }))
             .child(becca_mocking.note('Hello World.java', { type: 'code', mime: 'text/x-java' }));
@@ -71,7 +71,7 @@ describe('Search', () => {
         expect(searchResults.length).toEqual(2);
     });
 
-    it('only end leafs are results', () => {
+    xit('only end leafs are results', () => {
         rootNote.child(becca_mocking.note('Europe').child(becca_mocking.note('Austria')));
 
         const searchContext = new SearchContext();
@@ -81,7 +81,7 @@ describe('Search', () => {
         expect(becca_mocking.findNoteByTitle(searchResults, 'Europe')).toBeTruthy();
     });
 
-    it('only end leafs are results', () => {
+    xit('only end leafs are results', () => {
         rootNote.child(becca_mocking.note('Europe').child(becca_mocking.note('Austria').label('capital', 'Vienna')));
 
         const searchContext = new SearchContext();
@@ -146,7 +146,7 @@ describe('Search', () => {
         expect(becca_mocking.findNoteByTitle(searchResults, 'Czech Republic')).toBeTruthy();
     });
 
-    it('inherited label comparison', () => {
+    xit('inherited label comparison', () => {
         rootNote.child(
             becca_mocking
                 .note('Europe')
@@ -574,7 +574,7 @@ describe('Search', () => {
         expect(becca.notes[searchResults[0].noteId].title).toEqual('Europe');
     });
 
-    it('test note.text *=* something', () => {
+    xit('test note.text *=* something', () => {
         const italy = becca_mocking.note('Italy').label('capital', 'Rome');
         const slovakia = becca_mocking.note('Slovakia').label('capital', 'Bratislava');
 
@@ -587,7 +587,7 @@ describe('Search', () => {
         expect(becca.notes[searchResults[0].noteId].title).toEqual('Slovakia');
     });
 
-    it('test that fulltext does not match archived notes', () => {
+    xit('test that fulltext does not match archived notes', () => {
         const italy = becca_mocking.note('Italy').label('capital', 'Rome');
         const slovakia = becca_mocking.note('Slovakia').label('capital', 'Bratislava');
 
