@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-      "moduleResolution": "Node",
+    "moduleResolution": "Node",
 	  "declaration": false,
 	  "sourceMap": true,
 	  "outDir": "./build",
@@ -13,9 +13,11 @@
 	  "esModuleInterop": true
 	},
 	"include": [
-      "./src/**/*.js",
+    "./src/**/*.js",
 	  "./src/**/*.ts",
-    "./*.ts"
+    "./*.ts",
+    "./spec/**/*.ts",
+    "./spec-es6/**/*.ts"
 	],
 	"exclude": ["./node_modules/**/*"],
 	"ts-node": {
@@ -24,4 +26,4 @@
 	"files": [
 		"src/types.d.ts"
 	]
-  }
+}
