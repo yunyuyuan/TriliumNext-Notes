@@ -1,5 +1,5 @@
 # !!! Don't try to build this Dockerfile directly, run it through bin/build-docker.sh script !!!
-FROM node:18.18.2-alpine
+FROM node:20.15.1-alpine
 
 # Configure system dependencies
 RUN apk add --no-cache --virtual .build-dependencies \
