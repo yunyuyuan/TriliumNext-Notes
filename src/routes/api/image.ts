@@ -41,22 +41,21 @@ function returnImageInt(image: BNote | BRevision | null, res: Response) {
 }
 
 function renderSvgAttachment(image: BNote | BRevision, res: Response, attachmentName: string) {
-    let svgString = '<svg/>'
+    let svg: string | Buffer = '<svg/>'
     const attachment = image.getAttachmentByTitle(attachmentName);
 
     const content = attachment.getContent();
-    if (attachment && typeof content === "string") {
-        svgString = content;
+    if (attachment) {
+        svg = content;
     } else {
         // backwards compatibility, before attachments, the SVG was stored in the main note content as a separate key
         const contentSvg = image.getJsonContentSafely()?.svg;
 
         if (contentSvg) {
-            svgString = contentSvg;
+            svg = contentSvg;
         }
     }
 
-    const svg = svgString
     res.set('Content-Type', "image/svg+xml");
     res.set("Cache-Control", "no-cache, no-store, must-revalidate");
     res.send(svg);
