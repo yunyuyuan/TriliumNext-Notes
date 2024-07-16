@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-    "moduleResolution": "Node",
+      "moduleResolution": "Node",
+	  "target": "ES2018",
 	  "declaration": false,
 	  "sourceMap": true,
 	  "outDir": "./build",
