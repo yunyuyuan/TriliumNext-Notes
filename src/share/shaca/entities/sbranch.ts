@@ -1,6 +1,7 @@
 "use strict";
 
 import AbstractShacaEntity = require('./abstract_shaca_entity');
+import { SBranchRow } from './rows';
 import SNote = require('./snote');
 
 class SBranch extends AbstractShacaEntity {

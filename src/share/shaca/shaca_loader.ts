@@ -9,6 +9,7 @@ import SAttribute = require('./entities/sattribute');
 import SAttachment = require('./entities/sattachment');
 import shareRoot = require('../share_root');
 import eventService = require('../../services/events');
+import { SAttachmentRow, SAttributeRow, SBranchRow, SNoteRow } from './entities/rows';
 
 function load() {
     const start = Date.now();
