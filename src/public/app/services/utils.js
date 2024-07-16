@@ -371,10 +371,10 @@ function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-function areObjectsEqual () {
+function areObjectsEqual() {
     let i, l, leftChain, rightChain;
 
-    function compare2Objects (x, y) {
+    function compare2Objects(x, y) {
         let p;
 
         // remember that NaN === NaN returns false
@@ -449,7 +449,7 @@ function areObjectsEqual () {
                     leftChain.push(x);
                     rightChain.push(y);
 
-                    if (!compare2Objects (x[p], y[p])) {
+                    if (!compare2Objects(x[p], y[p])) {
                         return false;
                     }
 
@@ -505,7 +505,7 @@ function createImageSrcUrl(note) {
     return `api/images/${note.noteId}/${encodeURIComponent(note.title)}?timestamp=${Date.now()}`;
 }
 
-module.exports = {
+export default {
     reloadFrontendApp,
     parseDate,
     formatDateISO,
