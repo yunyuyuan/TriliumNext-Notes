@@ -15,7 +15,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci
       - run: ./bin/build-mac-x64.sh
@@ -31,7 +31,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci
       - run: ./bin/build-mac-arm64.sh
@@ -47,7 +47,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci
       - run: ./bin/build-linux-x64.sh
@@ -67,7 +67,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci
       - run: ./bin/build-server.sh
@@ -90,7 +90,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci
       - run: ./bin/build-win-x64.sh
@@ -122,7 +122,7 @@ jobs:
       - name: Set up node & dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
       - run: npm ci    
       - name: Run the TypeScript build
