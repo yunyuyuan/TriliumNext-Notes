@@ -14,6 +14,10 @@ function download() {
     rm -f "$temp_file"
 }
 
+script_dir=$(realpath $(dirname $0))
+cd "$script_dir"
+
+download "linux-x64" "linux-desktop"
 download "win32-x64" "win"
 download "darwin-x64" "mac-x64"
 download "darwin-arm64" "mac-arm64"
