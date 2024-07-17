@@ -16,14 +16,7 @@ rm -r $SRC_DIR/src/public/app-dist/*.mobile.*
 
 echo "Packaging windows x64 electron build"
 
-./node_modules/.bin/electron-packager $SRC_DIR \
-  --out=dist \
-  --asar.unpack="*.{node,dll}" \
-  --executable-name=trilium \
-  --platform=win32 \
-  --arch=x64 \
-  --overwrite \
-  --icon=images/app-icons/win/icon.ico
+./node_modules/.bin/electron-packager $SRC_DIR --asar --out=dist --executable-name=trilium --platform=win32  --arch=x64 --overwrite --icon=images/app-icons/win/icon.ico
 
 BUILD_DIR=./dist/trilium-windows-x64
 rm -rf $BUILD_DIR
