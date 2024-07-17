@@ -1,4 +1,4 @@
-# Trilium Notes
+# TriliumNext Notes
 
 [English](https://github.com/TriliumNext/Notes/blob/master/README.md) | [Chinese](https://github.com/TriliumNext/Notes/blob/master/README-ZH_CN.md) | [Russian](https://github.com/TriliumNext/Notes/blob/master/README.ru.md) | [Japanese](https://github.com/TriliumNext/Notes/blob/master/README.ja.md) | [Italian](https://github.com/TriliumNext/Notes/blob/master/README.it.md)
 
