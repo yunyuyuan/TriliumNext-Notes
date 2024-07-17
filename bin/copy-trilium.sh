@@ -41,6 +41,7 @@ cp "$script_dir/../build/electron.js" "$DIR"
 
 # run in subshell (so we return to original dir)
 (cd $DIR && npm install --only=prod)
+(cd $DIR && npm run switch-electron)
 
 if [[ -d "$DIR"/node_modules ]]; then
 # cleanup of useless files in dependencies
