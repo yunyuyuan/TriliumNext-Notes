@@ -1,7 +1,22 @@
 #!/usr/bin/env bash
 ELECTRON_VERSION="electron-v125"
 NODE_VERSION="node-v115"
-BETTER_SQLITE3_VERSION=11.1.2
+
+if ! command -v jq &> /dev/null; then
+  echo "Missing command: jq"
+  exit 1
+fi
+
+script_dir=$(realpath $(dirname $0))
+cd "$script_dir"
+BETTER_SQLITE3_VERSION=$(jq -r '.dependencies.["better-sqlite3"]' ../../package.json | grep -oP "\d+\.\d+\.\d+")
+
+if [ -z $BETTER_SQLITE3_VERSION ]; then
+    echo "Unable to determine better-sqlite3 version."
+    exit 2
+fi
+
+echo "Version: $BETTER_SQLITE3_VERSION"
 
 function download() {
     version="$1"
@@ -15,9 +30,6 @@ function download() {
     rm -rf build
     rm -f "$temp_file"
 }
-
-script_dir=$(realpath $(dirname $0))
-cd "$script_dir"
 
 download $NODE_VERSION "linux-x64" "linux-server"
 download $ELECTRON_VERSION "linux-x64" "linux-desktop"
