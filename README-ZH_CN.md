@@ -1,4 +1,4 @@
-# Trilium Notes
+# TriliumNext Notes
 
 [English](https://github.com/TriliumNext/Notes/blob/master/README.md) | [Chinese](https://github.com/TriliumNext/Notes/blob/master/README-ZH_CN.md) | [Russian](https://github.com/TriliumNext/Notes/blob/master/README.ru.md) | [Japanese](https://github.com/TriliumNext/Notes/blob/master/README.ja.md) | [Italian](https://github.com/TriliumNext/Notes/blob/master/README.it.md)
 
@@ -41,7 +41,7 @@ Trilium 也提供 Flatpak：
 
 ## 📝 文档
 
-[有关文档页面的完整列表，请参见 Wiki。](https://triliumnext.github.io/Docs/Wiki/)
+[有关文档页面的完整列表，请参见 Wiki。](https://triliumnext.github.io/Docs/)
 
 * [Wiki 的中文翻译版本](https://github.com/baddate/trilium/wiki/)
 
