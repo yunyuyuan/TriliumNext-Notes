@@ -20,7 +20,7 @@ if (!utils.isElectron()) {
     app.use(compression()); // HTTP compression
 }
 
-app.use(helmet.default({
+app.use(helmet({
     hidePoweredBy: false, // errors out in electron
     contentSecurityPolicy: false,
     crossOriginEmbedderPolicy: false

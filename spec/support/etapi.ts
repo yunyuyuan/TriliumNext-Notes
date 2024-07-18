@@ -210,7 +210,7 @@ function checkStatus(response: Response): void {
   }
 }
 
-export {
+export default {
   describeEtapi,
   getEtapi,
   getEtapiResponse,

@@ -106,7 +106,7 @@ function register(app: express.Application) {
     route(GET, '/login', [auth.checkAppInitialized, auth.checkPasswordSet], loginRoute.loginPage);
     route(GET, '/set-password', [auth.checkAppInitialized, auth.checkPasswordNotSet], loginRoute.setPasswordPage);
 
-    const loginRateLimiter = rateLimit.rateLimit({
+    const loginRateLimiter = rateLimit({
         windowMs: 15 * 60 * 1000, // 15 minutes
         max: 10, // limit each IP to 10 requests per windowMs
         skipSuccessfulRequests: true // successful auth to rate-limited ETAPI routes isn't counted. However, successful auth to /login is still counted!
