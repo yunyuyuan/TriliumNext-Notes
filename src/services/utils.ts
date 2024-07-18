@@ -173,7 +173,7 @@ function replaceAll(string: string, replaceWhat: string, replaceWith: string) {
     return string.replace(new RegExp(quotedReplaceWhat, "g"), replaceWith);
 }
 
-function formatDownloadTitle(fileName: string, type: string, mime: string) {
+function formatDownloadTitle(fileName: string, type: string | null, mime: string) {
     if (!fileName) {
         fileName = "untitled";
     }
@@ -182,7 +182,7 @@ function formatDownloadTitle(fileName: string, type: string, mime: string) {
 
     if (type === 'text') {
         return `${fileName}.html`;
-    } else if (['relationMap', 'canvas', 'search'].includes(type)) {
+    } else if (type && ['relationMap', 'canvas', 'search'].includes(type)) {
         return `${fileName}.json`;
     } else {
         if (!mime) {
