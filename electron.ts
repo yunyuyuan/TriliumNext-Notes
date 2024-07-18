@@ -1,17 +1,19 @@
 "use strict";
 
 import electron from "electron";
+import electronDebug from "electron-debug";
+import electronDl from "electron-dl";
 import sqlInit from "./src/services/sql_init.js";
 import appIconService from "./src/services/app_icon.js";
 import windowService from "./src/services/window.js";
 import tray from "./src/services/tray.js";
 
 // Adds debug features like hotkeys for triggering dev tools and reload
-require('electron-debug')();
+electronDebug();
 
 appIconService.installLocalAppIcon();
 
-require('electron-dl')({ saveAs: true });
+electronDl({ saveAs: true });
 
 // needed for excalidraw export https://github.com/zadam/trilium/issues/4271
 electron.app.commandLine.appendSwitch(
