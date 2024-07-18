@@ -18,7 +18,19 @@ import Expression from "../expressions/expression.js";
 import sql from "../../sql.js";
 import scriptService from "../../script.js";
 
-function searchFromNote(note: BNote) {
+export interface SearchNoteResult {
+    searchResultNoteIds: string[];
+    highlightedTokens: string[];
+    error: string | null;
+}
+
+export const EMPTY_RESULT: SearchNoteResult = {
+    searchResultNoteIds: [],
+    highlightedTokens: [],
+    error: null
+};
+
+function searchFromNote(note: BNote): SearchNoteResult {
     let searchResultNoteIds;
     let highlightedTokens: string[];
 

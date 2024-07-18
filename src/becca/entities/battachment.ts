@@ -9,6 +9,7 @@ import log from "../../services/log.js";
 import { AttachmentRow } from './rows';
 import BNote from "./bnote.js";
 import BBranch from "./bbranch.js";
+import noteService from "../../services/notes.js";
 
 const attachmentRoleToNoteTypeMapping = {
     'image': 'image',
@@ -156,8 +157,6 @@ class BAttachment extends AbstractBeccaEntity<BAttachment> {
         if (!this.isContentAvailable()) { // isProtected is the same for attachment
             throw new Error(`Cannot convert protected attachment outside of protected session`);
         }
-
-        const noteService = require('../../services/notes');
 
         const { note, branch } = noteService.createNewNote({
             parentNoteId: this.ownerId,

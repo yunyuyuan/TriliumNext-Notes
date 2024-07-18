@@ -7,7 +7,7 @@ import BBranch from '../becca/entities/bbranch';
 import becca from '../becca/becca';
 import log from './log';
 
-interface CloneResponse {
+export interface CloneResponse {
     success: boolean;
     message?: string;
     branchId?: string;
@@ -53,7 +53,7 @@ function cloneNoteToParentNote(noteId: string, parentNoteId: string, prefix: str
     };
 }
 
-function cloneNoteToBranch(noteId: string, parentBranchId: string, prefix: string) {
+function cloneNoteToBranch(noteId: string, parentBranchId: string, prefix?: string) {
     const parentBranch = becca.getBranch(parentBranchId);
 
     if (!parentBranch) {

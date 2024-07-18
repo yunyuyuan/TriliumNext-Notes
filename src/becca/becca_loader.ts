@@ -14,13 +14,15 @@ import cls from "../services/cls.js";
 import entityConstructor from "../becca/entity_constructor.js";
 import { AttributeRow, BranchRow, EtapiTokenRow, NoteRow, OptionRow } from './entities/rows';
 import AbstractBeccaEntity from "./entities/abstract_becca_entity.js";
+import options_init from "../services/options_init.js";
+import ws from "../services/ws.js";
 
 const beccaLoaded = new Promise<void>((res, rej) => {
     sqlInit.dbReady.then(() => {
         cls.init(() => {
             load();
 
-            require('../services/options_init').initStartupOptions();
+            options_init.initStartupOptions();
 
             res();
         });
@@ -73,7 +75,7 @@ function load() {
 function reload(reason: string) {
     load();
 
-    require('../services/ws').reloadFrontend(reason || "becca reloaded");
+    ws.reloadFrontend(reason || "becca reloaded");
 }
 
 eventService.subscribeBeccaLoader([eventService.ENTITY_CHANGE_SYNCED], ({ entityName, entityRow }) => {

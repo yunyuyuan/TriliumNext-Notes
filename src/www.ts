@@ -1,23 +1,4 @@
 #!/usr/bin/env node
-
-// setup basic error handling even before requiring dependencies, since those can produce errors as well
-
-process.on('unhandledRejection', error => {
-    // this makes sure that stacktrace of failed promise is printed out
-    console.log(error);
-
-    // but also try to log it into file
-    require('./services/log').info(error);
-});
-
-function exit() {
-    console.log("Caught interrupt/termination signal. Exiting.");
-    process.exit(0);
-}
-
-process.on('SIGINT', exit);
-process.on('SIGTERM', exit);
-
 import app from "./app.js";
 import sessionParser from "./routes/session_parser.js";
 import fs from "fs";
@@ -31,6 +12,25 @@ import utils from "./services/utils.js";
 import port from "./services/port.js";
 import host from "./services/host.js";
 import semver from "semver";
+
+// setup basic error handling even before requiring dependencies, since those can produce errors as well
+
+process.on('unhandledRejection', (error: Error) => {
+    // this makes sure that stacktrace of failed promise is printed out
+    console.log(error);
+
+    // but also try to log it into file
+    log.info(error);
+});
+
+function exit() {
+    console.log("Caught interrupt/termination signal. Exiting.");
+    process.exit(0);
+}
+
+process.on('SIGINT', exit);
+process.on('SIGTERM', exit);
+
 
 if (!semver.satisfies(process.version, ">=10.5.0")) {
     console.error("Trilium only supports node.js 10.5 and later");

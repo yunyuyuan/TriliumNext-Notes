@@ -69,7 +69,7 @@ export interface AttributeRow {
     noteId?: string;
     type: AttributeType;
     name: string;
-    position?: number;
+    position?: number | null;
     value?: string;
     isInheritable?: boolean;
     utcDateModified?: string;
