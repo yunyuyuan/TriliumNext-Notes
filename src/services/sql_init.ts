@@ -1,15 +1,15 @@
-import log = require('./log');
+import log from "./log.js";
 import fs = require('fs');
-import resourceDir = require('./resource_dir');
-import sql = require('./sql');
-import utils = require('./utils');
-import optionService = require('./options');
-import port = require('./port');
-import BOption = require('../becca/entities/boption');
-import TaskContext = require('./task_context');
-import migrationService = require('./migration');
-import cls = require('./cls');
-import config = require('./config');
+import resourceDir from "./resource_dir.js";
+import sql from "./sql.js";
+import utils from "./utils.js";
+import optionService from "./options.js";
+import port from "./port.js";
+import BOption from "../becca/entities/boption.js";
+import TaskContext from "./task_context.js";
+import migrationService from "./migration.js";
+import cls from "./cls.js";
+import config from "./config.js";
 import { OptionRow } from '../becca/entities/rows';
 
 const dbReady = utils.deferred<void>();

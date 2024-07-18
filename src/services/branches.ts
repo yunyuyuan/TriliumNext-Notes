@@ -1,6 +1,6 @@
-import treeService = require('./tree');
-import sql = require('./sql');
-import BBranch = require('../becca/entities/bbranch.js');
+import treeService from "./tree.js";
+import sql from "./sql.js";
+import BBranch from "../becca/entities/bbranch.js.js";
 
 function moveBranchToNote(branchToMove: BBranch, targetParentNoteId: string) {
     if (branchToMove.parentNoteId === targetParentNoteId) {

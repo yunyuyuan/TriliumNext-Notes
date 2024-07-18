@@ -1,7 +1,7 @@
-import config = require('./config');
-import utils = require('./utils');
-import env = require('./env');
-import dataDir = require('./data_dir');
+import config from "./config.js";
+import utils from "./utils.js";
+import env from "./env.js";
+import dataDir from "./data_dir.js";
 
 function parseAndValidate(portStr: string, source: string) {
     const portNum = parseInt(portStr);

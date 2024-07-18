@@ -1,6 +1,6 @@
-import utils = require('./utils');
-import BackendScriptApi = require('./backend_script_api');
-import BNote = require('../becca/entities/bnote');
+import utils from "./utils.js";
+import BackendScriptApi from "./backend_script_api.js";
+import BNote from "../becca/entities/bnote.js";
 import { ApiParams } from './backend_script_api_interface';
 
 type Module = {

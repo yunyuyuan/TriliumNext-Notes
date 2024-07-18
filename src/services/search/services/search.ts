@@ -1,21 +1,21 @@
 "use strict";
 
 import normalizeString = require('normalize-strings');
-import lex = require('./lex');
-import handleParens = require('./handle_parens');
-import parse = require('./parse');
-import SearchResult = require('../search_result');
-import SearchContext = require('../search_context');
-import becca = require('../../../becca/becca');
-import beccaService = require('../../../becca/becca_service');
-import utils = require('../../utils');
-import log = require('../../log');
-import hoistedNoteService = require('../../hoisted_note');
-import BNote = require('../../../becca/entities/bnote');
-import BAttribute = require('../../../becca/entities/battribute');
+import lex from "./lex.js";
+import handleParens from "./handle_parens.js";
+import parse from "./parse.js";
+import SearchResult from "../search_result.js";
+import SearchContext from "../search_context.js";
+import becca from "../../../becca/becca.js";
+import beccaService from "../../../becca/becca_service.js";
+import utils from "../../utils.js";
+import log from "../../log.js";
+import hoistedNoteService from "../../hoisted_note.js";
+import BNote from "../../../becca/entities/bnote.js";
+import BAttribute from "../../../becca/entities/battribute.js";
 import { SearchParams, TokenData } from "./types";
-import Expression = require('../expressions/expression');
-import sql = require('../../sql');
+import Expression from "../expressions/expression.js";
+import sql from "../../sql.js";
 
 function searchFromNote(note: BNote) {
     let searchResultNoteIds;

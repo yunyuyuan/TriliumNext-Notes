@@ -1,7 +1,7 @@
-import assetPath = require('../services/asset_path');
+import assetPath from "../services/asset_path.js";
 import path = require('path');
 import express = require('express');
-import env = require('../services/env');
+import env from "../services/env.js";
 import serveStatic = require('serve-static');
 
 const persistentCacheStatic = (root: string, options?: serveStatic.ServeStaticOptions<express.Response<any, Record<string, any>>>) => {

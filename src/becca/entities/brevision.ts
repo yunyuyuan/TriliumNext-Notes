@@ -1,12 +1,12 @@
 "use strict";
 
-import protectedSessionService = require('../../services/protected_session');
-import utils = require('../../services/utils');
-import dateUtils = require('../../services/date_utils');
-import becca = require('../becca');
-import AbstractBeccaEntity = require('./abstract_becca_entity');
-import sql = require('../../services/sql');
-import BAttachment = require('./battachment');
+import protectedSessionService from "../../services/protected_session.js";
+import utils from "../../services/utils.js";
+import dateUtils from "../../services/date_utils.js";
+import becca from "../becca.js";
+import AbstractBeccaEntity from "./abstract_becca_entity.js";
+import sql from "../../services/sql.js";
+import BAttachment from "./battachment.js";
 import { AttachmentRow, RevisionRow } from './rows';
 
 interface ContentOpts {

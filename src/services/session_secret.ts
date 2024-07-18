@@ -2,8 +2,8 @@
 
 import fs = require('fs');
 import crypto = require('crypto');
-import dataDir = require('./data_dir');
-import log = require('./log');
+import dataDir from "./data_dir.js";
+import log from "./log.js";
 
 const sessionSecretPath = `${dataDir.TRILIUM_DATA_DIR}/session_secret.txt`;
 

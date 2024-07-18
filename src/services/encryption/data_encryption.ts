@@ -1,7 +1,7 @@
 "use strict";
 
 import crypto = require('crypto');
-import log = require('../log');
+import log from "../log.js";
 
 function arraysIdentical(a: any[] | Buffer, b: any[] | Buffer) {
     let i = a.length;

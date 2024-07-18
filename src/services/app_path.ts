@@ -1,5 +1,5 @@
-import assetPath = require('./asset_path');
-import env = require('./env');
+import assetPath from "./asset_path.js";
+import env from "./env.js";
 
 export = env.isDev()
     ? assetPath + "/app"

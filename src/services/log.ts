@@ -2,8 +2,8 @@
 
 import { Request, Response } from "express";
 import fs = require('fs');
-import dataDir = require('./data_dir');
-import cls = require('./cls');
+import dataDir from "./data_dir.js";
+import cls from "./cls.js";
 
 if (!fs.existsSync(dataDir.LOG_DIR)) {
     fs.mkdirSync(dataDir.LOG_DIR, 0o700);

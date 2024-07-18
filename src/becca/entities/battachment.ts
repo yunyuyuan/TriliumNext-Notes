@@ -1,14 +1,14 @@
 "use strict";
 
-import utils = require('../../services/utils');
-import dateUtils = require('../../services/date_utils');
-import AbstractBeccaEntity = require('./abstract_becca_entity');
-import sql = require('../../services/sql');
-import protectedSessionService = require('../../services/protected_session');
-import log = require('../../services/log');
+import utils from "../../services/utils.js";
+import dateUtils from "../../services/date_utils.js";
+import AbstractBeccaEntity from "./abstract_becca_entity.js";
+import sql from "../../services/sql.js";
+import protectedSessionService from "../../services/protected_session.js";
+import log from "../../services/log.js";
 import { AttachmentRow } from './rows';
-import BNote = require('./bnote');
-import BBranch = require('./bbranch');
+import BNote from "./bnote.js";
+import BBranch from "./bbranch.js";
 
 const attachmentRoleToNoteTypeMapping = {
     'image': 'image',

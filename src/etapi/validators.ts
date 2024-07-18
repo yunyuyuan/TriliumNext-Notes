@@ -1,5 +1,5 @@
-import noteTypeService = require('../services/note_types');
-import dateUtils = require('../services/date_utils');
+import noteTypeService from "../services/note_types.js";
+import dateUtils from "../services/date_utils.js";
 
 function mandatory(obj: unknown) {
     if (obj === undefined) {

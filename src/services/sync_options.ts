@@ -1,7 +1,7 @@
 "use strict";
 
-import optionService = require('./options');
-import config = require('./config');
+import optionService from "./options.js";
+import config from "./config.js";
 
 /*
  * Primary configuration for sync is in the options (document), but we allow to override

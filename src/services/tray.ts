@@ -1,7 +1,7 @@
 import { Menu, Tray } from 'electron';
 import path = require('path');
-import windowService = require('./window');
-import optionService = require('./options');
+import windowService from "./window.js";
+import optionService from "./options.js";
 
 let tray: Tray;
 // `mainWindow.isVisible` doesn't work with `mainWindow.show` and `mainWindow.hide` - it returns `false` when the window

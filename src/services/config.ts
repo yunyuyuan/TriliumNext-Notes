@@ -2,9 +2,9 @@
 
 import ini = require('ini');
 import fs = require('fs');
-import dataDir = require('./data_dir');
+import dataDir from "./data_dir.js";
 import path = require('path');
-import resourceDir = require('./resource_dir');
+import resourceDir from "./resource_dir.js";
 
 const configSampleFilePath = path.resolve(resourceDir.RESOURCE_DIR, "config-sample.ini");
 

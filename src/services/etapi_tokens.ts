@@ -1,6 +1,6 @@
-import becca = require('../becca/becca');
-import utils = require('./utils');
-import BEtapiToken = require('../becca/entities/betapi_token');
+import becca from "../becca/becca.js";
+import utils from "./utils.js";
+import BEtapiToken from "../becca/entities/betapi_token.js";
 import crypto = require('crypto');
 
 function getTokens() {

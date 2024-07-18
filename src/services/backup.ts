@@ -1,13 +1,13 @@
 "use strict";
 
-import dateUtils = require('./date_utils');
-import optionService = require('./options');
+import dateUtils from "./date_utils.js";
+import optionService from "./options.js";
 import fs = require('fs-extra');
-import dataDir = require('./data_dir');
-import log = require('./log');
-import syncMutexService = require('./sync_mutex');
-import cls = require('./cls');
-import sql = require('./sql');
+import dataDir from "./data_dir.js";
+import log from "./log.js";
+import syncMutexService from "./sync_mutex.js";
+import cls from "./cls.js";
+import sql from "./sql.js";
 import path = require('path');
 
 type BackupType = ("daily" | "weekly" | "monthly");

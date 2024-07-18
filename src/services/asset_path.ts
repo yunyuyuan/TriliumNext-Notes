@@ -1,3 +1,3 @@
-import packageJson = require('../../package.json');
+import packageJson from "../../package.json.js";
 
 export = `assets/v${packageJson.version}`;

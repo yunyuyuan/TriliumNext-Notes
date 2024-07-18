@@ -1,7 +1,7 @@
 "use strict";
 
 import { Request } from 'express';
-import cloningService = require('../../services/cloning');
+import cloningService from "../../services/cloning.js";
 
 function cloneNoteToBranch(req: Request) {
     const {noteId, parentBranchId} = req.params;

@@ -1,8 +1,8 @@
 "use strict";
 
-import build = require('./build');
-import packageJson = require('../../package.json');
-import dataDir = require('./data_dir');
+import build from "./build.js";
+import packageJson from "../../package.json.js";
+import dataDir from "./data_dir.js";
 
 const APP_DB_VERSION = 228;
 const SYNC_VERSION = 32;

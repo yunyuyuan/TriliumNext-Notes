@@ -1,12 +1,12 @@
 import path = require('path');
 import url = require('url');
-import port = require('./port');
-import optionService = require('./options');
-import env = require('./env');
-import log = require('./log');
-import sqlInit = require('./sql_init');
-import cls = require('./cls');
-import keyboardActionsService = require('./keyboard_actions');
+import port from "./port.js";
+import optionService from "./options.js";
+import env from "./env.js";
+import log from "./log.js";
+import sqlInit from "./sql_init.js";
+import cls from "./cls.js";
+import keyboardActionsService from "./keyboard_actions.js";
 import remoteMain = require('@electron/remote/main')
 import { App, BrowserWindow, WebContents, ipcMain } from 'electron';
 

@@ -4,10 +4,10 @@
  * @module sql
  */
 
-import log = require('./log');
+import log from "./log.js";
 import type { Statement, Database as DatabaseType, RunResult } from "better-sqlite3";
-import dataDir = require('./data_dir');
-import cls = require('./cls');
+import dataDir from "./data_dir.js";
+import cls from "./cls.js";
 import fs = require('fs-extra');
 import Database = require('better-sqlite3');
 

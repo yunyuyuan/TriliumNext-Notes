@@ -1,6 +1,6 @@
 import { Request } from 'express';
-import becca = require('../../becca/becca');
-import bulkActionService = require('../../services/bulk_actions');
+import becca from "../../becca/becca.js";
+import bulkActionService from "../../services/bulk_actions.js";
 
 function execute(req: Request) {
     const {noteIds, includeDescendants} = req.body;

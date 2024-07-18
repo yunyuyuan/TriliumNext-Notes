@@ -1,9 +1,9 @@
 "use strict";
 
-import sql = require('../../services/sql');
-import protectedSessionService = require('../../services/protected_session');
-import noteService = require('../../services/notes');
-import becca = require('../../becca/becca');
+import sql from "../../services/sql.js";
+import protectedSessionService from "../../services/protected_session.js";
+import noteService from "../../services/notes.js";
+import becca from "../../becca/becca.js";
 import { Request } from 'express';
 import { RevisionRow } from '../../becca/entities/rows';
 

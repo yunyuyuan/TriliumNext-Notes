@@ -1,19 +1,19 @@
 "use strict";
 
-import sql = require('../services/sql');
-import eventService = require('../services/events');
-import becca = require('./becca');
-import sqlInit = require('../services/sql_init');
-import log = require('../services/log');
-import BNote = require('./entities/bnote');
-import BBranch = require('./entities/bbranch');
-import BAttribute = require('./entities/battribute');
-import BOption = require('./entities/boption');
-import BEtapiToken = require('./entities/betapi_token');
-import cls = require('../services/cls');
-import entityConstructor = require('../becca/entity_constructor');
+import sql from "../services/sql.js";
+import eventService from "../services/events.js";
+import becca from "./becca.js";
+import sqlInit from "../services/sql_init.js";
+import log from "../services/log.js";
+import BNote from "./entities/bnote.js";
+import BBranch from "./entities/bbranch.js";
+import BAttribute from "./entities/battribute.js";
+import BOption from "./entities/boption.js";
+import BEtapiToken from "./entities/betapi_token.js";
+import cls from "../services/cls.js";
+import entityConstructor from "../becca/entity_constructor.js";
 import { AttributeRow, BranchRow, EtapiTokenRow, NoteRow, OptionRow } from './entities/rows';
-import AbstractBeccaEntity = require('./entities/abstract_becca_entity');
+import AbstractBeccaEntity from "./entities/abstract_becca_entity.js";
 
 const beccaLoaded = new Promise<void>((res, rej) => {
     sqlInit.dbReady.then(() => {

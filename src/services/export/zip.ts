@@ -1,25 +1,25 @@
 "use strict";
 
 import html = require('html');
-import dateUtils = require('../date_utils');
+import dateUtils from "../date_utils.js";
 import path = require('path');
 import mimeTypes = require('mime-types');
-import mdService = require('./md');
-import packageInfo = require('../../../package.json');
-import utils = require('../utils');
-import protectedSessionService = require('../protected_session');
+import mdService from "./md.js";
+import packageInfo from "../../../package.json.js";
+import utils from "../utils.js";
+import protectedSessionService from "../protected_session.js";
 import sanitize = require('sanitize-filename');
 import fs = require('fs');
-import becca = require('../../becca/becca');
+import becca from "../../becca/becca.js";
 const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
 import archiver = require('archiver');
-import log = require('../log');
-import TaskContext = require('../task_context');
-import ValidationError = require('../../errors/validation_error');
-import NoteMeta = require('../meta/note_meta');
-import AttachmentMeta = require('../meta/attachment_meta');
-import AttributeMeta = require('../meta/attribute_meta');
-import BBranch = require('../../becca/entities/bbranch');
+import log from "../log.js";
+import TaskContext from "../task_context.js";
+import ValidationError from "../../errors/validation_error.js";
+import NoteMeta from "../meta/note_meta.js";
+import AttachmentMeta from "../meta/attachment_meta.js";
+import AttributeMeta from "../meta/attribute_meta.js";
+import BBranch from "../../becca/entities/bbranch.js";
 import { Response } from 'express';
 
 async function exportToZip(taskContext: TaskContext, branch: BBranch, format: "html" | "markdown", res: Response | fs.WriteStream, setHeaders = true) {

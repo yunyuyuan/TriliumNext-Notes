@@ -1,17 +1,17 @@
 "use strict";
 
-import becca = require('../becca/becca');
-import log = require('./log');
-import protectedSessionService = require('./protected_session');
-import noteService = require('./notes');
-import optionService = require('./options');
-import sql = require('./sql');
+import becca from "../becca/becca.js";
+import log from "./log.js";
+import protectedSessionService from "./protected_session.js";
+import noteService from "./notes.js";
+import optionService from "./options.js";
+import sql from "./sql.js";
 import jimp = require('jimp');
 import imageType = require('image-type');
 import sanitizeFilename = require('sanitize-filename');
 import isSvg = require('is-svg');
 import isAnimated = require('is-animated');
-import htmlSanitizer = require('./html_sanitizer');
+import htmlSanitizer from "./html_sanitizer.js";
 
 async function processImage(uploadBuffer: Buffer, originalName: string, shrinkImageSwitch: boolean) {
     const compressImages = optionService.getOptionBool("compressImages");

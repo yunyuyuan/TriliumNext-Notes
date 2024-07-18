@@ -1,10 +1,10 @@
 "use strict";
 
-import sqlInit = require('../services/sql_init');
-import setupService = require('../services/setup');
-import utils = require('../services/utils');
-import assetPath = require('../services/asset_path');
-import appPath = require('../services/app_path');
+import sqlInit from "../services/sql_init.js";
+import setupService from "../services/setup.js";
+import utils from "../services/utils.js";
+import assetPath from "../services/asset_path.js";
+import appPath from "../services/app_path.js";
 import { Request, Response } from 'express';
 
 function setupPage(req: Request, res: Response) {

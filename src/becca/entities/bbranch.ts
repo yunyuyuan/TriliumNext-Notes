@@ -1,12 +1,12 @@
 "use strict";
 
-import BNote = require('./bnote');
-import AbstractBeccaEntity = require('./abstract_becca_entity');
-import dateUtils = require('../../services/date_utils');
-import utils = require('../../services/utils');
-import TaskContext = require('../../services/task_context');
-import cls = require('../../services/cls');
-import log = require('../../services/log');
+import BNote from "./bnote.js";
+import AbstractBeccaEntity from "./abstract_becca_entity.js";
+import dateUtils from "../../services/date_utils.js";
+import utils from "../../services/utils.js";
+import TaskContext from "../../services/task_context.js";
+import cls from "../../services/cls.js";
+import log from "../../services/log.js";
 import { BranchRow } from './rows';
 
 /**

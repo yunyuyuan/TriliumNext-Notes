@@ -1,9 +1,9 @@
 import { JSDOM } from "jsdom";
-import shaca = require('./shaca/shaca');
-import assetPath = require('../services/asset_path');
-import shareRoot = require('./share_root');
+import shaca from "./shaca/shaca.js";
+import assetPath from "../services/asset_path.js";
+import shareRoot from "./share_root.js";
 import escapeHtml = require('escape-html');
-import SNote = require('./shaca/entities/snote');
+import SNote from "./shaca/entities/snote.js";
 
 interface Result {
     header: string;

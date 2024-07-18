@@ -1,6 +1,6 @@
 import { Request } from 'express';
-import becca = require('../../becca/becca');
-import sql = require('../../services/sql');
+import becca from "../../becca/becca.js";
+import sql from "../../services/sql.js";
 
 interface ResponseData {
     noteTitles: Record<string, string>;

@@ -1,20 +1,20 @@
 "use strict";
 
-import protectedSessionService = require('../../services/protected_session');
-import log = require('../../services/log');
-import sql = require('../../services/sql');
-import utils = require('../../services/utils');
-import dateUtils = require('../../services/date_utils');
-import AbstractBeccaEntity = require('./abstract_becca_entity');
-import BRevision = require('./brevision');
-import BAttachment = require('./battachment');
-import TaskContext = require('../../services/task_context');
+import protectedSessionService from "../../services/protected_session.js";
+import log from "../../services/log.js";
+import sql from "../../services/sql.js";
+import utils from "../../services/utils.js";
+import dateUtils from "../../services/date_utils.js";
+import AbstractBeccaEntity from "./abstract_becca_entity.js";
+import BRevision from "./brevision.js";
+import BAttachment from "./battachment.js";
+import TaskContext from "../../services/task_context.js";
 import dayjs = require('dayjs');
 import utc = require('dayjs/plugin/utc');
-import eventService = require('../../services/events');
+import eventService from "../../services/events.js";
 import { AttachmentRow, NoteRow, NoteType, RevisionRow } from './rows';
-import BBranch = require('./bbranch');
-import BAttribute = require('./battribute');
+import BBranch from "./bbranch.js";
+import BAttribute from "./battribute.js";
 import { NotePojo } from '../becca-interface';
 dayjs.extend(utc);
 

@@ -1,13 +1,13 @@
 "use strict";
 
-import sql = require('../../sql');
-import utils = require('../../../services/utils');
-import AbstractShacaEntity = require('./abstract_shaca_entity');
+import sql from "../../sql.js";
+import utils from "../../../services/utils.js";
+import AbstractShacaEntity from "./abstract_shaca_entity.js";
 import escape = require('escape-html');
 import { Blob } from '../../../services/blob-interface';
-import SAttachment = require('./sattachment');
-import SAttribute = require('./sattribute');
-import SBranch = require('./sbranch');
+import SAttachment from "./sattachment.js";
+import SAttribute from "./sattribute.js";
+import SBranch from "./sbranch.js";
 import { SNoteRow } from './rows';
 
 const LABEL = 'label';

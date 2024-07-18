@@ -1,5 +1,5 @@
 import { Application, NextFunction, Request, Response } from 'express';
-import log = require('../services/log');
+import log from "../services/log.js";
 
 function register(app: Application) {
     app.use((err: any, req: Request, res: Response, next: NextFunction) => {

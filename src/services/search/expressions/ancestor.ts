@@ -1,10 +1,10 @@
 "use strict";
 
-import Expression = require('./expression');
-import NoteSet = require('../note_set');
-import log = require('../../log');
-import becca = require('../../../becca/becca');
-import SearchContext = require('../search_context');
+import Expression from "./expression.js";
+import NoteSet from "../note_set.js";
+import log from "../../log.js";
+import becca from "../../../becca/becca.js";
+import SearchContext from "../search_context.js";
 
 class AncestorExp extends Expression {
 

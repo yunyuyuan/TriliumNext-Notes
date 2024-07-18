@@ -1,10 +1,10 @@
-import BAttribute = require('../becca/entities/battribute');
+import BAttribute from "../becca/entities/battribute.js";
 import { AttributeType, NoteType } from "../becca/entities/rows";
 
-import becca = require('../becca/becca');
-import noteService = require('./notes');
-import log = require('./log');
-import migrationService = require('./migration');
+import becca from "../becca/becca.js";
+import noteService from "./notes.js";
+import log from "./log.js";
+import migrationService from "./migration.js";
 
 const LBTPL_ROOT = "_lbTplRoot";
 const LBTPL_BASE = "_lbTplBase";

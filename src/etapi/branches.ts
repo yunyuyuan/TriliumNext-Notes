@@ -1,11 +1,11 @@
 import { Router } from "express";
 
-import becca = require('../becca/becca');
-import eu = require('./etapi_utils');
-import mappers = require('./mappers');
-import BBranch = require('../becca/entities/bbranch');
-import entityChangesService = require('../services/entity_changes');
-import v = require('./validators');
+import becca from "../becca/becca.js";
+import eu from "./etapi_utils.js";
+import mappers from "./mappers.js";
+import BBranch from "../becca/entities/bbranch.js";
+import entityChangesService from "../services/entity_changes.js";
+import v from "./validators.js";
 import { BranchRow } from "../becca/entities/rows";
 
 function register(router: Router) {

@@ -1,5 +1,5 @@
 import path = require('path');
-import assetPath = require('./src/services/asset_path');
+import assetPath from "./src/services/asset_path.js";
 
 module.exports = {
     mode: 'production',

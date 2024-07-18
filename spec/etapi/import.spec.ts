@@ -1,4 +1,4 @@
-import etapi = require('../support/etapi');
+import etapi from "../support/etapi.js";
 import fs = require('fs');
 import path = require('path');
 

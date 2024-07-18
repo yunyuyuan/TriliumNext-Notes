@@ -1,8 +1,8 @@
 "use strict";
 
-import optionService = require('./options');
-import log = require('./log');
-import utils = require('./utils');
+import optionService from "./options.js";
+import log from "./log.js";
+import utils from "./utils.js";
 import { KeyboardShortcut } from './keyboard_actions_interface';
 
 const isMac = process.platform === "darwin";

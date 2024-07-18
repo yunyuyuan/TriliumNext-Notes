@@ -1,10 +1,10 @@
 "use strict";
 
-import becca = require('../../becca/becca');
-import log = require('../../services/log');
-import NotFoundError = require('../../errors/not_found_error');
+import becca from "../../becca/becca.js";
+import log from "../../services/log.js";
+import NotFoundError from "../../errors/not_found_error.js";
 import { Request } from 'express';
-import BNote = require('../../becca/entities/bnote');
+import BNote from "../../becca/entities/bnote.js";
 
 function getNotesAndBranchesAndAttributes(_noteIds: string[] | Set<string>) {
     const noteIds = new Set(_noteIds);

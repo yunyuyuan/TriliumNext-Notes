@@ -1,5 +1,5 @@
-import anonymizationService = require('./services/anonymization');
-import sqlInit = require('./services/sql_init');
+import anonymizationService from "./services/anonymization.js";
+import sqlInit from "./services/sql_init.js";
 require('./becca/entity_constructor');
 
 sqlInit.dbReady.then(async () => {

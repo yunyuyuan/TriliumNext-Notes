@@ -1,5 +1,5 @@
 import dayjs = require('dayjs');
-import cls = require('./cls');
+import cls from "./cls.js";
 
 const LOCAL_DATETIME_FORMAT = 'YYYY-MM-DD HH:mm:ss.SSSZZ';
 const UTC_DATETIME_FORMAT = 'YYYY-MM-DD HH:mm:ssZ';

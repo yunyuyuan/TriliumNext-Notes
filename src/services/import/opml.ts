@@ -1,11 +1,11 @@
 "use strict";
 
-import noteService = require('../../services/notes');
+import noteService from "../../services/notes.js";
 import xml2js = require('xml2js');
-import protectedSessionService = require('../protected_session');
-import htmlSanitizer = require('../html_sanitizer');
-import TaskContext = require('../task_context');
-import BNote = require('../../becca/entities/bnote');
+import protectedSessionService from "../protected_session.js";
+import htmlSanitizer from "../html_sanitizer.js";
+import TaskContext from "../task_context.js";
+import BNote from "../../becca/entities/bnote.js";
 const parseString = xml2js.parseString;
 
 interface OpmlXml {

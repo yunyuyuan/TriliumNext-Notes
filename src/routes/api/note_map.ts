@@ -1,11 +1,11 @@
 "use strict";
 
-import becca = require('../../becca/becca');
+import becca from "../../becca/becca.js";
 import { JSDOM } from "jsdom";
-import BNote = require('../../becca/entities/bnote');
-import BAttribute = require('../../becca/entities/battribute');
+import BNote from "../../becca/entities/bnote.js";
+import BAttribute from "../../becca/entities/battribute.js";
 import { Request } from 'express';
-import ValidationError = require('../../errors/validation_error');
+import ValidationError from "../../errors/validation_error.js";
 
 function buildDescendantCountMap(noteIdsToCount: string[]) {
     if (!Array.isArray(noteIdsToCount)) {

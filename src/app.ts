@@ -4,8 +4,8 @@ import favicon = require('serve-favicon');
 import cookieParser = require('cookie-parser');
 import helmet = require('helmet');
 import compression = require('compression');
-import sessionParser = require('./routes/session_parser');
-import utils = require('./services/utils');
+import sessionParser from "./routes/session_parser.js";
+import utils from "./services/utils.js";
 
 require('./services/handlers');
 require('./becca/becca_loader');

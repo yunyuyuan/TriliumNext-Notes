@@ -1,17 +1,17 @@
-import sql = require('../services/sql');
-import NoteSet = require('../services/search/note_set');
-import NotFoundError = require('../errors/not_found_error');
-import BOption = require('./entities/boption');
-import BNote = require('./entities/bnote');
-import BEtapiToken = require('./entities/betapi_token');
-import BAttribute = require('./entities/battribute');
-import BBranch = require('./entities/bbranch');
-import BRevision = require('./entities/brevision');
-import BAttachment = require('./entities/battachment');
+import sql from "../services/sql.js";
+import NoteSet from "../services/search/note_set.js";
+import NotFoundError from "../errors/not_found_error.js";
+import BOption from "./entities/boption.js";
+import BNote from "./entities/bnote.js";
+import BEtapiToken from "./entities/betapi_token.js";
+import BAttribute from "./entities/battribute.js";
+import BBranch from "./entities/bbranch.js";
+import BRevision from "./entities/brevision.js";
+import BAttachment from "./entities/battachment.js";
 import { AttachmentRow, RevisionRow } from './entities/rows';
-import BBlob = require('./entities/bblob');
-import BRecentNote = require('./entities/brecent_note');
-import AbstractBeccaEntity = require('./entities/abstract_becca_entity');
+import BBlob from "./entities/bblob.js";
+import BRecentNote from "./entities/brecent_note.js";
+import AbstractBeccaEntity from "./entities/abstract_becca_entity.js";
 
 interface AttachmentOpts {
     includeContentLength?: boolean;

@@ -1,16 +1,16 @@
 import sax = require('sax');
 import stream = require('stream');
 import { Throttle } from 'stream-throttle';
-import log = require('../log');
-import utils = require('../utils');
-import sql = require('../sql');
-import noteService = require('../notes');
-import imageService = require('../image');
-import protectedSessionService = require('../protected_session');
-import htmlSanitizer = require('../html_sanitizer');
-import sanitizeAttributeName = require('../sanitize_attribute_name');
-import TaskContext = require('../task_context');
-import BNote = require('../../becca/entities/bnote');
+import log from "../log.js";
+import utils from "../utils.js";
+import sql from "../sql.js";
+import noteService from "../notes.js";
+import imageService from "../image.js";
+import protectedSessionService from "../protected_session.js";
+import htmlSanitizer from "../html_sanitizer.js";
+import sanitizeAttributeName from "../sanitize_attribute_name.js";
+import TaskContext from "../task_context.js";
+import BNote from "../../becca/entities/bnote.js";
 import { File } from "./common";
 
 /**

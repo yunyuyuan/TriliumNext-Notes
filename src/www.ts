@@ -18,18 +18,18 @@ function exit() {
 process.on('SIGINT', exit);
 process.on('SIGTERM', exit);
 
-import app = require('./app');
-import sessionParser = require('./routes/session_parser');
+import app from "./app.js";
+import sessionParser from "./routes/session_parser.js";
 import fs = require('fs');
 import http = require('http');
 import https = require('https');
-import config = require('./services/config');
-import log = require('./services/log');
-import appInfo = require('./services/app_info');
-import ws = require('./services/ws');
-import utils = require('./services/utils');
-import port = require('./services/port');
-import host = require('./services/host');
+import config from "./services/config.js";
+import log from "./services/log.js";
+import appInfo from "./services/app_info.js";
+import ws from "./services/ws.js";
+import utils from "./services/utils.js";
+import port from "./services/port.js";
+import host from "./services/host.js";
 import semver = require('semver');
 
 if (!semver.satisfies(process.version, ">=10.5.0")) {

@@ -1,9 +1,9 @@
 "use strict";
 
-import utils = require('./utils');
-import log = require('./log');
+import utils from "./utils.js";
+import log from "./log.js";
 import url = require('url');
-import syncOptions = require('./sync_options');
+import syncOptions from "./sync_options.js";
 import { ExecOpts } from './request_interface';
 
 // this service provides abstraction over node's HTTP/HTTPS and electron net.client APIs

@@ -1,11 +1,11 @@
-import sql = require('./sql');
-import dateUtils = require('./date_utils');
-import log = require('./log');
-import cls = require('./cls');
-import utils = require('./utils');
-import instanceId = require('./instance_id');
-import becca = require('../becca/becca');
-import blobService = require('../services/blob');
+import sql from "./sql.js";
+import dateUtils from "./date_utils.js";
+import log from "./log.js";
+import cls from "./cls.js";
+import utils from "./utils.js";
+import instanceId from "./instance_id.js";
+import becca from "../becca/becca.js";
+import blobService from "../services/blob.js";
 import { EntityChange } from './entity_changes_interface';
 import type { Blob } from "./blob-interface";
 

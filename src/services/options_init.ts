@@ -1,9 +1,9 @@
-import optionService = require('./options');
-import appInfo = require('./app_info');
-import utils = require('./utils');
-import log = require('./log');
-import dateUtils = require('./date_utils');
-import keyboardActions = require('./keyboard_actions');
+import optionService from "./options.js";
+import appInfo from "./app_info.js";
+import utils from "./utils.js";
+import log from "./log.js";
+import dateUtils from "./date_utils.js";
+import keyboardActions from "./keyboard_actions.js";
 import { KeyboardShortcutWithRequiredActionName } from './keyboard_actions_interface';
 
 function initDocumentOptions() {

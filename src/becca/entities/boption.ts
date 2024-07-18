@@ -1,7 +1,7 @@
 "use strict";
 
-import dateUtils = require('../../services/date_utils');
-import AbstractBeccaEntity = require('./abstract_becca_entity');
+import dateUtils from "../../services/date_utils.js";
+import AbstractBeccaEntity from "./abstract_becca_entity.js";
 import { OptionRow } from './rows';
 
 /**

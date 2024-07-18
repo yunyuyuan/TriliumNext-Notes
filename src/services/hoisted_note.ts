@@ -1,5 +1,5 @@
-import cls = require('./cls');
-import becca = require('../becca/becca');
+import cls from "./cls.js";
+import becca from "../becca/becca.js";
 
 function getHoistedNoteId() {
     return cls.getHoistedNoteId();

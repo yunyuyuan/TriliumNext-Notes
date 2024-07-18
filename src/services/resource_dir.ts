@@ -1,4 +1,4 @@
-import log = require('./log');
+import log from "./log.js";
 import path = require('path');
 import fs = require('fs');
 
