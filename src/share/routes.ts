@@ -250,8 +250,6 @@ function register(router: Router) {
 
         addNoIndexHeader(note, res);
 
-        const utils = require('../services/utils');
-
         const filename = utils.formatDownloadTitle(note.title, note.type, note.mime);
 
         res.setHeader('Content-Disposition', utils.getContentDisposition(filename));

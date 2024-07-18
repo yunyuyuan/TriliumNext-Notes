@@ -10,6 +10,9 @@ import dataDir from "./data_dir.js";
 import cls from "./cls.js";
 import fs from "fs-extra";
 import Database from "better-sqlite3";
+import ws from "./ws.js";
+import becca_loader from "../becca/becca_loader.js";
+import entity_changes from "./entity_changes.js";
 
 const dbConnection: DatabaseType = new Database(dataDir.DOCUMENT_PATH);
 dbConnection.pragma('journal_mode = WAL');
@@ -248,7 +251,7 @@ function transactional<T>(func: (statement: Statement) => T) {
         const ret = (dbConnection.transaction(func) as any).deferred();
 
         if (!dbConnection.inTransaction) { // i.e. transaction was really committed (and not just savepoint released)
-            require('./ws').sendTransactionEntityChangesToAllClients();
+            ws.sendTransactionEntityChangesToAllClients();
         }
 
         return ret;
@@ -259,11 +262,11 @@ function transactional<T>(func: (statement: Statement) => T) {
         if (entityChangeIds.length > 0) {
             log.info("Transaction rollback dirtied the becca, forcing reload.");
 
-            require('../becca/becca_loader').load();
+            becca_loader.load();
         }
 
         // the maxEntityChangeId has been incremented during failed transaction, need to recalculate
-        require('./entity_changes').recalculateMaxEntityChangeId();
+        entity_changes.recalculateMaxEntityChangeId();
 
         throw e;
     }
