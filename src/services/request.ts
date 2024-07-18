@@ -50,7 +50,7 @@ async function exec<T>(opts: ExecOpts): Promise<T> {
     const proxyAgent = await getProxyAgent(opts);
     const parsedTargetUrl = url.parse(opts.url);
 
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         try {
             const headers: Record<string, string | number> = {
                 Cookie: (opts.cookieJar && opts.cookieJar.header) || "",
@@ -64,7 +64,7 @@ async function exec<T>(opts: ExecOpts): Promise<T> {
                 headers['trilium-cred'] = Buffer.from(`dummy:${opts.auth.password}`).toString('base64');
             }
 
-            const request = client.request({
+            const request = (await client).request({
                 method: opts.method,
                 // url is used by electron net module
                 url: opts.url,
@@ -145,7 +145,7 @@ async function getImage(imageUrl: string): Promise<Buffer> {
         proxy: proxyConf !== "noproxy" ? proxyConf : null
     };
 
-    const client = getClient(opts);
+    const client = await getClient(opts);
     const proxyAgent = await getProxyAgent(opts);
     const parsedTargetUrl = url.parse(opts.url);
 
@@ -207,19 +207,17 @@ async function getProxyAgent(opts: ClientOpts) {
     return new AgentClass(opts.proxy);
 }
 
-function getClient(opts: ClientOpts): Client {
+async function getClient(opts: ClientOpts): Promise<Client> {
     // it's not clear how to explicitly configure proxy (as opposed to system proxy),
     // so in that case, we always use node's modules
     if (utils.isElectron() && !opts.proxy) {
-        return require('electron').net as Client;
-    }
-    else {
+        return (await import('electron')).net as Client;
+    } else {
         const {protocol} = url.parse(opts.url);
 
         if (protocol === 'http:' || protocol === 'https:') {
-            return require(protocol.substr(0, protocol.length - 1));
-        }
-        else {
+            return await import(protocol.substr(0, protocol.length - 1));
+        } else {
             throw new Error(`Unrecognized protocol '${protocol}'`);
         }
     }
