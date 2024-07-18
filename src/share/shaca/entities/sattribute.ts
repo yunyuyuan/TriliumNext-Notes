@@ -1,9 +1,8 @@
 "use strict";
 
+import AbstractShacaEntity from "./abstract_shaca_entity";
 import { SAttributeRow } from "./rows";
 import SNote from "./snote.js";
-
-const AbstractShacaEntity = require('./abstract_shaca_entity');
 
 class SAttribute extends AbstractShacaEntity {
 

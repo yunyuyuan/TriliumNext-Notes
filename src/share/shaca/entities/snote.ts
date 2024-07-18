@@ -27,7 +27,7 @@ class SNote extends AbstractShacaEntity {
     parentBranches: SBranch[];
     parents: SNote[];
     children: SNote[];
-    private ownedAttributes: SAttribute[];
+    ownedAttributes: SAttribute[];
     private __attributeCache: SAttribute[] | null;
     private __inheritableAttributeCache: SAttribute[] | null;
     targetRelations: SAttribute[];
