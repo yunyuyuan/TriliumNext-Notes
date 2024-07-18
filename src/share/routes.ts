@@ -1,5 +1,5 @@
 import safeCompare = require('safe-compare');
-import ejs = require("ejs");
+import ejs = require('ejs');
 
 import type { Request, Response, Router } from "express";
 

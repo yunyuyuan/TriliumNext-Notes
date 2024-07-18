@@ -11,7 +11,7 @@ import sql = require('../services/sql');
 import entityChangesService = require('../services/entity_changes');
 import csurf = require('csurf');
 import { createPartialContentHandler } from "express-partial-content";
-import rateLimit = require("express-rate-limit");
+import rateLimit = require('express-rate-limit');
 import AbstractBeccaEntity = require('../becca/entities/abstract_becca_entity');
 import NotFoundError = require('../errors/not_found_error');
 import ValidationError = require('../errors/validation_error');

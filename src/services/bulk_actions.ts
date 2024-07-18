@@ -3,7 +3,7 @@ import becca = require('../becca/becca');
 import cloningService = require('./cloning');
 import branchService = require('./branches');
 import utils = require('./utils');
-import eraseService = require("./erase");
+import eraseService = require('./erase');
 import BNote = require('../becca/entities/bnote');
 
 interface Action {

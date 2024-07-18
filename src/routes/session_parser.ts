@@ -1,4 +1,4 @@
-import session = require("express-session");
+import session = require('express-session');
 import sessionSecret = require('../services/session_secret');
 import dataDir = require('../services/data_dir');
 const FileStore = require('session-file-store')(session);

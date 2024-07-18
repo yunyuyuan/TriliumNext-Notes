@@ -202,8 +202,8 @@ function getProxyAgent(opts: ClientOpts) {
     }
 
     const AgentClass = HTTP === protocol
-        ? require("http-proxy-agent").HttpProxyAgent
-        : require("https-proxy-agent").HttpsProxyAgent;
+        ? require('http-proxy-agent').HttpProxyAgent
+        : require('https-proxy-agent').HttpsProxyAgent;
 
     return new AgentClass(opts.proxy);
 }

@@ -1,7 +1,7 @@
 "use strict";
 
-import BNote = require("../../becca/entities/bnote");
-import TaskContext = require("../task_context");
+import BNote = require('../../becca/entities/bnote');
+import TaskContext = require('../task_context');
 
 import noteService = require('../../services/notes');
 import imageService = require('../../services/image');

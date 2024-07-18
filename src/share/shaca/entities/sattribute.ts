@@ -1,7 +1,7 @@
 "use strict";
 
 import { SAttributeRow } from "./rows";
-import SNote = require("./snote");
+import SNote = require('./snote');
 
 const AbstractShacaEntity = require('./abstract_shaca_entity');
 

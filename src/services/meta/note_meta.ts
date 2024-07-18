@@ -1,5 +1,5 @@
-import AttachmentMeta = require("./attachment_meta");
-import AttributeMeta = require("./attribute_meta");
+import AttachmentMeta = require('./attachment_meta');
+import AttributeMeta = require('./attribute_meta');
 
 interface NoteMeta {
     noteId?: string;

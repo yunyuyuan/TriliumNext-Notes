@@ -3,7 +3,7 @@ import shaca = require('./shaca/shaca');
 import assetPath = require('../services/asset_path');
 import shareRoot = require('./share_root');
 import escapeHtml = require('escape-html');
-import SNote = require("./shaca/entities/snote");
+import SNote = require('./shaca/entities/snote');
 
 interface Result {
     header: string;

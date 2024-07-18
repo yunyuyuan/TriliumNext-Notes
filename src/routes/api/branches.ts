@@ -10,7 +10,7 @@ import TaskContext = require('../../services/task_context');
 import branchService = require('../../services/branches');
 import log = require('../../services/log');
 import ValidationError = require('../../errors/validation_error');
-import eventService = require("../../services/events");
+import eventService = require('../../services/events');
 import { Request } from 'express';
 
 /**

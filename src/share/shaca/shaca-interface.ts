@@ -1,7 +1,7 @@
-import SAttachment = require("./entities/sattachment");
-import SAttribute = require("./entities/sattribute");
-import SBranch = require("./entities/sbranch");
-import SNote = require("./entities/snote");
+import SAttachment = require('./entities/sattachment');
+import SAttribute = require('./entities/sattribute');
+import SBranch = require('./entities/sbranch');
+import SNote = require('./entities/snote');
 
 export default class Shaca {
 

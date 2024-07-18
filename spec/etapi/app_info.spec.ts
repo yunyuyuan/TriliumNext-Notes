@@ -1,4 +1,4 @@
-import etapi = require("../support/etapi");
+import etapi = require('../support/etapi');
 
 etapi.describeEtapi("app_info", () => {
   it("get", async () => {

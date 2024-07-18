@@ -8,7 +8,7 @@ import log = require('./log');
 import type { Statement, Database as DatabaseType, RunResult } from "better-sqlite3";
 import dataDir = require('./data_dir');
 import cls = require('./cls');
-import fs = require("fs-extra");
+import fs = require('fs-extra');
 import Database = require('better-sqlite3');
 
 const dbConnection: DatabaseType = new Database(dataDir.DOCUMENT_PATH);

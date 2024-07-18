@@ -164,7 +164,7 @@ class BRevision extends AbstractBeccaEntity<BRevision> {
      * Revisions are not soft-deletable, they are immediately hard-deleted (erased).
      */
     eraseRevision() {
-        require("../../services/erase.js").eraseRevisions([this.revisionId]);
+        require('../../services/erase.js').eraseRevisions([this.revisionId]);
     }
 
     beforeSaving() {

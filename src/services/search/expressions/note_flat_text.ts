@@ -1,7 +1,7 @@
 "use strict";
 
-import BNote = require("../../../becca/entities/bnote");
-import SearchContext = require("../search_context");
+import BNote = require('../../../becca/entities/bnote');
+import SearchContext = require('../search_context');
 
 import Expression = require('./expression');
 import NoteSet = require('../note_set');

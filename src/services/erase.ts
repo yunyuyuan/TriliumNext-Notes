@@ -1,11 +1,11 @@
-import sql = require("./sql");
-import revisionService = require("./revisions");
-import log = require("./log");
-import entityChangesService = require("./entity_changes");
-import optionService = require("./options");
-import dateUtils = require("./date_utils");
-import sqlInit = require("./sql_init");
-import cls = require("./cls");
+import sql = require('./sql');
+import revisionService = require('./revisions');
+import log = require('./log');
+import entityChangesService = require('./entity_changes');
+import optionService = require('./options');
+import dateUtils = require('./date_utils');
+import sqlInit = require('./sql_init');
+import cls = require('./cls');
 import { EntityChange } from "./entity_changes_interface";
 
 function eraseNotes(noteIdsToErase: string[]) {

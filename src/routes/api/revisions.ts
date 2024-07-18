@@ -8,7 +8,7 @@ import cls = require('../../services/cls');
 import path = require('path');
 import becca = require('../../becca/becca');
 import blobService = require('../../services/blob');
-import eraseService = require("../../services/erase");
+import eraseService = require('../../services/erase');
 import { Request, Response } from 'express';
 import BRevision = require('../../becca/entities/brevision');
 import BNote = require('../../becca/entities/bnote');

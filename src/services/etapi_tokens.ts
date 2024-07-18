@@ -1,7 +1,7 @@
 import becca = require('../becca/becca');
 import utils = require('./utils');
 import BEtapiToken = require('../becca/entities/betapi_token');
-import crypto = require("crypto");
+import crypto = require('crypto');
 
 function getTokens() {
     return becca.getEtapiTokens();

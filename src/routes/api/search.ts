@@ -9,7 +9,7 @@ import bulkActionService = require('../../services/bulk_actions');
 import cls = require('../../services/cls');
 import attributeFormatter = require('../../services/attribute_formatter');
 import ValidationError = require('../../errors/validation_error');
-import SearchResult = require("../../services/search/search_result");
+import SearchResult = require('../../services/search/search_result');
 
 function searchFromNote(req: Request) {
     const note = becca.getNoteOrThrow(req.params.noteId);

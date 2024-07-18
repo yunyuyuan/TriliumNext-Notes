@@ -1,6 +1,6 @@
-import etapi = require("../support/etapi");
-import fs = require("fs");
-import path = require("path");
+import etapi = require('../support/etapi');
+import fs = require('fs');
+import path = require('path');
 
 etapi.describeEtapi("import", () => {
   // temporarily skip this test since test-export.zip is missing

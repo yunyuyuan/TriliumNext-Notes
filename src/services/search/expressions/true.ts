@@ -1,7 +1,7 @@
 "use strict";
 
-import NoteSet = require("../note_set");
-import SearchContext = require("../search_context");
+import NoteSet = require('../note_set');
+import SearchContext = require('../search_context');
 
 import Expression = require('./expression');
 

@@ -1,6 +1,6 @@
 "use strict";
 
-import normalizeString = require("normalize-strings");
+import normalizeString = require('normalize-strings');
 import lex = require('./lex');
 import handleParens = require('./handle_parens');
 import parse = require('./parse');
@@ -11,11 +11,11 @@ import beccaService = require('../../../becca/becca_service');
 import utils = require('../../utils');
 import log = require('../../log');
 import hoistedNoteService = require('../../hoisted_note');
-import BNote = require("../../../becca/entities/bnote");
-import BAttribute = require("../../../becca/entities/battribute");
+import BNote = require('../../../becca/entities/bnote');
+import BAttribute = require('../../../becca/entities/battribute');
 import { SearchParams, TokenData } from "./types";
-import Expression = require("../expressions/expression");
-import sql = require("../../sql");
+import Expression = require('../expressions/expression');
+import sql = require('../../sql');
 
 function searchFromNote(note: BNote) {
     let searchResultNoteIds;

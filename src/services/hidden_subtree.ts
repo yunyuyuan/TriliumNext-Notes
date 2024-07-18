@@ -1,4 +1,4 @@
-import BAttribute = require("../becca/entities/battribute");
+import BAttribute = require('../becca/entities/battribute');
 import { AttributeType, NoteType } from "../becca/entities/rows";
 
 import becca = require('../becca/becca');

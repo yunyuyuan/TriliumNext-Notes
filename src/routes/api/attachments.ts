@@ -1,7 +1,7 @@
 import becca = require('../../becca/becca');
 import blobService = require('../../services/blob');
 import ValidationError = require('../../errors/validation_error');
-import imageService = require("../../services/image");
+import imageService = require('../../services/image');
 import { Request } from 'express';
 
 function getAttachmentBlob(req: Request) {

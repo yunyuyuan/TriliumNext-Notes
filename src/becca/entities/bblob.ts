@@ -1,4 +1,4 @@
-import AbstractBeccaEntity = require("./abstract_becca_entity");
+import AbstractBeccaEntity = require('./abstract_becca_entity');
 import { BlobRow } from "./rows";
 
 // TODO: Why this does not extend the abstract becca?

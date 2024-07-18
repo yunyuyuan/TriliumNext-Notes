@@ -54,7 +54,7 @@ function startTrilium() {
      * to do a complex evaluation.
      */
     if (utils.isElectron()) {
-        require("electron").app.requestSingleInstanceLock();
+        require('electron').app.requestSingleInstanceLock();
     }
 
     log.info(JSON.stringify(appInfo, null, 2));

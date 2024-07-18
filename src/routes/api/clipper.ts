@@ -15,9 +15,9 @@ import utils = require('../../services/utils');
 import path = require('path');
 import htmlSanitizer = require('../../services/html_sanitizer');
 import attributeFormatter = require('../../services/attribute_formatter');
-import jsdom = require("jsdom");
-import BNote = require("../../becca/entities/bnote");
-import ValidationError = require("../../errors/validation_error");
+import jsdom = require('jsdom');
+import BNote = require('../../becca/entities/bnote');
+import ValidationError = require('../../errors/validation_error');
 const { JSDOM } = jsdom;
 
 interface Image {

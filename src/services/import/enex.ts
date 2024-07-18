@@ -1,4 +1,4 @@
-import sax = require("sax");
+import sax = require('sax');
 import stream = require('stream');
 import { Throttle } from 'stream-throttle';
 import log = require('../log');
@@ -9,8 +9,8 @@ import imageService = require('../image');
 import protectedSessionService = require('../protected_session');
 import htmlSanitizer = require('../html_sanitizer');
 import sanitizeAttributeName = require('../sanitize_attribute_name');
-import TaskContext = require("../task_context");
-import BNote = require("../../becca/entities/bnote");
+import TaskContext = require('../task_context');
+import BNote = require('../../becca/entities/bnote');
 import { File } from "./common";
 
 /**

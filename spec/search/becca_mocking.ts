@@ -1,9 +1,9 @@
-import BNote = require("../../src/becca/entities/bnote");
-import BBranch = require("../../src/becca/entities/bbranch");
-import BAttribute = require("../../src/becca/entities/battribute");
-import becca = require("../../src/becca/becca");
-import randtoken = require("rand-token");
-import SearchResult = require("../../src/services/search/search_result");
+import BNote = require('../../src/becca/entities/bnote');
+import BBranch = require('../../src/becca/entities/bbranch');
+import BAttribute = require('../../src/becca/entities/battribute');
+import becca = require('../../src/becca/becca');
+import randtoken = require('rand-token');
+import SearchResult = require('../../src/services/search/search_result');
 import { NoteType } from "../../src/becca/entities/rows";
 randtoken.generator({ source: "crypto" });
 

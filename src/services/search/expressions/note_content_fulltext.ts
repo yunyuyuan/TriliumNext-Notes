@@ -1,7 +1,7 @@
 "use strict";
 
 import { NoteRow } from "../../../becca/entities/rows";
-import SearchContext = require("../search_context");
+import SearchContext = require('../search_context');
 
 import Expression = require('./expression');
 import NoteSet = require('../note_set');
@@ -10,7 +10,7 @@ import becca = require('../../../becca/becca');
 import protectedSessionService = require('../../protected_session');
 import striptags = require('striptags');
 import utils = require('../../utils');
-import sql = require("../../sql");
+import sql = require('../../sql');
 
 const ALLOWED_OPERATORS = ['=', '!=', '*=*', '*=', '=*', '%='];
 

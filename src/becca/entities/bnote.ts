@@ -9,7 +9,7 @@ import AbstractBeccaEntity = require('./abstract_becca_entity');
 import BRevision = require('./brevision');
 import BAttachment = require('./battachment');
 import TaskContext = require('../../services/task_context');
-import dayjs = require("dayjs");
+import dayjs = require('dayjs');
 import utc = require('dayjs/plugin/utc');
 import eventService = require('../../services/events');
 import { AttachmentRow, NoteRow, NoteType, RevisionRow } from './rows';

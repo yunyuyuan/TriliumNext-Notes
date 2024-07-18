@@ -19,7 +19,7 @@ declare module 'normalize-strings' {
 }
 
 declare module 'joplin-turndown-plugin-gfm' {
-    import TurndownService = require("turndown");
+    import TurndownService = require('turndown');
     namespace gfm {
         function gfm(service: TurndownService): void;
     }

@@ -1,6 +1,6 @@
 "use strict";
 
-import BNote = require("../../becca/entities/bnote");
+import BNote = require('../../becca/entities/bnote');
 
 /**
  * Search string is lower cased for case-insensitive comparison. But when retrieving properties,

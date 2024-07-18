@@ -1,6 +1,6 @@
 "use strict";
 
-import dayjs = require("dayjs");
+import dayjs = require('dayjs');
 import AndExp = require('../expressions/and');
 import OrExp = require('../expressions/or');
 import NotExp = require('../expressions/not');
@@ -20,9 +20,9 @@ import ValueExtractor = require('../value_extractor');
 import utils = require('../../utils');
 import TrueExp = require('../expressions/true');
 import IsHiddenExp = require('../expressions/is_hidden');
-import SearchContext = require("../search_context");
+import SearchContext = require('../search_context');
 import { TokenData } from "./types";
-import Expression = require("../expressions/expression");
+import Expression = require('../expressions/expression');
 
 function getFulltext(_tokens: TokenData[], searchContext: SearchContext) {
     const tokens: string[] = _tokens.map(t => utils.removeDiacritic(t.token));

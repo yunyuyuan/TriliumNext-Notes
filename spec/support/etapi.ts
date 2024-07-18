@@ -1,5 +1,5 @@
-import child_process = require("child_process");
-import kill = require("tree-kill");
+import child_process = require('child_process');
+import kill = require('tree-kill');
 
 let etapiAuthToken: string | undefined;
 
