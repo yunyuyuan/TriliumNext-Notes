@@ -90,7 +90,7 @@ function getExistingAnonymizedDatabases() {
         }));
 }
 
-export = {
+export default {
     getFullAnonymizationScript,
     createAnonymizedCopy,
     getExistingAnonymizedDatabases

@@ -117,7 +117,7 @@ function formatDate() {
     return `${pad(todaysMidnight.getFullYear())}-${pad(todaysMidnight.getMonth() + 1)}-${pad(todaysMidnight.getDate())}`;
 }
 
-export = {
+export default {
     info,
     error,
     request

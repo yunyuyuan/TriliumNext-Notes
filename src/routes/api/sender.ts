@@ -84,7 +84,7 @@ function saveNote(req: Request) {
     };
 }
 
-export = {
+export default {
     uploadImage,
     saveNote
 };

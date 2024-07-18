@@ -209,7 +209,7 @@ function checkEntityChanges() {
     require('../../services/consistency_checks').runEntityChangesChecks();
 }
 
-export = {
+export default {
     testSync,
     checkSync,
     syncNow,

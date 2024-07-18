@@ -245,7 +245,7 @@ function uploadModifiedFileToAttachment(req: Request) {
     attachment.setContent(fileContent);
 }
 
-export = {
+export default {
     updateFile,
     updateAttachment,
     openFile,

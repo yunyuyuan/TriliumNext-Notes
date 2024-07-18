@@ -314,7 +314,7 @@ function disableSlowQueryLogging<T>(cb: () => T) {
     }
 }
 
-export = {
+export default {
     dbConnection,
     insert,
     replace,

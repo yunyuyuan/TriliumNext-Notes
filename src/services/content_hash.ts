@@ -80,7 +80,7 @@ function checkContentHashes(otherHashes: Record<string, SectorHash>) {
     return failedChecks;
 }
 
-export = {
+export default {
     getEntityHashes,
     checkContentHashes
 };

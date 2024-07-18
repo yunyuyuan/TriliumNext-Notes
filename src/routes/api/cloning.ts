@@ -29,7 +29,7 @@ function toggleNoteInParent(req: Request) {
     return cloningService.toggleNoteInParent(present === 'true', noteId, parentNoteId);
 }
 
-export = {
+export default {
     cloneNoteToBranch,
     cloneNoteToParentNote,
     cloneNoteAfter,

@@ -44,7 +44,7 @@ function moveBranchToBranch(branchToMove: BBranch, targetParentBranch: BBranch, 
     return res;
 }
 
-export = {
+export default {
     moveBranchToBranch,
     moveBranchToNote
 };

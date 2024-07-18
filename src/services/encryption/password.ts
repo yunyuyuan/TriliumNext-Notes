@@ -78,7 +78,7 @@ function resetPassword() {
     };
 }
 
-export = {
+export default {
     isPasswordSet,
     changePassword,
     setPassword,

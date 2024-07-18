@@ -224,7 +224,7 @@ function setPrefix(req: Request) {
     branch.save();
 }
 
-export = {
+export default {
     moveBranchToParent,
     moveBranchBeforeNote,
     moveBranchAfterNote,

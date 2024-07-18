@@ -186,7 +186,7 @@ sqlInit.dbReady.then(() => {
     setInterval(cls.wrap(() => eraseScheduledAttachments()), 3600 * 1000);
 });
 
-export = {
+export default {
     eraseDeletedNotesNow,
     eraseUnusedAttachmentsNow,
     eraseNotesWithDeleteId,

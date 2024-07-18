@@ -45,7 +45,7 @@ function getSubtreeSize(req: Request) {
     };
 }
 
-export = {
+export default {
     getNoteSize,
     getSubtreeSize
 };

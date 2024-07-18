@@ -146,7 +146,7 @@ function validateAndPatch(target: any, source: any, allowedProperties: Validator
     }
 }
 
-export = {
+export default {
     EtapiError,
     sendError,
     route,

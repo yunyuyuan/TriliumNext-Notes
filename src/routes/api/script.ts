@@ -131,7 +131,7 @@ function getBundle(req: Request) {
     return scriptService.getScriptBundleForFrontend(note, script, params);
 }
 
-export = {
+export default {
     exec,
     run,
     getStartupBundles,

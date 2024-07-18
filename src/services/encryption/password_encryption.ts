@@ -33,7 +33,7 @@ function getDataKey(password: string) {
     return decryptedDataKey;
 }
 
-export = {
+export default {
     verifyPassword,
     getDataKey,
     setDataKey

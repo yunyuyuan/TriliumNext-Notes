@@ -22,7 +22,7 @@ function resetPassword(req: Request) {
     return passwordService.resetPassword();
 }
 
-export = {
+export default {
     changePassword,
     resetPassword
 };

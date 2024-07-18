@@ -43,7 +43,7 @@ function getAffectedNoteIds(noteIds: string[], includeDescendants: boolean) {
     return affectedNoteIds;
 }
 
-export = {
+export default {
     execute,
     getAffectedNoteCount
 };

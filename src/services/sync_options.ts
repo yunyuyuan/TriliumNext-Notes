@@ -14,7 +14,7 @@ function get(name: string) {
     return (config['Sync'] && config['Sync'][name]) || optionService.getOption(name);
 }
 
-export = {
+export default {
     // env variable is the easiest way to guarantee we won't overwrite prod data during development
     // after copying prod document/data directory
     getSyncServerHost: () => process.env.TRILIUM_SYNC_SERVER_HOST || get('syncServerHost'),

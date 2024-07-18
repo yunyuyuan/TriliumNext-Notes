@@ -126,7 +126,7 @@ function searchTemplates() {
     }).map(note => note.noteId);
 }
 
-export = {
+export default {
     searchFromNote,
     searchAndExecute,
     getRelatedNotes,

@@ -66,7 +66,7 @@ function execute(req: Request) {
     }
 }
 
-export = {
+export default {
     getSchema,
     execute
 };

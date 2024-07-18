@@ -362,7 +362,7 @@ function checkHiddenSubtreeRecursively(parentNoteId: string, item: Item) {
     }
 }
 
-export = {
+export default {
     checkHiddenSubtree,
     LBTPL_ROOT,
     LBTPL_BASE,

@@ -385,7 +385,7 @@ function getBacklinks(req: Request) {
     });
 }
 
-export = {
+export default {
     getLinkMap,
     getTreeMap,
     getBacklinkCount,

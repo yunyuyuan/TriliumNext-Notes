@@ -226,7 +226,7 @@ function getWeekNote(dateStr: string, options: WeekNoteOpts = {}, rootNote: BNot
     return getDayNote(dateStr, rootNote);
 }
 
-export = {
+export default {
     getRootCalendarNote,
     getYearNote,
     getMonthNote,

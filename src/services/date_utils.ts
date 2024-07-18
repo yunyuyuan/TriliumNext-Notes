@@ -95,7 +95,7 @@ function validateUtcDateTime(str: string | undefined) {
     }
 }
 
-export = {
+export default {
     utcNowDateTime,
     localNowDateTime,
     localNowDate,

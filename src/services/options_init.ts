@@ -132,7 +132,7 @@ function getKeyboardDefaultOptions() {
         }));
 }
 
-export = {
+export default {
     initDocumentOptions,
     initNotSyncedOptions,
     initStartupOptions

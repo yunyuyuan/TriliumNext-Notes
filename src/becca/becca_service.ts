@@ -82,7 +82,7 @@ function getNoteTitleForPath(notePathArray: string[]) {
     return titles.join(' / ');
 }
 
-export = {
+export default {
     getNoteTitle,
     getNoteTitleForPath,
     isNotePathArchived

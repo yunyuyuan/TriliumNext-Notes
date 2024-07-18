@@ -33,7 +33,7 @@ function getWorkspaceNote() {
     }
 }
 
-export = {
+export default {
     getHoistedNoteId,
     getWorkspaceNote,
     isHoistedInHiddenSubtree

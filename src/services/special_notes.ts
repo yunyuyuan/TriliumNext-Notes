@@ -287,7 +287,7 @@ function createOrUpdateScriptLauncherFromApi(opts: {
     return launcherNote;
 }
 
-export = {
+export default {
     getInboxNote,
     createSqlConsole,
     saveSqlConsole,

@@ -175,7 +175,7 @@ function cloneNoteAfter(noteId: string, afterBranchId: string) {
     return { success: true, branchId: branch.branchId };
 }
 
-export = {
+export default {
     cloneNoteToBranch,
     cloneNoteToParentNote,
     ensureNoteIsPresentInParent,

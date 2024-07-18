@@ -93,7 +93,7 @@ function getOptionMap() {
     return map;
 }
 
-export = {
+export default {
     getOption,
     getOptionInt,
     getOptionBool,

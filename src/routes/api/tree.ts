@@ -160,7 +160,7 @@ function load(req: Request) {
     return getNotesAndBranchesAndAttributes(req.body.noteIds);
 }
 
-export = {
+export default {
     getTree,
     load
 };

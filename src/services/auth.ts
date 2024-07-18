@@ -126,7 +126,7 @@ function checkCredentials(req: AppRequest, res: Response, next: NextFunction) {
     }
 }
 
-export = {
+export default {
     checkAuth,
     checkApiAuth,
     checkAppInitialized,

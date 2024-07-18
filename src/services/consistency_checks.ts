@@ -913,7 +913,7 @@ sqlInit.dbReady.then(() => {
     setTimeout(cls.wrap(runPeriodicChecks), 4 * 1000);
 });
 
-export = {
+export default {
     runOnDemandChecks,
     runEntityChangesChecks
 };

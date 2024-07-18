@@ -200,7 +200,7 @@ function getNotePathData(note: BNote): NotePath | undefined {
     }
 }
 
-export = {
+export default {
     getRevisionBlob,
     getRevisions,
     getRevision,

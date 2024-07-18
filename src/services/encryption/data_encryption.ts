@@ -112,7 +112,7 @@ function decryptString(dataKey: Buffer, cipherText: string) {
     return buffer.toString('utf-8');
 }
 
-export = {
+export default {
     encrypt,
     decrypt,
     decryptString

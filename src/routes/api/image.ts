@@ -114,7 +114,7 @@ function updateImage(req: AppRequest) {
     return { uploaded: true };
 }
 
-export = {
+export default {
     returnImageFromNote,
     returnImageFromRevision,
     returnAttachedImage,

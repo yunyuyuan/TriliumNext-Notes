@@ -97,7 +97,7 @@ function convertAttachmentToNote(req: Request) {
     return attachment.convertToNote();
 }
 
-export = {
+export default {
     getAttachmentBlob,
     getAttachments,
     getAttachment,

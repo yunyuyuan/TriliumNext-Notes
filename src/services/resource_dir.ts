@@ -20,7 +20,7 @@ if (!fs.existsSync(MIGRATIONS_DIR)) {
     process.exit(1);
 }
 
-export = {
+export default {
     RESOURCE_DIR,
     MIGRATIONS_DIR,
     DB_INIT_DIR,

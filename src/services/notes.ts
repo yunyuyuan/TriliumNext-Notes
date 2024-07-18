@@ -1037,7 +1037,7 @@ function getNoteIdMapping(origNote: BNote) {
     return noteIdMapping;
 }
 
-export = {
+export default {
     createNewNote,
     createNewNoteWithTarget,
     updateNoteData,

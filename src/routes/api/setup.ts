@@ -51,7 +51,7 @@ function getSyncSeed() {
     };
 }
 
-export = {
+export default {
     getStatus,
     setupNewDocument,
     setupSyncFromServer,

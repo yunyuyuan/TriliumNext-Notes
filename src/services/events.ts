@@ -59,7 +59,7 @@ function emit(eventType: string, data?: any) {
     }
 }
 
-export = {
+export default {
     subscribe,
     subscribeBeccaLoader,
     emit,

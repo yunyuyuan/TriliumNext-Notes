@@ -191,7 +191,7 @@ function importAttachment(taskContext: TaskContext, file: File, parentNote: BNot
     }
 }
 
-export = {
+export default {
     importSingleFile,
     importAttachment
 };

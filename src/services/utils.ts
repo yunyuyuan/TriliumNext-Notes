@@ -311,7 +311,7 @@ function isString(x: any) {
     return Object.prototype.toString.call(x) === "[object String]";
 }
 
-export = {
+export default {
     randomSecureToken,
     randomString,
     md5,

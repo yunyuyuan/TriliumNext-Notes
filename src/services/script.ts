@@ -219,7 +219,7 @@ function sanitizeVariableName(str: string) {
     return str.replace(/[^a-z0-9_]/gim, "");
 }
 
-export = {
+export default {
     executeNote,
     executeNoteNoException,
     executeScript,

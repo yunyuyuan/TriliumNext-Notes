@@ -444,7 +444,7 @@ function formatAttribute(attr: BAttribute) {
     }
 }
 
-export = {
+export default {
     searchFromNote,
     searchNotesForAutocomplete,
     findResultsWithQuery,

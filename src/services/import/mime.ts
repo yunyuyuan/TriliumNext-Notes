@@ -110,7 +110,7 @@ function normalizeMimeType(mime: string) {
     return undefined;
 }
 
-export = {
+export default {
     getMime,
     getType,
     normalizeMimeType

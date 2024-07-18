@@ -70,7 +70,7 @@ function checkProtectedSessionExpiration() {
     }
 }
 
-export = {
+export default {
     setDataKey,
     resetDataKey,
     isProtectedSessionAvailable,

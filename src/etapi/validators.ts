@@ -107,7 +107,7 @@ function isValidEntityId(obj: unknown) {
     }
 }
 
-export = {
+export default {
     mandatory,
     notNull,
     isString,

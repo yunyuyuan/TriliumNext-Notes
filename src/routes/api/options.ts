@@ -136,7 +136,7 @@ function isAllowed(name: string) {
         || name.startsWith("hideArchivedNotes");
 }
 
-export = {
+export default {
     getOptions,
     updateOption,
     updateOptions,

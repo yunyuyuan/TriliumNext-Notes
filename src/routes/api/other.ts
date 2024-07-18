@@ -35,7 +35,7 @@ function renderMarkdown(req: Request) {
     };
 }
 
-export = {
+export default {
     getIconUsage,
     renderMarkdown
 };

@@ -238,7 +238,7 @@ function deleteRelation(req: Request) {
     }
 }
 
-export = {
+export default {
     updateNoteAttributes,
     updateNoteAttribute,
     setNoteAttribute,

@@ -27,7 +27,7 @@ function getColumn<T>(query: string, params: string[] = []): T[] {
     return dbConnection.prepare(query).pluck().all(params) as T[];
 }
 
-export = {
+export default {
     getRawRows,
     getRow,
     getColumn

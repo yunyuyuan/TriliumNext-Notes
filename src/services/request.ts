@@ -233,7 +233,7 @@ function generateError(opts: {
     return new Error(`Request to ${opts.method} ${opts.url} failed, error: ${message}`);
 }
 
-export = {
+export default {
     exec,
     getImage
 };

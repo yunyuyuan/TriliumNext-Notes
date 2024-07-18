@@ -261,7 +261,7 @@ function setNoteToParent(noteId: string, prefix: string, parentNoteId: string) {
     }
 }
 
-export = {
+export default {
     validateParentChild,
     sortNotes,
     sortNotesIfNeeded,

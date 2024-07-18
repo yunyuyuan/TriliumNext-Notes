@@ -80,7 +80,7 @@ function note(title: string, extraParams = {}) {
   return new NoteBuilder(note);
 }
 
-export = {
+export default {
   NoteBuilder,
   findNoteByTitle,
   note,

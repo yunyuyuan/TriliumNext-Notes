@@ -234,7 +234,7 @@ async function resize(buffer: Buffer, quality: number) {
     return resultBuffer;
 }
 
-export = {
+export default {
     saveImage,
     saveImageToAttachment,
     updateImage

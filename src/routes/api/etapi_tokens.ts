@@ -21,7 +21,7 @@ function deleteToken(req: Request) {
     etapiTokenService.deleteToken(req.params.etapiTokenId);
 }
 
-export = {
+export default {
     getTokens,
     createToken,
     patchToken,

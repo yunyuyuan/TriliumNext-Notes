@@ -14,7 +14,7 @@ function getShortcutsForNotes() {
     return labels.filter(attr => becca.getNote(attr.noteId)?.type !== 'launcher');
 }
 
-export = {
+export default {
     getKeyboardActions,
     getShortcutsForNotes
 };

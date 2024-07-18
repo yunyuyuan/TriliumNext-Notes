@@ -49,7 +49,7 @@ function checkIntegrity() {
     };
 }
 
-export = {
+export default {
     getExistingBackups,
     backupDatabase,
     vacuumDatabase,

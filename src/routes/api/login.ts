@@ -110,7 +110,7 @@ function token(req: Request) {
     return { token: authToken };
 }
 
-export = {
+export default {
     loginSync,
     loginToProtectedSession,
     logoutFromProtectedSession,

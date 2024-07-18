@@ -102,7 +102,7 @@ function logout(req: AppRequest, res: Response) {
 
 }
 
-export = {
+export default {
     loginPage,
     setPasswordPage,
     setPassword,

@@ -136,7 +136,7 @@ async function importAttachmentsToNote(req: AppRequest) {
     }
 }
 
-export = {
+export default {
     importNotesToBranch,
     importAttachmentsToNote
 };

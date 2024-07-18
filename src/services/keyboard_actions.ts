@@ -637,7 +637,7 @@ function getKeyboardActions() {
     return actions;
 }
 
-export = {
+export default {
     DEFAULT_KEYBOARD_ACTIONS,
     getKeyboardActions
 };

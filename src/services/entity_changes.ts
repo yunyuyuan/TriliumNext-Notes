@@ -193,7 +193,7 @@ function recalculateMaxEntityChangeId() {
     maxEntityChangeId = sql.getValue<number>("SELECT COALESCE(MAX(id), 0) FROM entity_changes");
 }
 
-export = {
+export default {
     putNoteReorderingEntityChange,
     putEntityChangeForOtherInstances,
     putEntityChangeWithForcedChange,

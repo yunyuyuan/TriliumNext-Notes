@@ -250,7 +250,7 @@ function convertNoteToAttachment(req: Request) {
     };
 }
 
-export = {
+export default {
     getNote,
     getNoteBlob,
     getNoteMetadata,

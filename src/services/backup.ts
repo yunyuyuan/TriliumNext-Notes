@@ -75,7 +75,7 @@ if (!fs.existsSync(dataDir.BACKUP_DIR)) {
     fs.mkdirSync(dataDir.BACKUP_DIR, 0o700);
 }
 
-export = {
+export default {
     getExistingBackups,
     backupNow,
     regularBackup

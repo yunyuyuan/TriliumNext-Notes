@@ -64,7 +64,7 @@ function mapAttachmentToPojo(attachment: BAttachment) {
     };
 }
 
-export = {
+export default {
     mapNoteToPojo,
     mapBranchToPojo,
     mapAttributeToPojo,

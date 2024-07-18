@@ -275,7 +275,7 @@ function setLastSyncedPush(entityChangeId: number) {
     lastSyncedPush = entityChangeId;
 }
 
-export = {
+export default {
     init,
     sendMessageToAllClients,
     syncPushInProgress,

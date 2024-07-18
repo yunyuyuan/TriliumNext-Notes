@@ -453,7 +453,7 @@ require('../becca/becca_loader').beccaLoaded.then(() => {
     getLastSyncedPush();
 });
 
-export = {
+export default {
     sync,
     login,
     getEntityChangeRecords,

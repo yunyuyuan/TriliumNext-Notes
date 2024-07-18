@@ -582,7 +582,7 @@ async function exportToZipFile(noteId: string, format: "markdown" | "html", zipF
     log.info(`Exported '${noteId}' with format '${format}' to '${zipFilePath}'`);
 }
 
-export = {
+export default {
     exportToZip,
     exportToZipFile
 };

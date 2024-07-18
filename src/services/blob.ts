@@ -54,7 +54,7 @@ function calculateContentHash({blobId, content}: Blob) {
     return utils.hash(`${blobId}|${content.toString()}`);
 }
 
-export = {
+export default {
     getBlobPojo,
     processContent,
     calculateContentHash

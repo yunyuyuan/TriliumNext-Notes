@@ -22,7 +22,7 @@ function getScryptHash(password: crypto.BinaryLike, salt: crypto.BinaryLike) {
     return hashed;
 }
 
-export = {
+export default {
     getVerificationHash,
     getPasswordDerivedKey
 };

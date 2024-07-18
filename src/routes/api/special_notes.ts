@@ -82,7 +82,7 @@ function createOrUpdateScriptLauncherFromApi(req: Request) {
     return specialNotesService.createOrUpdateScriptLauncherFromApi(req.body);
 }
 
-export = {
+export default {
     getInboxNote,
     getDayNote,
     getWeekNote,

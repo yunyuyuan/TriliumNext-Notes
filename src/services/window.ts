@@ -193,7 +193,7 @@ function getMainWindow() {
     return mainWindow;
 }
 
-export = {
+export default {
     createMainWindow,
     createSetupWindow,
     closeSetupWindow,

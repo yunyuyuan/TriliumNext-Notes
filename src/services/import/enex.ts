@@ -409,4 +409,4 @@ function importEnex(taskContext: TaskContext, file: File, parentNote: BNote): Pr
     });
 }
 
-export = { importEnex };
+export default { importEnex };

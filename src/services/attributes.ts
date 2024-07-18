@@ -110,7 +110,7 @@ function isAttributeDangerous(type: string, name: string): boolean {
     );
 }
 
-export = {
+export default {
     getNotesWithLabel,
     getNoteWithLabel,
     createLabel,

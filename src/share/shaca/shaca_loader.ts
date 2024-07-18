@@ -92,7 +92,7 @@ eventService.subscribe([eventService.ENTITY_CREATED, eventService.ENTITY_CHANGED
     shaca.reset();
 });
 
-export = {
+export default {
     load,
     ensureLoad
 };

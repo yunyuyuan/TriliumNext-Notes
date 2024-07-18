@@ -114,7 +114,7 @@ function deleteToken(etapiTokenId: string) {
     etapiToken.markAsDeletedSimple();
 }
 
-export = {
+export default {
     getTokens,
     createToken,
     renameToken,
