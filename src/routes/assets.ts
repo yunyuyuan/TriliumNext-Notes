@@ -1,5 +1,6 @@
 import assetPath from "../services/asset_path.js";
 import path from "path";
+import { fileURLToPath } from "url";
 import express from "express";
 import env from "../services/env.js";
 import serveStatic from "serve-static";
@@ -15,7 +16,7 @@ const persistentCacheStatic = (root: string, options?: serveStatic.ServeStaticOp
 };
 
 function register(app: express.Application) {
-    const srcRoot = path.join(__dirname, '..');
+    const srcRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
     app.use(`/${assetPath}/app`, persistentCacheStatic(path.join(srcRoot, 'public/app')));
     app.use(`/${assetPath}/app-dist`, persistentCacheStatic(path.join(srcRoot, 'public/app-dist')));
     app.use(`/${assetPath}/fonts`, persistentCacheStatic(path.join(srcRoot, 'public/fonts')));

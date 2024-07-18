@@ -10,6 +10,9 @@ import keyboardActionsService from "./keyboard_actions.js";
 import remoteMain from "@electron/remote/main"
 import { App, BrowserWindow, WebContents, ipcMain } from 'electron';
 
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
 // Prevent the window being garbage collected
 let mainWindow: BrowserWindow | null;
 let setupWindow: BrowserWindow | null;
@@ -128,7 +131,7 @@ function configureWebContents(webContents: WebContents, spellcheckEnabled: boole
 }
 
 function getIcon() {
-    return path.join(__dirname, '../../images/app-icons/png/256x256' + (env.isDev() ? '-dev' : '') + '.png');
+    return path.join(dirname(fileURLToPath(import.meta.url)), '../../images/app-icons/png/256x256' + (env.isDev() ? '-dev' : '') + '.png');
 }
 
 async function createSetupWindow() {

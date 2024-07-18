@@ -4,6 +4,8 @@ import favicon from "serve-favicon";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import compression from "compression";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 import sessionParser from "./routes/session_parser.js";
 import utils from "./services/utils.js";
 import assets from "./routes/assets.js";
@@ -16,8 +18,10 @@ await import('./becca/becca_loader');
 
 const app = express();
 
+const scriptDir = dirname(fileURLToPath(import.meta.url));
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(scriptDir, 'views'));
 app.set('view engine', 'ejs');
 
 if (!utils.isElectron()) {
@@ -35,11 +39,11 @@ app.use(express.json({ limit: '500mb' }));
 app.use(express.raw({ limit: '500mb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public/root')));
-app.use(`/manifest.webmanifest`, express.static(path.join(__dirname, 'public/manifest.webmanifest')));
-app.use(`/robots.txt`, express.static(path.join(__dirname, 'public/robots.txt')));
+app.use(express.static(path.join(scriptDir, 'public/root')));
+app.use(`/manifest.webmanifest`, express.static(path.join(scriptDir, 'public/manifest.webmanifest')));
+app.use(`/robots.txt`, express.static(path.join(scriptDir, 'public/robots.txt')));
 app.use(sessionParser);
-app.use(favicon(`${__dirname}/../images/app-icons/win/icon.ico`));
+app.use(favicon(`${scriptDir}/../images/app-icons/win/icon.ico`));
 
 assets.register(app);
 routes.register(app);

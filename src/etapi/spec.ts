@@ -3,7 +3,8 @@ import { Router } from "express";
 import fs from "fs";
 import path from "path";
 
-const specPath = path.join(__dirname, 'etapi.openapi.yaml');
+import { fileURLToPath } from "url";
+const specPath = path.join(path.dirname(fileURLToPath(import.meta.url)), 'etapi.openapi.yaml');
 let spec: string | null = null;
 
 function register(router: Router) {
