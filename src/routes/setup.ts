@@ -7,11 +7,11 @@ import assetPath from "../services/asset_path.js";
 import appPath from "../services/app_path.js";
 import { Request, Response } from 'express';
 
-function setupPage(req: Request, res: Response) {
+async function setupPage(req: Request, res: Response) {
     if (sqlInit.isDbInitialized()) {
         if (utils.isElectron()) {
-            const windowService = require('../services/window');
-            const { app } = require('electron');
+            const windowService = (await import("../services/window")).default;
+            const { app } = await import("electron");
             windowService.createMainWindow(app);
             windowService.closeSetupWindow();
         }

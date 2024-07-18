@@ -17,7 +17,7 @@ let setupWindow: BrowserWindow | null;
 async function createExtraWindow(extraWindowHash: string) {
     const spellcheckEnabled = optionService.getOptionBool('spellCheckEnabled');
 
-    const { BrowserWindow } = require('electron');
+    const { BrowserWindow } = await import('electron');
 
     const win = new BrowserWindow({
         width: 1000,
@@ -43,7 +43,7 @@ ipcMain.on('create-extra-window', (event, arg) => {
 });
 
 async function createMainWindow(app: App) {
-    const windowStateKeeper = require('electron-window-state'); // should not be statically imported
+    const windowStateKeeper = (await import('electron-window-state')).default; // should not be statically imported
 
     const mainWindowState = windowStateKeeper({
         // default window width & height, so it's usable on a 1600 * 900 display (including some extra panels etc.)
@@ -53,7 +53,7 @@ async function createMainWindow(app: App) {
 
     const spellcheckEnabled = optionService.getOptionBool('spellCheckEnabled');
 
-    const { BrowserWindow } = require('electron'); // should not be statically imported
+    const { BrowserWindow } = (await import('electron')); // should not be statically imported
 
     mainWindow = new BrowserWindow({
         x: mainWindowState.x,
@@ -100,7 +100,11 @@ function configureWebContents(webContents: WebContents, spellcheckEnabled: boole
     remoteMain.enable(webContents);
 
     mainWindow.webContents.setWindowOpenHandler((details) => {
-        require('electron').shell.openExternal(details.url);
+        async function openExternal() {
+            (await import('electron')).shell.openExternal(details.url);
+        }
+        
+        openExternal();
         return { action: 'deny' }
     });
 

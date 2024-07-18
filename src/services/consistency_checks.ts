@@ -16,6 +16,7 @@ import sanitizeAttributeName from "./sanitize_attribute_name.js";
 import noteTypesService from "../services/note_types.js";
 import { BranchRow } from '../becca/entities/rows';
 import { EntityChange } from './entity_changes_interface';
+import becca_loader from "../becca/becca_loader.js";
 const noteTypes = noteTypesService.getNoteTypeNames();
 
 class ConsistencyChecks {
@@ -825,7 +826,7 @@ class ConsistencyChecks {
         }
 
         if (this.reloadNeeded) {
-            require('../becca/becca_loader').reload("consistency checks need becca reload");
+            becca_loader.reload("consistency checks need becca reload");
         }
 
         return !this.unrecoveredConsistencyErrors;
