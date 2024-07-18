@@ -125,11 +125,10 @@ function escapeRegExp(str: string) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-function crash() {
+async function crash() {
     if (isElectron()) {
-        require('electron').app.exit(1);
-    }
-    else {
+        (await import("electron")).app.exit(1);
+    } else {
         process.exit(1);
     }
 }

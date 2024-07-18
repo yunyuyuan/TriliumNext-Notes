@@ -20,7 +20,7 @@ async function migrate() {
     if (currentDbVersion < 214) {
         log.error("Direct migration from your current version is not supported. Please upgrade to the latest v0.60.4 first and only then to this version.");
 
-        utils.crash();
+        await utils.crash();
         return;
     }
 
@@ -84,7 +84,7 @@ async function migrate() {
                 log.error("migration failed, crashing hard"); // this is not very user-friendly :-/
 
                 utils.crash();
-                break; // crash() above does not seem to work right away
+                break; // crash() is sometimes async
             }
         }
     });
@@ -135,7 +135,7 @@ async function migrateIfNecessary() {
     if (currentDbVersion > appInfo.dbVersion && process.env.TRILIUM_IGNORE_DB_VERSION !== 'true') {
         log.error(`Current DB version ${currentDbVersion} is newer than the current DB version ${appInfo.dbVersion}, which means that it was created by a newer and incompatible version of Trilium. Upgrade to the latest version of Trilium to resolve this issue.`);
 
-        utils.crash();
+        await utils.crash();
     }
 
     if (!isDbUpToDate()) {
