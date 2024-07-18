@@ -67,12 +67,12 @@ async function migrate() {
 
     cls.setMigrationRunning(true);
 
-    sql.transactional(() => {
+    sql.transactional(async () => {
         for (const mig of migrations) {
             try {
                 log.info(`Attempting migration to version ${mig.dbVersion}`);
 
-                executeMigration(mig);
+                await executeMigration(mig);
 
                 sql.execute(`UPDATE options
                              SET value = ?
@@ -96,7 +96,7 @@ async function migrate() {
     }
 }
 
-function executeMigration(mig: MigrationInfo) {
+async function executeMigration(mig: MigrationInfo) {
     if (mig.type === 'sql') {
         const migrationSql = fs.readFileSync(`${resourceDir.MIGRATIONS_DIR}/${mig.file}`).toString('utf8');
 
@@ -106,7 +106,7 @@ function executeMigration(mig: MigrationInfo) {
     } else if (mig.type === 'js') {
         console.log("Migration with JS module");
 
-        const migrationModule = require(`${resourceDir.MIGRATIONS_DIR}/${mig.file}`);
+        const migrationModule = await import(`${resourceDir.MIGRATIONS_DIR}/${mig.file}`);
         migrationModule();
     } else {
         throw new Error(`Unknown migration type '${mig.type}'`);
