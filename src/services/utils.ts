@@ -1,12 +1,14 @@
 "use strict";
 
 import crypto from "crypto";
-const randtoken = require('rand-token').generator({source: 'crypto'});
+import { generator } from "rand-token";
 import unescape from "unescape";
 import escape from "escape-html";
 import sanitize from "sanitize-filename";
 import mimeTypes from "mime-types";
 import path from "path";
+
+const randtoken = generator({source: 'crypto'});
 
 function newEntityId() {
     return randomString(12);
