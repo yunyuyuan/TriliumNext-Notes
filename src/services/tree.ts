@@ -7,7 +7,13 @@ import entityChangesService from "./entity_changes.js";
 import becca from "../becca/becca.js";
 import BNote from "../becca/entities/bnote.js";
 
-function validateParentChild(parentNoteId: string, childNoteId: string, branchId: string | null = null) {
+interface ValidationResponse {
+    branch: BBranch | null;
+    success: boolean;
+    message?: string;
+}
+
+function validateParentChild(parentNoteId: string, childNoteId: string, branchId: string | null = null): ValidationResponse {
     if (['root', '_hidden', '_share', '_lbRoot', '_lbAvailableLaunchers', '_lbVisibleLaunchers'].includes(childNoteId)) {
         return { branch: null, success: false, message: `Cannot change this note's location.` };
     }

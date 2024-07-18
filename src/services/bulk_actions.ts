@@ -111,7 +111,7 @@ const ACTION_HANDLERS: Record<string, ActionHandler> = {
             res = branchService.moveBranchToNote(note.getParentBranches()[0], action.targetParentNoteId);
         }
 
-        if (!res.success) {
+        if ("success" in res && !res.success) {
             log.info(`Moving/cloning note ${note.noteId} to ${action.targetParentNoteId} failed with error ${JSON.stringify(res)}`);
         }
     },
