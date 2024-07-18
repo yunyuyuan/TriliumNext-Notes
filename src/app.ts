@@ -12,6 +12,7 @@ import assets from "./routes/assets.js";
 import routes from "./routes/routes.js";
 import custom from "./routes/custom.js";
 import error_handlers from "./routes/error_handlers.js";
+import { startScheduledCleanup } from "./services/erase.js";
 
 await import('./services/handlers');
 await import('./becca/becca_loader');
@@ -60,6 +61,8 @@ await import('./services/backup');
 await import('./services/consistency_checks');
 
 await import('./services/scheduler');
+
+startScheduledCleanup();
 
 if (utils.isElectron()) {
     (await import('@electron/remote/main')).initialize();

@@ -177,14 +177,16 @@ function eraseScheduledAttachments(eraseUnusedAttachmentsAfterSeconds: number | 
     eraseAttachments(attachmentIdsToErase);
 }
 
-sqlInit.dbReady.then(() => {
-    // first cleanup kickoff 5 minutes after startup
-    setTimeout(cls.wrap(() => eraseDeletedEntities()), 5 * 60 * 1000);
-    setTimeout(cls.wrap(() => eraseScheduledAttachments()), 6 * 60 * 1000);
-
-    setInterval(cls.wrap(() => eraseDeletedEntities()), 4 * 3600 * 1000);
-    setInterval(cls.wrap(() => eraseScheduledAttachments()), 3600 * 1000);
-});
+export function startScheduledCleanup() {
+    sqlInit.dbReady.then(() => {
+        // first cleanup kickoff 5 minutes after startup
+        setTimeout(cls.wrap(() => eraseDeletedEntities()), 5 * 60 * 1000);
+        setTimeout(cls.wrap(() => eraseScheduledAttachments()), 6 * 60 * 1000);
+    
+        setInterval(cls.wrap(() => eraseDeletedEntities()), 4 * 3600 * 1000);
+        setInterval(cls.wrap(() => eraseScheduledAttachments()), 3600 * 1000);
+    });
+}
 
 export default {
     eraseDeletedNotesNow,
@@ -192,5 +194,5 @@ export default {
     eraseNotesWithDeleteId,
     eraseUnusedBlobs,
     eraseAttachments,
-    eraseRevisions
+    eraseRevisions,
 };
