@@ -2,7 +2,7 @@
 
 import utils from "./utils.js";
 import log from "./log.js";
-import url = require('url');
+import url from "url";
 import syncOptions from "./sync_options.js";
 import { ExecOpts } from './request_interface';
 

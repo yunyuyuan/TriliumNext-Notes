@@ -1,6 +1,6 @@
 "use strict";
 
-import fs = require('fs');
+import fs from "fs";
 import dateUtils from "../../services/date_utils.js";
 import dataDir from "../../services/data_dir.js";
 const { LOG_DIR } = dataDir;

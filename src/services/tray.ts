@@ -1,5 +1,5 @@
 import { Menu, Tray } from 'electron';
-import path = require('path');
+import path from "path";
 import windowService from "./window.js";
 import optionService from "./options.js";
 

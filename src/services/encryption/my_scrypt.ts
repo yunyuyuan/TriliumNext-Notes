@@ -1,7 +1,7 @@
 "use strict";
 
 import optionService from "../options.js";
-import crypto = require('crypto');
+import crypto from "crypto";
 
 function getVerificationHash(password: crypto.BinaryLike) {
     const salt = optionService.getOption('passwordVerificationSalt');

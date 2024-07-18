@@ -3,7 +3,7 @@
 import imageService from "../../services/image.js";
 import becca from "../../becca/becca.js";
 const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
-import fs = require('fs');
+import fs from "fs";
 import { Request, Response } from 'express';
 import BNote from "../../becca/entities/bnote.js";
 import BRevision from "../../becca/entities/brevision.js";

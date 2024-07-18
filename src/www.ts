@@ -20,9 +20,9 @@ process.on('SIGTERM', exit);
 
 import app from "./app.js";
 import sessionParser from "./routes/session_parser.js";
-import fs = require('fs');
-import http = require('http');
-import https = require('https');
+import fs from "fs";
+import http from "http";
+import https from "https";
 import config from "./services/config.js";
 import log from "./services/log.js";
 import appInfo from "./services/app_info.js";
@@ -30,7 +30,7 @@ import ws from "./services/ws.js";
 import utils from "./services/utils.js";
 import port from "./services/port.js";
 import host from "./services/host.js";
-import semver = require('semver');
+import semver from "semver";
 
 if (!semver.satisfies(process.version, ">=10.5.0")) {
     console.error("Trilium only supports node.js 10.5 and later");

@@ -1,4 +1,4 @@
-import WebSocket = require('ws');
+import WebSocket from "ws";
 import utils from "./utils.js";
 import log from "./log.js";
 import sql from "./sql.js";

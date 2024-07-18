@@ -1,6 +1,6 @@
 "use strict";
 
-import crypto = require('crypto');
+import crypto from "crypto";
 import log from "../log.js";
 
 function arraysIdentical(a: any[] | Buffer, b: any[] | Buffer) {

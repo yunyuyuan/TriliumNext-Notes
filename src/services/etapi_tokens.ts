@@ -1,7 +1,7 @@
 import becca from "../becca/becca.js";
 import utils from "./utils.js";
 import BEtapiToken from "../becca/entities/betapi_token.js";
-import crypto = require('crypto');
+import crypto from "crypto";
 
 function getTokens() {
     return becca.getEtapiTokens();

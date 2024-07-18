@@ -1,6 +1,6 @@
 import backupService from "./backup.js";
 import sql from "./sql.js";
-import fs = require('fs-extra');
+import fs from "fs-extra";
 import log from "./log.js";
 import utils from "./utils.js";
 import resourceDir from "./resource_dir.js";

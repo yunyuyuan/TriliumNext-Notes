@@ -2,13 +2,13 @@
 
 import dateUtils from "./date_utils.js";
 import optionService from "./options.js";
-import fs = require('fs-extra');
+import fs from "fs-extra";
 import dataDir from "./data_dir.js";
 import log from "./log.js";
 import syncMutexService from "./sync_mutex.js";
 import cls from "./cls.js";
 import sql from "./sql.js";
-import path = require('path');
+import path from "path";
 
 type BackupType = ("daily" | "weekly" | "monthly");
 

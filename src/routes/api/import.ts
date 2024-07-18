@@ -5,7 +5,7 @@ import opmlImportService from "../../services/import/opml.js";
 import zipImportService from "../../services/import/zip.js";
 import singleImportService from "../../services/import/single.js";
 import cls from "../../services/cls.js";
-import path = require('path');
+import path from "path";
 import becca from "../../becca/becca.js";
 import beccaLoader from "../../becca/becca_loader.js";
 import log from "../../services/log.js";

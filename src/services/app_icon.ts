@@ -1,10 +1,10 @@
 "use strict";
 
-import path = require('path');
+import path from "path";
 import resourceDir from "./resource_dir.js";
 import log from "./log.js";
-import os = require('os');
-import fs = require('fs');
+import os from "os";
+import fs from "fs";
 import config from "./config.js";
 import utils from "./utils.js";
 

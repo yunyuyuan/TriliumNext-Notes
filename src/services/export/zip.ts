@@ -1,18 +1,18 @@
 "use strict";
 
-import html = require('html');
+import html from "html";
 import dateUtils from "../date_utils.js";
-import path = require('path');
-import mimeTypes = require('mime-types');
+import path from "path";
+import mimeTypes from "mime-types";
 import mdService from "./md.js";
 import packageInfo from "../../../package.json.js";
 import utils from "../utils.js";
 import protectedSessionService from "../protected_session.js";
-import sanitize = require('sanitize-filename');
-import fs = require('fs');
+import sanitize from "sanitize-filename";
+import fs from "fs";
 import becca from "../../becca/becca.js";
 const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
-import archiver = require('archiver');
+import archiver from "archiver";
 import log from "../log.js";
 import TaskContext from "../task_context.js";
 import ValidationError from "../../errors/validation_error.js";

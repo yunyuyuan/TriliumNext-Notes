@@ -1,6 +1,6 @@
 import log from "./log.js";
-import path = require('path');
-import fs = require('fs');
+import path from "path";
+import fs from "fs";
 
 const RESOURCE_DIR = path.resolve(__dirname, "../..");
 

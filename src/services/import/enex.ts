@@ -1,5 +1,5 @@
-import sax = require('sax');
-import stream = require('stream');
+import sax from "sax";
+import stream from "stream";
 import { Throttle } from 'stream-throttle';
 import log from "../log.js";
 import utils from "../utils.js";

@@ -1,10 +1,10 @@
 import BUILTIN_ATTRIBUTES from "./builtin_attributes.js";
-import fs = require('fs-extra');
+import fs from "fs-extra";
 import dataDir from "./data_dir.js";
 import dateUtils from "./date_utils.js";
-import Database = require('better-sqlite3');
+import Database from "better-sqlite3";
 import sql from "./sql.js";
-import path = require('path');
+import path from "path";
 
 function getFullAnonymizationScript() {
     // we want to delete all non-builtin attributes because they can contain sensitive names and values

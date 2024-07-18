@@ -1,4 +1,4 @@
-import dayjs = require('dayjs');
+import dayjs from "dayjs";
 import cls from "./cls.js";
 
 const LOCAL_DATETIME_FORMAT = 'YYYY-MM-DD HH:mm:ss.SSSZZ';

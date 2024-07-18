@@ -2,7 +2,7 @@ import { JSDOM } from "jsdom";
 import shaca from "./shaca/shaca.js";
 import assetPath from "../services/asset_path.js";
 import shareRoot from "./share_root.js";
-import escapeHtml = require('escape-html');
+import escapeHtml from "escape-html";
 import SNote from "./shaca/entities/snote.js";
 
 interface Result {

@@ -2,7 +2,7 @@ import BNote from "../../src/becca/entities/bnote.js";
 import BBranch from "../../src/becca/entities/bbranch.js";
 import BAttribute from "../../src/becca/entities/battribute.js";
 import becca from "../../src/becca/becca.js";
-import randtoken = require('rand-token');
+import randtoken from "rand-token";
 import SearchResult from "../../src/services/search/search_result.js";
 import { NoteType } from "../../src/becca/entities/rows";
 randtoken.generator({ source: "crypto" });

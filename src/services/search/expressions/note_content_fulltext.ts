@@ -8,7 +8,7 @@ import NoteSet from "../note_set.js";
 import log from "../../log.js";
 import becca from "../../../becca/becca.js";
 import protectedSessionService from "../../protected_session.js";
-import striptags = require('striptags');
+import striptags from "striptags";
 import utils from "../../utils.js";
 import sql from "../../sql.js";
 

@@ -1,6 +1,6 @@
 "use strict";
 
-import Database = require('better-sqlite3');
+import Database from "better-sqlite3";
 import dataDir from "../services/data_dir.js";
 
 const dbConnection = new Database(dataDir.DOCUMENT_PATH, { readonly: true });

@@ -1,7 +1,7 @@
 "use strict";
 
-import mimeTypes = require('mime-types');
-import path = require('path');
+import mimeTypes from "mime-types";
+import path from "path";
 import { TaskData } from '../task_context_interface';
 
 const CODE_MIME_TYPES: Record<string, boolean | string> = {

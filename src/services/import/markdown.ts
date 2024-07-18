@@ -1,6 +1,6 @@
 "use strict";
 
-import marked = require('marked');
+import marked from "marked";
 import htmlSanitizer from "../html_sanitizer.js";
 import importUtils from "./utils.js";
 

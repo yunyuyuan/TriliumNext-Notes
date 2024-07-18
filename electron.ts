@@ -1,6 +1,6 @@
 "use strict";
 
-import electron = require('electron');
+import electron from "electron";
 import sqlInit from "./src/services/sql_init.js";
 import appIconService from "./src/services/app_icon.js";
 import windowService from "./src/services/window.js";

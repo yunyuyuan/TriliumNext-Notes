@@ -8,9 +8,9 @@
  * - as a fallback if the previous step fails, we'll use home dir
  */
 
-import os = require('os');
-import fs = require('fs');
-import path = require('path');
+import os from "os";
+import fs from "fs";
+import path from "path";
 
 function getAppDataDir() {
     let appDataDir = os.homedir(); // fallback if OS is not recognized

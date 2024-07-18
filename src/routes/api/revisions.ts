@@ -5,7 +5,7 @@ import revisionService from "../../services/revisions.js";
 import utils from "../../services/utils.js";
 import sql from "../../services/sql.js";
 import cls from "../../services/cls.js";
-import path = require('path');
+import path from "path";
 import becca from "../../becca/becca.js";
 import blobService from "../../services/blob.js";
 import eraseService from "../../services/erase.js";

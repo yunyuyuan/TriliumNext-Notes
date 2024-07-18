@@ -1,7 +1,7 @@
 "use strict";
 
-import fs = require('fs');
-import crypto = require('crypto');
+import fs from "fs";
+import crypto from "crypto";
 import dataDir from "./data_dir.js";
 import log from "./log.js";
 

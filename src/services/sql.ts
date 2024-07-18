@@ -8,8 +8,8 @@ import log from "./log.js";
 import type { Statement, Database as DatabaseType, RunResult } from "better-sqlite3";
 import dataDir from "./data_dir.js";
 import cls from "./cls.js";
-import fs = require('fs-extra');
-import Database = require('better-sqlite3');
+import fs from "fs-extra";
+import Database from "better-sqlite3";
 
 const dbConnection: DatabaseType = new Database(dataDir.DOCUMENT_PATH);
 dbConnection.pragma('journal_mode = WAL');

@@ -1,5 +1,5 @@
-import path = require('path');
-import url = require('url');
+import path from "path";
+import url from "url";
 import port from "./port.js";
 import optionService from "./options.js";
 import env from "./env.js";
@@ -7,7 +7,7 @@ import log from "./log.js";
 import sqlInit from "./sql_init.js";
 import cls from "./cls.js";
 import keyboardActionsService from "./keyboard_actions.js";
-import remoteMain = require('@electron/remote/main')
+import remoteMain from "@electron/remote/main"
 import { App, BrowserWindow, WebContents, ipcMain } from 'electron';
 
 // Prevent the window being garbage collected

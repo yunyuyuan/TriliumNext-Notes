@@ -1,9 +1,9 @@
 "use strict";
 
-import ini = require('ini');
-import fs = require('fs');
+import ini from "ini";
+import fs from "fs";
 import dataDir from "./data_dir.js";
-import path = require('path');
+import path from "path";
 import resourceDir from "./resource_dir.js";
 
 const configSampleFilePath = path.resolve(resourceDir.RESOURCE_DIR, "config-sample.ini");

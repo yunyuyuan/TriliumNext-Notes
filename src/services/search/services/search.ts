@@ -1,6 +1,6 @@
 "use strict";
 
-import normalizeString = require('normalize-strings');
+import normalizeString from "normalize-strings";
 import lex from "./lex.js";
 import handleParens from "./handle_parens.js";
 import parse from "./parse.js";

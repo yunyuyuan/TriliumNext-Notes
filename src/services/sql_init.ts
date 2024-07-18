@@ -1,5 +1,5 @@
 import log from "./log.js";
-import fs = require('fs');
+import fs from "fs";
 import resourceDir from "./resource_dir.js";
 import sql from "./sql.js";
 import utils from "./utils.js";

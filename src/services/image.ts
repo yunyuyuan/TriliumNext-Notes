@@ -6,11 +6,11 @@ import protectedSessionService from "./protected_session.js";
 import noteService from "./notes.js";
 import optionService from "./options.js";
 import sql from "./sql.js";
-import jimp = require('jimp');
-import imageType = require('image-type');
-import sanitizeFilename = require('sanitize-filename');
-import isSvg = require('is-svg');
-import isAnimated = require('is-animated');
+import jimp from "jimp";
+import imageType from "image-type";
+import sanitizeFilename from "sanitize-filename";
+import isSvg from "is-svg";
+import isAnimated from "is-animated";
 import htmlSanitizer from "./html_sanitizer.js";
 
 async function processImage(uploadBuffer: Buffer, originalName: string, shrinkImageSwitch: boolean) {

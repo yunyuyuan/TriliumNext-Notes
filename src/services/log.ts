@@ -1,7 +1,7 @@
 "use strict";
 
 import { Request, Response } from "express";
-import fs = require('fs');
+import fs from "fs";
 import dataDir from "./data_dir.js";
 import cls from "./cls.js";
 

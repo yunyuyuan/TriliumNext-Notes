@@ -1,7 +1,7 @@
 "use strict";
 
-import mimeTypes = require('mime-types');
-import html = require('html');
+import mimeTypes from "mime-types";
+import html from "html";
 import utils from "../utils.js";
 import mdService from "./md.js";
 import becca from "../../becca/becca.js";

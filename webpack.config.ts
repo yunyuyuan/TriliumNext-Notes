@@ -1,4 +1,4 @@
-import path = require('path');
+import path from "path";
 import assetPath from "./src/services/asset_path.js";
 
 module.exports = {

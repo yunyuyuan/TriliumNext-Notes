@@ -1,7 +1,7 @@
 "use strict";
 
 import noteService from "../../services/notes.js";
-import xml2js = require('xml2js');
+import xml2js from "xml2js";
 import protectedSessionService from "../protected_session.js";
 import htmlSanitizer from "../html_sanitizer.js";
 import TaskContext from "../task_context.js";
