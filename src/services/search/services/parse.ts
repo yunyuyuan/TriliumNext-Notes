@@ -21,7 +21,7 @@ import utils from "../../utils.js";
 import TrueExp from "../expressions/true.js";
 import IsHiddenExp from "../expressions/is_hidden.js";
 import SearchContext from "../search_context.js";
-import { TokenData } from "./types";
+import { TokenData, TokenStructure } from "./types";
 import Expression from "../expressions/expression.js";
 
 function getFulltext(_tokens: TokenData[], searchContext: SearchContext) {
@@ -448,7 +448,7 @@ function getExpression(tokens: TokenData[], searchContext: SearchContext, level 
 
 function parse({fulltextTokens, expressionTokens, searchContext}: {
     fulltextTokens: TokenData[],
-    expressionTokens: (TokenData | TokenData[])[],
+    expressionTokens: TokenStructure,
     searchContext: SearchContext,
     originalQuery: string
 }) {

@@ -13,7 +13,7 @@ import log from "../../log.js";
 import hoistedNoteService from "../../hoisted_note.js";
 import BNote from "../../../becca/entities/bnote.js";
 import BAttribute from "../../../becca/entities/battribute.js";
-import { SearchParams, TokenData } from "./types";
+import { SearchParams, TokenStructure } from "./types";
 import Expression from "../expressions/expression.js";
 import sql from "../../sql.js";
 
@@ -273,7 +273,7 @@ function parseQueryToExpression(query: string, searchContext: SearchContext) {
     const {fulltextQuery, fulltextTokens, expressionTokens} = lex(query);
     searchContext.fulltextQuery = fulltextQuery;
 
-    let structuredExpressionTokens: (TokenData | TokenData[])[];
+    let structuredExpressionTokens: TokenStructure;
 
     try {
         structuredExpressionTokens = handleParens(expressionTokens);
