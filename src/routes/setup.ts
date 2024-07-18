@@ -7,15 +7,11 @@ import assetPath from "../services/asset_path.js";
 import appPath from "../services/app_path.js";
 import { Request, Response } from 'express';
 
-async function setupPage(req: Request, res: Response) {
+function setupPage(req: Request, res: Response) {
     if (sqlInit.isDbInitialized()) {
         if (utils.isElectron()) {
-            const windowService = (await import("../services/window")).default;
-            const { app } = await import("electron");
-            windowService.createMainWindow(app);
-            windowService.closeSetupWindow();
-        }
-        else {
+            handleElectronRedirect();  
+        } else {
             res.redirect('.');
         }
 
@@ -36,6 +32,13 @@ async function setupPage(req: Request, res: Response) {
         assetPath: assetPath,
         appPath: appPath
     });
+}
+
+async function handleElectronRedirect() {
+    const windowService = (await import("../services/window")).default;
+    const { app } = await import("electron");
+    windowService.createMainWindow(app);
+    windowService.closeSetupWindow();
 }
 
 export default {
