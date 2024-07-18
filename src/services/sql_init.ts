@@ -15,6 +15,9 @@ import optionsInitService from "./options_init.js";
 import BNote from "../becca/entities/bnote.js";
 import BBranch from "../becca/entities/bbranch.js";
 import zipImportService from "./import/zip.js";
+import becca_loader from "../becca/becca_loader.js";
+import password from "./encryption/password.js";
+import backup from "./backup.js";
 
 const dbReady = utils.deferred<void>();
 
@@ -65,7 +68,7 @@ async function createInitialDatabase() {
 
         sql.executeScript(schema);
 
-        require('../becca/becca_loader').load();
+        becca_loader.load();
 
         log.info("Creating root note ...");
 
@@ -88,7 +91,7 @@ async function createInitialDatabase() {
         optionsInitService.initDocumentOptions();
         optionsInitService.initNotSyncedOptions(true, {});
         optionsInitService.initStartupOptions();
-        require('./encryption/password').resetPassword();
+        password.resetPassword();
     });
 
     log.info("Importing demo content ...");
@@ -129,7 +132,7 @@ function createDatabaseForSync(options: OptionRow[], syncServerHost = '', syncPr
     sql.transactional(() => {
         sql.executeScript(schema);
 
-        require('./options_init').initNotSyncedOptions(false,  { syncServerHost, syncProxy });
+        optionsInitService.initNotSyncedOptions(false,  { syncServerHost, syncProxy });
 
         // document options required for sync to kick off
         for (const opt of options) {
@@ -164,10 +167,10 @@ dbReady.then(() => {
         return;
     }
 
-    setInterval(() => require('./backup').regularBackup(), 4 * 60 * 60 * 1000);
+    setInterval(() => backup.regularBackup(), 4 * 60 * 60 * 1000);
 
     // kickoff first backup soon after start up
-    setTimeout(() => require('./backup').regularBackup(), 5 * 60 * 1000);
+    setTimeout(() => backup.regularBackup(), 5 * 60 * 1000);
 
     // optimize is usually inexpensive no-op, so running it semi-frequently is not a big deal
     setTimeout(() => optimize(), 60 * 60 * 1000);
