@@ -19,6 +19,7 @@ import entityConstructor from "../becca/entity_constructor.js";
 import becca from "../becca/becca.js";
 import { EntityChange, EntityChangeRecord, EntityRow } from './entity_changes_interface';
 import { CookieJar, ExecOpts } from './request_interface';
+import setupService from "./setup.js";
 
 let proxyToggle = true;
 
@@ -107,8 +108,6 @@ async function sync() {
 }
 
 async function login() {
-    const setupService = require('./setup'); // circular dependency issue
-
     if (!await setupService.hasSyncServerSchemaAndSeed()) {
         await setupService.sendSeedToSyncServer();
     }

@@ -16,6 +16,7 @@ import BAttribute from "../../../becca/entities/battribute.js";
 import { SearchParams, TokenStructure } from "./types";
 import Expression from "../expressions/expression.js";
 import sql from "../../sql.js";
+import scriptService from "../../script.js";
 
 function searchFromNote(note: BNote) {
     let searchResultNoteIds;
@@ -78,7 +79,6 @@ function searchFromRelation(note: BNote, relationName: string) {
         return [];
     }
 
-    const scriptService = require('../../script'); // TODO: to avoid circular dependency
     const result = scriptService.executeNote(scriptNote, {originEntity: note});
 
     if (!Array.isArray(result)) {

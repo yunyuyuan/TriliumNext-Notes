@@ -42,7 +42,7 @@ export interface OptionRow {
     name: string;
     value: string;
     isSynced: boolean;
-    utcDateModified: string;
+    utcDateModified?: string;
 }
 
 export interface EtapiTokenRow {
