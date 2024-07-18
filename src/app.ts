@@ -6,9 +6,13 @@ import helmet from "helmet";
 import compression from "compression";
 import sessionParser from "./routes/session_parser.js";
 import utils from "./services/utils.js";
+import assets from "./routes/assets.js";
+import routes from "./routes/routes.js";
+import custom from "./routes/custom.js";
+import error_handlers from "./routes/error_handlers.js";
 
-require('./services/handlers');
-require('./becca/becca_loader');
+await import('./services/handlers');
+await import('./becca/becca_loader');
 
 const app = express();
 
@@ -37,24 +41,24 @@ app.use(`/robots.txt`, express.static(path.join(__dirname, 'public/robots.txt'))
 app.use(sessionParser);
 app.use(favicon(`${__dirname}/../images/app-icons/win/icon.ico`));
 
-require('./routes/assets').register(app);
-require('./routes/routes').register(app);
-require('./routes/custom').register(app);
-require('./routes/error_handlers').register(app);
+assets.register(app);
+routes.register(app);
+custom.register(app);
+error_handlers.register(app);
 
 // triggers sync timer
-require('./services/sync');
+await import("./services/sync");
 
 // triggers backup timer
-require('./services/backup');
+await import('./services/backup');
 
 // trigger consistency checks timer
-require('./services/consistency_checks');
+await import('./services/consistency_checks');
 
-require('./services/scheduler');
+await import('./services/scheduler');
 
 if (utils.isElectron()) {
-    require('@electron/remote/main').initialize();
+    (await import('@electron/remote/main')).initialize();
 }
 
 export default app;

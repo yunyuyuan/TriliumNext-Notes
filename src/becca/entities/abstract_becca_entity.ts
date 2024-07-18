@@ -47,11 +47,7 @@ abstract class AbstractBeccaEntity<T extends AbstractBeccaEntity<T>> {
     }
 
     protected get becca(): Becca {
-        if (!becca) {
-            becca = require('../becca');
-        }
-
-        return becca as Becca;
+        return becca;
     }
 
     protected putEntityChange(isDeleted: boolean) {
