@@ -13,6 +13,7 @@ import routes from "./routes/routes.js";
 import custom from "./routes/custom.js";
 import error_handlers from "./routes/error_handlers.js";
 import { startScheduledCleanup } from "./services/erase.js";
+import sql_init from "./services/sql_init.js";
 
 await import('./services/handlers');
 await import('./becca/becca_loader');
@@ -20,6 +21,9 @@ await import('./becca/becca_loader');
 const app = express();
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
+
+// Initialize DB
+sql_init.initializeDb();
 
 // view engine setup
 app.set('views', path.join(scriptDir, 'views'));

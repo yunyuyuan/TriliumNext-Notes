@@ -21,8 +21,6 @@ import backup from "./backup.js";
 
 const dbReady = utils.deferred<void>();
 
-cls.init(initDbConnection);
-
 function schemaExists() {
     return !!sql.getValue(`SELECT name FROM sqlite_master
                                  WHERE type = 'table' AND name = 'options'`);
@@ -160,29 +158,33 @@ function optimize() {
     log.info(`Optimization finished in ${Date.now() - start}ms.`);
 }
 
-dbReady.then(() => {
-    if (config.General && config.General.noBackup === true) {
-        log.info("Disabling scheduled backups.");
-
-        return;
-    }
-
-    setInterval(() => backup.regularBackup(), 4 * 60 * 60 * 1000);
-
-    // kickoff first backup soon after start up
-    setTimeout(() => backup.regularBackup(), 5 * 60 * 1000);
-
-    // optimize is usually inexpensive no-op, so running it semi-frequently is not a big deal
-    setTimeout(() => optimize(), 60 * 60 * 1000);
-
-    setInterval(() => optimize(), 10 * 60 * 60 * 1000);
-});
-
 function getDbSize() {
     return sql.getValue<number>("SELECT page_count * page_size / 1000 as size FROM pragma_page_count(), pragma_page_size()");
 }
 
-log.info(`DB size: ${getDbSize()} KB`);
+function initializeDb() {
+    cls.init(initDbConnection);
+
+    log.info(`DB size: ${getDbSize()} KB`);
+ 
+    dbReady.then(() => {
+        if (config.General && config.General.noBackup === true) {
+            log.info("Disabling scheduled backups.");
+    
+            return;
+        }
+    
+        setInterval(() => backup.regularBackup(), 4 * 60 * 60 * 1000);
+    
+        // kickoff first backup soon after start up
+        setTimeout(() => backup.regularBackup(), 5 * 60 * 1000);
+    
+        // optimize is usually inexpensive no-op, so running it semi-frequently is not a big deal
+        setTimeout(() => optimize(), 60 * 60 * 1000);
+    
+        setInterval(() => optimize(), 10 * 60 * 60 * 1000);
+    });
+}
 
 export default {
     dbReady,
@@ -191,5 +193,6 @@ export default {
     createInitialDatabase,
     createDatabaseForSync,
     setDbAsInitialized,
-    getDbSize
+    getDbSize,
+    initializeDb
 };
