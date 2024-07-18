@@ -14,6 +14,7 @@ import { OptionRow } from '../becca/entities/rows';
 import optionsInitService from "./options_init.js";
 import BNote from "../becca/entities/bnote.js";
 import BBranch from "../becca/entities/bbranch.js";
+import zipImportService from "./import/zip.js";
 
 const dbReady = utils.deferred<void>();
 
@@ -57,7 +58,7 @@ async function createInitialDatabase() {
     const schema = fs.readFileSync(`${resourceDir.DB_INIT_DIR}/schema.sql`, "utf-8");
     const demoFile = fs.readFileSync(`${resourceDir.DB_INIT_DIR}/demo.zip`);
 
-    let rootNote;
+    let rootNote!: BNote;
 
     sql.transactional(() => {
         log.info("Creating database schema ...");
@@ -94,7 +95,6 @@ async function createInitialDatabase() {
 
     const dummyTaskContext = new TaskContext("no-progress-reporting", 'import', false);
 
-    const zipImportService = require('./import/zip');
     await zipImportService.importZip(dummyTaskContext, demoFile, rootNote);
 
     sql.transactional(() => {
@@ -104,7 +104,6 @@ async function createInitialDatabase() {
 
         const startNoteId = sql.getValue("SELECT noteId FROM branches WHERE parentNoteId = 'root' AND isDeleted = 0 ORDER BY notePosition");
 
-        const optionService = require('./options');
         optionService.setOption('openNoteContexts', JSON.stringify([
             {
                 notePath: startNoteId,
