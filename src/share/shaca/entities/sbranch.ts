@@ -59,4 +59,4 @@ class SBranch extends AbstractShacaEntity {
     }
 }
 
-export = SBranch;
+export default SBranch;

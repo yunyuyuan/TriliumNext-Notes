@@ -74,4 +74,4 @@ class AncestorExp extends Expression {
     }
 }
 
-export = AncestorExp;
+export default AncestorExp;

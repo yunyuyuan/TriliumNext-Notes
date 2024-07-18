@@ -226,4 +226,4 @@ class BAttribute extends AbstractBeccaEntity<BAttribute> {
     }
 }
 
-export = BAttribute;
+export default BAttribute;

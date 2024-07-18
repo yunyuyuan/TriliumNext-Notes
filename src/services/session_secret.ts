@@ -28,4 +28,4 @@ else {
     sessionSecret = fs.readFileSync(sessionSecretPath, ENCODING);
 }
 
-export = sessionSecret;
+export default sessionSecret;

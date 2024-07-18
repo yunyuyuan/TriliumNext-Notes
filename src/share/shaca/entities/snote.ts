@@ -522,4 +522,4 @@ class SNote extends AbstractShacaEntity {
     }
 }
 
-export = SNote;
+export default SNote;

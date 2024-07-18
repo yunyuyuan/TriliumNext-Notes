@@ -494,4 +494,4 @@ function getAncestorExp({ancestorNoteId, ancestorDepth, includeHiddenNotes}: Sea
     }
 }
 
-export = parse;
+export default parse;

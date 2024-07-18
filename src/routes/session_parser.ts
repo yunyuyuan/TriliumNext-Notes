@@ -19,4 +19,4 @@ const sessionParser = session({
     })
 });
 
-export = sessionParser;
+export default sessionParser;

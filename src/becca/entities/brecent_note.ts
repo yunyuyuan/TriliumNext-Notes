@@ -38,4 +38,4 @@ class BRecentNote extends AbstractBeccaEntity<BRecentNote> {
     }
 }
 
-export = BRecentNote;
+export default BRecentNote;

@@ -37,4 +37,4 @@ class ChildOfExp extends Expression {
     }
 }
 
-export = ChildOfExp;
+export default ChildOfExp;

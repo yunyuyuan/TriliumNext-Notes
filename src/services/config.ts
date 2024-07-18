@@ -16,4 +16,4 @@ if (!fs.existsSync(dataDir.CONFIG_INI_PATH)) {
 
 const config = ini.parse(fs.readFileSync(dataDir.CONFIG_INI_PATH, 'utf-8'));
 
-export = config;
+export default config;

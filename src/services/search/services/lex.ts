@@ -147,4 +147,4 @@ function lex(str: string) {
     }
 }
 
-export = lex;
+export default lex;

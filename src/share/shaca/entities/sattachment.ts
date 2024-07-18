@@ -77,4 +77,4 @@ class SAttachment extends AbstractShacaEntity {
     }
 }
 
-export = SAttachment;
+export default SAttachment;

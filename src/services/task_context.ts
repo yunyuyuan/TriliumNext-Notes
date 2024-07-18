@@ -77,4 +77,4 @@ class TaskContext {
     }
 }
 
-export = TaskContext;
+export default TaskContext;

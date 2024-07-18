@@ -20,4 +20,4 @@ class NotExp extends Expression {
     }
 }
 
-export = NotExp;
+export default NotExp;

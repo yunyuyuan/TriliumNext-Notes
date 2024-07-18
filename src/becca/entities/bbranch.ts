@@ -285,4 +285,4 @@ class BBranch extends AbstractBeccaEntity<BBranch> {
     }
 }
 
-export = BBranch;
+export default BBranch;

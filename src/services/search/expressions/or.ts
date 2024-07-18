@@ -39,4 +39,4 @@ class OrExp extends Expression {
     }
 }
 
-export = OrExp;
+export default OrExp;

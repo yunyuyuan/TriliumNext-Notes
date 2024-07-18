@@ -21,4 +21,4 @@ class IsHiddenExp extends Expression {
     }
 }
 
-export = IsHiddenExp;
+export default IsHiddenExp;

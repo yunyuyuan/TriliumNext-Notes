@@ -46,4 +46,4 @@ class LabelComparisonExp extends Expression {
     }
 }
 
-export = LabelComparisonExp;
+export default LabelComparisonExp;

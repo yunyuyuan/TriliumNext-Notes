@@ -65,4 +65,4 @@ class NoteSet {
     }
 }
 
-export = NoteSet;
+export default NoteSet;

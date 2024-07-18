@@ -28,4 +28,4 @@ class DescendantOfExp extends Expression {
     }
 }
 
-export = DescendantOfExp;
+export default DescendantOfExp;

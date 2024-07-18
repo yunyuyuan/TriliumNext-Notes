@@ -134,4 +134,4 @@ class ValueExtractor {
     }
 }
 
-export = ValueExtractor;
+export default ValueExtractor;

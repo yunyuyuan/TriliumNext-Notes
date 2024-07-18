@@ -249,4 +249,4 @@ class BAttachment extends AbstractBeccaEntity<BAttachment> {
     }
 }
 
-export = BAttachment;
+export default BAttachment;

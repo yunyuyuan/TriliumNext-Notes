@@ -48,4 +48,4 @@ class BOption extends AbstractBeccaEntity<BOption> {
     }
 }
 
-export = BOption;
+export default BOption;

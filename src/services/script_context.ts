@@ -34,4 +34,4 @@ class ScriptContext {
     };
 }
 
-export = ScriptContext;
+export default ScriptContext;

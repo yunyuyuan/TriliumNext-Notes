@@ -67,4 +67,4 @@ class SearchResult {
     }
 }
 
-export = SearchResult;
+export default SearchResult;

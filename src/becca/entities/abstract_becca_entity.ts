@@ -327,4 +327,4 @@ abstract class AbstractBeccaEntity<T extends AbstractBeccaEntity<T>> {
     }
 }
 
-export = AbstractBeccaEntity;
+export default AbstractBeccaEntity;

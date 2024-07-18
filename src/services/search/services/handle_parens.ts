@@ -47,4 +47,4 @@ function handleParens(tokens: (TokenData | TokenData[])[]) {
     }
 }
 
-export = handleParens;
+export default handleParens;

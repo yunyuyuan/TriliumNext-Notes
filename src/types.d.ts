@@ -5,17 +5,17 @@
 
 declare module 'unescape' {
     function unescape(str: string, type?: string): string;
-    export = unescape;
+    export default unescape;
 }
 
 declare module 'html2plaintext' {
     function html2plaintext(htmlText: string): string;
-    export = html2plaintext;
+    export default html2plaintext;
 }
 
 declare module 'normalize-strings' {
     function normalizeString(string: string): string;
-    export = normalizeString;
+    export default normalizeString;
 }
 
 declare module 'joplin-turndown-plugin-gfm' {
@@ -23,10 +23,10 @@ declare module 'joplin-turndown-plugin-gfm' {
     namespace gfm {
         function gfm(service: TurndownService): void;
     }
-    export = gfm;
+    export default gfm;
 }
 
 declare module 'is-animated' {
     function isAnimated(buffer: Buffer): boolean;
-    export = isAnimated;
+    export default isAnimated;
 }

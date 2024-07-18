@@ -24,4 +24,4 @@ if (process.env.TRILIUM_PORT) {
     port = parseAndValidate(config['Network']['port'] || '3000', `Network.port in ${dataDir.CONFIG_INI_PATH}`);
 }
 
-export = port;
+export default port;

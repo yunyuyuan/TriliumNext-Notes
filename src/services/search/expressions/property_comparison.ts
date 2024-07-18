@@ -87,4 +87,4 @@ class PropertyComparisonExp extends Expression {
     }
 }
 
-export = PropertyComparisonExp;
+export default PropertyComparisonExp;

@@ -1,9 +1,9 @@
-import express from "express";
-import path from "path";
-import favicon from "serve-favicon";
-import cookieParser from "cookie-parser";
-import helmet from "helmet";
-import compression from "compression";
+import express = require('express');
+import path = require('path');
+import favicon = require('serve-favicon');
+import cookieParser = require('cookie-parser');
+import helmet = require('helmet');
+import compression = require('compression');
 import sessionParser from "./routes/session_parser.js";
 import utils from "./services/utils.js";
 
@@ -57,4 +57,4 @@ if (utils.isElectron()) {
     require('@electron/remote/main').initialize();
 }
 
-export = app;
+export default app;

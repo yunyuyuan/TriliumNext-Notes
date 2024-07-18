@@ -1,3 +1,3 @@
 import packageJson from "../../package.json.js";
 
-export = `assets/v${packageJson.version}`;
+export default `assets/v${packageJson.version}`;

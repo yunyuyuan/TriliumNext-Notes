@@ -11,4 +11,4 @@ class TrueExp extends Expression {
     }
 }
 
-export = TrueExp;
+export default TrueExp;

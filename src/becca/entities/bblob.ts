@@ -37,4 +37,4 @@ class BBlob extends AbstractBeccaEntity<BBlob> {
     }
 }
 
-export = BBlob;
+export default BBlob;

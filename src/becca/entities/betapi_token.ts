@@ -80,4 +80,4 @@ class BEtapiToken extends AbstractBeccaEntity<BEtapiToken> {
     }
 }
 
-export = BEtapiToken;
+export default BEtapiToken;

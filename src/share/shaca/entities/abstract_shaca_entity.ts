@@ -12,4 +12,4 @@ class AbstractShacaEntity {
     }
 }
 
-export = AbstractShacaEntity;
+export default AbstractShacaEntity;

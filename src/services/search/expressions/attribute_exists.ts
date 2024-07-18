@@ -48,4 +48,4 @@ class AttributeExistsExp extends Expression {
     }
 }
 
-export = AttributeExistsExp;
+export default AttributeExistsExp;

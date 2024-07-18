@@ -111,4 +111,4 @@ class OrderByAndLimitExp extends Expression {
     }
 }
 
-export = OrderByAndLimitExp;
+export default OrderByAndLimitExp;

@@ -651,6 +651,6 @@ function BackendScriptApi(this: Api, currentNote: BNote, apiParams: ApiParams) {
     }
 }
 
-export = BackendScriptApi as any as {
+export default BackendScriptApi as any as {
     new (currentNote: BNote, apiParams: ApiParams): Api
 };

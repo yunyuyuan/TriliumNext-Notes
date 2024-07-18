@@ -110,4 +110,4 @@ class SAttribute extends AbstractShacaEntity {
     }
 }
 
-export = SAttribute;
+export default SAttribute;

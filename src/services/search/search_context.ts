@@ -68,4 +68,4 @@ class SearchContext {
     }
 }
 
-export = SearchContext;
+export default SearchContext;

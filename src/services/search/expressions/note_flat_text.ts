@@ -172,4 +172,4 @@ class NoteFlatTextExp extends Expression {
     }
 }
 
-export = NoteFlatTextExp;
+export default NoteFlatTextExp;

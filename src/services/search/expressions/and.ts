@@ -34,4 +34,4 @@ class AndExp extends Expression {
     }
 }
 
-export = AndExp;
+export default AndExp;

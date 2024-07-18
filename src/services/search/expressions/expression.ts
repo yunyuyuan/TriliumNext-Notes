@@ -13,4 +13,4 @@ abstract class Expression {
     abstract execute(inputNoteSet: NoteSet, executionContext: {}, searchContext: SearchContext): NoteSet;
 }
 
-export = Expression;
+export default Expression;

@@ -155,4 +155,4 @@ class NoteContentFulltextExp extends Expression {
     }
 }
 
-export = NoteContentFulltextExp;
+export default NoteContentFulltextExp;

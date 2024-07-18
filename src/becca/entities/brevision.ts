@@ -211,4 +211,4 @@ class BRevision extends AbstractBeccaEntity<BRevision> {
     }
 }
 
-export = BRevision;
+export default BRevision;

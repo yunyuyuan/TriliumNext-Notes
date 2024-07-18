@@ -42,4 +42,4 @@ class RelationWhereExp extends Expression {
     }
 }
 
-export = RelationWhereExp;
+export default RelationWhereExp;
