@@ -5,7 +5,7 @@ import dateUtils from "../date_utils.js";
 import path from "path";
 import mimeTypes from "mime-types";
 import mdService from "./md.js";
-import packageInfo from "../../../package.json.js";
+import packageInfo from "../../../package.json";
 import utils from "../utils.js";
 import protectedSessionService from "../protected_session.js";
 import sanitize from "sanitize-filename";

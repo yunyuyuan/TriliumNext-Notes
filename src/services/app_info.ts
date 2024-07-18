@@ -1,7 +1,7 @@
 "use strict";
 
 import build from "./build.js";
-import packageJson from "../../package.json.js";
+import packageJson from "../../package.json";
 import dataDir from "./data_dir.js";
 
 const APP_DB_VERSION = 228;
