@@ -8,6 +8,7 @@ import becca from "../becca/becca.js";
 import blobService from "../services/blob.js";
 import { EntityChange } from './entity_changes_interface';
 import type { Blob } from "./blob-interface";
+import eventService from "./events.js";
 
 let maxEntityChangeId = 0;
 
@@ -56,8 +57,6 @@ function putNoteReorderingEntityChange(parentNoteId: string, componentId?: strin
         componentId,
         instanceId
     });
-
-    const eventService = require('./events');
 
     eventService.emit(eventService.ENTITY_CHANGED, {
         entityName: 'note_reordering',

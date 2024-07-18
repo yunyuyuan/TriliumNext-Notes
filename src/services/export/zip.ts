@@ -11,7 +11,6 @@ import protectedSessionService from "../protected_session.js";
 import sanitize from "sanitize-filename";
 import fs from "fs";
 import becca from "../../becca/becca.js";
-const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
 import archiver from "archiver";
 import log from "../log.js";
 import TaskContext from "../task_context.js";
@@ -21,6 +20,7 @@ import AttachmentMeta from "../meta/attachment_meta.js";
 import AttributeMeta from "../meta/attribute_meta.js";
 import BBranch from "../../becca/entities/bbranch.js";
 import { Response } from 'express';
+import resource_dir from "../resource_dir.js";
 
 async function exportToZip(taskContext: TaskContext, branch: BBranch, format: "html" | "markdown", res: Response | fs.WriteStream, setHeaders = true) {
     if (!['html', 'markdown'].includes(format)) {
@@ -473,7 +473,7 @@ ${markdownContent}`;
     }
 
     function saveCss(rootMeta: NoteMeta, cssMeta: NoteMeta) {
-        const cssContent = fs.readFileSync(`${RESOURCE_DIR}/libraries/ckeditor/ckeditor-content.css`);
+        const cssContent = fs.readFileSync(`${resource_dir.RESOURCE_DIR}/libraries/ckeditor/ckeditor-content.css`);
 
         archive.append(cssContent, { name: cssMeta.dataFileName });
     }

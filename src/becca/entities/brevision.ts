@@ -8,6 +8,7 @@ import AbstractBeccaEntity from "./abstract_becca_entity.js";
 import sql from "../../services/sql.js";
 import BAttachment from "./battachment.js";
 import { AttachmentRow, RevisionRow } from './rows';
+import eraseService from "../../services/erase.js";
 
 interface ContentOpts {
     /** will also save this BRevision entity */
@@ -164,7 +165,9 @@ class BRevision extends AbstractBeccaEntity<BRevision> {
      * Revisions are not soft-deletable, they are immediately hard-deleted (erased).
      */
     eraseRevision() {
-        require('../../services/erase.js').eraseRevisions([this.revisionId]);
+        if (this.revisionId) {
+            eraseService.eraseRevisions([this.revisionId]);
+        }
     }
 
     beforeSaving() {

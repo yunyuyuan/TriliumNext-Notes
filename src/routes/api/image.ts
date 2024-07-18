@@ -2,12 +2,12 @@
 
 import imageService from "../../services/image.js";
 import becca from "../../becca/becca.js";
-const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
 import fs from "fs";
 import { Request, Response } from 'express';
 import BNote from "../../becca/entities/bnote.js";
 import BRevision from "../../becca/entities/brevision.js";
 import { AppRequest } from '../route-interface';
+import resource_dir from "../../services/resource_dir.js";
 
 function returnImageFromNote(req: Request, res: Response) {
     const image = becca.getNote(req.params.noteId);
@@ -24,7 +24,7 @@ function returnImageFromRevision(req: Request, res: Response) {
 function returnImageInt(image: BNote | BRevision | null, res: Response) {
     if (!image) {
         res.set('Content-Type', 'image/png');
-        return res.send(fs.readFileSync(`${RESOURCE_DIR}/db/image-deleted.png`));
+        return res.send(fs.readFileSync(`${resource_dir.RESOURCE_DIR}/db/image-deleted.png`));
     } else if (!["image", "canvas", "mermaid"].includes(image.type)) {
         return res.sendStatus(400);
     }
@@ -68,7 +68,7 @@ function returnAttachedImage(req: Request, res: Response) {
 
     if (!attachment) {
         res.set('Content-Type', 'image/png');
-        return res.send(fs.readFileSync(`${RESOURCE_DIR}/db/image-deleted.png`));
+        return res.send(fs.readFileSync(`${resource_dir.RESOURCE_DIR}/db/image-deleted.png`));
     }
 
     if (!["image"].includes(attachment.role)) {

@@ -137,7 +137,7 @@ function exec<T>(opts: ExecOpts): Promise<T> {
     });
 }
 
-function getImage(imageUrl: string) {
+function getImage(imageUrl: string): Promise<Buffer> {
     const proxyConf = syncOptions.getSyncProxy();
     const opts: ClientOpts = {
         method: 'GET',
@@ -149,7 +149,7 @@ function getImage(imageUrl: string) {
     const proxyAgent = getProxyAgent(opts);
     const parsedTargetUrl = url.parse(opts.url);
 
-    return new Promise((resolve, reject) => {
+    return new Promise<Buffer>((resolve, reject) => {
         try {
             const request = client.request({
                 method: opts.method,
@@ -181,8 +181,7 @@ function getImage(imageUrl: string) {
             });
 
             request.end(undefined);
-        }
-        catch (e: any) {
+        } catch (e: any) {
             reject(generateError(opts, e.message));
         }
     });

@@ -11,6 +11,9 @@ import migrationService from "./migration.js";
 import cls from "./cls.js";
 import config from "./config.js";
 import { OptionRow } from '../becca/entities/rows';
+import optionsInitService from "./options_init.js";
+import BNote from "../becca/entities/bnote.js";
+import BBranch from "../becca/entities/bbranch.js";
 
 const dbReady = utils.deferred<void>();
 
@@ -63,9 +66,6 @@ async function createInitialDatabase() {
 
         require('../becca/becca_loader').load();
 
-        const BNote = require('../becca/entities/bnote');
-        const BBranch = require('../becca/entities/bbranch');
-
         log.info("Creating root note ...");
 
         rootNote = new BNote({
@@ -83,8 +83,6 @@ async function createInitialDatabase() {
             isExpanded: true,
             notePosition: 10
         }).save();
-
-        const optionsInitService = require('./options_init');
 
         optionsInitService.initDocumentOptions();
         optionsInitService.initNotSyncedOptions(true, {});

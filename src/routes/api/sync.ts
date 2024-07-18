@@ -14,6 +14,7 @@ import ws from "../../services/ws.js";
 import { Request } from 'express';
 import { EntityChange, EntityChangeRecord } from '../../services/entity_changes_interface';
 import ValidationError from "../../errors/validation_error.js";
+import consistencyChecksService from "../../services/consistency_checks.js";
 
 async function testSync() {
     try {
@@ -206,7 +207,7 @@ function queueSector(req: Request) {
 }
 
 function checkEntityChanges() {
-    require('../../services/consistency_checks').runEntityChangesChecks();
+    consistencyChecksService.runEntityChangesChecks();
 }
 
 export default {
