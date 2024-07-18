@@ -170,6 +170,6 @@ function renderFile(note: SNote, result: Result) {
     }
 }
 
-export = {
+export default {
     getContent
 };

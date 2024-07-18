@@ -32,6 +32,6 @@ function getEntityFromEntityName(entityName: keyof typeof ENTITY_NAME_TO_ENTITY)
     return ENTITY_NAME_TO_ENTITY[entityName];
 }
 
-export = {
+export default {
     getEntityFromEntityName
 };

@@ -172,6 +172,6 @@ function executeActions(note: BNote, searchResultNoteIds: string[] | Set<string>
     }
 }
 
-export = {
+export default {
     executeActions
 };

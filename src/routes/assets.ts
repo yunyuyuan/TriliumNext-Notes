@@ -71,6 +71,6 @@ function register(app: express.Application) {
     app.use(`/${assetPath}/node_modules/panzoom/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/panzoom/dist/')));
 }
 
-export = {
+export default {
     register
 };

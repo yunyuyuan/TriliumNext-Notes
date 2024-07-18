@@ -108,6 +108,6 @@ function toHtml(text: string) {
     return `<p>${text.replace(/(?:\r\n|\r|\n)/g, '</p><p>')}</p>`;
 }
 
-export = {
+export default {
     importOpml
 };

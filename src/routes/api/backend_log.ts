@@ -17,6 +17,6 @@ function getBackendLog() {
     }
 }
 
-export = {
+export default {
     getBackendLog
 };

@@ -76,6 +76,6 @@ function getRelationMap(req: Request) {
     return resp;
 }
 
-export = {
+export default {
     getRelationMap
 };

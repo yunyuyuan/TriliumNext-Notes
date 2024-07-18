@@ -249,6 +249,6 @@ eventService.subscribe(eventService.ENTITY_DELETED, ({ entityName, entity }) => 
     }
 });
 
-export = {
+export default {
     runAttachedRelations
 };

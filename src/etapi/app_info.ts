@@ -8,6 +8,6 @@ function register(router: Router) {
     });
 }
 
-export = {
+export default {
     register
 };

@@ -38,6 +38,6 @@ function setupPage(req: Request, res: Response) {
     });
 }
 
-export = {
+export default {
     setupPage
 };

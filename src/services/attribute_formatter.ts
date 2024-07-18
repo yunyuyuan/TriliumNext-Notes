@@ -47,6 +47,6 @@ function formatValue(val: string) {
     }
 }
 
-export = {
+export default {
     formatAttrForSearch
 };

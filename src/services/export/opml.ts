@@ -98,6 +98,6 @@ function escapeXmlAttribute(text: string) {
         .replace(/'/g, '&apos;');
 }
 
-export = {
+export default {
     exportToOpml
 };

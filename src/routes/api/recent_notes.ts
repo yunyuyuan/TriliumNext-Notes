@@ -19,6 +19,6 @@ function addRecentNote(req: Request) {
     }
 }
 
-export = {
+export default {
     addRecentNote
 };

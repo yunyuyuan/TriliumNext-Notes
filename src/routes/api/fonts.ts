@@ -35,6 +35,6 @@ function getFontCss(req: Request, res: Response) {
     res.send(style);
 }
 
-export = {
+export default {
     getFontCss
 };

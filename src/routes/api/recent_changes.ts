@@ -111,6 +111,6 @@ function getRecentChanges(req: Request) {
     return recentChanges;
 }
 
-export = {
+export default {
     getRecentChanges
 };

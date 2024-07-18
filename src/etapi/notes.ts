@@ -267,6 +267,6 @@ function parseInteger(obj: any, name: string) {
     return integer;
 }
 
-export = {
+export default {
     register
 };

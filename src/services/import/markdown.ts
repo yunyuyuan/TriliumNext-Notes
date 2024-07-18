@@ -12,6 +12,6 @@ function renderToHtml(content: string, title: string) {
     return htmlSanitizer.sanitize(h1Handled);
 }
 
-export = {
+export default {
     renderToHtml
 };

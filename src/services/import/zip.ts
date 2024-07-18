@@ -656,6 +656,6 @@ function resolveNoteType(type: string | undefined): NoteType {
     }
 }
 
-export = {
+export default {
     importZip
 };

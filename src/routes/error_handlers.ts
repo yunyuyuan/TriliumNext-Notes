@@ -39,6 +39,6 @@ function register(app: Application) {
     });
 }
 
-export = {
+export default {
     register
 };

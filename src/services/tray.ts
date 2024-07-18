@@ -106,6 +106,6 @@ function createTray() {
     registerVisibilityListener();
 }
 
-export = {
+export default {
     createTray
 }

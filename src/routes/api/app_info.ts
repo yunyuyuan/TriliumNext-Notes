@@ -6,6 +6,6 @@ function getAppInfo() {
     return appInfo;
 }
 
-export = {
+export default {
     getAppInfo
 };

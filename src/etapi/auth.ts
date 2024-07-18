@@ -39,6 +39,6 @@ function register(router: Router, loginMiddleware: RequestHandler[]) {
     });
 }
 
-export = {
+export default {
     register
 }

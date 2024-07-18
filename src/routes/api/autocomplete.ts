@@ -75,6 +75,6 @@ function getRecentNotes(activeNoteId: string) {
     });
 }
 
-export = {
+export default {
     getAutocomplete
 };

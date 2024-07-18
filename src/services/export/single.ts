@@ -125,6 +125,6 @@ function inlineAttachments(content: string) {
     return content;
 }
 
-export = {
+export default {
     exportSingleNote
 };

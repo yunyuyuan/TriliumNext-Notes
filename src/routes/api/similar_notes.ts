@@ -13,6 +13,6 @@ async function getSimilarNotes(req: Request) {
     return await similarityService.findSimilarNotes(noteId);
 }
 
-export = {
+export default {
     getSimilarNotes
 };

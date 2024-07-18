@@ -517,6 +517,6 @@ function createUploadMiddleware() {
     return multer(multerOptions).single('upload');
 }
 
-export = {
+export default {
     register
 };

@@ -37,6 +37,6 @@ function parse(value: string): DefinitionObject {
     return defObj;
 }
 
-export = {
+export default {
     parse
 };

@@ -17,6 +17,6 @@ async function doExclusively<T>(func: () => T) {
     }
 }
 
-export = {
+export default {
     doExclusively
 };

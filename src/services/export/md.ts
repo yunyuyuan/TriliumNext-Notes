@@ -14,6 +14,6 @@ function toMarkdown(content: string) {
     return instance.turndown(content);
 }
 
-export = {
+export default {
     toMarkdown
 };

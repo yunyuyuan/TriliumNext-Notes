@@ -68,6 +68,6 @@ function getExePath() {
      return path.resolve(resourceDir.ELECTRON_APP_ROOT_DIR, 'trilium');
 }
 
-export = {
+export default {
     installLocalAppIcon
 };

@@ -461,6 +461,6 @@ function setImmediatePromise() {
     });
 }
 
-export = {
+export default {
     findSimilarNotes
 };

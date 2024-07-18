@@ -185,6 +185,6 @@ function logUpdateContext(updateContext: UpdateContext) {
     log.info(message.substr(1, message.length - 2));
 }
 
-export = {
+export default {
     updateEntities
 };

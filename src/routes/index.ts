@@ -64,6 +64,6 @@ function getAppCssNoteIds() {
     return attributeService.getNotesWithLabel('appCss').map(note => note.noteId);
 }
 
-export = {
+export default {
     index
 };
