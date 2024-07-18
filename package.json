@@ -31,7 +31,8 @@
     "test-jasmine": "TRILIUM_DATA_DIR=./data-test ts-node ./node_modules/.bin/jasmine",
     "test-es6": "ts-node -r esm spec-es6/attribute_parser.spec.ts",
     "test": "npm run test-jasmine && npm run test-es6",
-    "postinstall": "rimraf ./node_modules/canvas"
+    "postinstall": "rimraf ./node_modules/canvas",
+    "errors": "tsc --watch --noEmit"
   },
   "dependencies": {
     "@braintree/sanitize-url": "6.0.4",
