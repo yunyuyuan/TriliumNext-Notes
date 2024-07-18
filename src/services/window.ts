@@ -132,7 +132,7 @@ function getIcon() {
 }
 
 async function createSetupWindow() {
-    const { BrowserWindow } = require('electron'); // should not be statically imported
+    const { BrowserWindow } = await import("electron"); // should not be statically imported
     setupWindow = new BrowserWindow({
         width: 800,
         height: 800,
@@ -156,7 +156,7 @@ function closeSetupWindow() {
 }
 
 async function registerGlobalShortcuts() {
-    const { globalShortcut } = require('electron');
+    const { globalShortcut } = await import("electron");
 
     await sqlInit.dbReady;
 

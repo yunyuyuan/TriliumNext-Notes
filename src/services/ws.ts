@@ -14,8 +14,8 @@ import { IncomingMessage, Server } from 'http';
 import { EntityChange } from './entity_changes_interface';
 
 if (env.isDev()) {
-    const chokidar = require('chokidar');
-    const debounce = require('debounce');
+    const chokidar = (await import("chokidar")).default;
+    const debounce = (await import("debounce")).default;
     const debouncedReloadFrontend = debounce(() => reloadFrontend("source code change"), 200);
     chokidar
         .watch('src/public')
