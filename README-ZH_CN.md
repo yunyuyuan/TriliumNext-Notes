@@ -6,12 +6,30 @@ TriliumNext Notes 是一个层次化的笔记应用程序，专注于建立大�
 
 <a href="https://triliumnext.github.io/Docs/Wiki/screenshot-tour"><img src="https://github.com/TriliumNext/Docs/blob/main/Wiki/images/screenshot.png?raw=true" alt="Trilium Screenshot" width="1000"></a>
 
+## ⚠️ 为什么选择TriliumNext？
+
+[原始的Trilium项目目前处于维护模式](https://github.com/zadam/trilium/issues/4620)
+
+## 🗭 与我们讨论
+
+欢迎加入我们的官方讨论和社区。我们专注于Trilium的开发，乐于听取您对功能、建议或问题的意见！
+
+- [Matrix](https://matrix.to/#/#triliumnext:matrix.org)（用于同步讨论）
+- [Github Discussions](https://github.com/TriliumNext/Notes/discussions)（用于异步讨论）
+- [Wiki](https://triliumnext.github.io/Docs/)（用于常见操作问题和用户指南）
+
+上面链接的两个房间是镜像的，所以您可以在任意平台上使用XMPP或者Matrix来和我们交流。
+
+### 非官方社区
+
+[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
+
 ## 🎁 特性
 
 * 笔记可以排列成任意深的树。单个笔记可以放在树中的多个位置（请参阅[克隆](https://triliumnext.github.io/Docs/Wiki/cloning-notes)）
-* 丰富的所见即所得笔记编辑功能，包括带有 Markdown [自动格式化功能的](https://triliumnext.github.io/Docs/Wiki/text-notes#autoformat)表格，图像和[数学](https://triliumnext.github.io/Docs/Wiki/text-notes#math-support)
+* 丰富的所见即所得笔记编辑功能，包括带有 Markdown [自动格式化功能的](https://triliumnext.github.io/Docs/Wiki/text-notes#autoformat)表格，图像和[数学公式](https://triliumnext.github.io/Docs/Wiki/text-notes#math-support)
 * 支持编辑[使用源代码的笔记](https://triliumnext.github.io/Docs/Wiki/code-notes)，包括语法高亮显示
-* 笔记之间快速[导航](https://triliumnext.github.io/Docs/Wiki/note-navigation)，全文搜索和[笔记聚焦](https://triliumnext.github.io/Docs/Wiki/note-hoisting)
+* 笔记之间快速[导航](https://triliumnext.github.io/Docs/Wiki/note-navigation)，全文搜索和[提升笔记](https://triliumnext.github.io/Docs/Wiki/note-hoisting)
 * 无缝[笔记版本控制](https://triliumnext.github.io/Docs/Wiki/note-revisions)
 * 笔记[属性](https://triliumnext.github.io/Docs/Wiki/attributes)可用于笔记组织，查询和高级[脚本编写](https://triliumnext.github.io/Docs/Wiki/scripts)
 * [同步](https://triliumnext.github.io/Docs/Wiki/synchronization)与自托管同步服务器
@@ -21,11 +39,17 @@ TriliumNext Notes 是一个层次化的笔记应用程序，专注于建立大�
 * 使用自带的 Excalidraw 来绘制图表（笔记类型“画布”）
 * [关系图](https://triliumnext.github.io/Docs/Wiki/relation-map)和[链接图](https://triliumnext.github.io/Docs/Wiki/link-map)，用于可视化笔记及其关系
 * [脚本](https://triliumnext.github.io/Docs/Wiki/scripts) - 请参阅[高级功能展示](https://triliumnext.github.io/Docs/Wiki/advanced-showcases)
+* 可用于自动化的 [REST API](https://triliumnext.github.io/Docs/Wiki/etapi)
 * 在拥有超过 10 万条笔记时仍能保持良好的可用性和性能
 * 针对智能手机和平板电脑进行优化的[用于移动设备的前端](https://triliumnext.github.io/Docs/Wiki/mobile-frontend)
 * [夜间主题](https://triliumnext.github.io/Docs/Wiki/themes)
 * [Evernote](https://triliumnext.github.io/Docs/Wiki/evernote-import) 和 [Markdown 导入导出](https://triliumnext.github.io/Docs/Wiki/markdown)功能
 * 使用[网页剪藏](https://triliumnext.github.io/Docs/Wiki/web-clipper)轻松保存互联网上的内容
+
+✨ 查看以下第三方资源，获取更多关于TriliumNext的好东西：
+
+- [awesome-trilium](https://github.com/Nriver/awesome-trilium)：提供第三方主题、脚本、插件等资源的列表。
+- [TriliumRocks!](https://trilium.rocks/)：提供教程、指南等更多内容。
 
 ## 🏗 构建
 
