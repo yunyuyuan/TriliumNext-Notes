@@ -8,6 +8,20 @@ Vedi [fotografie](https://triliumnext.github.io/Docs/Wiki/screenshot-tour) per u
 
 <a href="https://triliumnext.github.io/Docs/Wiki/screenshot-tour"><img src="https://github.com/TriliumNext/Docs/blob/main/Wiki/images/screenshot.png?raw=true" alt="Trilium Screenshot" width="1000"></a>
 
+## ⚠️ Perchè TriliumNext?
+[Il progetto originale Trilium è in modalità di manutenzione](https://github.com/zadam/trilium/issues/4620)
+
+## 🗭 Discuti con noi
+Sentiti libero di unirti alle nostre discussioni ufficiali e alla nostra comunità. Siamo concentrati sullo sviluppo di Trilium e ci piacerebbe sapere quali funzioni, suggerimenti o eventuali problemi hai!
+
+- [Matrix](https://matrix.to/#/#triliumnext:matrix.org) (Per discussioni sincrone)
+- [Discussioni Github](https://github.com/TriliumNext/Notes/discussions) (Per discussioni asincrone)
+- [Wiki](https://triliumnext.github.io/Docs/) (Per le domande più comuni e le guide per l'utente)
+
+Le due stanze linkate sopra sono connesse e contengono gli stessi messaggi, quindi puoi usare XMPP o Matrix da qualsiasi client tu preferisca, praticamente su qualsiasi piattaforma!
+### Comunità non ufficiali
+
+[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 ## 🎁 Funzionalità
 
 * Gli appunti possono essere organizzati in un albero di profondità arbitraria. Un singolo appunto può essere collocato in più posti nell'albero (vedi [clonazione](https://triliumnext.github.io/Docs/Wiki/cloning-notes))
@@ -30,9 +44,10 @@ Vedi [fotografie](https://triliumnext.github.io/Docs/Wiki/screenshot-tour) per u
 * Supporto per importazione ed esportazione da e per [Evernote](https://triliumnext.github.io/Docs/Wiki/evernote-import) e [Markdown import](https://triliumnext.github.io/Docs/Wiki/markdown)
 * [Web Clipper](https://triliumnext.github.io/Docs/Wiki/web-clipper) per il salvataggio facile di contenuti web
 
+✨ Dai un'occhiata alle seguenti risorse di terze parti per scoprire altre bellezze legate a TriliumNext:
 
-Dai un'occhiata a [awesome-trilium](https://github.com/Nriver/awesome-trilium) per temi, script, plugin e altro di terze parti.
-
+-[awesome-trilium](https://github.com/Nriver/awesome-trilium) per temi, script, plugin e altro di terze parti.
+- [TriliumRocks!](https://trilium.rocks/) per tutorial, guide e molto altro.
 ## 🏗 Rilasci
 
 
@@ -42,9 +57,9 @@ Trilium è fornito come applicazione desktop (Linux e Windows) o come applicazio
 * Se vuoi installare Trilium su un server, segui [questa pagina](https://triliumnext.github.io/Docs/Wiki/server-installation).
   * Per ora solo Chrome e Firefox sono i browser supportati (testati).
 
-Trilium è anche disponibile su Flatpak:
+TriliumNext sarà fornito anche come Flatpak:
 
-[<img width="240" src="https://flathub.org/assets/badges/flathub-badge-en.png">](https://flathub.org/apps/details/com.github.zadam.trilium)
+<img width="240" src="https://flathub.org/assets/badges/flathub-badge-en.png">
 
 ## 📝 Documentazione
 
@@ -54,13 +69,13 @@ Puoi anche leggere ["Patterns of personal knowledge base"](https://triliumnext.g
 
 ## 💻 Contribuire
 
-O clona localmente ed esegui
+Clona localmente ed esegui
 ```
 npm install
 npm run start-server
 ```
 
-## 📢 Riconoscimenti
+## 👏 Riconoscimenti
 
 * [CKEditor 5](https://github.com/ckeditor/ckeditor5) - miglior editor visuale (WYSIWYG) sul mercato, squadra di sviluppo attenta e reattiva
 * [FancyTree](https://github.com/mar10/fancytree) -  libreria per alberi molto ricca di funzionalità, senza pari. Trilium Notes non sarebbe lo stesso senza di essa.
@@ -69,7 +84,8 @@ npm run start-server
 
 ## 🤝 Supporto
 
-È possibile supportare Trilium attraverso Github Sponsors, [PayPal](https://paypal.me/za4am) o Bitcoin (bitcoin:bc1qv3svjn40v89mnkre5vyvs2xw6y8phaltl385d2).
+Puoi sostenere lo sviluppatore originale di Trilium utilizzando gli sponsor di GitHub, [PayPal](https://paypal.me/za4am) o Bitcoin (bitcoin:bc1qv3svjn40v89mnkre5vyvs2xw6y8phaltl385d2).
+Il supporto all'organizzazione TriliumNext sarà possibile nel prossimo futuro.
 
 ## 🔑 Licenza
 
