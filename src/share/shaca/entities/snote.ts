@@ -8,6 +8,7 @@ import { Blob } from '../../../services/blob-interface';
 import SAttachment = require('./sattachment');
 import SAttribute = require('./sattribute');
 import SBranch = require('./sbranch');
+import { SNoteRow } from './rows';
 
 const LABEL = 'label';
 const RELATION = 'relation';
