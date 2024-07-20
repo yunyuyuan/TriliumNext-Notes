@@ -44,12 +44,16 @@ cp "$script_dir/../build/electron.js" "$DIR"
 
 if [[ -d "$DIR"/node_modules ]]; then
     # cleanup of useless files in dependencies
-    for d in 'image-q/demo' 'better-sqlite3/Release' 'better-sqlite3/deps/sqlite3.tar.gz' '@jimp/plugin-print/fonts' 'jimp/browser' 'jimp/fonts'; do
+    for d in 'image-q/demo' \
+        '@excalidraw/excalidraw/excalidraw-assets-dev' '@excalidraw/excalidraw/dist/excalidraw.development.js' '@excalidraw/excalidraw/dist/excalidraw-with-preact.development.js' \
+        'mermaid/dist/mermaid.js' \
+        'better-sqlite3/Release' 'better-sqlite3/deps/sqlite3.tar.gz' 'better-sqlite3/deps/sqlite3' \
+        '@jimp/plugin-print/fonts' 'jimp/browser' 'jimp/fonts'; do
         [[ -e "$DIR"/node_modules/"$d" ]] && rm -r "$DIR"/node_modules/"$d"
     done
 
     # delete all tests (there are often large images as test file for jimp etc.)
-    for d in 'test' 'docs' 'demo'; do
+    for d in 'test' 'docs' 'demo' 'example'; do
         find "$DIR"/node_modules -name "$d" -exec rm -rf {} +
     done
 fi
