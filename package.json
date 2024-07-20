@@ -67,6 +67,7 @@
     "http-proxy-agent": "7.0.2",
     "https-proxy-agent": "7.0.4",
     "i18next": "^23.12.2",
+    "i18next-http-backend": "^2.5.2",
     "image-type": "4.1.0",
     "ini": "3.0.1",
     "is-animated": "2.0.2",

@@ -72,7 +72,10 @@ const MARKJS = {
     ]
 };
 
-const I18NEXT = { js: [ "node_modules/i18next/i18next.min.js" ] };
+const I18NEXT = { js: [
+    "node_modules/i18next/i18next.min.js",
+    "node_modules/i18next-http-backend/i18nextHttpBackend.min.js"
+] };
 
 async function requireLibrary(library) {
     if (library.css) {
