@@ -69,6 +69,8 @@ function register(app: express.Application) {
     app.use(`/${assetPath}/node_modules/split.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/split.js/dist/')));
 
     app.use(`/${assetPath}/node_modules/panzoom/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/panzoom/dist/')));
+
+    app.use(`/${assetPath}/node_modules/i18next/`, persistentCacheStatic(path.join(srcRoot, "..", 'node_modules/i18next/')))
 }
 
 export = {

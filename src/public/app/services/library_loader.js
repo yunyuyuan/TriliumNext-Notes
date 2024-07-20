@@ -72,6 +72,8 @@ const MARKJS = {
     ]
 };
 
+const I18NEXT = { js: [ "node_modules/i18next/i18next.min.js" ] };
+
 async function requireLibrary(library) {
     if (library.css) {
         library.css.map(cssUrl => requireCss(cssUrl));
@@ -129,5 +131,6 @@ export default {
     FORCE_GRAPH,
     MERMAID,
     EXCALIDRAW,
-    MARKJS
+    MARKJS,
+    I18NEXT
 }
