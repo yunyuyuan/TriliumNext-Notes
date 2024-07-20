@@ -19,7 +19,9 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: ./bin/build-mac-x64.sh
+      - run: |
+          ./bin/update-build-info.sh
+          ./bin/build-mac-x64.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-mac-x64
@@ -35,7 +37,9 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: ./bin/build-mac-arm64.sh
+      - run: |
+          ./bin/update-build-info.sh
+          ./bin/build-mac-arm64.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-mac-arm64
@@ -51,7 +55,9 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: ./bin/build-linux-x64.sh
+      - run: |
+          ./bin/update-build-info.sh
+          ./bin/build-linux-x64.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-linux-x64.tar.xz
@@ -71,7 +77,9 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: ./bin/build-server.sh
+      - run: |
+          ./bin/update-build-info.sh
+          ./bin/build-server.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-linux-x64-server.tar.xz
@@ -94,7 +102,9 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: ./bin/build-win-x64.sh
+      - run: |
+          ./bin/update-build-info.sh
+          ./bin/build-win-x64.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-windows-x64
