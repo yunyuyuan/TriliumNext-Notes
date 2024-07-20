@@ -104,7 +104,7 @@ jobs:
       - run: npm ci
       - run: |
           ./bin/update-build-info.sh
-          ./bin/build-win-x64.sh
+          ./bin/build-win-x64.sh DONTPACK
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-windows-x64
