@@ -54,8 +54,8 @@ jobs:
       - run: ./bin/build-linux-x64.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: trilium-linux-x64
-          path: dist/trilium-linux-x64
+          name: trilium-linux-x64.tar.xz
+          path: dist/trilium-linux-x64-*.tar.xz
       - uses: actions/upload-artifact@v4
         with:
           name: trilium_amd64.deb
@@ -74,8 +74,8 @@ jobs:
       - run: ./bin/build-server.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: trilium-linux-x64-server
-          path: dist/trilium-linux-x64-server
+          name: trilium-linux-x64-server.tar.xz
+          path: dist/trilium-linux-x64-server-*.tar.xz
   build_windows-x64:
     name: Build Windows x86_64
     runs-on: ubuntu-latest
