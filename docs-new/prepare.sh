@@ -16,3 +16,8 @@ wget -rp -e robots=off "$share_url" -P "$output_dir"
 # Get rid of the domain in the output folder
 mv "$output_dir/$SHARE_HOST"/* "$output_dir/"
 rmdir "$output_dir/$SHARE_HOST"
+
+# Create home page with redirect
+index_dest_path="$output_dir/index.html"
+cp index.template.html "$index_dest_path"
+sed -i "s/{{ROOT_NOTE_ID}}/$ROOT_NOTE_ID/g" "$index_dest_path"
