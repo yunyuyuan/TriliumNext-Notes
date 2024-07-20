@@ -22,7 +22,7 @@ jobs:
       - run: ./bin/build-mac-x64.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: trilium-mac-x64.zip
+          name: trilium-mac-x64
           path: dist/trilium-mac-x64
   build_darwin-arm64:
     name: Build macOS aarch64
@@ -38,7 +38,7 @@ jobs:
       - run: ./bin/build-mac-arm64.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: trilium-mac-arm64.zip
+          name: trilium-mac-arm64
           path: dist/trilium-mac-arm64
   build_linux-x64:
     name: Build Linux x86_64
@@ -97,7 +97,7 @@ jobs:
       - run: ./bin/build-win-x64.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: trilium-windows-x64.zip
+          name: trilium-windows-x64
           path: dist/trilium-windows-x64
   build_docker:
     name: Build Docker image
