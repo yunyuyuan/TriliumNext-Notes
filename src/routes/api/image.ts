@@ -44,9 +44,8 @@ function renderSvgAttachment(image: BNote | BRevision, res: Response, attachment
     let svg: string | Buffer = '<svg/>'
     const attachment = image.getAttachmentByTitle(attachmentName);
 
-    const content = attachment.getContent();
     if (attachment) {
-        svg = content;
+        svg = attachment.getContent();
     } else {
         // backwards compatibility, before attachments, the SVG was stored in the main note content as a separate key
         const contentSvg = image.getJsonContentSafely()?.svg;

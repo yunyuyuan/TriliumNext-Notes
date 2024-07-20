@@ -5,6 +5,7 @@ import utils = require('../../../services/utils');
 import AbstractShacaEntity = require('./abstract_shaca_entity');
 import SNote = require('./snote');
 import { Blob } from '../../../services/blob-interface';
+import { SAttachmentRow } from './rows';
 
 class SAttachment extends AbstractShacaEntity {
     private attachmentId: string;

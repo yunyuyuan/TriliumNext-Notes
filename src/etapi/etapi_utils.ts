@@ -6,6 +6,7 @@ import etapiTokenService = require('../services/etapi_tokens');
 import config = require('../services/config');
 import { NextFunction, Request, RequestHandler, Response, Router } from 'express';
 import { AppRequest, AppRequestHandler } from '../routes/route-interface';
+import { ValidatorMap } from './etapi-interface';
 const GENERIC_CODE = "GENERIC";
 
 type HttpMethod = "all" | "get" | "post" | "put" | "delete" | "patch" | "options" | "head";

@@ -5,6 +5,7 @@ import v = require('./validators');
 import utils = require('../services/utils');
 import { Router } from 'express';
 import { AttachmentRow } from '../becca/entities/rows';
+import { ValidatorMap } from './etapi-interface';
 
 function register(router: Router) {
     const ALLOWED_PROPERTIES_FOR_CREATE_ATTACHMENT: ValidatorMap = {
