@@ -1,6 +1,9 @@
 name: Dev
 on:
   push:
+    branches:
+      - '!develop'
+      - '!feature/update*'
 jobs:
   build_docker:
     name: Build Docker image

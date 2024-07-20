@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'develop'
+      - 'feature/update*'
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
