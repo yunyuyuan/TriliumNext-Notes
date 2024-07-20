@@ -21,6 +21,11 @@ wget -rp -e robots=off "$share_url" -P "$output_dir"
 mv "$output_dir/$SHARE_HOST"/* "$output_dir/"
 rmdir "$output_dir/$SHARE_HOST"
 
+# Rename share/* to share/*.html because GitHub Pages will ask the client to download the files otherwise.
+for file in "$output_dir/share"/*; do
+    mv "$file" "$file.html"
+done
+
 # Create home page with redirect
 index_dest_path="$output_dir/index.html"
 cp index.template.html "$index_dest_path"
