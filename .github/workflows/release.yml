@@ -20,5 +20,5 @@ jobs:
       - name: Publish installer artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Trilium Notes for Windows (.exe)
+          name: TriliumNext Notes for Windows (.exe)
           path: out/make/squirrel.windows/x64/*.exe
