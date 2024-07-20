@@ -38,7 +38,7 @@ const TPL = `
                     </tr>
 
                     <tr>
-                        <th>${t("about.build_date")}</th>
+                        <th>${t("about.build_revision")}</th>
                         <td><a href="" class="build-revision external" target="_blank"></a></td>
                     </tr>
 
