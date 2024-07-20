@@ -25,3 +25,10 @@ rmdir "$output_dir/$SHARE_HOST"
 index_dest_path="$output_dir/index.html"
 cp index.template.html "$index_dest_path"
 sed -i "s/{{ROOT_NOTE_ID}}/$ROOT_NOTE_ID/g" "$index_dest_path"
+
+# Rewrite links to get rid of the share folder
+sed -i "s/<link href=\"\\.\\./<link href=\"\\./g" "$output_dir/share"/*.html
+sed -i "s/<script src=\"\\.\\./<script src=\"\\./g" "$output_dir/share"/*.html
+sed -i "s/rel=\"shortcut icon\" href=\"\\.\\./rel=\"shortcut icon\" href=\"\\./g" "$output_dir/share"/*.html
+mv "$output_dir/share"/* "$output_dir"
+rmdir "$output_dir/share"
