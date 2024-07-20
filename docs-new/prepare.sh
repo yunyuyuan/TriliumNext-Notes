@@ -1,11 +1,15 @@
+#!/usr/bin/env bash
+
 if [ ! -f .env ]; then
     echo "Missing .env file, cannot proceed."
     exit 1
 fi
 
-output_dir="output"
-rm -rf "$output_dir"
+script_dir=$(realpath $(dirname $0))
+output_dir="$script_dir/../docs"
 mkdir -p "$output_dir"
+rm -f "$output_dir"/*
+rm -rf "$output_dir"/{assets,share}
 
 source ./.env
 
