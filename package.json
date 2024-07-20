@@ -148,7 +148,6 @@
     "@types/xml2js": "^0.4.14",
     "cross-env": "7.0.3",
     "electron": "25.9.8",
-    "electron-builder": "24.13.3",
     "electron-packager": "17.1.2",
     "electron-rebuild": "3.2.9",
     "esm": "3.2.25",
