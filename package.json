@@ -38,7 +38,7 @@
     "test-es6": "ts-node -r esm spec-es6/attribute_parser.spec.ts",
     "test": "npm run test-jasmine && npm run test-es6",
     "start-electron-forge": "npm run prepare-dist && electron-forge start",
-    "make-electron": "npm run prepare-dist && npm run webpack && electron-forge make",
+    "make-electron": "npm run webpack && npm run prepare-dist && electron-forge make",
     "package-electron": "electron-forge package",
     "prepare-dist": "rimraf ./dist && tsc && ts-node ./bin/copy-dist.ts"
   },
