@@ -2,9 +2,14 @@ import library_loader from "./library_loader.js";
 
 await library_loader.requireLibrary(library_loader.I18NEXT);
 
-i18next.init({
-    lng: "ro",
-    debug: true
-});
+await i18next
+    .use(i18nextHttpBackend)
+    .init({
+        lng: "ro",
+        debug: true,
+        backend: {
+            loadPath: `/${window.glob.assetPath}/translations/{{lng}}/{{ns}}.json`
+        }
+    });
 
 export const t = i18next.t;
