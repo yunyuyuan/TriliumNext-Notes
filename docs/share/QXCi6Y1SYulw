@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <script src="../assets/v0.63.6/app-dist/share.js"></script>
+    
+        <link href="../assets/v0.63.6/libraries/normalize.min.css" rel="stylesheet">
+        <link href="../assets/v0.63.6/stylesheets/share.css" rel="stylesheet">
+    
+    
+        <link href="../assets/v0.63.6/libraries/ckeditor/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Adding a new client library</title>
+</head>
+<body data-note-id="QXCi6Y1SYulw" data-ancestor-note-id="4yYHqKbLovVX">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="VS22Hq5PBFNf"
+                           class="type-text">Dependency Management</a>
+            </nav>
+        
+
+        <h1 id="title">Adding a new client library</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>In the past some libraries have been copy-pasted (and adapted if needed) to the repository. However, new libraries must be obtained exclusively through npm.</p><p>The first step is to install the desired library. As an example we are going to install <code>i18next</code>:</p><pre><code class="language-text-plain">npm i i18next</code></pre><h3>Step 1. Understanding the structure of the import</h3><p>After installing the dependency, it's important to know how it's structured. You can do this by looking at the directory structure of the newly imported dependency:</p><pre><code class="language-text-plain">$ tree node_modules/i18next
+node_modules/i18next
+├── dist
+│   ├── cjs
+│   │   └── i18next.js
+│   ├── esm
+│   │   ├── i18next.bundled.js
+│   │   ├── i18next.js
+│   │   └── package.json
+│   └── umd
+│       ├── i18next.js
+│       └── i18next.min.js
+├── i18next.js
+├── i18next.min.js
+├── index.d.mts
+├── index.d.ts
+├── index.js
+├── index.v4.d.ts
+├── LICENSE
+├── package.json
+├── README.md
+└── typescript
+    ├── helpers.d.ts
+    ├── options.d.ts
+    ├── t.d.ts
+    └── t.v4.d.ts</code></pre><p>Generally you should be looking for a <code>.min.js</code> file. Note that the <code>esm</code> and <code>cjs</code> variants generally don't work, we are looking for the classic, no module dependency.</p><h3>Step 2. Exposing the library from the server</h3><p>The library must be delivered by the server and this is done via <code>src/routes/assets.ts</code>. In the <code>register</code> function, add a new entry near the bottom of the function:</p><pre><code class="language-application-javascript-env-frontend">app.use(`/${assetPath}/node_modules/i18next/`, persistentCacheStatic(path.join(srcRoot, "..", 'node_modules/i18next/')));</code></pre><h3>Step 3. Adding it to the library loader</h3><p>The library loader is a client module which is in charge of downloading the library from the server and importing it. The loader is located in <code>src/public/app/services/library_loader.js</code>.</p><p>To add a new library, start by creating a constant for it, with the value pointing to the minified JS identified at the first step:</p><pre><code class="language-application-javascript-env-frontend">const I18NEXT = {
+    js: [
+        "node_modules/i18next/i18next.min.js"
+    ]
+};</code></pre><p>Then add it to the <code>export default</code> section:</p><pre><code class="language-text-x-diff"> export default {
+     requireCss,
+     requireLibrary,
+     CKEDITOR,
+     CODE_MIRROR,
+     ESLINT,
+     RELATION_MAP,
+     PRINT_THIS,
+     CALENDAR_WIDGET,
+     KATEX,
+     WHEEL_ZOOM,
+     FORCE_GRAPH,
+     MERMAID,
+     EXCALIDRAW,
+-    MARKJS
++    MARKJS,
++    I18NEXT
+ }</code></pre><h3>Step 4. Using the library</h3><p>To import the library, simply use the following mechanism:</p><pre><code class="language-text-x-diff">import library_loader from "./library_loader.js";
+
+await library_loader.requireLibrary(library_loader.I18NEXT);</code></pre><p>Make sure to replace <code>I18NEXT</code> with the library that was created at the previous steps.</p><p>Note that because we are not using a module management mechanism such as ES Modules or Common.js modules, the <code>requireLibrary</code> method does not actually return anything.&nbsp;</p><p>To benefit from the library, it must export on its own an object in <code>window</code>.</p><p>In the case of <code>i18next</code>, it sets <code>window.i18next</code> and that can be used directly:</p><pre><code class="language-text-x-diff">i18next.init({});</code></pre>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./4yYHqKbLovVX">Developer&#39;s Guide</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./hkrBX8KE1HQl">Internationalisation</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./VS22Hq5PBFNf">Dependency Management</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Adding a new client library</strong>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+</html>

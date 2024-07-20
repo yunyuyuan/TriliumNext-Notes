@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <script src="../assets/v0.63.6/app-dist/share.js"></script>
+    
+        <link href="../assets/v0.63.6/libraries/normalize.min.css" rel="stylesheet">
+        <link href="../assets/v0.63.6/stylesheets/share.css" rel="stylesheet">
+    
+    
+        <link href="../assets/v0.63.6/libraries/ckeditor/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Dependency Management</title>
+</head>
+<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="4yYHqKbLovVX"
+                           class="type-text">Developer&#39;s Guide</a>
+            </nav>
+        
+
+        <h1 id="title">Dependency Management</h1>
+
+        
+
+        
+
+        
+            <nav id="childLinks" class="grid">
+                
+
+                <ul>
+                    
+                        <li>
+                            <a href="./QXCi6Y1SYulw" 
+                               class="type-text">Adding a new client library</a>
+                        </li>
+                    
+                </ul>
+            </nav>
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./4yYHqKbLovVX">Developer&#39;s Guide</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./hkrBX8KE1HQl">Internationalisation</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Dependency Management</strong>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="./QXCi6Y1SYulw">Adding a new client library</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+</html>
