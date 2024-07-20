@@ -1,14 +1,14 @@
 {
   "name": "trilium",
-  "productName": "Trilium Notes",
-  "description": "Build your personal knowledge base with Trilium Notes",
+  "productName": "TriliumNext Notes",
+  "description": "Build your personal knowledge base with TriliumNext Notes",
   "version": "0.90.0-beta",
   "license": "AGPL-3.0-only",
   "main": "./dist/electron.js",
   "author": {
-    "name": "zadam",
-    "email": "zadam.apps@gmail.com",
-    "url": "https://github.com/zadam"
+    "name": "TriliumNext Notes Teams",
+    "email": "contact@eliandoran.me",
+    "url": "https://github.com/TriliumNext/Notes"
   },
   "copyright": "",
   "bin": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zadam/trilium.git"
+    "url": "https://github.com/TriliumNext/Notes.git"
   },
   "scripts": {
     "start-server": "cross-env TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_ENV=dev TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 nodemon src/www.ts",
