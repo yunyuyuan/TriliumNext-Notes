@@ -60,6 +60,8 @@ if [[ -d "$DIR"/node_modules ]]; then
 fi
 
 find $DIR/libraries -name "*.map" -type f -delete
+find $DIR/node_modules -name "*.map" -type f -delete
+find $DIR -name "*.ts" -type f -delete
 
 d="$DIR"/src/public
 [[ -d "$d"/app-dist ]] || mkdir -pv "$d"/app-dist
