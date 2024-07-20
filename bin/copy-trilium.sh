@@ -43,14 +43,14 @@ cp "$script_dir/../build/electron.js" "$DIR"
 (cd $DIR && npm install --omit=dev)
 
 if [[ -d "$DIR"/node_modules ]]; then
-# cleanup of useless files in dependencies
+    # cleanup of useless files in dependencies
     for d in 'image-q/demo' 'better-sqlite3/Release' 'better-sqlite3/deps/sqlite3.tar.gz' '@jimp/plugin-print/fonts' 'jimp/browser' 'jimp/fonts'; do
-        [[ -e "$DIR"/node_modules/"$d" ]] && rm -rv "$DIR"/node_modules/"$d"
+        [[ -e "$DIR"/node_modules/"$d" ]] && rm -r "$DIR"/node_modules/"$d"
     done
 
-# delete all tests (there are often large images as test file for jimp etc.)
+    # delete all tests (there are often large images as test file for jimp etc.)
     for d in 'test' 'docs' 'demo'; do
-        find "$DIR"/node_modules -name "$d" -exec rm -rf {} \;
+        find "$DIR"/node_modules -name "$d" -exec rm -rf {} +
     done
 fi
 
