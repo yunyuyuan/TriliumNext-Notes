@@ -32,7 +32,7 @@ mv package.json.tmp package.json
 
 git add package.json
 
-echo 'export = { buildDate:"'`date --iso-8601=seconds`'", buildRevision: "'`git log -1 --format="%H"`'" };' > src/services/build.ts
+./update-build-info.sh
 
 git add src/services/build.ts
 
