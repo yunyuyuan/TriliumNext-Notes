@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if ! command -v wine &> /dev/null; then
+  echo "Missing command: wine"
+  exit 1
+fi
+
 SRC_DIR=./dist/trilium-windows-x64-src
 
 if [ "$1" != "DONTCOPY" ]
@@ -29,9 +34,11 @@ rm -rf $BUILD_DIR/dump-db/node_modules
 
 cp bin/tpl/trilium-{portable,no-cert-check,safe-mode}.bat $BUILD_DIR/
 
-echo "Zipping windows x64 electron distribution..."
-VERSION=`jq -r ".version" package.json`
+if [ "$1" != "DONTPACK" ]
+then
+  echo "Zipping windows x64 electron distribution..."
+  VERSION=`jq -r ".version" package.json`
 
-cd dist
-
-zip -r9 trilium-windows-x64-${VERSION}.zip trilium-windows-x64
+  cd dist
+  zip -r9 trilium-windows-x64-${VERSION}.zip trilium-windows-x64
+fi

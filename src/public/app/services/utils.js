@@ -371,10 +371,10 @@ function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-function areObjectsEqual () {
+function areObjectsEqual() {
     let i, l, leftChain, rightChain;
 
-    function compare2Objects (x, y) {
+    function compare2Objects(x, y) {
         let p;
 
         // remember that NaN === NaN returns false
@@ -449,7 +449,7 @@ function areObjectsEqual () {
                     leftChain.push(x);
                     rightChain.push(y);
 
-                    if (!compare2Objects (x[p], y[p])) {
+                    if (!compare2Objects(x[p], y[p])) {
                         return false;
                     }
 
@@ -487,12 +487,14 @@ function areObjectsEqual () {
 }
 
 function copyHtmlToClipboard(content) {
-    const clipboardItem = new ClipboardItem({
-        'text/html': new Blob([content], {type: 'text/html'}),
-        'text/plain': new Blob([content], {type: 'text/plain'})
-    });
-
-    navigator.clipboard.write([clipboardItem]);
+    function listener(e) {
+        e.clipboardData.setData("text/html", content);
+        e.clipboardData.setData("text/plain", content);
+        e.preventDefault();
+    }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
 }
 
 /**

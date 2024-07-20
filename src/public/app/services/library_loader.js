@@ -28,20 +28,22 @@ const ESLINT = {js: ["libraries/eslint.js"]};
 const RELATION_MAP = {
     js: [
         "libraries/jsplumb.js",
-        "libraries/panzoom.js"
+        "node_modules/panzoom/dist/panzoom.min.js"
     ],
     css: [
         "stylesheets/relation_map.css"
     ]
 };
 
-const PRINT_THIS = {js: ["libraries/printThis.js"]};
+const PRINT_THIS = {js: ["node_modules/print-this/printThis.js"]};
 
 const CALENDAR_WIDGET = {css: ["stylesheets/calendar.css"]};
 
 const KATEX = {
-    js: [ "libraries/katex/katex.min.js", "libraries/katex/mhchem.min.js", "libraries/katex/auto-render.min.js" ],
-    css: [ "libraries/katex/katex.min.css" ]
+    js: [ "node_modules/katex/dist/katex.min.js",
+        "node_modules/katex/dist/contrib/mhchem.min.js",
+        "node_modules/katex/dist/contrib/auto-render.min.js" ],
+    css: [ "node_modules/katex/dist/katex.min.css" ]
 };
 
 const WHEEL_ZOOM = {
@@ -49,11 +51,11 @@ const WHEEL_ZOOM = {
 };
 
 const FORCE_GRAPH = {
-    js: [ "libraries/force-graph.min.js"]
+    js: [ "node_modules/force-graph/dist/force-graph.min.js"]
 };
 
 const MERMAID = {
-    js: [ "libraries/mermaid.min.js" ]
+    js: [ "node_modules/mermaid/dist/mermaid.min.js" ]
 }
 
 const EXCALIDRAW = {

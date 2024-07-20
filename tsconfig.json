@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+      "moduleResolution": "Node16",
+	  "module": "Node16",
+	  "target": "ES2018",
+	  "declaration": false,
+	  "sourceMap": true,
+	  "outDir": "./build",
+	  "strict": true,
+	  "noImplicitAny": true,
+	  "resolveJsonModule": true,
+	  "lib": ["ES2022"],
+	  "downlevelIteration": true,
+	  "skipLibCheck": true,
+	  "esModuleInterop": true
+	},
+	"include": [
+    "./src/**/*.js",
+	  "./src/**/*.ts",
+    "./*.ts",
+    "./spec/**/*.ts",
+    "./spec-es6/**/*.ts"
+	],
+	"exclude": ["./node_modules/**/*"],
+	"ts-node": {
+		"files": true
+	},
+	"files": [
+		"src/types.d.ts"
+	]
+}
