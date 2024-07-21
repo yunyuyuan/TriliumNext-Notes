@@ -1,1 +1,4 @@
-export = { buildDate:"2024-07-14T22:32:45+03:00", buildRevision: "b811f3d399aed7e740bd8e92ef7edc7d15de7038" };
+export = {
+    buildDate: "2024-07-21T08:44:01Z",
+    buildRevision: "374a51b77c35f5ff2e619b49f1e7aeda16005945"
+};

@@ -32,7 +32,7 @@ mv package.json.tmp package.json
 
 git add package.json
 
-./update-build-info.sh
+npm run update-build-info
 
 git add src/services/build.ts
 
