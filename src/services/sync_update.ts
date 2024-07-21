@@ -41,15 +41,13 @@ function updateEntities(entityChanges: EntityChangeRecord[], instanceId: string)
             atLeastOnePullApplied = true;
         }
 
-        if (entity) {
-            updateEntity(entityChange, entity, instanceId, updateContext);
-        }
+        updateEntity(entityChange, entity, instanceId, updateContext);
     }
 
     logUpdateContext(updateContext);
 }
 
-function updateEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, instanceId: string, updateContext: UpdateContext) {
+function updateEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow | undefined, instanceId: string, updateContext: UpdateContext) {
     if (!remoteEntityRow && remoteEC.entityName === 'options') {
         return; // can be undefined for options with isSynced=false
     }
@@ -74,7 +72,7 @@ function updateEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, instan
     }
 }
 
-function updateNormalEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow, instanceId: string, updateContext: UpdateContext) {
+function updateNormalEntity(remoteEC: EntityChange, remoteEntityRow: EntityRow | undefined, instanceId: string, updateContext: UpdateContext) {
     const localEC = sql.getRow<EntityChange | undefined>(`SELECT * FROM entity_changes WHERE entityName = ? AND entityId = ?`, [remoteEC.entityName, remoteEC.entityId]);
     const localECIsOlderOrSameAsRemote = (
             localEC && localEC.utcDateChanged && remoteEC.utcDateChanged &&
@@ -139,7 +137,7 @@ function preProcessContent(remoteEC: EntityChange, remoteEntityRow: EntityRow) {
     }
 }
 
-function updateNoteReordering(remoteEC: EntityChange, remoteEntityRow: EntityRow, instanceId: string) {
+function updateNoteReordering(remoteEC: EntityChange, remoteEntityRow: EntityRow | undefined, instanceId: string) {
     if (!remoteEntityRow) {
         throw new Error(`Empty note_reordering body for: ${JSON.stringify(remoteEC)}`);
     }
