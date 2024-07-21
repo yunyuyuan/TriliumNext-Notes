@@ -1,23 +1,29 @@
 {
   "name": "trilium",
-  "productName": "Trilium Notes",
-  "description": "Trilium Notes",
+  "productName": "TriliumNext Notes",
+  "description": "Build your personal knowledge base with TriliumNext Notes",
   "version": "0.90.0-beta",
   "license": "AGPL-3.0-only",
-  "main": "electron.js",
+  "main": "./dist/electron.js",
+  "author": {
+    "name": "TriliumNext Notes Teams",
+    "email": "contact@eliandoran.me",
+    "url": "https://github.com/TriliumNext/Notes"
+  },
+  "copyright": "",
   "bin": {
     "trilium": "src/www.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zadam/trilium.git"
+    "url": "https://github.com/TriliumNext/Notes.git"
   },
   "scripts": {
     "start-server": "cross-env TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_ENV=dev TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 nodemon src/www.ts",
     "start-server-no-dir": "cross-env TRILIUM_SAFE_MODE=1 TRILIUM_ENV=dev TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 nodemon src/www.ts",
     "qstart-server": "npm run qswitch-server && TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_ENV=dev TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 nodemon src/www.ts",
-    "start-electron": "rimraf ./dist && tsc && ts-node ./bin/copy-dist.ts && cross-env TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 TRILIUM_ENV=dev electron ./dist/electron.js --inspect=5858 .",
-    "start-electron-no-dir": "rimraf ./dist && tsc && ts-node ./bin/copy-dist.ts && cross-env TRILIUM_SAFE_MODE=1 TRILIUM_ENV=dev electron ./dist/electron.js --inspect=5858 .",
+    "start-electron": "npm run prepare-dist && cross-env TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 TRILIUM_ENV=dev electron ./dist/electron.js --inspect=5858 .",
+    "start-electron-no-dir": "npm run prepare-dist && cross-env TRILIUM_SAFE_MODE=1 TRILIUM_ENV=dev electron ./dist/electron.js --inspect=5858 .",
     "qstart-electron": "npm run qswitch-electron && TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 TRILIUM_ENV=dev electron --inspect=5858 .",
     "start-test-server": "npm run qswitch-server; rimraf ./data-test; cross-env TRILIUM_SAFE_MODE=1 TRILIUM_DATA_DIR=./data-test TRILIUM_SYNC_SERVER_HOST=http://tsyncserver:4000 TRILIUM_ENV=dev TRILIUM_PORT=9999 ts-node src/www.ts",
     "switch-server": "rimraf ./node_modules/better-sqlite3 && npm install",
@@ -31,7 +37,10 @@
     "test-jasmine": "cross-env TRILIUM_DATA_DIR=./data-test ts-node ./node_modules/jasmine/bin/jasmine",
     "test-es6": "ts-node -r esm spec-es6/attribute_parser.spec.ts",
     "test": "npm run test-jasmine && npm run test-es6",
-    "postinstall": "rimraf ./node_modules/canvas"
+    "start-electron-forge": "npm run prepare-dist && electron-forge start",
+    "make-electron": "npm run webpack && npm run prepare-dist && electron-forge make",
+    "package-electron": "electron-forge package",
+    "prepare-dist": "rimraf ./dist && tsc && ts-node ./bin/copy-dist.ts"
   },
   "dependencies": {
     "@braintree/sanitize-url": "^7.1.0",
@@ -53,6 +62,7 @@
     "ejs": "^3.1.10",
     "electron-debug": "3.2.0",
     "electron-dl": "3.5.2",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-window-state": "5.0.3",
     "escape-html": "1.0.3",
     "express": "^4.19.2",
@@ -107,6 +117,9 @@
     "yauzl": "^3.1.3"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
     "@types/archiver": "^6.0.2",
     "@types/better-sqlite3": "^7.6.9",
     "@types/cls-hooked": "^4.3.8",
@@ -136,7 +149,6 @@
     "@types/xml2js": "^0.4.14",
     "cross-env": "7.0.3",
     "electron": "25.9.8",
-    "electron-builder": "24.13.3",
     "electron-packager": "17.1.2",
     "electron-rebuild": "3.2.9",
     "esm": "3.2.25",

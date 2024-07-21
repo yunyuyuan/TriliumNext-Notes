@@ -115,6 +115,24 @@ jobs:
         with:
           name: trilium-windows-x64
           path: dist/trilium-windows-x64
+  build_windows-installer:
+    name: Build Windows x86_64 (Setup)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - run: npm ci
+      - name: Run installer build
+        run: npm run make-electron
+      - name: Publish installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for Windows (Setup)
+          path: out/make/squirrel.windows/x64/*.exe
   build_docker:
     name: Build Docker image
     runs-on: ubuntu-latest
