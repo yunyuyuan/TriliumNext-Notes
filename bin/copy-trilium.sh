@@ -35,8 +35,11 @@ for f in 'package.json' 'package-lock.json' 'README.md' 'LICENSE' 'config-sample
     cp "$f" "$DIR"/
 done
 
+# Patch package.json main
+sed -i 's/.\/dist\/electron.js/electron.js/g' "$DIR/package.json"
+
 script_dir=$(realpath $(dirname $0))
-cp -Rv "$script_dir/../build/src" "$DIR"
+cp -R "$script_dir/../build/src" "$DIR"
 cp "$script_dir/../build/electron.js" "$DIR"
 
 # run in subshell (so we return to original dir)
