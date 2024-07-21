@@ -25,7 +25,7 @@ echo "Packaging windows x64 electron build"
 BUILD_DIR=./dist/trilium-windows-x64
 rm -rf $BUILD_DIR
 
-mv "./dist/Trilium Notes-win32-x64" $BUILD_DIR
+mv "./dist/TriliumNext Notes-win32-x64" $BUILD_DIR
 
 cp bin/tpl/anonymize-database.sql $BUILD_DIR/
 
@@ -34,9 +34,11 @@ rm -rf $BUILD_DIR/dump-db/node_modules
 
 cp bin/tpl/trilium-{portable,no-cert-check,safe-mode}.bat $BUILD_DIR/
 
-echo "Zipping windows x64 electron distribution..."
-VERSION=`jq -r ".version" package.json`
+if [ "$1" != "DONTPACK" ]
+then
+  echo "Zipping windows x64 electron distribution..."
+  VERSION=`jq -r ".version" package.json`
 
-cd dist
-
-zip -r9 trilium-windows-x64-${VERSION}.zip trilium-windows-x64
+  cd dist
+  zip -r9 trilium-windows-x64-${VERSION}.zip trilium-windows-x64
+fi

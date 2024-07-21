@@ -1,6 +1,14 @@
 name: Dev
 on:
   push:
+    branches-ignore:
+      - 'develop'
+      - 'feature/update**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build_docker:
     name: Build Docker image

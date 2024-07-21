@@ -35,7 +35,7 @@ echo "Packaging linux x64 electron build"
 BUILD_DIR=./dist/trilium-linux-x64
 rm -rf "$BUILD_DIR"
 
-mv "./dist/Trilium Notes-linux-x64" "$BUILD_DIR"
+mv "./dist/TriliumNext Notes-linux-x64" "$BUILD_DIR"
 
 cp images/app-icons/png/128x128.png "$BUILD_DIR"/icon.png
 cp bin/tpl/anonymize-database.sql "$BUILD_DIR"/
