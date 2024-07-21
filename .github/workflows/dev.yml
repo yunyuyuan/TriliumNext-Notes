@@ -1,7 +1,7 @@
 name: Dev
 on:
   push:
-    branches_ignore:
+    branches-ignore:
       - 'develop'
       - 'feature/update**'
 
