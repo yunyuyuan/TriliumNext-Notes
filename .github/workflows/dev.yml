@@ -1,9 +1,9 @@
 name: Dev
 on:
   push:
-    branches:
-      - '!develop'
-      - '!feature/update*'
+    branches_ignore:
+      - 'develop'
+      - 'feature/update**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
