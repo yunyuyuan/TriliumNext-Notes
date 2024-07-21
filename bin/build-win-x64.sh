@@ -25,7 +25,7 @@ echo "Packaging windows x64 electron build"
 BUILD_DIR=./dist/trilium-windows-x64
 rm -rf $BUILD_DIR
 
-mv "./dist/Trilium Notes-win32-x64" $BUILD_DIR
+mv "./dist/TriliumNext Notes-win32-x64" $BUILD_DIR
 
 cp bin/tpl/anonymize-database.sql $BUILD_DIR/
 
