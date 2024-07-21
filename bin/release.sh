@@ -65,7 +65,9 @@ if [[ $TAG == *"beta"* ]]; then
   EXTRA=--prerelease
 fi
 
-echo "$GITHUB_CLI_AUTH_TOKEN" | gh auth login --with-token
+if [ ! -z "$GITHUB_CLI_AUTH_TOKEN" ]; then
+  echo "$GITHUB_CLI_AUTH_TOKEN" | gh auth login --with-token
+fi
 
 gh release create "$TAG" \
     --title "$TAG release" \
