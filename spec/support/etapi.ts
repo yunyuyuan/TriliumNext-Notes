@@ -19,57 +19,11 @@ function describeEtapi(
     let appProcess: ReturnType<typeof child_process.spawn>;
 
     beforeAll(async () => {
-      appProcess = child_process.spawn("npm", ["run", "start-test-server"]);
-      if (!appProcess) {
-        throw new Error("Failed to start the Trilium process.");
-      }
-
-      await new Promise<void>((res) => {
-        appProcess.stdout!.on("data", (data) => {
-          console.log("Trilium: " + data.toString().trim());
-
-          if (data.toString().includes("Listening on port")) {
-            res();
-          }
-        });
-      });
-
-      await fetch(`${HOST}/api/setup/new-document`, { method: "POST" });
-
-      const formData = new URLSearchParams();
-      formData.append("password1", "1234");
-      formData.append("password2", "1234");
-
-      await fetch(`${HOST}/set-password`, { method: "POST", body: formData });
-
-      etapiAuthToken = (
-        await (
-          await fetch(`${HOST}/etapi/auth/login`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ password: "1234" }),
-          })
-        ).json()
-      ).authToken;
+      
     });
 
     afterAll(() => {
-      console.log(
-        "Attempting to kill the Trilium process as part of the cleanup..."
-      );
-      if (!appProcess.pid) {
-        console.log("Trilium process not found. Cannot kill.");
-        return;
-      }
-
-      kill(appProcess.pid, "SIGKILL", (error) => {
-        if (error) {
-          console.error("Failed to kill the Trilium process.", error);
-        }
-        console.log("Trilium process killed.");
-      });
+      
     });
 
     specDefinitions();

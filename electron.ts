@@ -6,6 +6,11 @@ import appIconService from "./src/services/app_icon.js";
 import windowService from "./src/services/window.js";
 import tray from "./src/services/tray.js";
 
+// Prevent Trilium starting twice on first install and on uninstall for the Windows installer.
+if (require('electron-squirrel-startup')) {
+  process.exit(0);
+}
+
 // Adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 
