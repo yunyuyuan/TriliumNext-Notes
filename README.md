@@ -4,9 +4,9 @@
 
 TriliumNext Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
 
-See [screenshots](https://triliumnext.github.io/Docs/Wiki/Screenshot%20tour) for quick overview:
+See [screenshots](https://triliumnext.github.io/Docs/Wiki/screenshot-tour) for quick overview:
 
-<a href="https://triliumnext.github.io/Docs/Wiki/Screenshot%20tour"><img src="https://github.com/TriliumNext/Docs/blob/main/Wiki/images/screenshot.png?raw=true" alt="Trilium Screenshot" width="1000"></a>
+<a href="https://triliumnext.github.io/Docs/Wiki/screenshot-tour"><img src="https://github.com/TriliumNext/Docs/blob/main/Wiki/images/screenshot.png?raw=true" alt="Trilium Screenshot" width="1000"></a>
 
 ## ⚠️ Why TriliumNext?
 
@@ -18,7 +18,7 @@ Feel free to join our official discussions and community. We are focused on the 
 
 - [Matrix](https://matrix.to/#/#triliumnext:matrix.org) (For synchronous discussions)
 - [Github Discussions](https://github.com/TriliumNext/Notes/discussions) (For Asynchronous discussions)
-- [Wiki](https://github.com/zadam/trilium/wiki) (For common how-to questions and user guides)
+- [Wiki](https://triliumnext.github.io/Docs/) (For common how-to questions and user guides)
 
 The two rooms linked above are mirrored, so you can use either XMPP or Matrix, from any client you prefer, on pretty much any platform under the sun!
 
@@ -28,25 +28,25 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 
 ## 🎁 Features
 
-* Notes can be arranged into arbitrarily deep tree. Single note can be placed into multiple places in the tree (see [cloning](https://triliumnext.github.io/Docs/Wiki/Cloning-notes))
-* Rich WYSIWYG note editing including e.g. tables, images and [math](https://triliumnext.github.io/Docs/Wiki/Text-notes) with markdown [autoformat](https://triliumnext.github.io/Docs/Wiki/Text-notes#autoformat)
-* Support for editing [notes with source code](https://triliumnext.github.io/Docs/Wiki/Code-notes), including syntax highlighting
-* Fast and easy [navigation between notes](https://triliumnext.github.io/Docs/Wiki/Note-navigation), full text search and [note hoisting](https://triliumnext.github.io/Docs/Wiki/Note-hoisting)
-* Seamless [note versioning](https://triliumnext.github.io/Docs/Wiki/Note-revisions)
-* Note [attributes](https://triliumnext.github.io/Docs/Wiki/Attributes) can be used for note organization, querying and advanced [scripting](https://triliumnext.github.io/Docs/Wiki/Scripts)
-* [Synchronization](https://triliumnext.github.io/Docs/Wiki/Synchronization) with self-hosted sync server
+* Notes can be arranged into arbitrarily deep tree. Single note can be placed into multiple places in the tree (see [cloning](https://triliumnext.github.io/Docs/Wiki/cloning-notes)
+* Rich WYSIWYG note editing including e.g. tables, images and [math](https://triliumnext.github.io/Docs/Wiki/text-notes) with markdown [autoformat](https://triliumnext.github.io/Docs/Wiki/text-notes#autoformat)
+* Support for editing [notes with source code](https://triliumnext.github.io/Docs/Wiki/code-notes), including syntax highlighting
+* Fast and easy [navigation between notes](https://triliumnext.github.io/Docs/Wiki/note-navigation), full text search and [note hoisting](https://triliumnext.github.io/Docs/Wiki/note-hoisting)
+* Seamless [note versioning](https://triliumnext.github.io/Docs/Wiki/note-revisions)
+* Note [attributes](https://triliumnext.github.io/Docs/Wiki/attributes) can be used for note organization, querying and advanced [scripting](https://triliumnext.github.io/Docs/Wiki/scripts)
+* [Synchronization](https://triliumnext.github.io/Docs/Wiki/synchronization) with self-hosted sync server
   * there's a [3rd party service for hosting synchronisation server](https://trilium.cc/paid-hosting)
-* [Sharing](https://triliumnext.github.io/Docs/Wiki/Sharing) (publishing) notes to public internet
-* Strong [note encryption](https://triliumnext.github.io/Docs/Wiki/Protected-notes) with per-note granularity
+* [Sharing](https://triliumnext.github.io/Docs/Wiki/sharing) (publishing) notes to public internet
+* Strong [note encryption](https://triliumnext.github.io/Docs/Wiki/protected-notes) with per-note granularity
 * Sketching diagrams with built-in Excalidraw (note type "canvas")
-* [Relation maps](https://triliumnext.github.io/Docs/Wiki/Relation-map) and [link maps](https://triliumnext.github.io/Docs/Wiki/Link-map) for visualizing notes and their relations
-* [Scripting](https://triliumnext.github.io/Docs/Wiki/Scripts) - see [Advanced showcases](https://triliumnext.github.io/Docs/Wiki/Advanced-showcases)
-* [REST API](https://triliumnext.github.io/Docs/Wiki/ETAPI) for automation
+* [Relation maps](https://triliumnext.github.io/Docs/Wiki/relation-map) and [link maps](https://triliumnext.github.io/Docs/Wiki/link-map) for visualizing notes and their relations
+* [Scripting](https://triliumnext.github.io/Docs/Wiki/scripts) - see [Advanced showcases](https://triliumnext.github.io/Docs/Wiki/advanced-showcases)
+* [REST API](https://triliumnext.github.io/Docs/Wiki/etapi) for automation
 * Scales well in both usability and performance upwards of 100 000 notes
-* Touch optimized [mobile frontend](https://triliumnext.github.io/Docs/Wiki/Mobile-frontend) for smartphones and tablets
-* [Night theme](https://triliumnext.github.io/Docs/Wiki/Themes)
-* [Evernote](https://triliumnext.github.io/Docs/Wiki/Evernote-import) and [Markdown import & export](https://triliumnext.github.io/Docs/Wiki/Markdown)
-* [Web Clipper](https://triliumnext.github.io/Docs/Wiki/Web-clipper) for easy saving of web content
+* Touch optimized [mobile frontend](https://triliumnext.github.io/Docs/Wiki/mobile-frontend) for smartphones and tablets
+* [Night theme](https://triliumnext.github.io/Docs/Wiki/themes)
+* [Evernote](https://triliumnext.github.io/Docs/Wiki/evernote-import) and [Markdown import & export](https://triliumnext.github.io/Docs/Wiki/markdown)
+* [Web Clipper](https://triliumnext.github.io/Docs/Wiki/web-clipper) for easy saving of web content
 
 ✨ Check out the following third-party resources for more TriliumNext related goodies:
 
@@ -55,10 +55,10 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 
 ## 🏗 Builds
 
-Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux). Mac OS desktop build is available, but it is [unsupported](https://triliumnext.github.io/Docs/Wiki/FAQ#mac-os-support).
+Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux). Mac OS desktop build is available, but it is [unsupported](https://triliumnext.github.io/Docs/Wiki/faq#mac-os-support).
 
 * If you want to use TriliumNext on the desktop, download binary release for your platform from [latest release](https://github.com/TriliumNext/Notes/releases/latest), unzip the package and run ```trilium``` executable.
-* If you want to install TriliumNext on your own server, follow [this page](https://triliumnext.github.io/Docs/Wiki/Server-installation).
+* If you want to install TriliumNext on your own server, follow [this page](https://triliumnext.github.io/Docs/Wiki/server-installation).
   * Currently only recent versions of Chrome and Firefox are supported (tested) browsers.
 
 TriliumNext will also provided as a Flatpak:
@@ -69,7 +69,7 @@ TriliumNext will also provided as a Flatpak:
 
 [See wiki for complete list of documentation pages.](https://triliumnext.github.io/Docs)
 
-You can also read [Patterns of personal knowledge base](https://triliumnext.github.io/Docs/Wiki/Patterns-of-personal-knowledge-base) to get some inspiration on how you might use Trilium.
+You can also read [Patterns of personal knowledge base](https://triliumnext.github.io/Docs/Wiki/patterns-of-personal-knowledge) to get some inspiration on how you might use Trilium.
 
 ## 💻 Contribute
 
