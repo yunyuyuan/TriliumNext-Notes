@@ -34,5 +34,4 @@ VERSION=`jq -r ".version" package.json`
 
 cd dist
 
-rm trilium-mac-arm64-${VERSION}.zip
 zip -r9 --symlinks trilium-mac-arm64-${VERSION}.zip trilium-mac-arm64
