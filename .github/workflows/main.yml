@@ -4,6 +4,8 @@ on:
     branches:
       - 'develop'
       - 'feature/update*'
+    paths-ignore:
+      - 'docs/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
