@@ -13,8 +13,6 @@ echo "Copying required mac arm64 binaries"
 
 cp -r bin/better-sqlite3/mac-arm64-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
 
-rm -r $SRC_DIR/src/public/app-dist/*.mobile.*
-
 echo "Packaging mac arm64 electron build"
 
 ./node_modules/.bin/electron-packager $SRC_DIR --asar --out=dist --executable-name=trilium --platform=darwin --arch=arm64 --overwrite --icon=images/app-icons/mac/icon.icns
