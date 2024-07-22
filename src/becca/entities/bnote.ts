@@ -1153,7 +1153,7 @@ class BNote extends AbstractBeccaEntity<BNote> {
             .map(row => new BAttachment(row));
     }
 
-    getAttachmentByTitle(title: string): BAttachment {
+    getAttachmentByTitle(title: string): BAttachment | undefined {
         // cannot use SQL to filter by title since it can be encrypted
         return this.getAttachments().filter(attachment => attachment.title === title)[0];
     }

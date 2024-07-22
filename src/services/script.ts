@@ -95,10 +95,6 @@ function executeScript(script: string, params: ScriptParams, startNoteId: string
         throw new Error("Unable to determine script bundle.");
     }
 
-    if (!startNote || !originEntity) {
-        throw new Error("Missing start note or origin entity.");
-    }
-
     return executeBundle(bundle, { startNote, originEntity });
 }
 

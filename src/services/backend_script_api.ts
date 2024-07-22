@@ -63,7 +63,7 @@ interface Api {
      * Note where the script started executing (entrypoint).
      * As an analogy, in C this would be the file which contains the main() function of the current process.
      */
-    startNote?: BNote;
+    startNote?: BNote | null;
 
     /**
      * Note where the script is currently executing. This comes into play when your script is spread in multiple code
@@ -76,7 +76,7 @@ interface Api {
     /**
      * Entity whose event triggered this execution
      */
-    originEntity?: AbstractBeccaEntity<any>;
+    originEntity?: AbstractBeccaEntity<any> | null;
     
     /**
      * Axios library for HTTP requests. See {@link https://axios-http.com} for documentation
