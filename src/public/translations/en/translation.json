@@ -8,5 +8,47 @@
         "build_date": "Build date:",
         "build_revision": "Build revision:",
         "data_directory": "Data directory:"
+    },
+    "add_link": {
+        "add_link": "Add link",
+        "help_on_links": "Help on links",
+        "close": "Close",
+        "note": "Note",
+        "search_note": "search for note by its name",
+        "link_title_mirrors": "link title mirrors the note's current title",
+        "link_title_arbitrary": "link title can be changed arbitrarily",
+        "link_title": "Link title"
+    },
+    "branch_prefix": {
+        "edit_branch_prefix": "Edit branch prefix",
+        "help_on_tree_prefix": "Help on Tree prefix",
+        "close": "Close",
+        "prefix": "Prefix: ",
+        "save": "Save",
+        "branch_prefix_saved": "Branch prefix has been saved."
+    },
+    "bulk_actions": {
+        "bulk_actions": "Bulk actions",
+        "close": "Close",
+        "affected_notes": "Affected notes",
+        "include_descendants": "Include descendants of the selected notes",
+        "available_actions": "Available actions",
+        "chosen_actions": "Chosen actions",
+        "execute_bulk_actions": "Execute bulk actions",
+        "bulk_actions_executed": "Bulk actions have been executed successfully.",
+        "none_yet": "None yet ... add an action by clicking one of the available ones above."
+    },
+    "clone_to": {
+        "clone_notes_to": "Clone notes to ...",
+        "help_on_links": "Help on links",
+        "notes_to_clone": "Notes to clone",
+        "target_parent_note": "Target parent note",
+        "search_for_note_by_its_name": "search for note by its name",
+        "cloned_note_prefix_title": "Cloned note will be shown in note tree with given prefix",
+        "prefix_optional": "Prefix (optional)",
+        "clone_to_selected_note": "Clone to selected note",
+        "no_path_to_clone_to": "No path to clone to.",
+        "note_cloned": "Note \"{{clonedTitle}}\" has been cloned into \"{{targetTitle}}\""
     }
+
 }

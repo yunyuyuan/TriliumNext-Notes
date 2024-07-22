@@ -1,0 +1,54 @@
+{
+    "about": {
+        "title": "关于 TriliumNext Notes",
+        "homepage": "项目主页：",
+        "app_version": "应用版本：",
+        "db_version": "数据库版本：",
+        "sync_version": "同步版本：",
+        "build_date": "构建日期：",
+        "build_revision": "构建修订版：",
+        "data_directory": "数据目录："
+    },
+    "add_link": {
+        "add_link": "添加链接",
+        "help_on_links": "链接帮助",
+        "close": "关闭",
+        "note": "笔记",
+        "search_note": "按名称搜索笔记",
+        "link_title_mirrors": "链接标题与笔记当前标题同步",
+        "link_title_arbitrary": "链接标题可以任意更改",
+        "link_title": "链接标题"
+    },
+    "branch_prefix": {
+        "edit_branch_prefix": "编辑分支前缀",
+        "help_on_tree_prefix": "树前缀帮助",
+        "close": "关闭",
+        "prefix": "前缀：",
+        "save": "保存",
+        "branch_prefix_saved": "分支前缀已保存。"
+    },
+    "bulk_actions": {
+        "bulk_actions": "批量操作",
+        "close": "关闭",
+        "affected_notes": "受影响的笔记",
+        "include_descendants": "包括所选笔记的后代",
+        "available_actions": "可用操作",
+        "chosen_actions": "选择的操作",
+        "execute_bulk_actions": "执行批量操作",
+        "bulk_actions_executed": "批量操作已成功执行。",
+        "none_yet": "暂无操作 ... 通过点击上方的可用操作添加一个操作。"
+    },
+    "clone_to": {
+        "clone_notes_to": "克隆笔记到...",
+        "help_on_links": "链接帮助",
+        "notes_to_clone": "要克隆的笔记",
+        "target_parent_note": "目标父笔记",
+        "search_for_note_by_its_name": "按名称搜索笔记",
+        "cloned_note_prefix_title": "克隆的笔记将在笔记树中显示给定的前缀",
+        "prefix_optional": "前缀（可选）",
+        "clone_to_selected_note": "克隆到选定的笔记",
+        "no_path_to_clone_to": "没有克隆路径。",
+        "note_cloned": "笔记 \"{{clonedTitle}}\" 已克隆到 \"{{targetTitle}}\""
+    }
+
+}
