@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 if ! command -v wine &> /dev/null; then
   echo "Missing command: wine"
   exit 1

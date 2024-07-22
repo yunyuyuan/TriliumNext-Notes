@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 SRC_DIR=./dist/trilium-mac-arm64-src
 
 if [ "$1" != "DONTCOPY" ]

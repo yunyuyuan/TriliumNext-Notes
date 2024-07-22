@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 PKG_DIR=dist/trilium-linux-x64-server
 NODE_VERSION=20.15.1
 
