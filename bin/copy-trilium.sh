@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
 shopt -s globstar
 
 if [[ $# -eq 0 ]] ; then
