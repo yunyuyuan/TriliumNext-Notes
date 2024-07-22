@@ -4,6 +4,7 @@ on:
     branches:
       - 'develop'
       - 'feature/update*'
+      - 'feature/server_esm*'
     paths-ignore:
       - 'docs/**'
 
