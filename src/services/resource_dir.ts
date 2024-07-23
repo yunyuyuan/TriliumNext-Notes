@@ -2,7 +2,7 @@ import log from "./log.js";
 import path from "path";
 import fs from "fs";
 
-const RESOURCE_DIR = path.resolve(__dirname, "../..");
+export const RESOURCE_DIR = path.resolve(__dirname, "../..");
 
 // where the "trilium" executable is
 const ELECTRON_APP_ROOT_DIR = path.resolve(RESOURCE_DIR, "../..");
