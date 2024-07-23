@@ -8,7 +8,7 @@ export default class Shaca {
     notes!: Record<string, SNote>;
     branches!: Record<string, SBranch>;
     childParentToBranch!: Record<string, SBranch>;
-    private attributes!: Record<string, SAttribute>;
+    attributes!: Record<string, SAttribute>;
     attachments!: Record<string, SAttachment>;
     aliasToNote!: Record<string, SNote>;
     shareRootNote!: SNote | null;

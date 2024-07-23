@@ -8,6 +8,7 @@ import TaskContext from "../../services/task_context.js";
 import cls from "../../services/cls.js";
 import log from "../../services/log.js";
 import { BranchRow } from './rows';
+import handlers from "../../services/handlers.js";
 
 /**
  * Branch represents a relationship between a child note and its parent note. Trilium allows a note to have multiple
@@ -157,7 +158,6 @@ class BBranch extends AbstractBeccaEntity<BBranch> {
 
             if (parentBranches.length === 1 && parentBranches[0] === this) {
                 // needs to be run before branches and attributes are deleted and thus attached relations disappear
-                const handlers = require('../../services/handlers');
                 handlers.runAttachedRelations(note, 'runOnNoteDeletion', note);
             }
         }

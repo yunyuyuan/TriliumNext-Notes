@@ -1,12 +1,14 @@
 "use strict";
 
 import crypto from "crypto";
-const randtoken = require('rand-token').generator({source: 'crypto'});
+import { generator } from "rand-token";
 import unescape from "unescape";
 import escape from "escape-html";
 import sanitize from "sanitize-filename";
 import mimeTypes from "mime-types";
 import path from "path";
+
+const randtoken = generator({source: 'crypto'});
 
 function newEntityId() {
     return randomString(12);
@@ -173,7 +175,7 @@ function replaceAll(string: string, replaceWhat: string, replaceWith: string) {
     return string.replace(new RegExp(quotedReplaceWhat, "g"), replaceWith);
 }
 
-function formatDownloadTitle(fileName: string, type: string, mime: string) {
+function formatDownloadTitle(fileName: string, type: string | null, mime: string) {
     if (!fileName) {
         fileName = "untitled";
     }
@@ -182,7 +184,7 @@ function formatDownloadTitle(fileName: string, type: string, mime: string) {
 
     if (type === 'text') {
         return `${fileName}.html`;
-    } else if (['relationMap', 'canvas', 'search'].includes(type)) {
+    } else if (type && ['relationMap', 'canvas', 'search'].includes(type)) {
         return `${fileName}.json`;
     } else {
         if (!mime) {

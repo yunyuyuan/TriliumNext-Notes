@@ -42,7 +42,7 @@ export interface OptionRow {
     name: string;
     value: string;
     isSynced: boolean;
-    utcDateModified: string;
+    utcDateModified?: string;
 }
 
 export interface EtapiTokenRow {
@@ -69,7 +69,7 @@ export interface AttributeRow {
     noteId?: string;
     type: AttributeType;
     name: string;
-    position?: number;
+    position?: number | null;
     value?: string;
     isInheritable?: boolean;
     utcDateModified?: string;

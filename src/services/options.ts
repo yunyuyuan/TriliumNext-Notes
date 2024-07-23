@@ -1,4 +1,5 @@
 import becca from "../becca/becca.js";
+import BOption from "../becca/entities/boption.js";
 import { OptionRow } from '../becca/entities/rows';
 import sql from "./sql.js";
 
@@ -68,10 +69,7 @@ function setOption(name: string, value: string | number | boolean) {
     }
 }
 
-function createOption(name: string, value: string | number, isSynced: boolean) {
-    // to avoid circular dependency, need to find a better solution
-    const BOption = require('../becca/entities/boption');
-
+function createOption(name: string, value: string, isSynced: boolean) {
     new BOption({
         name: name,
         value: value,

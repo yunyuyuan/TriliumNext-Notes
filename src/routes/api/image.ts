@@ -2,12 +2,12 @@
 
 import imageService from "../../services/image.js";
 import becca from "../../becca/becca.js";
-const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
 import fs from "fs";
 import { Request, Response } from 'express';
 import BNote from "../../becca/entities/bnote.js";
 import BRevision from "../../becca/entities/brevision.js";
 import { AppRequest } from '../route-interface';
+import { RESOURCE_DIR } from "../../services/resource_dir.js";
 
 function returnImageFromNote(req: Request, res: Response) {
     const image = becca.getNote(req.params.noteId);

@@ -12,6 +12,7 @@ import sanitizeAttributeName from "../sanitize_attribute_name.js";
 import TaskContext from "../task_context.js";
 import BNote from "../../becca/entities/bnote.js";
 import { File } from "./common";
+import { AttributeType } from "../../becca/entities/rows.js";
 
 /**
  * date format is e.g. 20181121T193703Z or 2013-04-14T16:19:00.000Z (Mac evernote, see #3496)
@@ -29,7 +30,7 @@ function parseDate(text: string) {
 }
 
 interface Attribute {
-    type: string;
+    type: AttributeType;
     name: string;
     value: string;
 }

@@ -13,11 +13,24 @@ import log from "../../log.js";
 import hoistedNoteService from "../../hoisted_note.js";
 import BNote from "../../../becca/entities/bnote.js";
 import BAttribute from "../../../becca/entities/battribute.js";
-import { SearchParams, TokenData } from "./types";
+import { SearchParams, TokenStructure } from "./types";
 import Expression from "../expressions/expression.js";
 import sql from "../../sql.js";
+import scriptService from "../../script.js";
 
-function searchFromNote(note: BNote) {
+export interface SearchNoteResult {
+    searchResultNoteIds: string[];
+    highlightedTokens: string[];
+    error: string | null;
+}
+
+export const EMPTY_RESULT: SearchNoteResult = {
+    searchResultNoteIds: [],
+    highlightedTokens: [],
+    error: null
+};
+
+function searchFromNote(note: BNote): SearchNoteResult {
     let searchResultNoteIds;
     let highlightedTokens: string[];
 
@@ -78,7 +91,6 @@ function searchFromRelation(note: BNote, relationName: string) {
         return [];
     }
 
-    const scriptService = require('../../script'); // TODO: to avoid circular dependency
     const result = scriptService.executeNote(scriptNote, {originEntity: note});
 
     if (!Array.isArray(result)) {
@@ -273,7 +285,7 @@ function parseQueryToExpression(query: string, searchContext: SearchContext) {
     const {fulltextQuery, fulltextTokens, expressionTokens} = lex(query);
     searchContext.fulltextQuery = fulltextQuery;
 
-    let structuredExpressionTokens: (TokenData | TokenData[])[];
+    let structuredExpressionTokens: TokenStructure;
 
     try {
         structuredExpressionTokens = handleParens(expressionTokens);

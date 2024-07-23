@@ -155,9 +155,7 @@ export default class Becca {
     }
 
     getRevision(revisionId: string): BRevision | null {
-        const row = sql.getRow("SELECT * FROM revisions WHERE revisionId = ?", [revisionId]);
-
-        const BRevision = require('./entities/brevision'); // avoiding circular dependency problems
+        const row = sql.getRow<RevisionRow | null>("SELECT * FROM revisions WHERE revisionId = ?", [revisionId]);
         return row ? new BRevision(row) : null;
     }
 
@@ -179,9 +177,7 @@ export default class Becca {
                WHERE attachmentId = ? AND isDeleted = 0`
             : `SELECT * FROM attachments WHERE attachmentId = ? AND isDeleted = 0`;
 
-        const BAttachment = require('./entities/battachment'); // avoiding circular dependency problems
-
-        return sql.getRows(query, [attachmentId])
+        return sql.getRows<AttachmentRow>(query, [attachmentId])
             .map(row => new BAttachment(row))[0];
     }
 
@@ -194,7 +190,6 @@ export default class Becca {
     }
 
     getAttachments(attachmentIds: string[]): BAttachment[] {
-        const BAttachment = require('./entities/battachment'); // avoiding circular dependency problems
         return sql.getManyRows<AttachmentRow>("SELECT * FROM attachments WHERE attachmentId IN (???) AND isDeleted = 0", attachmentIds)
             .map(row => new BAttachment(row));
     }
@@ -204,9 +199,7 @@ export default class Becca {
             return null;
         }
 
-        const row = sql.getRow("SELECT *, LENGTH(content) AS contentLength FROM blobs WHERE blobId = ?", [entity.blobId]);
-
-        const BBlob = require('./entities/bblob'); // avoiding circular dependency problems
+        const row = sql.getRow<BBlob | null>("SELECT *, LENGTH(content) AS contentLength FROM blobs WHERE blobId = ?", [entity.blobId]);
         return row ? new BBlob(row) : null;
     }
 
@@ -248,16 +241,12 @@ export default class Becca {
     }
 
     getRecentNotesFromQuery(query: string, params: string[] = []): BRecentNote[] {
-        const rows = sql.getRows(query, params);
-
-        const BRecentNote = require('./entities/brecent_note'); // avoiding circular dependency problems
+        const rows = sql.getRows<BRecentNote>(query, params);
         return rows.map(row => new BRecentNote(row));
     }
 
     getRevisionsFromQuery(query: string, params: string[] = []): BRevision[] {
         const rows = sql.getRows<RevisionRow>(query, params);
-
-        const BRevision = require('./entities/brevision'); // avoiding circular dependency problems
         return rows.map(row => new BRevision(row));
     }
 

@@ -50,7 +50,7 @@ function checkDate(millisSinceMidnight: number) {
     return millisSinceMidnight;
 }
 
-function log(str: string) {
+function log(str: string | Error) {
     const bundleNoteId = cls.get("bundleNoteId");
 
     if (bundleNoteId) {
@@ -66,11 +66,11 @@ function log(str: string) {
     console.log(str);
 }
 
-function info(message: string) {
+function info(message: string | Error) {
     log(message);
 }
 
-function error(message: string) {
+function error(message: string | Error) {
     log(`ERROR: ${message}`);
 }
 

@@ -156,7 +156,6 @@ function saveImageToAttachment(noteId: string, uploadBuffer: Buffer, originalNam
     setTimeout(() => {
         sql.transactional(() => {
             const note = becca.getNoteOrThrow(noteId);
-            const noteService = require('../services/notes');
             noteService.asyncPostProcessContent(note, note.getContent()); // to mark an unused attachment for deletion
         });
     }, 5000);

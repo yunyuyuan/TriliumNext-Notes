@@ -26,6 +26,7 @@ import html2plaintext from "html2plaintext";
 import { AttachmentRow, AttributeRow, BranchRow, NoteRow, NoteType } from '../becca/entities/rows';
 import TaskContext from "./task_context.js";
 import { NoteParams } from './note-interface';
+import imageService from "./image.js";
 
 interface FoundLink {
     name: "imageLink" | "internalLink" | "includeNoteLink" | "relationMapLink",
@@ -466,7 +467,7 @@ async function downloadImage(noteId: string, imageUrl: string) {
     const unescapedUrl = utils.unescapeHtml(imageUrl);
 
     try {
-        let imageBuffer;
+        let imageBuffer: Buffer;
 
         if (imageUrl.toLowerCase().startsWith("file://")) {
             imageBuffer = await new Promise((res, rej) => {
@@ -487,10 +488,13 @@ async function downloadImage(noteId: string, imageUrl: string) {
         const parsedUrl = url.parse(unescapedUrl);
         const title = path.basename(parsedUrl.pathname || "");
 
-        const imageService = require('../services/image');
         const attachment = imageService.saveImageToAttachment(noteId, imageBuffer, title, true, true);
-
-        imageUrlToAttachmentIdMapping[imageUrl] = attachment.attachmentId;
+        
+        if (attachment.attachmentId) {
+            imageUrlToAttachmentIdMapping[imageUrl] = attachment.attachmentId;
+        } else {
+            log.error(`Download of '${imageUrl}' due to no attachment ID.`);
+        }
 
         log.info(`Download of '${imageUrl}' succeeded and was saved as image attachment '${attachment.attachmentId}' of note '${noteId}'`);
     }
@@ -520,7 +524,6 @@ function downloadImages(noteId: string, content: string) {
             const imageBase64 = url.substr(inlineImageMatch[0].length);
             const imageBuffer = Buffer.from(imageBase64, 'base64');
 
-            const imageService = require('../services/image');
             const attachment = imageService.saveImageToAttachment(noteId, imageBuffer, "inline image", true, true);
 
             const encodedTitle = encodeURIComponent(attachment.title);

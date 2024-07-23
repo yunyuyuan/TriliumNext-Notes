@@ -19,6 +19,8 @@ import entityConstructor from "../becca/entity_constructor.js";
 import becca from "../becca/becca.js";
 import { EntityChange, EntityChangeRecord, EntityRow } from './entity_changes_interface';
 import { CookieJar, ExecOpts } from './request_interface';
+import setupService from "./setup.js";
+import consistency_checks from "./consistency_checks.js";
 
 let proxyToggle = true;
 
@@ -107,8 +109,6 @@ async function sync() {
 }
 
 async function login() {
-    const setupService = require('./setup'); // circular dependency issue
-
     if (!await setupService.hasSyncServerSchemaAndSeed()) {
         await setupService.sendSeedToSyncServer();
     }
@@ -282,8 +282,7 @@ async function checkContentHash(syncContext: SyncContext) {
 
     if (failedChecks.length > 0) {
         // before re-queuing sectors, make sure the entity changes are correct
-        const consistencyChecks = require('./consistency_checks');
-        consistencyChecks.runEntityChangesChecks();
+        consistency_checks.runEntityChangesChecks();
 
         await syncRequest(syncContext, 'POST', `/api/sync/check-entity-changes`);
     }

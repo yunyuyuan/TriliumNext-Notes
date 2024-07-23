@@ -15,6 +15,7 @@ import log from "../services/log.js";
 import SNote from "./shaca/entities/snote.js";
 import SBranch from "./shaca/entities/sbranch.js";
 import SAttachment from "./shaca/entities/sattachment.js";
+import utils from "../services/utils.js";
 
 function getSharedSubTreeRoot(note: SNote): { note?: SNote; branch?: SBranch } {
     if (note.noteId === shareRoot.SHARE_ROOT_NOTE_ID) {
@@ -249,8 +250,6 @@ function register(router: Router) {
 
         addNoIndexHeader(note, res);
 
-        const utils = require('../services/utils');
-
         const filename = utils.formatDownloadTitle(note.title, note.type, note.mime);
 
         res.setHeader('Content-Disposition', utils.getContentDisposition(filename));
@@ -316,8 +315,6 @@ function register(router: Router) {
         }
 
         addNoIndexHeader(attachment.note, res);
-
-        const utils = require('../services/utils');
 
         const filename = utils.formatDownloadTitle(attachment.title, null, attachment.mime);
 
