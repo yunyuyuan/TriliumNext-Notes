@@ -4,7 +4,6 @@ import BBranch from "../../src/becca/entities/bbranch.js";
 import SearchContext from "../../src/services/search/search_context.js";
 import dateUtils from "../../src/services/date_utils.js";
 import becca from "../../src/becca/becca.js";
-// const { NoteBuilder, findNoteByTitle, note } = require('./becca_mocking');
 import becca_mocking from "./becca_mocking.js";
 
 describe('Search', () => {
