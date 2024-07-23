@@ -5,7 +5,6 @@ import { JSDOM } from "jsdom";
 import BNote = require('../../becca/entities/bnote');
 import BAttribute = require('../../becca/entities/battribute');
 import { Request } from 'express';
-import ValidationError = require('../../errors/validation_error');
 
 function buildDescendantCountMap(noteIdsToCount: string[]) {
     if (!Array.isArray(noteIdsToCount)) {
