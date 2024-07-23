@@ -1,0 +1,12 @@
+{
+    "about": {
+        "title": "About TriliumNext Notes",
+        "homepage": "Homepage:",
+        "app_version": "App version:",
+        "db_version": "DB version:",
+        "sync_version": "Sync version:",
+        "build_date": "Build date:",
+        "build_revision": "Build revision:",
+        "data_directory": "Data directory:"
+    }
+}
