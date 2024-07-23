@@ -6,7 +6,7 @@ import froca from "../../services/froca.js";
 import branchService from "../../services/branches.js";
 import appContext from "../../components/app_context.js";
 import BasicWidget from "../basic_widget.js";
-import { t } from "../../services/i18n.js"; // Added import for i18n
+import { t } from "../../services/i18n.js";
 
 const TPL = `
 <div class="clone-to-dialog modal mx-auto" tabindex="-1" role="dialog">
