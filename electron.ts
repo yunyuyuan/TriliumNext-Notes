@@ -9,7 +9,7 @@ import windowService from "./src/services/window.js";
 import tray from "./src/services/tray.js";
 
 // Prevent Trilium starting twice on first install and on uninstall for the Windows installer.
-if (require('electron-squirrel-startup')) {
+if (await import('electron-squirrel-startup')) {
   process.exit(0);
 }
 

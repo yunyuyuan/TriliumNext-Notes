@@ -49,6 +49,7 @@
     "@braintree/sanitize-url": "^7.1.0",
     "@electron/remote": "2.1.2",
     "@excalidraw/excalidraw": "^0.17.6",
+    "@types/electron-squirrel-startup": "^1.0.2",
     "archiver": "^7.0.1",
     "async-mutex": "^0.5.0",
     "axios": "^1.7.2",
