@@ -1,6 +1,6 @@
 "use strict";
 
-import { NoteRow } from "../../../becca/entities/rows";
+import { NoteRow } from "../../../becca/entities/rows.js";
 import SearchContext from "../search_context.js";
 
 import Expression from "./expression.js";

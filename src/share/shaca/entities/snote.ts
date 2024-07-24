@@ -8,7 +8,7 @@ import { Blob } from '../../../services/blob-interface';
 import SAttachment from "./sattachment.js";
 import SAttribute from "./sattribute.js";
 import SBranch from "./sbranch.js";
-import { SNoteRow } from './rows';
+import { SNoteRow } from './rows.js';
 
 const LABEL = 'label';
 const RELATION = 'relation';

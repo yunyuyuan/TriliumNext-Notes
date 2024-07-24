@@ -23,7 +23,7 @@ import noteTypesService from "./note_types.js";
 import fs from "fs";
 import ws from "./ws.js";
 import html2plaintext from "html2plaintext";
-import { AttachmentRow, AttributeRow, BranchRow, NoteRow, NoteType } from '../becca/entities/rows';
+import { AttachmentRow, AttributeRow, BranchRow, NoteRow, NoteType } from '../becca/entities/rows.js';
 import TaskContext from "./task_context.js";
 import { NoteParams } from './note-interface';
 import imageService from "./image.js";

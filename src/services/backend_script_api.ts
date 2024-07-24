@@ -30,7 +30,7 @@ import BAttachment from "../becca/entities/battachment.js";
 import BRevision from "../becca/entities/brevision.js";
 import BEtapiToken from "../becca/entities/betapi_token.js";
 import BOption from "../becca/entities/boption.js";
-import { AttributeRow, AttributeType, NoteType } from '../becca/entities/rows';
+import { AttributeRow, AttributeType, NoteType } from '../becca/entities/rows.js';
 import Becca from '../becca/becca-interface';
 import { NoteParams } from './note-interface';
 import { ApiParams } from './backend_script_api_interface';

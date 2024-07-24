@@ -7,7 +7,7 @@ import BAttribute from "../becca/entities/battribute.js";
 import attributeFormatter from "./attribute_formatter.js";
 import BUILTIN_ATTRIBUTES from "./builtin_attributes.js";
 import BNote from "../becca/entities/bnote.js";
-import { AttributeRow } from '../becca/entities/rows';
+import { AttributeRow } from '../becca/entities/rows.js';
 
 const ATTRIBUTE_TYPES = ['label', 'relation'];
 

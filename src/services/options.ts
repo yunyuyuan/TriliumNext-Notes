@@ -1,6 +1,6 @@
 import becca from "../becca/becca.js";
 import BOption from "../becca/entities/boption.js";
-import { OptionRow } from '../becca/entities/rows';
+import { OptionRow } from '../becca/entities/rows.js';
 import sql from "./sql.js";
 
 function getOptionOrNull(name: string): string | null {

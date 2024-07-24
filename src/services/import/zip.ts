@@ -20,7 +20,7 @@ import BNote from "../../becca/entities/bnote.js";
 import NoteMeta from "../meta/note_meta.js";
 import AttributeMeta from "../meta/attribute_meta.js";
 import { Stream } from 'stream';
-import { ALLOWED_NOTE_TYPES, NoteType } from '../../becca/entities/rows';
+import { ALLOWED_NOTE_TYPES, NoteType } from '../../becca/entities/rows.js';
 
 interface MetaFile {
     files: NoteMeta[]

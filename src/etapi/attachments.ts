@@ -4,7 +4,7 @@ import mappers from "./mappers.js";
 import v from "./validators.js";
 import utils from "../services/utils.js";
 import { Router } from 'express';
-import { AttachmentRow } from '../becca/entities/rows';
+import { AttachmentRow } from '../becca/entities/rows.js';
 import { ValidatorMap } from './etapi-interface';
 
 function register(router: Router) {

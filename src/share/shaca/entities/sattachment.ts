@@ -5,7 +5,7 @@ import utils from "../../../services/utils.js";
 import AbstractShacaEntity from "./abstract_shaca_entity.js";
 import SNote from "./snote.js";
 import { Blob } from '../../../services/blob-interface';
-import { SAttachmentRow } from './rows';
+import { SAttachmentRow } from './rows.js';
 
 class SAttachment extends AbstractShacaEntity {
     private attachmentId: string;

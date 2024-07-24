@@ -12,7 +12,7 @@ import TaskContext from "../../services/task_context.js";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import eventService from "../../services/events.js";
-import { AttachmentRow, AttributeType, NoteRow, NoteType, RevisionRow } from './rows';
+import { AttachmentRow, AttributeType, NoteRow, NoteType, RevisionRow } from './rows.js';
 import BBranch from "./bbranch.js";
 import BAttribute from "./battribute.js";
 import { NotePojo } from '../becca-interface';
