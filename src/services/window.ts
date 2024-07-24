@@ -7,7 +7,7 @@ import log from "./log.js";
 import sqlInit from "./sql_init.js";
 import cls from "./cls.js";
 import keyboardActionsService from "./keyboard_actions.js";
-import remoteMain from "@electron/remote/main"
+import remoteMain from "@electron/remote/main/index.js"
 import { App, BrowserWindow, WebContents, ipcMain } from 'electron';
 
 import { fileURLToPath } from "url";

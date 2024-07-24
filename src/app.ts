@@ -69,7 +69,7 @@ await import('./services/scheduler.js');
 startScheduledCleanup();
 
 if (utils.isElectron()) {
-    (await import('@electron/remote/main')).initialize();
+    (await import('@electron/remote/main/index.js')).initialize();
 }
 
 export default app;
