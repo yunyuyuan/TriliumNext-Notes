@@ -5,7 +5,7 @@ import attributeService from "../services/attributes.js";
 import v from "./validators.js";
 import { Router } from 'express';
 import { AttributeRow } from '../becca/entities/rows.js';
-import { ValidatorMap } from './etapi-interface';
+import { ValidatorMap } from './etapi-interface.js';
 
 function register(router: Router) {
     eu.route(router, 'get', '/etapi/attributes/:attributeId', (req, res, next) => {

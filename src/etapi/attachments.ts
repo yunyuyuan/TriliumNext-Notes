@@ -5,7 +5,7 @@ import v from "./validators.js";
 import utils from "../services/utils.js";
 import { Router } from 'express';
 import { AttachmentRow } from '../becca/entities/rows.js';
-import { ValidatorMap } from './etapi-interface';
+import { ValidatorMap } from './etapi-interface.js';
 
 function register(router: Router) {
     const ALLOWED_PROPERTIES_FOR_CREATE_ATTACHMENT: ValidatorMap = {

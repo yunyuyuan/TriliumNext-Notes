@@ -15,7 +15,7 @@ import { ParsedQs } from 'qs';
 import { NoteParams } from '../services/note-interface';
 import BNote from "../becca/entities/bnote.js";
 import { SearchParams } from '../services/search/services/types';
-import { ValidatorMap } from './etapi-interface';
+import { ValidatorMap } from './etapi-interface.js';
 
 function register(router: Router) {
     eu.route(router, 'get', '/etapi/notes', (req, res, next) => {
