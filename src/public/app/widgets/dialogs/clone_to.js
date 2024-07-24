@@ -44,7 +44,7 @@ const TPL = `
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">${t('clone_to.clone_to_selected_note')} <kbd>enter</kbd></button>
+                    <button type="submit" class="btn btn-primary">${t('clone_to.clone_to_selected_note')}</button>
                 </div>
             </form>
         </div>
