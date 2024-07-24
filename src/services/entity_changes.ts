@@ -6,7 +6,7 @@ import utils from "./utils.js";
 import instanceId from "./instance_id.js";
 import becca from "../becca/becca.js";
 import blobService from "../services/blob.js";
-import { EntityChange } from './entity_changes_interface';
+import { EntityChange } from './entity_changes_interface.js';
 import type { Blob } from "./blob-interface";
 import eventService from "./events.js";
 
