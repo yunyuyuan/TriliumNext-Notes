@@ -10,7 +10,7 @@ import BRevision from "./brevision.js";
 import BAttachment from "./battachment.js";
 import TaskContext from "../../services/task_context.js";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
+import utc from "dayjs/plugin/utc.js";
 import eventService from "../../services/events.js";
 import { AttachmentRow, AttributeType, NoteRow, NoteType, RevisionRow } from './rows.js';
 import BBranch from "./bbranch.js";
