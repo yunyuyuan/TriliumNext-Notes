@@ -21,7 +21,7 @@ BUILD_DIR=./dist/trilium-mac-arm64
 rm -rf $BUILD_DIR
 
 # Mac build has by default useless directory level
-mv "./dist/Trilium Notes-darwin-arm64" $BUILD_DIR
+mv "./dist/TriliumNext Notes-darwin-arm64" $BUILD_DIR
 
 cp bin/tpl/anonymize-database.sql $BUILD_DIR/
 

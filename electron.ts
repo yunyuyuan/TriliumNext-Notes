@@ -6,6 +6,11 @@ import appIconService = require("./src/services/app_icon");
 import windowService = require("./src/services/window");
 import tray = require("./src/services/tray");
 
+// Prevent Trilium starting twice on first install and on uninstall for the Windows installer.
+if (require('electron-squirrel-startup')) {
+  process.exit(0);
+}
+
 // Adds debug features like hotkeys for triggering dev tools and reload
 require("electron-debug")();
 
