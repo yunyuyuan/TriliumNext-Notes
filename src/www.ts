@@ -69,7 +69,7 @@ async function startTrilium() {
     ws.init(httpServer, sessionParser as any); // TODO: Not sure why session parser is incompatible.
 
     if (utils.isElectron()) {
-        const electronRouting = await import('./routes/electron');
+        const electronRouting = await import('./routes/electron.js');
         electronRouting.default(app);
     }
 }

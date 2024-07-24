@@ -4,7 +4,7 @@ import utils from "./utils.js";
 import log from "./log.js";
 import dateUtils from "./date_utils.js";
 import keyboardActions from "./keyboard_actions.js";
-import { KeyboardShortcutWithRequiredActionName } from './keyboard_actions_interface';
+import { KeyboardShortcutWithRequiredActionName } from './keyboard_actions_interface.js';
 
 function initDocumentOptions() {
     optionService.createOption('documentId', utils.randomSecureToken(16), false);

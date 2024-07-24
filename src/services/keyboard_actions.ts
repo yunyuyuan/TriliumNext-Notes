@@ -3,7 +3,7 @@
 import optionService from "./options.js";
 import log from "./log.js";
 import utils from "./utils.js";
-import { KeyboardShortcut } from './keyboard_actions_interface';
+import { KeyboardShortcut } from './keyboard_actions_interface.js';
 
 const isMac = process.platform === "darwin";
 const isElectron = utils.isElectron();
