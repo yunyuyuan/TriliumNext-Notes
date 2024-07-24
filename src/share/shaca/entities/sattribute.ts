@@ -1,6 +1,6 @@
 "use strict";
 
-import AbstractShacaEntity from "./abstract_shaca_entity";
+import AbstractShacaEntity from "./abstract_shaca_entity.js";
 import { SAttributeRow } from "./rows.js";
 import SNote from "./snote.js";
 
