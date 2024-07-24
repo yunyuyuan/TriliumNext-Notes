@@ -64,6 +64,10 @@ function getRevision(req: Request) {
 function getRevisionFilename(revision: BRevision) {
     let filename = utils.formatDownloadTitle(revision.title, revision.type, revision.mime);
 
+    if (!revision.dateCreated) {
+        throw new Error("Missing creation date for revision.");
+    }
+
     const extension = path.extname(filename);
     const date = revision.dateCreated
         .substr(0, 19)

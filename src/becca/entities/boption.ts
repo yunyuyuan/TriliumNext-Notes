@@ -14,7 +14,6 @@ class BOption extends AbstractBeccaEntity<BOption> {
 
     name!: string;
     value!: string;
-    isSynced!: boolean;
 
     constructor(row?: OptionRow) {
         super();

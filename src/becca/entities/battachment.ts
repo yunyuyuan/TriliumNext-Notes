@@ -44,9 +44,6 @@ class BAttachment extends AbstractBeccaEntity<BAttachment> {
     title!: string;
     type?: keyof typeof attachmentRoleToNoteTypeMapping;
     position?: number;
-    blobId?: string;
-    isProtected?: boolean;
-    dateModified?: string;
     utcDateScheduledForErasureSince?: string | null;
     /** optionally added to the entity */
     contentLength?: number;

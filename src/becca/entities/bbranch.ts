@@ -29,7 +29,6 @@ class BBranch extends AbstractBeccaEntity<BBranch> {
     prefix!: string | null;
     notePosition!: number;
     isExpanded!: boolean;
-    utcDateModified?: string;
 
     constructor(row?: BranchRow) {
         super();

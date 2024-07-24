@@ -7,11 +7,8 @@ class BBlob extends AbstractBeccaEntity<BBlob> {
     static get primaryKeyName() { return "blobId"; }
     static get hashedProperties() { return ["blobId", "content"]; }
 
-    blobId!: string;
     content!: string | Buffer;
     contentLength!: number;
-    dateModified!: string;
-    utcDateModified!: string;
 
     constructor(row: BlobRow) {
         super();

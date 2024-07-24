@@ -8,7 +8,7 @@ import BAttribute from "./entities/battribute.js";
 import BBranch from "./entities/bbranch.js";
 import BRevision from "./entities/brevision.js";
 import BAttachment from "./entities/battachment.js";
-import { AttachmentRow, RevisionRow } from './entities/rows.js';
+import { AttachmentRow, BlobRow, RevisionRow } from './entities/rows.js';
 import BBlob from "./entities/bblob.js";
 import BRecentNote from "./entities/brecent_note.js";
 import AbstractBeccaEntity from "./entities/abstract_becca_entity.js";
@@ -199,7 +199,7 @@ export default class Becca {
             return null;
         }
 
-        const row = sql.getRow<BBlob | null>("SELECT *, LENGTH(content) AS contentLength FROM blobs WHERE blobId = ?", [entity.blobId]);
+        const row = sql.getRow<BlobRow | null>("SELECT *, LENGTH(content) AS contentLength FROM blobs WHERE blobId = ?", [entity.blobId]);
         return row ? new BBlob(row) : null;
     }
 

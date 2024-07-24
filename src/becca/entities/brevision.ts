@@ -33,13 +33,9 @@ class BRevision extends AbstractBeccaEntity<BRevision> {
     noteId!: string;
     type!: string;
     mime!: string;
-    isProtected!: boolean;
     title!: string;
-    blobId?: string;
     dateLastEdited?: string;
-    dateCreated!: string;
     utcDateLastEdited?: string;
-    utcDateCreated!: string;
     contentLength?: number;
     content?: string | Buffer;
 
