@@ -12,7 +12,7 @@ import zipImportService from "../services/import/zip.js";
 import { Router } from 'express';
 import { AppRequest } from '../routes/route-interface.js';
 import { ParsedQs } from 'qs';
-import { NoteParams } from '../services/note-interface';
+import { NoteParams } from '../services/note-interface.js';
 import BNote from "../becca/entities/bnote.js";
 import { SearchParams } from '../services/search/services/types';
 import { ValidatorMap } from './etapi-interface.js';

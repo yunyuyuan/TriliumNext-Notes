@@ -25,7 +25,7 @@ import ws from "./ws.js";
 import html2plaintext from "html2plaintext";
 import { AttachmentRow, AttributeRow, BranchRow, NoteRow, NoteType } from '../becca/entities/rows.js';
 import TaskContext from "./task_context.js";
-import { NoteParams } from './note-interface';
+import { NoteParams } from './note-interface.js';
 import imageService from "./image.js";
 
 interface FoundLink {
