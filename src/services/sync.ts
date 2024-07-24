@@ -18,7 +18,7 @@ import entityChangesService from "./entity_changes.js";
 import entityConstructor from "../becca/entity_constructor.js";
 import becca from "../becca/becca.js";
 import { EntityChange, EntityChangeRecord, EntityRow } from './entity_changes_interface.js';
-import { CookieJar, ExecOpts } from './request_interface';
+import { CookieJar, ExecOpts } from './request_interface.js';
 import setupService from "./setup.js";
 import consistency_checks from "./consistency_checks.js";
 import becca_loader from "../becca/becca_loader.js";
