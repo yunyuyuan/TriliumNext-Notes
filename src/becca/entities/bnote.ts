@@ -15,7 +15,7 @@ import eventService from "../../services/events.js";
 import { AttachmentRow, AttributeType, NoteRow, NoteType, RevisionRow } from './rows.js';
 import BBranch from "./bbranch.js";
 import BAttribute from "./battribute.js";
-import { NotePojo } from '../becca-interface';
+import { NotePojo } from '../becca-interface.js';
 import searchService from "../../services/search/services/search.js";
 import cloningService, { CloneResponse } from "../../services/cloning.js";
 import noteService from "../../services/notes.js";

@@ -31,7 +31,7 @@ import BRevision from "../becca/entities/brevision.js";
 import BEtapiToken from "../becca/entities/betapi_token.js";
 import BOption from "../becca/entities/boption.js";
 import { AttributeRow, AttributeType, NoteType } from '../becca/entities/rows.js';
-import Becca from '../becca/becca-interface';
+import Becca from '../becca/becca-interface.js';
 import { NoteParams } from './note-interface.js';
 import { ApiParams } from './backend_script_api_interface';
 
