@@ -4,7 +4,7 @@ import sql from "../../sql.js";
 import utils from "../../../services/utils.js";
 import AbstractShacaEntity from "./abstract_shaca_entity.js";
 import SNote from "./snote.js";
-import { Blob } from '../../../services/blob-interface';
+import { Blob } from '../../../services/blob-interface.js';
 import { SAttachmentRow } from './rows.js';
 
 class SAttachment extends AbstractShacaEntity {
