@@ -66,6 +66,8 @@ const copy = async () => {
     "node_modules/print-this/",
     "node_modules/split.js/dist/",
     "node_modules/panzoom/dist/",
+    "node_modules/i18next/",
+    "node_modules/i18next-http-backend/"
   ];
 
   for (const folder of nodeModulesFolder) {
