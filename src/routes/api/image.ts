@@ -6,7 +6,7 @@ import fs from "fs";
 import { Request, Response } from 'express';
 import BNote from "../../becca/entities/bnote.js";
 import BRevision from "../../becca/entities/brevision.js";
-import { AppRequest } from '../route-interface';
+import { AppRequest } from '../route-interface.js';
 import { RESOURCE_DIR } from "../../services/resource_dir.js";
 
 function returnImageFromNote(req: Request, res: Response) {

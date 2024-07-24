@@ -10,7 +10,7 @@ import SearchContext from "../services/search/search_context.js";
 import zipExportService from "../services/export/zip.js";
 import zipImportService from "../services/import/zip.js";
 import { Router } from 'express';
-import { AppRequest } from '../routes/route-interface';
+import { AppRequest } from '../routes/route-interface.js';
 import { ParsedQs } from 'qs';
 import { NoteParams } from '../services/note-interface';
 import BNote from "../becca/entities/bnote.js";

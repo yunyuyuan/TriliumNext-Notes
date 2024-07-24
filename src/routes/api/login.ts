@@ -13,7 +13,7 @@ import sql from "../../services/sql.js";
 import ws from "../../services/ws.js";
 import etapiTokenService from "../../services/etapi_tokens.js";
 import { Request } from 'express';
-import { AppRequest } from '../route-interface';
+import { AppRequest } from '../route-interface.js';
 
 function loginSync(req: AppRequest) {
     if (!sqlInit.schemaExists()) {

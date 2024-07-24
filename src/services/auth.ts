@@ -8,7 +8,7 @@ import passwordEncryptionService from "./encryption/password_encryption.js";
 import config from "./config.js";
 import passwordService from "./encryption/password.js";
 import type { NextFunction, Request, Response } from 'express';
-import { AppRequest } from '../routes/route-interface';
+import { AppRequest } from '../routes/route-interface.js';
 
 const noAuthentication = config.General && config.General.noAuthentication === true;
 

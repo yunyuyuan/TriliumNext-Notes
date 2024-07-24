@@ -14,7 +14,7 @@ import ValidationError from "../../errors/validation_error.js";
 import { Request, Response } from 'express';
 import BNote from "../../becca/entities/bnote.js";
 import BAttachment from "../../becca/entities/battachment.js";
-import { AppRequest } from '../route-interface';
+import { AppRequest } from '../route-interface.js';
 
 function updateFile(req: AppRequest) {
     const note = becca.getNoteOrThrow(req.params.noteId);

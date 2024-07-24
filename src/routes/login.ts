@@ -9,7 +9,7 @@ import assetPath from "../services/asset_path.js";
 import appPath from "../services/app_path.js";
 import ValidationError from "../errors/validation_error.js";
 import { Request, Response } from 'express';
-import { AppRequest } from './route-interface';
+import { AppRequest } from './route-interface.js';
 
 function loginPage(req: Request, res: Response) {
     res.render('login', {
