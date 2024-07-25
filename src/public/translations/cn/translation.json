@@ -60,7 +60,7 @@
     },
     "delete_notes": {
         "delete_notes_preview": "删除笔记预览",
-        "delete_all_clones_description": "同时删除所有克隆（可以在最近更改中撤消）",
+        "delete_all_clones_description": "同时删除所有克隆（可以在最近修改中撤消）",
         "erase_notes_description": "通常（软）删除仅标记笔记为已删除，可以在一段时间内通过最近修改对话框撤消。选中此选项将立即擦除笔记，不可撤销。",
         "erase_notes_warning": "永久擦除笔记（无法撤销），包括所有克隆。这将强制应用程序重新加载。",
         "notes_to_be_deleted": "将删除以下笔记（<span class=\"deleted-notes-count\"></span>）",
@@ -151,7 +151,7 @@
         "safeImport": "安全导入",
         "explodeArchivesTooltip": "如果选中此项，则Trilium将读取<code>.zip</code>、<code>.enex</code>和<code>.opml</code>文件，并从这些归档文件内部的文件创建笔记。如果未选中，则Trilium会将这些归档文件本身附加到笔记中。",
         "explodeArchives": "读取<code>.zip</code>、<code>.enex</code>和<code>.opml</code>归档文件的内容。",
-        "shrinkImagesTooltip": "<p>如果选中此选项，Trilium将尝试通过缩放和优化来缩小导入的图像，这可能会影响图像的感知质量。如果未选中，图像将不做更改地导入。</p><p>这不适用于带有元数据的<code>.zip</code>导入，因为这些文件已被假定为已优化。</p>",
+        "shrinkImagesTooltip": "<p>如果选中此选项，Trilium将尝试通过缩放和优化来缩小导入的图像，这可能会影响图像的感知质量。如果未选中，图像将不做修改地导入。</p><p>这不适用于带有元数据的<code>.zip</code>导入，因为这些文件已被假定为已优化。</p>",
         "shrinkImages": "压缩图像",
         "textImportedAsText": "如果元数据不明确，将HTML、Markdown和TXT导入为文本笔记",
         "codeImportedAsCode": "如果元数据不明确，将识别的代码文件（例如<code>.json</code>）导入为代码笔记",
@@ -197,5 +197,78 @@
         "modal_body": "选择新笔记的类型或模板：",
         "dropdown_trigger": "下拉触发",
         "templates": "模板:"
+    },
+    "password_not_set": {
+        "title": "密码未设置",
+        "body1": "受保护的笔记使用用户密码加密，但密码尚未设置。",
+        "body2": "点击<a class=\"open-password-options-button\" href=\"javascript:\">这里</a>打开选项对话框并设置您的密码。"
+    },
+    "prompt": {
+        "title": "提示",
+        "ok": "确定 <kbd>回车</kbd>",
+        "defaultTitle": "提示"
+    },
+    "protected_session_password": {
+        "modal_title": "保护会话",
+        "help_title": "关于保护笔记的帮助",
+        "close_label": "关闭",
+        "form_label": "输入密码进入保护会话以继续：",
+        "start_button": "开始保护会话 <kbd>回车</kbd>"
+    },
+    "recent_changes": {
+        "title": "最近修改",
+        "erase_notes_button": "立即清理已删除的笔记",
+        "deleted_notes_message": "已删除的笔记已清理。",
+        "no_changes_message": "暂无修改...",
+        "undelete_link": "恢复删除",
+        "confirm_undelete": "您确定要恢复此笔记及其子笔记吗？"
+    },
+    "revisions": {
+        "note_revisions": "笔记历史版本",
+        "delete_all_revisions": "删除此笔记的所有历史版本",
+        "delete_all_button": "删除所有历史版本",
+        "help_title": "关于笔记历史版本的帮助",
+        "dropdown_trigger": "下拉触发器",
+        "revision_last_edited": "此历史版本上次编辑于 {{date}}",
+        "confirm_delete_all": "您是否要删除此笔记的所有历史版本？此操作将擦除历史版本的标题和内容，但仍将保留历史版本的元数据。",
+        "no_revisions": "此笔记暂无历史版本...",
+        "restore_button": "恢复此历史版本",
+        "confirm_restore": "您是否要恢复此历史版本？这将使用此历史版本覆盖笔记的当前标题和内容。",
+        "delete_button": "删除此历史版本",
+        "confirm_delete": "您是否要删除此历史版本？此操作将删除历史版本的标题和内容，但仍将保留历史版本的元数据。",
+        "revisions_deleted": "笔记历史版本已删除。",
+        "revision_restored": "笔记历史版本已恢复。",
+        "revision_deleted": "笔记历史版本已删除。",
+        "download_button": "下载",
+        "mime": "MIME类型：",
+        "file_size": "文件大小：",
+        "preview": "预览：",
+        "preview_not_available": "无法预览此类型的笔记。"
+    },
+    "sort_child_notes": {
+        "sort_children_by": "按...排序子笔记",
+        "sorting_criteria": "排序条件",
+        "title": "标题",
+        "date_created": "创建日期",
+        "date_modified": "修改日期",
+        "sorting_direction": "排序方向",
+        "ascending": "升序",
+        "descending": "降序",
+        "folders": "文件夹",
+        "sort_folders_at_top": "将文件夹置顶排序",
+        "natural_sort": "自然排序",
+        "sort_with_respect_to_different_character_sorting": "根据不同语言或地区的字符排序和排序规则排序。",
+        "natural_sort_language": "自然排序语言",
+        "the_language_code_for_natural_sort": "自然排序的语言代码，例如中文的 \"zh-CN\"。",
+        "sort": "排序"
+    },
+    "upload_attachments": {
+        "upload_attachments_to_note": "上传附件到笔记",
+        "choose_files": "选择文件",
+        "files_will_be_uploaded": "文件将作为附件上传到",
+        "options": "选项",
+        "shrink_images": "缩小图片",
+        "upload": "上传",
+        "tooltip": "如果您勾选此选项，Trilium 将尝试通过缩放和优化来缩小上传的图像，这可能会影响感知的图像质量。如果未选中，则将以不进行更改的方式上传图像。"
     }
 }
