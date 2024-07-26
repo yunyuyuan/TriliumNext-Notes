@@ -72,7 +72,7 @@
         "to_be_deleted": " (to be deleted) is referenced by relation <code>{{attrName}}</code> originating from "
     },
     "export": {
-        "export_note_title": "Export note \"{{noteTitle}}\"",
+        "export_note_title": "Export note",
         "close": "Close",
         "export_type_subtree": "this note and all of its descendants",
         "format_html": "HTML in ZIP archive - this is recommended since this preserves all the formatting.",

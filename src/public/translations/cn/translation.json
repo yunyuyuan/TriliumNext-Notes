@@ -72,7 +72,7 @@
         "to_be_deleted": "(将被删除的笔记) 被以下关系 <code>{{attrName}}</code> 引用, 来自 "
     },
     "export": {
-        "export_note_title": "导出笔记 \"{{noteTitle}}\"",
+        "export_note_title": "导出笔记",
         "close": "关闭",
         "export_type_subtree": "此笔记及其所有子笔记",
         "format_html": "HTML ZIP 归档 - 建议使用此选项，因为它保留了所有格式。",

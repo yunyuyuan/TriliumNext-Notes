@@ -33,7 +33,7 @@ const TPL = `
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">${t('export.export_note_title', { noteTitle: '<span class="export-note-title"></span>' })}</h5>
+                <h5 class="modal-title">${t('export.export_note_title')} <span class="export-note-title"></span></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="${t('export.close')}">
                     <span aria-hidden="true">&times;</span>
                 </button>
