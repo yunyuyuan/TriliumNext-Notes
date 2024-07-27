@@ -7,6 +7,7 @@ on:
       - 'feature/server_esm*'
     paths-ignore:
       - 'docs/**'
+      - 'bin/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
