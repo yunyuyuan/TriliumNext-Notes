@@ -1,16 +1,20 @@
-import log = require('./log');
-import fs = require('fs');
-import resourceDir = require('./resource_dir');
-import sql = require('./sql');
-import utils = require('./utils');
-import optionService = require('./options');
-import port = require('./port');
-import BOption = require('../becca/entities/boption');
-import TaskContext = require('./task_context');
-import migrationService = require('./migration');
-import cls = require('./cls');
-import config = require('./config');
+import log from "./log.js";
+import fs from "fs";
+import resourceDir from "./resource_dir.js";
+import sql from "./sql.js";
+import utils from "./utils.js";
+import optionService from "./options.js";
+import port from "./port.js";
+import BOption from "../becca/entities/boption.js";
+import TaskContext from "./task_context.js";
+import migrationService from "./migration.js";
+import cls from "./cls.js";
+import config from "./config.js";
 import { OptionRow } from '../becca/entities/rows';
+import optionsInitService from "./options_init.js";
+import BNote from "../becca/entities/bnote.js";
+import BBranch from "../becca/entities/bbranch.js";
+import zipImportService from "./import/zip.js";
 
 const dbReady = utils.deferred<void>();
 
@@ -54,7 +58,7 @@ async function createInitialDatabase() {
     const schema = fs.readFileSync(`${resourceDir.DB_INIT_DIR}/schema.sql`, "utf-8");
     const demoFile = fs.readFileSync(`${resourceDir.DB_INIT_DIR}/demo.zip`);
 
-    let rootNote;
+    let rootNote!: BNote;
 
     sql.transactional(() => {
         log.info("Creating database schema ...");
@@ -62,9 +66,6 @@ async function createInitialDatabase() {
         sql.executeScript(schema);
 
         require('../becca/becca_loader').load();
-
-        const BNote = require('../becca/entities/bnote');
-        const BBranch = require('../becca/entities/bbranch');
 
         log.info("Creating root note ...");
 
@@ -84,8 +85,6 @@ async function createInitialDatabase() {
             notePosition: 10
         }).save();
 
-        const optionsInitService = require('./options_init');
-
         optionsInitService.initDocumentOptions();
         optionsInitService.initNotSyncedOptions(true, {});
         optionsInitService.initStartupOptions();
@@ -96,7 +95,6 @@ async function createInitialDatabase() {
 
     const dummyTaskContext = new TaskContext("no-progress-reporting", 'import', false);
 
-    const zipImportService = require('./import/zip');
     await zipImportService.importZip(dummyTaskContext, demoFile, rootNote);
 
     sql.transactional(() => {
@@ -106,7 +104,6 @@ async function createInitialDatabase() {
 
         const startNoteId = sql.getValue("SELECT noteId FROM branches WHERE parentNoteId = 'root' AND isDeleted = 0 ORDER BY notePosition");
 
-        const optionService = require('./options');
         optionService.setOption('openNoteContexts', JSON.stringify([
             {
                 notePath: startNoteId,
@@ -184,7 +181,7 @@ function getDbSize() {
 
 log.info(`DB size: ${getDbSize()} KB`);
 
-export = {
+export default {
     dbReady,
     schemaExists,
     isDbInitialized,

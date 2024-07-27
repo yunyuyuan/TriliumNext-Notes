@@ -1,13 +1,26 @@
 #!/usr/bin/env node
+import app from "./app.js";
+import sessionParser from "./routes/session_parser.js";
+import fs from "fs";
+import http from "http";
+import https from "https";
+import config from "./services/config.js";
+import log from "./services/log.js";
+import appInfo from "./services/app_info.js";
+import ws from "./services/ws.js";
+import utils from "./services/utils.js";
+import port from "./services/port.js";
+import host from "./services/host.js";
+import semver from "semver";
 
 // setup basic error handling even before requiring dependencies, since those can produce errors as well
 
-process.on('unhandledRejection', error => {
+process.on('unhandledRejection', (error: Error) => {
     // this makes sure that stacktrace of failed promise is printed out
     console.log(error);
 
     // but also try to log it into file
-    require('./services/log').info(error);
+    log.info(error);
 });
 
 function exit() {
@@ -18,19 +31,6 @@ function exit() {
 process.on('SIGINT', exit);
 process.on('SIGTERM', exit);
 
-import app = require('./app');
-import sessionParser = require('./routes/session_parser');
-import fs = require('fs');
-import http = require('http');
-import https = require('https');
-import config = require('./services/config');
-import log = require('./services/log');
-import appInfo = require('./services/app_info');
-import ws = require('./services/ws');
-import utils = require('./services/utils');
-import port = require('./services/port');
-import host = require('./services/host');
-import semver = require('semver');
 
 if (!semver.satisfies(process.version, ">=10.5.0")) {
     console.error("Trilium only supports node.js 10.5 and later");
@@ -54,7 +54,7 @@ function startTrilium() {
      * to do a complex evaluation.
      */
     if (utils.isElectron()) {
-        require("electron").app.requestSingleInstanceLock();
+        require('electron').app.requestSingleInstanceLock();
     }
 
     log.info(JSON.stringify(appInfo, null, 2));

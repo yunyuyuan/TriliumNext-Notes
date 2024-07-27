@@ -1,16 +1,16 @@
 "use strict";
 
-import BNote = require("../../becca/entities/bnote");
-import TaskContext = require("../task_context");
+import BNote from "../../becca/entities/bnote.js";
+import TaskContext from "../task_context.js";
 
-import noteService = require('../../services/notes');
-import imageService = require('../../services/image');
-import protectedSessionService = require('../protected_session');
-import markdownService = require('./markdown');
-import mimeService = require('./mime');
-import utils = require('../../services/utils');
-import importUtils = require('./utils');
-import htmlSanitizer = require('../html_sanitizer');
+import noteService from "../../services/notes.js";
+import imageService from "../../services/image.js";
+import protectedSessionService from "../protected_session.js";
+import markdownService from "./markdown.js";
+import mimeService from "./mime.js";
+import utils from "../../services/utils.js";
+import importUtils from "./utils.js";
+import htmlSanitizer from "../html_sanitizer.js";
 import { File } from "./common";
 
 function importSingleFile(taskContext: TaskContext, file: File, parentNote: BNote) {
@@ -191,7 +191,7 @@ function importAttachment(taskContext: TaskContext, file: File, parentNote: BNot
     }
 }
 
-export = {
+export default {
     importSingleFile,
     importAttachment
 };

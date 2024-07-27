@@ -1,7 +1,7 @@
 "use strict";
 
-import log = require('./log');
-import dataEncryptionService = require('./encryption/data_encryption');
+import log from "./log.js";
+import dataEncryptionService from "./encryption/data_encryption.js";
 
 let dataKey: Buffer | null = null;
 
@@ -70,7 +70,7 @@ function checkProtectedSessionExpiration() {
     }
 }
 
-export = {
+export default {
     setDataKey,
     resetDataKey,
     isProtectedSessionAvailable,

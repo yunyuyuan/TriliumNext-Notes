@@ -1,8 +1,8 @@
-import log = require('./log');
-import path = require('path');
-import fs = require('fs');
+import log from "./log.js";
+import path from "path";
+import fs from "fs";
 
-const RESOURCE_DIR = path.resolve(__dirname, "../..");
+export const RESOURCE_DIR = path.resolve(__dirname, "../..");
 
 // where the "trilium" executable is
 const ELECTRON_APP_ROOT_DIR = path.resolve(RESOURCE_DIR, "../..");
@@ -20,7 +20,7 @@ if (!fs.existsSync(MIGRATIONS_DIR)) {
     process.exit(1);
 }
 
-export = {
+export default {
     RESOURCE_DIR,
     MIGRATIONS_DIR,
     DB_INIT_DIR,

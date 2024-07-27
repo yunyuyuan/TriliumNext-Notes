@@ -1,6 +1,6 @@
 "use strict";
 
-import hoistedNoteService = require('../hoisted_note');
+import hoistedNoteService from "../hoisted_note.js";
 import { SearchParams } from './services/types';
 
 class SearchContext {
@@ -68,4 +68,4 @@ class SearchContext {
     }
 }
 
-export = SearchContext;
+export default SearchContext;

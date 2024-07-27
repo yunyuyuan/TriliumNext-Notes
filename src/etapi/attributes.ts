@@ -1,8 +1,8 @@
-import becca = require('../becca/becca');
-import eu = require('./etapi_utils');
-import mappers = require('./mappers');
-import attributeService = require('../services/attributes');
-import v = require('./validators');
+import becca from "../becca/becca.js";
+import eu from "./etapi_utils.js";
+import mappers from "./mappers.js";
+import attributeService from "../services/attributes.js";
+import v from "./validators.js";
 import { Router } from 'express';
 import { AttributeRow } from '../becca/entities/rows';
 import { ValidatorMap } from './etapi-interface';
@@ -81,6 +81,6 @@ function register(router: Router) {
     });
 }
 
-export = {
+export default {
     register
 };

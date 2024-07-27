@@ -1,11 +1,11 @@
-import backupService = require('./backup');
-import sql = require('./sql');
-import fs = require('fs-extra');
-import log = require('./log');
-import utils = require('./utils');
-import resourceDir = require('./resource_dir');
-import appInfo = require('./app_info');
-import cls = require('./cls');
+import backupService from "./backup.js";
+import sql from "./sql.js";
+import fs from "fs-extra";
+import log from "./log.js";
+import utils from "./utils.js";
+import resourceDir from "./resource_dir.js";
+import appInfo from "./app_info.js";
+import cls from "./cls.js";
 
 interface MigrationInfo {
     dbVersion: number;
@@ -143,7 +143,7 @@ async function migrateIfNecessary() {
     }
 }
 
-export = {
+export default {
     migrateIfNecessary,
     isDbUpToDate
 };

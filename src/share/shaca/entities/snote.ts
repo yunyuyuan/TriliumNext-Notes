@@ -1,13 +1,13 @@
 "use strict";
 
-import sql = require('../../sql');
-import utils = require('../../../services/utils');
-import AbstractShacaEntity = require('./abstract_shaca_entity');
-import escape = require('escape-html');
+import sql from "../../sql.js";
+import utils from "../../../services/utils.js";
+import AbstractShacaEntity from "./abstract_shaca_entity.js";
+import escape from "escape-html";
 import { Blob } from '../../../services/blob-interface';
-import SAttachment = require('./sattachment');
-import SAttribute = require('./sattribute');
-import SBranch = require('./sbranch');
+import SAttachment from "./sattachment.js";
+import SAttribute from "./sattribute.js";
+import SBranch from "./sbranch.js";
 import { SNoteRow } from './rows';
 
 const LABEL = 'label';
@@ -27,7 +27,7 @@ class SNote extends AbstractShacaEntity {
     parentBranches: SBranch[];
     parents: SNote[];
     children: SNote[];
-    private ownedAttributes: SAttribute[];
+    ownedAttributes: SAttribute[];
     private __attributeCache: SAttribute[] | null;
     private __inheritableAttributeCache: SAttribute[] | null;
     targetRelations: SAttribute[];
@@ -522,4 +522,4 @@ class SNote extends AbstractShacaEntity {
     }
 }
 
-export = SNote;
+export default SNote;

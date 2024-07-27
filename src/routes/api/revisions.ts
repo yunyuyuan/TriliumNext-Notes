@@ -1,17 +1,17 @@
 "use strict";
 
-import beccaService = require('../../becca/becca_service');
-import revisionService = require('../../services/revisions');
-import utils = require('../../services/utils');
-import sql = require('../../services/sql');
-import cls = require('../../services/cls');
-import path = require('path');
-import becca = require('../../becca/becca');
-import blobService = require('../../services/blob');
-import eraseService = require("../../services/erase");
+import beccaService from "../../becca/becca_service.js";
+import revisionService from "../../services/revisions.js";
+import utils from "../../services/utils.js";
+import sql from "../../services/sql.js";
+import cls from "../../services/cls.js";
+import path from "path";
+import becca from "../../becca/becca.js";
+import blobService from "../../services/blob.js";
+import eraseService from "../../services/erase.js";
 import { Request, Response } from 'express';
-import BRevision = require('../../becca/entities/brevision');
-import BNote = require('../../becca/entities/bnote');
+import BRevision from "../../becca/entities/brevision.js";
+import BNote from "../../becca/entities/bnote.js";
 import { NotePojo } from '../../becca/becca-interface';
 
 interface NotePath {
@@ -200,7 +200,7 @@ function getNotePathData(note: BNote): NotePath | undefined {
     }
 }
 
-export = {
+export default {
     getRevisionBlob,
     getRevisions,
     getRevision,

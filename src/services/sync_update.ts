@@ -1,9 +1,9 @@
-import sql = require('./sql');
-import log = require('./log');
-import entityChangesService = require('./entity_changes');
-import eventService = require('./events');
-import entityConstructor = require('../becca/entity_constructor');
-import ws = require('./ws');
+import sql from "./sql.js";
+import log from "./log.js";
+import entityChangesService from "./entity_changes.js";
+import eventService from "./events.js";
+import entityConstructor from "../becca/entity_constructor.js";
+import ws from "./ws.js";
 import { EntityChange, EntityChangeRecord, EntityRow } from './entity_changes_interface';
 
 interface UpdateContext {
@@ -182,6 +182,6 @@ function logUpdateContext(updateContext: UpdateContext) {
     log.info(message.substr(1, message.length - 2));
 }
 
-export = {
+export default {
     updateEntities
 };

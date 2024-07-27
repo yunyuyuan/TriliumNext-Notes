@@ -4,4 +4,4 @@ import Becca from "./becca-interface";
 
 const becca = new Becca();
 
-export = becca;
+export default becca;

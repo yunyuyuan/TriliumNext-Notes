@@ -1,4 +1,4 @@
-import clsHooked = require('cls-hooked');
+import clsHooked from "cls-hooked";
 import { EntityChange } from './entity_changes_interface';
 const namespace = clsHooked.createNamespace("trilium");
 
@@ -96,7 +96,7 @@ function ignoreEntityChangeIds() {
     namespace.set('ignoreEntityChangeIds', true);
 }
 
-export = {
+export default {
     init,
     wrap,
     get,

@@ -56,4 +56,4 @@ function init(app: Application) {
     });
 }
 
-export = init;
+export default init;

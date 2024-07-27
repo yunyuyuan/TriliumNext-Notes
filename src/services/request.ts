@@ -1,9 +1,9 @@
 "use strict";
 
-import utils = require('./utils');
-import log = require('./log');
-import url = require('url');
-import syncOptions = require('./sync_options');
+import utils from "./utils.js";
+import log from "./log.js";
+import url from "url";
+import syncOptions from "./sync_options.js";
 import { ExecOpts } from './request_interface';
 
 // this service provides abstraction over node's HTTP/HTTPS and electron net.client APIs
@@ -137,7 +137,7 @@ function exec<T>(opts: ExecOpts): Promise<T> {
     });
 }
 
-function getImage(imageUrl: string) {
+function getImage(imageUrl: string): Promise<Buffer> {
     const proxyConf = syncOptions.getSyncProxy();
     const opts: ClientOpts = {
         method: 'GET',
@@ -149,7 +149,7 @@ function getImage(imageUrl: string) {
     const proxyAgent = getProxyAgent(opts);
     const parsedTargetUrl = url.parse(opts.url);
 
-    return new Promise((resolve, reject) => {
+    return new Promise<Buffer>((resolve, reject) => {
         try {
             const request = client.request({
                 method: opts.method,
@@ -181,8 +181,7 @@ function getImage(imageUrl: string) {
             });
 
             request.end(undefined);
-        }
-        catch (e: any) {
+        } catch (e: any) {
             reject(generateError(opts, e.message));
         }
     });
@@ -202,8 +201,8 @@ function getProxyAgent(opts: ClientOpts) {
     }
 
     const AgentClass = HTTP === protocol
-        ? require("http-proxy-agent").HttpProxyAgent
-        : require("https-proxy-agent").HttpsProxyAgent;
+        ? require('http-proxy-agent').HttpProxyAgent
+        : require('https-proxy-agent').HttpsProxyAgent;
 
     return new AgentClass(opts.proxy);
 }
@@ -233,7 +232,7 @@ function generateError(opts: {
     return new Error(`Request to ${opts.method} ${opts.url} failed, error: ${message}`);
 }
 
-export = {
+export default {
     exec,
     getImage
 };

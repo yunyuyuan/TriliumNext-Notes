@@ -1,11 +1,11 @@
-import express = require('express');
-import path = require('path');
-import favicon = require('serve-favicon');
-import cookieParser = require('cookie-parser');
-import helmet = require('helmet');
-import compression = require('compression');
-import sessionParser = require('./routes/session_parser');
-import utils = require('./services/utils');
+import express from "express";
+import path from "path";
+import favicon from "serve-favicon";
+import cookieParser from "cookie-parser";
+import helmet from "helmet";
+import compression from "compression";
+import sessionParser from "./routes/session_parser.js";
+import utils from "./services/utils.js";
 
 require('./services/handlers');
 require('./becca/becca_loader');
@@ -20,7 +20,7 @@ if (!utils.isElectron()) {
     app.use(compression()); // HTTP compression
 }
 
-app.use(helmet.default({
+app.use(helmet({
     hidePoweredBy: false, // errors out in electron
     contentSecurityPolicy: false,
     crossOriginEmbedderPolicy: false
@@ -57,4 +57,4 @@ if (utils.isElectron()) {
     require('@electron/remote/main').initialize();
 }
 
-export = app;
+export default app;

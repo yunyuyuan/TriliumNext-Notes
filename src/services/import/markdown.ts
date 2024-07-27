@@ -1,8 +1,8 @@
 "use strict";
 
-import marked = require("marked");
-import htmlSanitizer = require('../html_sanitizer');
-import importUtils = require('./utils');
+import marked from "marked";
+import htmlSanitizer from "../html_sanitizer.js";
+import importUtils from "./utils.js";
 
 function renderToHtml(content: string, title: string) {
     const html = marked.parse(content, {
@@ -12,6 +12,6 @@ function renderToHtml(content: string, title: string) {
     return htmlSanitizer.sanitize(h1Handled);
 }
 
-export = {
+export default {
     renderToHtml
 };

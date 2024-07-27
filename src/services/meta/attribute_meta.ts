@@ -9,4 +9,4 @@ interface AttributeMeta {
     position?: number;
 }
 
-export = AttributeMeta;
+export default AttributeMeta;

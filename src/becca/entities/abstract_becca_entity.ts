@@ -1,14 +1,14 @@
 "use strict";
 
-import utils = require('../../services/utils');
-import sql = require('../../services/sql');
-import entityChangesService = require('../../services/entity_changes');
-import eventService = require('../../services/events');
-import dateUtils = require('../../services/date_utils');
-import cls = require('../../services/cls');
-import log = require('../../services/log');
-import protectedSessionService = require('../../services/protected_session');
-import blobService = require('../../services/blob');
+import utils from "../../services/utils.js";
+import sql from "../../services/sql.js";
+import entityChangesService from "../../services/entity_changes.js";
+import eventService from "../../services/events.js";
+import dateUtils from "../../services/date_utils.js";
+import cls from "../../services/cls.js";
+import log from "../../services/log.js";
+import protectedSessionService from "../../services/protected_session.js";
+import blobService from "../../services/blob.js";
 import Becca, { ConstructorData } from '../becca-interface';
 
 let becca: Becca;
@@ -327,4 +327,4 @@ abstract class AbstractBeccaEntity<T extends AbstractBeccaEntity<T>> {
     }
 }
 
-export = AbstractBeccaEntity;
+export default AbstractBeccaEntity;
