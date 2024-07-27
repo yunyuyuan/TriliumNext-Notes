@@ -20,25 +20,49 @@
     
     
     
-    <title>i18n-ally</title>
+    <title>Note types</title>
 </head>
-<body data-note-id="KRC2O84LekPz" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="VbDoDdiHEemi" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="hkrBX8KE1HQl.html"
-                           class="type-text">Internationalisation / Translations</a>
+                parent: <a href="B8hxg4e66cVL.html"
+                           class="type-text">Development and architecture</a>
             </nav>
         
 
-        <h1 id="title">i18n-ally</h1>
+        <h1 id="title">Note types</h1>
 
         
 
         
             <div id="content" class="type-text ck-content">
-                <p><a href="https://github.com/lokalise/i18n-ally"><code>i18n-ally</code></a> is a VS Code extension that aids in internationalization.</p><p>It is currently integrated in the project and offers features such as:</p><ul><li>Highlight, autocomplete translations.</li><li>Display translations inline.</li><li>Extract messages into translation.</li></ul><h3>Extracting messages into translation</h3><ol><li>Open any .js file and select an untranslated string inside a template (<code>TPL</code>).</li><li>Press Ctrl+P and look for “i18n Ally: Extract text into i18n messages”</li><li>Select the first template.</li><li>Select the path of translation, taking into consideration the&nbsp;<a class="reference-link type-text" href="Z9N9OKBXXLFW.html">Guidelines</a>&nbsp;(e.g. <code>jump_to_note.search-for-note-by-its-name</code>).</li></ol>
+                <p>The note type is defined by the <code>type</code> column in&nbsp;<a class="reference-link type-text" href="kAfgZERKtVhU.html">notes</a>.</p><p>Possible types:</p><figure class="table" style="width:100%;"><table class="ck-table-resized"><colgroup><col style="width:9.01%;"><col style="width:10.33%;"><col style="width:29.72%;"><col style="width:23.85%;"><col style="width:27.09%;"></colgroup><thead><tr><th>Note Type</th><th><code>type</code> value</th><th>Corresponding MIME type</th><th>Content of the note's blob</th><th>Relevant attributes</th></tr></thead><tbody><tr><th>Text</th><td><code>text</code></td><td>&nbsp;</td><td>The HTML of the note.</td><td>&nbsp;</td></tr><tr><th><a href="https://github.com/zadam/trilium/wiki/Relation-map">Relation Map&nbsp;</a></th><td><code>relationMap</code></td><td><code>application/json</code></td><td><p>A JSON describing the note:</p><pre><code class="language-text-plain">{
+    "notes": [
+        {
+            "noteId": "gFQDL11KEm9G",
+            "x": 142,
+            "y": 405
+        },
+        {
+            "noteId": "8GcjEKyrrCgl",
+            "x": 100.10406374385552,
+            "y": 757.0364424520196
+        }
+    ],
+    "transform": {
+        "scale": 0.3,
+        "x": 480.29766098682165,
+        "y": 116.83892021963081
+    }
+}</code></pre></td><td>None</td></tr><tr><th><a href="https://github.com/zadam/trilium/wiki/Scripts">Render Note</a></th><td><code>render</code></td><td><code>text/html</code> or blank.</td><td>An empty blob.</td><td><code>~renderNote</code> pointing to the HTML note to render.</td></tr><tr><th>Canvas</th><td><code>canvas</code></td><td><code>application/json</code></td><td><pre><code class="language-text-plain">{
+	"appState": {},
+	"elemenets": {},
+	"files": {},
+	"type": "excalidraw",
+	"version": 2
+}</code></pre></td><td>None</td></tr><tr><th>Mermaid Diagram</th><td><code>mermaid</code></td><td><code>text/mermaid</code> or <code>text/plain</code></td><td>The plain text content of the Mermaid diagram.</td><td>None</td></tr><tr><th>Book</th><td><code>book</code></td><td><code>text/html</code> or blank.</td><td>An empty blob.</td><td><ul><li><code>#viewType</code> which can be either <code>grid</code> or <code>list</code>.</li><li><code>#expanded</code></li></ul><p>both options are shown to the user via the “Book Properties” ribbon widget.</p></td></tr><tr><th>Web View</th><td><code>webView</code></td><td>blank</td><td>An empty blob.</td><td><code>#webViewSrc</code> pointing to an URL to render.</td></tr><tr><th>Code</th><td><code>code</code></td><td>Depends on the language (e.g. <code>text/plain</code>, <code>text/x-markdown</code>, <code>text/x-c++src</code>).</td><td>The plain text content.</td><td>&nbsp;</td></tr></tbody></table></figure>
             </div>
         
 
@@ -337,7 +361,7 @@
     
 
     
-    <strong>i18n-ally</strong>
+    <a class="type-text" href="KRC2O84LekPz.html">i18n-ally</a>
     
 </p>
 
@@ -672,7 +696,7 @@
     
 
     
-    <a class="type-text" href="VbDoDdiHEemi.html">Note types</a>
+    <strong>Note types</strong>
     
 </p>
 

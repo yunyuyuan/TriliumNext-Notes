@@ -20,28 +20,61 @@
     
     
     
-    <title>i18n-ally</title>
+    <title>Widgets</title>
 </head>
-<body data-note-id="KRC2O84LekPz" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="1pOWnHdGAuWR" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="hkrBX8KE1HQl.html"
-                           class="type-text">Internationalisation / Translations</a>
+                parent: <a href="3eTu21fjtZkj.html"
+                           class="type-text">Scripting</a>
             </nav>
         
 
-        <h1 id="title">i18n-ally</h1>
+        <h1 id="title">Widgets</h1>
 
         
 
         
             <div id="content" class="type-text ck-content">
-                <p><a href="https://github.com/lokalise/i18n-ally"><code>i18n-ally</code></a> is a VS Code extension that aids in internationalization.</p><p>It is currently integrated in the project and offers features such as:</p><ul><li>Highlight, autocomplete translations.</li><li>Display translations inline.</li><li>Extract messages into translation.</li></ul><h3>Extracting messages into translation</h3><ol><li>Open any .js file and select an untranslated string inside a template (<code>TPL</code>).</li><li>Press Ctrl+P and look for “i18n Ally: Extract text into i18n messages”</li><li>Select the first template.</li><li>Select the path of translation, taking into consideration the&nbsp;<a class="reference-link type-text" href="Z9N9OKBXXLFW.html">Guidelines</a>&nbsp;(e.g. <code>jump_to_note.search-for-note-by-its-name</code>).</li></ol>
+                <p>To create a basic widget, simply create a code note with type “JS frontend”. Add the <code>#widget</code> label in order for it to be loaded at startup.</p><pre><code class="language-text-plain">const template = `&lt;div id="my-widget"&gt;&lt;button&gt;Click Me!&lt;/button&gt;&lt;/div&gt;`;
+
+class MyWidget extends api.BasicWidget {
+    get position() { return 1; }
+    get parentWidget() { return "left-pane" }
+    
+    doRender() {
+        this.$widget = $(template);
+        return this.$widget;
+    }
+}
+
+module.exports = new MyWidget();</code></pre><p><code>parentWidget()</code> can be given the following values:</p><ul><li><code>left-pane</code> - This renders the widget on the left side of the screen where the note tree lives.</li><li><code>center-pane</code> - This renders the widget in the center of the layout in the same location that notes and splits appear.</li><li><code>note-detail-pane</code> - This renders the widget <i>with</i> the note in the center pane. This means it can appear multiple times with splits.</li><li><code>right-pane</code> - This renders the widget to the right of any opened notes.</li></ul><hr><p>Reference:</p><ul><li><a href="https://trilium.rocks/X7pxYpiu0lgU">https://trilium.rocks/X7pxYpiu0lgU</a>&nbsp;</li><li><a href="https://github.com/zadam/trilium/wiki/Widget-Basics">https://github.com/zadam/trilium/wiki/Widget-Basics</a>&nbsp;</li><li><a href="https://github.com/zadam/trilium/wiki/Frontend-Basics">https://github.com/zadam/trilium/wiki/Frontend-Basics</a>&nbsp;</li></ul>
             </div>
         
 
+        
+            <nav id="childLinks" class="list">
+                
+                    <hr>
+                    <span>Child notes: </span>
+                
+
+                <ul>
+                    
+                        <li>
+                            <a href="8jWguCtuKsAt.html" 
+                               class="type-text">Right pane widget</a>
+                        </li>
+                    
+                        <li>
+                            <a href="4FXLAtcPhZFo.html" 
+                               class="type-text">CSS</a>
+                        </li>
+                    
+                </ul>
+            </nav>
         
     </div>
 
@@ -337,7 +370,7 @@
     
 
     
-    <strong>i18n-ally</strong>
+    <a class="type-text" href="KRC2O84LekPz.html">i18n-ally</a>
     
 </p>
 
@@ -718,7 +751,7 @@
     
 
     
-    <a class="type-text" href="1pOWnHdGAuWR.html">Widgets</a>
+    <strong>Widgets</strong>
     
 </p>
 

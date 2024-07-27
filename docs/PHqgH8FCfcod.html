@@ -37,9 +37,11 @@
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <p>Development notes are published on <a href="https://triliumnext.github.io/Notes">triliumnext.github.io/Notes</a> by the CI using GitHub Pages.</p><p>The GitHub Pages deployment works by taking the files from the Notes repository, in the <code>docs</code> directory.</p><h2>How it works</h2><p>There is a script that uses <code>wget</code> to download all the files from a share, that means:</p><ol><li>You must have a local instance of Trilium Notes server.</li><li>You must have the documentation imported, up to date and shared.</li></ol><p>Note that currently the documentation source file is not distributed (the note export), until a way is found to automate this process. Contact <code>eliandoran</code> should you require to obtain a copy of the documentation.</p><h2>Setting up <code>.env</code> file</h2><p>Go to <code>bin/docs</code> and copy <code>.env.example</code> to <code>.env</code> and edit it:</p><ol><li>Change the <code>SHARE_PROTOCOL</code> to either <code>http</code> or <code>https</code> depending on your setup.</li><li>Change <code>SHARE_HOST</code> to match the domain name or the URL to the host (without the protocol or any slashes).</li></ol><p>Generally <code>ROOT_NOTE_ID</code> should not be changed since the note ID must match if the files were imported correctly.</p><h2>Triggering a build</h2><p>Run:</p><pre><code class="language-text-plain">./bin/docs/prepare.sh</code></pre><p>This will attempt to download all the notes from the share URL and put them in <code>docs</code>, rewritten for GitHub Pages.</p><p>Commit the results and follow the normal development process to push them.</p>
+            </div>
         
-            <p>This note has no content.</p>
+
         
     </div>
 
@@ -329,6 +331,20 @@
 
         </li>
     
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="KRC2O84LekPz.html">i18n-ally</a>
+    
+</p>
+
+
+
+        </li>
+    
 </ul>
 
 
@@ -408,18 +424,13 @@
 
         </li>
     
-</ul>
-
-
-        </li>
-    
         <li>
             
 <p>
     
 
     
-    <a class="type-text" href="oXLcQUniOWvl.html">Environment Setup</a>
+    <a class="type-text" href="zCDxk5VFdsqg.html">Database</a>
     
 </p>
 
@@ -432,10 +443,317 @@
     
 
     
-    <a class="type-text" href="KRC2O84LekPz.html">i18n-ally</a>
+    <a class="type-text" href="wCxCJB3hhojs.html">attachments</a>
     
 </p>
 
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="wxCwZ1P2SGCx.html">attributes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="6x42mhlfLo0o.html">blobs</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="Vy1PbjSkUast.html">branches</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="inGKXCChkVYX.html">entity_changes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="y2ido6E6tZ0V.html">etapi_tokens</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="kAfgZERKtVhU.html">notes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="FSZoX3cJlJE7.html">options</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="bzQfhyzDo3Xz.html">recent_notes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="QYMncZf5Bu3D.html">revisions</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="KbwD5mDpD4CV.html">Protected entities</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="IuxV242YGaN5.html">Deleted notes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="FJ4VR6G2M6VD.html">Special notes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="1l1f6WZbaBEZ.html">Branch prefixes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="QSkfVssHIngA.html">Revisions</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="cemIoFLfEGPO.html">Backlinks</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="VbDoDdiHEemi.html">Note types</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="UDBwK5Fhr2CT.html">Safe mode</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="3eTu21fjtZkj.html">Scripting</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="1pOWnHdGAuWR.html">Widgets</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="8jWguCtuKsAt.html">Right pane widget</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="4FXLAtcPhZFo.html">CSS</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
 
 
         </li>

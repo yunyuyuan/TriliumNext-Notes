@@ -20,25 +20,47 @@
     
     
     
-    <title>i18n-ally</title>
+    <title>Right pane widget</title>
 </head>
-<body data-note-id="KRC2O84LekPz" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="8jWguCtuKsAt" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="hkrBX8KE1HQl.html"
-                           class="type-text">Internationalisation / Translations</a>
+                parent: <a href="1pOWnHdGAuWR.html"
+                           class="type-text">Widgets</a>
             </nav>
         
 
-        <h1 id="title">i18n-ally</h1>
+        <h1 id="title">Right pane widget</h1>
 
         
 
         
             <div id="content" class="type-text ck-content">
-                <p><a href="https://github.com/lokalise/i18n-ally"><code>i18n-ally</code></a> is a VS Code extension that aids in internationalization.</p><p>It is currently integrated in the project and offers features such as:</p><ul><li>Highlight, autocomplete translations.</li><li>Display translations inline.</li><li>Extract messages into translation.</li></ul><h3>Extracting messages into translation</h3><ol><li>Open any .js file and select an untranslated string inside a template (<code>TPL</code>).</li><li>Press Ctrl+P and look for “i18n Ally: Extract text into i18n messages”</li><li>Select the first template.</li><li>Select the path of translation, taking into consideration the&nbsp;<a class="reference-link type-text" href="Z9N9OKBXXLFW.html">Guidelines</a>&nbsp;(e.g. <code>jump_to_note.search-for-note-by-its-name</code>).</li></ol>
+                <ul><li><code>doRender</code> must not be overridden, instead <code>doRenderBody()</code> has to be overridden.</li><li><code>parentWidget()</code> must be set to <code>“rightPane”</code>.</li><li><code>widgetTitle()</code> getter can optionally be overriden, otherwise the widget will be displayed as “Untitled widget”.</li></ul><pre><code class="language-text-plain">const template = `&lt;div&gt;Hi&lt;/div&gt;`;
+
+class ToDoListWidget extends api.RightPanelWidget {
+    
+    get widgetTitle() {
+        return "Title goes here";
+    }
+        
+    get parentWidget() { return "right-pane" }
+    
+    doRenderBody() {
+        this.$body.empty().append($(template));
+    }   
+    
+    async refreshWithNote(note) {
+        this.toggleInt(false);                
+        this.triggerCommand("reEvaluateRightPaneVisibility");
+        this.toggleInt(true);
+        this.triggerCommand("reEvaluateRightPaneVisibility");
+    }
+}
+
+module.exports = new ToDoListWidget();</code></pre><p>The implementation is in <code>src/public/app/widgets/right_panel_widget.js</code>.</p>
             </div>
         
 
@@ -337,7 +359,7 @@
     
 
     
-    <strong>i18n-ally</strong>
+    <a class="type-text" href="KRC2O84LekPz.html">i18n-ally</a>
     
 </p>
 
@@ -731,7 +753,7 @@
     
 
     
-    <a class="type-text" href="8jWguCtuKsAt.html">Right pane widget</a>
+    <strong>Right pane widget</strong>
     
 </p>
 
