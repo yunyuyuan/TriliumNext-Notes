@@ -1,13 +1,13 @@
 "use strict";
 
-import imageService = require('../../services/image');
-import becca = require('../../becca/becca');
-const RESOURCE_DIR = require('../../services/resource_dir').RESOURCE_DIR;
-import fs = require('fs');
+import imageService from "../../services/image.js";
+import becca from "../../becca/becca.js";
+import fs from "fs";
 import { Request, Response } from 'express';
-import BNote = require('../../becca/entities/bnote');
-import BRevision = require('../../becca/entities/brevision');
-import { AppRequest } from '../route-interface';
+import BNote from "../../becca/entities/bnote.js";
+import BRevision from "../../becca/entities/brevision.js";
+import { AppRequest } from '../route-interface.js';
+import { RESOURCE_DIR } from "../../services/resource_dir.js";
 
 function returnImageFromNote(req: Request, res: Response) {
     const image = becca.getNote(req.params.noteId);
@@ -112,7 +112,7 @@ function updateImage(req: AppRequest) {
     return { uploaded: true };
 }
 
-export = {
+export default {
     returnImageFromNote,
     returnImageFromRevision,
     returnAttachedImage,

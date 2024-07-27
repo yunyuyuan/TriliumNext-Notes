@@ -1,16 +1,16 @@
 "use strict";
 
-import { NoteRow } from "../../../becca/entities/rows";
-import SearchContext = require("../search_context");
+import { NoteRow } from "../../../becca/entities/rows.js";
+import SearchContext from "../search_context.js";
 
-import Expression = require('./expression');
-import NoteSet = require('../note_set');
-import log = require('../../log');
-import becca = require('../../../becca/becca');
-import protectedSessionService = require('../../protected_session');
-import striptags = require('striptags');
-import utils = require('../../utils');
-import sql = require("../../sql");
+import Expression from "./expression.js";
+import NoteSet from "../note_set.js";
+import log from "../../log.js";
+import becca from "../../../becca/becca.js";
+import protectedSessionService from "../../protected_session.js";
+import striptags from "striptags";
+import utils from "../../utils.js";
+import sql from "../../sql.js";
 
 const ALLOWED_OPERATORS = ['=', '!=', '*=*', '*=', '=*', '%='];
 
@@ -155,4 +155,4 @@ class NoteContentFulltextExp extends Expression {
     }
 }
 
-export = NoteContentFulltextExp;
+export default NoteContentFulltextExp;
