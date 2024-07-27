@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
 
-if [ ! -f .env ]; then
+script_dir=$(realpath $(dirname $0))
+
+cd "$script_dir"
+
+env_file="$script_dir/.env"
+
+if [ ! -f "$env_file" ]; then
     echo "Missing .env file, cannot proceed."
     exit 1
 fi
 
-script_dir=$(realpath $(dirname $0))
-output_dir="$script_dir/../docs"
+output_dir="$script_dir/../../docs"
 mkdir -p "$output_dir"
 rm -f "$output_dir"/*
 rm -rf "$output_dir"/{assets,share}
 
-source ./.env
+source "$env_file"
 
 # Download everything in output/notes.example.com/share/...
 share_url="$SHARE_PROTOCOL://$SHARE_HOST/share/$ROOT_NOTE_ID"
@@ -30,5 +35,5 @@ sed -i "s/{{ROOT_NOTE_ID}}/$ROOT_NOTE_ID/g" "$index_dest_path"
 sed -i "s/<link href=\"\\.\\./<link href=\"\\./g" "$output_dir/share"/*.html
 sed -i "s/<script src=\"\\.\\./<script src=\"\\./g" "$output_dir/share"/*.html
 sed -i "s/rel=\"shortcut icon\" href=\"\\.\\./rel=\"shortcut icon\" href=\"\\./g" "$output_dir/share"/*.html
-mv "$output_dir/share"/* "$output_dir"
-rmdir "$output_dir/share"
+cp -r "$output_dir/share"/* "$output_dir"
+rm -r "$output_dir/share"
