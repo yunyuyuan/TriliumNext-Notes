@@ -20,42 +20,28 @@
     
     
     
-    <title>Dependency Management</title>
+    <title>Releasing a version</title>
 </head>
-<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="biDJ9KgbWLgt" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="4yYHqKbLovVX.html"
-                           class="type-text">Developer&#39;s Guide</a>
+                parent: <a href="ZlxZh8NH5frM.html"
+                           class="type-text">Building and deployment</a>
             </nav>
         
 
-        <h1 id="title">Dependency Management</h1>
+        <h1 id="title">Releasing a version</h1>
 
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <p>On NixOS:</p><pre><code class="language-text-plain">nix-shell -p dpkg fakeroot jq nodejs_20</code></pre><p>Then simply run from project root:</p><pre><code class="language-text-plain">./bin/release.sh 1.2.3</code></pre><p>where <code>1.2.3</code> is the desired release version.</p><p>If a version ends with <code>-beta</code>, it will automatically be marked as pre-release in GitHub.</p><p>This will automatically generate a release in GitHub if everything goes according to plan.</p><p>Note that the Windows installer is not automatically uploaded yet, it has to be taken from the <a href="BhE2WFknKKHG.html" class="type-text">main workflow of the CI from the <code>develop</code> branch</a>.</p><p>Make sure to check test the artifacts of the release.</p>
+            </div>
         
-            <nav id="childLinks" class="grid">
-                
 
-                <ul>
-                    
-                        <li>
-                            <a href="QXCi6Y1SYulw.html" 
-                               class="type-text">Adding a new client library</a>
-                        </li>
-                    
-                        <li>
-                            <a href="C09Dou56ffMe.html" 
-                               class="type-text">Having a simpler packaging system</a>
-                        </li>
-                    
-                </ul>
-            </nav>
         
     </div>
 
@@ -81,7 +67,7 @@
     
 
     
-    <strong>Dependency Management</strong>
+    <a class="type-text" href="VS22Hq5PBFNf.html">Dependency Management</a>
     
 </p>
 
@@ -182,7 +168,7 @@
     
 
     
-    <a class="type-text" href="biDJ9KgbWLgt.html">Releasing a version</a>
+    <strong>Releasing a version</strong>
     
 </p>
 

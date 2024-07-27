@@ -20,42 +20,28 @@
     
     
     
-    <title>Dependency Management</title>
+    <title>Main</title>
 </head>
-<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="BhE2WFknKKHG" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="4yYHqKbLovVX.html"
-                           class="type-text">Developer&#39;s Guide</a>
+                parent: <a href="rU1hxvgqlA9x.html"
+                           class="type-text">CI</a>
             </nav>
         
 
-        <h1 id="title">Dependency Management</h1>
+        <h1 id="title">Main</h1>
 
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <p>The main workflow of the CI:</p><ul><li>Builds the Docker image and publishes in the GitHub Docker registry.</li><li>Builds using a portion of the <a href="UTB518X6X9Uh.html" class="type-text">delivery script</a> artifacts for the following platforms:<ul><li>Windows <code>x86_64</code> as .zip file</li><li>Windows <code>x86_64</code> installer (using Squirrel)</li><li>macOS <code>x86_64</code> and <code>aarch64</code>.</li><li>Linux <code>x86_64</code></li><li>Linux server <code>x86_64</code>.</li></ul></li></ul><p>The main workflow of the CI runs on <code>develop</code> branches as well as any branch that starts with <code>feature/update_</code>.</p><h2>Downloading the artifacts from the main branch</h2><p>Simply go to the <a href="https://github.com/TriliumNext/Notes"><code>develop</code> branch on GitHub</a> and look at the commit bar:</p><figure class="image"><img style="aspect-ratio:896/59;" src="api/attachments/XEUUvzBxh89z/image/image.png" width="896" height="59"></figure><p>Press the green checkmark (or red cross if something went bad). Then look at the list of jobs and their status:</p><figure class="image"><img style="aspect-ratio:616/445;" src="api/attachments/27Z989bSFWAc/image/image.png" width="616" height="445"></figure><p>Then look for any of the entires that starts with “Main” and press the “Details” link next to it. It doesn't really matter which platform you'll choose as the artifacts are available on the same page.</p><p>&nbsp;</p>
+            </div>
         
-            <nav id="childLinks" class="grid">
-                
 
-                <ul>
-                    
-                        <li>
-                            <a href="QXCi6Y1SYulw.html" 
-                               class="type-text">Adding a new client library</a>
-                        </li>
-                    
-                        <li>
-                            <a href="C09Dou56ffMe.html" 
-                               class="type-text">Having a simpler packaging system</a>
-                        </li>
-                    
-                </ul>
-            </nav>
         
     </div>
 
@@ -81,7 +67,7 @@
     
 
     
-    <strong>Dependency Management</strong>
+    <a class="type-text" href="VS22Hq5PBFNf.html">Dependency Management</a>
     
 </p>
 
@@ -209,7 +195,7 @@
     
 
     
-    <a class="type-text" href="BhE2WFknKKHG.html">Main</a>
+    <strong>Main</strong>
     
 </p>
 

@@ -20,42 +20,28 @@
     
     
     
-    <title>Dependency Management</title>
+    <title>Content hashing</title>
 </head>
-<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="d3dnvVOhur16" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="4yYHqKbLovVX.html"
-                           class="type-text">Developer&#39;s Guide</a>
+                parent: <a href="U5RtMeGPeZ29.html"
+                           class="type-text">Synchronisation</a>
             </nav>
         
 
-        <h1 id="title">Dependency Management</h1>
+        <h1 id="title">Content hashing</h1>
 
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <p>Entity hashing is done in <code>content_hash#getEntityHashes</code>.</p><ul><li>It works by looking at the <code>entity_changes</code> table and going through each of the entity names/types:<ul><li><code>blobs</code></li><li><code>attributes</code></li><li><code>revisions</code></li><li><code>attachments</code></li><li><code>notes</code></li><li><code>branches</code></li><li><code>etapi_tokens</code></li><li><code>options</code></li></ul></li><li>For some reason <code>note_reordering</code> entities are ignored specifically.</li><li>All the rows in <code>entity_changes</code> are then ordered alphabetically, based on their <code>entityId</code>.</li><li>Every entity row is then grouped by <code>entityName</code> and then by sector. The sector is defined as the first character of the <code>id</code>.</li><li>The hash is altered to add the <code>isErased</code> value as well since the hash of deleted entries is not updated.</li><li>For each sector, the hash is calculated using <code>utils.hash</code>, using SHA1 encoded as Base64.</li></ul>
+            </div>
         
-            <nav id="childLinks" class="grid">
-                
 
-                <ul>
-                    
-                        <li>
-                            <a href="QXCi6Y1SYulw.html" 
-                               class="type-text">Adding a new client library</a>
-                        </li>
-                    
-                        <li>
-                            <a href="C09Dou56ffMe.html" 
-                               class="type-text">Having a simpler packaging system</a>
-                        </li>
-                    
-                </ul>
-            </nav>
         
     </div>
 
@@ -81,7 +67,7 @@
     
 
     
-    <strong>Dependency Management</strong>
+    <a class="type-text" href="VS22Hq5PBFNf.html">Dependency Management</a>
     
 </p>
 
@@ -397,7 +383,7 @@
     
 
     
-    <a class="type-text" href="d3dnvVOhur16.html">Content hashing</a>
+    <strong>Content hashing</strong>
     
 </p>
 

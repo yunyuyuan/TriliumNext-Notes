@@ -20,42 +20,28 @@
     
     
     
-    <title>Dependency Management</title>
+    <title>Guidelines</title>
 </head>
-<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="Z9N9OKBXXLFW" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="4yYHqKbLovVX.html"
-                           class="type-text">Developer&#39;s Guide</a>
+                parent: <a href="hkrBX8KE1HQl.html"
+                           class="type-text">Internationalisation / Translations</a>
             </nav>
         
 
-        <h1 id="title">Dependency Management</h1>
+        <h1 id="title">Guidelines</h1>
 
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <ul><li>Use hierarchy whenever appropriate, try to group the messages by:<ul><li>Modals (e.g. <code>about.foo</code>, <code>jump_to_note.foo</code>)</li></ul></li><li>Don't duplicate messages that are very widely used.<ul><li>One such example is <code>aria-label="Close"</code> which should go to a single message such as <code>modal.close</code> instead of being duplicated in every modal.</li></ul></li><li>On the other hand, don't overly generalise messages. A <code>close</code> message that is used whenever the “Close” word is encountered is not a good approach since it can potentially cause issues due to lack of context.</li><li>Use <a href="https://www.i18next.com/translation-function/interpolation">variable interpolation</a> whenever appropriate.<ul><li>If you see multiple messages joined together only to apply add a variable such as a user-inputted value, try to join those messages together into a single message containing a variable.</li><li>So instead of <code>“Number of updates: “ + numUpdates + “.”</code> use <code>$(t("number_updates", { numUpdates }))</code> where the message translation would appear as <code>Number of updates: {{numUpdates}}.</code></li></ul></li></ul>
+            </div>
         
-            <nav id="childLinks" class="grid">
-                
 
-                <ul>
-                    
-                        <li>
-                            <a href="QXCi6Y1SYulw.html" 
-                               class="type-text">Adding a new client library</a>
-                        </li>
-                    
-                        <li>
-                            <a href="C09Dou56ffMe.html" 
-                               class="type-text">Having a simpler packaging system</a>
-                        </li>
-                    
-                </ul>
-            </nav>
         
     </div>
 
@@ -81,7 +67,7 @@
     
 
     
-    <strong>Dependency Management</strong>
+    <a class="type-text" href="VS22Hq5PBFNf.html">Dependency Management</a>
     
 </p>
 
@@ -337,7 +323,7 @@
     
 
     
-    <a class="type-text" href="Z9N9OKBXXLFW.html">Guidelines</a>
+    <strong>Guidelines</strong>
     
 </p>
 

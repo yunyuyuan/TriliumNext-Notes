@@ -20,42 +20,32 @@
     
     
     
-    <title>Dependency Management</title>
+    <title>Build deliveries locally</title>
 </head>
-<body data-note-id="VS22Hq5PBFNf" data-ancestor-note-id="4yYHqKbLovVX">
+<body data-note-id="UTB518X6X9Uh" data-ancestor-note-id="4yYHqKbLovVX">
 <div id="layout">
     <div id="main">
         
             <nav id="parentLink">
-                parent: <a href="4yYHqKbLovVX.html"
-                           class="type-text">Developer&#39;s Guide</a>
+                parent: <a href="ZlxZh8NH5frM.html"
+                           class="type-text">Building and deployment</a>
             </nav>
         
 
-        <h1 id="title">Dependency Management</h1>
+        <h1 id="title">Build deliveries locally</h1>
 
         
 
         
-
+            <div id="content" class="type-text ck-content">
+                <p>In the project root:</p><figure class="table"><table><thead><tr><th>Platform</th><th>Architecture</th><th>Application</th><th>Build command</th></tr></thead><tbody><tr><th rowspan="2">macOS</th><td>x86_64</td><td>Desktop / Electron app</td><td><code>./bin/build-mac-x64.sh</code></td></tr><tr><td>ARM 64</td><td>Desktop / Electron app</td><td><code>./bin/build-mac-arm64.sh</code></td></tr><tr><th rowspan="2">Linux</th><td rowspan="2">x86_64</td><td>Desktop / Electron app</td><td><code>./bin/build-linux-x64.sh</code></td></tr><tr><td>Server</td><td><code>./bin/build-server.sh</code></td></tr><tr><th>Windows</th><td>x86_64</td><td>Desktop / Electron app</td><td><code>./bin/build-win-x64.sh</code></td></tr></tbody></table></figure><p>Under NixOS the following <code>nix-shell</code> is needed:</p><pre><code class="language-text-plain">nix-shell -p jq</code></pre><p>For Linux builds:</p><pre><code class="language-text-plain">nix-shell -p jq fakeroot dpkg</code></pre><p>The resulting build will be in the <code>dist</code> directory under the project root.</p><h3>Testing the Linux builds under NixOS</h3><figure class="table"><table><thead><tr><th>Desktop client</th><th>Server</th></tr></thead><tbody><tr><td><pre><code class="language-text-plain">$ NIXPKGS_ALLOW_UNFREE=1 nix-shell -p steam-run
+[nix-shell] cd dist/trilium-linux-x64
+[nix-shell] steam-run ./trilium</code></pre></td><td><pre><code class="language-text-plain">$ NIXPKGS_ALLOW_UNFREE=1 nix-shell -p steam-run
+[nix-shell] cd dist/trilium-linux-x64-server
+[nix-shell] steam-run ./trilium.sh</code></pre></td></tr></tbody></table></figure>
+            </div>
         
-            <nav id="childLinks" class="grid">
-                
 
-                <ul>
-                    
-                        <li>
-                            <a href="QXCi6Y1SYulw.html" 
-                               class="type-text">Adding a new client library</a>
-                        </li>
-                    
-                        <li>
-                            <a href="C09Dou56ffMe.html" 
-                               class="type-text">Having a simpler packaging system</a>
-                        </li>
-                    
-                </ul>
-            </nav>
         
     </div>
 
@@ -81,7 +71,7 @@
     
 
     
-    <strong>Dependency Management</strong>
+    <a class="type-text" href="VS22Hq5PBFNf.html">Dependency Management</a>
     
 </p>
 
@@ -168,7 +158,7 @@
     
 
     
-    <a class="type-text" href="UTB518X6X9Uh.html">Build deliveries locally</a>
+    <strong>Build deliveries locally</strong>
     
 </p>
 
