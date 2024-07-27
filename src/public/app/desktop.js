@@ -8,15 +8,16 @@ import macInit from './services/mac_init.js';
 import electronContextMenu from "./menus/electron_context_menu.js";
 import DesktopLayout from "./layouts/desktop_layout.js";
 import glob from "./services/glob.js";
+import { t } from "./services/i18n.js";
 
 bundleService.getWidgetBundlesByParent().then(widgetBundles => {
     appContext.setLayout(new DesktopLayout(widgetBundles));    
     appContext.start()
         .catch((e) => {
             toastService.showPersistent({
-                title: "Critical error",
+                title: t("toast.critical-error.title"),
                 icon: "alert",
-                message: `A critical error has occurred which prevents the client application from starting:\n\n${e.message}\n\nThis is most likely caused by a script failing in an unexpected way. Try starting the application in safe mode and addressing the issue.`,
+                message: t("toast.critical-error.message", { message: e.message }),
             });
             console.error("Critical error occured", e);
         });
