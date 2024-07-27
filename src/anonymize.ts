@@ -1,6 +1,6 @@
 import anonymizationService from "./services/anonymization.js";
 import sqlInit from "./services/sql_init.js";
-await import("./becca/entity_constructor");
+await import("./becca/entity_constructor.js");
 
 sqlInit.dbReady.then(async () => {
     try {

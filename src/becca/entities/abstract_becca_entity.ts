@@ -9,7 +9,7 @@ import cls from "../../services/cls.js";
 import log from "../../services/log.js";
 import protectedSessionService from "../../services/protected_session.js";
 import blobService from "../../services/blob.js";
-import Becca, { ConstructorData } from '../becca-interface';
+import Becca, { ConstructorData } from '../becca-interface.js';
 import becca from "../becca.js";
 
 interface ContentOpts {

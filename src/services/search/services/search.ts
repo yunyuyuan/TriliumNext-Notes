@@ -13,7 +13,7 @@ import log from "../../log.js";
 import hoistedNoteService from "../../hoisted_note.js";
 import BNote from "../../../becca/entities/bnote.js";
 import BAttribute from "../../../becca/entities/battribute.js";
-import { SearchParams, TokenStructure } from "./types";
+import { SearchParams, TokenStructure } from "./types.js";
 import Expression from "../expressions/expression.js";
 import sql from "../../sql.js";
 import scriptService from "../../script.js";

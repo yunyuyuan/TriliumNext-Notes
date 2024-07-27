@@ -1,12 +1,11 @@
 import sql from "./sql.js";
-import revisionService from "./revisions.js";
 import log from "./log.js";
 import entityChangesService from "./entity_changes.js";
 import optionService from "./options.js";
 import dateUtils from "./date_utils.js";
 import sqlInit from "./sql_init.js";
 import cls from "./cls.js";
-import { EntityChange } from "./entity_changes_interface";
+import { EntityChange } from "./entity_changes_interface.js";
 
 function eraseNotes(noteIdsToErase: string[]) {
     if (noteIdsToErase.length === 0) {

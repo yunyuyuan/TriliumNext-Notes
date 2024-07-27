@@ -70,7 +70,7 @@ import etapiNoteRoutes from "../etapi/notes.js";
 import etapiSpecialNoteRoutes from "../etapi/special_notes.js";
 import etapiSpecRoute from "../etapi/spec.js";
 import etapiBackupRoute from "../etapi/backup.js";
-import { AppRequest, AppRequestHandler } from './route-interface';
+import { AppRequest, AppRequestHandler } from './route-interface.js';
 
 const csrfMiddleware = csurf({
     cookie: {

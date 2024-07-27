@@ -1,5 +1,5 @@
-import shaca from "../shaca";
-import Shaca from "../shaca-interface";
+import shaca from "../shaca.js";
+import Shaca from "../shaca-interface.js";
 
 class AbstractShacaEntity {
     get shaca(): Shaca {

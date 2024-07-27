@@ -1,4 +1,4 @@
-import log from "./log";
+import log from "./log.js";
 
 const NOTE_TITLE_CHANGED = "NOTE_TITLE_CHANGED";
 const ENTER_PROTECTED_SESSION = "ENTER_PROTECTED_SESSION";

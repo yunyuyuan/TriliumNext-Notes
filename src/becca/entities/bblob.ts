@@ -1,5 +1,5 @@
 import AbstractBeccaEntity from "./abstract_becca_entity.js";
-import { BlobRow } from "./rows";
+import { BlobRow } from "./rows.js";
 
 // TODO: Why this does not extend the abstract becca?
 class BBlob extends AbstractBeccaEntity<BBlob> {
@@ -7,11 +7,8 @@ class BBlob extends AbstractBeccaEntity<BBlob> {
     static get primaryKeyName() { return "blobId"; }
     static get hashedProperties() { return ["blobId", "content"]; }
 
-    blobId!: string;
     content!: string | Buffer;
     contentLength!: number;
-    dateModified!: string;
-    utcDateModified!: string;
 
     constructor(row: BlobRow) {
         super();

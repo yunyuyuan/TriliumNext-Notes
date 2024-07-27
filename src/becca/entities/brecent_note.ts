@@ -1,6 +1,6 @@
 "use strict";
 
-import { RecentNoteRow } from "./rows";
+import { RecentNoteRow } from "./rows.js";
 
 import dateUtils from "../../services/date_utils.js";
 import AbstractBeccaEntity from "./abstract_becca_entity.js";
@@ -15,7 +15,6 @@ class BRecentNote extends AbstractBeccaEntity<BRecentNote> {
 
     noteId!: string;
     notePath!: string;
-    utcDateCreated!: string;
 
     constructor(row: RecentNoteRow) {
         super();

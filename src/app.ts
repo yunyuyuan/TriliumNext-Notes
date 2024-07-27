@@ -15,8 +15,8 @@ import error_handlers from "./routes/error_handlers.js";
 import { startScheduledCleanup } from "./services/erase.js";
 import sql_init from "./services/sql_init.js";
 
-await import('./services/handlers');
-await import('./becca/becca_loader');
+await import('./services/handlers.js');
+await import('./becca/becca_loader.js');
 
 const app = express();
 
@@ -56,20 +56,20 @@ custom.register(app);
 error_handlers.register(app);
 
 // triggers sync timer
-await import("./services/sync");
+await import("./services/sync.js");
 
 // triggers backup timer
-await import('./services/backup');
+await import('./services/backup.js');
 
 // trigger consistency checks timer
-await import('./services/consistency_checks');
+await import('./services/consistency_checks.js');
 
-await import('./services/scheduler');
+await import('./services/scheduler.js');
 
 startScheduledCleanup();
 
 if (utils.isElectron()) {
-    (await import('@electron/remote/main')).initialize();
+    (await import('@electron/remote/main/index.js')).initialize();
 }
 
 export default app;

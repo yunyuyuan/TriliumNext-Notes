@@ -7,7 +7,7 @@ import becca from "../becca.js";
 import AbstractBeccaEntity from "./abstract_becca_entity.js";
 import sql from "../../services/sql.js";
 import BAttachment from "./battachment.js";
-import { AttachmentRow, RevisionRow } from './rows';
+import { AttachmentRow, RevisionRow } from './rows.js';
 import eraseService from "../../services/erase.js";
 
 interface ContentOpts {
@@ -33,13 +33,9 @@ class BRevision extends AbstractBeccaEntity<BRevision> {
     noteId!: string;
     type!: string;
     mime!: string;
-    isProtected!: boolean;
     title!: string;
-    blobId?: string;
     dateLastEdited?: string;
-    dateCreated!: string;
     utcDateLastEdited?: string;
-    utcDateCreated!: string;
     contentLength?: number;
     content?: string | Buffer;
 

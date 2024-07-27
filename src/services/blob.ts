@@ -2,7 +2,7 @@ import becca from "../becca/becca.js";
 import NotFoundError from "../errors/not_found_error.js";
 import protectedSessionService from "./protected_session.js";
 import utils from "./utils.js";
-import type { Blob } from "./blob-interface";
+import type { Blob } from "./blob-interface.js";
 
 function getBlobPojo(entityName: string, entityId: string, opts?: { preview: boolean }) {
     // TODO: Unused opts.

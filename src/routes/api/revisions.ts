@@ -12,7 +12,7 @@ import eraseService from "../../services/erase.js";
 import { Request, Response } from 'express';
 import BRevision from "../../becca/entities/brevision.js";
 import BNote from "../../becca/entities/bnote.js";
-import { NotePojo } from '../../becca/becca-interface';
+import { NotePojo } from '../../becca/becca-interface.js';
 
 interface NotePath {
     noteId: string;
@@ -63,6 +63,10 @@ function getRevision(req: Request) {
 
 function getRevisionFilename(revision: BRevision) {
     let filename = utils.formatDownloadTitle(revision.title, revision.type, revision.mime);
+
+    if (!revision.dateCreated) {
+        throw new Error("Missing creation date for revision.");
+    }
 
     const extension = path.extname(filename);
     const date = revision.dateCreated

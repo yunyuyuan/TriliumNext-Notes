@@ -5,8 +5,8 @@ import becca from "../becca/becca.js";
 import etapiTokenService from "../services/etapi_tokens.js";
 import config from "../services/config.js";
 import { NextFunction, Request, RequestHandler, Response, Router } from 'express';
-import { AppRequest, AppRequestHandler } from '../routes/route-interface';
-import { ValidatorMap } from './etapi-interface';
+import { AppRequest, AppRequestHandler } from '../routes/route-interface.js';
+import { ValidatorMap } from './etapi-interface.js';
 const GENERIC_CODE = "GENERIC";
 
 type HttpMethod = "all" | "get" | "post" | "put" | "delete" | "patch" | "options" | "head";

@@ -1,11 +1,11 @@
 "use strict";
 
-import sql from './sql';
-import eventChangesService from './entity_changes';
-import treeService from './tree';
-import BBranch from '../becca/entities/bbranch';
-import becca from '../becca/becca';
-import log from './log';
+import sql from './sql.js';
+import eventChangesService from './entity_changes.js';
+import treeService from './tree.js';
+import BBranch from '../becca/entities/bbranch.js';
+import becca from '../becca/becca.js';
+import log from './log.js';
 
 export interface CloneResponse {
     success: boolean;

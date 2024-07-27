@@ -11,7 +11,7 @@ import htmlSanitizer from "../html_sanitizer.js";
 import sanitizeAttributeName from "../sanitize_attribute_name.js";
 import TaskContext from "../task_context.js";
 import BNote from "../../becca/entities/bnote.js";
-import { File } from "./common";
+import { File } from "./common.js";
 import { AttributeType } from "../../becca/entities/rows.js";
 
 /**

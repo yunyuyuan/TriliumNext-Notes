@@ -12,7 +12,7 @@ import ValidationError from "../../errors/validation_error.js";
 import blobService from "../../services/blob.js";
 import { Request } from 'express';
 import BBranch from "../../becca/entities/bbranch.js";
-import { AttributeRow } from '../../becca/entities/rows';
+import { AttributeRow } from '../../becca/entities/rows.js';
 
 function getNote(req: Request) {
     return becca.getNoteOrThrow(req.params.noteId);

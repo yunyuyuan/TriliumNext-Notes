@@ -12,7 +12,7 @@ import syncOptions from "../../services/sync_options.js";
 import utils from "../../services/utils.js";
 import ws from "../../services/ws.js";
 import { Request } from 'express';
-import { EntityChange, EntityChangeRecord } from '../../services/entity_changes_interface';
+import { EntityChange, EntityChangeRecord } from '../../services/entity_changes_interface.js';
 import ValidationError from "../../errors/validation_error.js";
 import consistencyChecksService from "../../services/consistency_checks.js";
 

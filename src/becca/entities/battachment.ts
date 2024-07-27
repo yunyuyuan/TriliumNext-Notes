@@ -6,7 +6,7 @@ import AbstractBeccaEntity from "./abstract_becca_entity.js";
 import sql from "../../services/sql.js";
 import protectedSessionService from "../../services/protected_session.js";
 import log from "../../services/log.js";
-import { AttachmentRow } from './rows';
+import { AttachmentRow } from './rows.js';
 import BNote from "./bnote.js";
 import BBranch from "./bbranch.js";
 import noteService from "../../services/notes.js";
@@ -44,9 +44,6 @@ class BAttachment extends AbstractBeccaEntity<BAttachment> {
     title!: string;
     type?: keyof typeof attachmentRoleToNoteTypeMapping;
     position?: number;
-    blobId?: string;
-    isProtected?: boolean;
-    dateModified?: string;
     utcDateScheduledForErasureSince?: string | null;
     /** optionally added to the entity */
     contentLength?: number;

@@ -35,7 +35,7 @@ function setupPage(req: Request, res: Response) {
 }
 
 async function handleElectronRedirect() {
-    const windowService = (await import("../services/window")).default;
+    const windowService = (await import("../services/window.js")).default;
     const { app } = await import("electron");
     windowService.createMainWindow(app);
     windowService.closeSetupWindow();
