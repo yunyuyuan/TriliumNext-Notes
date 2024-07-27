@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 if ! command -v wine &> /dev/null; then
   echo "Missing command: wine"
   exit 1
@@ -15,8 +17,6 @@ fi
 echo "Copying required windows binaries"
 
 cp -r bin/better-sqlite3/win-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
-
-rm -r $SRC_DIR/src/public/app-dist/*.mobile.*
 
 echo "Packaging windows x64 electron build"
 

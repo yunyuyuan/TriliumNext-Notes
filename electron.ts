@@ -9,7 +9,7 @@ import windowService from "./src/services/window.js";
 import tray from "./src/services/tray.js";
 
 // Prevent Trilium starting twice on first install and on uninstall for the Windows installer.
-if (require('electron-squirrel-startup')) {
+if (await import('electron-squirrel-startup')) {
   process.exit(0);
 }
 
@@ -67,4 +67,4 @@ electron.app.on("will-quit", () => {
 // this is to disable electron warning spam in the dev console (local development only)
 process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = "true";
 
-require('./src/www.js');
+await import('./src/www.js');

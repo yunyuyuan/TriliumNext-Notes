@@ -2,11 +2,13 @@ import { Menu, Tray } from 'electron';
 import path from "path";
 import windowService from "./window.js";
 import optionService from "./options.js";
+import { fileURLToPath } from "url";
 
 let tray: Tray;
 // `mainWindow.isVisible` doesn't work with `mainWindow.show` and `mainWindow.hide` - it returns `false` when the window
 // is minimized
 let isVisible = true;
+
 
 // Inspired by https://github.com/signalapp/Signal-Desktop/blob/dcb5bb672635c4b29a51adec8a5658e3834ec8fc/app/tray_icon.ts#L20
 const getIconSize = () => {
@@ -23,7 +25,7 @@ const getIconPath = () => {
     const iconSize = getIconSize();
 
     return path.join(
-        __dirname,
+        path.dirname(fileURLToPath(import.meta.url)),
         "../..",
         "images",
         "app-icons",

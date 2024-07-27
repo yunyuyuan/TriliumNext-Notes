@@ -15,10 +15,11 @@ import optionsInitService from "./options_init.js";
 import BNote from "../becca/entities/bnote.js";
 import BBranch from "../becca/entities/bbranch.js";
 import zipImportService from "./import/zip.js";
+import becca_loader from "../becca/becca_loader.js";
+import password from "./encryption/password.js";
+import backup from "./backup.js";
 
 const dbReady = utils.deferred<void>();
-
-cls.init(initDbConnection);
 
 function schemaExists() {
     return !!sql.getValue(`SELECT name FROM sqlite_master
@@ -65,7 +66,7 @@ async function createInitialDatabase() {
 
         sql.executeScript(schema);
 
-        require('../becca/becca_loader').load();
+        becca_loader.load();
 
         log.info("Creating root note ...");
 
@@ -88,7 +89,7 @@ async function createInitialDatabase() {
         optionsInitService.initDocumentOptions();
         optionsInitService.initNotSyncedOptions(true, {});
         optionsInitService.initStartupOptions();
-        require('./encryption/password').resetPassword();
+        password.resetPassword();
     });
 
     log.info("Importing demo content ...");
@@ -129,7 +130,7 @@ function createDatabaseForSync(options: OptionRow[], syncServerHost = '', syncPr
     sql.transactional(() => {
         sql.executeScript(schema);
 
-        require('./options_init').initNotSyncedOptions(false,  { syncServerHost, syncProxy });
+        optionsInitService.initNotSyncedOptions(false,  { syncServerHost, syncProxy });
 
         // document options required for sync to kick off
         for (const opt of options) {
@@ -157,29 +158,33 @@ function optimize() {
     log.info(`Optimization finished in ${Date.now() - start}ms.`);
 }
 
-dbReady.then(() => {
-    if (config.General && config.General.noBackup === true) {
-        log.info("Disabling scheduled backups.");
-
-        return;
-    }
-
-    setInterval(() => require('./backup').regularBackup(), 4 * 60 * 60 * 1000);
-
-    // kickoff first backup soon after start up
-    setTimeout(() => require('./backup').regularBackup(), 5 * 60 * 1000);
-
-    // optimize is usually inexpensive no-op, so running it semi-frequently is not a big deal
-    setTimeout(() => optimize(), 60 * 60 * 1000);
-
-    setInterval(() => optimize(), 10 * 60 * 60 * 1000);
-});
-
 function getDbSize() {
     return sql.getValue<number>("SELECT page_count * page_size / 1000 as size FROM pragma_page_count(), pragma_page_size()");
 }
 
-log.info(`DB size: ${getDbSize()} KB`);
+function initializeDb() {
+    cls.init(initDbConnection);
+
+    log.info(`DB size: ${getDbSize()} KB`);
+ 
+    dbReady.then(() => {
+        if (config.General && config.General.noBackup === true) {
+            log.info("Disabling scheduled backups.");
+    
+            return;
+        }
+    
+        setInterval(() => backup.regularBackup(), 4 * 60 * 60 * 1000);
+    
+        // kickoff first backup soon after start up
+        setTimeout(() => backup.regularBackup(), 5 * 60 * 1000);
+    
+        // optimize is usually inexpensive no-op, so running it semi-frequently is not a big deal
+        setTimeout(() => optimize(), 60 * 60 * 1000);
+    
+        setInterval(() => optimize(), 10 * 60 * 60 * 1000);
+    });
+}
 
 export default {
     dbReady,
@@ -188,5 +193,6 @@ export default {
     createInitialDatabase,
     createDatabaseForSync,
     setDbAsInitialized,
-    getDbSize
+    getDbSize,
+    initializeDb
 };

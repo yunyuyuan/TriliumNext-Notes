@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 if ! command -v dpkg-deb &> /dev/null; then
   echo "Missing command: dpkg-deb"
   exit 1

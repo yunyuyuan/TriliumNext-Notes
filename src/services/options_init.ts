@@ -16,7 +16,7 @@ interface NotSyncedOpts {
     syncProxy?: string;
 }
 
-function initNotSyncedOptions(initialized: boolean, opts: NotSyncedOpts = {}) {
+async function initNotSyncedOptions(initialized: boolean, opts: NotSyncedOpts = {}) {
     optionService.createOption('openNoteContexts', JSON.stringify([
         {
             notePath: 'root',
@@ -37,7 +37,7 @@ function initNotSyncedOptions(initialized: boolean, opts: NotSyncedOpts = {}) {
     let theme = 'dark'; // default based on the poll in https://github.com/zadam/trilium/issues/2516
 
     if (utils.isElectron()) {
-        const {nativeTheme} = require('electron');
+        const {nativeTheme} = await import("electron");
 
         theme = nativeTheme.shouldUseDarkColors ? 'dark' : 'light';
     }

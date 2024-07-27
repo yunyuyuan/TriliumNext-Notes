@@ -10,8 +10,7 @@ import log from "../../services/log.js";
 import protectedSessionService from "../../services/protected_session.js";
 import blobService from "../../services/blob.js";
 import Becca, { ConstructorData } from '../becca-interface';
-
-let becca: Becca;
+import becca from "../becca.js";
 
 interface ContentOpts {
     forceSave?: boolean;
@@ -47,11 +46,7 @@ abstract class AbstractBeccaEntity<T extends AbstractBeccaEntity<T>> {
     }
 
     protected get becca(): Becca {
-        if (!becca) {
-            becca = require('../becca');
-        }
-
-        return becca as Becca;
+        return becca;
     }
 
     protected putEntityChange(isDeleted: boolean) {

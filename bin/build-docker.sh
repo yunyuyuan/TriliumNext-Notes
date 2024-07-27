@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 VERSION=`jq -r ".version" package.json`
 SERIES=${VERSION:0:4}-latest
 

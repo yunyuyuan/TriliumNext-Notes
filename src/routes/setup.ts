@@ -10,12 +10,8 @@ import { Request, Response } from 'express';
 function setupPage(req: Request, res: Response) {
     if (sqlInit.isDbInitialized()) {
         if (utils.isElectron()) {
-            const windowService = require('../services/window');
-            const { app } = require('electron');
-            windowService.createMainWindow(app);
-            windowService.closeSetupWindow();
-        }
-        else {
+            handleElectronRedirect();  
+        } else {
             res.redirect('.');
         }
 
@@ -36,6 +32,13 @@ function setupPage(req: Request, res: Response) {
         assetPath: assetPath,
         appPath: appPath
     });
+}
+
+async function handleElectronRedirect() {
+    const windowService = (await import("../services/window")).default;
+    const { app } = await import("electron");
+    windowService.createMainWindow(app);
+    windowService.closeSetupWindow();
 }
 
 export default {

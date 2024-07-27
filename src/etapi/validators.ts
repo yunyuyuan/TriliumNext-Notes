@@ -1,5 +1,6 @@
 import noteTypeService from "../services/note_types.js";
 import dateUtils from "../services/date_utils.js";
+import becca from "../becca/becca.js";
 
 function mandatory(obj: unknown) {
     if (obj === undefined) {
@@ -63,8 +64,6 @@ function isNoteId(obj: unknown) {
     if (obj === undefined || obj === null) {
         return;
     }
-
-    const becca = require('../becca/becca');
 
     if (typeof obj !== 'string') {
         return `'${obj}' is not a valid noteId`;

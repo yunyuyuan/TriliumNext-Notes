@@ -21,6 +21,7 @@ import { EntityChange, EntityChangeRecord, EntityRow } from './entity_changes_in
 import { CookieJar, ExecOpts } from './request_interface';
 import setupService from "./setup.js";
 import consistency_checks from "./consistency_checks.js";
+import becca_loader from "../becca/becca_loader.js";
 
 let proxyToggle = true;
 
@@ -442,7 +443,7 @@ function getOutstandingPullCount() {
     return outstandingPullCount;
 }
 
-require('../becca/becca_loader').beccaLoaded.then(() => {
+becca_loader.beccaLoaded.then(() => {
     setInterval(cls.wrap(sync), 60000);
 
     // kickoff initial sync immediately, but should happen after initial consistency checks

@@ -39,7 +39,7 @@ if (!semver.satisfies(process.version, ">=10.5.0")) {
 
 startTrilium();
 
-function startTrilium() {
+async function startTrilium() {
     /**
      * The intended behavior is to detect when a second instance is running, in that case open the old instance
      * instead of the new one. This is complicated by the fact that it is possible to run multiple instances of Trilium
@@ -54,12 +54,12 @@ function startTrilium() {
      * to do a complex evaluation.
      */
     if (utils.isElectron()) {
-        require('electron').app.requestSingleInstanceLock();
+        (await import('electron')).app.requestSingleInstanceLock();
     }
 
     log.info(JSON.stringify(appInfo, null, 2));
 
-    const cpuInfos = require('os').cpus();
+    const cpuInfos = (await import('os')).cpus();
     if (cpuInfos && cpuInfos[0] !== undefined) { // https://github.com/zadam/trilium/pull/3957
         log.info(`CPU model: ${cpuInfos[0].model}, logical cores: ${cpuInfos.length} freq: ${cpuInfos[0].speed} Mhz`); // for perf. issues it's good to know the rough configuration
     }
@@ -69,8 +69,8 @@ function startTrilium() {
     ws.init(httpServer, sessionParser as any); // TODO: Not sure why session parser is incompatible.
 
     if (utils.isElectron()) {
-        const electronRouting = require('./routes/electron');
-        electronRouting(app);
+        const electronRouting = await import('./routes/electron');
+        electronRouting.default(app);
     }
 }
 
