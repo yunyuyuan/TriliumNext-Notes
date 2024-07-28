@@ -457,7 +457,7 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
         }
 
         let { mime } = noteMeta ? noteMeta : detectFileTypeAndMime(taskContext, filePath);
-        if (!mime) {
+        if (mime == null) {
             throw new Error("Unable to resolve mime type.");
         }
 
