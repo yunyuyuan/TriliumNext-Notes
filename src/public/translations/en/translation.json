@@ -410,5 +410,37 @@
         "help_text": "You can execute simple scripts on the matched notes.",
         "example_1": "For example to append a string to a note's title, use this small script:",
         "example_2": "More complex example would be deleting all matched note's attributes:"
+    },
+    "add_label": {
+        "add_label": "Add label",
+        "label_name_placeholder": "label name",
+        "label_name_title": "Alphanumeric characters, underscore and colon are allowed characters.",
+        "to_value": "to value",
+        "new_value_placeholder": "new value",
+        "help_text": "On all matched notes:",
+        "help_text_item1": "create given label if note doesn't have one yet",
+        "help_text_item2": "or change value of the existing label",
+        "help_text_note": "You can also call this method without value, in such case label will be assigned to the note without value."
+    },
+    "delete_label": {
+        "delete_label": "Delete label",
+        "label_name_placeholder": "label name",
+        "label_name_title": "Alphanumeric characters, underscore and colon are allowed characters."
+    },
+    "rename_label": {
+        "rename_label_from": "Rename label from",
+        "old_name_placeholder": "old name",
+        "to": "To",
+        "new_name_placeholder": "new name",
+        "name_title": "Alphanumeric characters, underscore and colon are allowed characters."
+    },
+    "update_label_value": {
+        "update_label_value": "Update label value",
+        "label_name_placeholder": "label name",
+        "label_name_title": "Alphanumeric characters, underscore and colon are allowed characters.",
+        "to_value": "to value",
+        "new_value_placeholder": "new value",
+        "help_text": "On all matched notes, change value of the existing label.",
+        "help_text_note": "You can also call this method without value, in such case label will be assigned to the note without value."
     }
 }

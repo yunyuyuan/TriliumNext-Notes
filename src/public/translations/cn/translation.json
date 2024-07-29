@@ -410,5 +410,37 @@
         "help_text": "您可以在匹配的笔记上执行简单的脚本。",
         "example_1": "例如，要在笔记标题后附加字符串，请使用以下脚本：",
         "example_2": "更复杂的例子，删除所有匹配的笔记属性："
+    },
+    "add_label": {
+        "add_label": "添加标签",
+        "label_name_placeholder": "标签名称",
+        "label_name_title": "允许使用字母、数字、下划线和冒号。",
+        "to_value": "值为",
+        "new_value_placeholder": "新值",
+        "help_text": "在所有匹配的笔记上：",
+        "help_text_item1": "如果笔记尚无此标签，则创建给定的标签",
+        "help_text_item2": "或更改现有标签的值",
+        "help_text_note": "您也可以在不指定值的情况下调用此方法，这种情况下，标签将分配给没有值的笔记。"
+    },
+    "delete_label": {
+        "delete_label": "删除标签",
+        "label_name_placeholder": "标签名称",
+        "label_name_title": "允许使用字母、数字、下划线和冒号。"
+    },
+    "rename_label": {
+        "rename_label_from": "重命名标签从",
+        "old_name_placeholder": "旧名称",
+        "to": "改为",
+        "new_name_placeholder": "新名称",
+        "name_title": "允许使用字母、数字、下划线和冒号。"
+    },
+    "update_label_value": {
+        "update_label_value": "更新标签值",
+        "label_name_placeholder": "标签名称",
+        "label_name_title": "允许使用字母、数字、下划线和冒号。",
+        "to_value": "值为",
+        "new_value_placeholder": "新值",
+        "help_text": "在所有匹配的笔记上，更改现有标签的值。",
+        "help_text_note": "您也可以在不指定值的情况下调用此方法，这种情况下，标签将分配给没有值的笔记。"
     }
 }
