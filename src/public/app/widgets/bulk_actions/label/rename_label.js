@@ -14,7 +14,7 @@ const TPL = `
                 pattern="[\\p{L}\\p{N}_:]+"
                 title="${t("rename_label.name_title")}"/>
             
-            <div style="margin-right: 10px; margin-left: 10px;">${t("rename_label.to")}</div> 
+            <div style="margin-right: 10px; margin-left: 10px;" class="text-nowrap">${t("rename_label.to")}</div> 
             
             <input type="text" 
                 class="form-control new-label-name" 
