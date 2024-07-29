@@ -395,11 +395,20 @@
         "help_text_body1": "要添加标签，只需输入例如 <code>#rock</code> 或者如果您还想添加值，则例如 <code>#year = 2020</code>",
         "help_text_body2": "对于关系，请输入 <code>~author = @</code>，这将显示一个自动完成列表，您可以查找所需的笔记。",
         "help_text_body3": "您也可以使用右侧的 <code>+</code> 按钮添加标签和关系。</p>",
-        "save_attributes": "报错属性 <enter>",
+        "save_attributes": "保存属性 <enter>",
         "add_a_new_attribute": "添加新属性",
         "add_new_label": "添加新标签 <kbd data-command=\"addNewLabel\"></kbd>",
         "add_new_relation": "添加新关系 <kbd data-command=\"addNewRelation\"></kbd>",
         "add_new_label_definition": "添加新标签定义",
         "add_new_relation_definition": "添加新关系定义"
+    },
+    "abstract_bulk_action": {
+        "remove_this_search_action": "删除此搜索操作"
+    },
+    "execute_script": {
+        "execute_script": "执行脚本",
+        "help_text": "您可以在匹配的笔记上执行简单的脚本。",
+        "example_1": "例如，要在笔记标题后附加字符串，请使用以下脚本：",
+        "example_2": "更复杂的例子，删除所有匹配的笔记属性："
     }
 }

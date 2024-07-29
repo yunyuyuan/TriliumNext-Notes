@@ -401,5 +401,14 @@
         "add_new_relation": "Add new relation <kbd data-command=\"addNewRelation\"></kbd>",
         "add_new_label_definition": "Add new label definition",
         "add_new_relation_definition": "Add new relation definition"
+    },
+    "abstract_bulk_action": {
+        "remove_this_search_action": "Remove this search action"
+    },
+    "execute_script": {
+        "execute_script": "Execute script",
+        "help_text": "You can execute simple scripts on the matched notes.",
+        "example_1": "For example to append a string to a note's title, use this small script:",
+        "example_2": "More complex example would be deleting all matched note's attributes:"
     }
 }
