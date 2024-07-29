@@ -390,5 +390,16 @@
         "is_owned_by_note": "由此笔记所有",
         "other_notes_with_name": "其它含有 {{attributeType}} 名为 \"{{attributeName}}\" 的的笔记",
         "and_more": "... 以及另外 {{count}} 个"
+    },
+    "attribute_editor": {
+        "help_text_body1": "要添加标签，只需输入例如 <code>#rock</code> 或者如果您还想添加值，则例如 <code>#year = 2020</code>",
+        "help_text_body2": "对于关系，请输入 <code>~author = @</code>，这将显示一个自动完成列表，您可以查找所需的笔记。",
+        "help_text_body3": "您也可以使用右侧的 <code>+</code> 按钮添加标签和关系。</p>",
+        "save_attributes": "报错属性 <enter>",
+        "add_a_new_attribute": "添加新属性",
+        "add_new_label": "添加新标签 <kbd data-command=\"addNewLabel\"></kbd>",
+        "add_new_relation": "添加新关系 <kbd data-command=\"addNewRelation\"></kbd>",
+        "add_new_label_definition": "添加新标签定义",
+        "add_new_relation_definition": "添加新关系定义"
     }
 }

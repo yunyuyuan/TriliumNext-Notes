@@ -390,5 +390,16 @@
         "is_owned_by_note": "is owned by note",
         "other_notes_with_name": "Other notes with {{attributeType}} name \"{{attributeName}}\"",
         "and_more": "... and {{count}} more."
+    },
+    "attribute_editor": {
+        "help_text_body1": "To add label, just type e.g. <code>#rock</code> or if you want to add also value then e.g. <code>#year = 2020</code>",
+        "help_text_body2": "For relation, type <code>~author = @</code> which should bring up an autocomplete where you can look up the desired note.",
+        "help_text_body3": "Alternatively you can add label and relation using the <code>+</code> button on the right side.",
+        "save_attributes": "Save attributes <enter>",
+        "add_a_new_attribute": "Add a new attribute",
+        "add_new_label": "Add new label <kbd data-command=\"addNewLabel\"></kbd>",
+        "add_new_relation": "Add new relation <kbd data-command=\"addNewRelation\"></kbd>",
+        "add_new_label_definition": "Add new label definition",
+        "add_new_relation_definition": "Add new relation definition"
     }
 }
