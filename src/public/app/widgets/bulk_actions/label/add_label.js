@@ -40,7 +40,7 @@ const TPL = `
 
 export default class AddLabelBulkAction extends AbstractBulkAction {
     static get actionName() { return "addLabel"; }
-    static get actionTitle() { return "Add label"; }
+    static get actionTitle() { return t("add_label.add_label"); }
 
     doRender() {
         const $action = $(TPL);

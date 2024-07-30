@@ -26,7 +26,7 @@ const TPL = `
 
 export default class DeleteNoteBulkAction extends AbstractBulkAction {
     static get actionName() { return "deleteNote"; }
-    static get actionTitle() { return "Delete note"; }
+    static get actionTitle() { return t("delete_note.delete_note"); }
 
     doRender() {
         return $(TPL);

@@ -21,7 +21,7 @@ const TPL = `
 
 export default class DeleteLabelBulkAction extends AbstractBulkAction {
     static get actionName() { return "deleteLabel"; }
-    static get actionTitle() { return "Delete label"; }
+    static get actionTitle() { return t("delete_label.delete_label"); }
 
     doRender() {
         const $action = $(TPL);

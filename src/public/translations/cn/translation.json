@@ -445,6 +445,7 @@
         "help_text_note": "您也可以在不指定值的情况下调用此方法，这种情况下，标签将分配给没有值的笔记。"
     },
     "delete_note": {
+        "delete_note": "删除笔记",
         "delete_matched_notes": "删除匹配的笔记",
         "delete_matched_notes_description": "这将删除匹配的笔记。",
         "undelete_notes_instruction": "删除后，可以从“最近修改”对话框中恢复它们。",
@@ -464,6 +465,7 @@
         "nothing_will_happen": "如果笔记无法移动到目标笔记（即这会创建一个树循环），则不会发生任何事情"
     },
     "rename_note": {
+        "rename_note": "重命名笔记",
         "rename_note_title_to": "重命名笔记标题为",
         "new_note_title": "新笔记标题",
         "click_help_icon": "点击右侧的帮助图标查看所有选项",
@@ -487,6 +489,7 @@
         "allowed_characters": "允许的字符为字母数字、下划线和冒号。"
     },
     "rename_relation": {
+        "rename_relation": "重命名关系",
         "rename_relation_from": "重命名关系，从",
         "old_name": "旧名称",
         "to": "改为",

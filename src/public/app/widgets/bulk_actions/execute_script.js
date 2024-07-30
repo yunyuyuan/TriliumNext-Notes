@@ -36,7 +36,7 @@ const TPL = `
 
 export default class ExecuteScriptBulkAction extends AbstractBulkAction {
     static get actionName() { return "executeScript"; }
-    static get actionTitle() { return "Execute script"; }
+    static get actionTitle() { return t("execute_script.execute_script"); }
 
     doRender() {
         const $action = $(TPL);

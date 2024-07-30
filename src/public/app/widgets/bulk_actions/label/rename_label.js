@@ -30,7 +30,7 @@ const TPL = `
 
 export default class RenameLabelBulkAction extends AbstractBulkAction {
     static get actionName() { return "renameLabel"; }
-    static get actionTitle() { return "Rename label"; }
+    static get actionTitle() { return t("rename_label.rename_label"); }
 
     doRender() {
         const $action = $(TPL);

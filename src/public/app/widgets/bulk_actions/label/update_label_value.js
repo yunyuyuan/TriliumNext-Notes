@@ -35,7 +35,7 @@ const TPL = `
 
 export default class UpdateLabelValueBulkAction extends AbstractBulkAction {
     static get actionName() { return "updateLabelValue"; }
-    static get actionTitle() { return "Update label value"; }
+    static get actionTitle() { return t("update_label_value.update_label_value"); }
 
     doRender() {
         const $action = $(TPL);
