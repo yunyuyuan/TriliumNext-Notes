@@ -442,5 +442,34 @@
         "new_value_placeholder": "新值",
         "help_text": "在所有匹配的笔记上，更改现有标签的值。",
         "help_text_note": "您也可以在不指定值的情况下调用此方法，这种情况下，标签将分配给没有值的笔记。"
+    },
+    "delete_note": {
+        "delete_matched_notes": "删除匹配的笔记",
+        "delete_matched_notes_description": "这将删除匹配的笔记。",
+        "undelete_notes_instruction": "删除后，可以从“最近修改”对话框中恢复它们。",
+        "erase_notes_instruction": "要永久擦除笔记，您可以在删除后转到“选项”->“其他”，然后单击“立即擦除已删除的笔记”按钮。"
+    },
+    "delete_revisions": {
+        "delete_note_revisions": "删除笔记修订",
+        "all_past_note_revisions": "所有匹配笔记的过去修订都将被删除。笔记本身将完全保留。换句话说，笔记的历史将被删除。"
+    },
+    "move_note": {
+        "move_note": "移动笔记",
+        "to": "到",
+        "target_parent_note": "目标父笔记",
+        "on_all_matched_notes": "对于所有匹配的笔记",
+        "move_note_new_parent": "如果笔记只有一个父笔记，则将其移动到新父笔记（即旧位置被移除，并创建到新父笔记的位置）",
+        "clone_note_new_parent": "如果笔记有多个克隆/位置，则将其克隆到新父笔记（不清楚应删除哪个位置）",
+        "nothing_will_happen": "如果笔记无法移动到目标笔记（即这会创建一个树循环），则不会发生任何事情"
+    },
+    "rename_note": {
+        "rename_note_title_to": "重命名笔记标题为：",
+        "new_note_title": "新笔记标题",
+        "click_help_icon": "点击右侧的帮助图标查看所有选项",
+        "evaluated_as_js_string": "给定的值被评估为JavaScript字符串，因此可以通过注入的<code>note</code>变量（正在重命名的笔记）丰富动态内容。 例如：",
+        "example_note": "<code>Note</code> - 所有匹配的笔记都被重命名为“Note”",
+        "example_new_title": "<code>NEW: ${note.title}</code> - 匹配的笔记标题以“NEW: ”为前缀",
+        "example_date_prefix": "<code>${note.dateCreatedObj.format('MM-DD:')}: ${note.title}</code> - 匹配的笔记以笔记的创建月份-日期为前缀",
+        "api_docs": "有关详细信息，请参阅<a href='https://zadam.github.io/trilium/backend_api/Note.html'>笔记</a>及其<a href='https://day.js.org/docs/en/display/format'>dateCreatedObj / utcDateCreatedObj 属性</a>的API文档。"
     }
 }

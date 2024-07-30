@@ -442,5 +442,34 @@
         "new_value_placeholder": "new value",
         "help_text": "On all matched notes, change value of the existing label.",
         "help_text_note": "You can also call this method without value, in such case label will be assigned to the note without value."
+    },
+    "delete_note": {
+        "delete_matched_notes": "Delete matched notes",
+        "delete_matched_notes_description": "This will delete matched notes.",
+        "undelete_notes_instruction": "After the deletion, it's possible to undelete them from Recent Changes dialog.",
+        "erase_notes_instruction": "To erase notes permanently, you can go after the deletion to the Option -> Other and click the \"Erase deleted notes now\" button."
+    },
+    "delete_revisions": {
+        "delete_note_revisions": "Delete note revisions",
+        "all_past_note_revisions": "All past note revisions of matched notes will be deleted. Note itself will be fully preserved. In other terms, note's history will be removed."
+    },
+    "move_note": {
+        "move_note": "Move note",
+        "to": "to",
+        "target_parent_note": "target parent note",
+        "on_all_matched_notes": "On all matched notes",
+        "move_note_new_parent": "move note to the new parent if note has only one parent (i.e. the old placement is removed and new placement into the new parent is created)",
+        "clone_note_new_parent": "clone note to the new parent if note has multiple clones/placements (it's not clear which placement should be removed)",
+        "nothing_will_happen": "nothing will happen if note cannot be moved to the target note (i.e. this would create a tree cycle)"
+    },
+    "rename_note": {
+        "rename_note_title_to": "Rename note title to:",
+        "new_note_title": "new note title",
+        "click_help_icon": "Click help icon on the right to see all the options",
+        "evaluated_as_js_string": "The given value is evaluated as JavaScript string and thus can be enriched with dynamic content via the injected <code>note</code> variable (note being renamed). Examples:",
+        "example_note": "<code>Note</code> - all matched notes are renamed to 'Note'",
+        "example_new_title": "<code>NEW: ${note.title}</code> - matched notes titles are prefixed with 'NEW: '",
+        "example_date_prefix": "<code>${note.dateCreatedObj.format('MM-DD:')}: ${note.title}</code> - matched notes are prefixed with note's creation month-date",
+        "api_docs": "See API docs for <a href='https://zadam.github.io/trilium/backend_api/Note.html'>note</a> and its <a href='https://day.js.org/docs/en/display/format'>dateCreatedObj / utcDateCreatedObj properties</a> for details."
     }
 }
