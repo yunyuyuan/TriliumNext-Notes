@@ -428,6 +428,7 @@
         "label_name_title": "Alphanumeric characters, underscore and colon are allowed characters."
     },
     "rename_label": {
+        "rename_label": "Rename label",
         "rename_label_from": "Rename label from",
         "old_name_placeholder": "old name",
         "to": "To",
@@ -463,7 +464,7 @@
         "nothing_will_happen": "nothing will happen if note cannot be moved to the target note (i.e. this would create a tree cycle)"
     },
     "rename_note": {
-        "rename_note_title_to": "Rename note title to:",
+        "rename_note_title_to": "Rename note title to",
         "new_note_title": "new note title",
         "click_help_icon": "Click help icon on the right to see all the options",
         "evaluated_as_js_string": "The given value is evaluated as JavaScript string and thus can be enriched with dynamic content via the injected <code>note</code> variable (note being renamed). Examples:",
@@ -471,5 +472,36 @@
         "example_new_title": "<code>NEW: ${note.title}</code> - matched notes titles are prefixed with 'NEW: '",
         "example_date_prefix": "<code>${note.dateCreatedObj.format('MM-DD:')}: ${note.title}</code> - matched notes are prefixed with note's creation month-date",
         "api_docs": "See API docs for <a href='https://zadam.github.io/trilium/backend_api/Note.html'>note</a> and its <a href='https://day.js.org/docs/en/display/format'>dateCreatedObj / utcDateCreatedObj properties</a> for details."
+    },
+    "add_relation": {
+        "add_relation": "Add relation",
+        "relation_name": "relation name",
+        "allowed_characters": "Alphanumeric characters, underscore and colon are allowed characters.",
+        "to": "to",
+        "target_note": "target note",
+        "create_relation_on_all_matched_notes": "On all matched notes create given relation."
+    },
+    "delete_relation": {
+        "delete_relation": "Delete relation",
+        "relation_name": "relation name",
+        "allowed_characters": "Alphanumeric characters, underscore and colon are allowed characters."
+    },
+    "rename_relation": {
+        "rename_relation_from": "Rename relation from",
+        "old_name": "old name",
+        "to": "To",
+        "new_name": "new name",
+        "allowed_characters": "Alphanumeric characters, underscore and colon are allowed characters."
+    },
+    "update_relation_target": {
+        "update_relation": "Update relation",
+        "relation_name": "relation name",
+        "allowed_characters": "Alphanumeric characters, underscore and colon are allowed characters.",
+        "to": "to",
+        "target_note": "target note",
+        "on_all_matched_notes": "On all matched notes",
+        "create_given_relation": "create given relation if note doesn't have one yet",
+        "change_target_note": "or change target note of the existing relation",
+        "update_relation_target": "Update relation target"
     }
 }

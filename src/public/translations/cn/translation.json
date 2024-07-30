@@ -428,6 +428,7 @@
         "label_name_title": "允许使用字母、数字、下划线和冒号。"
     },
     "rename_label": {
+        "rename_label": "重命名标签",
         "rename_label_from": "重命名标签从",
         "old_name_placeholder": "旧名称",
         "to": "改为",
@@ -463,7 +464,7 @@
         "nothing_will_happen": "如果笔记无法移动到目标笔记（即这会创建一个树循环），则不会发生任何事情"
     },
     "rename_note": {
-        "rename_note_title_to": "重命名笔记标题为：",
+        "rename_note_title_to": "重命名笔记标题为",
         "new_note_title": "新笔记标题",
         "click_help_icon": "点击右侧的帮助图标查看所有选项",
         "evaluated_as_js_string": "给定的值被评估为JavaScript字符串，因此可以通过注入的<code>note</code>变量（正在重命名的笔记）丰富动态内容。 例如：",
@@ -471,5 +472,36 @@
         "example_new_title": "<code>NEW: ${note.title}</code> - 匹配的笔记标题以“NEW: ”为前缀",
         "example_date_prefix": "<code>${note.dateCreatedObj.format('MM-DD:')}: ${note.title}</code> - 匹配的笔记以笔记的创建月份-日期为前缀",
         "api_docs": "有关详细信息，请参阅<a href='https://zadam.github.io/trilium/backend_api/Note.html'>笔记</a>及其<a href='https://day.js.org/docs/en/display/format'>dateCreatedObj / utcDateCreatedObj 属性</a>的API文档。"
+    },
+    "add_relation": {
+        "add_relation": "添加关系",
+        "relation_name": "关系名称",
+        "allowed_characters": "允许的字符为字母数字、下划线和冒号。",
+        "to": "到",
+        "target_note": "目标笔记",
+        "create_relation_on_all_matched_notes": "在所有匹配的笔记上创建指定的关系。"
+    },
+    "delete_relation": {
+        "delete_relation": "删除关系",
+        "relation_name": "关系名称",
+        "allowed_characters": "允许的字符为字母数字、下划线和冒号。"
+    },
+    "rename_relation": {
+        "rename_relation_from": "重命名关系，从",
+        "old_name": "旧名称",
+        "to": "改为",
+        "new_name": "新名称",
+        "allowed_characters": "允许的字符为字母数字、下划线和冒号。"
+    },
+    "update_relation_target": {
+        "update_relation": "更新关系",
+        "relation_name": "关系名称",
+        "allowed_characters": "允许的字符为字母数字、下划线和冒号。",
+        "to": "到",
+        "target_note": "目标笔记",
+        "on_all_matched_notes": "在所有匹配的笔记上",
+        "create_given_relation": "如果笔记还没有关系，则创建给定关系",
+        "change_target_note": "或更改现有关系的目标笔记",
+        "update_relation_target": "更新关系目标"
     }
 }
