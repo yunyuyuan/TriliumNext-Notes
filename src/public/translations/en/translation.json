@@ -528,5 +528,27 @@
         "convert_success": "Attachment '{{title}}' has been converted to note.",
         "rename_attachment": "Rename attachment",
         "enter_new_name": "Please enter new attachment's name"
+    },
+    "calendar": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun",
+        "cannot_find_day_note": "Cannot find day note",
+        "january": "January",
+        "febuary": "Febuary",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
     }
 }
