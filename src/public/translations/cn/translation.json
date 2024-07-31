@@ -549,5 +549,8 @@
         "october": "十月",
         "november": "十一月",
         "december": "十二月"
+    },
+    "close_pane_button": {
+        "close_this_pane": "关闭此面板"
     }
 }

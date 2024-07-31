@@ -550,5 +550,8 @@
         "october": "October",
         "november": "November",
         "december": "December"
+    },
+    "close_pane_button": {
+        "close_this_pane": "Close this pane"
     }
 }
