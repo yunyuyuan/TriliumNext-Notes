@@ -552,5 +552,8 @@
     },
     "close_pane_button": {
         "close_this_pane": "关闭此面板"
+    },
+    "create_pane_button": {
+        "create_new_split": "拆分面板"
     }
 }

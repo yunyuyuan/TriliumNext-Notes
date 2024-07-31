@@ -553,5 +553,8 @@
     },
     "close_pane_button": {
         "close_this_pane": "Close this pane"
+    },
+    "create_pane_button": {
+        "create_new_split": "Create new split"
     }
 }
