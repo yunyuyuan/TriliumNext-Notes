@@ -193,10 +193,10 @@ jobs:
           subject-name: ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME}}
           subject-digest: ${{ steps.ghcr-push.outputs.digest }}
           push-to-registry: true
-      - name: Log in to the GHCR container registry
+      - name: Log in to the DockerHub container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
-          registry: ${{ env.GHCR_REGISTRY }}
+          registry: ${{ env.DOCKERHUB_REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push image to DockerHub
