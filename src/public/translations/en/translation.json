@@ -506,5 +506,27 @@
         "create_given_relation": "create given relation if note doesn't have one yet",
         "change_target_note": "or change target note of the existing relation",
         "update_relation_target": "Update relation target"
+    },
+    "attachments_actions": {
+        "open_externally": "Open externally",
+        "open_externally_title": "File will be open in an external application and watched for changes. You'll then be able to upload the modified version back to Trilium.",
+        "open_custom": "Open custom",
+        "open_custom_title": "File will be open in an external application and watched for changes. You'll then be able to upload the modified version back to Trilium.",
+        "download": "Download",
+        "rename_attachment": "Rename attachment",
+        "upload_new_revision": "Upload new revision",
+        "copy_link_to_clipboard": "Copy link to clipboard",
+        "convert_attachment_into_note": "Convert attachment into note",
+        "delete_attachment": "Delete attachment",
+        "upload_success": "New attachment revision has been uploaded.",
+        "upload_failed": "Upload of a new attachment revision failed.",
+        "open_externally_detail_page": "Opening attachment externally is available only from the detail page, please first click on the attachment detail first and repeat the action.",
+        "open_custom_client_only": "Custom opening of attachments can only be done from the client.",
+        "delete_confirm": "Are you sure you want to delete attachment '{{title}}'?",
+        "delete_success": "Attachment '{{title}}' has been deleted.",
+        "convert_confirm": "Are you sure you want to convert attachment '{{title}}' into a separate note?",
+        "convert_success": "Attachment '{{title}}' has been converted to note.",
+        "rename_attachment": "Rename attachment",
+        "enter_new_name": "Please enter new attachment's name"
     }
 }

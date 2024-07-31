@@ -506,5 +506,26 @@
         "create_given_relation": "如果笔记还没有关系，则创建给定关系",
         "change_target_note": "或更改现有关系的目标笔记",
         "update_relation_target": "更新关系目标"
+    },
+    "attachments_actions": {
+        "open_externally": "用外部程序打开",
+        "open_externally_title": "文件将会在外部应用程序中打开，并监视其更改。然后您可以将修改后的版本上传回 Trilium。",
+        "open_custom": "自定义打开方式",
+        "open_custom_title": "文件将会在外部应用程序中打开，并监视其更改。然后您可以将修改后的版本上传回 Trilium。",
+        "download": "下载",
+        "rename_attachment": "重命名附件",
+        "upload_new_revision": "上传新版本",
+        "copy_link_to_clipboard": "复制链接到剪贴板",
+        "convert_attachment_into_note": "将附件转换为笔记",
+        "delete_attachment": "删除附件",
+        "upload_success": "新附件版本已上传。",
+        "upload_failed": "新附件版本上传失败。",
+        "open_externally_detail_page": "外部打开附件仅在详细页面中可用，请首先点击附件详细信息，然后重复此操作。",
+        "open_custom_client_only": "自定义打开附件只能通过客户端完成。",
+        "delete_confirm": "您确定要删除附件 '{{title}}' 吗？",
+        "delete_success": "附件 '{{title}}' 已被删除。",
+        "convert_confirm": "您确定要将附件 '{{title}}' 转换为单独的笔记吗？",
+        "convert_success": "附件 '{{title}}' 已转换为笔记。",
+        "enter_new_name": "请输入附件的新名称"
     }
 }
