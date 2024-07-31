@@ -150,12 +150,12 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - name: Extract metadata (tags, labels) for container GHCR image
+      - name: Extract metadata (tags, labels) for GHCR image
         id: ghcr-meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}
-      - name: Extract metadata (tags, labels) for container DockerHub image
+      - name: Extract metadata (tags, labels) for DockerHub image
         id: dh-meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
