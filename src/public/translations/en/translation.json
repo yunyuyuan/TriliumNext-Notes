@@ -612,6 +612,9 @@
     "onclick_button": {
         "hide": "hide",
         "no_click_handler": "Button widget '{componentId}' has no defined click handler"
+    },
+    "protected_session_status": {
+        "active": "Protected session is active. Click to leave protected session.",
+        "inactive": "Click to enter protected session"
     }
-
 }
