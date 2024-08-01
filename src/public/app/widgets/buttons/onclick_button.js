@@ -1,4 +1,5 @@
 import AbstractButtonWidget from "./abstract_button.js";
+import { t } from "../../services/i18n.js";
 
 export default class OnClickButtonWidget extends AbstractButtonWidget {
     doRender() {
@@ -7,17 +8,17 @@ export default class OnClickButtonWidget extends AbstractButtonWidget {
         if (this.settings.onClick) {
             this.$widget.on("click", e => {
                 e.stopPropagation();
-                this.$widget.tooltip("hide");
+                this.$widget.tooltip(t("onclick_button.hide"));
 
                 this.settings.onClick(this, e);
             });
         } else {
-            console.warn(`Button widget '${this.componentId}' has no defined click handler`, this.settings);
+            console.warn(t("onclick_button.no_click_handler", { componentId: this.componentId }), this.settings);
         }
 
         if (this.settings.onAuxClick) {
             this.$widget.on("auxclick", e => {
-                this.$widget.tooltip("hide");
+                this.$widget.tooltip(t("onclick_button.hide"));
 
                 this.settings.onAuxClick(this, e);
             });
