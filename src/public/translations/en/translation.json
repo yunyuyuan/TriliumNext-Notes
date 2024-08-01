@@ -559,5 +559,31 @@
     },
     "edit_button": {
         "edit_this_note": "Edit this note"
+    },
+    "global_menu": {
+        "menu": "Menu",
+        "options": "Options",
+        "open_new_window": "Open New Window",
+        "switch_to_mobile_version": "Switch to Mobile Version",
+        "switch_to_desktop_version": "Switch to Desktop Version",
+        "zoom": "Zoom",
+        "toggle_fullscreen": "Toggle Fullscreen",
+        "zoom_out": "Zoom Out",
+        "reset_zoom_level": "Reset Zoom Level",
+        "zoom_in": "Zoom In",
+        "configure_launchbar": "Configure Launchbar",
+        "show_shared_notes_subtree": "Show Shared Notes Subtree",
+        "advanced": "Advanced",
+        "open_dev_tools": "Open Dev Tools",
+        "open_sql_console": "Open SQL Console",
+        "open_sql_console_history": "Open SQL Console History",
+        "open_search_history": "Open Search History",
+        "show_backend_log": "Show Backend Log",
+        "reload_hint": "Reload can help with some visual glitches without restarting the whole app.",
+        "reload_frontend": "Reload Frontend",
+        "show_hidden_subtree": "Show Hidden Subtree",
+        "show_help": "Show Help",
+        "about": "About TriliumNext Notes",
+        "logout": "Logout"
     }
 }
