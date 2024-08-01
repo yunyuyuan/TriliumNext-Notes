@@ -589,5 +589,9 @@
     "left_pane_toggle": {
         "hide_panel": "Hide panel",
         "open_panel": "Open panel"
+    },
+    "move_pane_button": {
+        "move_left": "Move left",
+        "move_right": "Move right"
     }
 }

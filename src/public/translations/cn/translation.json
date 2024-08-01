@@ -588,5 +588,9 @@
     "left_pane_toggle": {
         "hide_panel": "隐藏面板",
         "show_panel": "显示面板"
+    },
+    "move_pane_button": {
+        "move_left": "向左移动",
+        "move_right": "向右移动"
     }
 }
