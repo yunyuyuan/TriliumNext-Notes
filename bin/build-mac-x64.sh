@@ -9,10 +9,6 @@ then
     ./bin/copy-trilium.sh $SRC_DIR
 fi
 
-echo "Copying required mac x64 binaries"
-
-# cp -r bin/better-sqlite3/mac-x64-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
-
 echo "Packaging mac x64 electron build"
 
 ./node_modules/.bin/electron-packager $SRC_DIR --asar --out=dist --executable-name=trilium --platform=darwin --arch=x64 --overwrite --icon=images/app-icons/mac/icon.icns
