@@ -584,5 +584,9 @@
         "show_help": "显示帮助",
         "about": "关于 TriliumNext 笔记",
         "logout": "登出"
+    },
+    "left_pane_toggle": {
+        "hide_panel": "隐藏面板",
+        "show_panel": "显示面板"
     }
 }

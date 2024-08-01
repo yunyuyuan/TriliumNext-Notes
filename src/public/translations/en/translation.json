@@ -585,5 +585,9 @@
         "show_help": "Show Help",
         "about": "About TriliumNext Notes",
         "logout": "Logout"
+    },
+    "left_pane_toggle": {
+        "hide_panel": "Hide panel",
+        "open_panel": "Open panel"
     }
 }
