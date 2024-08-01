@@ -11,7 +11,7 @@ fi
 
 echo "Copying required mac arm64 binaries"
 
-cp -r bin/better-sqlite3/mac-arm64-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
+# cp -r bin/better-sqlite3/mac-arm64-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
 
 echo "Packaging mac arm64 electron build"
 

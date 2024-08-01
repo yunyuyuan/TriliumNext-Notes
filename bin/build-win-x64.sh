@@ -16,7 +16,7 @@ fi
 
 echo "Copying required windows binaries"
 
-cp -r bin/better-sqlite3/win-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
+# cp -r bin/better-sqlite3/win-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
 
 echo "Packaging windows x64 electron build"
 
