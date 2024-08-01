@@ -593,5 +593,20 @@
     "move_pane_button": {
         "move_left": "Move left",
         "move_right": "Move right"
+    },
+    "note_actions": {
+        "convert_into_attachment": "Convert into attachment",
+        "re_render_note": "Re-render note",
+        "search_in_note": "Search in note",
+        "note_source": "Note source",
+        "note_attachments": "Note attachments",
+        "open_note_externally": "Open note externally",
+        "open_note_externally_title": "File will be open in an external application and watched for changes. You'll then be able to upload the modified version back to Trilium.",
+        "open_note_custom": "Open note custom",
+        "import_files": "Import files",
+        "export_note": "Export note",
+        "delete_note": "Delete note",
+        "print_note": "Print note",
+        "save_revision": "Save revision"
     }
 }

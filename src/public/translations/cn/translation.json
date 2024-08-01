@@ -452,8 +452,8 @@
         "erase_notes_instruction": "要永久擦除笔记，您可以在删除后转到“选项”->“其他”，然后单击“立即擦除已删除的笔记”按钮。"
     },
     "delete_revisions": {
-        "delete_note_revisions": "删除笔记修订",
-        "all_past_note_revisions": "所有匹配笔记的过去修订都将被删除。笔记本身将完全保留。换句话说，笔记的历史将被删除。"
+        "delete_note_revisions": "删除笔记历史",
+        "all_past_note_revisions": "所有匹配笔记的过去历史都将被删除。笔记本身将完全保留。换句话说，笔记的历史将被删除。"
     },
     "move_note": {
         "move_note": "移动笔记",
@@ -592,5 +592,20 @@
     "move_pane_button": {
         "move_left": "向左移动",
         "move_right": "向右移动"
+    },
+    "note_actions": {
+        "convert_into_attachment": "转换为附件",
+        "re_render_note": "重新渲染笔记",
+        "search_in_note": "在笔记中搜索",
+        "note_source": "笔记源代码",
+        "note_attachments": "笔记附件",
+        "open_note_externally": "用外部程序打开笔记",
+        "open_note_externally_title": "文件将在外部应用程序中打开，并监视其更改。然后您可以将修改后的版本上传回 Trilium。",
+        "open_note_custom": "使用自定义程序打开笔记",
+        "import_files": "导入文件",
+        "export_note": "导出笔记",
+        "delete_note": "删除笔记",
+        "print_note": "打印笔记",
+        "save_revision": "保存笔记历史"
     }
 }
