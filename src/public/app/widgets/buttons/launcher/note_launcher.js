@@ -1,4 +1,5 @@
 import { t } from "../../../services/i18n.js";
+import AbstractLauncher from "./abstract_launcher.js";
 import dialogService from "../../../services/dialog.js";
 import appContext from "../../../components/app_context.js";
 import utils from "../../../services/utils.js";

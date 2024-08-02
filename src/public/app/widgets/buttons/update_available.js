@@ -1,4 +1,5 @@
 import { t } from "../../services/i18n.js";
+import BasicWidget from "../basic_widget.js";
 
 const TPL = `
 <div style="display: none;">
