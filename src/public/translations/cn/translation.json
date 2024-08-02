@@ -618,5 +618,8 @@
     },
     "revisions_button": {
         "note_revisions": "笔记修改历史"
+    },
+    "update_available": {
+        "update_available": "有更新可用"
     }
 }

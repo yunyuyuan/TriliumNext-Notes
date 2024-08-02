@@ -619,5 +619,8 @@
     },
     "revisions_button": {
         "note_revisions": "Note Revisions"
+    },
+    "update_available": {
+        "update_available": "Update available"
     }
 }
