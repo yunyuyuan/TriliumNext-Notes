@@ -622,5 +622,8 @@
     },
     "update_available": {
         "update_available": "Update available"
+    },
+    "note_launcher": {
+        "this_launcher_doesnt_define_target_note": "This launcher doesn't define target note."
     }
 }

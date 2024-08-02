@@ -621,5 +621,8 @@
     },
     "update_available": {
         "update_available": "有更新可用"
+    },
+    "note_launcher": {
+        "this_launcher_doesnt_define_target_note": "此启动器未定义目标笔记。"
     }
 }
