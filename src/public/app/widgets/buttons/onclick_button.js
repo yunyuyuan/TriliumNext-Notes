@@ -8,7 +8,7 @@ export default class OnClickButtonWidget extends AbstractButtonWidget {
         if (this.settings.onClick) {
             this.$widget.on("click", e => {
                 e.stopPropagation();
-                this.$widget.tooltip(t("onclick_button.hide"));
+                this.$widget.tooltip("hide");
 
                 this.settings.onClick(this, e);
             });
@@ -18,7 +18,7 @@ export default class OnClickButtonWidget extends AbstractButtonWidget {
 
         if (this.settings.onAuxClick) {
             this.$widget.on("auxclick", e => {
-                this.$widget.tooltip(t("onclick_button.hide"));
+                this.$widget.tooltip("hide");
 
                 this.settings.onAuxClick(this, e);
             });

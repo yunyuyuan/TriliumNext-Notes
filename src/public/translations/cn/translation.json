@@ -609,7 +609,6 @@
         "save_revision": "保存笔记历史"
     },
     "onclick_button": {
-        "hdie": "隐藏",
         "no_click_handler": "按钮组件'{componentId}'没有定义点击处理程序"
     },
     "protected_session_status": {
