@@ -615,5 +615,8 @@
     "protected_session_status": {
         "active": "受保护的会话已激活。点击退出受保护的会话。",
         "inactive": "点击进入受保护的会话"
+    },
+    "revisions_button": {
+        "note_revisions": "笔记修改历史"
     }
 }

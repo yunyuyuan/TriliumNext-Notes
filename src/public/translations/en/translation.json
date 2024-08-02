@@ -616,5 +616,8 @@
     "protected_session_status": {
         "active": "Protected session is active. Click to leave protected session.",
         "inactive": "Click to enter protected session"
+    },
+    "revisions_button": {
+        "note_revisions": "Note Revisions"
     }
 }
