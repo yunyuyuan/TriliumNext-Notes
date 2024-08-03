@@ -5,9 +5,11 @@ on:
       - 'develop'
       - 'feature/update**'
       - 'feature/server_esm**'
+      - 'feature/new_icon'
     paths-ignore:
       - 'docs/**'
       - 'bin/**'
+  workflow_dispatch:    
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
