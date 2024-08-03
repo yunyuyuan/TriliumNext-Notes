@@ -20,6 +20,10 @@ const TPL = `
         height: 100%;
         position: relative;
     }
+
+    .global-menu-button > svg path {
+        fill: var(--launcher-pane-text-color);
+    }
     
     .global-menu-button:hover { border: 0; }
     .global-menu-button:hover > svg path.st0 { fill:#95C980; }
