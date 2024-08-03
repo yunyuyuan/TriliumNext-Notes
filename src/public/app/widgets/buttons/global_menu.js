@@ -20,6 +20,7 @@ const TPL = `
         height: 100%;
         position: relative;
         padding: 6px;
+        border: 0;
     }
 
     .global-menu-button > svg path {
