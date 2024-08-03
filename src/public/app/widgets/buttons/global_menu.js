@@ -19,6 +19,7 @@ const TPL = `
         width: 100%;
         height: 100%;
         position: relative;
+        padding: 6px;
     }
 
     .global-menu-button > svg path {
@@ -26,6 +27,9 @@ const TPL = `
     }
     
     .global-menu-button:hover { border: 0; }
+    .global-menu-button:hover > svg path {
+        transition: 200ms ease-in-out fill;
+    }
     .global-menu-button:hover > svg path.st0 { fill:#95C980; }
     .global-menu-button:hover > svg path.st1 { fill:#72B755; }
     .global-menu-button:hover > svg path.st2 { fill:#4FA52B; }
