@@ -27,9 +27,16 @@ inkscape -w 256 -h 256 "../icon-purple.svg" -o "./png/256x256-dev.png"
 # Build Mac .icns
 declare -a sizes=("16" "32" "512" "1024")
 for size in "${sizes[@]}"; do
-    inkscape -w $size -h $size "../icon-color.svg" -o "./png/${size}x${size}.png"
+  inkscape -w $size -h $size "../icon-color.svg" -o "./png/${size}x${size}.png"
 done
-icnsutil compose -f "mac/icon.icns" "./png/16x16.png" "./png/32x32.png" "./png/128x128.png" "./png/512x512.png" "./png/1024x1024.png"
+
+mkdir -p fakeapp.app
+npx iconsur set fakeapp.app -l -i "png/1024x1024.png" -o "mac/1024x1024.png"
+declare -a sizes=("16x16" "32x32" "128x128" "512x512")
+for size in "${sizes[@]}"; do
+  magick "mac/1024x1024.png" -resize "${size}" "mac/${size}.png"
+done
+icnsutil compose -f "mac/icon.icns" ./mac/*.png
 
 # Build Windows icon
 magick -background none "../icon-color.svg" -define icon:auto-resize=16,32,48,64,128,256 "./win/icon.ico"

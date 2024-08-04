@@ -162,6 +162,7 @@
     "electron-packager": "17.1.2",
     "electron-rebuild": "3.2.9",
     "esm": "3.2.25",
+    "iconsur": "^1.7.0",
     "jasmine": "5.1.0",
     "jsdoc": "^4.0.3",
     "lorem-ipsum": "2.0.8",
