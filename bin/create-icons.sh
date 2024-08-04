@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if ! command -v magick &> /dev/null; then
+  echo "This tool requires ImageMagick to be installed in order to create the icons."
+  exit 1
+fi
+
+if ! command -v icnsutil &> /dev/null; then
+  echo "This tool requires icnsutil to be installed in order to generate macOS icons."
+  exit 1
+fi
+
 script_dir=$(realpath $(dirname $0))
 cd "${script_dir}/../images/app-icons"
 magick -background none "../icon-color.svg" -resize 180x180 "./ios/apple-touch-icon.png"
