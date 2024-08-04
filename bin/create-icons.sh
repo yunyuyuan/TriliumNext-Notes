@@ -20,11 +20,12 @@ magick -background none "../icon-color.svg" -resize "256x256" "./png/256x256.png
 magick -background none "../icon-purple.svg" -resize "256x256" "./png/256x256-dev.png"
 
 # Build Mac .icns
-magick -background none "../icon-color.svg" -resize "512x512" "./png/512x512.png"
-magick -background none "../icon-color.svg" -resize "1024x1024" "./png/1024x1024.png"
-icnsutil compose -f "mac/icon.icns" "./png/512x512.png" "./png/1024x1024.png"
-rm "./png/512x512.png"
-rm "./png/1024x1024.png"
+declare -a sizes=("16x16" "32x32" "512x512" "1024x1024")
+for size in "${sizes[@]}"; do
+    magick -background none "../icon-color.svg" -resize "${size}" "./png/${size}.png"
+done
+icnsutil compose -f "mac/icon.icns" "./png/16x16.png" "./png/32x32.png" "./png/128x128.png" "./png/512x512.png" "./png/1024x1024.png"
+rm "./png/16x16.png" "./png/32x32.png" "./png/512x512.png" "./png/1024x1024.png"
 
 # Build Windows icon
 magick -background none "../icon-color.svg" -define icon:auto-resize=16,32,48,64,128,256 "./win/icon.ico"
