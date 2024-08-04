@@ -31,7 +31,7 @@ for size in "${sizes[@]}"; do
 done
 
 mkdir -p fakeapp.app
-npx iconsur set fakeapp.app -l -i "png/1024x1024.png" -o "mac/1024x1024.png"
+npx iconsur set fakeapp.app -l -i "png/1024x1024.png" -o "mac/1024x1024.png" -s 0.8
 declare -a sizes=("16x16" "32x32" "128x128" "512x512")
 for size in "${sizes[@]}"; do
   magick "mac/1024x1024.png" -resize "${size}" "mac/${size}.png"
