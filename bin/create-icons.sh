@@ -21,8 +21,10 @@ magick -background none "../icon-purple.svg" -resize "256x256" "./png/256x256-de
 
 # Build Mac .icns
 magick -background none "../icon-color.svg" -resize "512x512" "./png/512x512.png"
-icnsutil compose -f "mac/icon.icns" "./png/512x512.png"
+magick -background none "../icon-color.svg" -resize "1024x1024" "./png/1024x1024.png"
+icnsutil compose -f "mac/icon.icns" "./png/512x512.png" "./png/1024x1024.png"
 rm "./png/512x512.png"
+rm "./png/1024x1024.png"
 
 # Build Windows icon
 magick -background none "../icon-color.svg" -define icon:auto-resize=16,32,48,64,128,256 "./win/icon.ico"
