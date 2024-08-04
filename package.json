@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-only",
   "main": "./dist/electron.js",
   "author": {
-    "name": "TriliumNext Notes Teams",
+    "name": "TriliumNext Notes Team",
     "email": "contact@eliandoran.me",
     "url": "https://github.com/TriliumNext/Notes"
   },
