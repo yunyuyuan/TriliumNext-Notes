@@ -5,6 +5,11 @@ if ! command -v magick &> /dev/null; then
   exit 1
 fi
 
+if ! command -v inkscape &> /dev/null; then
+  echo "This tool requires Inkscape to be render sharper SVGs than ImageMagick."
+  exit 1
+fi
+
 if ! command -v icnsutil &> /dev/null; then
   echo "This tool requires icnsutil to be installed in order to generate macOS icons."
   exit 1
@@ -12,17 +17,17 @@ fi
 
 script_dir=$(realpath $(dirname $0))
 cd "${script_dir}/../images/app-icons"
-magick -background none "../icon-color.svg" -resize 180x180 "./ios/apple-touch-icon.png"
+inkscape -w 180 -h 180 "../icon-color.svg" -o "./ios/apple-touch-icon.png"
 
 # Build PNGs
-magick -background none "../icon-color.svg" -resize "128x128" "./png/128x128.png"
-magick -background none "../icon-color.svg" -resize "256x256" "./png/256x256.png"
-magick -background none "../icon-purple.svg" -resize "256x256" "./png/256x256-dev.png"
+inkscape -w 128 -h 128 "../icon-color.svg" -o "./png/128x128.png"
+inkscape -w 256 -h 256 "../icon-color.svg" -o "./png/256x256.png"
+inkscape -w 256 -h 256 "../icon-purple.svg" -o "./png/256x256-dev.png"
 
 # Build Mac .icns
-declare -a sizes=("16x16" "32x32" "512x512" "1024x1024")
+declare -a sizes=("16" "32" "512" "1024")
 for size in "${sizes[@]}"; do
-    magick -background none "../icon-color.svg" -resize "${size}" "./png/${size}.png"
+    inkscape -w $size -h $size "../icon-color.svg" -o "./png/${size}x${size}.png"
 done
 icnsutil compose -f "mac/icon.icns" "./png/16x16.png" "./png/32x32.png" "./png/128x128.png" "./png/512x512.png" "./png/1024x1024.png"
 
