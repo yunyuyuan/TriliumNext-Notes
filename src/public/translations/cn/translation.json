@@ -705,5 +705,16 @@
     "inherited_attribute_list": {
         "title": "继承的属性",
         "no_inherited_attributes": "没有继承的属性。"
+    },
+    "note_info_widget": {
+        "note_id": "笔记ID",
+        "created": "创建时间",
+        "modified": "修改时间",
+        "type": "类型",
+        "note_size": "笔记大小",
+        "note_size_info": "笔记大小提供了该笔记存储需求的粗略估计。它考虑了笔记的内容及其笔记修订的内容。",
+        "calculate": "计算",
+        "subtree_size": "(子树大小: {{size}}, 共计 {{count}} 个笔记)",
+        "title": "笔记信息"
     }
 }

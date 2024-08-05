@@ -706,5 +706,16 @@
     "inherited_attribute_list": {
         "title": "Inherited Attributes",
         "no_inherited_attributes": "No inherited attributes."
+    },
+    "note_info_widget": {
+        "note_id": "Note ID",
+        "created": "Created",
+        "modified": "Modified",
+        "type": "Type",
+        "note_size": "Note size",
+        "note_size_info": "Note size provides rough estimate of storage requirements for this note. It takes into account note's content and content of its note revisions.",
+        "calculate": "calculate",
+        "subtree_size": "(subtree size: {{size}} in {{count}} notes)",
+        "title": "Note Info"
     }
 }
