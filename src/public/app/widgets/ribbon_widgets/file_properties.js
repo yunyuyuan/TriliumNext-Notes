@@ -28,15 +28,15 @@ const TPL = `
 
     <table class="file-table">
         <tr>
-            <th>${t("file_properties.note_id")}:</th>
+            <th class="text-nowrap">${t("file_properties.note_id")}:</th>
             <td class="file-note-id"></td>
-            <th>${t("file_properties.original_file_name")}:</th>
+            <th class="text-nowrap">${t("file_properties.original_file_name")}:</th>
             <td class="file-filename"></td>
         </tr>
         <tr>
-            <th>${t("file_properties.file_type")}:</th>
+            <th class="text-nowrap">${t("file_properties.file_type")}:</th>
             <td class="file-filetype"></td>
-            <th>${t("file_properties.file_size")}:</th>
+            <th class="text-nowrap">${t("file_properties.file_size")}:</th>
             <td class="file-filesize"></td>
         </tr>
         
