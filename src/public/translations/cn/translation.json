@@ -672,5 +672,10 @@
         "expand": "展开",
         "book_properties": "书籍属性",
         "invalid_view_type": "无效的查看类型 '{{type}}'"
+    },
+    "edited_notes": {
+        "no_edited_notes_found": "今天还没有编辑过的笔记...",
+        "title": "编辑过的笔记",
+        "deleted": "（已删除）"
     }
 }

@@ -673,5 +673,10 @@
         "expand": "Expand",
         "book_properties": "Book Properties",
         "invalid_view_type": "Invalid view type '{{type}}'"
+    },
+    "edited_notes": {
+        "no_edited_notes_found": "No edited notes on this day yet ...",
+        "title": "Edited Notes",
+        "deleted": "(deleted)"
     }
 }
