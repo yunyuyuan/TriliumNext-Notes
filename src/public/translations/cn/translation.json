@@ -661,5 +661,16 @@
         "note_type": "笔记类型",
         "editable": "可编辑",
         "basic_properties": "基本属性"
+    },
+    "book_properties": {
+        "view_type": "视图类型",
+        "grid": "网格",
+        "list": "列表",
+        "collapse_all_notes": "折叠所有笔记",
+        "expand_all_children": "展开所有子项",
+        "collapse": "折叠",
+        "expand": "展开",
+        "book_properties": "书籍属性",
+        "invalid_view_type": "无效的查看类型 '{{type}}'"
     }
 }

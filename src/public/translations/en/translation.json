@@ -662,5 +662,16 @@
         "note_type": "Note type",
         "editable": "Editable",
         "basic_properties": "Basic Properties"
+    },
+    "book_properties": {
+        "view_type": "View type",
+        "grid": "Grid",
+        "list": "List",
+        "collapse_all_notes": "Collapse all notes",
+        "expand_all_children": "Expand all children",
+        "collapse": "Collapse",
+        "expand": "Expand",
+        "book_properties": "Book Properties",
+        "invalid_view_type": "Invalid view type '{{type}}'"
     }
 }
