@@ -29,6 +29,7 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-deb',
+      arch: ['x64', 'arm64'],
       config: {
         options: {
           icon: "./images/app-icons/png/128x128.png",
