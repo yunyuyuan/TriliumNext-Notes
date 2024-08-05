@@ -44,7 +44,7 @@ cp -R "$script_dir/../build/src" "$DIR"
 cp "$script_dir/../build/electron.js" "$DIR"
 
 # run in subshell (so we return to original dir)
-(cd $DIR && npm install --omit=dev)
+(cd $DIR && npm install --omit=dev && npx electron-rebuild)
 
 if [[ -d "$DIR"/node_modules ]]; then
     # cleanup of useless files in dependencies
@@ -52,7 +52,6 @@ if [[ -d "$DIR"/node_modules ]]; then
         '@excalidraw/excalidraw/dist/excalidraw-assets-dev' '@excalidraw/excalidraw/dist/excalidraw.development.js' '@excalidraw/excalidraw/dist/excalidraw-with-preact.development.js' \
         'mermaid/dist/mermaid.js' \
         'boxicons/svg' 'boxicons/node_modules/react'/* \
-        'better-sqlite3/Release' 'better-sqlite3/deps/sqlite3.tar.gz' 'better-sqlite3/deps/sqlite3' \
         '@jimp/plugin-print/fonts' 'jimp/browser' 'jimp/fonts'; do
         [[ -e "$DIR"/node_modules/"$d" ]] && rm -r "$DIR"/node_modules/"$d"
     done
