@@ -685,9 +685,21 @@
         "file_size": "文件大小",
         "download": "下载",
         "open": "打开",
-        "upload_new_revision": "上传新修改",
-        "upload_success": "新文件修改已上传。",
-        "upload_failed": "新文件修改上传失败。",
+        "upload_new_revision": "上传新版本",
+        "upload_success": "新文件版本已上传。",
+        "upload_failed": "新文件版本上传失败。",
         "title": "文件"
+    },
+    "image_properties": {
+        "original_file_name": "原始文件名",
+        "file_type": "文件类型",
+        "file_size": "文件大小",
+        "download": "下载",
+        "open": "打开",
+        "copy_reference_to_clipboard": "复制引用到剪贴板",
+        "upload_new_revision": "上传新版本",
+        "upload_success": "新图像版本已上传。",
+        "upload_failed": "新图像版本上传失败：{{message}}",
+        "title": "图像"
     }
 }
