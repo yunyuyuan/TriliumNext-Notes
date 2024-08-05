@@ -4,13 +4,12 @@ const fs = require('fs-extra');
 module.exports = {
   packagerConfig: {
     executableName: "trilium",
-    name: 'trilium',
+    name: 'TriliumNextNotes',
     overwrite: true,
     asar: true,
     // icon will break once we add .dmg support, since the .ico & .icns have to be in same dir (see https://www.electronforge.io/guides/create-and-add-icons#windows-and-macos)
     icon: "./images/app-icons/icon",
     extraResource: getExtraResourcesForPlatform(),
-    files: [{ from: './bin/tpl/anonymize-database.tql', to: '.' }],
     afterComplete: [(buildPath, electronVersion, platform, arch, callback) => {
       const extraResources = getExtraResourcesForPlatform();
       for (const resource of extraResources) {
@@ -48,7 +47,7 @@ module.exports = {
       name: '@electron-forge/maker-dmg',
       arch: ['x64', 'arm64'],
       config: {
-        icon: "./images/app-icons/mac/icon.icns",
+        icon: "./images/app-icons/icon.icns",
       }
     },
     {
@@ -56,8 +55,7 @@ module.exports = {
       config: {
         options: {
           iconUrl: "https://raw.githubusercontent.com/TriliumNext/Notes/develop/images/app-icons/icon.ico",
-          setupIcon: "./images/app-icons/icon.ico",
-          loadingGif: "./images/app-icons/win/setup-banner.gif"
+          icon: "./images/app-icons/icon.ico",
         }
       }
     }
