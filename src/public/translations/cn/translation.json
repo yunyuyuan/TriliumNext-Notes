@@ -677,5 +677,17 @@
         "no_edited_notes_found": "今天还没有编辑过的笔记...",
         "title": "编辑过的笔记",
         "deleted": "（已删除）"
+    },
+    "file_properties": {
+        "note_id": "笔记 ID",
+        "original_file_name": "原始文件名",
+        "file_type": "文件类型",
+        "file_size": "文件大小",
+        "download": "下载",
+        "open": "打开",
+        "upload_new_revision": "上传新修改",
+        "upload_success": "新文件修改已上传。",
+        "upload_failed": "新文件修改上传失败。",
+        "title": "文件"
     }
 }
