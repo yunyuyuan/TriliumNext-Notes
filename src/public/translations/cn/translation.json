@@ -656,5 +656,10 @@
         "delete_this_note": "删除此笔记",
         "error_cannot_get_branch_id": "无法获取 notePath '{notePath}' 的 branchId",
         "error_unrecognized_command": "无法识别的命令 {command}"
+    },
+    "basic_properties": {
+        "note_type": "笔记类型",
+        "editable": "可编辑",
+        "basic_properties": "基本属性"
     }
 }

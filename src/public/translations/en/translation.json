@@ -657,5 +657,10 @@
         "delete_this_note": "Delete this note",
         "error_cannot_get_branch_id": "Cannot get branchId for notePath '{notePath}'",
         "error_unrecognized_command": "Unrecognized command {command}"
+    },
+    "basic_properties": {
+        "note_type": "Note type",
+        "editable": "Editable",
+        "basic_properties": "Basic Properties"
     }
 }
