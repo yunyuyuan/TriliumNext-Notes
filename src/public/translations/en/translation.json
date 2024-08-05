@@ -610,7 +610,7 @@
         "save_revision": "Save revision"
     },
     "onclick_button": {
-        "no_click_handler": "Button widget '{componentId}' has no defined click handler"
+        "no_click_handler": "Button widget '{{componentId}}' has no defined click handler"
     },
     "protected_session_status": {
         "active": "Protected session is active. Click to leave protected session.",
@@ -655,8 +655,8 @@
     "mobile_detail_menu": {
         "insert_child_note": "Insert child note",
         "delete_this_note": "Delete this note",
-        "error_cannot_get_branch_id": "Cannot get branchId for notePath '{notePath}'",
-        "error_unrecognized_command": "Unrecognized command {command}"
+        "error_cannot_get_branch_id": "Cannot get branchId for notePath '{{notePath}}'",
+        "error_unrecognized_command": "Unrecognized command {{command}}"
     },
     "basic_properties": {
         "note_type": "Note type",

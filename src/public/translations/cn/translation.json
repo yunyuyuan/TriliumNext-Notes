@@ -609,7 +609,7 @@
         "save_revision": "保存笔记历史"
     },
     "onclick_button": {
-        "no_click_handler": "按钮组件'{componentId}'没有定义点击处理程序"
+        "no_click_handler": "按钮组件'{{componentId}}'没有定义点击处理程序"
     },
     "protected_session_status": {
         "active": "受保护的会话已激活。点击退出受保护的会话。",
@@ -654,8 +654,8 @@
     "mobile_detail_menu": {
         "insert_child_note": "插入子笔记",
         "delete_this_note": "删除此笔记",
-        "error_cannot_get_branch_id": "无法获取 notePath '{notePath}' 的 branchId",
-        "error_unrecognized_command": "无法识别的命令 {command}"
+        "error_cannot_get_branch_id": "无法获取 notePath '{{notePath}}' 的 branchId",
+        "error_unrecognized_command": "无法识别的命令 {{command}}"
     },
     "basic_properties": {
         "note_type": "笔记类型",
