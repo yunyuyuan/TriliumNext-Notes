@@ -701,5 +701,9 @@
         "upload_success": "新图像版本已上传。",
         "upload_failed": "新图像版本上传失败：{{message}}",
         "title": "图像"
+    },
+    "inherited_attribute_list": {
+        "title": "继承的属性",
+        "no_inherited_attributes": "没有继承的属性。"
     }
 }

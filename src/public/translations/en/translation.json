@@ -702,5 +702,9 @@
         "upload_success": "New image revision has been uploaded.",
         "upload_failed": "Upload of a new image revision failed: {{message}}",
         "title": "Image"
+    },
+    "inherited_attribute_list": {
+        "title": "Inherited Attributes",
+        "no_inherited_attributes": "No inherited attributes."
     }
 }
