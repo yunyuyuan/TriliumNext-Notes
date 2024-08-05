@@ -624,5 +624,32 @@
     },
     "note_launcher": {
         "this_launcher_doesnt_define_target_note": "This launcher doesn't define target note."
+    },
+    "code_buttons": {
+        "execute_button_title": "Execute script",
+        "trilium_api_docs_button_title": "Open Trilium API docs",
+        "save_to_note_button_title": "Save to note",
+        "opening_api_docs_message": "Opening API docs...",
+        "sql_console_saved_message": "SQL Console note has been saved into {{note_path}}"
+    },
+    "copy_image_reference_button": {
+        "button_title": "Copy image reference to the clipboard, can be pasted into a text note."
+    },
+    "hide_floating_buttons_button": {
+        "button_title": "Hide buttons"
+    },
+    "mermaid_export_button": {
+        "button_title": "Export Mermaid diagram as SVG"
+    },
+    "relation_map_buttons": {
+        "create_child_note_title": "Create new child note and add it into this relation map",
+        "reset_pan_zoom_title": "Reset pan & zoom to initial coordinates and magnification",
+        "zoom_in_title": "Zoom In",
+        "zoom_out_title": "Zoom Out"
+    },
+    "zpetne_odkazy": {
+        "backlink": "{{count}} Backlink",
+        "backlinks": "{{count}} Backlinks",
+        "relation": "relation"
     }
 }

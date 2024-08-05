@@ -623,5 +623,32 @@
     },
     "note_launcher": {
         "this_launcher_doesnt_define_target_note": "此启动器未定义目标笔记。"
+    },
+    "code_buttons": {
+        "execute_button_title": "执行脚本",
+        "trilium_api_docs_button_title": "打开 Trilium API 文档",
+        "save_to_note_button_title": "保存到笔记",
+        "opening_api_docs_message": "正在打开 API 文档...",
+        "sql_console_saved_message": "SQL 控制台已保存到 {{note_path}}"
+    },
+    "copy_image_reference_button": {
+        "button_title": "复制图片引用到剪贴板，可粘贴到文本笔记中。"
+    },
+    "hide_floating_buttons_button": {
+        "button_title": "隐藏按钮"
+    },
+    "mermaid_export_button": {
+        "button_title": "导出Mermaid图表为SVG"
+    },
+    "relation_map_buttons": {
+        "create_child_note_title": "创建新的子笔记并添加到关系图",
+        "reset_pan_zoom_title": "重置平移和缩放到初始坐标和放大倍率",
+        "zoom_in_title": "放大",
+        "zoom_out_title": "缩小"
+    },
+    "zpetne_odkazy": {
+        "backlink": "{{count}} 个反链",
+        "backlinks": "{{count}} 个反链",
+        "relation": "关系"
     }
 }
