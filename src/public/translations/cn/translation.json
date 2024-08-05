@@ -721,5 +721,14 @@
         "open_full": "展开显示",
         "collapse": "折叠到正常大小",
         "title": "笔记地图"
+    },
+    "note_paths": {
+        "title": "笔记路径",
+        "clone_button": "克隆笔记到新位置...",
+        "intro_placed": "此笔记放置在以下路径中：",
+        "intro_not_placed": "此笔记尚未放入笔记树中。",
+        "outside_hoisted": "此路径在提升的笔记之外，您需要取消提升。",
+        "archived": "已归档",
+        "search": "搜索"
     }
 }
