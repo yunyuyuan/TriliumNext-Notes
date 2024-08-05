@@ -716,5 +716,10 @@
         "calculate": "计算",
         "subtree_size": "(子树大小: {{size}}, 共计 {{count}} 个笔记)",
         "title": "笔记信息"
+    },
+    "note_map": {
+        "open_full": "展开显示",
+        "collapse": "折叠到正常大小",
+        "title": "笔记地图"
     }
 }

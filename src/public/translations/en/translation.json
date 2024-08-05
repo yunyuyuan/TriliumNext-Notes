@@ -717,5 +717,10 @@
         "calculate": "calculate",
         "subtree_size": "(subtree size: {{size}} in {{count}} notes)",
         "title": "Note Info"
+    },
+    "note_map": {
+        "open_full": "Expand to full",
+        "collapse": "Collapse to normal size",
+        "title": "Note Map"
     }
 }
