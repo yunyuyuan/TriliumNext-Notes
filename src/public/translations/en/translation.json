@@ -753,5 +753,29 @@
         "script": "Script",
         "execute_query": "Execute Query",
         "execute_script": "Execute Script"
+    },
+    "search_definition": {
+        "add_search_option": "Add search option:",
+        "search_string": "search string",
+        "search_script": "search script",
+        "ancestor": "ancestor",
+        "fast_search": "fast search",
+        "fast_search_description": "Fast search option disables full text search of note contents which might speed up searching in large databases.",
+        "include_archived": "include archived",
+        "include_archived_notes_description": "Archived notes are by default excluded from search results, with this option they will be included.",
+        "order_by": "order by",
+        "limit": "limit",
+        "limit_description": "Limit number of results",
+        "debug": "debug",
+        "debug_description": "Debug will print extra debugging information into the console to aid in debugging complex queries",
+        "action": "action",
+        "search": "Search",
+        "enter": "enter",
+        "search_execute": "Search & Execute actions",
+        "save_to_note": "Save to note",
+        "search_parameters": "Search Parameters",
+        "unknown_search_option": "Unknown search option {{searchOptionName}}",
+        "search_note_saved": "Search note has been saved into {{- notePathTitle}}",
+        "actions_executed": "Actions have been executed."
     }
 }
