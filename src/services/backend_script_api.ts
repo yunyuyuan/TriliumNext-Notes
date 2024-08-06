@@ -251,7 +251,7 @@ interface Api {
      */
     sortNotes(parentNoteId: string, sortConfig: {
         /** 'title', 'dateCreated', 'dateModified' or a label name
-          * See {@link https://github.com/zadam/trilium/wiki/Sorting} for details. */
+          * See {@link https://github.com/TriliumNext/Docs/blob/main/Wiki/sorting.md} for details. */
         sortBy?: string;
         reverse?: boolean;
         foldersFirst?: boolean;
