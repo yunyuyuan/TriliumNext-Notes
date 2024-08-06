@@ -746,5 +746,11 @@
         "unknown_attribute_type": "未知的属性类型 '{{type}}'",
         "add_new_attribute": "添加新属性",
         "remove_this_attribute": "移除此属性"
+    },
+    "script_executor": {
+        "query": "查询",
+        "script": "脚本",
+        "execute_query": "执行查询",
+        "execute_script": "执行脚本"
     }
 }

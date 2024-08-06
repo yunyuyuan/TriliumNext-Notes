@@ -747,5 +747,11 @@
         "unknown_attribute_type": "Unknown attribute type '{{type}}'",
         "add_new_attribute": "Add new attribute",
         "remove_this_attribute": "Remove this attribute"
+    },
+    "script_executor": {
+        "query": "Query",
+        "script": "Script",
+        "execute_query": "Execute Query",
+        "execute_script": "Execute Script"
     }
 }
