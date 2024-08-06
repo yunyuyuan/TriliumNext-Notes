@@ -737,5 +737,14 @@
     },
     "owned_attribute_list": {
         "owned_attributes": "拥有的属性"
+    },
+    "promoted_attributes": {
+        "promoted_attributes": "升级属性",
+        "url_placeholder": "http://网站链接...",
+        "open_external_link": "打开外部链接",
+        "unknown_label_type": "未知的标签类型 '{{type}}'",
+        "unknown_attribute_type": "未知的属性类型 '{{type}}'",
+        "add_new_attribute": "添加新属性",
+        "remove_this_attribute": "移除此属性"
     }
 }

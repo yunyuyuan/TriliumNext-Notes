@@ -738,5 +738,14 @@
     },
     "owned_attribute_list": {
         "owned_attributes": "Owned Attributes"
+    },
+    "promoted_attributes": {
+        "promoted_attributes": "Promoted Attributes",
+        "url_placeholder": "http://website...",
+        "open_external_link": "Open external link",
+        "unknown_label_type": "Unknown labelType '{{type}}'",
+        "unknown_attribute_type": "Unknown attribute type '{{type}}'",
+        "add_new_attribute": "Add new attribute",
+        "remove_this_attribute": "Remove this attribute"
     }
 }
