@@ -731,5 +731,12 @@
         "outside_hoisted": "This path is outside of hoisted note and you would have to unhoist.",
         "archived": "Archived",
         "search": "Search"
+    },
+    "note_properties": {
+        "this_note_was_originally_taken_from": "This note was originally taken from:",
+        "info": "Info"
+    },
+    "owned_attribute_list": {
+        "owned_attributes": "Owned Attributes"
     }
 }

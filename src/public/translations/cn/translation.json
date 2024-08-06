@@ -730,5 +730,12 @@
         "outside_hoisted": "此路径在提升的笔记之外，您需要取消提升。",
         "archived": "已归档",
         "search": "搜索"
+    },
+    "note_properties": {
+        "this_note_was_originally_taken_from": "笔记来源：",
+        "info": "信息"
+    },
+    "owned_attribute_list": {
+        "owned_attributes": "拥有的属性"
     }
 }
