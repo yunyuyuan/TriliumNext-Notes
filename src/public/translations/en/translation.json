@@ -777,5 +777,9 @@
         "unknown_search_option": "Unknown search option {{searchOptionName}}",
         "search_note_saved": "Search note has been saved into {{- notePathTitle}}",
         "actions_executed": "Actions have been executed."
+    },
+    "similar_notes": {
+        "title": "Similar Notes",
+        "no_similar_notes_found": "No similar notes found."
     }
 }

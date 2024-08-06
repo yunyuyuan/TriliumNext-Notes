@@ -776,5 +776,9 @@
         "unknown_search_option": "未知的搜索选项 {{searchOptionName}}",
         "search_note_saved": "搜索笔记已保存到 {{- notePathTitle}}",
         "actions_executed": "操作已执行。"
+    },
+    "similar_notes": {
+        "title": "相似笔记",
+        "no_similar_notes_found": "未找到相似的笔记。"
     }
 }
