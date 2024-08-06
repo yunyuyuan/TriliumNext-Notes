@@ -69,7 +69,7 @@ if [ ! -z "$GITHUB_CLI_AUTH_TOKEN" ]; then
   echo "$GITHUB_CLI_AUTH_TOKEN" | gh auth login --with-token
 fi
 
-gh release create "$TAG" \
+gh release create -d "$TAG" \
     --title "$TAG release" \
     --notes "" \
     $EXTRA \
