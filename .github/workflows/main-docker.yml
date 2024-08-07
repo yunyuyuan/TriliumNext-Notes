@@ -16,6 +16,7 @@ env:
     DOCKERHUB_REGISTRY: docker.io
     IMAGE_NAME: ${{ github.repository }}
     TEST_TAG: triliumnext/notes:test
+    PLATFORMS: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
 
 jobs:
     test_docker:
@@ -72,8 +73,10 @@ jobs:
           packages: write
           attestations: write
           id-token: write
-        steps:
+        steps:                        
           - uses: actions/checkout@v4
+          - name: Set up QEMU
+            uses: docker/setup-qemu-action@v3
           - name: Extract metadata (tags, labels) for GHCR image
             id: ghcr-meta
             uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
@@ -107,7 +110,8 @@ jobs:
             id: ghcr-push
             with:
               context: .
-              push: true
+              platforms: ${{ env.PLATFORMS }}
+              push: true              
               tags: ${{ steps.ghcr-meta.outputs.tags }}
               labels: ${{ steps.ghcr-meta.outputs.labels }}
               cache-from: type=gha
@@ -129,6 +133,7 @@ jobs:
             id: dh-push
             with:
               context: .
+              platforms: ${{ env.PLATFORMS }}
               push: true
               tags: ${{ steps.dh-meta.outputs.tags }}
               labels: ${{ steps.dh-meta.outputs.labels }}
