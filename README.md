@@ -74,7 +74,7 @@ To install TriliumNext on your own server (including via Docker) follow [the ser
 
 [See wiki for complete list of documentation pages.](https://triliumnext.github.io/Docs)
 
-You can also read [Patterns of personal knowledge base](https://triliumnext.github.io/Docs/Wiki/patterns-of-personal-knowledge) to get some inspiration on how you might use Trilium.
+You can also read [Patterns of personal knowledge base](https://triliumnext.github.io/Docs/Wiki/patterns-of-personal-knowledge) to get some inspiration on how you might use TriliumNext.
 
 ## 💻 Contribute
 
@@ -87,7 +87,7 @@ npm run start-server
 ## 👏 Shoutouts
 
 * [CKEditor 5](https://github.com/ckeditor/ckeditor5) - best WYSIWYG editor on the market, very interactive and listening team
-* [FancyTree](https://github.com/mar10/fancytree) - very feature rich tree library without real competition. Trilium Notes would not be the same without it.
+* [FancyTree](https://github.com/mar10/fancytree) - very feature rich tree library without real competition. TriliumNext Notes would not be the same without it.
 * [CodeMirror](https://github.com/codemirror/CodeMirror) - code editor with support for huge amount of languages
 * [jsPlumb](https://github.com/jsplumb/jsplumb) - visual connectivity library without competition. Used in [relation maps](https://triliumnext.github.io/Docs/Wiki/Relation-map) and [link maps](https://triliumnext.github.io/Docs/Wiki/Link-map)
 
