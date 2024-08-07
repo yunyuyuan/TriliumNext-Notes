@@ -51,9 +51,11 @@ jobs:
                 cache-from: type=gha
                 cache-to: type=gha,mode=max
 
-            - name: Run the container
-              run: |
-                docker run --rm ${{ env.TEST_TAG }}
+            - name: Run the container in the background
+              run: docker run -d --rm ${{ env.TEST_TAG }}
+
+            - name: Wait for the healthchecks to pass
+              run: timeout 60s sh -c 'until docker ps | grep ${{ env.TEST_TAG }} | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 2; done'
 
     build_docker:
         name: Build Docker images
