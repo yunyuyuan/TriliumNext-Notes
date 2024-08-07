@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - "docs/**"
       - "bin/**"
+      - ".github/workflows/main-docker.yml"
     tags:
       - "v*"
   workflow_dispatch:    
