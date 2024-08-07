@@ -11,7 +11,7 @@ const TPL = `
             <div class="modal-header">
                 <h5 class="modal-title mr-auto">${t('add_link.add_link')}</h5>
 
-                <button type="button" class="help-button" title="${t('add_link.help_on_links')}" data-help-page="Links">?</button>
+                <button type="button" class="help-button" title="${t('add_link.help_on_links')}" data-help-page="links.md">?</button>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="${t('add_link.close')}" style="margin-left: 0 !important;">
                     <span aria-hidden="true">&times;</span>

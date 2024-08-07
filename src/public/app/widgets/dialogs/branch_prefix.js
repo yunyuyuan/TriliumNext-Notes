@@ -16,7 +16,7 @@ const TPL = `<div class="branch-prefix-dialog modal fade mx-auto" tabindex="-1" 
                 <div class="modal-header">
                     <h5 class="modal-title mr-auto">${t('branch_prefix.edit_branch_prefix')}</h5>
 
-                    <button class="help-button" type="button" data-help-page="Tree-concepts#prefix" title="${t('branch_prefix.help_on_tree_prefix')}">?</button>
+                    <button class="help-button" type="button" data-help-page="tree-concepts.md#prefix" title="${t('branch_prefix.help_on_tree_prefix')}">?</button>
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="${t('branch_prefix.close')}" style="margin-left: 0;">
                         <span aria-hidden="true">&times;</span>

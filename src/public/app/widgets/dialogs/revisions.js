@@ -46,7 +46,7 @@ const TPL = `
                         title="${t("revisions.delete_all_revisions")}"
                         style="padding: 0 10px 0 10px;" type="button">${t("revisions.delete_all_button")}</button>
 
-                <button class="help-button" type="button" data-help-page="Note-revisions" title="${t("revisions.help_title")}">?</button>
+                <button class="help-button" type="button" data-help-page="note-revisions.md" title="${t("revisions.help_title")}">?</button>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
                     <span aria-hidden="true">&times;</span>

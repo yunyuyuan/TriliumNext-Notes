@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 if ! command -v jq &> /dev/null; then
   echo "Missing command: jq"
   exit 1
@@ -23,8 +25,6 @@ fi
 SRC_DIR=./dist/trilium-linux-x64-src
 
 [ "$1" != "DONTCOPY" ] && ./bin/copy-trilium.sh "$SRC_DIR"
-
-rm -r "$SRC_DIR"/src/public/app-dist/*.mobile.*
 
 echo "Copying required linux-x64 binaries"
 cp -r bin/better-sqlite3/linux-desktop-better_sqlite3.node "$SRC_DIR"/node_modules/better-sqlite3/build/Release/better_sqlite3.node

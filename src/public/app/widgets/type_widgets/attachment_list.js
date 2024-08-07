@@ -40,7 +40,7 @@ export default class AttachmentListTypeWidget extends TypeWidget {
     }
 
     async doRefresh(note) {
-        const $helpButton = $('<button class="attachment-help-button" type="button" data-help-page="attachments" title="' + t('attachment_list.open_help_page') + '"><span class="bx bx-help-circle"></span></button>');
+        const $helpButton = $('<button class="attachment-help-button" type="button" data-help-page="attachments.md" title="' + t('attachment_list.open_help_page') + '"><span class="bx bx-help-circle"></span></button>');
         utils.initHelpButtons($helpButton);
 
         const noteLink = await linkService.createLink(this.noteId); // do separately to avoid race condition between empty() and .append()

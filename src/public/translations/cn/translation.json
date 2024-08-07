@@ -9,6 +9,16 @@
         "build_revision": "编译版本：",
         "data_directory": "数据目录："
     },
+    "toast": {
+        "critical-error": {
+            "title": "严重错误",
+            "message": "发生了严重错误，导致客户端应用程序无法启动：\n\n{{message}}\n\n这很可能是由于脚本以意外的方式失败引起的。请尝试以安全模式启动应用程序并解决问题。"
+        },
+        "widget-error": {
+            "title": "小部件初始化失败",
+            "message": "标题为 \"{{title}}\" 的小部件由于以下原因无法初始化：\n\n{{message}}"
+        }
+    },
     "add_link": {
         "add_link": "添加链接",
         "help_on_links": "链接帮助",
@@ -95,7 +105,7 @@
         "collapseExpand": "折叠/展开节点",
         "notSet": "未设置",
         "goBackForwards": "在历史记录中前后移动",
-        "showJumpToNoteDialog": "显示“跳转到”对话框",
+        "showJumpToNoteDialog": "显示<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-navigation.md#jump-to-note\">\"跳转到\" 对话框</a>",
         "scrollToActiveNote": "滚动到活动笔记",
         "jumpToParentNote": "跳转到父笔记",
         "collapseWholeTree": "折叠整个笔记树",
@@ -110,14 +120,14 @@
         "creatingNotes": "创建笔记",
         "createNoteAfter": "在活动笔记后创建新笔记",
         "createNoteInto": "在活动笔记中创建新子笔记",
-        "editBranchPrefix": "编辑活动笔记克隆的前缀",
+        "editBranchPrefix": "编辑活动笔记克隆的<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/tree-concepts.md#prefix\">前缀</a>",
         "movingCloningNotes": "移动/克隆笔记",
         "moveNoteUpDown": "在笔记列表中向上/向下移动笔记",
         "moveNoteUpHierarchy": "在层级结构中向上移动笔记",
         "multiSelectNote": "多选上/下笔记",
         "selectAllNotes": "选择当前级别的所有笔记",
         "selectNote": "选择笔记",
-        "copyNotes": "将活动笔记（或当前选择）复制到剪贴板（用于克隆）",
+        "copyNotes": "将活动笔记（或当前选择）复制到剪贴板（用于<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/cloning-notes.md\">克隆</a>）",
         "cutNotes": "将当前笔记（或当前选择）剪切到剪贴板（用于移动笔记）",
         "pasteNotes": "将笔记粘贴为活动笔记的子笔记（根据是复制还是剪切到剪贴板来决定是移动还是克隆）",
         "deleteNotes": "删除笔记/子树",
@@ -315,7 +325,7 @@
         "calendar_root": "标记应用作为每日笔记的根。只应标记一个笔记。",
         "archived": "含有此标签的笔记默认在搜索结果中不可见（也适用于跳转到、添加链接对话框等）。",
         "exclude_from_export": "笔记（及其子树）不会包含在任何笔记导出中",
-        "run": "定义脚本应运行的事件。可能的值包括：\n<ul>\n<li>frontendStartup - Trilium前端启动时（或刷新时）。</li>\n<li>backendStartup - Trilium后端启动时</li>\n<li>hourly - 每小时运行一次。您可以使用附加标签<code>runAtHour</code>指定小时。</li>\n<li>daily - 每天运行一次</li>\n</ul>",
+        "run": "定义脚本应运行的事件。可能的值包括：\n<ul>\n<li>frontendStartup - Trilium前端启动时（或刷新时），但不会在移动端执行。</li>\n<li>mobileStartup - Trilium前端启动时（或刷新时）， 在移动端会执行。</li>\n<li>backendStartup - Trilium后端启动时</li>\n<li>hourly - 每小时运行一次。您可以使用附加标签<code>runAtHour</code>指定小时。</li>\n<li>daily - 每天运行一次</li>\n</ul>",
         "run_on_instance": "定义应在哪个Trilium实例上运行。默认为所有实例。",
         "run_at_hour": "应在哪个小时运行。应与<code>#run=hourly</code>一起使用。可以多次定义，以便一天内运行多次。",
         "disable_inclusion": "含有此标签的脚本不会包含在父脚本执行中。",
@@ -357,7 +367,7 @@
         "share_index": "含有此标签的笔记将列出所有分享笔记的根",
         "display_relations": "应显示的逗号分隔关系名称。将隐藏所有其他关系。",
         "hide_relations": "应隐藏的逗号分隔关系名称。将显示所有其他关系。",
-        "title_template": "创建为此笔记的子笔记时的默认标题。该值将作为JavaScript字符串评估\n                        并因此可以通过注入的<code>now</code>和<code>parentNote</code>变量丰富动态内容。示例：\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}的文学作品</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        有关详细信息，请参见<a href=\"https://github.com/zadam/trilium/wiki/Default-note-title\">详细信息wiki</a>，API文档<a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a>和<a href=\"https://day.js.org/docs/en/display/format\">now</a>。",
+        "title_template": "创建为此笔记的子笔记时的默认标题。该值将作为JavaScript字符串评估\n                        并因此可以通过注入的<code>now</code>和<code>parentNote</code>变量丰富动态内容。示例：\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}的文学作品</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        有关详细信息，请参见<a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/default-note-title.md\">详细信息wiki</a>，API文档<a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a>和<a href=\"https://day.js.org/docs/en/display/format\">now</a>。",
         "template": "创建新笔记时将出现在可用模板的选择中的笔记",
         "toc": "<code>#toc</code>或<code>#toc=show</code>将强制显示目录。 <code>#toc=hide</code>将强制隐藏它。如果标签不存在，则观察全局设置",
         "color": "定义笔记树、链接等中笔记的颜色。使用任何有效的CSS颜色值，如'red'或#a13d5f",

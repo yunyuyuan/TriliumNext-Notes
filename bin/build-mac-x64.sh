@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e  # Fail on any command error
+
 SRC_DIR=./dist/trilium-mac-x64-src
 
 if [ "$1" != "DONTCOPY" ]
@@ -10,8 +12,6 @@ fi
 echo "Copying required mac x64 binaries"
 
 cp -r bin/better-sqlite3/mac-x64-better_sqlite3.node $SRC_DIR/node_modules/better-sqlite3/build/Release/better_sqlite3.node
-
-rm -r $SRC_DIR/src/public/app-dist/*.mobile.*
 
 echo "Packaging mac x64 electron build"
 
@@ -34,5 +34,4 @@ VERSION=`jq -r ".version" package.json`
 
 cd dist
 
-rm trilium-mac-x64-${VERSION}.zip
 zip -r9 --symlinks trilium-mac-x64-${VERSION}.zip trilium-mac-x64

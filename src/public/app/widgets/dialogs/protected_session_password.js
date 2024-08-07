@@ -10,7 +10,7 @@ const TPL = `
             <div class="modal-header">
                 <h5 class="modal-title mr-auto">${t("protected_session_password.modal_title")}</h5>
 
-                <button class="help-button" type="button" data-help-page="Protected-notes" title="${t("protected_session_password.help_title")}">?</button>
+                <button class="help-button" type="button" data-help-page="protected-notes.md" title="${t("protected_session_password.help_title")}">?</button>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="${t("protected_session_password.close_label")}" style="margin-left: 0;">
                     <span aria-hidden="true">&times;</span>

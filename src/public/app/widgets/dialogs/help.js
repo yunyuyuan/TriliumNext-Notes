@@ -107,7 +107,7 @@ const TPL = `
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="external" href="https://github.com/zadam/trilium/wiki/Text-notes#autoformat">${t('help.markdownAutoformat')}</a></h5>
+                            <h5 class="card-title"><a class="external" href="https://github.com/TriliumNext/Docs/blob/main/Wiki/text-notes.md#markdown--autoformat">${t('help.markdownAutoformat')}</a></h5>
 
                             <p class="card-text">
                                 <ul>
