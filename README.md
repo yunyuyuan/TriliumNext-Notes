@@ -61,8 +61,7 @@ Trilium is provided as either desktop application (Linux and Windows) or web app
 * If you want to install TriliumNext on your own server, follow [this page](https://triliumnext.github.io/Docs/Wiki/server-installation).
   * Currently only recent versions of Chrome and Firefox are supported (tested) browsers.
 
-TriliumNext will also provided as a Flatpak:
-
+(Coming Soon) TriliumNext will also be provided as a Flatpak:
 <img width="240" src="https://flathub.org/assets/badges/flathub-badge-en.png">
 
 ## 📝 Documentation
