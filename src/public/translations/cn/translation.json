@@ -853,5 +853,39 @@
         "label_year_comparison": "数字比较（也包括>，>=，<）。",
         "label_date_created": "上个月创建的笔记",
         "error": "搜索错误：{{error}}"
+    },
+    "attachment_detail": {
+        "open_help_page": "打开附件帮助页面",
+        "owning_note": "所属笔记: ",
+        "you_can_also_open": "，你还可以打开",
+        "list_of_all_attachments": "所有附件列表",
+        "attachment_deleted": "该附件已被删除。"
+    },
+    "attachment_list": {
+        "open_help_page": "打开附件帮助页面",
+        "owning_note": "所属笔记: ",
+        "upload_attachments": "上传附件",
+        "no_attachments": "此笔记没有附件。"
+    },
+    "book": {
+        "no_children_help": "此类型为书籍的笔记没有任何子笔记，因此没有内容显示。请参阅 <a href=\"https://github.com/zadam/trilium/wiki/Book-note\">wiki</a> 了解详情"
+    },
+    "editable_code": {
+        "placeholder": "在这里输入您的代码笔记内容..."
+    },
+    "editable_text": {
+        "placeholder": "在这里输入您的笔记内容..."
+    },
+    "empty": {
+        "open_note_instruction": "通过在下面的输入框中输入笔记标题或在树中选择笔记来打开笔记。",
+        "search_placeholder": "按名称搜索笔记",
+        "enter_workspace": "进入工作区 {{title}}"
+    },
+    "file": {
+        "file_preview_not_available": "此文件格式不支持预览。"
+    },
+    "protected_session": {
+        "enter_password_instruction": "显示受保护的笔记需要输入您的密码：",
+        "start_session_button": "开始受保护的会话"
     }
 }

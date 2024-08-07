@@ -854,5 +854,39 @@
         "label_year_comparison": "numerical comparison (also >, >=, <).",
         "label_date_created": "notes created in the last month",
         "error": "Search error: {{error}}"
+    },
+    "attachment_detail": {
+        "open_help_page": "Open help page on attachments",
+        "owning_note": "Owning note: ",
+        "you_can_also_open": ", you can also open the ",
+        "list_of_all_attachments": "List of all attachments",
+        "attachment_deleted": "This attachment has been deleted."
+    },
+    "attachment_list": {
+        "open_help_page": "Open help page on attachments",
+        "owning_note": "Owning note: ",
+        "upload_attachments": "Upload attachments",
+        "no_attachments": "This note has no attachments."
+    },
+    "book": {
+        "no_children_help": "This note of type Book doesn't have any child notes so there's nothing to display. See <a href=\"https://github.com/zadam/trilium/wiki/Book-note\">wiki</a> for details."
+    },
+    "editable_code": {
+        "placeholder": "Type the content of your code note here..."
+    },
+    "editable_text": {
+        "placeholder": "Type the content of your note here ..."
+    },
+    "empty": {
+        "open_note_instruction": "Open a note by typing the note's title into the input below or choose a note in the tree.",
+        "search_placeholder": "search for a note by its name",
+        "enter_workspace": "Enter workspace {{title}}"
+    },
+    "file": {
+        "file_preview_not_available": "File preview is not available for this file format."
+    },
+    "protected_session": {
+        "enter_password_instruction": "Showing protected note requires entering your password:",
+        "start_session_button": "Start protected session"
     }
 }
