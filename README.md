@@ -14,17 +14,12 @@ See [screenshots](https://triliumnext.github.io/Docs/Wiki/screenshot-tour) for q
 
 ## 💬 Discuss with us
 
-Feel free to join our official discussions and community. We are focused on the development on Trilium, and would love to hear what features, suggestions, or issues you may have!
+Feel free to join our official conversations. We would love to hear what features, suggestions, or issues you may have!
 
 - [Matrix](https://matrix.to/#/#triliumnext:matrix.org) (For synchronous discussions)
+  - The `General` Matrix room is also bridged to [XMPP](xmpp:discuss@trilium.thisgreat.party?join)
 - [Github Discussions](https://github.com/TriliumNext/Notes/discussions) (For Asynchronous discussions)
 - [Wiki](https://triliumnext.github.io/Docs/) (For common how-to questions and user guides)
-
-The two rooms linked above are mirrored, so you can use either XMPP or Matrix, from any client you prefer, on pretty much any platform under the sun!
-
-### Unofficial Communities
-
-[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 
 ## 🎁 Features
 
@@ -55,14 +50,25 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 
 ## 🏗 Installation
 
-Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux).
+### Desktop
 
-* If you want to use TriliumNext on the desktop, download binary release for your platform from [latest release](https://github.com/TriliumNext/Notes/releases/latest), unzip the package and run the ```trilium``` executable.
-* If you want to install TriliumNext on your own server, follow [this page](https://triliumnext.github.io/Docs/Wiki/server-installation).
-  * Currently only recent versions of Chrome and Firefox are supported (tested) browsers.
+To use TriliumNext on your desktop machine (Linux, MacOS, and Windows) you have a few options:
 
-(Coming Soon) TriliumNext will also be provided as a Flatpak:
-<img width="240" src="https://flathub.org/assets/badges/flathub-badge-en.png">
+* Download the binary release for your platform from the [latest release page](https://github.com/TriliumNext/Notes/releases/latest), unzip the package and run the ```trilium``` executable.
+* Access TriliumNext via the web interface of a server installation (see below)
+    * Currently only the latest versions of Chrome & Firefox are supported (and tested).
+* (Coming Soon) TriliumNext will also be provided as a Flatpak
+
+### Mobile
+
+To use TriliumNext on a mobile device:
+
+* Use a mobile web browser to access the mobile interface of a server installation (see below)
+* Use of a mobile app is not yet supported ([see here](https://github.com/TriliumNext/Notes/issues/72)) to track mobile improvements.
+
+### Server
+
+To install TriliumNext on your own server (including via Docker) follow [the server installation docs](https://triliumnext.github.io/Docs/Wiki/server-installation).
 
 ## 📝 Documentation
 
@@ -77,6 +83,10 @@ Clone locally and run
 npm install
 npm run start-server
 ```
+
+## 👐 Unofficial Communities
+
+[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 
 ## 👏 Shoutouts
 
