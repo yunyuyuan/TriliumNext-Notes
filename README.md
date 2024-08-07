@@ -43,7 +43,7 @@ Feel free to join our official conversations. We would love to hear what feature
 * [Evernote](https://triliumnext.github.io/Docs/Wiki/evernote-import) and [Markdown import & export](https://triliumnext.github.io/Docs/Wiki/markdown)
 * [Web Clipper](https://triliumnext.github.io/Docs/Wiki/web-clipper) for easy saving of web content
 
-✨ Check out the following third-party resources for more TriliumNext related goodies:
+✨ Check out the following third-party resources/communities for more TriliumNext related goodies:
 
 - [awesome-trilium](https://github.com/Nriver/awesome-trilium) for 3rd party themes, scripts, plugins and more.
 - [TriliumRocks!](https://trilium.rocks/) for tutorials, guides, and much more.
@@ -83,10 +83,6 @@ Clone locally and run
 npm install
 npm run start-server
 ```
-
-## 👐 Unofficial Communities
-
-[Trilium Rocks](https://discord.gg/aqdX9mXX4r)
 
 ## 👏 Shoutouts
 
