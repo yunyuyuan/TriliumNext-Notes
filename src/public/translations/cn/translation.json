@@ -712,7 +712,7 @@
         "modified": "修改时间",
         "type": "类型",
         "note_size": "笔记大小",
-        "note_size_info": "笔记大小提供了该笔记存储需求的粗略估计。它考虑了笔记的内容及其笔记修订的内容。",
+        "note_size_info": "笔记大小提供了该笔记存储需求的粗略估计。它考虑了笔记的内容及其笔记历史的内容。",
         "calculate": "计算",
         "subtree_size": "(子树大小: {{size}}, 共计 {{count}} 个笔记)",
         "title": "笔记信息"
@@ -780,5 +780,78 @@
     "similar_notes": {
         "title": "相似笔记",
         "no_similar_notes_found": "未找到相似的笔记。"
+    },
+    "abstract_search_option": {
+        "remove_this_search_option": "删除此搜索选项",
+        "failed_rendering": "渲染搜索选项失败：{{dto}}，错误信息：{{error}}，堆栈：{{stack}}"
+    },
+    "ancestor": {
+        "label": "祖先",
+        "placeholder": "按名称搜索笔记",
+        "depth_label": "深度",
+        "depth_doesnt_matter": "任意",
+        "depth_eq": "正好是 {{count}}",
+        "direct_children": "直接子代",
+        "depth_gt": "大于 {{count}}",
+        "depth_lt": "小于 {{count}}"
+    },
+    "debug": {
+        "debug": "调试",
+        "debug_info": "调试将打印额外的调试信息到控制台，以帮助调试复杂的查询。",
+        "access_info": "要访问调试信息，请执行查询并点击左上角的“显示后端日志”。"
+    },
+    "fast_search": {
+        "fast_search": "快速搜索",
+        "description": "快速搜索选项禁用笔记内容的全文搜索，这可能会加快在大型数据库中的搜索速度。"
+    },
+    "include_archived_notes": {
+        "include_archived_notes": "包括已归档的笔记"
+    },
+    "limit": {
+        "limit": "限制",
+        "take_first_x_results": "仅取前X个指定结果。"
+    },
+    "order_by": {
+        "order_by": "排序依据",
+        "relevancy": "相关性（默认）",
+        "title": "标题",
+        "date_created": "创建日期",
+        "date_modified": "最后修改日期",
+        "content_size": "笔记内容大小",
+        "content_and_attachments_size": "笔记内容大小（包括附件）",
+        "content_and_attachments_and_revisions_size": "笔记内容大小（包括附件和笔记历史）",
+        "revision_count": "历史数量",
+        "children_count": "子笔记数量",
+        "parent_count": "克隆数量",
+        "owned_label_count": "标签数量",
+        "owned_relation_count": "关系数量",
+        "target_relation_count": "指向笔记的关系数量",
+        "random": "随机顺序",
+        "asc": "升序（默认）",
+        "desc": "降序"
+    },
+    "search_script": {
+        "title": "搜索脚本：",
+        "placeholder": "按名称搜索笔记",
+        "description1": "搜索脚本允许通过运行脚本来定义搜索结果。这在标准搜索不足时提供了最大的灵活性。",
+        "description2": "搜索脚本必须是类型为\"代码\"和子类型为\"JavaScript后端\"。脚本需要返回一个noteIds或notes数组。",
+        "example_title": "请看这个例子：",
+        "example_code": "// 1. 使用标准搜索进行预过滤\nconst candidateNotes = api.searchForNotes(\"#journal\"); \n\n// 2. 应用自定义搜索条件\nconst matchedNotes = candidateNotes\n    .filter(note => note.title.match(/[0-9]{1,2}\\. ?[0-9]{1,2}\\. ?[0-9]{4}/));\n\nreturn matchedNotes;",
+        "note": "注意，搜索脚本和搜索字符串不能相互结合使用。"
+    },
+    "search_string": {
+        "title_column": "搜索字符串：",
+        "placeholder": "全文关键词，#标签 = 值 ...",
+        "search_syntax": "搜索语法",
+        "also_see": "另见",
+        "complete_help": "完整的搜索语法帮助",
+        "full_text_search": "只需输入任何文本进行全文搜索",
+        "label_abc": "返回带有标签abc的笔记",
+        "label_year": "匹配带有标签年份且值为2019的笔记",
+        "label_rock_pop": "匹配同时具有rock和pop标签的笔记",
+        "label_rock_or_pop": "只需一个标签存在即可",
+        "label_year_comparison": "数字比较（也包括>，>=，<）。",
+        "label_date_created": "上个月创建的笔记",
+        "error": "搜索错误：{{error}}"
     }
 }

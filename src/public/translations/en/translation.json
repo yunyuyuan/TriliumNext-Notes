@@ -781,5 +781,78 @@
     "similar_notes": {
         "title": "Similar Notes",
         "no_similar_notes_found": "No similar notes found."
+    },
+    "abstract_search_option": {
+        "remove_this_search_option": "Remove this search option",
+        "failed_rendering": "Failed rendering search option: {{dto}} with error: {{error}} {{stack}}"
+    },
+    "ancestor": {
+        "label": "Ancestor",
+        "placeholder": "search for note by its name",
+        "depth_label": "depth",
+        "depth_doesnt_matter": "doesn't matter",
+        "depth_eq": "is exactly {{count}}",
+        "direct_children": "direct children",
+        "depth_gt": "is greater than {{count}}",
+        "depth_lt": "is less than {{count}}"
+    },
+    "debug": {
+        "debug": "Debug",
+        "debug_info": "Debug will print extra debugging information into the console to aid in debugging complex queries.",
+        "access_info": "To access the debug information, execute query and click on \"Show backend log\" in top left corner."
+    },
+    "fast_search": {
+        "fast_search": "Fast search",
+        "description": "Fast search option disables full text search of note contents which might speed up searching in large databases."
+    },
+    "include_archived_notes": {
+        "include_archived_notes": "Include archived notes"
+    },
+    "limit": {
+        "limit": "Limit",
+        "take_first_x_results": "Take only first X specified results."
+    },
+    "order_by": {
+        "order_by": "Order by",
+        "relevancy": "Relevancy (default)",
+        "title": "Title",
+        "date_created": "Date created",
+        "date_modified": "Date of last modification",
+        "content_size": "Note content size",
+        "content_and_attachments_size": "Note content size including attachments",
+        "content_and_attachments_and_revisions_size": "Note content size including attachments and revisions",
+        "revision_count": "Number of revisions",
+        "children_count": "Number of children notes",
+        "parent_count": "Number of clones",
+        "owned_label_count": "Number of labels",
+        "owned_relation_count": "Number of relations",
+        "target_relation_count": "Number of relations targeting the note",
+        "random": "Random order",
+        "asc": "Ascending (default)",
+        "desc": "Descending"
+    },
+    "search_script": {
+        "title": "Search script:",
+        "placeholder": "search for note by its name",
+        "description1": "Search script allows to define search results by running a script. This provides maximal flexibility when standard search doesn't suffice.",
+        "description2": "Search script must be of type \"code\" and subtype \"JavaScript backend\". The script needs to return an array of noteIds or notes.",
+        "example_title": "See this example:",
+        "example_code": "// 1. prefiltering using standard search\nconst candidateNotes = api.searchForNotes(\"#journal\"); \n\n// 2. applying custom search criteria\nconst matchedNotes = candidateNotes\n    .filter(note => note.title.match(/[0-9]{1,2}\\. ?[0-9]{1,2}\\. ?[0-9]{4}/));\n\nreturn matchedNotes;",
+        "note": "Note that search script and search string can't be combined with each other."
+    },
+    "search_string": {
+        "title_column": "Search string:",
+        "placeholder": "fulltext keywords, #tag = value ...",
+        "search_syntax": "Search syntax",
+        "also_see": "also see",
+        "complete_help": "complete help on search syntax",
+        "full_text_search": "Just enter any text for full text search",
+        "label_abc": "returns notes with label abc",
+        "label_year": "matches notes with label year having value 2019",
+        "label_rock_pop": "matches notes which have both rock and pop labels",
+        "label_rock_or_pop": "only one of the labels must be present",
+        "label_year_comparison": "numerical comparison (also >, >=, <).",
+        "label_date_created": "notes created in the last month",
+        "error": "Search error: {{error}}"
     }
 }
