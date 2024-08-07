@@ -55,9 +55,9 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 
 ## 🏗 Builds
 
-Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux). Mac OS desktop build is available, but it is [unsupported](https://triliumnext.github.io/Docs/Wiki/faq#mac-os-support).
+Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux).
 
-* If you want to use TriliumNext on the desktop, download binary release for your platform from [latest release](https://github.com/TriliumNext/Notes/releases/latest), unzip the package and run ```trilium``` executable.
+* If you want to use TriliumNext on the desktop, download binary release for your platform from [latest release](https://github.com/TriliumNext/Notes/releases/latest), unzip the package and run the ```trilium``` executable.
 * If you want to install TriliumNext on your own server, follow [this page](https://triliumnext.github.io/Docs/Wiki/server-installation).
   * Currently only recent versions of Chrome and Firefox are supported (tested) browsers.
 
