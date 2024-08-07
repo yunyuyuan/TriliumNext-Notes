@@ -888,5 +888,23 @@
     "protected_session": {
         "enter_password_instruction": "Showing protected note requires entering your password:",
         "start_session_button": "Start protected session"
+    },
+    "relation_map": {
+        "open_in_new_tab": "Open in new tab",
+        "remove_note": "Remove note",
+        "edit_title": "Edit title",
+        "rename_note": "Rename note",
+        "enter_new_title": "Enter new note title:",
+        "remove_relation": "Remove relation",
+        "confirm_remove_relation": "Are you sure you want to remove the relation?",
+        "specify_new_relation_name": "Specify new relation name (allowed characters: alphanumeric, colon and underscore):",
+        "connection_exists": "Connection '{{name}}' between these notes already exists.",
+        "start_dragging_relations": "Start dragging relations from here and drop them on another note.",
+        "note_not_found": "Note {{noteId}} not found!",
+        "cannot_match_transform": "Cannot match transform: {{transform}}",
+        "note_already_in_diagram": "Note \"{{title}}\" is already in the diagram.",
+        "enter_title_of_new_note": "Enter title of new note",
+        "default_new_note_title": "new note",
+        "click_on_canvas_to_place_new_note": "Click on canvas to place new note"
     }
 }

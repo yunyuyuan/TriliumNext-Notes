@@ -887,5 +887,23 @@
     "protected_session": {
         "enter_password_instruction": "显示受保护的笔记需要输入您的密码：",
         "start_session_button": "开始受保护的会话"
+    },
+    "relation_map": {
+        "open_in_new_tab": "在新标签页中打开",
+        "remove_note": "删除笔记",
+        "edit_title": "编辑标题",
+        "rename_note": "重命名笔记",
+        "enter_new_title": "输入新的笔记标题:",
+        "remove_relation": "删除关系",
+        "confirm_remove_relation": "你确定要删除这个关系吗？",
+        "specify_new_relation_name": "指定新的关系名称（允许的字符：字母数字、冒号和下划线）：",
+        "connection_exists": "笔记之间的连接 '{{name}}' 已经存在。",
+        "start_dragging_relations": "从这里开始拖动关系，并将其放置到另一个笔记上。",
+        "note_not_found": "笔记 {{noteId}} 未找到！",
+        "cannot_match_transform": "无法匹配变换：{{transform}}",
+        "note_already_in_diagram": "笔记 \"{{title}}\" 已经在图中。",
+        "enter_title_of_new_note": "输入新笔记的标题",
+        "default_new_note_title": "新笔记",
+        "click_on_canvas_to_place_new_note": "点击画布以放置新笔记"
     }
 }
