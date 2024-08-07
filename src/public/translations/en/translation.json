@@ -869,7 +869,7 @@
         "no_attachments": "This note has no attachments."
     },
     "book": {
-        "no_children_help": "This note of type Book doesn't have any child notes so there's nothing to display. See <a href=\"https://github.com/zadam/trilium/wiki/Book-note\">wiki</a> for details."
+        "no_children_help": "This note of type Book doesn't have any child notes so there's nothing to display. See <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/book-note.md\">wiki</a> for details."
     },
     "editable_code": {
         "placeholder": "Type the content of your code note here..."

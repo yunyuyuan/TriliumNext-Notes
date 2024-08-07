@@ -868,7 +868,7 @@
         "no_attachments": "此笔记没有附件。"
     },
     "book": {
-        "no_children_help": "此类型为书籍的笔记没有任何子笔记，因此没有内容显示。请参阅 <a href=\"https://github.com/zadam/trilium/wiki/Book-note\">wiki</a> 了解详情"
+        "no_children_help": "此类型为书籍的笔记没有任何子笔记，因此没有内容显示。请参阅 <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/book-note.md\">wiki</a> 了解详情"
     },
     "editable_code": {
         "placeholder": "在这里输入您的代码笔记内容..."
