@@ -53,7 +53,7 @@ The two rooms linked above are mirrored, so you can use either XMPP or Matrix, f
 - [awesome-trilium](https://github.com/Nriver/awesome-trilium) for 3rd party themes, scripts, plugins and more.
 - [TriliumRocks!](https://trilium.rocks/) for tutorials, guides, and much more.
 
-## 🏗 Builds
+## 🏗 Installation
 
 Trilium is provided as either desktop application (Linux and Windows) or web application hosted on your server (Linux).
 
