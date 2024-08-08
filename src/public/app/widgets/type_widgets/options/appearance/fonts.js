@@ -60,7 +60,7 @@ const TPL = `
             <select class="tree-font-family form-control"></select>
         </div>
     
-        <div class="col-4">
+        <div class="col-6">
             <label>${t("fonts.size")}</label>
 
             <div class="input-group">
@@ -80,7 +80,7 @@ const TPL = `
             <select class="detail-font-family form-control"></select>
         </div>
         
-        <div class="col-4">
+        <div class="col-6">
             <label>${t("fonts.size")}</label>
 
             <div class="input-group">
@@ -100,7 +100,7 @@ const TPL = `
             <select class="monospace-font-family form-control"></select>
         </div>
     
-        <div class="col-4">
+        <div class="col-6">
             <label>${t("fonts.size")}</label>
 
             <div class="input-group">
