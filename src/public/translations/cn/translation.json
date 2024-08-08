@@ -985,9 +985,38 @@
         "note_tree_font": "笔记树字体",
         "note_detail_font": "笔记详情字体",
         "monospace_font": "等宽（代码）字体",
-        "note_tree_and_detail_font_sizing": "请注意，树状字体和详细字体的大小相对于主字体大小设置。",
+        "note_tree_and_detail_font_sizing": "请注意，笔记树字体和详细字体的大小相对于主字体大小设置。",
         "not_all_fonts_available": "并非所有列出的字体都可能在您的系统上可用。",
         "apply_font_changes": "要应用字体更改，请点击",
         "reload_frontend": "重新加载前端"
+    },
+    "max_content_width": {
+        "title": "内容宽度",
+        "default_description": "Trilium默认会限制内容的最大宽度以提高在宽屏中全屏时的可读性。",
+        "max_width_label": "内容最大宽度(像素)",
+        "apply_changes_description": "要应用内容宽度更改，请点击",
+        "reload_button": "重新加载前端",
+        "reload_description": "来自外观选项的更改"
+    },
+    "native_title_bar": {
+        "title": "原生标题栏（需要重新启动应用）",
+        "enabled": "启用",
+        "disabled": "禁用"
+    },
+    "ribbon": {
+        "widgets": "功能选项组件",
+        "promoted_attributes_message": "如果笔记中存在升级属性，则自动打开升级属性选项卡",
+        "edited_notes_message": "日记笔记自动打开编辑过的笔记选项"
+    },
+    "theme": {
+        "title": "主题",
+        "theme_label": "主题",
+        "override_theme_fonts_label": "覆盖主题字体",
+        "light_theme": "浅色",
+        "dark_theme": "深色"
+    },
+    "zoom_factor": {
+        "title": "缩放系数（仅桌面客户端有效）",
+        "description": "缩放也可以通过 CTRL+- 和 CTRL+= 快捷键进行控制。"
     }
 }

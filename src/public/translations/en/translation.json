@@ -990,5 +990,34 @@
         "not_all_fonts_available": "Not all listed fonts may be available on your system.",
         "apply_font_changes": "To apply font changes, click on",
         "reload_frontend": "reload frontend"
+    },
+    "max_content_width": {
+        "title": "Content Width",
+        "default_description": "Trilium by default limits max content width to improve readability for maximized screens on wide screens.",
+        "max_width_label": "Max content width in pixels",
+        "apply_changes_description": "To apply content width changes, click on",
+        "reload_button": "reload frontend",
+        "reload_description": "changes from appearance options"
+    },
+    "native_title_bar": {
+        "title": "Native Title Bar (requires app restart)",
+        "enabled": "enabled",
+        "disabled": "disabled"
+    },
+    "ribbon": {
+        "widgets": "Ribbon widgets",
+        "promoted_attributes_message": "Promoted Attributes ribbon tab will automatically open if promoted attributes are present on the note",
+        "edited_notes_message": "Edited Notes ribbon tab will automatically open on day notes"
+    },
+    "theme": {
+        "title": "Theme",
+        "theme_label": "Theme",
+        "override_theme_fonts_label": "Override theme fonts",
+        "light_theme": "Light",
+        "dark_theme": "Dark"
+    },
+    "zoom_factor": {
+        "title": "Zoom Factor (desktop build only)",
+        "description": "Zooming can be controlled with CTRL+- and CTRL+= shortcuts as well."
     }
 }
