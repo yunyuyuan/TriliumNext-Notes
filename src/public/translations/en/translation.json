@@ -927,5 +927,54 @@
         "create_label": "To start, please create a label with a URL address you want to embed, e.g. #webViewSrc=\"https://www.google.com\"",
         "disclaimer": "Disclaimer on the experimental status",
         "experimental_note": "Web View is an experimental note type, and it might be removed or substantially changed in the future. Web View works also only in the desktop build."
+    },
+    "backend_log": {
+        "refresh": "Refresh"
+    },
+    "consistency_checks": {
+        "title": "Consistency Checks",
+        "find_and_fix_button": "Find and fix consistency issues",
+        "finding_and_fixing_message": "Finding and fixing consistency issues...",
+        "issues_fixed_message": "Consistency issues should be fixed."
+    },
+    "database_anonymization": {
+        "title": "Database Anonymization",
+        "full_anonymization": "Full Anonymization",
+        "full_anonymization_description": "This action will create a new copy of the database and anonymize it (remove all note content and leave only structure and some non-sensitive metadata) for sharing online for debugging purposes without fear of leaking your personal data.",
+        "save_fully_anonymized_database": "Save fully anonymized database",
+        "light_anonymization": "Light Anonymization",
+        "light_anonymization_description": "This action will create a new copy of the database and do a light anonymization on it — specifically only content of all notes will be removed, but titles and attributes will remain. Additionally, custom JS frontend/backend script notes and custom widgets will remain. This provides more context to debug the issues.",
+        "choose_anonymization": "You can decide yourself if you want to provide a fully or lightly anonymized database. Even fully anonymized DB is very useful, however in some cases lightly anonymized database can speed up the process of bug identification and fixing.",
+        "save_lightly_anonymized_database": "Save lightly anonymized database",
+        "existing_anonymized_databases": "Existing anonymized databases",
+        "creating_fully_anonymized_database": "Creating fully anonymized database...",
+        "creating_lightly_anonymized_database": "Creating lightly anonymized database...",
+        "error_creating_anonymized_database": "Could not create anonymized database, check backend logs for details",
+        "successfully_created_fully_anonymized_database": "Created fully anonymized database in {{anonymizedFilePath}}",
+        "successfully_created_lightly_anonymized_database": "Created lightly anonymized database in {{anonymizedFilePath}}",
+        "no_anonymized_database_yet": "no anonymized database yet"
+    },
+    "database_integrity_check": {
+        "title": "Database Integrity Check",
+        "description": "This will check that the database is not corrupted on the SQLite level. It might take some time, depending on the DB size.",
+        "check_button": "Check database integrity",
+        "checking_integrity": "Checking database integrity...",
+        "integrity_check_succeeded": "Integrity check succeeded - no problems found.",
+        "integrity_check_failed": "Integrity check failed: {{results}}"
+    },
+    "sync": {
+        "title": "Sync",
+        "force_full_sync_button": "Force full sync",
+        "fill_entity_changes_button": "Fill entity changes records",
+        "full_sync_triggered": "Full sync triggered",
+        "filling_entity_changes": "Filling entity changes rows...",
+        "sync_rows_filled_successfully": "Sync rows filled successfully"
+    },
+    "vacuum_database": {
+        "title": "Vacuum Database",
+        "description": "This will rebuild the database which will typically result in a smaller database file. No data will be actually changed.",
+        "button_text": "Vacuum database",
+        "vacuuming_database": "Vacuuming database...",
+        "database_vacuumed": "Database has been vacuumed"
     }
 }

@@ -926,5 +926,54 @@
         "create_label": "首先，请创建一个带有您要嵌入的 URL 地址的标签，例如 #webViewSrc=\"https://www.bing.com\"",
         "disclaimer": "实验性功能免责声明",
         "experimental_note": "网页视图是一种实验性的笔记类型，将来可能会被移除或大幅更改。网页视图只在桌面端有效。"
+    },
+    "backend_log": {
+        "refresh": "刷新"
+    },
+    "consistency_checks": {
+        "title": "检查一致性",
+        "find_and_fix_button": "查找并修复一致性问题",
+        "finding_and_fixing_message": "正在查找并修复一致性问题...",
+        "issues_fixed_message": "一致性问题应该已被修复。"
+    },
+    "database_anonymization": {
+        "title": "数据库匿名化",
+        "full_anonymization": "完全匿名化",
+        "full_anonymization_description": "此操作将创建一个新的数据库副本并进行匿名化处理（删除所有笔记内容，仅保留结构和一些非敏感元数据），用来分享到网上做调试而不用担心泄漏你的个人资料。",
+        "save_fully_anonymized_database": "保存完全匿名化的数据库",
+        "light_anonymization": "轻度匿名化",
+        "light_anonymization_description": "此操作将创建一个新的数据库副本，并对其进行轻度匿名化处理——仅删除所有笔记的内容，但保留标题和属性。此外，自定义JS前端/后端脚本笔记和自定义小部件将保留。这提供了更多上下文以调试问题。",
+        "choose_anonymization": "您可以自行决定是提供完全匿名化还是轻度匿名化的数据库。即使是完全匿名化的数据库也非常有用，但在某些情况下，轻度匿名化的数据库可以加快错误识别和修复的过程。",
+        "save_lightly_anonymized_database": "保存轻度匿名化的数据库",
+        "existing_anonymized_databases": "现有的匿名化数据库",
+        "creating_fully_anonymized_database": "正在创建完全匿名化的数据库...",
+        "creating_lightly_anonymized_database": "正在创建轻度匿名化的数据库...",
+        "error_creating_anonymized_database": "无法创建匿名化数据库，请检查后端日志以获取详细信息",
+        "successfully_created_fully_anonymized_database": "成功创建完全匿名化的数据库，路径为{{anonymizedFilePath}}",
+        "successfully_created_lightly_anonymized_database": "成功创建轻度匿名化的数据库，路径为{{anonymizedFilePath}}",
+        "no_anonymized_database_yet": "尚无匿名化数据库"
+    },
+    "database_integrity_check": {
+        "title": "数据库完整性检查",
+        "description": "检查SQLite数据库是否损坏。根据数据库的大小，可能会需要一些时间。",
+        "check_button": "检查数据库完整性",
+        "checking_integrity": "正在检查数据库完整性...",
+        "integrity_check_succeeded": "完整性检查成功 - 未发现问题。",
+        "integrity_check_failed": "完整性检查失败: {{results}}"
+    },
+    "sync": {
+        "title": "同步",
+        "force_full_sync_button": "强制全量同步",
+        "fill_entity_changes_button": "填充实体变更记录",
+        "full_sync_triggered": "全量同步已触发",
+        "filling_entity_changes": "正在填充实体变更行...",
+        "sync_rows_filled_successfully": "同步行填充成功"
+    },
+    "vacuum_database": {
+        "title": "数据库清理",
+        "description": "这会重建数据库，通常会减少占用空间，不会删除数据。",
+        "button_text": "清理数据库",
+        "vacuuming_database": "正在清理数据库...",
+        "database_vacuumed": "数据库已清理"
     }
 }
