@@ -916,5 +916,16 @@
         "enter_title_of_new_note": "Enter title of new note",
         "default_new_note_title": "new note",
         "click_on_canvas_to_place_new_note": "Click on canvas to place new note"
+    },
+    "render": {
+        "note_detail_render_help_1": "This help note is shown because this note of type Render HTML doesn't have required relation to function properly.",
+        "note_detail_render_help_2": "Render HTML note type is used for <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/scripts.md\">scripting</a>. In short, you have a HTML code note (optionally with some JavaScript) and this note will render it. To make it work, you need to define a <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/attributes.md\">relation</a> called \"renderNote\" pointing to the HTML note to render."
+    },
+    "web_view": {
+        "web_view": "Web View",
+        "embed_websites": "Note of type Web View allows you to embed websites into Trilium.",
+        "create_label": "To start, please create a label with a URL address you want to embed, e.g. #webViewSrc=\"https://www.google.com\"",
+        "disclaimer": "Disclaimer on the experimental status",
+        "experimental_note": "Web View is an experimental note type, and it might be removed or substantially changed in the future. Web View works also only in the desktop build."
     }
 }
