@@ -975,5 +975,19 @@
         "button_text": "清理数据库",
         "vacuuming_database": "正在清理数据库...",
         "database_vacuumed": "数据库已清理"
+    },
+    "fonts": {
+        "theme_defined": "跟随主题",
+        "fonts": "字体",
+        "main_font": "主字体",
+        "font_family": "字体系列",
+        "size": "大小",
+        "note_tree_font": "笔记树字体",
+        "note_detail_font": "笔记详情字体",
+        "monospace_font": "等宽（代码）字体",
+        "note_tree_and_detail_font_sizing": "请注意，树状字体和详细字体的大小相对于主字体大小设置。",
+        "not_all_fonts_available": "并非所有列出的字体都可能在您的系统上可用。",
+        "apply_font_changes": "要应用字体更改，请点击",
+        "reload_frontend": "重新加载前端"
     }
 }
