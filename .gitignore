@@ -23,3 +23,7 @@ images/app-icons/png/32x32.png
 images/app-icons/png/512x512.png
 images/app-icons/png/1024x1024.png
 images/app-icons/mac/*.png
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

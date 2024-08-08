@@ -68,7 +68,7 @@ To use TriliumNext on a mobile device:
 
 ### Server
 
-To install TriliumNext on your own server (including via Docker) follow [the server installation docs](https://triliumnext.github.io/Docs/Wiki/server-installation).
+To install TriliumNext on your own server (including via Docker from [Dockerhub](https://hub.docker.com/r/triliumnext/notes)) follow [the server installation docs](https://triliumnext.github.io/Docs/Wiki/server-installation).
 
 ## 📝 Documentation
 
