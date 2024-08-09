@@ -1043,5 +1043,48 @@
         "enable_image_compression": "Enable image compression",
         "max_image_dimensions": "Max width / height of an image in pixels (image will be resized if it exceeds this setting).",
         "jpeg_quality_description": "JPEG quality (10 - worst quality, 100 best quality, 50 - 85 is recommended)"
+    },
+    "attachment_erasure_timeout": {
+        "attachment_erasure_timeout": "Attachment Erasure Timeout",
+        "attachment_auto_deletion_description": "Attachments get automatically deleted (and erased) if they are not referenced by their note anymore after a defined time out.",
+        "erase_attachments_after_x_seconds": "Erase attachments after X seconds of not being used in its note",
+        "manual_erasing_description": "You can also trigger erasing manually (without considering the timeout defined above):",
+        "erase_unused_attachments_now": "Erase unused attachment notes now",
+        "unused_attachments_erased": "Unused attachments have been erased."
+    },
+    "network_connections": {
+        "network_connections_title": "Network Connections",
+        "check_for_updates": "Check for updates automatically"
+    },
+    "note_erasure_timeout": {
+        "note_erasure_timeout_title": "Note Erasure Timeout",
+        "note_erasure_description": "Deleted notes (and attributes, revisions...) are at first only marked as deleted and it is possible to recover them from Recent Notes dialog. After a period of time, deleted notes are \"erased\" which means their content is not recoverable anymore. This setting allows you to configure the length of the period between deleting and erasing the note.",
+        "erase_notes_after_x_seconds": "Erase notes after X seconds",
+        "manual_erasing_description": "You can also trigger erasing manually (without considering the timeout defined above):",
+        "erase_deleted_notes_now": "Erase deleted notes now",
+        "deleted_notes_erased": "Deleted notes have been erased."
+    },
+    "revisions_snapshot_interval": {
+        "note_revisions_snapshot_interval_title": "Note Revisions Snapshot Interval",
+        "note_revisions_snapshot_description": "Note revision snapshot time interval is time in seconds after which a new note revision will be created for the note. See <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-revisions.md\" class=\"external\">wiki</a> for more info.",
+        "snapshot_time_interval_label": "Note revision snapshot time interval (in seconds)"
+    },
+    "search_engine": {
+        "title": "Search Engine",
+        "custom_search_engine_info": "Custom search engine requires both a name and a URL to be set. If either of these is not set, DuckDuckGo will be used as the default search engine.",
+        "predefined_templates_label": "Predefined search engine templates",
+        "bing": "Bing",
+        "baidu": "Baidu",
+        "duckduckgo": "DuckDuckGo",
+        "google": "Google",
+        "custom_name_label": "Custom search engine name",
+        "custom_name_placeholder": "Customize search engine name",
+        "custom_url_label": "Custom search engine URL should include {keyword} as a placeholder for the search term.",
+        "custom_url_placeholder": "Customize search engine url",
+        "save_button": "Save"
+    },
+    "tray": {
+        "title": "Tray",
+        "enable_tray": "Enable tray (Trilium needs to be restarted for this change to take effect)"
     }
 }

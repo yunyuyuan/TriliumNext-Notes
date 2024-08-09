@@ -1042,5 +1042,48 @@
         "enable_image_compression": "启用图片压缩",
         "max_image_dimensions": "图片的最大宽度/高度（超过此限制的图像将会被缩放）。",
         "jpeg_quality_description": "JPEG 质量（10 - 最差质量，100 最佳质量，建议为 50 - 85）"
+    },
+    "attachment_erasure_timeout": {
+        "attachment_erasure_timeout": "附件清理超时",
+        "attachment_auto_deletion_description": "如果附件在一段时间后不再被笔记引用，它们将自动被删除（并被清理）。",
+        "erase_attachments_after_x_seconds": "在附件在笔记中未被使用 X 秒后清理",
+        "manual_erasing_description": "您还可以手动触发清理（而不考虑上述定义的超时时间）：",
+        "erase_unused_attachments_now": "立即清理未使用的附件笔记",
+        "unused_attachments_erased": "未使用的附件已被删除。"
+    },
+    "network_connections": {
+        "network_connections_title": "网络连接",
+        "check_for_updates": "自动检查更新"
+    },
+    "note_erasure_timeout": {
+        "note_erasure_timeout_title": "笔记清理超时",
+        "note_erasure_description": "被删除的笔记（以及属性、历史版本等）最初仅被标记为“删除”，可以从“最近修改”对话框中恢复它们。经过一段时间后，已删除的笔记会被“清理”，这意味着它们的内容将无法恢复。此设置允许您配置从删除到清除笔记之间的时间长度。",
+        "erase_notes_after_x_seconds": "在笔记删除 X 秒后清理",
+        "manual_erasing_description": "您还可以手动触发清理（不考虑上述定义的超时）：",
+        "erase_deleted_notes_now": "立即清理已删除的笔记",
+        "deleted_notes_erased": "已删除的笔记已被清理。"
+    },
+    "revisions_snapshot_interval": {
+        "note_revisions_snapshot_interval_title": "笔记修改快照间隔",
+        "note_revisions_snapshot_description": "笔记修改快照时间间隔是指经过多少秒后会为笔记创建新的修改历史。更多信息请参见<a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-revisions.md\" class=\"external\">wiki</a>。",
+        "snapshot_time_interval_label": "笔记修改快照时间间隔（单位:秒）"
+    },
+    "search_engine": {
+        "title": "搜索引擎",
+        "custom_search_engine_info": "自定义搜索引擎需要设置名称和URL。如果这两者之一未设置，将默认使用DuckDuckGo作为搜索引擎。",
+        "predefined_templates_label": "预定义搜索引擎模板",
+        "bing": "必应",
+        "baidu": "百度",
+        "duckduckgo": "DuckDuckGo",
+        "google": "谷歌",
+        "custom_name_label": "自定义搜索引擎名称",
+        "custom_name_placeholder": "自定义搜索引擎名称",
+        "custom_url_label": "自定义搜索引擎URL应包含 {keyword} 作为搜索词的占位符。",
+        "custom_url_placeholder": "自定义搜索引擎URL",
+        "save_button": "保存"
+    },
+    "tray": {
+        "title": "托盘",
+        "enable_tray": "启用托盘图标（需要重启生效）"
     }
 }
