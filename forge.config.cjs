@@ -50,7 +50,6 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-dmg',
-      arch: ['x64', 'arm64'],
       config: {
         icon: "./images/app-icons/icon.icns",
       }
