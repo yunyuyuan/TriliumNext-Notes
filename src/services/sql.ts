@@ -14,7 +14,18 @@ import ws from "./ws.js";
 import becca_loader from "../becca/becca_loader.js";
 import entity_changes from "./entity_changes.js";
 
-const dbConnection: DatabaseType = new Database(dataDir.DOCUMENT_PATH);
+function buildDatabase(path: string) {
+    if (process.env.TRILIUM_INTEGRATION_TEST === "memory") {
+        // This allows a database that is read normally but is kept in memory and discards all modifications.
+        const dbBuffer = fs.readFileSync(path);
+        return new Database(dbBuffer);
+    }
+
+    return new Database(dataDir.DOCUMENT_PATH);
+}
+
+const dbConnection: DatabaseType = buildDatabase(dataDir.DOCUMENT_PATH);
+
 if (!process.env.TRILIUM_INTEGRATION_TEST) {
     dbConnection.pragma('journal_mode = WAL');
 }
