@@ -1,7 +1,7 @@
-const http = require("http");
-const ini = require("ini");
-const fs = require("fs");
-const dataDir = require('./src/services/data_dir');
+import http from "http";
+import ini from "ini";
+import fs from "fs";
+import dataDir from './src/services/data_dir.js';
 const config = ini.parse(fs.readFileSync(dataDir.CONFIG_INI_PATH, 'utf-8'));
 
 if (config.Network.https) {
@@ -10,12 +10,12 @@ if (config.Network.https) {
     process.exit(0);
 }
 
-const port = require('./src/services/port');
-const host = require('./src/services/host');
+import port from './src/services/port.js';
+import host from './src/services/host.js';
 
-const options = { timeout: 2000 };
+const options: http.RequestOptions = { timeout: 2000 };
 
-const callback = res => {
+const callback: (res: http.IncomingMessage) => void = res => {
     console.log(`STATUS: ${res.statusCode}`);
     if (res.statusCode === 200) {
         process.exit(0);
