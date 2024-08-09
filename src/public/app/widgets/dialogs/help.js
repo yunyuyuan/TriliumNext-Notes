@@ -6,7 +6,7 @@ const TPL = `
     <div class="modal-dialog" role="document" style="min-width: 100%; height: 100%; margin: 0;">
         <div class="modal-content" style="height: auto;">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">Help (full documentation is available <a class="external" href="https://github.com/zadam/trilium/wiki">online</a>)</h5>
+                <h5 class="modal-title mr-auto">Help (full documentation is available <a class="external" href="https://triliumnext.github.io/Docs/">online</a>)</h5>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
