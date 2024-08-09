@@ -78,7 +78,7 @@ const TPL = `
                                     <li><kbd data-command="addNoteAboveToSelection">not set</kbd>, <kbd data-command="addNoteBelowToSelection">not set</kbd> - multi-select note above/below</li>
                                     <li><kbd data-command="selectAllNotesInParent">not set</kbd> - select all notes in the current level</li>
                                     <li><kbd>Shift+click</kbd> - select note</li>
-                                    <li><kbd data-command="copyNotesToClipboard">not set</kbd> - copy active note (or current selection) into clipboard (used for <a class="external" href="https://triliumnext.github.io/Docs/Wiki/cloning-notes.html#cloning-notes.md">cloning</a>)</li>
+                                    <li><kbd data-command="copyNotesToClipboard">not set</kbd> - copy active note (or current selection) into clipboard (used for <a class="external" href="https://triliumnext.github.io/Docs/Wiki/cloning-notes.html#cloning-notes">cloning</a>)</li>
                                     <li><kbd data-command="cutNotesToClipboard">not set</kbd> - cut current (or current selection) note into clipboard (used for moving notes)</li>
                                     <li><kbd data-command="pasteNotesFromClipboard">not set</kbd> - paste note(s) as sub-note into active note (which is either move or clone depending on whether it was copied or cut into clipboard)</li>
                                     <li><kbd data-command="deleteNotes">not set</kbd> - delete note / sub-tree</li>
