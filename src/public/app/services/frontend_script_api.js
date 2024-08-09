@@ -249,7 +249,7 @@ function FrontendScriptApi(startNote, currentNote, originEntity = null, $contain
 
     /**
      * This is a powerful search method - you can search by attributes and their values, e.g.:
-     * "#dateModified =* MONTH AND #log". See full documentation for all options at: https://github.com/TriliumNext/Docs/blob/main/Wiki/search.md
+     * "#dateModified =* MONTH AND #log". See full documentation for all options at: https://triliumnext.github.io/Docs/Wiki/search.html
      *
      * @method
      * @param {string} searchString
@@ -261,7 +261,7 @@ function FrontendScriptApi(startNote, currentNote, originEntity = null, $contain
 
     /**
      * This is a powerful search method - you can search by attributes and their values, e.g.:
-     * "#dateModified =* MONTH AND #log". See full documentation for all options at: https://github.com/TriliumNext/Docs/blob/main/Wiki/search.md
+     * "#dateModified =* MONTH AND #log". See full documentation for all options at: https://triliumnext.github.io/Docs/Wiki/search.html
      *
      * @method
      * @param {string} searchString
@@ -558,7 +558,7 @@ function FrontendScriptApi(startNote, currentNote, originEntity = null, $contain
     this.getYearNote = dateNotesService.getYearNote;
 
     /**
-     * Hoist note in the current tab. See https://github.com/TriliumNext/Docs/blob/main/Wiki/note-hoisting.md
+     * Hoist note in the current tab. See https://triliumnext.github.io/Docs/Wiki/note-hoisting.html
      *
      * @method
      * @param {string} noteId - set hoisted note. 'root' will effectively unhoist

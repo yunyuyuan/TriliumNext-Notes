@@ -114,13 +114,13 @@ interface Api {
     
     /**
      * This is a powerful search method - you can search by attributes and their values, e.g.:
-     * "#dateModified =* MONTH AND #log". See {@link https://github.com/TriliumNext/Docs/blob/main/Wiki/search.md} for full documentation for all options
+     * "#dateModified =* MONTH AND #log". See {@link https://triliumnext.github.io/Docs/Wiki/search.html} for full documentation for all options
      */
     searchForNotes(query: string, searchParams: SearchParams): BNote[];
     
     /**
      * This is a powerful search method - you can search by attributes and their values, e.g.:
-     * "#dateModified =* MONTH AND #log". See {@link https://github.com/TriliumNext/Docs/blob/main/Wiki/search.md} for full documentation for all options
+     * "#dateModified =* MONTH AND #log". See {@link https://triliumnext.github.io/Docs/Wiki/search.html} for full documentation for all options
      */
     searchForNote(query: string, searchParams: SearchParams): BNote | null;
     
@@ -251,7 +251,7 @@ interface Api {
      */
     sortNotes(parentNoteId: string, sortConfig: {
         /** 'title', 'dateCreated', 'dateModified' or a label name
-          * See {@link https://github.com/TriliumNext/Docs/blob/main/Wiki/sorting.md} for details. */
+          * See {@link https://triliumnext.github.io/Docs/Wiki/sorting.html} for details. */
         sortBy?: string;
         reverse?: boolean;
         foldersFirst?: boolean;

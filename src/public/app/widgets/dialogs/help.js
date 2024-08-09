@@ -23,7 +23,7 @@ const TPL = `
                                     <li><kbd>UP</kbd>, <kbd>DOWN</kbd> - go up/down in the list of notes</li>
                                     <li><kbd>LEFT</kbd>, <kbd>RIGHT</kbd> - collapse/expand node</li>
                                     <li><kbd data-command="backInNoteHistory">not set</kbd>, <kbd data-command="forwardInNoteHistory">not set</kbd> - go back / forwards in the history</li>
-                                    <li><kbd data-command="jumpToNote">not set</kbd> - show <a class="external" href="https://github.com/TriliumNext/Docs/blob/main/Wiki/note-navigation.md#jump-to-note">"Jump to" dialog</a></li>
+                                    <li><kbd data-command="jumpToNote">not set</kbd> - show <a class="external" href="https://triliumnext.github.io/Docs/Wiki/note-navigation.html#jump-to-note">"Jump to" dialog</a></li>
                                     <li><kbd data-command="scrollToActiveNote">not set</kbd> - scroll to active note</li>
                                     <li><kbd>Backspace</kbd> - jump to parent note</li>
                                     <li><kbd data-command="collapseTree">not set</kbd> - collapse whole note tree</li>
@@ -61,7 +61,7 @@ const TPL = `
                                 <ul>
                                     <li><kbd data-command="createNoteAfter">not set</kbd> - create new note after the active note</li>
                                     <li><kbd data-command="createNoteInto">not set</kbd> - create new sub-note into active note</li>
-                                    <li><kbd data-command="editBranchPrefix">not set</kbd> - edit <a class="external" href="https://github.com/TriliumNext/Docs/blob/main/Wiki/tree-concepts.md#prefix">prefix</a> of active note clone</li>
+                                    <li><kbd data-command="editBranchPrefix">not set</kbd> - edit <a class="external" href="https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix">prefix</a> of active note clone</li>
                                 </ul>
                             </p>
                         </div>
@@ -78,7 +78,7 @@ const TPL = `
                                     <li><kbd data-command="addNoteAboveToSelection">not set</kbd>, <kbd data-command="addNoteBelowToSelection">not set</kbd> - multi-select note above/below</li>
                                     <li><kbd data-command="selectAllNotesInParent">not set</kbd> - select all notes in the current level</li>
                                     <li><kbd>Shift+click</kbd> - select note</li>
-                                    <li><kbd data-command="copyNotesToClipboard">not set</kbd> - copy active note (or current selection) into clipboard (used for <a class="external" href="https://github.com/TriliumNext/Docs/blob/main/Wiki/cloning-notes.md">cloning</a>)</li>
+                                    <li><kbd data-command="copyNotesToClipboard">not set</kbd> - copy active note (or current selection) into clipboard (used for <a class="external" href="https://triliumnext.github.io/Docs/Wiki/cloning-notes.html#cloning-notes.md">cloning</a>)</li>
                                     <li><kbd data-command="cutNotesToClipboard">not set</kbd> - cut current (or current selection) note into clipboard (used for moving notes)</li>
                                     <li><kbd data-command="pasteNotesFromClipboard">not set</kbd> - paste note(s) as sub-note into active note (which is either move or clone depending on whether it was copied or cut into clipboard)</li>
                                     <li><kbd data-command="deleteNotes">not set</kbd> - delete note / sub-tree</li>
@@ -107,7 +107,7 @@ const TPL = `
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="external" href="https://github.com/TriliumNext/Docs/blob/main/Wiki/text-notes.md#markdown--autoformat">Markdown-like autoformatting</a></h5>
+                            <h5 class="card-title"><a class="external" href="https://triliumnext.github.io/Docs/Wiki/text-notes.html#markdown--autoformat">Markdown-like autoformatting</a></h5>
 
                             <p class="card-text">
                                 <ul>
