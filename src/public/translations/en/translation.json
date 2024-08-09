@@ -1086,5 +1086,34 @@
     "tray": {
         "title": "Tray",
         "enable_tray": "Enable tray (Trilium needs to be restarted for this change to take effect)"
+    },
+    "heading_style": {
+        "title": "Heading Style",
+        "plain": "Plain",
+        "underline": "Underline",
+        "markdown": "Markdown-style"
+    },
+    "highlights_list": {
+        "title": "Highlights List",
+        "description": "You can customize the highlights list displayed in the right panel:",
+        "bold": "Bold font",
+        "italic": "Italic font",
+        "underline": "Underlined font",
+        "color": "Font with color",
+        "bg_color": "Font with background color",
+        "visibility_title": "Highlights List visibility",
+        "visibility_description": "You can hide the highlights widget per-note by adding a #hideHighlightWidget label.",
+        "shortcut_info": "You can configure a keyboard shortcut for quickly toggling the right pane (including Highlights) in the Options -> Shortcuts (name 'toggleRightPane')."
+    },
+    "table_of_contents": {
+        "title": "Table of Contents",
+        "description": "Table of contents will appear in text notes when the note has more than a defined number of headings. You can customize this number:",
+        "disable_info": "You can also use this option to effectively disable TOC by setting a very high number.",
+        "shortcut_info": "You can configure a keyboard shortcut for quickly toggling the right pane (including TOC) in the Options -> Shortcuts (name 'toggleRightPane')."
+    },
+    "text_auto_read_only_size": {
+        "title": "Automatic Read-Only Size",
+        "description": "Automatic read-only note size is the size after which notes will be displayed in a read-only mode (for performance reasons).",
+        "label": "Automatic read-only size (text notes)"
     }
 }
