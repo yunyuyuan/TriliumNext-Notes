@@ -31,30 +31,30 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - name: Run installer build (x86_64)
-      - run: |
+      - name: Run MacOS installer build (x86_64)
+        run: |
           npm run update-build-info
           npm run make-electron -- --arch="x64"
-      - name: Publish zip artifact (x86_64)
+      - name: Publish MacOS zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (x86_64)
           path: out/make/zip/darwin/x64/*.zip
-      - name: Publish installer artifact (x86_64)
+      - name: Publish MacOS installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (Setup) (x86_64)
           path: out/make/*-x64.dmg
-      - name: Run installer build (arm64)
-      - run: |
+      - name: Run MacOS installer build (arm64)
+        run: |
           npm run update-build-info
           npm run make-electron -- --arch="arm64"
-      - name: Publish zip artifact (arm64)
+      - name: Publish MacOS zip artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (arm64)
           path: out/make/zip/darwin/arm64/*.zip
-      - name: Publish installer artifact (arm64)
+      - name: Publish MacOS installer artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (Setup) (arm64)
@@ -70,30 +70,30 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - name: Run installer build (x86_64)
+      - name: Run Linux installer build (x86_64)
         run: |
           npm run update-build-info
           npm run make-electron -- --arch="x64"
-      - name: Publish zip artifact (x86_64)
+      - name: Publish Linux zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux
           path: out/make/zip/linux/x64/*.zip
-      - name: Publish installer artifact (x86_64)
+      - name: Publish Linux installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux (Setup)
           path: out/make/deb/x64/*.deb
-      - name: Run installer build (arm64)
+      - name: Run Linux installer build (arm64)
         run: |
           npm run update-build-info
           npm run make-electron -- --arch="arm64"
-      - name: Publish zip artifact (arm64)
+      - name: Publish Linux zip artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux
           path: out/make/zip/linux/arm64/*.zip
-      - name: Publish installer artifact (arm64)
+      - name: Publish Linux installer artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux (Setup)
@@ -109,7 +109,8 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: |
+      - name: Run Linux server build (x86_64)
+        run: |
           npm run update-build-info
           ./bin/build-server.sh
       - uses: actions/upload-artifact@v4
@@ -127,16 +128,16 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - name: Run installer build
+      - name: Run Windows installer build (x86_64)
         run: |
           npm run update-build-info
           npm run make-electron
-      - name: Publish zip artifact
+      - name: Publish Windows zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Windows
           path: out/make/zip/win32/x64/*.zip
-      - name: Publish installer artifact
+      - name: Publish Windows installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Windows (Setup)
