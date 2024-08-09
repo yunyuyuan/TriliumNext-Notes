@@ -7,14 +7,6 @@ test("Can insert equations", async ({ page }) => {
     await page.setDefaultTimeout(60_000);
     await page.setDefaultNavigationTimeout(60_000);
 
-    await page.goto(ROOT_URL);
-    await expect(page).toHaveURL(`${ROOT_URL}/login`);
-
-    // Log in
-    await page.getByRole("textbox", { name: "Password" }).fill(LOGIN_PASSWORD);
-    await page.getByRole("button", { name: "Login"}).click();
-    await page.waitForURL(/\/#root\//);
-
     // Create a new note
     // await page.locator("button.button-widget.bx-file-blank")
     //     .click();    

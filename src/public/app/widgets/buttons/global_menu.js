@@ -338,7 +338,7 @@ export default class GlobalMenuWidget extends BasicWidget {
     }
 
     downloadLatestVersionCommand() {
-        window.open("https://github.com/zadam/trilium/releases/latest");
+        window.open("https://github.com/TriliumNext/Notes/releases/latest");
     }
 
     activeContextChangedEvent() {

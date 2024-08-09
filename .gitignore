@@ -18,8 +18,6 @@ tmp/
 
 out/
 
-images/app-icons/png/16x16.png
-images/app-icons/png/32x32.png
 images/app-icons/png/512x512.png
 images/app-icons/png/1024x1024.png
 images/app-icons/mac/*.png
@@ -27,3 +25,4 @@ images/app-icons/mac/*.png
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/playwright/.auth/
