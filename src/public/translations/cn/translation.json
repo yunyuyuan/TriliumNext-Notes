@@ -1018,5 +1018,21 @@
     "zoom_factor": {
         "title": "缩放系数（仅桌面客户端有效）",
         "description": "缩放也可以通过 CTRL+- 和 CTRL+= 快捷键进行控制。"
+    },
+    "code_auto_read_only_size": {
+        "title": "自动只读大小",
+        "description": "自动只读大小是指笔记超过设置的大小后自动设置为只读模式（为性能考虑）。",
+        "label": "自动只读大小（代码笔记）"
+    },
+    "code_mime_types": {
+        "title": "下拉菜单可用的MIME文件类型"
+    },
+    "vim_key_bindings": {
+        "use_vim_keybindings_in_code_notes": "在代码笔记中使用Vim键绑定（无ex模式）",
+        "enable_vim_keybindings": "启用Vim键绑定"
+    },
+    "wrap_lines": {
+        "wrap_lines_in_code_notes": "代码笔记自动换行",
+        "enable_line_wrap": "启用自动换行（需要重新加载前端才会生效）"
     }
 }

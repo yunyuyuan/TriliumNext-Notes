@@ -1019,5 +1019,21 @@
     "zoom_factor": {
         "title": "Zoom Factor (desktop build only)",
         "description": "Zooming can be controlled with CTRL+- and CTRL+= shortcuts as well."
+    },
+    "code_auto_read_only_size": {
+        "title": "Automatic Read-Only Size",
+        "description": "Automatic read-only note size is the size after which notes will be displayed in a read-only mode (for performance reasons).",
+        "label": "Automatic read-only size (code notes)"
+    },
+    "code_mime_types": {
+        "title": "Available MIME types in the dropdown"
+    },
+    "vim_key_bindings": {
+        "use_vim_keybindings_in_code_notes": "Use vim keybindings in code notes (no ex mode)",
+        "enable_vim_keybindings": "Enable Vim Keybindings"
+    },
+    "wrap_lines": {
+        "wrap_lines_in_code_notes": "Wrap lines in code notes",
+        "enable_line_wrap": "Enable Line Wrap (change might need a frontend reload to take effect)"
     }
 }
