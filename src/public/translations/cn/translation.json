@@ -1034,5 +1034,13 @@
     "wrap_lines": {
         "wrap_lines_in_code_notes": "代码笔记自动换行",
         "enable_line_wrap": "启用自动换行（需要重新加载前端才会生效）"
+    },
+    "images": {
+        "images_section_title": "图片",
+        "download_images_automatically": "自动下载图片以供离线使用。",
+        "download_images_description": "粘贴的 HTML 可能包含在线图片的引用，Trilium 会找到这些引用并下载图片，以便它们可以离线使用。",
+        "enable_image_compression": "启用图片压缩",
+        "max_image_dimensions": "图片的最大宽度/高度（超过此限制的图像将会被缩放）。",
+        "jpeg_quality_description": "JPEG 质量（10 - 最差质量，100 最佳质量，建议为 50 - 85）"
     }
 }

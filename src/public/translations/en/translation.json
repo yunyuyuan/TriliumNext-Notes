@@ -1035,5 +1035,13 @@
     "wrap_lines": {
         "wrap_lines_in_code_notes": "Wrap lines in code notes",
         "enable_line_wrap": "Enable Line Wrap (change might need a frontend reload to take effect)"
+    },
+    "images": {
+        "images_section_title": "Images",
+        "download_images_automatically": "Download images automatically for offline use.",
+        "download_images_description": "Pasted HTML can contain references to online images, Trilium will find those references and download the images so that they are available offline.",
+        "enable_image_compression": "Enable image compression",
+        "max_image_dimensions": "Max width / height of an image in pixels (image will be resized if it exceeds this setting).",
+        "jpeg_quality_description": "JPEG quality (10 - worst quality, 100 best quality, 50 - 85 is recommended)"
     }
 }
