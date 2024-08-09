@@ -45,7 +45,7 @@
     "prepare-dist": "rimraf ./dist && tsc && tsx ./bin/copy-dist.ts",
     "update-build-info": "tsx bin/update-build-info.ts",
     "errors": "tsc --watch --noEmit",
-    "integration-edit-db": "cross-env TRILIUM_PORT=8081 TRILIUM_DATA_DIR=./integration-tests/db nodemon src/www.ts"
+    "integration-edit-db": "cross-env TRILIUM_INTEGRATION_TEST=edit TRILIUM_PORT=8081 TRILIUM_DATA_DIR=./integration-tests/db nodemon src/www.ts"
   },
   "dependencies": {
     "@braintree/sanitize-url": "^7.1.0",

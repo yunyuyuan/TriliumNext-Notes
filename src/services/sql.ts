@@ -15,7 +15,9 @@ import becca_loader from "../becca/becca_loader.js";
 import entity_changes from "./entity_changes.js";
 
 const dbConnection: DatabaseType = new Database(dataDir.DOCUMENT_PATH);
-dbConnection.pragma('journal_mode = WAL');
+if (!process.env.TRILIUM_INTEGRATION_TEST) {
+    dbConnection.pragma('journal_mode = WAL');
+}
 
 const LOG_ALL_QUERIES = false;
 
