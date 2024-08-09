@@ -13,7 +13,12 @@ module.exports = {
     afterComplete: [(buildPath, electronVersion, platform, arch, callback) => {
       const extraResources = getExtraResourcesForPlatform();
       for (const resource of extraResources) {
-        const sourcePath = path.join(buildPath, 'resources', path.basename(resource));
+        let sourcePath;
+        if (platform === 'darwin') {
+          sourcePath = path.join(buildPath, 'TriliumNextNotes.app', 'Content', 'Resources', path.basename(resource));
+        } else {
+          sourcePath = path.join(buildPath, 'resources', path.basename(resource));
+        }
         const destPath = path.join(buildPath, path.basename(resource));
 
         // Copy files from resources folder to root
@@ -29,7 +34,6 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-deb',
-      arch: ['x64', 'arm64'],
       config: {
         options: {
           icon: "./images/app-icons/png/128x128.png",

@@ -21,7 +21,7 @@ env:
 
 jobs:
   build_darwin:
-    name: Build macOS
+    name: Build macOS (x86_64, arm64)
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,31 +31,36 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
+      - name: Run installer build (x86_64)
       - run: |
           npm run update-build-info
-          npm run make-electron
+          npm run make-electron -- --arch="x64"
       - name: Publish zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (x86_64)
-          path: out/make/darwin/x64/*.zip
-      - name: Publish zip artifact (arm64)
-        uses: actions/upload-artifact@v4
-        with:
-          name: TriliumNext Notes for MacOS (arm64)
-          path: out/make/darwin/arm64/*.zip
+          path: out/make/zip/darwin/x64/*.zip
       - name: Publish installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (Setup) (x86_64)
-          path: out/make/dmg/x64/*.dmg
+          path: out/make/*-x64.dmg
+      - name: Run installer build (arm64)
+      - run: |
+          npm run update-build-info
+          npm run make-electron -- --arch="arm64"
+      - name: Publish zip artifact (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for MacOS (arm64)
+          path: out/make/zip/darwin/arm64/*.zip
       - name: Publish installer artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for MacOS (Setup) (arm64)
-          path: out/make/dmg/arm64/*.dmg
-  build_linux-x64:
-    name: Build Linux x86_64
+          path: out/make/*-arm64.dmg  
+  build_linux:
+    name: Build Linux (x86_64, arm64)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -65,20 +70,34 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - name: Run installer build
+      - name: Run installer build (x86_64)
         run: |
           npm run update-build-info
-          npm run make-electron
-      - name: Publish zip artifact
+          npm run make-electron -- --arch="x64"
+      - name: Publish zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux
           path: out/make/zip/linux/x64/*.zip
-      - name: Publish installer artifact
+      - name: Publish installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Linux (Setup)
           path: out/make/deb/x64/*.deb
+      - name: Run installer build (arm64)
+        run: |
+          npm run update-build-info
+          npm run make-electron -- --arch="arm64"
+      - name: Publish zip artifact (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for Linux
+          path: out/make/zip/linux/arm64/*.zip
+      - name: Publish installer artifact (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for Linux (Setup)
+          path: out/make/deb/arm64/*.deb
   build_linux_server-x64:
     name: Build Linux Server x86_64
     runs-on: ubuntu-latest
