@@ -71,11 +71,13 @@ jobs:
         with:
           name: TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}
           path: upload/*.zip
+          overwrite: true
       - name: Publish installer artifacts
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}
           path: upload/*.${{ matrix.os.extension }}
+          overwrite: true
   build_linux_server-x64:
     name: Build Linux Server x86_64
     runs-on: ubuntu-latest
@@ -102,4 +104,4 @@ jobs:
         with:
           name: TriliumNextNotes linux server x64
           path: upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz
-          compression-level: 0
+          overwrite: true
