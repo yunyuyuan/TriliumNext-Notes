@@ -1,7 +1,7 @@
-const path = require("path");
-const mimeTypes = require("mime-types");
+import path from "path";
+import mimeTypes from "mime-types";
 
-function getFileName(note, childTargetPath, safeTitle) {
+function getFileName(note: any, childTargetPath: string, safeTitle: string) {
     let existingExtension = path.extname(safeTitle).toLowerCase();
     let newExtension;
 
@@ -29,6 +29,6 @@ function getFileName(note, childTargetPath, safeTitle) {
     return fileNameWithPath;
 }
 
-module.exports = {
+export default {
     getFileName
 };

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
-const dumpService = require('./inc/dump.js');
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+import dumpService from './inc/dump.js';
 
 yargs(hideBin(process.argv))
     .command('$0 <path_to_document> <target_directory>', 'dump the contents of document.db into the target directory', (yargs) => {
         return yargs
-            .positional('path_to_document', { describe: 'path to the document.db' })
-            .positional('target_directory', { describe: 'path of the directory into which the notes should be dumped' })
+            .option('path_to_document', { alias: 'p', describe: 'path to the document.db', type: 'string', demandOption: true })
+            .option('target_directory', { alias: 't', describe: 'path of the directory into which the notes should be dumped', type: 'string', demandOption: true });
     }, (argv) => {
         try {
             dumpService.dumpDocument(argv.path_to_document, argv.target_directory, {

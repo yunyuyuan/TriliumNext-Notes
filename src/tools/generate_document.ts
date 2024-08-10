@@ -3,13 +3,13 @@
  * will create 1000 new notes and some clones into the current document.db
  */
 
-require('../becca/entity_constructor');
-const sqlInit = require('../services/sql_init');
-const noteService = require('../services/notes');
-const attributeService = require('../services/attributes');
-const cls = require('../services/cls');
-const cloningService = require('../services/cloning');
-const loremIpsum = require('lorem-ipsum').loremIpsum;
+import sqlInit from '../services/sql_init.js';
+import noteService from '../services/notes.js';
+import attributeService from '../services/attributes.js';
+import cls from '../services/cls.js';
+import cloningService from '../services/cloning.js';
+import loremIpsum from 'lorem-ipsum';
+import '../becca/entity_constructor.js';
 
 const noteCount = parseInt(process.argv[2]);
 
@@ -28,7 +28,7 @@ function getRandomNoteId() {
 
 async function start() {
     for (let i = 0; i < noteCount; i++) {
-        const title = loremIpsum({
+        const title = loremIpsum.loremIpsum({
             count: 1,
             units: 'sentences',
             sentenceLowerBound: 1,
@@ -36,7 +36,7 @@ async function start() {
         });
 
         const paragraphCount = Math.floor(Math.random() * Math.random() * 100);
-        const content = loremIpsum({
+        const content = loremIpsum.loremIpsum({
             count: paragraphCount,
             units: 'paragraphs',
             sentenceLowerBound: 1,
@@ -46,7 +46,7 @@ async function start() {
             format: 'html'
         });
 
-        const {note} = noteService.createNewNote({
+        const { note } = noteService.createNewNote({
             parentNoteId: getRandomNoteId(),
             title,
             content,
@@ -58,7 +58,7 @@ async function start() {
         if (Math.random() < 0.04) {
             const noteIdToClone = note.noteId;
             const parentNoteId = getRandomNoteId();
-            const prefix = Math.random() > 0.8 ? "prefix" : null;
+            const prefix = Math.random() > 0.8 ? "prefix" : '';
 
             const result = await cloningService.cloneNoteToBranch(noteIdToClone, parentNoteId, prefix);
 

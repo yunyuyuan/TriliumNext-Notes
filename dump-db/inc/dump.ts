@@ -1,11 +1,11 @@
-const fs = require("fs");
-const sanitize = require("sanitize-filename");
-const sql = require('./sql.js');
-const decryptService = require('./decrypt.js');
-const dataKeyService = require('./data_key.js');
-const extensionService = require('./extension.js');
+import fs from 'fs';
+import sanitize from 'sanitize-filename';
+import sql from './sql.js';
+import decryptService from './decrypt.js';
+import dataKeyService from './data_key.js';
+import extensionService from './extension.js';
 
-function dumpDocument(documentPath, targetPath, options) {
+function dumpDocument(documentPath: string, targetPath: string, options: { password: any; includeDeleted: any; }) {
     const stats = {
         succeeded: 0,
         failed: 0,
@@ -19,14 +19,14 @@ function dumpDocument(documentPath, targetPath, options) {
 
     const dataKey = dataKeyService.getDataKey(options.password);
 
-    const existingPaths = {};
-    const noteIdToPath = {};
+    const existingPaths: Record<string, any> = {};
+    const noteIdToPath: Record<string, any> = {};
 
     dumpNote(targetPath, 'root');
 
     printDumpResults(stats, options);
 
-    function dumpNote(targetPath, noteId) {
+    function dumpNote(targetPath: any, noteId: any) {
         console.log(`Reading note '${noteId}'`);
 
         let childTargetPath, noteRow, fileNameWithPath;
@@ -94,7 +94,7 @@ function dumpDocument(documentPath, targetPath, options) {
 
             noteIdToPath[noteId] = childTargetPath;
         }
-        catch (e) {
+        catch (e: any) {
             console.error(`DUMPERROR: Writing '${noteId}' failed with error '${e.message}':\n${e.stack}`);
 
             stats.failed++;
@@ -108,9 +108,9 @@ function dumpDocument(documentPath, targetPath, options) {
             }
 
             try {
-                fs.mkdirSync(childTargetPath, { recursive: true });
+                fs.mkdirSync(childTargetPath as string, { recursive: true });
             }
-            catch (e) {
+            catch (e: any) {
                 console.error(`DUMPERROR: Creating directory ${childTargetPath} failed with error '${e.message}'`);
             }
 
@@ -121,7 +121,7 @@ function dumpDocument(documentPath, targetPath, options) {
     }
 }
 
-function printDumpResults(stats, options) {
+function printDumpResults(stats: any, options: any) {
     console.log('\n----------------------- STATS -----------------------');
     console.log('Successfully dumpted notes:   ', stats.succeeded.toString().padStart(5, ' '));
     console.log('Protected notes:              ', stats.protected.toString().padStart(5, ' '), options.password ? '' : '(skipped)');
@@ -134,7 +134,7 @@ function printDumpResults(stats, options) {
     }
 }
 
-function isContentEmpty(content) {
+function isContentEmpty(content: any) {
     if (!content) {
         return true;
     }
@@ -150,7 +150,7 @@ function isContentEmpty(content) {
     }
 }
 
-function validatePaths(documentPath, targetPath) {
+function validatePaths(documentPath: string, targetPath: string) {
     if (!fs.existsSync(documentPath)) {
         console.error(`Path to document '${documentPath}' has not been found. Run with --help to see usage.`);
         process.exit(1);
@@ -166,6 +166,6 @@ function validatePaths(documentPath, targetPath) {
     }
 }
 
-module.exports = {
+export default {
     dumpDocument
 };
