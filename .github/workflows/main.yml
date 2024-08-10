@@ -18,8 +18,47 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_darwin-x64:
-    name: Build macOS x86_64
+  build_darwin:
+    name: Build macOS (x86_64, arm64)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - run: npm ci
+      - name: Run MacOS installer build (x86_64)
+        run: |
+          npm run update-build-info
+          npm run make-electron -- --arch="x64"
+      - name: Publish MacOS zip artifact (x86_64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for MacOS (x86_64)
+          path: out/make/zip/darwin/x64/*.zip
+      - name: Publish MacOS installer artifact (x86_64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for MacOS (Setup) (x86_64)
+          path: out/make/*-x64.dmg
+      - name: Run MacOS installer build (arm64)
+        run: |
+          npm run update-build-info
+          npm run make-electron -- --arch="arm64"
+      - name: Publish MacOS zip artifact (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for MacOS (arm64)
+          path: out/make/zip/darwin/arm64/*.zip
+      - name: Publish MacOS installer artifact (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for MacOS (Setup) (arm64)
+          path: out/make/*-arm64.dmg  
+  build_linux:
+    name: Build Linux (x86_64, arm64)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,53 +68,34 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: |
+      - name: Run Linux installer build (x86_64)
+        run: |
           npm run update-build-info
-          ./bin/build-mac-x64.sh
-      - uses: actions/upload-artifact@v4
+          npm run make-electron -- --arch="x64"
+      - name: Publish Linux zip artifact (x86_64)
+        uses: actions/upload-artifact@v4
         with:
-          name: trilium-mac-x64.zip
-          path: dist/trilium-mac-x64*.zip
-  build_darwin-arm64:
-    name: Build macOS aarch64
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up node & dependencies
-        uses: actions/setup-node@v4
+          name: TriliumNext Notes for Linux
+          path: out/make/zip/linux/x64/*.zip
+      - name: Publish Linux installer artifact (x86_64)
+        uses: actions/upload-artifact@v4
         with:
-          node-version: 20
-          cache: "npm"
-      - run: npm ci
-      - run: |
+          name: TriliumNext Notes for Linux (Setup)
+          path: out/make/deb/x64/*.deb
+      - name: Run Linux installer build (arm64)
+        run: |
           npm run update-build-info
-          ./bin/build-mac-arm64.sh
-      - uses: actions/upload-artifact@v4
+          npm run make-electron -- --arch="arm64"
+      - name: Publish Linux zip artifact (arm64)
+        uses: actions/upload-artifact@v4
         with:
-          name: trilium-mac-arm64.zip
-          path: dist/trilium-mac-arm64*.zip
-  build_linux-x64:
-    name: Build Linux x86_64
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up node & dependencies
-        uses: actions/setup-node@v4
+          name: TriliumNext Notes for Linux
+          path: out/make/zip/linux/arm64/*.zip
+      - name: Publish Linux installer artifact (arm64)
+        uses: actions/upload-artifact@v4
         with:
-          node-version: 20
-          cache: "npm"
-      - run: npm ci
-      - run: |
-          npm run update-build-info
-          ./bin/build-linux-x64.sh
-      - uses: actions/upload-artifact@v4
-        with:
-          name: trilium-linux-x64.tar.xz
-          path: dist/trilium-linux-x64-*.tar.xz
-      - uses: actions/upload-artifact@v4
-        with:
-          name: trilium_amd64.deb
-          path: dist/trilium_*.deb
+          name: TriliumNext Notes for Linux (Setup)
+          path: out/make/deb/arm64/*.deb
   build_linux_server-x64:
     name: Build Linux Server x86_64
     runs-on: ubuntu-latest
@@ -87,40 +107,16 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - run: |
+      - name: Run Linux server build (x86_64)
+        run: |
           npm run update-build-info
           ./bin/build-server.sh
       - uses: actions/upload-artifact@v4
         with:
           name: trilium-linux-x64-server.tar.xz
           path: dist/trilium-linux-x64-server-*.tar.xz
-  build_windows-x64:
+  build_windows:
     name: Build Windows x86_64
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Wine
-        run: |
-          sudo dpkg --add-architecture i386
-          wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-          sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-          sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
-          sudo apt install --install-recommends winehq-stable
-      - uses: actions/checkout@v4
-      - name: Set up node & dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "npm"
-      - run: npm ci
-      - run: |
-          npm run update-build-info
-          ./bin/build-win-x64.sh DONTPACK
-      - uses: actions/upload-artifact@v4
-        with:
-          name: trilium-windows-x64
-          path: dist/trilium-windows-x64
-  build_windows-installer:
-    name: Build Windows x86_64 (Setup)
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -130,11 +126,16 @@ jobs:
           node-version: 20
           cache: "npm"
       - run: npm ci
-      - name: Run installer build
+      - name: Run Windows installer build (x86_64)
         run: |
           npm run update-build-info
           npm run make-electron
-      - name: Publish installer artifact
+      - name: Publish Windows zip artifact (x86_64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriliumNext Notes for Windows
+          path: out/make/zip/win32/x64/*.zip
+      - name: Publish Windows installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
           name: TriliumNext Notes for Windows (Setup)
