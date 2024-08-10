@@ -15,7 +15,7 @@ module.exports = {
       for (const resource of extraResources) {
         let sourcePath;
         if (platform === 'darwin') {
-          sourcePath = path.join(buildPath, 'TriliumNextNotes.app', 'Content', 'Resources', path.basename(resource));
+          sourcePath = path.join(buildPath, 'TriliumNextNotes.app', 'Contents', 'Resources', path.basename(resource));
         } else {
           sourcePath = path.join(buildPath, 'resources', path.basename(resource));
         }

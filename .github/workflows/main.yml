@@ -75,12 +75,12 @@ jobs:
       - name: Publish Linux zip artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
-          name: TriliumNext Notes for Linux
+          name: TriliumNext Notes for Linux (x86_64)
           path: out/make/zip/linux/x64/*.zip
       - name: Publish Linux installer artifact (x86_64)
         uses: actions/upload-artifact@v4
         with:
-          name: TriliumNext Notes for Linux (Setup)
+          name: TriliumNext Notes for Linux (Setup) (x86_64)
           path: out/make/deb/x64/*.deb
       - name: Run Linux installer build (arm64)
         run: |
@@ -89,12 +89,12 @@ jobs:
       - name: Publish Linux zip artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
-          name: TriliumNext Notes for Linux
+          name: TriliumNext Notes for Linux (arm64)
           path: out/make/zip/linux/arm64/*.zip
       - name: Publish Linux installer artifact (arm64)
         uses: actions/upload-artifact@v4
         with:
-          name: TriliumNext Notes for Linux (Setup)
+          name: TriliumNext Notes for Linux (Setup) (arm64)
           path: out/make/deb/arm64/*.deb
   build_linux_server-x64:
     name: Build Linux Server x86_64
