@@ -1,6 +1,6 @@
-const crypto = require("crypto");
+import crypto from 'crypto';
 
-function decryptString(dataKey, cipherText) {
+function decryptString(dataKey: any, cipherText: any) {
     const buffer = decrypt(dataKey, cipherText);
 
     if (buffer === null) {
@@ -16,7 +16,7 @@ function decryptString(dataKey, cipherText) {
     return str;
 }
 
-function decrypt(key, cipherText, ivLength = 13) {
+function decrypt(key: any, cipherText: any, ivLength = 13) {
     if (cipherText === null) {
         return null;
     }
@@ -46,11 +46,10 @@ function decrypt(key, cipherText, ivLength = 13) {
 
         return payload;
     }
-    catch (e) {
+    catch (e: any) {
         // recovery from https://github.com/zadam/trilium/issues/510
         if (e.message?.includes("WRONG_FINAL_BLOCK_LENGTH") || e.message?.includes("wrong final block length")) {
-            log.info("Caught WRONG_FINAL_BLOCK_LENGTH, returning cipherText instead");
-
+            console.log("Caught WRONG_FINAL_BLOCK_LENGTH, returning cipherText instead");
             return cipherText;
         }
         else {
@@ -59,7 +58,7 @@ function decrypt(key, cipherText, ivLength = 13) {
     }
 }
 
-function pad(data) {
+function pad(data: any) {
     if (data.length > 16) {
         data = data.slice(0, 16);
     }
@@ -72,7 +71,7 @@ function pad(data) {
     return Buffer.from(data);
 }
 
-function arraysIdentical(a, b) {
+function arraysIdentical(a: any, b: any) {
     let i = a.length;
     if (i !== b.length) return false;
     while (i--) {
@@ -81,12 +80,12 @@ function arraysIdentical(a, b) {
     return true;
 }
 
-function shaArray(content) {
+function shaArray(content: any) {
     // we use this as simple checksum and don't rely on its security so SHA-1 is good enough
     return crypto.createHash('sha1').update(content).digest();
 }
 
-module.exports = {
+export default {
     decrypt,
     decryptString
 };
