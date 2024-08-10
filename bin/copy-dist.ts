@@ -75,7 +75,12 @@ const copy = async () => {
     "node_modules/split.js/dist/",
     "node_modules/panzoom/dist/",
     "node_modules/i18next/",
-    "node_modules/i18next-http-backend/"
+    "node_modules/i18next-http-backend/",
+    "node_modules/jsplumb/dist/",
+    "node_modules/vanilla-js-wheel-zoom/dist/",
+    "node_modules/mark.js/dist/",
+    "node_modules/knockout/build/output/",
+    "node_modules/normalize.css/"
   ];
 
   for (const folder of nodeModulesFolder) {
