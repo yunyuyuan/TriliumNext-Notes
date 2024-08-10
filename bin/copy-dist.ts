@@ -80,7 +80,9 @@ const copy = async () => {
     "node_modules/vanilla-js-wheel-zoom/dist/",
     "node_modules/mark.js/dist/",
     "node_modules/knockout/build/output/",
-    "node_modules/normalize.css/"
+    "node_modules/normalize.css/",
+    "node_modules/jquery.fancytree/dist/",
+    "node_modules/bootstrap/dist/"
   ];
 
   for (const folder of nodeModulesFolder) {
