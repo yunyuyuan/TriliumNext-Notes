@@ -71,6 +71,22 @@ function register(app: express.Application) {
 
     app.use(`/${assetPath}/node_modules/panzoom/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/panzoom/dist/')));
 
+    // Seems work without this, not sure will cause other bugs. Maybe can test without this for a while.
+    // app.use(`/${assetPath}/node_modules/eslint/bin/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/eslint/bin/')));
+
+    app.use(`/${assetPath}/node_modules/jsplumb/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/jsplumb/dist/')));
+
+    app.use(`/${assetPath}/node_modules/vanilla-js-wheel-zoom/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/vanilla-js-wheel-zoom/dist/')));
+    
+    app.use(`/${assetPath}/node_modules/mark.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/mark.js/dist/')));
+    
+    // Error and deprecated, https://www.npmjs.com/package/autocomplete.js?activeTab=readme
+    // app.use(`/${assetPath}/node_modules/autocomplete.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/autocomplete.js/dist/')));
+
+    app.use(`/${assetPath}/node_modules/knockout/build/output/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/knockout/build/output/')));
+
+    app.use(`/${assetPath}/node_modules/normalize.css/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/normalize.css/')));
+
     // i18n
     app.use(`/${assetPath}/node_modules/i18next/`, persistentCacheStatic(path.join(srcRoot, "..", 'node_modules/i18next/')));
     app.use(`/${assetPath}/node_modules/i18next-http-backend/`, persistentCacheStatic(path.join(srcRoot, "..", 'node_modules/i18next-http-backend/')));

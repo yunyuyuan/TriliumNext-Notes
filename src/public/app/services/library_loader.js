@@ -23,11 +23,11 @@ const CODE_MIRROR = {
     ]
 };
 
-const ESLINT = {js: ["libraries/eslint.js"]};
+const ESLINT = {js: ["node_modules/eslint/bin/eslint.js"]};
 
 const RELATION_MAP = {
     js: [
-        "libraries/jsplumb.js",
+        "node_modules/jsplumb/dist/js/jsplumb.min.js",
         "node_modules/panzoom/dist/panzoom.min.js"
     ],
     css: [
@@ -47,7 +47,7 @@ const KATEX = {
 };
 
 const WHEEL_ZOOM = {
-    js: [ "libraries/wheel-zoom.min.js"]
+    js: [ "node_modules/vanilla-js-wheel-zoom/dist/wheel-zoom.min.js"]
 };
 
 const FORCE_GRAPH = {
@@ -68,7 +68,7 @@ const EXCALIDRAW = {
 
 const MARKJS = {
     js: [
-        "libraries/jquery.mark.es6.min.js"
+        "node_modules/mark.js/dist/jquery.mark.es6.min.js"
     ]
 };
 
