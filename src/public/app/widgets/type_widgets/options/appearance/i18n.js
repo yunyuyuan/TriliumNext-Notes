@@ -1,14 +1,15 @@
 import OptionsWidget from "../options_widget.js";
 import server from "../../../../services/server.js";
 import utils from "../../../../services/utils.js";
+import { t } from "../../../../services/i18n.js";
 
 const TPL = `
 <div class="options-section">
-    <h4>Localization</h4>
+    <h4>${t("i18n.title")}</h4>
 
     <div class="form-group row">
         <div class="col-6">
-            <label>Language</label>
+            <label>${t("i18n.language")}</label>
             <select class="locale-select form-control"></select>
         </div>
     </div>
