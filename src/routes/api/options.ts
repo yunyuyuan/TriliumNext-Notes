@@ -58,7 +58,8 @@ const ALLOWED_OPTIONS = new Set([
     'customSearchEngineName',
     'customSearchEngineUrl',
     'promotedAttributesOpenInRibbon',
-    'editedNotesOpenInRibbon'
+    'editedNotesOpenInRibbon',
+    'locale'
 ]);
 
 function getOptions() {
