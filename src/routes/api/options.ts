@@ -131,7 +131,7 @@ function getUserThemes() {
 }
 
 function getSupportedLocales() {
-    // TODO: Currently hardcoded, needs to read the lits of available languages.
+    // TODO: Currently hardcoded, needs to read the list of available languages.
     return [
         {
             "id": "en",
