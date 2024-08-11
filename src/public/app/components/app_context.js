@@ -30,7 +30,7 @@ class AppContext extends Component {
      */
     async earlyInit() {
         await options.initializedPromise;
-        initLocale();
+        await initLocale();
     }
 
     setLayout(layout) {        

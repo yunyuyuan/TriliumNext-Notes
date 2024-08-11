@@ -10,7 +10,7 @@ import glob from "./services/glob.js";
 import { t } from "./services/i18n.js";
 
 bundleService.getWidgetBundlesByParent().then(async widgetBundles => {
-    appContext.earlyInit();
+    await appContext.earlyInit();
     
     // A dynamic import is required for layouts since they initialize components which require translations.
     const DesktopLayout = (await import("./layouts/desktop_layout.js")).default;
