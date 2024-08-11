@@ -1,20 +1,22 @@
 const path = require('path');
 const fs = require('fs-extra');
 
+const APP_NAME = "TriliumNext Notes";
+
 module.exports = {
   packagerConfig: {
     executableName: "trilium",
-    name: 'TriliumNext Notes',
+    name: APP_NAME,
     overwrite: true,
     asar: true,
     icon: "./images/app-icons/icon",
     extraResource: getExtraResourcesForPlatform(),
-    afterComplete: [(buildPath, electronVersion, platform, arch, callback) => {
+    afterComplete: [(buildPath, _electronVersion, platform, _arch, callback) => {
       const extraResources = getExtraResourcesForPlatform();
       for (const resource of extraResources) {
         let sourcePath;
         if (platform === 'darwin') {
-          sourcePath = path.join(buildPath, 'TriliumNextNotes.app', 'Contents', 'Resources', path.basename(resource));
+          sourcePath = path.join(buildPath, `${APP_NAME}.app`, 'Contents', 'Resources', path.basename(resource));
         } else {
           sourcePath = path.join(buildPath, 'resources', path.basename(resource));
         }
