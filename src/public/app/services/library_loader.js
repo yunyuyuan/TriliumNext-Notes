@@ -8,7 +8,6 @@ const CODE_MIRROR = {
         "libraries/codemirror/addon/edit/matchtags.js",
         "libraries/codemirror/addon/fold/xml-fold.js",
         "libraries/codemirror/addon/lint/lint.js",
-        "libraries/codemirror/addon/lint/eslint.js",
         "libraries/codemirror/addon/mode/loadmode.js",
         "libraries/codemirror/addon/mode/multiplex.js",
         "libraries/codemirror/addon/mode/overlay.js",
