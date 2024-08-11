@@ -181,8 +181,5 @@
     "typescript": "^5.3.3",
     "webpack": "^5.93.0",
     "webpack-cli": "5.1.4"
-  },
-  "optionalDependencies": {
-    "electron-installer-debian": "3.2.0"
   }
 }
