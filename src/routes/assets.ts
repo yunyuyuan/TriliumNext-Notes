@@ -75,8 +75,7 @@ function register(app: express.Application) {
     app.use(`/${assetPath}/node_modules/i18next-http-backend/`, persistentCacheStatic(path.join(srcRoot, "..", 'node_modules/i18next-http-backend/')));
     app.use(`/${assetPath}/translations/`, persistentCacheStatic(path.join(srcRoot, "public", "translations/")));
 
-    // Seems work without this, not sure will cause other bugs. Maybe can test without this for a while.
-    // app.use(`/${assetPath}/node_modules/eslint/bin/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/eslint/bin/')));
+    app.use(`/${assetPath}/node_modules/eslint/bin/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/eslint/bin/')));
 
     app.use(`/${assetPath}/node_modules/jsplumb/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/jsplumb/dist/')));
 
