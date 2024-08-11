@@ -98,14 +98,14 @@
         "export_finished_successfully": "Export finished successfully."
     },
     "help": {
-        "fullDocumentation": "Help (full documentation is available <a class=\"external\" href=\"https://github.com/zadam/trilium/wiki\">online</a>)",
+        "fullDocumentation": "Help (full documentation is available <a class=\"external\" href=\"https://triliumnext.github.io/Docs/\">online</a>)",
         "close": "Close",
         "noteNavigation": "Note navigation",
         "goUpDown": "go up/down in the list of notes",
         "collapseExpand": "collapse/expand node",
         "notSet": "not set",
         "goBackForwards": "go back / forwards in the history",
-        "showJumpToNoteDialog": "show <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-navigation.md#jump-to-note\">\"Jump to\" dialog</a>",
+        "showJumpToNoteDialog": "show <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/note-navigation.html#jump-to-note\">\"Jump to\" dialog</a>",
         "scrollToActiveNote": "scroll to active note",
         "jumpToParentNote": "jump to parent note",
         "collapseWholeTree": "collapse whole note tree",
@@ -120,14 +120,14 @@
         "creatingNotes": "Creating notes",
         "createNoteAfter": "create new note after the active note",
         "createNoteInto": "create new sub-note into active note",
-        "editBranchPrefix": "edit <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/tree-concepts.md#prefix\">prefix</a> of active note clone",
+        "editBranchPrefix": "edit <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix\">prefix</a> of active note clone",
         "movingCloningNotes": "Moving / cloning notes",
         "moveNoteUpDown": "move note up/down in the note list",
         "moveNoteUpHierarchy": "move note up in the hierarchy",
         "multiSelectNote": "multi-select note above/below",
         "selectAllNotes": "select all notes in the current level",
         "selectNote": "select note",
-        "copyNotes": "copy active note (or current selection) into clipboard (used for <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/cloning-notes.md\">cloning</a>)",
+        "copyNotes": "copy active note (or current selection) into clipboard (used for <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/cloning-notes.html#cloning-notes\">cloning</a>)",
         "cutNotes": "cut current (or current selection) note into clipboard (used for moving notes)",
         "pasteNotes": "paste note(s) as sub-note into active note (which is either move or clone depending on whether it was copied or cut into clipboard)",
         "deleteNotes": "delete note / sub-tree",
@@ -341,8 +341,8 @@
         "css_class": "value of this label is then added as CSS class to the node representing given note in the tree. This can be useful for advanced theming. Can be used in template notes.",
         "icon_class": "value of this label is added as a CSS class to the icon on the tree which can help visually distinguish the notes in the tree. Example might be bx bx-home - icons are taken from boxicons. Can be used in template notes.",
         "page_size": "number of items per page in note listing",
-        "custom_request_handler": "see <a href=\"javascript:\" data-help-page=\"Custom request handler\">Custom request handler</a>",
-        "custom_resource_provider": "see <a href=\"javascript:\" data-help-page=\"Custom request handler\">Custom request handler</a>",
+        "custom_request_handler": "see <a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">Custom request handler</a>",
+        "custom_resource_provider": "see <a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">Custom request handler</a>",
         "widget": "marks this note as a custom widget which will be added to the Trilium component tree",
         "workspace": "marks this note as a workspace which allows easy hoisting",
         "workspace_icon_class": "defines box icon CSS class which will be used in tab when hoisted to this note",
@@ -367,7 +367,7 @@
         "share_index": "note with this this label will list all roots of shared notes",
         "display_relations": "comma delimited names of relations which should be displayed. All other ones will be hidden.",
         "hide_relations": "comma delimited names of relations which should be hidden. All other ones will be displayed.",
-        "title_template": "default title of notes created as children of this note. The value is evaluated as JavaScript string \n                        and thus can be enriched with dynamic content via the injected <code>now</code> and <code>parentNote</code> variables. Examples:\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}'s literary works</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        See <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/default-note-title.md\">wiki with details</a>, API docs for <a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a> and <a href=\"https://day.js.org/docs/en/display/format\">now</a> for details.",
+        "title_template": "default title of notes created as children of this note. The value is evaluated as JavaScript string \n                        and thus can be enriched with dynamic content via the injected <code>now</code> and <code>parentNote</code> variables. Examples:\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}'s literary works</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        See <a href=\"https://triliumnext.github.io/Docs/Wiki/default-note-title.html\">wiki with details</a>, API docs for <a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a> and <a href=\"https://day.js.org/docs/en/display/format\">now</a> for details.",
         "template": "This note will appear in the selection of available template when creating new note",
         "toc": "<code>#toc</code> or <code>#toc=show</code> will force the Table of Contents to be shown, <code>#toc=hide</code> will force hiding it. If the label doesn't exist, the global setting is observed",
         "color": "defines color of the note in note tree, links etc. Use any valid CSS color value like 'red' or #a13d5f",
@@ -879,7 +879,7 @@
         "no_attachments": "This note has no attachments."
     },
     "book": {
-        "no_children_help": "This note of type Book doesn't have any child notes so there's nothing to display. See <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/book-note.md\">wiki</a> for details."
+        "no_children_help": "This note of type Book doesn't have any child notes so there's nothing to display. See <a href=\"https://triliumnext.github.io/Docs/Wiki/book-note.html\">wiki</a> for details."
     },
     "editable_code": {
         "placeholder": "Type the content of your code note here..."
@@ -919,7 +919,7 @@
     },
     "render": {
         "note_detail_render_help_1": "This help note is shown because this note of type Render HTML doesn't have required relation to function properly.",
-        "note_detail_render_help_2": "Render HTML note type is used for <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/scripts.md\">scripting</a>. In short, you have a HTML code note (optionally with some JavaScript) and this note will render it. To make it work, you need to define a <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/attributes.md\">relation</a> called \"renderNote\" pointing to the HTML note to render."
+        "note_detail_render_help_2": "Render HTML note type is used for <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/scripts.html\">scripting</a>. In short, you have a HTML code note (optionally with some JavaScript) and this note will render it. To make it work, you need to define a <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/attributes.html\">relation</a> called \"renderNote\" pointing to the HTML note to render."
     },
     "web_view": {
         "web_view": "Web View",
@@ -1066,7 +1066,7 @@
     },
     "revisions_snapshot_interval": {
         "note_revisions_snapshot_interval_title": "Note Revisions Snapshot Interval",
-        "note_revisions_snapshot_description": "Note revision snapshot time interval is time in seconds after which a new note revision will be created for the note. See <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-revisions.md\" class=\"external\">wiki</a> for more info.",
+        "note_revisions_snapshot_description": "Note revision snapshot time interval is time in seconds after which a new note revision will be created for the note. See <a href=\"https://triliumnext.github.io/Docs/Wiki/note-revisions.html\" class=\"external\">wiki</a> for more info.",
         "snapshot_time_interval_label": "Note revision snapshot time interval (in seconds)"
     },
     "search_engine": {

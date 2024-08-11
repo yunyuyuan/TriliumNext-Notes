@@ -15,7 +15,7 @@ const TPL = `
         <div class="dropdown help-dropdown">
           <span class="bx bx-help-circle icon-action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
           <div class="dropdown-menu dropdown-menu-right p-4">
-            <strong>${t('search_string.search_syntax')}</strong> - ${t('search_string.also_see')} <button class="btn btn-sm" type="button" data-help-page="search.md">${t('search_string.complete_help')}</button>
+            <strong>${t('search_string.search_syntax')}</strong> - ${t('search_string.also_see')} <button class="btn btn-sm" type="button" data-help-page="search.html">${t('search_string.complete_help')}</button>
             <p>
             <ul>
                 <li>${t('search_string.full_text_search')}</li>

@@ -2,8 +2,8 @@ import { test as setup, expect } from '@playwright/test';
 
 const authFile = 'playwright/.auth/user.json';
 
-const ROOT_URL = "http://localhost:8080";
-const LOGIN_PASSWORD = "eliandoran";
+const ROOT_URL = "http://localhost:8082";
+const LOGIN_PASSWORD = "demo1234";
 
 // Reference: https://playwright.dev/docs/auth#basic-shared-account-in-all-tests 
 
