@@ -135,11 +135,13 @@ function getSupportedLocales() {
     return [
         {
             "id": "en",
-            "name": "English"
+            "flag": "🇺🇸",
+            "name": "English (United States)"
         },
         {
             "id": "cn",
-            "name": "Chinese"
+            "flag": "🇨🇳",
+            "name": "Chinese (China)"
         }
     ];
 }

@@ -32,7 +32,7 @@ export default class LocalizationOptions extends OptionsWidget {
         for (const locale of availableLocales) {
             this.$localeSelect.append($("<option>")
                 .attr("value", locale.id)
-                .text(locale.name));
+                .text(`${locale.flag} ${locale.name}`));
         }
 
         this.$localeSelect.val(options.locale);
