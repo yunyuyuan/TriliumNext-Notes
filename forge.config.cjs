@@ -4,10 +4,9 @@ const fs = require('fs-extra');
 module.exports = {
   packagerConfig: {
     executableName: "trilium",
-    name: 'TriliumNextNotes',
+    name: 'TriliumNext Notes',
     overwrite: true,
     asar: true,
-    // icon will break once we add .dmg support, since the .ico & .icns have to be in same dir (see https://www.electronforge.io/guides/create-and-add-icons#windows-and-macos)
     icon: "./images/app-icons/icon",
     extraResource: getExtraResourcesForPlatform(),
     afterComplete: [(buildPath, electronVersion, platform, arch, callback) => {
