@@ -15,7 +15,7 @@ test("User can change language from settings", async ({ page }) => {
     // Check that the default value (English) is set.
     await expect(page.locator('#center-pane')).toContainText('Theme');    
     const languageCombobox = await page.getByRole('combobox').first();
-    expect(languageCombobox).toHaveValue("en");
+    await expect(languageCombobox).toHaveValue("en");
 
     // Select Chinese and ensure the translation is set.
     languageCombobox.selectOption("cn");
@@ -23,4 +23,21 @@ test("User can change language from settings", async ({ page }) => {
 
     // Select English again.
     languageCombobox.selectOption("en");
+});
+
+test("Restores language on start-up on desktop", async ({ page, context }) => {    
+    await page.goto('http://localhost:8082');
+    await expect(page.locator('#launcher-pane').first()).toContainText("Open New Window");
+});
+
+test("Restores language on start-up on mobile", async ({ page, context }) => {
+    await context.addCookies([
+        {
+            url: "http://localhost:8082",
+            name: "trilium-device",
+            value: "mobile"
+        }
+    ]);
+    await page.goto('http://localhost:8082');
+    await expect(page.locator('#launcher-pane div').first()).toContainText("Open New Window");
 });
