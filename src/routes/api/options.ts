@@ -129,6 +129,20 @@ function getUserThemes() {
     return ret;
 }
 
+function getSupportedLocales() {
+    // TODO: Currently hardcoded, needs to read the lits of available languages.
+    return [
+        {
+            "id": "en",
+            "name": "English"
+        },
+        {
+            "id": "cn",
+            "name": "Chinese"
+        }
+    ];
+}
+
 function isAllowed(name: string) {
     return ALLOWED_OPTIONS.has(name)
         || name.startsWith("keyboardShortcuts")
@@ -140,5 +154,6 @@ export default {
     getOptions,
     updateOption,
     updateOptions,
-    getUserThemes
+    getUserThemes,
+    getSupportedLocales
 };
