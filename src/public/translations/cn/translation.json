@@ -98,14 +98,14 @@
         "export_finished_successfully": "导出成功完成。"
     },
     "help": {
-        "fullDocumentation": "帮助（完整<a class=\"external\" href=\"https://github.com/zadam/trilium/wiki\">在线文档</a>)",
+        "fullDocumentation": "帮助（完整<a class=\"external\" href=\"https://triliumnext.github.io/Docs/\">在线文档</a>)",
         "close": "关闭",
         "noteNavigation": "笔记导航",
         "goUpDown": "在笔记列表中向上/向下移动",
         "collapseExpand": "折叠/展开节点",
         "notSet": "未设置",
         "goBackForwards": "在历史记录中前后移动",
-        "showJumpToNoteDialog": "显示<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-navigation.md#jump-to-note\">\"跳转到\" 对话框</a>",
+        "showJumpToNoteDialog": "显示<a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/note-navigation.html#jump-to-note\">\"跳转到\" 对话框</a>",
         "scrollToActiveNote": "滚动到活动笔记",
         "jumpToParentNote": "跳转到父笔记",
         "collapseWholeTree": "折叠整个笔记树",
@@ -120,14 +120,14 @@
         "creatingNotes": "创建笔记",
         "createNoteAfter": "在活动笔记后创建新笔记",
         "createNoteInto": "在活动笔记中创建新子笔记",
-        "editBranchPrefix": "编辑活动笔记克隆的<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/tree-concepts.md#prefix\">前缀</a>",
+        "editBranchPrefix": "编辑活动笔记克隆的<a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix\">前缀</a>",
         "movingCloningNotes": "移动/克隆笔记",
         "moveNoteUpDown": "在笔记列表中向上/向下移动笔记",
         "moveNoteUpHierarchy": "在层级结构中向上移动笔记",
         "multiSelectNote": "多选上/下笔记",
         "selectAllNotes": "选择当前级别的所有笔记",
         "selectNote": "选择笔记",
-        "copyNotes": "将活动笔记（或当前选择）复制到剪贴板（用于<a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/cloning-notes.md\">克隆</a>）",
+        "copyNotes": "将活动笔记（或当前选择）复制到剪贴板（用于<a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/cloning-notes.html#cloning-notes\">克隆</a>）",
         "cutNotes": "将当前笔记（或当前选择）剪切到剪贴板（用于移动笔记）",
         "pasteNotes": "将笔记粘贴为活动笔记的子笔记（根据是复制还是剪切到剪贴板来决定是移动还是克隆）",
         "deleteNotes": "删除笔记/子树",
@@ -341,8 +341,8 @@
         "css_class": "该标签的值将作为CSS类添加到树中表示给定笔记的节点。这对于高级主题设置非常有用。可用于模板笔记。",
         "icon_class": "该标签的值将作为CSS类添加到树中图标上，有助于从视觉上区分笔记树里的笔记。比如可以是 bx bx-home - 图标来自boxicons。可用于模板笔记。",
         "page_size": "笔记列表中每页的项目数",
-        "custom_request_handler": "请参阅<a href=\"javascript:\" data-help-page=\"Custom request handler\">自定义请求处理程序</a> ",
-        "custom_resource_provider": "请参阅<a href=\"javascript:\" data-help-page=\"Custom request handler\">自定义请求处理程序</a>",
+        "custom_request_handler": "请参阅<a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">自定义请求处理程序</a> ",
+        "custom_resource_provider": "请参阅<a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">自定义请求处理程序</a>",
         "widget": "将此笔记标记为将添加到Trilium组件树中的自定义小部件",
         "workspace": "将此笔记标记为允许轻松提升的工作区",
         "workspace_icon_class": "定义在选项卡中提升到此笔记时将使用的框图图标CSS类",
@@ -367,7 +367,7 @@
         "share_index": "含有此标签的笔记将列出所有分享笔记的根",
         "display_relations": "应显示的逗号分隔关系名称。将隐藏所有其他关系。",
         "hide_relations": "应隐藏的逗号分隔关系名称。将显示所有其他关系。",
-        "title_template": "创建为此笔记的子笔记时的默认标题。该值将作为JavaScript字符串评估\n                        并因此可以通过注入的<code>now</code>和<code>parentNote</code>变量丰富动态内容。示例：\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}的文学作品</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        有关详细信息，请参见<a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/default-note-title.md\">详细信息wiki</a>，API文档<a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a>和<a href=\"https://day.js.org/docs/en/display/format\">now</a>。",
+        "title_template": "创建为此笔记的子笔记时的默认标题。该值将作为JavaScript字符串评估\n                        并因此可以通过注入的<code>now</code>和<code>parentNote</code>变量丰富动态内容。示例：\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}的文学作品</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        有关详细信息，请参见<a href=\"https://triliumnext.github.io/Docs/Wiki/default-note-title.html\">详细信息wiki</a>，API文档<a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a>和<a href=\"https://day.js.org/docs/en/display/format\">now</a>。",
         "template": "创建新笔记时将出现在可用模板的选择中的笔记",
         "toc": "<code>#toc</code>或<code>#toc=show</code>将强制显示目录。 <code>#toc=hide</code>将强制隐藏它。如果标签不存在，则观察全局设置",
         "color": "定义笔记树、链接等中笔记的颜色。使用任何有效的CSS颜色值，如'red'或#a13d5f",
@@ -878,7 +878,7 @@
         "no_attachments": "此笔记没有附件。"
     },
     "book": {
-        "no_children_help": "此类型为书籍的笔记没有任何子笔记，因此没有内容显示。请参阅 <a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/book-note.md\">wiki</a> 了解详情"
+        "no_children_help": "此类型为书籍的笔记没有任何子笔记，因此没有内容显示。请参阅 <a href=\"https://triliumnext.github.io/Docs/Wiki/book-note.html\">wiki</a> 了解详情"
     },
     "editable_code": {
         "placeholder": "在这里输入您的代码笔记内容..."
@@ -918,7 +918,7 @@
     },
     "render": {
         "note_detail_render_help_1": "之所以显示此帮助说明，是因为该类型的渲染HTML没有设置好必须的关联关系。",
-        "note_detail_render_help_2": "渲染笔记类型用于编写 <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/scripts.md\">脚本</a>。简单说就是你可以写HTML代码（或者加上一些JavaScript代码）， 然后这个笔记会把页面渲染出来。要使其正常工作，您需要定义一个名为 \"renderNote\" 的关系 <a class=\"external\" href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/attributes.md\">关系</a> 指向要呈现的 HTML 笔记。"
+        "note_detail_render_help_2": "渲染笔记类型用于编写 <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/scripts.html\">脚本</a>。简单说就是你可以写HTML代码（或者加上一些JavaScript代码）， 然后这个笔记会把页面渲染出来。要使其正常工作，您需要定义一个名为 \"renderNote\" 的关系 <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/attributes.html\">关系</a> 指向要呈现的 HTML 笔记。"
     },
     "web_view": {
         "web_view": "网页视图",
@@ -1065,7 +1065,7 @@
     },
     "revisions_snapshot_interval": {
         "note_revisions_snapshot_interval_title": "笔记修改快照间隔",
-        "note_revisions_snapshot_description": "笔记修改快照时间间隔是指经过多少秒后会为笔记创建新的修改历史。更多信息请参见<a href=\"https://github.com/TriliumNext/Docs/blob/main/Wiki/note-revisions.md\" class=\"external\">wiki</a>。",
+        "note_revisions_snapshot_description": "笔记修改快照时间间隔是指经过多少秒后会为笔记创建新的修改历史。更多信息请参见<a href=\"https://triliumnext.github.io/Docs/Wiki/note-revisions.html\" class=\"external\">wiki</a>。",
         "snapshot_time_interval_label": "笔记修改快照时间间隔（单位:秒）"
     },
     "search_engine": {
