@@ -2,23 +2,23 @@ const CKEDITOR = {"js": ["libraries/ckeditor/ckeditor.js"]};
 
 const CODE_MIRROR = {
     js: [
-        "libraries/codemirror/codemirror.js",
-        "libraries/codemirror/addon/display/placeholder.js",
-        "libraries/codemirror/addon/edit/matchbrackets.js",
-        "libraries/codemirror/addon/edit/matchtags.js",
-        "libraries/codemirror/addon/fold/xml-fold.js",
-        "libraries/codemirror/addon/lint/lint.js",
-        "libraries/codemirror/addon/mode/loadmode.js",
-        "libraries/codemirror/addon/mode/multiplex.js",
-        "libraries/codemirror/addon/mode/overlay.js",
-        "libraries/codemirror/addon/mode/simple.js",
-        "libraries/codemirror/addon/search/match-highlighter.js",
-        "libraries/codemirror/mode/meta.js",
-        "libraries/codemirror/keymap/vim.js"
+        "node_modules/codemirror/lib/codemirror.js",
+        "node_modules/codemirror/addon/display/placeholder.js",
+        "node_modules/codemirror/addon/edit/matchbrackets.js",
+        "node_modules/codemirror/addon/edit/matchtags.js",
+        "node_modules/codemirror/addon/fold/xml-fold.js",
+        "node_modules/codemirror/addon/lint/lint.js",
+        "node_modules/codemirror/addon/mode/loadmode.js",
+        "node_modules/codemirror/addon/mode/multiplex.js",
+        "node_modules/codemirror/addon/mode/overlay.js",
+        "node_modules/codemirror/addon/mode/simple.js",
+        "node_modules/codemirror/addon/search/match-highlighter.js",
+        "node_modules/codemirror/mode/meta.js",
+        "node_modules/codemirror/keymap/vim.js"
     ],
     css: [
-        "libraries/codemirror/codemirror.css",
-        "libraries/codemirror/addon/lint/lint.css"
+        "node_modules/codemirror/lib/codemirror.css",
+        "node_modules/codemirror/addon/lint/lint.css"
     ]
 };
 

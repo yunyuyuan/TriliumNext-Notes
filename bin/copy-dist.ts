@@ -83,7 +83,12 @@ const copy = async () => {
     "node_modules/knockout/build/output/",
     "node_modules/normalize.css/",
     "node_modules/jquery.fancytree/dist/",
-    "node_modules/bootstrap/dist/"
+    "node_modules/bootstrap/dist/",
+    "node_modules/autocomplete.js/dist/",
+    "node_modules/codemirror/lib/",
+    "node_modules/codemirror/addon/",
+    "node_modules/codemirror/mode/",
+    "node_modules/codemirror/keymap/",
   ];
 
   for (const folder of nodeModulesFolder) {
