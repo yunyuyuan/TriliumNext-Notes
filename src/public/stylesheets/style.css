@@ -623,6 +623,10 @@ div[data-notify="container"] {
     background-color: var(--accented-background-color) !important;
 }
 
+.ck-content li p {
+    margin: 0 !important;
+}
+
 #options-dialog input[type=number] {
     text-align: right;
 }
