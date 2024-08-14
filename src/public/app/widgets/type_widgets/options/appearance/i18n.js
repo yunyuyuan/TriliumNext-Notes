@@ -29,6 +29,8 @@ export default class LocalizationOptions extends OptionsWidget {
 
     async optionsLoaded(options) {
         const availableLocales = await server.get("options/locales");
+        this.$localeSelect.empty();
+
         for (const locale of availableLocales) {
             this.$localeSelect.append($("<option>")
                 .attr("value", locale.id)
