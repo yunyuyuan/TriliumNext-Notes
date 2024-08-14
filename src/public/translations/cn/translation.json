@@ -1114,5 +1114,22 @@
         "title": "自动只读大小",
         "description": "自动只读笔记大小是超过该大小后，笔记将以只读模式显示（出于性能考虑）。",
         "label": "自动只读大小（文本笔记）"
+    },
+    "i18n": {
+        "title": "本地化",
+        "language": "语言"
+    },
+    "backup": {
+        "automatic_backup": "自动备份",
+        "automatic_backup_description": "Trilium 可以自动备份数据库：",
+        "enable_daily_backup": "启用每日备份",
+        "enable_weekly_backup": "启用每周备份",
+        "enable_monthly_backup": "启用每月备份",
+        "backup_recommendation": "建议打开备份功能，但这可能会使大型数据库和/或慢速存储设备的应用程序启动变慢。",
+        "backup_now": "立即备份",
+        "backup_database_now": "立即备份数据库",
+        "existing_backups": "已有备份",
+        "database_backed_up_to": "数据库已备份到",
+        "no_backup_yet": "尚无备份"
     }
 }
