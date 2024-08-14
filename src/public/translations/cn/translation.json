@@ -1181,5 +1181,18 @@
         "set_password": "设置密码",
         "password_mismatch": "新密码不一致。",
         "password_changed_success": "密码已更改。按 OK 后 Trilium 将重新加载。"
+    },
+    "shortcuts": {
+        "keyboard_shortcuts": "快捷键",
+        "multiple_shortcuts": "同一操作的多个快捷键可以用逗号分隔。",
+        "electron_documentation": "请参阅 <a href=\"https://www.electronjs.org/docs/latest/api/accelerator\">Electron文档</a>，了解可用的修饰符和键码。",
+        "type_text_to_filter": "输入文字以过滤快捷键...",
+        "action_name": "操作名称",
+        "shortcuts": "快捷键",
+        "default_shortcuts": "默认快捷键",
+        "description": "描述",
+        "reload_app": "重新加载应用以应用更改",
+        "set_all_to_default": "将所有快捷键重置为默认值",
+        "confirm_reset": "您确定要将所有键盘快捷键重置为默认值吗？"
     }
 }
