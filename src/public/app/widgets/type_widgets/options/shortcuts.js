@@ -40,7 +40,7 @@ const TPL = `
     <div class="shortcuts-table-container">
         <table class="keyboard-shortcut-table" cellpadding="10">
         <thead>
-            <tr>
+            <tr class="text-nowrap">
                 <th>${t('shortcuts.action_name')}</th>
                 <th>${t('shortcuts.shortcuts')}</th>
                 <th>${t('shortcuts.default_shortcuts')}</th>
