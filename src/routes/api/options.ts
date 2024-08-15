@@ -143,7 +143,7 @@ function getSupportedLocales() {
         },
         {
             "id": "cn",
-            "name": "Chinese"
+            "name": "简体中文"
         }
     ];
 }
