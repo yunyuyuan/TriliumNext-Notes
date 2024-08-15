@@ -1194,5 +1194,29 @@
         "reload_app": "重新加载应用以应用更改",
         "set_all_to_default": "将所有快捷键重置为默认值",
         "confirm_reset": "您确定要将所有键盘快捷键重置为默认值吗？"
+    },
+    "spellcheck": {
+        "title": "拼写检查",
+        "description": "这些选项仅适用于桌面版本，浏览器将使用其原生的拼写检查功能。更改后需要重启应用。",
+        "enable": "启用拼写检查",
+        "language_code_label": "语言代码",
+        "language_code_placeholder": "例如 \"en-US\", \"de-AT\"",
+        "multiple_languages_info": "多种语言可以用逗号分隔，例如 \"en-US, de-DE, cs\"。拼写检查选项的更改将在应用重启后生效。",
+        "available_language_codes_label": "可用的语言代码："
+    },
+    "sync_2": {
+        "config_title": "同步配置",
+        "server_address": "服务器地址",
+        "timeout": "同步超时（单位：毫秒）",
+        "proxy_label": "同步代理服务器（可选）",
+        "note": "注意",
+        "note_description": "代理设置留空则使用系统代理（仅桌面客户端有效）。",
+        "special_value_description": "另一个特殊值是 <code>noproxy</code>，它强制忽略系统代理并遵守 <code>NODE_TLS_REJECT_UNAUTHORIZED</code>。",
+        "save": "保存",
+        "help": "帮助",
+        "test_title": "同步测试",
+        "test_description": "测试和同步服务器之间的连接。如果同步服务器没有初始化，会将本地文档同步到同步服务器上。",
+        "test_button": "测试同步",
+        "handshake_failed": "同步服务器握手失败，错误：{{message}}"
     }
 }

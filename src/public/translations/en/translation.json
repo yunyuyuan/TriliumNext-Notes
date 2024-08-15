@@ -1195,5 +1195,29 @@
         "reload_app": "Reload app to apply changes",
         "set_all_to_default": "Set all shortcuts to the default",
         "confirm_reset": "Do you really want to reset all keyboard shortcuts to the default?"
+    },
+    "spellcheck": {
+        "title": "Spell Check",
+        "description": "These options apply only for desktop builds, browsers will use their own native spell check. App restart is required after change.",
+        "enable": "Enable spellcheck",
+        "language_code_label": "Language code(s)",
+        "language_code_placeholder": "for example \"en-US\", \"de-AT\"",
+        "multiple_languages_info": "Multiple languages can be separated by comma, e.g. \"en-US, de-DE, cs\". Changes to the spell check options will take effect after application restart.",
+        "available_language_codes_label": "Available language codes:"
+    },
+    "sync": {
+        "config_title": "Sync Configuration",
+        "server_address": "Server instance address",
+        "timeout": "Sync timeout (milliseconds)",
+        "proxy_label": "Sync proxy server (optional)",
+        "note": "Note",
+        "note_description": "If you leave the proxy setting blank, the system proxy will be used (applies to desktop/electron build only).",
+        "special_value_description": "Another special value is <code>noproxy</code> which forces ignoring even the system proxy and respects <code>NODE_TLS_REJECT_UNAUTHORIZED</code>.",
+        "save": "Save",
+        "help": "Help",
+        "test_title": "Sync Test",
+        "test_description": "This will test the connection and handshake to the sync server. If the sync server isn't initialized, this will set it up to sync with the local document.",
+        "test_button": "Test sync",
+        "handshake_failed": "Sync server handshake failed, error: {{message}}"
     }
 }
