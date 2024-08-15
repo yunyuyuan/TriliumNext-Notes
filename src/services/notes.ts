@@ -107,7 +107,7 @@ function getNewNoteTitle(parentNote: BNote) {
             // - now
             // - parentNote
 
-            title = (0, eval)(`\`${titleTemplate}\``);
+            title = eval(`\`${titleTemplate}\``);
         } catch (e: any) {
             log.error(`Title template of note '${parentNote.noteId}' failed with: ${e.message}`);
         }
