@@ -11,7 +11,6 @@ export async function initLocale() {
         .init({
             lng: locale,
             fallbackLng: "en",
-            debug: true,
             backend: {
                 loadPath: `/${window.glob.assetPath}/translations/{{lng}}/{{ns}}.json`
             }

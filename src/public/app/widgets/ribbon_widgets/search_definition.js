@@ -199,7 +199,7 @@ export default class SearchDefinitionWidget extends NoteContextAwareWidget {
                 this.$actionList.append(
                     $('<a class="dropdown-item" href="#">')
                         .attr('data-action-add', action.actionName)
-                        .text(t(`${action.actionTitle}`))
+                        .text(action.actionTitle)
                 );
             }
         }

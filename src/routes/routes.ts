@@ -299,6 +299,10 @@ function register(app: express.Application) {
     route(PST, '/api/database/anonymize/:type', [auth.checkApiAuthOrElectron, csrfMiddleware], databaseRoute.anonymize, apiResultHandler, false);
     apiRoute(GET, '/api/database/anonymized-databases', databaseRoute.getExistingAnonymizedDatabases);
 
+    if (process.env.TRILIUM_INTEGRATION_TEST === "memory") {
+        route(PST, '/api/database/rebuild/', [auth.checkApiAuthOrElectron], databaseRoute.rebuildIntegrationTestDatabase, apiResultHandler, false);
+    }
+
     // backup requires execution outside of transaction
     route(PST, '/api/database/backup-database', [auth.checkApiAuthOrElectron, csrfMiddleware], databaseRoute.backupDatabase, apiResultHandler, false);
     apiRoute(GET, '/api/database/backups', databaseRoute.getExistingBackups);
