@@ -138,6 +138,10 @@ function getSupportedLocales() {
             "name": "English"
         },
         {
+            "id": "es",
+            "name": "Español"
+        },
+        {
             "id": "cn",
             "name": "Chinese"
         }
