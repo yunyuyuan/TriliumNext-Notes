@@ -1219,5 +1219,8 @@
         "test_description": "This will test the connection and handshake to the sync server. If the sync server isn't initialized, this will set it up to sync with the local document.",
         "test_button": "Test sync",
         "handshake_failed": "Sync server handshake failed, error: {{message}}"
+    },
+    "api_log": {
+        "close": "Close"
     }
 }
