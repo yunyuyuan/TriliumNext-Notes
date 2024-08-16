@@ -6,6 +6,11 @@ import attributeService from "../services/attributes.js";
  */
 export default class TemplateSwitchWidget extends SwitchWidget {
 
+    isEnabled() {
+        return super.isEnabled()
+            && !this.noteId.startsWith('_options');
+    }
+
     doRender() {
         super.doRender();
 
