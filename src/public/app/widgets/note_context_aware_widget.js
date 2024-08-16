@@ -48,6 +48,8 @@ class NoteContextAwareWidget extends BasicWidget {
     }
 
     /**
+     * @inheritdoc
+     * 
      * @returns {boolean} true when an active note exists
      */
     isEnabled() {

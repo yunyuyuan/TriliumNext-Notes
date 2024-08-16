@@ -131,6 +131,10 @@ class BasicWidget extends Component {
         return this.$widget;
     }
 
+    /**
+     * Indicates if the widget is enabled. Widgets are enabled by default. Generally setting this to `false` will cause the widget not to be displayed, however it will still be available on the DOM but hidden.
+     * @returns 
+     */
     isEnabled() {
         return true;
     }
