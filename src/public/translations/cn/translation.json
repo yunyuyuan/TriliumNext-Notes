@@ -1229,5 +1229,18 @@
         "role_and_size": "角色: {{role}}, 大小: {{size}}",
         "link_copied": "附件链接已复制到剪贴板。",
         "unrecognized_role": "无法识别的附件角色 '{{role}}'。"
+    },
+    "bookmark_switch": {
+        "bookmark": "书签",
+        "bookmark_this_note": "将此笔记添加到左侧面板的书签",
+        "remove_bookmark": "移除书签"
+    },
+    "editability_select": {
+        "auto": "自动",
+        "read_only": "只读",
+        "always_editable": "始终可编辑",
+        "note_is_editable": "笔记如果不太长则可编辑。",
+        "note_is_read_only": "笔记为只读，但可以通过点击按钮进行编辑。",
+        "note_is_always_editable": "无论笔记长度如何，始终可编辑。"
     }
 }

@@ -1229,5 +1229,18 @@
         "role_and_size": "Role: {{role}}, Size: {{size}}",
         "link_copied": "Attachment link copied to clipboard.",
         "unrecognized_role": "Unrecognized attachment role '{{role}}'."
+    },
+    "bookmark_switch": {
+        "bookmark": "Bookmark",
+        "bookmark_this_note": "Bookmark this note to the left side panel",
+        "remove_bookmark": "Remove bookmark"
+    },
+    "editability_select": {
+        "auto": "Auto",
+        "read_only": "Read-only",
+        "always_editable": "Always Editable",
+        "note_is_editable": "Note is editable if it's not too long.",
+        "note_is_read_only": "Note is read-only, but can be edited with a button click.",
+        "note_is_always_editable": "Note is always editable, regardless of its length."
     }
 }
