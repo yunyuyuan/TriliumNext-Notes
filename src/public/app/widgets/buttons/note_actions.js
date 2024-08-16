@@ -65,6 +65,7 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
         this.$showSourceButton = this.$widget.find('.show-source-button');
         this.$showAttachmentsButton = this.$widget.find('.show-attachments-button');
         this.$renderNoteButton = this.$widget.find('.render-note-button');
+        this.$saveRevisionButton = this.$widget.find(".save-revision-button");
 
         this.$exportNoteButton = this.$widget.find('.export-note-button');
         this.$exportNoteButton.on("click", () => {
@@ -118,9 +119,11 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
         );
 
         // I don't want to handle all special notes like this, but intuitively user might want to export content of backend log
-        this.toggleDisabled(this.$exportNoteButton, !['_backendLog'].includes(note.noteId));
+        this.toggleDisabled(this.$exportNoteButton, !['_backendLog'].includes(note.noteId) && !isInOptions);
 
-        this.toggleDisabled(this.$importNoteButton, !['search'].includes(note.type));
+        this.toggleDisabled(this.$importNoteButton, !['search'].includes(note.type) && !isInOptions);
+        this.toggleDisabled(this.$deleteNoteButton, !isInOptions);
+        this.toggleDisabled(this.$saveRevisionButton, !isInOptions);
     }
 
     async convertNoteIntoAttachmentCommand() {
