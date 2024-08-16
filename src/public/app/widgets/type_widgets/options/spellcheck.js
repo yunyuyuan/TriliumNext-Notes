@@ -1,11 +1,19 @@
 import utils from "../../../services/utils.js";
 import OptionsWidget from "./options_widget.js";
 
-const TPL = `
+const TPL_WEB = `
 <div class="options-section">
     <h4>Spell Check</h4>
 
-    <p>These options apply only for desktop builds, browsers will use their own native spell check. App restart is required after change.</p>
+    <p>These options apply only for desktop builds, browsers will use their own native spell check.</p>
+</div>
+`;
+
+const TPL_ELECTRON = `
+<div class="options-section">
+    <h4>Spell Check</h4>
+
+    <p>App restart is required after change.</p>
 
     <label>
         <input type="checkbox" class="spell-check-enabled">
@@ -26,7 +34,8 @@ const TPL = `
 
 export default class SpellcheckOptions extends OptionsWidget {
     doRender() {
-        this.$widget = $(TPL);
+        const template = utils.isElectron() ? TPL_ELECTRON : TPL_WEB;
+        this.$widget = $(template);
 
         this.$spellCheckEnabled = this.$widget.find(".spell-check-enabled");
         this.$spellCheckLanguageCode = this.$widget.find(".spell-check-language-code");
