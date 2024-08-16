@@ -536,7 +536,6 @@
         "delete_success": "Attachment '{{title}}' has been deleted.",
         "convert_confirm": "Are you sure you want to convert attachment '{{title}}' into a separate note?",
         "convert_success": "Attachment '{{title}}' has been converted to note.",
-        "rename_attachment": "Rename attachment",
         "enter_new_name": "Please enter new attachment's name"
     },
     "calendar": {
@@ -1224,7 +1223,7 @@
         "close": "Close"
     },
     "attachment_detail_2": {
-        "will_be_deleted_in": "This attachment will be automatically deleted in {time}}",
+        "will_be_deleted_in": "This attachment will be automatically deleted in {{time}}",
         "will_be_deleted_soon": "This attachment will be automatically deleted soon",
         "deletion_reason": ", because the attachment is not linked in the note's content. To prevent deletion, add the attachment link back into the content or convert the attachment into note.",
         "role_and_size": "Role: {{role}}, Size: {{size}}",
