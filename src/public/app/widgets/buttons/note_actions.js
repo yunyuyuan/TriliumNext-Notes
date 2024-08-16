@@ -35,7 +35,7 @@ const TPL = `
         <a data-trigger-command="renderActiveNote" class="dropdown-item render-note-button"><kbd data-command="renderActiveNote"></kbd> ${t('note_actions.re_render_note')}</a>
         <a data-trigger-command="findInText" class="dropdown-item find-in-text-button">${t('note_actions.search_in_note')} <kbd data-command="findInText"></kbd></a>
         <a data-trigger-command="showNoteSource" class="dropdown-item show-source-button"><kbd data-command="showNoteSource"></kbd> ${t('note_actions.note_source')}</a>
-        <a data-trigger-command="showAttachments" class="dropdown-item"><kbd data-command="showAttachments"></kbd> ${t('note_actions.note_attachments')}</a>
+        <a data-trigger-command="showAttachments" class="dropdown-item show-attachments-button"><kbd data-command="showAttachments"></kbd> ${t('note_actions.note_attachments')}</a>
         <a data-trigger-command="openNoteExternally" class="dropdown-item open-note-externally-button"
            title="${t('note_actions.open_note_externally_title')}">
             <kbd data-command="openNoteExternally"></kbd> 
@@ -63,6 +63,7 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
         this.$findInTextButton = this.$widget.find('.find-in-text-button');
         this.$printActiveNoteButton = this.$widget.find('.print-active-note-button');
         this.$showSourceButton = this.$widget.find('.show-source-button');
+        this.$showAttachmentsButton = this.$widget.find('.show-attachments-button');
         this.$renderNoteButton = this.$widget.find('.render-note-button');
 
         this.$exportNoteButton = this.$widget.find('.export-note-button');
@@ -96,10 +97,13 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
     }
 
     async refreshVisibility(note) {
+        const isInOptions = note.noteId.startsWith("_options");
+
         this.$convertNoteIntoAttachmentButton.toggle(note.isEligibleForConversionToAttachment());
 
         this.toggleDisabled(this.$findInTextButton, ['text', 'code', 'book'].includes(note.type));
 
+        this.toggleDisabled(this.$showAttachmentsButton, !isInOptions);
         this.toggleDisabled(this.$showSourceButton, ['text', 'code', 'relationMap', 'mermaid', 'canvas'].includes(note.type));
 
         this.toggleDisabled(this.$printActiveNoteButton, ['text', 'code'].includes(note.type));
