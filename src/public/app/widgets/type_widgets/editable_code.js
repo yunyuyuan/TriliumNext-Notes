@@ -45,7 +45,9 @@ export default class EditableCodeTypeWidget extends TypeWidget {
         delete CodeMirror.keyMap.default["Alt-Left"];
         delete CodeMirror.keyMap.default["Alt-Right"];
 
-        CodeMirror.modeURL = `${window.glob.assetPath}/libraries/codemirror/mode/%N/%N.js`;
+        CodeMirror.modeURL = `${window.glob.assetPath}/node_modules/codemirror/mode/%N/%N.js`;
+        CodeMirror.modeInfo.find(mode=>mode.name === "JavaScript").mimes.push(...["application/javascript;env=frontend", "application/javascript;env=backend"]);
+        CodeMirror.modeInfo.find(mode=>mode.name === "SQLite").mimes=["text/x-sqlite", "text/x-sqlite;schema=trilium"];
 
         this.codeEditor = CodeMirror(this.$editor[0], {
             value: "",

@@ -84,8 +84,8 @@ function register(app: express.Application) {
     
     app.use(`/${assetPath}/node_modules/mark.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/mark.js/dist/')));
     
-    // Error and deprecated, https://www.npmjs.com/package/autocomplete.js?activeTab=readme
-    // app.use(`/${assetPath}/node_modules/autocomplete.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/autocomplete.js/dist/')));
+    // Deprecated, https://www.npmjs.com/package/autocomplete.js?activeTab=readme
+    app.use(`/${assetPath}/node_modules/autocomplete.js/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/autocomplete.js/dist/')));
 
     app.use(`/${assetPath}/node_modules/knockout/build/output/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/knockout/build/output/')));
 
@@ -94,6 +94,12 @@ function register(app: express.Application) {
     app.use(`/${assetPath}/node_modules/jquery.fancytree/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/jquery.fancytree/dist/')));
 
     app.use(`/${assetPath}/node_modules/bootstrap/dist/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/bootstrap/dist/')));
+
+    // CodeMirror
+    app.use(`/${assetPath}/node_modules/codemirror/lib/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/lib/')));
+    app.use(`/${assetPath}/node_modules/codemirror/addon/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/addon/')));
+    app.use(`/${assetPath}/node_modules/codemirror/mode/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/mode/')));
+    app.use(`/${assetPath}/node_modules/codemirror/keymap/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/keymap/')));
 }
 
 export default {

@@ -1,5 +1,6 @@
 import OptionsWidget from "../options_widget.js";
 import { t } from "../../../../services/i18n.js";
+import utils from "../../../../services/utils.js";
 
 const TPL = `
 <div class="options-section">
@@ -20,6 +21,10 @@ export default class NativeTitleBarOptions extends OptionsWidget {
 
             this.updateOption('nativeTitleBarVisible', nativeTitleBarVisible);
         });
+    }
+    
+    isEnabled() {
+        return utils.isElectron();
     }
 
     async optionsLoaded(options) {

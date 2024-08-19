@@ -85,6 +85,9 @@ function now() {
     return formatTimeWithSeconds(new Date());
 }
 
+/**
+ * Returns `true` if the client is currently running under Electron, or `false` if running in a web browser.
+ */
 function isElectron() {
     return !!(window && window.process && window.process.type);
 }

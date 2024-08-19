@@ -531,7 +531,7 @@
         "upload_success": "New attachment revision has been uploaded.",
         "upload_failed": "Upload of a new attachment revision failed.",
         "open_externally_detail_page": "Opening attachment externally is available only from the detail page, please first click on the attachment detail first and repeat the action.",
-        "open_custom_client_only": "Custom opening of attachments can only be done from the client.",
+        "open_custom_client_only": "Custom opening of attachments can only be done from the desktop client.",
         "delete_confirm": "Are you sure you want to delete attachment '{{title}}'?",
         "delete_success": "Attachment '{{title}}' has been deleted.",
         "convert_confirm": "Are you sure you want to convert attachment '{{title}}' into a separate note?",

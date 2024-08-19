@@ -1,5 +1,6 @@
 "use strict";
 
+import path from "path";
 import build from "./build.js";
 import packageJson from "../../package.json" with { type: "json" };
 import dataDir from "./data_dir.js";
@@ -15,7 +16,7 @@ export default {
     syncVersion: SYNC_VERSION,
     buildDate: build.buildDate,
     buildRevision: build.buildRevision,
-    dataDirectory: dataDir.TRILIUM_DATA_DIR,
+    dataDirectory: path.resolve(dataDir.TRILIUM_DATA_DIR),
     clipperProtocolVersion: CLIPPER_PROTOCOL_VERSION,
     utcDateTime: new Date().toISOString() // for timezone inference
 };

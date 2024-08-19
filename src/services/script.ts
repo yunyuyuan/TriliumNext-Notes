@@ -99,7 +99,7 @@ function executeScript(script: string, params: ScriptParams, startNoteId: string
 }
 
 function execute(ctx: ScriptContext, script: string) {
-    return function () { return (0, eval)(`const apiContext = this;\r\n(${script}\r\n)()`); }.call(ctx);
+    return function () { return eval(`const apiContext = this;\r\n(${script}\r\n)()`); }.call(ctx);
 }
 
 function getParams(params?: ScriptParams) {

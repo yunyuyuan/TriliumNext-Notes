@@ -5,6 +5,7 @@ import EditabilitySelectWidget from "../editability_select.js";
 import BookmarkSwitchWidget from "../bookmark_switch.js";
 import SharedSwitchWidget from "../shared_switch.js";
 import { t } from "../../services/i18n.js";
+import TemplateSwitchWidget from "../template_switch.js";
 
 const TPL = `
 <div class="basic-properties-widget">
@@ -41,6 +42,8 @@ const TPL = `
     <div class="bookmark-switch-container"></div>
     
     <div class="shared-switch-container"></div>
+
+    <div class="template-switch-container"></div>
 </div>`;
 
 export default class BasicPropertiesWidget extends NoteContextAwareWidget {
@@ -52,13 +55,15 @@ export default class BasicPropertiesWidget extends NoteContextAwareWidget {
         this.editabilitySelectWidget = new EditabilitySelectWidget().contentSized();
         this.bookmarkSwitchWidget = new BookmarkSwitchWidget().contentSized();
         this.sharedSwitchWidget = new SharedSwitchWidget().contentSized();
+        this.templateSwitchWidget = new TemplateSwitchWidget().contentSized();
 
         this.child(
             this.noteTypeWidget,
             this.protectedNoteSwitchWidget,
             this.editabilitySelectWidget,
             this.bookmarkSwitchWidget,
-            this.sharedSwitchWidget
+            this.sharedSwitchWidget,
+            this.templateSwitchWidget
         );
     }
 
@@ -87,6 +92,7 @@ export default class BasicPropertiesWidget extends NoteContextAwareWidget {
         this.$widget.find(".editability-select-container").append(this.editabilitySelectWidget.render());
         this.$widget.find(".bookmark-switch-container").append(this.bookmarkSwitchWidget.render());
         this.$widget.find(".shared-switch-container").append(this.sharedSwitchWidget.render());
+        this.$widget.find(".template-switch-container").append(this.templateSwitchWidget.render());
     }
 
     async refreshWithNote(note) {
