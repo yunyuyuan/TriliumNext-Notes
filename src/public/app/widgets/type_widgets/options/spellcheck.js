@@ -1,35 +1,36 @@
 import utils from "../../../services/utils.js";
 import OptionsWidget from "./options_widget.js";
+import { t } from "../../../services/i18n.js";
 
 const TPL_WEB = `
 <div class="options-section">
-    <h4>Spell Check</h4>
+    <h4>${t('spellcheck.title')}</h4>
 
-    <p>These options apply only for desktop builds, browsers will use their own native spell check.</p>
+    <p>${t('spellcheck.description')}</p>
 </div>
 `;
 
 const TPL_ELECTRON = `
 <div class="options-section">
-    <h4>Spell Check</h4>
+    <h4>${t('spellcheck.title')}</h4>
 
     <p>App restart is required after change.</p>
 
     <label>
         <input type="checkbox" class="spell-check-enabled">
-        Enable spellcheck
+        ${t('spellcheck.enable')}
     </label>
 
     <br/>
 
     <div class="form-group">
-        <label>Language code(s)</label>
-        <input type="text" class="spell-check-language-code form-control" placeholder="for example &quot;en-US&quot;, &quot;de-AT&quot;">
+        <label>${t('spellcheck.language_code_label')}</label>
+        <input type="text" class="spell-check-language-code form-control" placeholder="${t('spellcheck.language_code_placeholder')}">
     </div>
 
-    <p>Multiple languages can be separated by comma, e.g. <code>en-US, de-DE, cs</code>. Changes to the spell check options will take effect after application restart.</p>
+    <p>${t('spellcheck.multiple_languages_info')}</p>
     
-    <p><strong>Available language codes: </strong> <span class="available-language-codes"></span></p>
+    <p><strong>${t('spellcheck.available_language_codes_label')} </strong> <span class="available-language-codes"></span></p>
 </div>`;
 
 export default class SpellcheckOptions extends OptionsWidget {
