@@ -76,6 +76,10 @@ export default class IncludeNoteDialog extends BasicWidget {
         this.textTypeWidget = textTypeWidget;
         await this.refresh();
         utils.openDialog(this.$widget);
+
+        this.$autoComplete
+            .trigger('focus')
+            .trigger('select'); // to be able to quickly remove entered text
     }
 
     async refresh(widget) {
