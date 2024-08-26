@@ -12,6 +12,10 @@ See [screenshots](https://triliumnext.github.io/Docs/Wiki/screenshot-tour) for q
 
 [The original Trilium project is in maintenance mode](https://github.com/zadam/trilium/issues/4620)
 
+### Migrating from Trilium?
+
+There are no special migration steps to migrate from a zadam/Trilium instance to a TriliumNext/Notes instance. Just [intall TriliumNext as usual](#-installation) 
+
 ## 💬 Discuss with us
 
 Feel free to join our official conversations. We would love to hear what features, suggestions, or issues you may have!
