@@ -22,14 +22,11 @@ COPY . .
 COPY server-package.json package.json
 
 # Copy TypeScript build artifacts into the original directory structure.
-RUN ls && \ 
-    cp -R build/src/* src/.
-
 # Copy the healthcheck
-RUN cp build/docker_healthcheck.js .
-RUN rm docker_healthcheck.ts
-
-RUN rm -r build
+RUN cp -R build/src/* src/. && \
+    cp build/docker_healthcheck.js . && \
+    rm -r build && \
+    rm docker_healthcheck.ts
 
 # Install app dependencies
 RUN set -x && \
