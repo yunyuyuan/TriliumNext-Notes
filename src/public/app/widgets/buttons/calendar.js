@@ -9,24 +9,35 @@ import toastService from "../../services/toast.js";
 
 const DROPDOWN_TPL = `
 <div class="calendar-dropdown-widget">
-  <style>
-  .calendar-dropdown-widget {
-      width: 350px;
-  }
-  </style>
+    <style>
+        .calendar-dropdown-widget {
+            width: 350px;
+        }
+    </style>
 
-  <div class="calendar-header">
-    <button class="calendar-btn bx bx-left-arrow-alt" data-calendar-toggle="previous"></button>
+    <div class="calendar-header">
+        <div class="calendar-month-selector">
+            <button class="calendar-btn bx bx-left-arrow-alt" data-calendar-toggle="previous"></button>
 
-    <div class="calendar-header-label" data-calendar-label="month"></div>
+            <div class="calendar-header-label" data-calendar-label="month"></div>
 
-    <button class="calendar-btn bx bx-right-arrow-alt" data-calendar-toggle="next"></button>
-  </div>
+            <button class="calendar-btn bx bx-right-arrow-alt" data-calendar-toggle="next"></button>
+        </div>
 
-  <div class="calendar-week">
-    <span>${t("calendar.mon")}</span> <span>${t("calendar.tue")}</span><span>${t("calendar.wed")}</span> <span>${t("calendar.thu")}</span> <span>${t("calendar.fri")}</span> <span>${t("calendar.sat")}</span> <span>${t("calendar.sun")}</span>
-  </div>
-  <div class="calendar-body" data-calendar-area="month"></div>
+        <div class="calendar-year-selector">
+            <button class="calendar-btn bx bx-left-arrow-alt" data-calendar-toggle="previousYear"></button>
+
+            <div class="calendar-header-label" data-calendar-label="year"></div>
+
+            <button class="calendar-btn bx bx-right-arrow-alt" data-calendar-toggle="nextYear"></button>
+        </div>
+    </div>
+
+    <div class="calendar-week">
+        <span>${t("calendar.mon")}</span> <span>${t("calendar.tue")}</span><span>${t("calendar.wed")}</span> <span>${t("calendar.thu")}</span> <span>${t("calendar.fri")}</span> <span>${t("calendar.sat")}</span> <span>${t("calendar.sun")}</span>
+    </div>
+
+    <div class="calendar-body" data-calendar-area="month"></div>
 </div>`;
 
 export default class CalendarWidget extends RightDropdownButtonWidget {
@@ -38,17 +49,30 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         super.doRender();
 
         this.$month = this.$dropdownContent.find('[data-calendar-area="month"]');
-        this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
-        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');
+        
+        // Month navigation
         this.$label = this.$dropdownContent.find('[data-calendar-label="month"]');
-
+        this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
+        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');        
         this.$next.on('click', () => {
             this.date.setMonth(this.date.getMonth() + 1);
             this.createMonth();
         });
-
         this.$previous.on('click', e => {
             this.date.setMonth(this.date.getMonth() - 1);
+            this.createMonth();
+        });
+
+        // Year navigation
+        this.$yearLabel = this.$dropdownContent.find('[data-calendar-label="year"]');
+        this.$nextYear = this.$dropdownContent.find('[data-calendar-toggle="nextYear"]');
+        this.$previousYear = this.$dropdownContent.find('[data-calendar-toggle="previousYear"]');        
+        this.$nextYear.on('click', () => {
+            this.date.setFullYear(this.date.getFullYear() + 1);
+            this.createMonth();
+        });
+        this.$previousYear.on('click', e => {
+            this.date.setFullYear(this.date.getFullYear() - 1);
             this.createMonth();
         });
 
@@ -154,7 +178,8 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.date.setDate(1);
         this.date.setMonth(this.date.getMonth() - 1);
 
-        this.$label.html(`${t(this.monthsAsString(this.date.getMonth()).toLowerCase())} ${this.date.getFullYear()}`);
+        this.$label.html(t(this.monthsAsString(this.date.getMonth()).toLowerCase()));
+        this.$yearLabel.html(this.date.getFullYear());
     }
 
     monthsAsString(monthIndex) {

@@ -31,6 +31,11 @@
   padding: 0 0.5rem 0.5rem 0.5rem;
 }
 
+.calendar-dropdown-widget .calendar-header > div {
+  display: flex;
+  flex-grow: 1;
+}
+
 .calendar-dropdown-widget .calendar-header-label {
   font-weight: bold;
   text-align: center;
