@@ -167,11 +167,14 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
         // if it's the first day of the month
         if (num === 1) {
-            if (day === 0) {
-                $newDay.css("marginLeft", (6 * 14.28) + '%');
-            } else {
-                $newDay.css("marginLeft", `${(day - 1) * 14.28}%`);
-            }
+            // 0  1  2  3  4  5  6
+            // Su Mo Tu We Th Fr Sa
+            // 1  2  3  4  5  6  0
+            // Mo Tu We Th Fr Sa Su
+            let dayOffset = day - this.firstDayOfWeek;
+            if (dayOffset < 0)
+                dayOffset = 7 + dayOffset;
+            $newDay.css("marginLeft", (dayOffset * 14.28) + '%');
         }
 
         const dateNoteId = dateNotesForMonth[utils.formatDateISO(this.date)];
