@@ -377,7 +377,7 @@
     "execute_description": "Longer description of the current code note displayed together with the execute button",
     "exclude_from_note_map": "Notes with this label will be hidden from the Note Map",
     "new_notes_on_top": "New notes will be created at the top of the parent note, not on the bottom.",
-    "hide_highlight_widget": "Hide Hightlight List widget",
+    "hide_highlight_widget": "Hide Highlight List widget",
     "run_on_note_creation": "executes when note is created on backend. Use this relation if you want to run the script for all notes created under a specific subtree. In that case, create it on the subtree root note and make it inheritable. A new note created within the subtree (any depth) will trigger the script.",
     "run_on_child_note_creation": "executes when new note is created under the note where this relation is defined",
     "run_on_note_title_change": "executes when note title is changed (includes note creation as well)",
