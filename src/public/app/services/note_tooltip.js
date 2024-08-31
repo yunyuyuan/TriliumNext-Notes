@@ -16,7 +16,7 @@ function setupGlobalTooltip() {
             return;
         }
 
-        cleanUpTooltips;
+        cleanUpTooltips();
     });
 }
 
@@ -94,7 +94,7 @@ async function mouseEnterHandler() {
         
         // Dismiss the tooltip immediately if a link was clicked inside the tooltip.
         $(`.${tooltipClass} a`).on("click", (e) => {
-            $(this).tooltip('dispose');
+            cleanUpTooltips();
         });
 
         // the purpose of the code below is to:
@@ -102,15 +102,9 @@ async function mouseEnterHandler() {
         //   click on links within tooltip etc. without tooltip disappearing
         // - once the user moves the cursor away from both link and the tooltip, hide the tooltip
         const checkTooltip = () => {
-            if (!$(`.${tooltipClass}`).is(':visible')) {
-                console.log("Not visible anymore");
-
-                return;
-            }
-
             if (!$(this).filter(":hover").length && !$(`.${linkId}:hover`).length) {
                 // cursor is neither over the link nor over the tooltip, user likely is not interested
-                $(this).tooltip('dispose');
+                cleanUpTooltips();
             } else {
                 setTimeout(checkTooltip, 1000);
             }
