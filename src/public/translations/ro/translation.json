@@ -1,12 +1,1249 @@
 {
-    "about": {
-        "title": "Despre TriliumNext Notes",
-        "homepage": "Site web:",
-        "app_version": "Versiune aplicație:",
-        "db_version": "Versiune bază de date:",
-        "sync_version": "Versiune sincronizare:",
-        "build_date": "Data compilării:",
-        "build_revision": "Revizia compilării:",
-        "data_directory": "Directorul de date:"
+  "about": {
+    "title": "Despre TriliumNext Notes",
+    "homepage": "Site web:",
+    "app_version": "Versiune aplicație:",
+    "db_version": "Versiune bază de date:",
+    "sync_version": "Versiune sincronizare:",
+    "build_date": "Data compilării:",
+    "build_revision": "Revizia compilării:",
+    "data_directory": "Directorul de date:"
+  },
+  "abstract_bulk_action": {
+    "remove_this_search_action": "Înlătură acesată acțiune la căutare"
+  },
+  "abstract_search_option": {
+    "failed_rendering": "Nu s-a putut randa opțiunea de căutare: {{dto}} din cauza: {{error}} {{stack}}",
+    "remove_this_search_option": "Înlătură acesată acțiune la căutare"
+  },
+  "add_label": {
+    "add_label": "Adaugă etichetă",
+    "help_text": "Pe toate notițele găsite:",
+    "help_text_item1": "crează eticheta respectivă dacă notița nu are o astfel de etichetă",
+    "help_text_item2": "sau schimbă valoarea unei etichete existente",
+    "help_text_note": "Această metodă poate fi apelată și fără valoare, caz în care eticheta va fi atribuită notiței fără o valoare.",
+    "label_name_placeholder": "denumirea etichetei",
+    "label_name_title": "Sunt permise doar caractere alfanumerice, underline și două puncte.",
+    "new_value_placeholder": "valoare nouă",
+    "to_value": "la valoarea"
+  },
+  "add_link": {
+    "add_link": "Adaugă legătură",
+    "close": "Închide",
+    "help_on_links": "Informații despre legături",
+    "link_title": "Titlu legătură",
+    "link_title_arbitrary": "titlul legăturii poate fi schimbat în mod arbitrar",
+    "link_title_mirrors": "titlul legăturii corespunde titlul curent al notiței",
+    "note": "Notiță",
+    "search_note": "căutați notița după nume"
+  },
+  "add_relation": {
+    "add_relation": "Adăugare relație",
+    "allowed_characters": "Sunt permise doar caractere alfanumerice, underline și două puncte.",
+    "create_relation_on_all_matched_notes": "Crează relația pentru toate notițele găsite",
+    "relation_name": "denumirea relației",
+    "target_note": "notița destinație",
+    "to": "către"
+  },
+  "ancestor": {
+    "depth_doesnt_matter": "nu contează",
+    "depth_eq": "exact {{count}}",
+    "depth_gt": "mai mare decât {{count}}",
+    "depth_label": "adâncime",
+    "depth_lt": "mai puțin de {{depth}}",
+    "direct_children": "copil direct",
+    "label": "Părinte",
+    "placeholder": "căutați notița după nume"
+  },
+  "api_log": {
+    "close": "Închide"
+  },
+  "attachment_detail": {
+    "attachment_deleted": "Acest atașament a fost șters.",
+    "list_of_all_attachments": "Lista tuturor atașamentelor",
+    "open_help_page": "Deschide instrucțiuni despre atașamente",
+    "owning_note": "Notița părinte: ",
+    "you_can_also_open": ", se poate deschide și "
+  },
+  "attachment_detail_2": {
+    "deletion_reason": ", deoarece nu există o legătură către atașament în conținutul notiței. Pentru a preveni ștergerea, trebuie adăugată înapoi o legătură către atașament în conținut sau atașamentul trebuie convertit în notiță.",
+    "link_copied": "O legătură către atașament a fost copiată în clipboard.",
+    "role_and_size": "Rol: {{role}}, dimensiune: {{size}}",
+    "unrecognized_role": "Rol atașament necunoscut: „{{role}}”.",
+    "will_be_deleted_in": "Acest atașament va fi șters automat în {{time}}",
+    "will_be_deleted_soon": "Acest atașament va fi șters automat în curând"
+  },
+  "attachment_erasure_timeout": {
+    "attachment_auto_deletion_description": "Atașamentele se șterg automat (permanent) dacă nu sunt referențiate de către notița lor părinte după un timp prestabilit de timp.",
+    "attachment_erasure_timeout": "Perioadă de ștergere a atașamentelor",
+    "erase_attachments_after_x_seconds": "Șterge atașamentele după X secunde după ce acestea n-au mai fost folosite într-o notiță",
+    "erase_unused_attachments_now": "Se poate lansa o ștergere manuală (fără a mai considera perioada de grație definită anterior):",
+    "manual_erasing_description": "Șterge acum toate atașamentele nefolosite din notițe",
+    "unused_attachments_erased": "Atașamentele nefolosite au fost șterse."
+  },
+  "attachment_list": {
+    "no_attachments": "Notița nu are niciun atașament.",
+    "open_help_page": "Deschide instrucțiuni despre atașamente",
+    "owning_note": "Notița părinte: ",
+    "upload_attachments": "Încărcare atașament"
+  },
+  "attachments_actions": {
+    "convert_attachment_into_note": "Convertește atașamentul în notiță",
+    "convert_confirm": "Sigur doriți convertirea atașementului „{{title}}” într-o notiță separată?",
+    "convert_success": "Atașamentul „{{title}}” a fost convertit cu succes într-o notiță.",
+    "copy_link_to_clipboard": "Copiază legătură în clipboard",
+    "delete_attachment": "Șterge atașamentul",
+    "delete_confirm": "Sigur doriți ștergerea atașementului „{{title}}”?",
+    "delete_success": "Atașamentul „{{title}}” a fost șters.",
+    "download": "Descarcă",
+    "enter_new_name": "Introduceți denumirea noului atașament",
+    "open_custom": "Deschide într-un alt program",
+    "open_custom_client_only": "Deschiderea atașamentelor într-un alt program este posibilă doar din aplicația de desktop.",
+    "open_custom_title": "Fișierul va fi deschis într-un alt program și se vor urmări schimbările. Ulterior versiunea modificată a fișierului va fi încărcată înapoi în Trilium.",
+    "open_externally": "Deschide în afara programului",
+    "open_externally_detail_page": "Deschiderea externă a atașamentului este disponibilă doar din pagina de detalii, dați clic pe detaliile atașamentului mai întâi și repetați acțiunea.",
+    "open_externally_title": "Fișierul va fi deschis într-un alt program și se vor urmări schimbările. Ulterior versiunea modificată a fișierului va fi încărcată înapoi în Trilium.",
+    "rename_attachment": "Redenumește atașamentul",
+    "upload_failed": "Încărcarea unei noi versiuni ale atașamentului a eșuat.",
+    "upload_new_revision": "Încarcă o nouă versiune",
+    "upload_success": "Încărcarea unei noi versiuni ale atașaemntului a avut succes."
+  },
+  "attribute_detail": {
+    "and_more": "... și încă {{count}}.",
+    "app_css": "marchează notițe CSS care se încarcă automat în aplicația Trilium și pot fi folosite pentru a-i modifica aspectul.",
+    "app_theme": "marchează notițe CSS care sunt teme complete ale Trilium și care se regăsesc în setări.",
+    "archived": "notițele cu această etichetă nu vor fi vizibile în mod implicit în căutări (dar nici în ecranele Sari la notiță, Adăugare legătură, etc.).",
+    "attr_detail_title": "Detalii despre atribute",
+    "attr_is_owned_by": "Atributul este deținut de",
+    "attr_name_title": "Denumirea atributului poate fi compusă doar din caractere alfanumerice, două puncte și underline",
+    "auto_read_only_disabled": "notițele de tip text sau cod intră automat în mod doar de citire când au o dimensiune prea mare. Acest comportament se poate dezactiva adăugând această etichetă",
+    "bookmark_folder": "notițele cu această etichetă vor apărea în lista de semne de carte ca un director (permițând acces la notițele din ea)",
+    "boolean": "Valoare booleană",
+    "calendar_root": "marchează notița care trebuie folosită ca rădăcină pentru notițele zilnice. Doar o singură notiță ar trebui să fie etichetătă.",
+    "close_button_title": "Renunță la modificări și închide",
+    "color": "definește culoarea unei notițe în ierarhia notițelor, legături, etc. Se poate folosi orice culoare CSS precum „red” sau „#a13d5f”",
+    "css_class": "valoarea acestei etichete este adăugată ca o clasă CSS pentru nodul ce reprezintă notița în ierarhia notițelor. Acest lucru poate fi utilizat pentru personalizare avansată. Poate fi folosită în notițe de tip șablon.",
+    "custom_request_handler": "a se vedea <a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">Custom request handler</a>",
+    "custom_resource_provider": "a se vedea <a href=\"javascript:\" data-help-page=\"custom-request-handler.html\">Custom request handler</a>",
+    "date": "Dată",
+    "date_time": "Dată și timp",
+    "delete": "Șterge",
+    "digits": "număr de zecimale",
+    "disable_inclusion": "script-urile cu această etichetă nu vor fi incluse în execuția scriptului părinte.",
+    "disable_versioning": "dezactivează auto-versionarea. Poate fi utilizat pentru notițe mari dar neimportante precum biblioteci mari de JavaScript utilizate pentru script-uri",
+    "display_relations": "denumirea relațiilor ce ar trebui să fie afișate, separate prin virgulă. Toate celelalte vor fi ascunse.",
+    "exclude_from_export": "notițele (împreună cu subnotițele) nu vor fi incluse în exporturile de notițe",
+    "exclude_from_note_map": "Notițele cu această etichetă vor fi ascunse din Harta notițelor",
+    "execute_button": "Titlul butonului ce va executa notița curentă de tip cod",
+    "execute_description": "O descriere mai lungă a notiței curente de tip cod afișată împreună cu butonul de executare",
+    "hide_highlight_widget": "Ascunde lista de evidențieri",
+    "hide_promoted_attributes": "Ascunde lista atributelor promovate pentru această notiță",
+    "hide_relations": "lista denumirilor relațiilor ce trebuie ascunse, delimitate prin virgulă. Toate celelalte vor fi afișate.",
+    "icon_class": "valoarea acestei etichete este adăugată ca o clasă CSS la iconița notiței din ierarhia notițelor, fapt ce poate ajuta la identificarea vizuală mai rapidă a notițelor. Un exemplu ar fi „bx bx-home” pentru iconițe preluate din boxicons. Poate fi folosită în notițe de tip șablon.",
+    "inbox": "locația implicită în care vor apărea noile notițe atunci când se crează o noitiță utilizând butonul „Crează notiță” din bara laterală, notițele vor fi create în interiorul notiței cu această etichetă.",
+    "inherit": "atributele acestei notițe vor fi moștenite chiar dacă nu există o relație părinte-copil între notițe. A se vedea relația de tip șablon pentru un concept similar. De asemenea, a se vedea moștenirea atributelor în documentație.",
+    "inheritable": "Moștenibil",
+    "inheritable_title": "Atributele moștenibile vor fi moștenite tuturor descendenților acestei notițe.",
+    "inverse_relation": "Relație inversă",
+    "inverse_relation_title": "Setare opțională pentru a defini relația inversă. Exemplu: Tată - Fiu sunt două relații inverse.",
+    "is_owned_by_note": "este deținut(ă) de notița",
+    "keep_current_hoisting": "Deschiderea acestei legături nu va schimba focalizarea chiar dacă notița nu poate fi vizualizată în ierarhia curentă.",
+    "keyboard_shortcut": "Definește o scurtatură de la tastatură ce va merge direct la această notiță. Exemplu: „ctrl+alt+e”. Necesită reîncărcarea aplicației pentru a avea efect.",
+    "label": "Detalii despre etichetă",
+    "label_definition": "Detalii despre definiția unei etichete",
+    "label_type": "Tip",
+    "label_type_title": "Tipul acestei etichete va permite Trilium să selecteze interfața corespunzătoare pentru introducerea valorii etichetei.",
+    "more_notes": "Mai multe notițe",
+    "multi_value": "Valori multiple",
+    "multiplicity": "Multiplicitate",
+    "multiplicity_title": "Multiplicitatea definește câte atribute de același nume se pot crea - maximum 1 sau mai multe decât 1.",
+    "name": "Nume",
+    "new_notes_on_top": "Noile notițe vor fi create la începutul notiței părinte, nu la sfârșit.",
+    "number": "Număr",
+    "other_notes_with_name": "Alte notițe cu denumirea de {{attributeType}} „{{attributeName}}”",
+    "page_size": "numărul de elemente per pagină în listarea notițelor",
+    "precision": "Precizie",
+    "precision_title": "Câte cifre să fie afișate după virgulă în interfața de configurare a valorii.",
+    "promoted": "Evidențiată",
+    "promoted_alias": "Alias",
+    "promoted_alias_title": "Numele care să fie afișat în interfața de atribute promovate.",
+    "promoted_title": "Atributele promovate sunt afișate proeminent în notiță.",
+    "read_only": "editorul este în modul doar în citire. Funcționează doar pentru notițe de tip text sau cod.",
+    "related_notes_title": "Alte notițe cu acesată etichetă",
+    "relation": "Detalii despre relație",
+    "relation_definition": "Detalii despre definiția unei relații",
+    "relation_template": "atributele notiței vor fi moștenite chiar dacă nu există o relație părinte-copil, conținutul notiței și ierarhia sa vor fi adăugate la notițele-instanță dacă nu este definită. A se consulta documentația pentru mai multe detalii.",
+    "render_note": "relație ce definește notița (de tip notiță de cod HTML sau script) ce trebuie randată pentru notițele de tip „Randare notiță HTML”",
+    "run": "definește evenimentele la care să ruleze scriptul. Valori acceptate:\n<ul>\n<li>frontendStartup - când pornește interfața Trilium (sau este reîmprospătată), dar nu pe mobil.</li>\n<li>mobileStartup - când pornește interfața Trilium (sau este reîmprospătată), doar pe mobil.</li>\n<li>backendStartup - când pornește serverul Trilium</li>\n<li>hourly - o dată pe oră. Se poate utiliza adițional eticheta <code>runAtHour</code> pentru a specifica ora.</li>\n<li>daily - o dată pe zi</li>\n</ul>",
+    "run_at_hour": "La ce oră ar trebui să ruleze. Trebuie folosit împreună cu <code>#run=hourly</code>. Poate fi definit de mai multe ori pentru a rula de mai multe ori în cadrul aceleași zile.",
+    "run_on_attribute_change": "se execută atunci când atributele unei notițe care definește această relație se schimbă. Se apelează și atunci când un atribut este șters",
+    "run_on_attribute_creation": "se execută atunci când un nou atribut este creat pentru notița care definește această relație",
+    "run_on_branch_change": "se execută atunci când o ramură este actualizată.",
+    "run_on_branch_creation": "se execută când o ramură este creată. O ramură este o legătură dintre o notiță părinte și o notiță copil și este creată, spre exemplu, la clonarea sau mutarea unei notițe.",
+    "run_on_branch_deletion": "se execută când o ramură este ștearsă. O ramură este o legătură dintre o notiță părinte și o notiță copil și este ștearsă, spre exemplu, atunci când o notiță este mutată (ramura/legătura veche este ștearsă).",
+    "run_on_child_note_creation": "se execută când o nouă notiță este creată sub notița la care este definită relația",
+    "run_on_instance": "Definește pe ce instanța de Trilium ar trebui să ruleze. Implicit se consideră toate instanțele.",
+    "run_on_note_change": "se execută când notița este schimbată (inclusiv crearea unei notițe). Nu include schimbări de conținut",
+    "run_on_note_content_change": "se execută când conținutul unei notițe este schimbat (inclusiv crearea unei notițe).",
+    "run_on_note_creation": "se execută când o notiță este creată de server. Se poate utiliza această relație atunci când se dorește rularea unui script pentru toate notițele create sub o anumită ierarhie. În acest caz, relația trebuie creată pe notița-rădăcină și marcată drept moștenibilă. Orice notiță creată sub ierarhie (la orice adâncime) va rula script-ul.",
+    "run_on_note_deletion": "se execută la ștergerea unei notițe",
+    "run_on_note_title_change": "se execută când titlul unei notițe se schimbă (inclusiv la crearea unei notițe)",
+    "save_and_close": "Salvează și închide (<kbd>Ctrl+Enter</kbd>)",
+    "search_home": "notițele de căutare vor fi create în cadrul acestei notițe",
+    "share_alias": "",
+    "share_credentials": "",
+    "share_css": "",
+    "share_description": "",
+    "share_disallow_robot_indexing": "",
+    "share_external_link": "",
+    "share_favicon": "",
+    "share_hidden_from_tree": "",
+    "share_index": "",
+    "share_js": "",
+    "share_omit_default_css": "",
+    "share_raw": "",
+    "share_root": "",
+    "share_template": "",
+    "single_value": "",
+    "sort_direction": "",
+    "sort_folders_first": "",
+    "sorted": "menține notițele-copil ordonate alfabetic după titlu",
+    "sql_console_home": "",
+    "target_note": "Notiță țintă",
+    "target_note_title": "Relația este o conexiune numită dintre o notiță sursă și o notiță țintă.",
+    "template": "Șablon",
+    "text": "Text",
+    "title_template": "titlul implicit al notițelor create în interiorul acestei notițe. Valoarea este evaluată ca un șir de caractere JavaScript\n                        și poate fi astfel îmbogățită cu un conținut dinamic prin intermediul variabilelow <code>now</code> și <code>parentNote</code>. Exemple:\n                        \n                        <ul>\n                            <li><code>Lucrările lui ${parentNote.getLabelValue('autor')}</code></li>\n                            <li><code>Jurnal pentru ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        A se vedea <a href=\"https://triliumnext.github.io/Docs/Wiki/default-note-title.html\">wiki-ul pentru detalii</a>, documentația API pentru <a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a> și <a href=\"https://day.js.org/docs/en/display/format\">now</a> pentru mai multe informații",
+    "toc": "<code>#toc</code> sau <code>#toc=show</code> forțează afișarea tabelei de conținut, <code>#toc=hide</code> forțează ascunderea ei. Dacă eticheta nu există, se utilizează setările globale",
+    "top": "păstrează notița la începutul listei (se aplică doar pentru notițe sortate automat)",
+    "url": "URL",
+    "value": "Valoare",
+    "widget": "marchează această notiță ca un widget personalizat ce poate fi adăugat la ierarhia de componente ale aplicației",
+    "widget_relation": "ținta acestei relații va fi executată și randată ca un widget în bara laterală",
+    "workspace": "marchează această notiță ca un spațiu de lucru ce permite focalizarea rapidă a notițelor",
+    "workspace_calendar_root": "Definește o rădăcină de calendar pentru un spațiu de lucru",
+    "workspace_icon_class": "definește clasa de CSS din boxicon ce va fi folosită în tab-urile ce aparțin spațiului de lucru",
+    "workspace_inbox": "marchează locația implicită în care vor apărea noile notițe atunci când este focalizat spațiul de lucru sau un copil al acestuia",
+    "workspace_search_home": "notițele de căutare vor fi create sub această notiță",
+    "workspace_tab_background_color": "Culoare CSS ce va fi folosită în tab-urile ce aparțin spațiului de lucru",
+    "workspace_template": "Această notița va apărea în lista de șabloane când se crează o nouă notiță, dar doar când spațiul de lucru în care se află notița este focalizat"
+  },
+  "attribute_editor": {
+    "add_a_new_attribute": "",
+    "add_new_label": "",
+    "add_new_label_definition": "",
+    "add_new_relation": "",
+    "add_new_relation_definition": "",
+    "help_text_body1": "",
+    "help_text_body2": "",
+    "help_text_body3": "",
+    "save_attributes": ""
+  },
+  "backend_log": {
+    "refresh": ""
+  },
+  "backup": {
+    "automatic_backup": "",
+    "automatic_backup_description": "",
+    "backup_database_now": "",
+    "backup_now": "",
+    "backup_recommendation": "",
+    "database_backed_up_to": "",
+    "enable_daily_backup": "",
+    "enable_monthly_backup": "",
+    "enable_weekly_backup": "",
+    "existing_backups": "",
+    "no_backup_yet": ""
+  },
+  "basic_properties": {
+    "basic_properties": "",
+    "editable": "",
+    "note_type": ""
+  },
+  "book": {
+    "no_children_help": ""
+  },
+  "book_properties": {
+    "book_properties": "",
+    "collapse": "",
+    "collapse_all_notes": "",
+    "expand": "",
+    "expand_all_children": "",
+    "grid": "",
+    "invalid_view_type": "",
+    "list": "",
+    "view_type": ""
+  },
+  "bookmark_switch": {
+    "bookmark": "",
+    "bookmark_this_note": "",
+    "remove_bookmark": ""
+  },
+  "branch_prefix": {
+    "branch_prefix_saved": "",
+    "close": "",
+    "edit_branch_prefix": "",
+    "help_on_tree_prefix": "",
+    "prefix": "",
+    "save": ""
+  },
+  "bulk_actions": {
+    "affected_notes": "",
+    "available_actions": "",
+    "bulk_actions": "",
+    "bulk_actions_executed": "",
+    "chosen_actions": "",
+    "close": "",
+    "execute_bulk_actions": "",
+    "include_descendants": "",
+    "none_yet": ""
+  },
+  "calendar": {
+    "april": "",
+    "august": "",
+    "cannot_find_day_note": "",
+    "december": "",
+    "febuary": "",
+    "fri": "",
+    "january": "",
+    "july": "",
+    "june": "",
+    "march": "",
+    "may": "",
+    "mon": "",
+    "november": "",
+    "october": "",
+    "sat": "",
+    "september": "",
+    "sun": "",
+    "thu": "",
+    "tue": "",
+    "wed": ""
+  },
+  "clone_to": {
+    "clone_notes_to": "",
+    "clone_to_selected_note": "",
+    "cloned_note_prefix_title": "",
+    "help_on_links": "",
+    "no_path_to_clone_to": "",
+    "note_cloned": "",
+    "notes_to_clone": "",
+    "prefix_optional": "",
+    "search_for_note_by_its_name": "",
+    "target_parent_note": ""
+  },
+  "close_pane_button": {
+    "close_this_pane": ""
+  },
+  "code_auto_read_only_size": {
+    "description": "",
+    "label": "",
+    "title": ""
+  },
+  "code_buttons": {
+    "execute_button_title": "",
+    "opening_api_docs_message": "",
+    "save_to_note_button_title": "",
+    "sql_console_saved_message": "",
+    "trilium_api_docs_button_title": ""
+  },
+  "code_mime_types": {
+    "title": ""
+  },
+  "confirm": {
+    "also_delete_note": "",
+    "are_you_sure_remove_note": "",
+    "cancel": "",
+    "confirmation": "",
+    "if_you_dont_check": "",
+    "ok": ""
+  },
+  "consistency_checks": {
+    "find_and_fix_button": "",
+    "finding_and_fixing_message": "",
+    "issues_fixed_message": "",
+    "title": ""
+  },
+  "copy_image_reference_button": {
+    "button_title": ""
+  },
+  "create_pane_button": {
+    "create_new_split": ""
+  },
+  "database_anonymization": {
+    "choose_anonymization": "",
+    "creating_fully_anonymized_database": "",
+    "creating_lightly_anonymized_database": "",
+    "error_creating_anonymized_database": "",
+    "existing_anonymized_databases": "",
+    "full_anonymization": "",
+    "full_anonymization_description": "",
+    "light_anonymization": "",
+    "light_anonymization_description": "",
+    "no_anonymized_database_yet": "",
+    "save_fully_anonymized_database": "",
+    "save_lightly_anonymized_database": "",
+    "successfully_created_fully_anonymized_database": "",
+    "successfully_created_lightly_anonymized_database": "",
+    "title": ""
+  },
+  "database_integrity_check": {
+    "check_button": "",
+    "checking_integrity": "",
+    "description": "",
+    "integrity_check_failed": "",
+    "integrity_check_succeeded": "",
+    "title": ""
+  },
+  "debug": {
+    "access_info": "",
+    "debug": "",
+    "debug_info": ""
+  },
+  "delete_label": {
+    "delete_label": "",
+    "label_name_placeholder": "",
+    "label_name_title": ""
+  },
+  "delete_note": {
+    "delete_matched_notes": "",
+    "delete_matched_notes_description": "",
+    "delete_note": "",
+    "erase_notes_instruction": "",
+    "undelete_notes_instruction": ""
+  },
+  "delete_notes": {
+    "broken_relations_to_be_deleted": "",
+    "cancel": "",
+    "delete_all_clones_description": "",
+    "delete_notes_preview": "",
+    "erase_notes_description": "",
+    "erase_notes_warning": "",
+    "no_note_to_delete": "",
+    "note": "",
+    "notes_to_be_deleted": "",
+    "ok": "",
+    "to_be_deleted": ""
+  },
+  "delete_relation": {
+    "allowed_characters": "",
+    "delete_relation": "",
+    "relation_name": ""
+  },
+  "delete_revisions": {
+    "all_past_note_revisions": "",
+    "delete_note_revisions": ""
+  },
+  "edit_button": {
+    "edit_this_note": ""
+  },
+  "editability_select": {
+    "always_editable": "",
+    "auto": "",
+    "note_is_always_editable": "",
+    "note_is_editable": "",
+    "note_is_read_only": "",
+    "read_only": ""
+  },
+  "editable_code": {
+    "placeholder": ""
+  },
+  "editable_text": {
+    "placeholder": ""
+  },
+  "edited_notes": {
+    "deleted": "",
+    "no_edited_notes_found": "",
+    "title": ""
+  },
+  "empty": {
+    "enter_workspace": "",
+    "open_note_instruction": "",
+    "search_placeholder": ""
+  },
+  "etapi": {
+    "actions": "",
+    "and": "",
+    "create_token": "",
+    "created": "",
+    "default_token_name": "",
+    "delete_token": "",
+    "delete_token_confirmation": "",
+    "description": "",
+    "error_empty_name": "",
+    "existing_tokens": "",
+    "new_token_message": "",
+    "new_token_title": "",
+    "no_tokens_yet": "",
+    "openapi_spec": "",
+    "rename_token": "",
+    "rename_token_message": "",
+    "rename_token_title": "",
+    "see_more": "",
+    "title": "",
+    "token_created_message": "",
+    "token_created_title": "",
+    "token_name": "",
+    "wiki": ""
+  },
+  "execute_script": {
+    "example_1": "",
+    "example_2": "",
+    "execute_script": "",
+    "help_text": ""
+  },
+  "export": {
+    "choose_export_type": "",
+    "close": "",
+    "export": "",
+    "export_finished_successfully": "",
+    "export_in_progress": "",
+    "export_note_title": "",
+    "export_status": "",
+    "export_type_single": "",
+    "export_type_subtree": "",
+    "format_html": "",
+    "format_markdown": "",
+    "format_opml": "",
+    "opml_version_1": "",
+    "opml_version_2": ""
+  },
+  "fast_search": {
+    "description": "",
+    "fast_search": ""
+  },
+  "file": {
+    "file_preview_not_available": ""
+  },
+  "file_properties": {
+    "download": "",
+    "file_size": "",
+    "file_type": "",
+    "note_id": "",
+    "open": "",
+    "original_file_name": "",
+    "title": "",
+    "upload_failed": "",
+    "upload_new_revision": "",
+    "upload_success": ""
+  },
+  "fonts": {
+    "apply_font_changes": "",
+    "font_family": "",
+    "fonts": "",
+    "main_font": "",
+    "monospace_font": "",
+    "not_all_fonts_available": "",
+    "note_detail_font": "",
+    "note_tree_and_detail_font_sizing": "",
+    "note_tree_font": "",
+    "reload_frontend": "",
+    "size": "",
+    "theme_defined": ""
+  },
+  "global_menu": {
+    "about": "",
+    "advanced": "",
+    "configure_launchbar": "",
+    "logout": "",
+    "menu": "",
+    "open_dev_tools": "",
+    "open_new_window": "",
+    "open_search_history": "",
+    "open_sql_console": "",
+    "open_sql_console_history": "",
+    "options": "",
+    "reload_frontend": "",
+    "reload_hint": "",
+    "reset_zoom_level": "",
+    "show_backend_log": "",
+    "show_help": "",
+    "show_hidden_subtree": "",
+    "show_shared_notes_subtree": "",
+    "switch_to_desktop_version": "",
+    "switch_to_mobile_version": "",
+    "toggle_fullscreen": "",
+    "zoom": "",
+    "zoom_in": "",
+    "zoom_out": ""
+  },
+  "heading_style": {
+    "markdown": "",
+    "plain": "",
+    "title": "",
+    "underline": ""
+  },
+  "help": {
+    "activateNextTab": "",
+    "activatePreviousTab": "",
+    "blockQuote": "",
+    "bulletList": "",
+    "close": "",
+    "closeActiveTab": "",
+    "collapseExpand": "",
+    "collapseSubTree": "",
+    "collapseWholeTree": "",
+    "copyNotes": "",
+    "createEditLink": "",
+    "createInternalLink": "",
+    "createNoteAfter": "",
+    "createNoteInto": "",
+    "creatingNotes": "",
+    "cutNotes": "",
+    "deleteNotes": "",
+    "editBranchPrefix": "",
+    "editNoteTitle": "",
+    "editingNotes": "",
+    "followLink": "",
+    "fullDocumentation": "",
+    "goBackForwards": "",
+    "goUpDown": "",
+    "headings": "",
+    "inPageSearch": "",
+    "insertDateTime": "",
+    "jumpToParentNote": "",
+    "jumpToTreePane": "",
+    "markdownAutoformat": "",
+    "moveNoteUpDown": "",
+    "moveNoteUpHierarchy": "",
+    "movingCloningNotes": "",
+    "multiSelectNote": "",
+    "newTabNoteLink": "",
+    "notSet": "",
+    "noteNavigation": "",
+    "numberedList": "",
+    "onlyInDesktop": "",
+    "openEmptyTab": "",
+    "other": "",
+    "pasteNotes": "",
+    "quickSearch": "",
+    "reloadFrontend": "",
+    "scrollToActiveNote": "",
+    "selectAllNotes": "",
+    "selectNote": "",
+    "showDevTools": "",
+    "showJumpToNoteDialog": "",
+    "showSQLConsole": "",
+    "tabShortcuts": "",
+    "troubleshooting": ""
+  },
+  "hide_floating_buttons_button": {
+    "button_title": ""
+  },
+  "highlights_list": {
+    "bg_color": "",
+    "bold": "",
+    "color": "",
+    "description": "",
+    "italic": "",
+    "shortcut_info": "",
+    "title": "",
+    "underline": "",
+    "visibility_description": "",
+    "visibility_title": ""
+  },
+  "i18n": {
+    "first-day-of-the-week": "",
+    "language": "",
+    "monday": "",
+    "sunday": "",
+    "title": ""
+  },
+  "image_properties": {
+    "copy_reference_to_clipboard": "",
+    "download": "",
+    "file_size": "",
+    "file_type": "",
+    "open": "",
+    "original_file_name": "",
+    "title": "",
+    "upload_failed": "",
+    "upload_new_revision": "",
+    "upload_success": ""
+  },
+  "images": {
+    "download_images_automatically": "",
+    "download_images_description": "",
+    "enable_image_compression": "",
+    "images_section_title": "",
+    "jpeg_quality_description": "",
+    "max_image_dimensions": ""
+  },
+  "import": {
+    "chooseImportFile": "",
+    "close": "",
+    "codeImportedAsCode": "",
+    "explodeArchives": "",
+    "explodeArchivesTooltip": "",
+    "import": "",
+    "importDescription": "",
+    "importIntoNote": "",
+    "options": "",
+    "replaceUnderscoresWithSpaces": "",
+    "safeImport": "",
+    "safeImportTooltip": "",
+    "shrinkImages": "",
+    "shrinkImagesTooltip": "",
+    "textImportedAsText": ""
+  },
+  "include_archived_notes": {
+    "include_archived_notes": ""
+  },
+  "include_note": {
+    "box_size_full": "",
+    "box_size_medium": "",
+    "box_size_prompt": "",
+    "box_size_small": "",
+    "button_include": "",
+    "dialog_title": "",
+    "label_note": "",
+    "placeholder_search": ""
+  },
+  "info": {
+    "closeButton": "",
+    "modalTitle": "",
+    "okButton": ""
+  },
+  "inherited_attribute_list": {
+    "no_inherited_attributes": "",
+    "title": ""
+  },
+  "jump_to_note": {
+    "search_button": "",
+    "search_placeholder": ""
+  },
+  "left_pane_toggle": {
+    "hide_panel": "",
+    "show_panel": ""
+  },
+  "limit": {
+    "limit": "",
+    "take_first_x_results": ""
+  },
+  "markdown_import": {
+    "dialog_title": "",
+    "import_button": "",
+    "import_success": "",
+    "modal_body_text": ""
+  },
+  "max_content_width": {
+    "apply_changes_description": "",
+    "default_description": "",
+    "max_width_label": "",
+    "reload_button": "",
+    "reload_description": "",
+    "title": ""
+  },
+  "mermaid_export_button": {
+    "button_title": ""
+  },
+  "mobile_detail_menu": {
+    "delete_this_note": "",
+    "error_cannot_get_branch_id": "",
+    "error_unrecognized_command": "",
+    "insert_child_note": ""
+  },
+  "move_note": {
+    "clone_note_new_parent": "",
+    "move_note": "",
+    "move_note_new_parent": "",
+    "nothing_will_happen": "",
+    "on_all_matched_notes": "",
+    "target_parent_note": "",
+    "to": ""
+  },
+  "move_pane_button": {
+    "move_left": "",
+    "move_right": ""
+  },
+  "move_to": {
+    "dialog_title": "",
+    "error_no_path": "",
+    "move_button": "",
+    "move_success_message": "",
+    "notes_to_move": "",
+    "search_placeholder": "",
+    "target_parent_note": ""
+  },
+  "native_title_bar": {
+    "disabled": "",
+    "enabled": "",
+    "title": ""
+  },
+  "network_connections": {
+    "check_for_updates": "",
+    "network_connections_title": ""
+  },
+  "note_actions": {
+    "convert_into_attachment": "",
+    "delete_note": "",
+    "export_note": "",
+    "import_files": "",
+    "note_attachments": "",
+    "note_source": "",
+    "open_note_custom": "",
+    "open_note_externally": "",
+    "open_note_externally_title": "",
+    "print_note": "",
+    "re_render_note": "",
+    "save_revision": "",
+    "search_in_note": ""
+  },
+  "note_erasure_timeout": {
+    "deleted_notes_erased": "",
+    "erase_deleted_notes_now": "",
+    "erase_notes_after_x_seconds": "",
+    "manual_erasing_description": "",
+    "note_erasure_description": "",
+    "note_erasure_timeout_title": ""
+  },
+  "note_info_widget": {
+    "calculate": "",
+    "created": "",
+    "modified": "",
+    "note_id": "",
+    "note_size": "",
+    "note_size_info": "",
+    "subtree_size": "",
+    "title": "",
+    "type": ""
+  },
+  "note_launcher": {
+    "this_launcher_doesnt_define_target_note": ""
+  },
+  "note_map": {
+    "collapse": "",
+    "open_full": "",
+    "title": ""
+  },
+  "note_paths": {
+    "archived": "",
+    "clone_button": "",
+    "intro_not_placed": "",
+    "intro_placed": "",
+    "outside_hoisted": "",
+    "search": "",
+    "title": ""
+  },
+  "note_properties": {
+    "info": "",
+    "this_note_was_originally_taken_from": ""
+  },
+  "note_type_chooser": {
+    "dropdown_trigger": "",
+    "modal_body": "",
+    "modal_title": "",
+    "templates": ""
+  },
+  "onclick_button": {
+    "no_click_handler": ""
+  },
+  "options_widget": {
+    "options_change_saved": "",
+    "options_status": ""
+  },
+  "order_by": {
+    "asc": "",
+    "children_count": "",
+    "content_and_attachments_and_revisions_size": "",
+    "content_and_attachments_size": "",
+    "content_size": "",
+    "date_created": "",
+    "date_modified": "",
+    "desc": "",
+    "order_by": "",
+    "owned_label_count": "",
+    "owned_relation_count": "",
+    "parent_count": "",
+    "random": "",
+    "relevancy": "",
+    "revision_count": "",
+    "target_relation_count": "",
+    "title": ""
+  },
+  "owned_attribute_list": {
+    "owned_attributes": ""
+  },
+  "password": {
+    "alert_message": "",
+    "change_password": "",
+    "change_password_heading": "",
+    "for_more_info": "",
+    "heading": "",
+    "new_password": "",
+    "new_password_confirmation": "",
+    "old_password": "",
+    "password_changed_success": "",
+    "password_mismatch": "",
+    "protected_session_timeout": "",
+    "protected_session_timeout_description": "",
+    "protected_session_timeout_label": "",
+    "reset_confirmation": "",
+    "reset_link": "",
+    "reset_success_message": "",
+    "set_password": "",
+    "set_password_heading": "",
+    "wiki": ""
+  },
+  "password_not_set": {
+    "body1": "",
+    "body2": "",
+    "title": ""
+  },
+  "promoted_attributes": {
+    "add_new_attribute": "",
+    "open_external_link": "",
+    "promoted_attributes": "",
+    "remove_this_attribute": "",
+    "unknown_attribute_type": "",
+    "unknown_label_type": "",
+    "url_placeholder": ""
+  },
+  "prompt": {
+    "defaultTitle": "",
+    "ok": "",
+    "title": ""
+  },
+  "protected_session": {
+    "enter_password_instruction": "",
+    "start_session_button": ""
+  },
+  "protected_session_password": {
+    "close_label": "",
+    "form_label": "",
+    "help_title": "",
+    "modal_title": "",
+    "start_button": ""
+  },
+  "protected_session_status": {
+    "active": "",
+    "inactive": ""
+  },
+  "recent_changes": {
+    "confirm_undelete": "",
+    "deleted_notes_message": "",
+    "erase_notes_button": "",
+    "no_changes_message": "",
+    "title": "",
+    "undelete_link": ""
+  },
+  "relation_map": {
+    "cannot_match_transform": "",
+    "click_on_canvas_to_place_new_note": "",
+    "confirm_remove_relation": "",
+    "connection_exists": "",
+    "default_new_note_title": "",
+    "edit_title": "",
+    "enter_new_title": "",
+    "enter_title_of_new_note": "",
+    "note_already_in_diagram": "",
+    "note_not_found": "",
+    "open_in_new_tab": "",
+    "remove_note": "",
+    "remove_relation": "",
+    "rename_note": "",
+    "specify_new_relation_name": "",
+    "start_dragging_relations": ""
+  },
+  "relation_map_buttons": {
+    "create_child_note_title": "",
+    "reset_pan_zoom_title": "",
+    "zoom_in_title": "",
+    "zoom_out_title": ""
+  },
+  "rename_label": {
+    "name_title": "",
+    "new_name_placeholder": "",
+    "old_name_placeholder": "",
+    "rename_label": "",
+    "rename_label_from": "",
+    "to": ""
+  },
+  "rename_note": {
+    "api_docs": "",
+    "click_help_icon": "",
+    "evaluated_as_js_string": "",
+    "example_date_prefix": "",
+    "example_new_title": "",
+    "example_note": "",
+    "new_note_title": "",
+    "rename_note": "",
+    "rename_note_title_to": ""
+  },
+  "rename_relation": {
+    "allowed_characters": "",
+    "new_name": "",
+    "old_name": "",
+    "rename_relation": "",
+    "rename_relation_from": "",
+    "to": ""
+  },
+  "render": {
+    "note_detail_render_help_1": "",
+    "note_detail_render_help_2": ""
+  },
+  "revisions": {
+    "confirm_delete": "",
+    "confirm_delete_all": "",
+    "confirm_restore": "",
+    "delete_all_button": "",
+    "delete_all_revisions": "",
+    "delete_button": "",
+    "download_button": "",
+    "dropdown_trigger": "",
+    "file_size": "",
+    "help_title": "",
+    "mime": "",
+    "no_revisions": "",
+    "note_revisions": "",
+    "preview": "",
+    "preview_not_available": "",
+    "restore_button": "",
+    "revision_deleted": "",
+    "revision_last_edited": "",
+    "revision_restored": "",
+    "revisions_deleted": ""
+  },
+  "revisions_button": {
+    "note_revisions": ""
+  },
+  "revisions_snapshot_interval": {
+    "note_revisions_snapshot_description": "",
+    "note_revisions_snapshot_interval_title": "",
+    "snapshot_time_interval_label": ""
+  },
+  "ribbon": {
+    "edited_notes_message": "",
+    "promoted_attributes_message": "",
+    "widgets": ""
+  },
+  "script_executor": {
+    "execute_query": "",
+    "execute_script": "",
+    "query": "",
+    "script": ""
+  },
+  "search_definition": {
+    "action": "",
+    "actions_executed": "",
+    "add_search_option": "",
+    "ancestor": "",
+    "debug": "",
+    "debug_description": "",
+    "enter": "",
+    "fast_search": "",
+    "fast_search_description": "",
+    "include_archived": "",
+    "include_archived_notes_description": "",
+    "limit": "",
+    "limit_description": "",
+    "order_by": "",
+    "save_to_note": "",
+    "search": "",
+    "search_execute": "",
+    "search_note_saved": "",
+    "search_parameters": "",
+    "search_script": "",
+    "search_string": "",
+    "unknown_search_option": ""
+  },
+  "search_engine": {
+    "baidu": "",
+    "bing": "",
+    "custom_name_label": "",
+    "custom_name_placeholder": "",
+    "custom_search_engine_info": "",
+    "custom_url_label": "",
+    "custom_url_placeholder": "",
+    "duckduckgo": "",
+    "google": "",
+    "predefined_templates_label": "",
+    "save_button": "",
+    "title": ""
+  },
+  "search_script": {
+    "description1": "",
+    "description2": "",
+    "example_code": "",
+    "example_title": "",
+    "note": "",
+    "placeholder": "",
+    "title": ""
+  },
+  "search_string": {
+    "also_see": "",
+    "complete_help": "",
+    "error": "",
+    "full_text_search": "",
+    "label_abc": "",
+    "label_date_created": "",
+    "label_rock_or_pop": "",
+    "label_rock_pop": "",
+    "label_year": "",
+    "label_year_comparison": "",
+    "placeholder": "",
+    "search_syntax": "",
+    "title_column": ""
+  },
+  "shortcuts": {
+    "action_name": "",
+    "confirm_reset": "",
+    "default_shortcuts": "",
+    "description": "",
+    "electron_documentation": "",
+    "keyboard_shortcuts": "",
+    "multiple_shortcuts": "",
+    "reload_app": "",
+    "set_all_to_default": "",
+    "shortcuts": "",
+    "type_text_to_filter": ""
+  },
+  "similar_notes": {
+    "no_similar_notes_found": "",
+    "title": ""
+  },
+  "sort_child_notes": {
+    "ascending": "",
+    "date_created": "",
+    "date_modified": "",
+    "descending": "",
+    "folders": "",
+    "natural_sort": "",
+    "natural_sort_language": "",
+    "sort": "",
+    "sort_children_by": "",
+    "sort_folders_at_top": "",
+    "sort_with_respect_to_different_character_sorting": "",
+    "sorting_criteria": "",
+    "sorting_direction": "",
+    "the_language_code_for_natural_sort": "",
+    "title": ""
+  },
+  "spellcheck": {
+    "available_language_codes_label": "",
+    "description": "",
+    "enable": "",
+    "language_code_label": "",
+    "language_code_placeholder": "",
+    "multiple_languages_info": "",
+    "title": ""
+  },
+  "sync": {
+    "fill_entity_changes_button": "",
+    "filling_entity_changes": "",
+    "force_full_sync_button": "",
+    "full_sync_triggered": "",
+    "sync_rows_filled_successfully": "",
+    "title": ""
+  },
+  "sync_2": {
+    "config_title": "",
+    "handshake_failed": "",
+    "help": "",
+    "note": "",
+    "note_description": "",
+    "proxy_label": "",
+    "save": "",
+    "server_address": "",
+    "special_value_description": "",
+    "test_button": "",
+    "test_description": "",
+    "test_title": "",
+    "timeout": ""
+  },
+  "table_of_contents": {
+    "description": "",
+    "disable_info": "",
+    "shortcut_info": "",
+    "title": ""
+  },
+  "text_auto_read_only_size": {
+    "description": "",
+    "label": "",
+    "title": ""
+  },
+  "theme": {
+    "dark_theme": "",
+    "light_theme": "",
+    "override_theme_fonts_label": "",
+    "theme_label": "",
+    "title": ""
+  },
+  "toast": {
+    "critical-error": {
+      "message": "",
+      "title": ""
+    },
+    "widget-error": {
+      "message": "",
+      "title": ""
     }
+  },
+  "tray": {
+    "enable_tray": "",
+    "title": ""
+  },
+  "update_available": {
+    "update_available": ""
+  },
+  "update_label_value": {
+    "help_text": "",
+    "help_text_note": "",
+    "label_name_placeholder": "",
+    "label_name_title": "",
+    "new_value_placeholder": "",
+    "to_value": "",
+    "update_label_value": ""
+  },
+  "update_relation_target": {
+    "allowed_characters": "",
+    "change_target_note": "",
+    "create_given_relation": "",
+    "on_all_matched_notes": "",
+    "relation_name": "",
+    "target_note": "",
+    "to": "",
+    "update_relation": "",
+    "update_relation_target": ""
+  },
+  "upload_attachments": {
+    "choose_files": "",
+    "files_will_be_uploaded": "",
+    "options": "",
+    "shrink_images": "",
+    "tooltip": "",
+    "upload": "",
+    "upload_attachments_to_note": ""
+  },
+  "vacuum_database": {
+    "button_text": "",
+    "database_vacuumed": "",
+    "description": "",
+    "title": "",
+    "vacuuming_database": ""
+  },
+  "vim_key_bindings": {
+    "enable_vim_keybindings": "",
+    "use_vim_keybindings_in_code_notes": ""
+  },
+  "web_view": {
+    "create_label": "",
+    "disclaimer": "",
+    "embed_websites": "",
+    "experimental_note": "",
+    "web_view": ""
+  },
+  "wrap_lines": {
+    "enable_line_wrap": "",
+    "wrap_lines_in_code_notes": ""
+  },
+  "zoom_factor": {
+    "description": "",
+    "title": ""
+  },
+  "zpetne_odkazy": {
+    "backlink": "",
+    "backlinks": "",
+    "relation": ""
+  }
 }
