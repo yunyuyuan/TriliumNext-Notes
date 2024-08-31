@@ -42,6 +42,10 @@
   width: 100%;
 }
 
+.calendar-dropdown-widget select[data-calendar-input="month"] {
+  text-align: center;
+}
+
 .calendar-dropdown-widget .calendar-week {
   display: flex;
   flex-wrap: wrap;

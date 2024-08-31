@@ -7,6 +7,21 @@ import appContext from "../../components/app_context.js";
 import RightDropdownButtonWidget from "./right_dropdown_button.js";
 import toastService from "../../services/toast.js";
 
+const MONTHS = [
+    t("calendar.january"),
+    t("calendar.febuary"),
+    t("calendar.march"),
+    t("calendar.april"),
+    t("calendar.may"),
+    t("calendar.june"),
+    t("calendar.july"),
+    t("calendar.august"),
+    t("calendar.september"),
+    t("calendar.october"),
+    t("calendar.november"),
+    t("calendar.december")
+];
+
 const DROPDOWN_TPL = `
 <div class="calendar-dropdown-widget">
     <style>
@@ -19,7 +34,9 @@ const DROPDOWN_TPL = `
         <div class="calendar-month-selector">
             <button class="calendar-btn bx bx-left-arrow-alt" data-calendar-toggle="previous"></button>
 
-            <div class="calendar-header-label" data-calendar-label="month"></div>
+            <select data-calendar-input="month">
+                ${Object.entries(MONTHS).map(([i, month]) => `<option value=${i}>${month}</option>`)}
+            </select>
 
             <button class="calendar-btn bx bx-right-arrow-alt" data-calendar-toggle="next"></button>
         </div>
@@ -51,9 +68,13 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.$month = this.$dropdownContent.find('[data-calendar-area="month"]');
         
         // Month navigation
-        this.$label = this.$dropdownContent.find('[data-calendar-label="month"]');
+        this.$monthSelect = this.$dropdownContent.find('[data-calendar-input="month"]');
         this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
         this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');        
+        this.$monthSelect.on("input", (e) => {
+            this.date.setMonth(e.target.value);
+            this.createMonth();
+        });
         this.$next.on('click', () => {
             this.date.setMonth(this.date.getMonth() + 1);
             this.createMonth();
@@ -178,24 +199,7 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.date.setDate(1);
         this.date.setMonth(this.date.getMonth() - 1);
 
-        this.$label.html(t(this.monthsAsString(this.date.getMonth()).toLowerCase()));
+        this.$monthSelect.val(this.date.getMonth());
         this.$yearLabel.html(this.date.getFullYear());
-    }
-
-    monthsAsString(monthIndex) {
-        return [
-            t("calendar.january"),
-            t("calendar.febuary"),
-            t("calendar.march"),
-            t("calendar.april"),
-            t("calendar.may"),
-            t("calendar.june"),
-            t("calendar.july"),
-            t("calendar.august"),
-            t("calendar.september"),
-            t("calendar.october"),
-            t("calendar.november"),
-            t("calendar.december")
-        ][monthIndex];
     }
 }
