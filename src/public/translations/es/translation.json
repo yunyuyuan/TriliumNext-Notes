@@ -597,7 +597,7 @@
     },
     "left_pane_toggle": {
         "hide_panel": "Ocultar panel",
-        "open_panel": "Abrir panel"
+        "show_panel": "Abrir panel"
     },
     "move_pane_button": {
         "move_left": "Mover a la izquierda",
