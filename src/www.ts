@@ -126,6 +126,8 @@ function startHttpServer() {
     }
 
     httpServer.on('error', error => {
+        let message = error.message;
+
         if (!listenOnTcp || ("syscall" in error && error.syscall !== 'listen')) {
             throw error;
         }
@@ -134,17 +136,28 @@ function startHttpServer() {
         if ("code" in error) {
             switch (error.code) {
                 case 'EACCES':
-                    console.error(`Port ${port} requires elevated privileges. It's recommended to use port above 1024.`);
-                    process.exit(1);
+                    message = `Port ${port} requires elevated privileges. It's recommended to use port above 1024.`;
+                    break;
                 case 'EADDRINUSE':
-                    console.error(`Port ${port} is already in use. Most likely, another Trilium process is already running. You might try to find it, kill it, and try again.`);
-                    process.exit(1);
+                    message = `Port ${port} is already in use. Most likely, another Trilium process is already running. You might try to find it, kill it, and try again.`;
+                    break;
             }
         }
 
-        throw error;
-    }
-    )
+        if (!message) {
+            message = "An unexpected error has occurred.";
+        }
+
+        if (utils.isElectron()) {
+            import("electron").then(({ dialog }) => {
+                dialog.showErrorBox("Error while initializing the server", message);
+                process.exit(1);
+            });
+        } else {
+            console.error(message);
+            process.exit(1);
+        }
+    });
 
     httpServer.on('listening', () => {
         if (listenOnTcp) {
