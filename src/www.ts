@@ -126,11 +126,7 @@ function startHttpServer() {
     }
 
     httpServer.on('error', error => {
-        let message = error.message;
-
-        if (!listenOnTcp || ("syscall" in error && error.syscall !== 'listen')) {
-            throw error;
-        }
+        let message = error.stack || "An unexpected error has occurred.";
 
         // handle specific listen errors with friendly messages
         if ("code" in error) {
@@ -141,11 +137,10 @@ function startHttpServer() {
                 case 'EADDRINUSE':
                     message = `Port ${port} is already in use. Most likely, another Trilium process is already running. You might try to find it, kill it, and try again.`;
                     break;
+                case 'EADDRNOTAVAIL':
+                    message = `Unable to start the server on host '${host}'. Make sure the host (defined in 'config.ini' or via the 'TRILIUM_HOST' environment variable) is an IP address that can be listened on.`;
+                    break;
             }
-        }
-
-        if (!message) {
-            message = "An unexpected error has occurred.";
         }
 
         if (utils.isElectron()) {
