@@ -234,9 +234,12 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
     }
 
     async entitiesReloadedEvent({loadResults}) {
-        if (loadResults.getOptionNames().includes("firstDayOfWeek")) {
-            this.manageFirstDayOfWeek();
+        if (!loadResults.getOptionNames().includes("firstDayOfWeek")) {
+            return;
         }
+        
+        this.manageFirstDayOfWeek();
+        this.createMonth();
     }
 
 }
