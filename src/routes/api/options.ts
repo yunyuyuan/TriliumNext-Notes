@@ -145,6 +145,10 @@ function getSupportedLocales() {
         {
             "id": "cn",
             "name": "简体中文"
+        },
+        {
+            "id": "ro",
+            "name": "Română"
         }
     ];
 }
