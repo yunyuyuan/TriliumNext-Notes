@@ -6,6 +6,7 @@ import server from "../../services/server.js";
 import appContext from "../../components/app_context.js";
 import RightDropdownButtonWidget from "./right_dropdown_button.js";
 import toastService from "../../services/toast.js";
+import options from "../../services/options.js";
 
 const MONTHS = [
     t("calendar.january"),
@@ -51,11 +52,20 @@ const DROPDOWN_TPL = `
     </div>
 
     <div class="calendar-week">
-        <span>${t("calendar.mon")}</span> <span>${t("calendar.tue")}</span><span>${t("calendar.wed")}</span> <span>${t("calendar.thu")}</span> <span>${t("calendar.fri")}</span> <span>${t("calendar.sat")}</span> <span>${t("calendar.sun")}</span>
     </div>
 
     <div class="calendar-body" data-calendar-area="month"></div>
 </div>`;
+
+const DAYS_OF_WEEK = [
+    t("calendar.sun"),
+    t("calendar.mon"),
+    t("calendar.tue"),
+    t("calendar.wed"),
+    t("calendar.thu"),
+    t("calendar.fri"),
+    t("calendar.sat")
+];
 
 export default class CalendarWidget extends RightDropdownButtonWidget {
     constructor(title, icon) {
@@ -64,8 +74,11 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
     doRender() {
         super.doRender();
-
+        
         this.$month = this.$dropdownContent.find('[data-calendar-area="month"]');
+        this.$weekHeader = this.$dropdownContent.find(".calendar-week");
+        
+        this.manageFirstDayOfWeek();
         
         // Month navigation
         this.$monthSelect = this.$dropdownContent.find('[data-calendar-input="month"]');
@@ -115,7 +128,17 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
             else {
                 toastService.showError(t("calendar.cannot_find_day_note"));
             }
-        });
+        });        
+    }
+
+    manageFirstDayOfWeek() {
+        this.firstDayOfWeek = options.getInt("firstDayOfWeek");
+
+        // Generate the list of days of the week taking into consideration the user's selected first day of week.
+        let localeDaysOfWeek = [ ...DAYS_OF_WEEK ];
+        const daysToBeAddedAtEnd = localeDaysOfWeek.splice(0, this.firstDayOfWeek);
+        localeDaysOfWeek = [ ...localeDaysOfWeek, ...daysToBeAddedAtEnd ];
+        this.$weekHeader.html(localeDaysOfWeek.map((el) => `<span>${el}</span>`));
     }
 
     async dropdownShown() {
@@ -209,7 +232,7 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
     async entitiesReloadedEvent({loadResults}) {
         if (loadResults.getOptionNames().includes("firstDayOfWeek")) {
-            this.init();
+            this.manageFirstDayOfWeek();
         }
     }
 
