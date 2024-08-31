@@ -16,8 +16,12 @@ function setupGlobalTooltip() {
             return;
         }
 
-        $('.note-tooltip').remove();
+        cleanUpTooltips;
     });
+}
+
+function cleanUpTooltips() {
+    $('.note-tooltip').remove();
 }
 
 function setupElementTooltip($el) {
@@ -85,6 +89,7 @@ async function mouseEnterHandler() {
             customClass: linkId
         });
 
+        cleanUpTooltips();
         $(this).tooltip('show');
         
         // Dismiss the tooltip immediately if a link was clicked inside the tooltip.
