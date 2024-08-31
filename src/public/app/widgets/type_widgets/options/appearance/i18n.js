@@ -14,10 +14,10 @@ const TPL = `
         </div>
 
         <div class="col-6">
-            <label>First day of the week</label>
+            <label>${t("i18n.first-day-of-the-week")}</label>
             <select class="first-day-of-week-select form-control">
-                <option value="0">Sunday</option>
-                <option value="1">Monday</option>
+                <option value="0">${t("i18n.sunday")}</option>
+                <option value="1">${t("i18n.monday")}</option>
             </select>
         </div>
     </div>
