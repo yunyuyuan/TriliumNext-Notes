@@ -12,6 +12,14 @@ const TPL = `
             <label>${t("i18n.language")}</label>
             <select class="locale-select form-control"></select>
         </div>
+
+        <div class="col-6">
+            <label>First day of the week</label>
+            <select class="first-day-of-week-select form-control">
+                <option value="0">Sunday</option>
+                <option value="1">Monday</option>
+            </select>
+        </div>
     </div>
 </div>
 `;
@@ -19,11 +27,17 @@ const TPL = `
 export default class LocalizationOptions extends OptionsWidget {
     doRender() {
         this.$widget = $(TPL);
+        
         this.$localeSelect = this.$widget.find(".locale-select");
         this.$localeSelect.on("change", async() => {
             const newLocale = this.$localeSelect.val();
             await server.put(`options/locale/${newLocale}`);
             utils.reloadFrontendApp("locale change");
+        });
+
+        this.$firstDayOfWeek = this.$widget.find(".first-day-of-week-select");
+        this.$firstDayOfWeek.on("change", () => {
+            this.updateOption("firstDayOfWeek", this.$firstDayOfWeek.val());
         });
     }
 
@@ -38,5 +52,6 @@ export default class LocalizationOptions extends OptionsWidget {
         }
 
         this.$localeSelect.val(options.locale);
+        this.$firstDayOfWeek.val(options.firstDayOfWeek);
     }
 }

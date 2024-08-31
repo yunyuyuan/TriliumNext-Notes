@@ -59,7 +59,8 @@ const ALLOWED_OPTIONS = new Set([
     'customSearchEngineUrl',
     'promotedAttributesOpenInRibbon',
     'editedNotesOpenInRibbon',
-    'locale'
+    'locale',
+    'firstDayOfWeek'
 ]);
 
 function getOptions() {

@@ -95,7 +95,10 @@ const defaultOptions: DefaultOption[] = [
     { name: 'customSearchEngineUrl', value: 'https://duckduckgo.com/?q={keyword}', isSynced: true },
     { name: 'promotedAttributesOpenInRibbon', value: 'true', isSynced: true },
     { name: 'editedNotesOpenInRibbon', value: 'true', isSynced: true },
-    { name: 'locale', value: 'en', isSynced: true }
+
+    // Internationalization
+    { name: 'locale', value: 'en', isSynced: true },
+    { name: 'firstDayOfWeek', value: '1', isSynced: true }
 ];
 
 function initStartupOptions() {

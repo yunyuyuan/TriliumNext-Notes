@@ -206,4 +206,11 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.$monthSelect.val(this.date.getMonth());
         this.$yearSelect.val(this.date.getFullYear());
     }
+
+    async entitiesReloadedEvent({loadResults}) {
+        if (loadResults.getOptionNames().includes("firstDayOfWeek")) {
+            this.init();
+        }
+    }
+
 }
