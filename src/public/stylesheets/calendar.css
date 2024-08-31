@@ -11,7 +11,9 @@
 .calendar-dropdown-widget .calendar-btn {
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   -webkit-appearance: button;
+  appearance: none;
   background: none;
   border: 0;
   color: inherit;
@@ -33,17 +35,22 @@
 
 .calendar-dropdown-widget .calendar-header > div {
   display: flex;
+  justify-content: center;
   flex-grow: 1;
 }
 
-.calendar-dropdown-widget .calendar-header-label {
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
+.calendar-dropdown-widget .calendar-header select {
+  cursor: pointer;
 }
 
-.calendar-dropdown-widget select[data-calendar-input="month"] {
+.calendar-dropdown-widget .calendar-header input,
+.calendar-dropdown-widget .calendar-header select {
+  appearance: none;
   text-align: center;
+  border: 0;
+  border-bottom: 1px solid var(--button-border-color);
+  background-color: var(--menu-background-color) !important;
+  outline: 0;
 }
 
 .calendar-dropdown-widget .calendar-week {
@@ -60,7 +67,6 @@
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .calendar-dropdown-widget .calendar-body {
