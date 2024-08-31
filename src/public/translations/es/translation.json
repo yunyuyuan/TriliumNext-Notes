@@ -230,7 +230,7 @@
         "erase_notes_button": "Borrar notas eliminadas ahora",
         "deleted_notes_message": "Las notas eliminadas han sido borradas.",
         "no_changes_message": "Aún no hay cambios...",
-        "recuperar_link": "recuperar",
+        "undelete_link": "recuperar",
         "confirm_undelete": "¿Quiere recuperar esta nota y sus subnotas?"
     },
     "revisions": {
@@ -258,12 +258,12 @@
     "sort_child_notes": {
         "sort_children_by": "Ordenar hijos por...",
         "sorting_criteria": "Criterios de ordenamiento",
-        "título": "título",
+        "title": "título",
         "date_created": "fecha de creación",
         "date_modified": "fecha de modificación",
         "sorting_direction": "Dirección de ordenamiento",
-        "ascendiendo": "ascendente",
-        "descendiendo": "descendente",
+        "ascending": "ascendente",
+        "descending": "descendente",
         "folders": "Carpetas",
         "sort_folders_at_top": "ordenar carpetas en la parte superior",
         "natural_sort": "Ordenamiento natural",
@@ -308,7 +308,7 @@
         "url": "URL",
         "precision_title": "¿Qué cantidad de dígitos después del punto flotante deben estar disponibles en la interfaz de configuración del valor?",
         "precision": "Precisión",
-        "dígitos": "dígitos",
+        "digits": "dígitos",
         "inverse_relation_title": "Configuración opcional para definir a qué relación es ésta opuesta. Ejemplo: Padre - Hijo son relaciones inversas entre sí.",
         "inverse_relation": "Relación inversa",
         "inheritable_title": "El atributo heredable se heredará a todos los descendientes de este árbol.",
@@ -467,7 +467,7 @@
     },
     "move_note": {
         "move_note": "Mover nota",
-        "a": "a",
+        "to": "a",
         "target_parent_note": "nota padre objetivo",
         "on_all_matched_notes": "En todas las notas coincidentes",
         "move_note_new_parent": "mover la nota al nuevo padre si la nota tiene solo un padre (es decir, se elimina la ubicación anterior y se crea una nueva ubicación en el nuevo padre)",
@@ -489,7 +489,7 @@
         "add_relation": "Agregar relación",
         "relation_name": "nombre de relación",
         "allowed_characters": "Se permiten caracteres alfanuméricos, guiones bajos y dos puntos.",
-        "a": "a",
+        "to": "a",
         "target_note": "nota de destino",
         "create_relation_on_all_matched_notes": "En todas las notas coincidentes, cree una relación determinada."
     },
@@ -510,7 +510,7 @@
         "update_relation": "Relación de actualización",
         "relation_name": "nombre de la relación",
         "allowed_characters": "Se permiten caracteres alfanuméricos, guiones bajos y dos puntos.",
-        "a": "a",
+        "to": "a",
         "target_note": "nota de destino",
         "on_all_matched_notes": "En todas las notas coincidentes",
         "create_given_relation": "crear una relación dada si la nota aún no tiene una",
@@ -659,7 +659,7 @@
     "zpetne_odkazy": {
         "backlink": "{{count}} Vínculo de retroceso",
         "backlinks": "{{count}} Vínculos de retroceso",
-        "relación": "relación"
+        "relation": "relación"
     },
     "mobile_detail_menu": {
         "insert_child_note": "Insertar nota hijo",
@@ -723,7 +723,7 @@
         "type": "Tipo",
         "note_size": "Tamaño de nota",
         "note_size_info": "El tamaño de la nota proporciona una estimación aproximada de los requisitos de almacenamiento para esta nota. Toma en cuenta el contenido de la nota y el contenido de sus revisiones de nota.",
-        "calcular": "calcular",
+        "calculate": "calcular",
         "subtree_size": "(tamaño del subárbol: {{size}} en {{count}} notas)",
         "title": "Información de nota"
     },
@@ -767,19 +767,19 @@
         "add_search_option": "Agregar opción de búsqueda:",
         "search_string": "cadena de búsqueda",
         "search_script": "script de búsqueda",
-        "antepasado": "antepasado",
+        "ancestor": "antepasado",
         "fast_search": "búsqueda rápida",
         "fast_search_description": "La opción de búsqueda rápida desactiva la búsqueda de texto completo del contenido de las notas, lo que podría acelerar la búsqueda en bases de datos grandes.",
         "include_archived": "incluir notas archivadas",
         "include_archived_notes_description": "Las notas archivadas se excluyen por defecto de los resultados de búsqueda; con esta opción se incluirán.",
         "order_by": "ordenar por",
-        "límite": "límite",
+        "limit": "límite",
         "limit_description": "Limitar el número de resultados",
-        "depurar": "depurar",
+        "debug": "depurar",
         "debug_description": "La depuración imprimirá información de depuración adicional en la consola para ayudar a depurar consultas complejas.",
-        "acción": "acción",
+        "action": "acción",
         "search": "Buscar",
-        "ingresar": "ingresar",
+        "enter": "ingresar",
         "search_execute": "Buscar y ejecutar acciones",
         "save_to_note": "Guardar en nota",
         "search_parameters": "Parámetros de búsqueda",
@@ -798,7 +798,7 @@
     "ancestor": {
         "label": "Antepasado",
         "placeholder": "buscar nota por su nombre",
-        "profundidad_label": "profundidad",
+        "depth_label": "profundidad",
         "depth_doesnt_matter": "no importa",
         "depth_eq": "es exactamente {{count}}",
         "direct_children": "hijos directos",
@@ -1000,8 +1000,8 @@
     },
     "native_title_bar": {
         "title": "Barra de título nativa (requiere reiniciar la aplicación)",
-        "activado": "activado",
-        "desactivado": "desactivado"
+        "enabled": "activado",
+        "disabled": "desactivado"
     },
     "ribbon": {
         "widgets": "Widgets de cinta",

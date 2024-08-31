@@ -596,6 +596,7 @@
     "logout": "Logout"
   },
   "left_pane_toggle": {
+    "show_panel": "Show panel",
     "hide_panel": "Hide panel",
     "open_panel": "Open panel"
   },
