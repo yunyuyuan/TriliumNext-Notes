@@ -46,16 +46,18 @@ ipcMain.on('create-extra-window', (event, arg) => {
 });
 
 async function createMainWindow(app: App) {
-    app.setUserTasks([
-        {
-            program: process.execPath,
-            arguments: '--new-window',
-            iconPath: process.execPath,
-            iconIndex: 0,
-            title: 'Open New Window',
-            description: 'Open new window'
-        }
-    ]);
+    if ("setUserTasks" in app) {
+        app.setUserTasks([
+            {
+                program: process.execPath,
+                arguments: '--new-window',
+                iconPath: process.execPath,
+                iconIndex: 0,
+                title: 'Open New Window',
+                description: 'Open new window'
+            }
+        ]);
+    }
     
     const windowStateKeeper = (await import('electron-window-state')).default; // should not be statically imported
 
