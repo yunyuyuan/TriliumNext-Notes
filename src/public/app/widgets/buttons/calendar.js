@@ -44,7 +44,7 @@ const DROPDOWN_TPL = `
         <div class="calendar-year-selector">
             <button class="calendar-btn bx bx-left-arrow-alt" data-calendar-toggle="previousYear"></button>
 
-            <div class="calendar-header-label" data-calendar-label="year"></div>
+            <input type="number" min="1900" max="2999" step="1" data-calendar-input="year" />
 
             <button class="calendar-btn bx bx-right-arrow-alt" data-calendar-toggle="nextYear"></button>
         </div>
@@ -69,29 +69,33 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         
         // Month navigation
         this.$monthSelect = this.$dropdownContent.find('[data-calendar-input="month"]');
-        this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
-        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');        
         this.$monthSelect.on("input", (e) => {
             this.date.setMonth(e.target.value);
             this.createMonth();
         });
+        this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
         this.$next.on('click', () => {
-            this.date.setMonth(this.date.getMonth() + 1);
+        this.date.setMonth(this.date.getMonth() + 1);
             this.createMonth();
         });
+        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');        
         this.$previous.on('click', e => {
             this.date.setMonth(this.date.getMonth() - 1);
             this.createMonth();
         });
 
         // Year navigation
-        this.$yearLabel = this.$dropdownContent.find('[data-calendar-label="year"]');
+        this.$yearSelect = this.$dropdownContent.find('[data-calendar-input="year"]');
+        this.$yearSelect.on("input", (e) => {
+            this.date.setFullYear(e.target.value);
+            this.createMonth();
+        });
         this.$nextYear = this.$dropdownContent.find('[data-calendar-toggle="nextYear"]');
-        this.$previousYear = this.$dropdownContent.find('[data-calendar-toggle="previousYear"]');        
         this.$nextYear.on('click', () => {
             this.date.setFullYear(this.date.getFullYear() + 1);
             this.createMonth();
         });
+        this.$previousYear = this.$dropdownContent.find('[data-calendar-toggle="previousYear"]');        
         this.$previousYear.on('click', e => {
             this.date.setFullYear(this.date.getFullYear() - 1);
             this.createMonth();
@@ -200,6 +204,6 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.date.setMonth(this.date.getMonth() - 1);
 
         this.$monthSelect.val(this.date.getMonth());
-        this.$yearLabel.html(this.date.getFullYear());
+        this.$yearSelect.val(this.date.getFullYear());
     }
 }
