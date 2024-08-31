@@ -86,6 +86,11 @@ async function mouseEnterHandler() {
         });
 
         $(this).tooltip('show');
+        
+        // Dismiss the tooltip immediately if a link was clicked inside the tooltip.
+        $(`.${tooltipClass} a`).on("click", (e) => {
+            $(this).tooltip('dispose');
+        });
 
         // the purpose of the code below is to:
         // - allow user to go from hovering the link to hovering the tooltip to be able to scroll,
