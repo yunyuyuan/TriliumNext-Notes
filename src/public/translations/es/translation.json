@@ -79,7 +79,7 @@
     "cancel": "Cancelar",
     "ok": "Aceptar",
     "note": "Nota",
-    "to_be_deleted": "(para ser eliminada) está referenciado por la relación <code>{{attrName}}</code> que se origina en"
+    "to_be_deleted": " (para ser eliminada) está referenciado por la relación <code>{{attrName}}</code> que se origina en "
   },
   "export": {
     "export_note_title": "Exportar nota",
@@ -89,7 +89,7 @@
     "format_markdown": "Markdown: esto conserva la mayor parte del formato.",
     "format_opml": "OPML: formato de intercambio de esquemas solo para texto. El formato, las imágenes y los archivos no están incluidos.",
     "opml_version_1": "OPML v1.0: solo texto sin formato",
-    "opml_version_2": "OMPL v2.0 - también permite HTML",
+    "opml_version_2": "OPML v2.0 - también permite HTML",
     "export_type_single": "solo esta nota sin sus descendientes",
     "export": "Exportar",
     "choose_export_type": "Por favor, elija primero el tipo de exportación",
@@ -112,7 +112,7 @@
     "collapseSubTree": "colapsar subárbol",
     "tabShortcuts": "Atajos de pestañas",
     "newTabNoteLink": "(o clic central del mouse) en el enlace de la nota abre la nota en una nueva pestaña",
-    "onlyInDesktop": "Solo en escritorio (compilación con electron)",
+    "onlyInDesktop": "Solo en escritorio (compilación con Electron)",
     "openEmptyTab": "abrir pestaña vacía",
     "closeActiveTab": "cerrar pestaña activa",
     "activateNextTab": "activar pestaña siguiente",
@@ -121,7 +121,7 @@
     "createNoteAfter": "crear una nueva nota después de la nota activa",
     "createNoteInto": "crear una nueva subnota en la nota activa",
     "editBranchPrefix": "edición <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix\">prefix</a> de clon de nota activa",
-    "movingCloningNotes": "Moviendo/Clonando notas",
+    "movingCloningNotes": "Moviendo/clonando notas",
     "moveNoteUpDown": "mover nota arriba/abajo en la lista de notas",
     "moveNoteUpHierarchy": "mover nota hacia arriba en la jerarquía",
     "multiSelectNote": "selección múltiple de nota hacia arriba/abajo",
@@ -132,24 +132,24 @@
     "pasteNotes": "pegar notas como subnotas en la nota activa (que se puede mover o clonar dependiendo de si se copió o cortó en el portapapeles)",
     "deleteNotes": "eliminar nota/subárbol",
     "editingNotes": "Editando notas",
-    "editNoteTitle": "en el panel de árbol cambiará del panel de árbol al título de la nota. Ingresar desde el título de la nota cambiará el foco al editor de texto. Volverá del editor al panel de árbol.",
+    "editNoteTitle": "",
     "createEditLink": "crear/editar enlace externo",
     "createInternalLink": "crear enlace interno",
     "followLink": "siga el enlace debajo del cursor",
     "insertDateTime": "insertar la fecha y hora actuales en la posición del cursor",
     "jumpToTreePane": "saltar al panel de árbol y desplazarse hasta la nota activa",
     "markdownAutoformat": "Autoformato tipo Markdown",
-    "headings": "etc. seguido de espacio para encabezados",
+    "headings": " etc. seguido de espacio para encabezados",
     "bulletList": "<kbd>*</kbd> o <kbd>-</kbd> seguido de espacio para la lista de viñetas",
     "numberedList": "<kbd>1.</kbd> o <kbd>1)</kbd> seguido de espacio para la lista numerada",
-    "blockQuote": "comience una línea con <kbd>></kbd> seguido de espacio para el  bloque de cita",
+    "blockQuote": "comience una línea con <kbd>></kbd> seguido de espacio para el bloque de cita",
     "troubleshooting": "Solución de problemas",
     "reloadFrontend": "recargar la interfaz de Trillium",
     "showDevTools": "mostrar herramientas de desarrollador",
     "showSQLConsole": "mostrar consola SQL",
     "other": "Otro",
     "quickSearch": "centrarse en la entrada de búsqueda rápida",
-    "inPageSearch": "en la página de búsqueda"
+    "inPageSearch": "búsqueda en la página"
   },
   "import": {
     "importIntoNote": "Importar a nota",
@@ -811,7 +811,7 @@
     "access_info": "Para acceder a la información de depuración, ejecute la consulta y dé clic en \"Mostrar registro de backend\" en la esquina superior izquierda."
   },
   "fast_search": {
-    "fast_search": "búsqueda rápida",
+    "fast_search": "Búsqueda rápida",
     "description": "La opción de búsqueda rápida desactiva la búsqueda de texto completo del contenido de las notas, lo que podría acelerar la búsqueda en bases de datos grandes."
   },
   "include_archived_notes": {
