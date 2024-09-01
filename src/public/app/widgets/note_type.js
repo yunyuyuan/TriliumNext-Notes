@@ -73,7 +73,7 @@ export default class NoteTypeWidget extends NoteContextAwareWidget {
             const $typeLink = $('<a class="dropdown-item">')
                 .attr("data-note-type", noteType.type)
                 .append('<span class="check">&check;</span> ')
-                .append($('<strong>').text(noteType.title))
+                .append($('<span>').text(noteType.title))
                 .on('click', e => {
                     const type = $typeLink.attr('data-note-type');
                     const noteType = NOTE_TYPES.find(nt => nt.type === type);
@@ -85,11 +85,11 @@ export default class NoteTypeWidget extends NoteContextAwareWidget {
                 $typeLink.addClass("selected");
             }
 
-            this.$noteTypeDropdown.append($typeLink);
-
-            if (noteType.type !== 'code') {
+            if (noteType.type === 'code') {
                 this.$noteTypeDropdown.append('<div class="dropdown-divider"></div>');
             }
+
+            this.$noteTypeDropdown.append($typeLink);
         }
 
         for (const mimeType of await mimeTypesService.getMimeTypes()) {
