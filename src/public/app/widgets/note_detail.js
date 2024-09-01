@@ -28,6 +28,7 @@ import DocTypeWidget from "./type_widgets/doc.js";
 import ContentWidgetTypeWidget from "./type_widgets/content_widget.js";
 import AttachmentListTypeWidget from "./type_widgets/attachment_list.js";
 import AttachmentDetailTypeWidget from "./type_widgets/attachment_detail.js";
+import MindMapWidget from "./type_widgets/mind_map.js";
 
 const TPL = `
 <div class="note-detail">
@@ -63,7 +64,8 @@ const typeWidgetClasses = {
     'doc': DocTypeWidget,
     'contentWidget': ContentWidgetTypeWidget,
     'attachmentDetail': AttachmentDetailTypeWidget,
-    'attachmentList': AttachmentListTypeWidget
+    'attachmentList': AttachmentListTypeWidget,
+    'mindMap': MindMapWidget
 };
 
 export default class NoteDetailWidget extends NoteContextAwareWidget {
