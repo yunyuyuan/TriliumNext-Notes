@@ -1,5 +1,6 @@
 import libraryLoader from "../../services/library_loader.js";
 import TypeWidget from "./type_widget.js";
+import utils from "../../services/utils.js";
 
 const TPL = `
 <div class="note-detail-mind-map note-detail-printable">
@@ -114,20 +115,7 @@ export default class MindMapWidget extends TypeWidget {
         }
 
         const svg = await this.renderSvg();
-        this.download(`${this.note.title}.svg`, svg);
-    }
-
-    download(filename, text) {
-        const element = document.createElement('a');
-        element.setAttribute('href', `data:image/svg+xml;charset=utf-8,${encodeURIComponent(text)}`);
-        element.setAttribute('download', filename);
-
-        element.style.display = 'none';
-        document.body.appendChild(element);
-
-        element.click();
-
-        document.body.removeChild(element);
+        utils.downloadSvg(this.note.title, svg);
     }
 
 }

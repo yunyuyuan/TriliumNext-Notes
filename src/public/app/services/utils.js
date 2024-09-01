@@ -508,6 +508,26 @@ function createImageSrcUrl(note) {
     return `api/images/${note.noteId}/${encodeURIComponent(note.title)}?timestamp=${Date.now()}`;
 }
 
+/**
+ * Given a string representation of an SVG, triggers a download of the file on the client device.
+ * 
+ * @param {string} nameWithoutExtension the name of the file. The .svg suffix is automatically added to it.
+ * @param {string} svgContent the content of the SVG file download.
+ */
+function downloadSvg(nameWithoutExtension, svgContent) {
+    const filename = `${nameWithoutExtension}.svg`;
+    const element = document.createElement('a');
+    element.setAttribute('href', `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgContent)}`);
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
 export default {
     reloadFrontendApp,
     parseDate,
@@ -547,5 +567,6 @@ export default {
     escapeRegExp,
     areObjectsEqual,
     copyHtmlToClipboard,
-    createImageSrcUrl
+    createImageSrcUrl,
+    downloadSvg
 };
