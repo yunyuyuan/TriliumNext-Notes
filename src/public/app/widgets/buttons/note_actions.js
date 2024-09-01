@@ -105,7 +105,7 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
         this.toggleDisabled(this.$findInTextButton, ['text', 'code', 'book'].includes(note.type));
 
         this.toggleDisabled(this.$showAttachmentsButton, !isInOptions);
-        this.toggleDisabled(this.$showSourceButton, ['text', 'code', 'relationMap', 'mermaid', 'canvas'].includes(note.type));
+        this.toggleDisabled(this.$showSourceButton, ['text', 'code', 'relationMap', 'mermaid', 'canvas', 'mindMap'].includes(note.type));
 
         this.toggleDisabled(this.$printActiveNoteButton, ['text', 'code'].includes(note.type));
 
