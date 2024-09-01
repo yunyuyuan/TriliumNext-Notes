@@ -365,7 +365,7 @@
     "title": "Verificări de consistență"
   },
   "copy_image_reference_button": {
-    "button_title": "Copiază o referință către imagine în clipboard, poate fi lipită într-o notiță text."
+    "button_title": "Copiază o referință către imagine în clipboard, poate fi inserată într-o notiță text."
   },
   "create_pane_button": {
     "create_new_split": "Crează o nouă diviziune"
@@ -663,7 +663,7 @@
   },
   "images": {
     "download_images_automatically": "Descarcă imaginile automat pentru utilizare fără conexiune la internet.",
-    "download_images_description": "Textul HTML lipit poate conține referințe către imagini online, Trilium le va identifica și va descărca acele imagini pentru a putea fi disponibile și fără o conexiune la internet.",
+    "download_images_description": "Textul HTML inserat poate conține referințe către imagini online, Trilium le va identifica și va descărca acele imagini pentru a putea fi disponibile și fără o conexiune la internet.",
     "enable_image_compression": "Activează compresia imaginilor",
     "images_section_title": "Imagini",
     "jpeg_quality_description": "Calitatea JPEG (10 - cea mai slabă calitate, 100 - cea mai bună calitate, se recomandă între 50 și 85)",
