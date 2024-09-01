@@ -37,9 +37,9 @@ export default class MindMapWidget extends TypeWidget {
 
         if (!window.MindElixir) {
             await libraryLoader.requireLibrary(libraryLoader.MIND_ELIXIR);
-            this.#initLibrary();
         }
-
+        
+        this.#initLibrary();
         await this.#loadData(note);   
     }
 
