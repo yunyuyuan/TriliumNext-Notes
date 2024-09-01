@@ -83,8 +83,18 @@ export default class MindMapWidget extends TypeWidget {
             return;
         }
 
+        const svgContent = await this.mind.exportSvg().text();   
         return {
-            content: mind.getDataString()
+            content: mind.getDataString(),
+            attachments: [
+                {
+                    role: "image",
+                    title: "mindmap-export.svg",
+                    mime: "image/svg+xml",
+                    content: svgContent,
+                    position: 0
+                }
+            ]
         };
     }
 
