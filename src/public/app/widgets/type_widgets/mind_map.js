@@ -40,17 +40,19 @@ export default class MindMapWidget extends TypeWidget {
             this.#initLibrary();
         }
 
-        await this.#loadData(note);
+        await this.#loadData(note);   
     }
 
     cleanup() {
         this.triggeredByUserOperation = false;
     }
-
+    
     async #loadData(note) {
         const blob = await note.getBlob();        
-        const content = blob.getJsonContent();
+        const content = blob.getJsonContent() || MindElixir.new();
+        
         this.mind.refresh(content);
+        this.mind.toCenter();
     }
 
     #initLibrary() {
@@ -63,7 +65,7 @@ export default class MindMapWidget extends TypeWidget {
         mind.init(MindElixir.new());
         mind.bus.addListener("operation", (operation) => {
             this.triggeredByUserOperation = true;
-            if (operation.name !== "startEdit") {
+            if (operation.name !== "beginEdit") {
                 this.spacedUpdate.scheduleUpdate();
             }
         });
