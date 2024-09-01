@@ -647,9 +647,6 @@
   "hide_floating_buttons_button": {
     "button_title": "Ocultar botones"
   },
-  "mermaid_export_button": {
-    "button_title": "Exportar diagrama de Mermaid como SVG"
-  },
   "relation_map_buttons": {
     "create_child_note_title": "Crear una nueva nota hijo y agregarla a este mapa de relaciones",
     "reset_pan_zoom_title": "Restablecer la panorámica y el zoom a las coordenadas y ampliación iniciales",

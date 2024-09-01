@@ -647,8 +647,8 @@
   "hide_floating_buttons_button": {
     "button_title": "Hide buttons"
   },
-  "mermaid_export_button": {
-    "button_title": "Export Mermaid diagram as SVG"
+  "svg_export_button": {
+    "button_title": "Export diagram as SVG"
   },
   "relation_map_buttons": {
     "create_child_note_title": "Create new child note and add it into this relation map",

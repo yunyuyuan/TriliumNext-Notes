@@ -647,9 +647,6 @@
   "hide_floating_buttons_button": {
     "button_title": "隐藏按钮"
   },
-  "mermaid_export_button": {
-    "button_title": "导出Mermaid图表为SVG"
-  },
   "relation_map_buttons": {
     "create_child_note_title": "创建新的子笔记并添加到关系图",
     "reset_pan_zoom_title": "重置平移和缩放到初始坐标和放大倍率",
