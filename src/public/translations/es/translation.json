@@ -1095,11 +1095,11 @@
   "highlights_list": {
     "title": "Lista de aspectos destacados",
     "description": "Puede personalizar la lista de aspectos destacados que se muestra en el panel derecho:",
-    "bold": "Fuente en negrita",
-    "italic": "Fuente cursiva",
-    "underline": "Fuente subrayada",
-    "color": "Fuente con color",
-    "bg_color": "Fuente con color de fondo",
+    "bold": "",
+    "italic": "",
+    "underline": "",
+    "color": "",
+    "bg_color": "",
     "visibility_title": "Visibilidad de la lista de aspectos destacados",
     "visibility_description": "Puede ocultar el widget de aspectos destacados por nota agregando una etiqueta #hideHighlightWidget.",
     "shortcut_info": "Puede configurar un método abreviado de teclado para alternar rápidamente el panel derecho (incluidos los aspectos destacados) en Opciones -> Atajos (nombre 'toggleRightPane')."

@@ -1095,11 +1095,11 @@
   "highlights_list": {
     "title": "Highlights List",
     "description": "You can customize the highlights list displayed in the right panel:",
-    "bold": "Bold font",
-    "italic": "Italic font",
-    "underline": "Underlined font",
-    "color": "Font with color",
-    "bg_color": "Font with background color",
+    "bold": "Bold text",
+    "italic": "Italic text",
+    "underline": "Underlined text",
+    "color": "Colored text",
+    "bg_color": "Text with background color",
     "visibility_title": "Highlights List visibility",
     "visibility_description": "You can hide the highlights widget per-note by adding a #hideHighlightWidget label.",
     "shortcut_info": "You can configure a keyboard shortcut for quickly toggling the right pane (including Highlights) in the Options -> Shortcuts (name 'toggleRightPane')."

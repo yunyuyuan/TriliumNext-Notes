@@ -631,16 +631,16 @@
     "button_title": ""
   },
   "highlights_list": {
-    "bg_color": "",
-    "bold": "",
-    "color": "",
-    "description": "",
-    "italic": "",
-    "shortcut_info": "",
-    "title": "",
-    "underline": "",
-    "visibility_description": "",
-    "visibility_title": ""
+    "bg_color": "Text cu o culoare de fundal",
+    "bold": "Text îngroșat",
+    "color": "Text colorat",
+    "description": "Se pot personaliza elementele ce vor fi afișate în lista de evidențieri din panoul din dreapta:",
+    "italic": "Text italic (înclinat)",
+    "shortcut_info": "Se poate configura o scurtatură la tastatură pentru comutarea rapidă a panoului din dreapta (inclusiv lista de evidențieri) în Opțiuni -> Scurtături (denumirea „toggleRightPane”).",
+    "title": "Lista de evidențieri",
+    "underline": "Text subliniat",
+    "visibility_description": "Se poate ascunde lista de evidențieri la nivel de notiță prin adăugarea etichetei #hideHighlightWidget.",
+    "visibility_title": "Vizibilitatea listei de evidențieri"
   },
   "i18n": {
     "first-day-of-the-week": "Prima zi a săptămânii",
