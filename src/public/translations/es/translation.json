@@ -164,7 +164,7 @@
     "shrinkImagesTooltip": "<p>Si marca esta opción, Trilium intentará reducir las imágenes importadas mediante escalado y optimización, lo que puede afectar la calidad de la imagen percibida. Si no está marcada, las imágenes se importarán sin cambios.</p><p>Esto no se aplica a las importaciones <code>.zip</code> con metadatos, ya que se supone que estos archivos ya están optimizados.</p>",
     "shrinkImages": "Reducir imágenes",
     "textImportedAsText": "Importar HTML, Markdown y TXT como notas de texto si no está claro en los metadatos",
-    "codeImportedAsCode": "Importar archivos de código reconocidos (por ejemplo, <code>.json</code>) como notas de código si no están claros en los metadatos.",
+    "codeImportedAsCode": "Importar archivos de código reconocidos (por ejemplo, <code>.json</code>) como notas de código si no están claros en los metadatos",
     "replaceUnderscoresWithSpaces": "Reemplazar guiones bajos con espacios en nombres de notas importadas",
     "import": "Importar"
   },
@@ -1041,7 +1041,7 @@
     "download_images_description": "El HTML pegado puede contener referencias a imágenes en línea; Trilium encontrará esas referencias y descargará las imágenes para que estén disponibles sin conexión.",
     "enable_image_compression": "Habilitar la compresión de imágenes",
     "max_image_dimensions": "Ancho/alto máximo de una imagen en píxeles (la imagen cambiará de tamaño si excede esta configuración).",
-    "jpeg_quality_description": "Calidad JPEG (10 - peor calidad, 100 mejor calidad, se recomienda 50 - 85)"
+    "jpeg_quality_description": "Calidad JPEG (10 - peor calidad, 100 - mejor calidad, se recomienda 50 - 85)"
   },
   "attachment_erasure_timeout": {
     "attachment_erasure_timeout": "Tiempo de espera para borrar archivos adjuntos",
