@@ -83,7 +83,7 @@ export default class MindMapWidget extends TypeWidget {
             return;
         }
 
-        const svgContent = await this.mind.exportSvg().text();   
+        const svgContent = await this.renderSvg();   
         return {
             content: mind.getDataString(),
             attachments: [
@@ -98,9 +98,36 @@ export default class MindMapWidget extends TypeWidget {
         };
     }
 
+    async renderSvg() {
+        return await this.mind.exportSvg().text();
+    }
+
     async entitiesReloadedEvent({loadResults}) {
         if (loadResults.isNoteReloaded(this.noteId)) {
             this.refresh();
         }
     }
+
+    async exportSvgEvent({ntxId}) {
+        if (!this.isNoteContext(ntxId)) {
+            return;
+        }
+
+        const svg = await this.renderSvg();
+        this.download(`${this.note.title}.svg`, svg);
+    }
+
+    download(filename, text) {
+        const element = document.createElement('a');
+        element.setAttribute('href', `data:image/svg+xml;charset=utf-8,${encodeURIComponent(text)}`);
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
 }

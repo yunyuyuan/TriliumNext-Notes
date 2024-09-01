@@ -3,7 +3,7 @@ import NoteContextAwareWidget from "../note_context_aware_widget.js";
 
 const TPL = `
 <button type="button"
-        class="export-mermaid-button"
+        class="export-svg-button"
         title="${t('svg_export_button.button_title')}">
         <span class="bx bx-export"></span>
 </button>
@@ -12,7 +12,7 @@ const TPL = `
 export default class SvgExportButton extends NoteContextAwareWidget {
     isEnabled() {
         return super.isEnabled()
-            && this.note?.type === 'mermaid'
+            && [ "mermaid", "mindMap" ].includes(this.note?.type)
             && this.note.isContentAvailable()
             && this.noteContext?.viewScope.viewMode === 'default';
     }
@@ -21,7 +21,7 @@ export default class SvgExportButton extends NoteContextAwareWidget {
         super.doRender();
 
         this.$widget = $(TPL);
-        this.$widget.on('click', () => this.triggerEvent('exportMermaid', {ntxId: this.ntxId}));
+        this.$widget.on('click', () => this.triggerEvent('exportSvg', {ntxId: this.ntxId}));
         this.contentSized();
     }
 }
