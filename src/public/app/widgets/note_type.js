@@ -14,6 +14,7 @@ const NOTE_TYPES = [
 
     { type: "text", mime: "text/html", title: "Text", selectable: true },
     { type: "relationMap", mime: "application/json", title: "Relation Map", selectable: true },
+    { type: "mindMap", mime: "application/json", "title": "Mind Map", selectable: true },
     { type: "render", mime: '', title: "Render Note", selectable: true },
     { type: "canvas", mime: 'application/json', title: "Canvas", selectable: true },
     { type: "mermaid", mime: 'text/mermaid', title: "Mermaid Diagram", selectable: true },
