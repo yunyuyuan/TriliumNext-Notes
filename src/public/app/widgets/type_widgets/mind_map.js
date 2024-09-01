@@ -29,14 +29,33 @@ export default class MindMapWidget extends TypeWidget {
         libraryLoader
             .requireLibrary(libraryLoader.MIND_ELIXIR)
             .then(() => {
-                const mind = new MindElixir({
-                    el: this.$content[0],
-                    direction: MindElixir.LEFT
-                });
-                mind.init(MindElixir.new());
+                this.#onLibraryLoaded();
             });
 
         super.doRender();
+    }
+
+    #onLibraryLoaded() {
+        const mind = new MindElixir({
+            el: this.$content[0],
+            direction: MindElixir.LEFT
+        });
+        this.mind = mind;
+        mind.init(MindElixir.new());
+        mind.bus.addListener("operation", (operation) => {
+            this.spacedUpdate.scheduleUpdate();
+        });
+    }
+
+    async getData() {
+        const mind = this.mind;
+        if (!mind) {
+            return;
+        }
+
+        return {
+            content: mind.getDataString()
+        };
     }
 
     async entitiesReloadedEvent({loadResults}) {
