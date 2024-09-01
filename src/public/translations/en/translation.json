@@ -46,10 +46,10 @@
     "chosen_actions": "Chosen actions",
     "execute_bulk_actions": "Execute bulk actions",
     "bulk_actions_executed": "Bulk actions have been executed successfully.",
-    "none_yet": "None yet ... add an action by clicking one of the available ones above."
+    "none_yet": "None yet... add an action by clicking one of the available ones above."
   },
   "clone_to": {
-    "clone_notes_to": "Clone notes to ...",
+    "clone_notes_to": "Clone notes to...",
     "help_on_links": "Help on links",
     "notes_to_clone": "Notes to clone",
     "target_parent_note": "Target parent note",
@@ -364,7 +364,7 @@
     "share_raw": "note will be served in its raw format, without HTML wrapper",
     "share_disallow_robot_indexing": "will forbid robot indexing of this note via <code>X-Robots-Tag: noindex</code> header",
     "share_credentials": "require credentials to access this shared note. Value is expected to be in format 'username:password'. Don't forget to make this inheritable to apply to child-notes/images.",
-    "share_index": "note with this this label will list all roots of shared notes",
+    "share_index": "note with this label will list all roots of shared notes",
     "display_relations": "comma delimited names of relations which should be displayed. All other ones will be hidden.",
     "hide_relations": "comma delimited names of relations which should be hidden. All other ones will be displayed.",
     "title_template": "default title of notes created as children of this note. The value is evaluated as JavaScript string \n                        and thus can be enriched with dynamic content via the injected <code>now</code> and <code>parentNote</code> variables. Examples:\n                        \n                        <ul>\n                            <li><code>${parentNote.getLabelValue('authorName')}'s literary works</code></li>\n                            <li><code>Log for ${now.format('YYYY-MM-DD HH:mm:ss')}</code></li>\n                        </ul>\n                        \n                        See <a href=\"https://triliumnext.github.io/Docs/Wiki/default-note-title.html\">wiki with details</a>, API docs for <a href=\"https://zadam.github.io/trilium/backend_api/Note.html\">parentNote</a> and <a href=\"https://day.js.org/docs/en/display/format\">now</a> for details.",

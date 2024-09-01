@@ -190,25 +190,25 @@
     "run_on_note_title_change": "se execută când titlul unei notițe se schimbă (inclusiv la crearea unei notițe)",
     "save_and_close": "Salvează și închide (<kbd>Ctrl+Enter</kbd>)",
     "search_home": "notițele de căutare vor fi create în cadrul acestei notițe",
-    "share_alias": "",
-    "share_credentials": "",
-    "share_css": "",
-    "share_description": "",
-    "share_disallow_robot_indexing": "",
-    "share_external_link": "",
-    "share_favicon": "",
-    "share_hidden_from_tree": "",
-    "share_index": "",
-    "share_js": "",
-    "share_omit_default_css": "",
-    "share_raw": "",
-    "share_root": "",
-    "share_template": "",
-    "single_value": "",
-    "sort_direction": "",
-    "sort_folders_first": "",
+    "share_alias": "definește un alias ce va fi permite notiței să fie accesată la https://your_trilium_host/share/[alias]",
+    "share_credentials": "cere credențiale la accesarea acestei notițe partajate. Valoarea trebuie să fie în formatul „username:parolă”. Nu uitați să faceți eticheta moștenibilă pentru a o aplica și la notițele-copil/imagini.",
+    "share_css": "Notiță de tip CSS ce va fi injectată în pagina de partajare. Notița CSS trebuie să facă și ea parte din ierarhia partajată. Considerați utilizarea și a „share_hidden_from_tree”, respectiv „share_omit_default_css”.",
+    "share_description": "definește text ce va fi adăugat la eticheta HTML „meta” pentru descriere",
+    "share_disallow_robot_indexing": "împiedică indexarea conținutului de către roboți utilizând antetul <code>X-Robots-Tag: noindex</code>",
+    "share_external_link": "notița va funcționa drept o legătură către un site web extern în ierarhia de partajare",
+    "share_favicon": "Notiță ce conține pictograma favicon pentru a fi setată în paginile partajate. De obicei se poate seta în rădăcina ierarhiei de partajare și se poate face moștenibilă. Notița ce conține favicon-ul trebuie să fie și ea în ierarhia de partajare. Considerați și utilizarea „share_hidden_from_tree”.",
+    "share_hidden_from_tree": "notița este ascunsă din arborele de navigație din stânga, dar încă este accesibilă prin intermediul unui URL.",
+    "share_index": "notițele cu această etichetă vor afișa lista tuturor rădăcilor notițelor partajate",
+    "share_js": "Notiță JavaScript ce va fi injectată în pagina de partajare. Notița respectivă trebuie să fie și ea în ierarhia de partajare. Considerați utilizarea 'share_hidden_from_tree'.",
+    "share_omit_default_css": "CSS-ul implicit pentru pagina de partajare va fi omis. Se poate folosi atunci când se fac schimbări majore de stil la pagină.",
+    "share_raw": "notița va fi afișată în formatul ei brut, fără HTML",
+    "share_root": "marchează notița care este servită pentru rădăcina ”/share”.",
+    "share_template": "O notiță JavaScript ce va fi folosită drept șablon pentru afișarea notițelor partajate. Implicit se utilizează șablonul original. Considerați utilizarea 'share_hidden_from_tree'.",
+    "single_value": "Valoare unică",
+    "sort_direction": "ASC (ascendent, implicit) sau DESC (descendent)",
+    "sort_folders_first": "Directoarele (notițe cu sub-notițe) vor fi mutate la început",
     "sorted": "menține notițele-copil ordonate alfabetic după titlu",
-    "sql_console_home": "",
+    "sql_console_home": "locația implicită pentru notițele de tip consolă SQL",
     "target_note": "Notiță țintă",
     "target_note_title": "Relația este o conexiune numită dintre o notiță sursă și o notiță țintă.",
     "template": "Șablon",
@@ -229,187 +229,187 @@
     "workspace_template": "Această notița va apărea în lista de șabloane când se crează o nouă notiță, dar doar când spațiul de lucru în care se află notița este focalizat"
   },
   "attribute_editor": {
-    "add_a_new_attribute": "",
-    "add_new_label": "",
-    "add_new_label_definition": "",
-    "add_new_relation": "",
-    "add_new_relation_definition": "",
-    "help_text_body1": "",
-    "help_text_body2": "",
-    "help_text_body3": "",
-    "save_attributes": ""
+    "add_a_new_attribute": "Adaugă un nou attribut",
+    "add_new_label": "Adaugă o nouă etichetă <kbd data-command=\"addNewLabel\"></kbd>",
+    "add_new_label_definition": "Adaugă o nouă definiție de etichetă",
+    "add_new_relation": "Adaugă o nouă relație <kbd data-command=\"addNewRelation\"></kbd>",
+    "add_new_relation_definition": "Adaugă o nouă definiție de relație",
+    "help_text_body1": "Pentru a adăuga o etichetă doar scrieți, spre exemplu, <code>#piatră</code> sau <code>#an = 2020</code> dacă se dorește adăugarea unei valori",
+    "help_text_body2": "Pentru relații, scrieți <code>author = @</code> ce va afișa o autocompletare pentru identificarea notiței dorite.",
+    "help_text_body3": "În mod alternativ, se pot adăuga etichete și relații utilizând butonul <code>+</code> din partea dreaptă.",
+    "save_attributes": "Salvează atributele <enter>"
   },
   "backend_log": {
-    "refresh": ""
+    "refresh": "Reîmprospătare"
   },
   "backup": {
-    "automatic_backup": "",
-    "automatic_backup_description": "",
-    "backup_database_now": "",
-    "backup_now": "",
-    "backup_recommendation": "",
-    "database_backed_up_to": "",
-    "enable_daily_backup": "",
-    "enable_monthly_backup": "",
-    "enable_weekly_backup": "",
-    "existing_backups": "",
-    "no_backup_yet": ""
+    "automatic_backup": "Copie de siguranță automată",
+    "automatic_backup_description": "Trilium poate face copii de siguranță ale bazei de date în mod automat:",
+    "backup_database_now": "Crează o copie a bazei de date acum",
+    "backup_now": "Crează o copie de siguranță acum",
+    "backup_recommendation": "Se recomandă a se păstra activată funcția de copii de siguranță, dar acest lucru poate face pornirea aplicației mai lentă pentru baze de date mai mari sau pentru dispozitive de stocare lente.",
+    "database_backed_up_to": "S-a creat o copie de siguranță a bazei de dată la",
+    "enable_daily_backup": "Activează copia de siguranță zilnică",
+    "enable_monthly_backup": "Activează copia de siguranță lunară",
+    "enable_weekly_backup": "Activează copia de siguranță săptămânală",
+    "existing_backups": "Copii de siguranță existente",
+    "no_backup_yet": "nu există încă nicio copie de siguranță"
   },
   "basic_properties": {
-    "basic_properties": "",
-    "editable": "",
-    "note_type": ""
+    "basic_properties": "Proprietăți de bază",
+    "editable": "Editabil",
+    "note_type": "Tipul notiței"
   },
   "book": {
-    "no_children_help": ""
+    "no_children_help": "Această notiță de tip Carte nu are nicio subnotiță așadar nu este nimic de afișat. Vedeți <a href=\"https://triliumnext.github.io/Docs/Wiki/book-note.html\">wiki</a> pentru detalii."
   },
   "book_properties": {
-    "book_properties": "",
-    "collapse": "",
-    "collapse_all_notes": "",
-    "expand": "",
-    "expand_all_children": "",
-    "grid": "",
-    "invalid_view_type": "",
-    "list": "",
-    "view_type": ""
+    "book_properties": "Proprietăți carte",
+    "collapse": "Minimizează",
+    "collapse_all_notes": "Minimizează toate notițele",
+    "expand": "Expandează",
+    "expand_all_children": "Expandează toate subnotițele",
+    "grid": "Grilă",
+    "invalid_view_type": "Mod de afișare incorect „{{type}}”",
+    "list": "Listă",
+    "view_type": "Mod de afișare"
   },
   "bookmark_switch": {
-    "bookmark": "",
-    "bookmark_this_note": "",
-    "remove_bookmark": ""
+    "bookmark": "Semn de carte",
+    "bookmark_this_note": "Crează un semn de carte către această notiță în panoul din stânga",
+    "remove_bookmark": "Șterge semnul de carte"
   },
   "branch_prefix": {
-    "branch_prefix_saved": "",
-    "close": "",
-    "edit_branch_prefix": "",
-    "help_on_tree_prefix": "",
-    "prefix": "",
-    "save": ""
+    "branch_prefix_saved": "Prefixul ramurii a fost salvat.",
+    "close": "Închide",
+    "edit_branch_prefix": "Editează prefixul ramurii",
+    "help_on_tree_prefix": "Informații despre prefixe de ierarhie",
+    "prefix": "Prefix:",
+    "save": "Salvează"
   },
   "bulk_actions": {
-    "affected_notes": "",
-    "available_actions": "",
-    "bulk_actions": "",
-    "bulk_actions_executed": "",
-    "chosen_actions": "",
-    "close": "",
-    "execute_bulk_actions": "",
-    "include_descendants": "",
-    "none_yet": ""
+    "affected_notes": "Notițe afectate",
+    "available_actions": "Acțiuni disponibile",
+    "bulk_actions": "Acțiuni în masă",
+    "bulk_actions_executed": "Acțiunile în masă au fost executate cu succes.",
+    "chosen_actions": "Acțiuni selectate",
+    "close": "Închide",
+    "execute_bulk_actions": "Execută acțiunile în masă",
+    "include_descendants": "Include descendenții notiței selectate",
+    "none_yet": "Nicio acțiune... adaugați una printr-un click pe cele disponibile mai jos."
   },
   "calendar": {
-    "april": "",
-    "august": "",
-    "cannot_find_day_note": "",
-    "december": "",
-    "febuary": "",
-    "fri": "",
-    "january": "",
-    "july": "",
-    "june": "",
-    "march": "",
-    "may": "",
-    "mon": "",
-    "november": "",
-    "october": "",
-    "sat": "",
-    "september": "",
-    "sun": "",
-    "thu": "",
-    "tue": "",
-    "wed": ""
+    "april": "Aprilie",
+    "august": "August",
+    "cannot_find_day_note": "Nu se poate găsi notița acelei zile",
+    "december": "Decembrie",
+    "febuary": "Februarie",
+    "fri": "Vin",
+    "january": "Ianuarie",
+    "july": "Iulie",
+    "june": "Iunie",
+    "march": "Martie",
+    "may": "Mai",
+    "mon": "Lun",
+    "november": "Noiembrie",
+    "october": "Octombrie",
+    "sat": "Sâm",
+    "september": "Septembrie",
+    "sun": "Dum",
+    "thu": "Joi",
+    "tue": "Mar",
+    "wed": "Mie"
   },
   "clone_to": {
-    "clone_notes_to": "",
-    "clone_to_selected_note": "",
-    "cloned_note_prefix_title": "",
-    "help_on_links": "",
-    "no_path_to_clone_to": "",
-    "note_cloned": "",
-    "notes_to_clone": "",
-    "prefix_optional": "",
-    "search_for_note_by_its_name": "",
-    "target_parent_note": ""
+    "clone_notes_to": "Clonează notițele către...",
+    "clone_to_selected_note": "Clonează notița selectată <kbd>enter</kbd>",
+    "cloned_note_prefix_title": "Notița clonată va fi afișată în ierarhia notiței utilizând prefixul dat",
+    "help_on_links": "Informații despre legături",
+    "no_path_to_clone_to": "Nicio cale de clonat.",
+    "note_cloned": "Notița „{{clonedTitle}}” a fost clonată în „{{targetTitle}}”",
+    "notes_to_clone": "Notițe de clonat",
+    "prefix_optional": "Prefix (opțional)",
+    "search_for_note_by_its_name": "căutați notița după nume acesteia",
+    "target_parent_note": "Notița părinte țintă"
   },
   "close_pane_button": {
-    "close_this_pane": ""
+    "close_this_pane": "Închide acest panou"
   },
   "code_auto_read_only_size": {
-    "description": "",
-    "label": "",
-    "title": ""
+    "description": "Marchează pragul în care o notiță de o anumită dimensiune va fi afișată în mod de citire (pentru motive de performanță).",
+    "label": "Pragul de dimensiune pentru setarea modului de citire automat (la notițe de cod)",
+    "title": "Pragul de mod de citire automat"
   },
   "code_buttons": {
-    "execute_button_title": "",
-    "opening_api_docs_message": "",
-    "save_to_note_button_title": "",
-    "sql_console_saved_message": "",
-    "trilium_api_docs_button_title": ""
+    "execute_button_title": "Execută scriptul",
+    "opening_api_docs_message": "Se deschide documentația API...",
+    "save_to_note_button_title": "Salvează în notiță",
+    "sql_console_saved_message": "Notița consolă SQL a fost salvată în {{note_path}}",
+    "trilium_api_docs_button_title": "Deschide documentația API pentru Trilium"
   },
   "code_mime_types": {
-    "title": ""
+    "title": "Tipuri MIME disponibile în meniul derulant"
   },
   "confirm": {
-    "also_delete_note": "",
-    "are_you_sure_remove_note": "",
-    "cancel": "",
-    "confirmation": "",
-    "if_you_dont_check": "",
-    "ok": ""
+    "also_delete_note": "Șterge și notița",
+    "are_you_sure_remove_note": "Doriți ștergerea notiței „{{title}}” din harta de relații?",
+    "cancel": "Anulează",
+    "confirmation": "Confirm",
+    "if_you_dont_check": "Dacă această opțiune nu este bifată, notița va fi ștearsă doar din harta de relații.",
+    "ok": "OK"
   },
   "consistency_checks": {
-    "find_and_fix_button": "",
-    "finding_and_fixing_message": "",
-    "issues_fixed_message": "",
-    "title": ""
+    "find_and_fix_button": "Caută și repară probleme de consistență",
+    "finding_and_fixing_message": "Se caută și se repară problemele de consistență...",
+    "issues_fixed_message": "Problemele de consistență ar trebuie să fie acum rezolvate.",
+    "title": "Verificări de consistență"
   },
   "copy_image_reference_button": {
-    "button_title": ""
+    "button_title": "Copiază o referință către imagine în clipboard, poate fi lipită într-o notiță text."
   },
   "create_pane_button": {
-    "create_new_split": ""
+    "create_new_split": "Crează o nouă diviziune"
   },
   "database_anonymization": {
-    "choose_anonymization": "",
-    "creating_fully_anonymized_database": "",
-    "creating_lightly_anonymized_database": "",
-    "error_creating_anonymized_database": "",
-    "existing_anonymized_databases": "",
-    "full_anonymization": "",
-    "full_anonymization_description": "",
-    "light_anonymization": "",
-    "light_anonymization_description": "",
-    "no_anonymized_database_yet": "",
-    "save_fully_anonymized_database": "",
-    "save_lightly_anonymized_database": "",
-    "successfully_created_fully_anonymized_database": "",
-    "successfully_created_lightly_anonymized_database": "",
-    "title": ""
+    "choose_anonymization": "Puteți decide dacă oferiți o bază de date complet sau parțial anonimizată. Chiar și bazele de date complet anonimizate pot fi foarte utile, dar în unele cazuri bazele de date parțial anonimizate pot eficientiza procesul de identificare a bug-urilor și repararea acestora.",
+    "creating_fully_anonymized_database": "Se crează o copie complet anonimizată...",
+    "creating_lightly_anonymized_database": "Se crează o bază de date parțial anonimizată...",
+    "error_creating_anonymized_database": "Nu s-a putut crea o bază de date anonimizată, verificați log-urile din server pentru detalii",
+    "existing_anonymized_databases": "Baze de date anonimizate existente",
+    "full_anonymization": "Anonimizare completă",
+    "full_anonymization_description": "Această acțiune va crea o nouă copie a bazei de date și o va anonimiza (se șterge conținutul tuturor notițelor și se menține doar structura și câteva metainformații neconfidențiale) pentru a putea fi partajate online cu scopul de a depana anumite probleme fără a risca expunerea datelor personale.",
+    "light_anonymization": "Anonimizare parțială",
+    "light_anonymization_description": "Această acțiune va crea o copie a bazei de date și o va anonimiza parțial - mai exact se va șterge conținutul tuturor notițelor, dar titlurile și atributele vor rămâne. De asemenea, script-urile de front-end sau back-end și widget-urile personalizate vor rămâne și ele. Acest lucru oferă mai mult context pentru a depana probleme.",
+    "no_anonymized_database_yet": "încă nu există nicio bază de date anonimizată",
+    "save_fully_anonymized_database": "Salvează bază de date complet anonimizată",
+    "save_lightly_anonymized_database": "Salvează bază de date parțial anonimizată",
+    "successfully_created_fully_anonymized_database": "S-a creat cu succes o bază de date complet anonimizată în {{anonymizedFilePath}}",
+    "successfully_created_lightly_anonymized_database": "S-a creat cu succes o bază de date parțial anonimizată în {{anonymizedFilePath}}",
+    "title": "Bază de dată anonimizată"
   },
   "database_integrity_check": {
-    "check_button": "",
-    "checking_integrity": "",
-    "description": "",
-    "integrity_check_failed": "",
-    "integrity_check_succeeded": "",
-    "title": ""
+    "check_button": "Verifică integritatea bazei de date",
+    "checking_integrity": "Se verifică integritatea bazei de date...",
+    "description": "Se va verifica să nu existe coruperi ale bazei de date la nivelul SQLite. Poate dura ceva timp, în funcție de dimensiunea bazei de date.",
+    "integrity_check_failed": "Probleme la verificarea integrității: {{results}}",
+    "integrity_check_succeeded": "Verificarea integrității a fost făcută cu succes și nu a fost identificată nicio problemă.",
+    "title": "Verificarea integrității bazei de date"
   },
   "debug": {
-    "access_info": "",
-    "debug": "",
-    "debug_info": ""
+    "access_info": "Pentru a accesa informații de depanare, executați interogarea și dați click pe „Afișează logurile din backend” din stânga-sus.",
+    "debug": "Depanare",
+    "debug_info": "Modul de depanare va afișa informații adiționale în consolă cu scopul de a ajuta la depanarea interogărilor complexe."
   },
   "delete_label": {
-    "delete_label": "",
-    "label_name_placeholder": "",
-    "label_name_title": ""
+    "delete_label": "Șterge eticheta",
+    "label_name_placeholder": "denumirea etichetei",
+    "label_name_title": "Sunt permise caractere alfanumerice, underline și două puncte."
   },
   "delete_note": {
-    "delete_matched_notes": "",
-    "delete_matched_notes_description": "",
-    "delete_note": "",
-    "erase_notes_instruction": "",
+    "delete_matched_notes": "Șterge notițele găsite",
+    "delete_matched_notes_description": "Se vor șterge notițele găsite.",
+    "delete_note": "Șterge notița",
+    "erase_notes_instruction": "Pentru a șterge notițele permanent, se poate merge după ștergerea în opțiuni la secțiunea „Altele” și clic pe butonul „Elimină notițele șterse acum”.",
     "undelete_notes_instruction": ""
   },
   "delete_notes": {
@@ -542,30 +542,30 @@
     "theme_defined": ""
   },
   "global_menu": {
-    "about": "",
-    "advanced": "",
-    "configure_launchbar": "",
-    "logout": "",
-    "menu": "",
-    "open_dev_tools": "",
-    "open_new_window": "",
-    "open_search_history": "",
-    "open_sql_console": "",
-    "open_sql_console_history": "",
-    "options": "",
-    "reload_frontend": "",
-    "reload_hint": "",
-    "reset_zoom_level": "",
-    "show_backend_log": "",
-    "show_help": "",
-    "show_hidden_subtree": "",
-    "show_shared_notes_subtree": "",
-    "switch_to_desktop_version": "",
-    "switch_to_mobile_version": "",
-    "toggle_fullscreen": "",
-    "zoom": "",
-    "zoom_in": "",
-    "zoom_out": ""
+    "about": "Despre TriliumNext Notes",
+    "advanced": "Opțiuni avansate",
+    "configure_launchbar": "Configurează bara de lansare",
+    "logout": "Deautentificare",
+    "menu": "Meniu",
+    "open_dev_tools": "Deschide uneltele de dezvoltare",
+    "open_new_window": "Deschide o nouă fereastră",
+    "open_search_history": "Deschide istoricul de căutare",
+    "open_sql_console": "Deschide consola SQL",
+    "open_sql_console_history": "Deschide istoricul consolei SQL",
+    "options": "Opțiuni",
+    "reload_frontend": "Reîncarcă interfață",
+    "reload_hint": "Reîncărcarea poate ajuta atunci când există ceva probleme vizuale fără a trebui repornită întreaga aplicație.",
+    "reset_zoom_level": "Resetează nivelul de zoom",
+    "show_backend_log": "Afișează log-ul din backend",
+    "show_help": "Afișează informații",
+    "show_hidden_subtree": "Afișează ierarhia ascunsă",
+    "show_shared_notes_subtree": "Afișează ierahia notițelor partajate",
+    "switch_to_desktop_version": "Schimbă la versiunea de desktop",
+    "switch_to_mobile_version": "Schimbă la versiunea de mobil",
+    "toggle_fullscreen": "Comută mod ecran complet",
+    "zoom": "Zoom",
+    "zoom_in": "Mărește",
+    "zoom_out": "Micșorează"
   },
   "heading_style": {
     "markdown": "",
@@ -643,11 +643,11 @@
     "visibility_title": ""
   },
   "i18n": {
-    "first-day-of-the-week": "",
-    "language": "",
-    "monday": "",
-    "sunday": "",
-    "title": ""
+    "first-day-of-the-week": "Prima zi a săptămânii",
+    "language": "Limbă",
+    "monday": "Luni",
+    "sunday": "Duminică",
+    "title": "Localizare"
   },
   "image_properties": {
     "copy_reference_to_clipboard": "",
@@ -717,8 +717,8 @@
     "show_panel": ""
   },
   "limit": {
-    "limit": "",
-    "take_first_x_results": ""
+    "limit": "Limită",
+    "take_first_x_results": "Obține doar primele X rezultate."
   },
   "markdown_import": {
     "dialog_title": "",
@@ -791,7 +791,7 @@
   },
   "note_erasure_timeout": {
     "deleted_notes_erased": "",
-    "erase_deleted_notes_now": "",
+    "erase_deleted_notes_now": "Elimină notițele șterse acum",
     "erase_notes_after_x_seconds": "",
     "manual_erasing_description": "",
     "note_erasure_description": "",
@@ -843,14 +843,14 @@
     "options_status": ""
   },
   "order_by": {
-    "asc": "",
+    "asc": "Ascendent (implicit)",
     "children_count": "",
     "content_and_attachments_and_revisions_size": "",
     "content_and_attachments_size": "",
     "content_size": "",
     "date_created": "",
     "date_modified": "",
-    "desc": "",
+    "desc": "Descendent",
     "order_by": "",
     "owned_label_count": "",
     "owned_relation_count": "",
@@ -1163,11 +1163,11 @@
     "title": ""
   },
   "theme": {
-    "dark_theme": "",
-    "light_theme": "",
-    "override_theme_fonts_label": "",
-    "theme_label": "",
-    "title": ""
+    "dark_theme": "Temă întunecată",
+    "light_theme": "Temă luminoasă",
+    "override_theme_fonts_label": "Suprascrie fonturile temei",
+    "theme_label": "Temă",
+    "title": "Temă"
   },
   "toast": {
     "critical-error": {
@@ -1216,11 +1216,11 @@
     "upload_attachments_to_note": ""
   },
   "vacuum_database": {
-    "button_text": "",
-    "database_vacuumed": "",
-    "description": "",
-    "title": "",
-    "vacuuming_database": ""
+    "button_text": "Compactează baza de date",
+    "database_vacuumed": "Baza de date a fost curățată",
+    "description": "Va reconstrui baza de date cu scopul de a-i micșora dimensiunea. Datele nu vor fi afectate.",
+    "title": "Compactarea bazei de date",
+    "vacuuming_database": "Baza de date este în curs de compactare..."
   },
   "vim_key_bindings": {
     "enable_vim_keybindings": "",
@@ -1238,12 +1238,12 @@
     "wrap_lines_in_code_notes": ""
   },
   "zoom_factor": {
-    "description": "",
-    "title": ""
+    "description": "Zoom-ul poate fi controlat și prin intermediul scurtăturilor CTRL+- and CTRL+=.",
+    "title": "Factorul de zoom (doar pentru versiunea desktop)"
   },
   "zpetne_odkazy": {
     "backlink": "",
     "backlinks": "",
-    "relation": ""
+    "relation": "relație"
   }
 }

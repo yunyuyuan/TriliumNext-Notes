@@ -66,7 +66,7 @@
     "ok": "Aceptar",
     "are_you_sure_remove_note": "¿Está seguro que desea eliminar la nota \"{{title}}\" del mapa de relaciones? ",
     "if_you_dont_check": "Si no marca esto, la nota solo se eliminará del mapa de relaciones.",
-    "also_delete_note": "También eliminar la nota."
+    "also_delete_note": "También eliminar la nota"
   },
   "delete_notes": {
     "delete_notes_preview": "Eliminar vista previa de notas",
@@ -361,7 +361,7 @@
     "share_omit_default_css": "se omitirá el CSS de la página para compartir predeterminada. Úselo cuando realice cambios importantes de estilo.",
     "share_root": "marca la nota que se publica en /share root.",
     "share_description": "definir el texto que se agregará a la etiqueta HTML meta para la descripción",
-    "share_raw": "la nota se entregará en su formato original, sin contenedor HTML.",
+    "share_raw": "la nota se entregará en su formato original, sin contenedor HTML",
     "share_disallow_robot_indexing": "prohibirá la indexación por robots de esta nota a través del encabezado <code>X-Robots-Tag: noindex</code>",
     "share_credentials": "requiere credenciales para acceder a esta nota compartida. Se espera que el valor tenga el formato 'nombre_de_usuario:contraseña'. No olvide hacer que esto sea heredable para aplicarlo a notas/imágenes hijo.",
     "share_index": "tenga en cuenta que con esto esta etiqueta enumerará todas las raíces de las notas compartidas",
@@ -636,7 +636,7 @@
   },
   "code_buttons": {
     "execute_button_title": "Ejecutar script",
-    "trilium_api_docs_button_title": "Abrir documentación de la API de Trillium",
+    "trilium_api_docs_button_title": "Abrir documentación de la API de Trilium",
     "save_to_note_button_title": "Guardar en nota",
     "opening_api_docs_message": "Abriendo documentación API...",
     "sql_console_saved_message": "La nota de la consola SQL se ha guardado en {{note_path}}"
@@ -974,7 +974,7 @@
     "description": "Esto reconstruirá la base de datos, lo que normalmente dará como resultado un archivo de base de datos más pequeño. En realidad, no se cambiará ningún dato.",
     "button_text": "Limpiar base de datos",
     "vacuuming_database": "Limpiando base de datos...",
-    "database_vacuumed": "La base de datos ha sido limpiada."
+    "database_vacuumed": "La base de datos ha sido limpiada"
   },
   "fonts": {
     "theme_defined": "Tema definido",
