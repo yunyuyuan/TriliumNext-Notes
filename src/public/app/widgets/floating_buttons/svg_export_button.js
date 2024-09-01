@@ -9,7 +9,7 @@ const TPL = `
 </button>
 `;
 
-export default class MermaidExportButton extends NoteContextAwareWidget {
+export default class SvgExportButton extends NoteContextAwareWidget {
     isEnabled() {
         return super.isEnabled()
             && this.note?.type === 'mermaid'
