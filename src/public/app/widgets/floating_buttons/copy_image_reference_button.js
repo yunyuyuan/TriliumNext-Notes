@@ -15,7 +15,7 @@ const TPL = `
 export default class CopyImageReferenceButton extends NoteContextAwareWidget {
     isEnabled() {
         return super.isEnabled()
-            && ['mermaid', 'canvas'].includes(this.note?.type)
+            && ['mermaid', 'canvas', 'mindMap'].includes(this.note?.type)
             && this.note.isContentAvailable()
             && this.noteContext?.viewScope.viewMode === 'default';
     }
