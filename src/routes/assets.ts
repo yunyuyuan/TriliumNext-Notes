@@ -100,6 +100,8 @@ function register(app: express.Application) {
     app.use(`/${assetPath}/node_modules/codemirror/addon/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/addon/')));
     app.use(`/${assetPath}/node_modules/codemirror/mode/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/mode/')));
     app.use(`/${assetPath}/node_modules/codemirror/keymap/`, persistentCacheStatic(path.join(srcRoot, '..', 'node_modules/codemirror/keymap/')));
+
+    app.use(`/${assetPath}/node_modules/mind-elixir/dist/`, persistentCacheStatic(path.join(srcRoot, "..", "node_modules/mind-elixir/dist/")));
 }
 
 export default {

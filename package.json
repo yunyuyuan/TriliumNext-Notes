@@ -106,6 +106,7 @@
     "marked": "^13.0.2",
     "mermaid": "^10.9.1",
     "mime-types": "2.1.35",
+    "mind-elixir": "^4.0.5",
     "multer": "1.4.5-lts.1",
     "node-abi": "^3.65.0",
     "normalize-strings": "1.1.1",

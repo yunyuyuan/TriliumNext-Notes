@@ -79,6 +79,12 @@ const I18NEXT = {
     ]
 };
 
+const MIND_ELIXIR = {
+    js: [
+        "node_modules/mind-elixir/dist/MindElixir.iife.js"
+    ]
+};
+
 async function requireLibrary(library) {
     if (library.css) {
         library.css.map(cssUrl => requireCss(cssUrl));
@@ -137,5 +143,6 @@ export default {
     MERMAID,
     EXCALIDRAW,
     MARKJS,
-    I18NEXT
+    I18NEXT,
+    MIND_ELIXIR
 }
