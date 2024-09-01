@@ -7,7 +7,6 @@ on:
       - "feature/server_esm**"
     paths-ignore:
       - "docs/**"
-      - "bin/**"
       - ".github/workflows/main-docker.yml"
     tags:
       - "v*"
