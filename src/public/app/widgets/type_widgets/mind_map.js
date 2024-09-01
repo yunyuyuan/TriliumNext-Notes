@@ -26,7 +26,7 @@ export default class MindMapWidget extends TypeWidget {
         this.$widget = $(TPL);
         this.$content = this.$widget.find(".mind-map-container");        
 
-        super.doRender();
+        super.doRender();        
     }
 
     async doRefresh(note) {
@@ -69,6 +69,12 @@ export default class MindMapWidget extends TypeWidget {
                 this.spacedUpdate.scheduleUpdate();
             }
         });
+        
+        // If the note is displayed directly after a refresh, the scroll ends up at (0,0), making it difficult for the user to see.
+        // Adding an arbitrary wait until the element is attached to the DOM seems to do the trick for now.
+        setTimeout(() => {
+            mind.toCenter();
+        }, 200);
     }
 
     async getData() {
