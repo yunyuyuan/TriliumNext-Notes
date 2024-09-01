@@ -110,7 +110,7 @@ export default class MindMapWidget extends TypeWidget {
     }
 
     async exportSvgEvent({ntxId}) {
-        if (!this.isNoteContext(ntxId)) {
+        if (!this.isNoteContext(ntxId) || this.note.type !== "mindMap") {
             return;
         }
 

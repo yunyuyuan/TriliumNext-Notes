@@ -134,7 +134,7 @@ export default class MermaidWidget extends NoteContextAwareWidget {
     }
 
     async exportSvgEvent({ntxId}) {
-        if (!this.isNoteContext(ntxId)) {
+        if (!this.isNoteContext(ntxId) || this.note.type !== "mermaid") {
             return;
         }
 
