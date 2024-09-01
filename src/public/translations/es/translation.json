@@ -931,10 +931,10 @@
     "refresh": "Refrescar"
   },
   "consistency_checks": {
-    "title": "Comprobaciones de coherencia",
+    "title": "Comprobación de coherencia",
     "find_and_fix_button": "Buscar y solucionar problemas de coherencia",
-    "finding_and_fixing_message": "Encontrar y solucionar problemas de coherencia...",
-    "issues_fixed_message": "Los problemas de coherencia deben solucionarse."
+    "finding_and_fixing_message": "Buscando y solucionando problemas de coherencia...",
+    "issues_fixed_message": "Los problemas de coherencia han sido solucionados."
   },
   "database_anonymization": {
     "title": "Anonimización de bases de datos",
