@@ -33,14 +33,10 @@ export default class MindMapWidget extends TypeWidget {
                     el: this.$content[0],
                     direction: MindElixir.LEFT
                 });
-                mind.init(MindElixir.new("hello"));
+                mind.init(MindElixir.new());
             });
 
         super.doRender();
-    }
-
-    cleanup() {
-        this.$widget.empty();
     }
 
     async entitiesReloadedEvent({loadResults}) {
