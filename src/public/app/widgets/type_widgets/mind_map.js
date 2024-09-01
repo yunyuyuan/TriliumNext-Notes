@@ -24,37 +24,49 @@ export default class MindMapWidget extends TypeWidget {
 
     doRender() {
         this.$widget = $(TPL);
-        this.$content = this.$widget.find(".mind-map-container");
-
-        libraryLoader
-            .requireLibrary(libraryLoader.MIND_ELIXIR)
-            .then(() => {
-                this.#onLibraryLoaded();
-            });
+        this.$content = this.$widget.find(".mind-map-container");        
 
         super.doRender();
     }
 
-    #onLibraryLoaded() {
+    async doRefresh(note) {
+        if (this.triggeredByUserOperation) {
+            this.triggeredByUserOperation = false;
+            return;
+        }
+
+        if (!window.MindElixir) {
+            await libraryLoader.requireLibrary(libraryLoader.MIND_ELIXIR);
+            this.#initLibrary();
+        }
+
+        await this.#loadData(note);
+    }
+
+    cleanup() {
+        this.triggeredByUserOperation = false;
+    }
+
+    async #loadData(note) {
+        const blob = await note.getBlob();        
+        const content = blob.getJsonContent();
+        this.mind.refresh(content);
+    }
+
+    #initLibrary() {
         const mind = new MindElixir({
             el: this.$content[0],
             direction: MindElixir.LEFT
         });
+
         this.mind = mind;
         mind.init(MindElixir.new());
         mind.bus.addListener("operation", (operation) => {
-            this.spacedUpdate.scheduleUpdate();
+            this.triggeredByUserOperation = true;
+            if (operation.name !== "startEdit") {
+                this.spacedUpdate.scheduleUpdate();
+            }
         });
-    }
-
-    async doRefresh(note) {
-        if (!this.mind) {
-            return;
-        }
-
-        const blob = await note.getBlob();
-        const content = blob.getJsonContent();
-        this.mind.refresh(content);
     }
 
     async getData() {
