@@ -89,6 +89,7 @@ const copy = async () => {
     "node_modules/codemirror/addon/",
     "node_modules/codemirror/mode/",
     "node_modules/codemirror/keymap/",
+    "node_modules/mind-elixir/dist/"
   ];
 
   for (const folder of nodeModulesFolder) {
