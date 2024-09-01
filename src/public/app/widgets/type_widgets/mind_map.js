@@ -47,6 +47,16 @@ export default class MindMapWidget extends TypeWidget {
         });
     }
 
+    async doRefresh(note) {
+        if (!this.mind) {
+            return;
+        }
+
+        const blob = await note.getBlob();
+        const content = blob.getJsonContent();
+        this.mind.refresh(content);
+    }
+
     async getData() {
         const mind = this.mind;
         if (!mind) {
