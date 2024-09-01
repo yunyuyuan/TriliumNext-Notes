@@ -5,7 +5,7 @@ import UpdateAvailableWidget from "./update_available.js";
 import options from "../../services/options.js";
 
 const TPL = `
-<div class="dropdown global-menu dropright">
+<div class="dropdown global-menu dropend">
     <style>
     .global-menu {
         width: 53px;
@@ -102,10 +102,9 @@ const TPL = `
     }
     </style>    
 
-    <button type="button" data-toggle="dropdown" data-placement="right"
-            aria-haspopup="true" aria-expanded="false" 
-            class="icon-action global-menu-button" title="${t('global_menu.menu')}">
-        <svg viewBox="0 0 256 256">
+    <button type="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" class="icon-action global-menu-button">
+        <svg viewBox="0 0 256 256" data-bs-toggle="tooltip" title="${t('global_menu.menu')}">
             <g>
                 <path class="st0" d="m202.9 112.7c-22.5 16.1-54.5 12.8-74.9 6.3l14.8-11.8 14.1-11.3 49.1-39.3-51.2 35.9-14.3 10-14.9 10.5c0.7-21.2 7-49.9 28.6-65.4 1.8-1.3 3.9-2.6 6.1-3.8 2.7-1.5 5.7-2.9 8.8-4.1 27.1-11.1 68.5-15.3 85.2-9.5 0.1 16.2-15.9 45.4-33.9 65.9-2.4 2.8-4.9 5.4-7.4 7.8-3.4 3.5-6.8 6.4-10.1 8.8z"/>
                 <path class="st1" d="m213.1 104c-22.2 12.6-51.4 9.3-70.3 3.2l14.1-11.3 49.1-39.3-51.2 35.9-14.3 10c0.5-18.1 4.9-42.1 19.7-58.6 2.7-1.5 5.7-2.9 8.8-4.1 27.1-11.1 68.5-15.3 85.2-9.5 0.1 16.2-15.9 45.4-33.9 65.9-2.3 2.8-4.8 5.4-7.2 7.8z"/>
@@ -259,10 +258,9 @@ export default class GlobalMenuWidget extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
 
-        this.$dropdown = this.$widget.find("[data-toggle='dropdown']");
-        const $button = this.$widget.find(".global-menu-button");
-        $button.tooltip({ trigger: "hover" });
-        $button.on("click", () => $button.tooltip("hide"));
+        this.$dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find("[data-bs-toggle='dropdown']"));
+
+        this.$tooltip = new bootstrap.Tooltip(this.$widget.find("[data-bs-toggle='tooltip']"), { trigger: "hover" });
 
         this.$widget.find(".show-about-dialog-button").on('click', () => this.triggerCommand("openAboutDialog"));
 
@@ -278,8 +276,11 @@ export default class GlobalMenuWidget extends BasicWidget {
                 return;
             }
 
-            this.$dropdown.dropdown('toggle');
+            this.$dropdown.toggle();
         });
+        this.$widget.on('click', '.dropdown-submenu', e => {
+            e.stopPropagation();
+        })
 
         this.$widget.find(".global-menu-button-update-available").append(
             this.updateAvailableWidget.render()
@@ -292,7 +293,12 @@ export default class GlobalMenuWidget extends BasicWidget {
         }
 
         this.$zoomState = this.$widget.find(".zoom-state");
-        this.$widget.on('show.bs.dropdown', () => this.updateZoomState());
+        this.$widget.on('show.bs.dropdown', () => {
+            this.updateZoomState();
+            this.$tooltip.hide();
+            this.$tooltip.disable();
+        });
+        this.$widget.on('hide.bs.dropdown', () => this.$tooltip.enable());
 
         this.$widget.find(".zoom-buttons").on("click",
             // delay to wait for the actual zoom change
@@ -342,10 +348,10 @@ export default class GlobalMenuWidget extends BasicWidget {
     }
 
     activeContextChangedEvent() {
-        this.$dropdown.dropdown('hide');
+        this.$dropdown.hide();
     }
 
     noteSwitchedEvent() {
-        this.$dropdown.dropdown('hide');
+        this.$dropdown.hide();
     }
 }
