@@ -1117,7 +1117,10 @@
   },
   "i18n": {
     "title": "Localización",
-    "language": "Idioma"
+    "language": "Idioma",
+    "first-day-of-the-week": "Primer día de la semana",
+    "sunday": "Dominigo",
+    "monday": "Lunes"
   },
   "backup": {
     "automatic_backup": "Copia de seguridad automática",
