@@ -806,25 +806,25 @@
     "type": "Tip"
   },
   "note_launcher": {
-    "this_launcher_doesnt_define_target_note": ""
+    "this_launcher_doesnt_define_target_note": "Acesată scurtătură nu definește o notiță-destinație."
   },
   "note_map": {
-    "collapse": "",
-    "open_full": "",
-    "title": ""
+    "collapse": "Micșorează la dimensiunea normală",
+    "open_full": "Expandează la maximum",
+    "title": "Harta notițelor"
   },
   "note_paths": {
-    "archived": "",
-    "clone_button": "",
-    "intro_not_placed": "",
-    "intro_placed": "",
-    "outside_hoisted": "",
-    "search": "",
-    "title": ""
+    "archived": "Arhivat",
+    "clone_button": "Clonează notița într-o nouă locație...",
+    "intro_not_placed": "Notița n-a fost plasată încă în arborele de notițe.",
+    "intro_placed": "Notița este plasată în următoarele căi:",
+    "outside_hoisted": "Această cale se află în afara notiței focalizate și este necesară defocalizarea.",
+    "search": "Caută",
+    "title": "Căile notiței"
   },
   "note_properties": {
-    "info": "",
-    "this_note_was_originally_taken_from": ""
+    "info": "Informații",
+    "this_note_was_originally_taken_from": "Această notiță a fost preluată original de la:"
   },
   "note_type_chooser": {
     "dropdown_trigger": "",
