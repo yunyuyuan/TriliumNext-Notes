@@ -795,15 +795,15 @@
     "note_erasure_timeout_title": "Timpul de eliminare automată a notițelor șterse"
   },
   "note_info_widget": {
-    "calculate": "",
-    "created": "",
-    "modified": "",
-    "note_id": "",
-    "note_size": "",
-    "note_size_info": "",
-    "subtree_size": "",
-    "title": "",
-    "type": ""
+    "calculate": "calculează",
+    "created": "Creată la",
+    "modified": "Modificată la",
+    "note_id": "ID-ul notiței",
+    "note_size": "Dimensiunea notiței",
+    "note_size_info": "Dimensiunea notiței reprezintă o aproximare a cerințelor de stocare ale acestei notițe. Ia în considerare conținutul notiței dar și ale reviziilor sale.",
+    "subtree_size": "(dimensiunea sub-arborelui: {{size}} în {{count}} notițe)",
+    "title": "Informații despre notiță",
+    "type": "Tip"
   },
   "note_launcher": {
     "this_launcher_doesnt_define_target_note": ""
