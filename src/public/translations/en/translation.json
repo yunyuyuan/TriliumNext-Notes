@@ -470,8 +470,8 @@
     "to": "to",
     "target_parent_note": "target parent note",
     "on_all_matched_notes": "On all matched notes",
-    "move_note_new_parent": "move note to the new parent if note has only one parent (i.e. the old placement is removed and new placement into the new parent is created)",
-    "clone_note_new_parent": "clone note to the new parent if note has multiple clones/placements (it's not clear which placement should be removed)",
+    "move_note_new_parent": "move note to the new parent if note has only one parent (i.e. the old branch is removed and new branch into the new parent is created)",
+    "clone_note_new_parent": "clone note to the new parent if note has multiple clones/branches (it's not clear which branch should be removed)",
     "nothing_will_happen": "nothing will happen if note cannot be moved to the target note (i.e. this would create a tree cycle)"
   },
   "rename_note": {

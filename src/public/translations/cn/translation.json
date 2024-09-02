@@ -470,8 +470,8 @@
     "to": "到",
     "target_parent_note": "目标父笔记",
     "on_all_matched_notes": "对于所有匹配的笔记",
-    "move_note_new_parent": "如果笔记只有一个父笔记，则将其移动到新父笔记（即旧位置被移除，并创建到新父笔记的位置）",
-    "clone_note_new_parent": "如果笔记有多个克隆/位置，则将其克隆到新父笔记（不清楚应删除哪个位置）",
+    "move_note_new_parent": "",
+    "clone_note_new_parent": "",
     "nothing_will_happen": "如果笔记无法移动到目标笔记（即这会创建一个树循环），则不会发生任何事情"
   },
   "rename_note": {

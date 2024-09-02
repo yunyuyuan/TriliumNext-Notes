@@ -470,8 +470,8 @@
     "to": "a",
     "target_parent_note": "nota padre objetivo",
     "on_all_matched_notes": "En todas las notas coincidentes",
-    "move_note_new_parent": "mover la nota al nuevo padre si la nota tiene solo un padre (es decir, se elimina la ubicación anterior y se crea una nueva ubicación en el nuevo padre)",
-    "clone_note_new_parent": "clonar nota al nuevo padre si la nota tiene múltiples clones/ubicaciones (no está claro qué ubicación se debe eliminar)",
+    "move_note_new_parent": "",
+    "clone_note_new_parent": "",
     "nothing_will_happen": "No pasará nada si la nota no se puede mover a la nota de destino (es decir, esto crearía un ciclo de árbol)"
   },
   "rename_note": {
@@ -661,7 +661,7 @@
   "mobile_detail_menu": {
     "insert_child_note": "Insertar nota hijo",
     "delete_this_note": "Eliminar esta nota",
-    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePad}}'",
+    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePath}}'",
     "error_unrecognized_command": "Comando no reconocido {{command}}"
   },
   "basic_properties": {
