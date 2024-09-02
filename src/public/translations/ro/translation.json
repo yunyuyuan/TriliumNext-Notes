@@ -18,7 +18,7 @@
   },
   "add_label": {
     "add_label": "Adaugă etichetă",
-    "help_text": "Pe toate notițele găsite:",
+    "help_text": "Pentru toate notițele găsite:",
     "help_text_item1": "crează eticheta respectivă dacă notița nu are o astfel de etichetă",
     "help_text_item2": "sau schimbă valoarea unei etichete existente",
     "help_text_note": "Această metodă poate fi apelată și fără valoare, caz în care eticheta va fi atribuită notiței fără o valoare.",
@@ -1057,105 +1057,105 @@
     "title": "Motor de căutare"
   },
   "search_script": {
-    "description1": "",
-    "description2": "",
-    "example_code": "",
-    "example_title": "",
-    "note": "",
-    "placeholder": "",
-    "title": ""
+    "description1": "Scripturile de căutare permit definirea rezultatelor de căutare prin rularea unui script. Acest lucru oferă flexibilitatea maximă, atunci când căutarea obișnuită nu este suficientă.",
+    "description2": "Scriptul de căutare trebuie să fie de tipul „cod” și subtipul „JavaScript (backend)”. Scriptul trebuie să returneze un vector de ID-uri de notiță sau notițele propriu-zise.",
+    "example_code": "// 1. filtrăm rezultatele inițiale utilizând căutarea obișnuită\nconst candidateNotes = api.searchForNotes(\"#journal\"); \n\n// 2. aplicăm criteriile de căutare personalizate\nconst matchedNotes = candidateNotes\n    .filter(note => note.title.match(/[0-9]{1,2}\\. ?[0-9]{1,2}\\. ?[0-9]{4}/));\n\nreturn matchedNotes;",
+    "example_title": "Vedeți acest exemplu:",
+    "note": "De remarcat că nu se pot utiliza simultan atât caseta de căutare, cât și script-ul de căutare.",
+    "placeholder": "căutați notița după denumirea ei",
+    "title": "Script de căutare:"
   },
   "search_string": {
-    "also_see": "",
-    "complete_help": "",
-    "error": "",
-    "full_text_search": "",
-    "label_abc": "",
-    "label_date_created": "",
-    "label_rock_or_pop": "",
-    "label_rock_pop": "",
-    "label_year": "",
-    "label_year_comparison": "",
-    "placeholder": "",
-    "search_syntax": "",
-    "title_column": ""
+    "also_see": "vedeți și",
+    "complete_help": "informații complete despre sintaxa de căutare",
+    "error": "Eroare la căutare: {{error}}",
+    "full_text_search": "Introduceți orice text pentru a căuta în conținutul notițelor",
+    "label_abc": "reîntoarce notițele cu eticheta „abc”",
+    "label_date_created": "notițe create în ultima lună",
+    "label_rock_or_pop": "doar una din etichete trebuie să fie prezentă",
+    "label_rock_pop": "găsește notițe care au atât eticheta „rock”, cât și „pop”",
+    "label_year": "găsește notițe ce au eticheta „an” cu valoarea 2019",
+    "label_year_comparison": "comparații numerice (de asemenea >, >=, <).",
+    "placeholder": "cuvinte cheie pentru căutarea în conținut, #etichetă = valoare...",
+    "search_syntax": "Sintaxa de căutare",
+    "title_column": "Textul de căutat:"
   },
   "shortcuts": {
-    "action_name": "",
-    "confirm_reset": "",
-    "default_shortcuts": "",
-    "description": "",
-    "electron_documentation": "",
-    "keyboard_shortcuts": "",
-    "multiple_shortcuts": "",
-    "reload_app": "",
-    "set_all_to_default": "",
-    "shortcuts": "",
-    "type_text_to_filter": ""
+    "action_name": "Denumirea acțiunii",
+    "confirm_reset": "Confirmați resetarea tuturor scurtăturilor de la tastatură la valoriile implicite?",
+    "default_shortcuts": "Scurtături implicite",
+    "description": "Descriere",
+    "electron_documentation": "Vedeți <a href=\"https://www.electronjs.org/docs/latest/api/accelerator\">documentația Electron</a> pentru modificatorii disponibili și codurile pentru taste.",
+    "keyboard_shortcuts": "Scurtături de la tastatură",
+    "multiple_shortcuts": "Mai multe scurtături pentru aceeași acțiune pot fi separate prin virgulă.",
+    "reload_app": "Reîncărcați aplicația pentru a aplica modificările",
+    "set_all_to_default": "Setează toate scurtăturile la valorile implicite",
+    "shortcuts": "Scurtături",
+    "type_text_to_filter": "Scrieți un text pentru a filtra scurtăturile..."
   },
   "similar_notes": {
-    "no_similar_notes_found": "",
-    "title": ""
+    "no_similar_notes_found": "Nu s-a găsit nicio notiță similară.",
+    "title": "Notițe similare"
   },
   "sort_child_notes": {
-    "ascending": "",
-    "date_created": "",
-    "date_modified": "",
-    "descending": "",
-    "folders": "",
-    "natural_sort": "",
-    "natural_sort_language": "",
-    "sort": "",
-    "sort_children_by": "",
-    "sort_folders_at_top": "",
-    "sort_with_respect_to_different_character_sorting": "",
-    "sorting_criteria": "",
-    "sorting_direction": "",
-    "the_language_code_for_natural_sort": "",
-    "title": ""
+    "ascending": "ascendent",
+    "date_created": "data creării",
+    "date_modified": "data modificării",
+    "descending": "descendent",
+    "folders": "Dosare",
+    "natural_sort": "Ordonare naturală",
+    "natural_sort_language": "Limba pentru ordonare naturală",
+    "sort": "Ordonare",
+    "sort_children_by": "Ordonează subnotițele după...",
+    "sort_folders_at_top": "ordonează dosarele primele",
+    "sort_with_respect_to_different_character_sorting": "ordonează respectând regulile de sortare și clasificare diferite în funcție de limbă și regiune.",
+    "sorting_criteria": "Criterii de ordonare",
+    "sorting_direction": "Direcția de ordonare",
+    "the_language_code_for_natural_sort": "Codul limbii pentru ordonarea naturală, e.g. „zn-CN” pentru chineză.",
+    "title": "titlu"
   },
   "spellcheck": {
-    "available_language_codes_label": "",
-    "description": "",
-    "enable": "",
-    "language_code_label": "",
-    "language_code_placeholder": "",
-    "multiple_languages_info": "",
-    "title": ""
+    "available_language_codes_label": "Coduri de limbă disponibile:",
+    "description": "Aceste opțiuni se aplică doar pentru aplicația de desktop, navigatoarele web folosesc propriile corectoare ortografice. Repornirea aplicației este necesară după modificări.",
+    "enable": "Activează corectorul ortografic",
+    "language_code_label": "Codurile de limbă",
+    "language_code_placeholder": "de exemplu „en-US”, „de-AT”",
+    "multiple_languages_info": "Mai multe limbi pot fi separate prin virgulă, e.g. \"en-US, de-DE, cs\". Schimbările asupra setărilor corectorului ortografic vor fi aplicate după restartarea aplicației.",
+    "title": "Corector ortografic"
   },
   "sync": {
-    "fill_entity_changes_button": "",
-    "filling_entity_changes": "",
-    "force_full_sync_button": "",
-    "full_sync_triggered": "",
-    "sync_rows_filled_successfully": "",
-    "title": ""
+    "fill_entity_changes_button": "Completează înregistrările de schimbare ale entităților",
+    "filling_entity_changes": "Se completează înregistrările de schimbare ale entităților...",
+    "force_full_sync_button": "Forțează sincronizare completă",
+    "full_sync_triggered": "S-a activat o sincronizare completă",
+    "sync_rows_filled_successfully": "Rândurile de sincronizare s-au completat cu succes",
+    "title": "Sincronizare"
   },
   "sync_2": {
-    "config_title": "",
-    "handshake_failed": "",
-    "help": "",
-    "note": "",
-    "note_description": "",
-    "proxy_label": "",
-    "save": "",
-    "server_address": "",
-    "special_value_description": "",
-    "test_button": "",
-    "test_description": "",
-    "test_title": "",
-    "timeout": ""
+    "config_title": "Configurația sincronizării",
+    "handshake_failed": "Comunicarea cu serverul de sincronizare a eșuat, eroare: {{message}}",
+    "help": "Informații",
+    "note": "Notiță",
+    "note_description": "Dacă lăsați câmpul de proxy necompletat, proxy-ul de sistem va fi utilizat (se aplică doar pentru aplicația desktop).",
+    "proxy_label": "Server-ul proxy utilizat pentru sincronizare (opțional)",
+    "save": "Salvează",
+    "server_address": "Adresa instanței de server",
+    "special_value_description": "O altă valoare specială este <code>noproxy</code> ce ignoră proxy-ul de sistem și respectă <code>NODE_TLS_REJECT_UNAUTHORIZED</code>.",
+    "test_button": "Probează sincronizarea",
+    "test_description": "Această opțiune va testa conexiunea și comunicarea cu serverul de sincronizare. Dacă serverul de sincronizare nu este inițializat, acest lucru va rula și o sincronizare cu documentul local.",
+    "test_title": "Probează sincronizarea",
+    "timeout": "Timp limită de sincronizare (millisecunde)"
   },
   "table_of_contents": {
-    "description": "",
-    "disable_info": "",
-    "shortcut_info": "",
-    "title": ""
+    "description": "Tabela de conținut va apărea în notițele de tip text atunci când notița are un număr de titluri mai mare decât cel definit. Acest număr se poate personaliza:",
+    "disable_info": "De asemenea se poate dezactiva tabela de conținut setând o valoare foarte mare.",
+    "shortcut_info": "Se poate configura și o scurtatură pentru a comuta rapid vizibilitatea panoului din dreapta (inclusiv tabela de conținut) în Opțiuni -> Scurtături (denumirea „toggleRightPane”).",
+    "title": "Tabelă de conținut"
   },
   "text_auto_read_only_size": {
-    "description": "",
-    "label": "",
-    "title": ""
+    "description": "Marchează pragul în care o notiță de o anumită dimensiune va fi afișată în mod de citire (pentru motive de performanță).",
+    "label": "Pragul de dimensiune pentru setarea modului de citire automat (la notițe text)",
+    "title": "Pragul de mod de citire automat"
   },
   "theme": {
     "dark_theme": "Temă întunecată",
@@ -1166,49 +1166,49 @@
   },
   "toast": {
     "critical-error": {
-      "message": "",
-      "title": ""
+      "message": "O eroare critică a apărut ce previne pornirea aplicația de client:\n\n{{message}}\n\nAcest lucru este cauzat cel mai probabil de un script care a eșuat în mod neașteptat. Încercați rularea aplicației în modul de siguranță și ulterior remediați problema.",
+      "title": "Eroare critică"
     },
     "widget-error": {
-      "message": "",
-      "title": ""
+      "message": "Widget-ul intitulat „{{title}}” nu a putut fi inițializat din cauza:\n\n{{message}}",
+      "title": "Eroare la inițializarea unui widget"
     }
   },
   "tray": {
-    "enable_tray": "",
-    "title": ""
+    "enable_tray": "Activează system tray-ul (este necesară repornirea aplicației pentru a avea efect)",
+    "title": "Tray-ul de sistem"
   },
   "update_available": {
-    "update_available": ""
+    "update_available": "Actualizare disponibilă"
   },
   "update_label_value": {
-    "help_text": "",
-    "help_text_note": "",
-    "label_name_placeholder": "",
-    "label_name_title": "",
-    "new_value_placeholder": "",
-    "to_value": "",
-    "update_label_value": ""
+    "help_text": "Pentru toate notițele găsite, schimbă valoarea etichetei existente.",
+    "help_text_note": "Se poate apela această metodă și fără o valoare, caz în care eticheta va fi atribuită notiței fără o valoare.",
+    "label_name_placeholder": "denumirea etichetei",
+    "label_name_title": "Sunt permise doar caractere alfanumerice, underline și două puncte.",
+    "new_value_placeholder": "valoarea nouă",
+    "to_value": "la valoarea",
+    "update_label_value": "Actualizează valoarea etichetei"
   },
   "update_relation_target": {
-    "allowed_characters": "",
-    "change_target_note": "",
-    "create_given_relation": "",
-    "on_all_matched_notes": "",
-    "relation_name": "",
-    "target_note": "",
-    "to": "",
-    "update_relation": "",
-    "update_relation_target": ""
+    "allowed_characters": "Sunt permise doar caractere alfanumerice, underline și două puncte.",
+    "change_target_note": "sau schimbă notița-țintă a unei relații existente",
+    "create_given_relation": "crează relația dată dacă notița nu are încă una",
+    "on_all_matched_notes": "Pentru toate notițele găsite:",
+    "relation_name": "denumirea relației",
+    "target_note": "notița destinație",
+    "to": "la",
+    "update_relation": "Actualizează relația",
+    "update_relation_target": "Actualizează ținta relației"
   },
   "upload_attachments": {
-    "choose_files": "",
-    "files_will_be_uploaded": "",
-    "options": "",
-    "shrink_images": "",
-    "tooltip": "",
-    "upload": "",
-    "upload_attachments_to_note": ""
+    "choose_files": "Selectați fișierele",
+    "files_will_be_uploaded": "Fișierele vor fi încărcate ca atașamente în",
+    "options": "Opțuni",
+    "shrink_images": "Micșorează imaginile",
+    "tooltip": "Dacă această opțiune este bifată, Trilium va încerca micșorarea imaginilor încărcate prin scalarea și optimizarea lor, aspect ce va putea afecta calitatea imaginilor. Dacă nu este bifată, imaginile vor fi încărcate fără nicio schimbare.",
+    "upload": "Încărcare",
+    "upload_attachments_to_note": "Încarcă atașamentele la notiță"
   },
   "vacuum_database": {
     "button_text": "Compactează baza de date",
@@ -1218,27 +1218,30 @@
     "vacuuming_database": "Baza de date este în curs de compactare..."
   },
   "vim_key_bindings": {
-    "enable_vim_keybindings": "",
-    "use_vim_keybindings_in_code_notes": ""
+    "enable_vim_keybindings": "Activează combinațiile de taste Vim",
+    "use_vim_keybindings_in_code_notes": "Permite utilizarea combinațiilor de taste în stil Vim pentru notițeled e tip cod (fără modul ex)"
   },
   "web_view": {
-    "create_label": "",
-    "disclaimer": "",
-    "embed_websites": "",
-    "experimental_note": "",
-    "web_view": ""
+    "create_label": "Pentru a începe, creați o etichetă cu adresa URL de încorporat, e.g.  #webViewSrc=\"https://www.google.com\"",
+    "disclaimer": "Avertisment despre statutul experimental",
+    "embed_websites": "Notițele de tip „Vizualizare web” permit încorporarea site-urilor web în Trilium.",
+    "experimental_note": "„Vizualizare web” este un tip experimental de notiță, și poate fi înlăturat sau schimbat substanțial în viitor. De asemenea, Web View funcționeză doar în aplicația desktop.",
+    "web_view": "Vizualizare web"
   },
   "wrap_lines": {
-    "enable_line_wrap": "",
-    "wrap_lines_in_code_notes": ""
+    "enable_line_wrap": "Activează trecerea automată pe rândul următor (poate necesita o reîncărcare a interfeței pentru a avea efect)",
+    "wrap_lines_in_code_notes": "Trecerea automată pe rândul următor în notițe de cod"
   },
   "zoom_factor": {
     "description": "Zoom-ul poate fi controlat și prin intermediul scurtăturilor CTRL+- and CTRL+=.",
     "title": "Factorul de zoom (doar pentru versiunea desktop)"
   },
   "zpetne_odkazy": {
-    "backlink": "",
-    "backlinks": "",
+    "backlink": "{{count}} legături de retur",
+    "backlinks": "{{count}} legături de retur",
     "relation": "relație"
+  },
+  "svg_export_button": {
+    "button_title": "Exportă diagrama ca SVG"
   }
 }

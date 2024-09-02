@@ -254,7 +254,7 @@
     "preview_not_available": "Preview isn't available for this note type."
   },
   "sort_child_notes": {
-    "sort_children_by": "Sort children by ...",
+    "sort_children_by": "Sort children by...",
     "sorting_criteria": "Sorting criteria",
     "title": "title",
     "date_created": "date created",
@@ -849,7 +849,7 @@
   },
   "search_string": {
     "title_column": "Search string:",
-    "placeholder": "fulltext keywords, #tag = value ...",
+    "placeholder": "fulltext keywords, #tag = value...",
     "search_syntax": "Search syntax",
     "also_see": "also see",
     "complete_help": "complete help on search syntax",
@@ -1081,7 +1081,7 @@
     "save_button": "Save"
   },
   "tray": {
-    "title": "Tray",
+    "title": "System Tray",
     "enable_tray": "Enable tray (Trilium needs to be restarted for this change to take effect)"
   },
   "heading_style": {
