@@ -140,7 +140,7 @@ const DEFAULT_KEYBOARD_ACTIONS: KeyboardShortcut[] = [
         actionName: "editBranchPrefix",
         defaultShortcuts: ["F2"],
         description: "Show Edit branch prefix dialog",
-        scope: "window"
+        scope: "note-tree"
     },
     {
         actionName: "cloneNotesTo",
