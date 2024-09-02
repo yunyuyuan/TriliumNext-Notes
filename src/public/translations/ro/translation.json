@@ -772,27 +772,27 @@
     "network_connections_title": "Conexiuni la rețea"
   },
   "note_actions": {
-    "convert_into_attachment": "",
-    "delete_note": "",
-    "export_note": "",
-    "import_files": "",
-    "note_attachments": "",
-    "note_source": "",
-    "open_note_custom": "",
-    "open_note_externally": "",
-    "open_note_externally_title": "",
-    "print_note": "",
-    "re_render_note": "",
-    "save_revision": "",
-    "search_in_note": ""
+    "convert_into_attachment": "Convertește în atașament",
+    "delete_note": "Șterge notița",
+    "export_note": "Exportă notița",
+    "import_files": "Importă fișiere",
+    "note_attachments": "Atașamente notițe",
+    "note_source": "Sursa notiței",
+    "open_note_custom": "Deschide notiță personalizată",
+    "open_note_externally": "Deschide notița extern",
+    "open_note_externally_title": "Fișierul va fi deschis într-o aplicație externă și urmărită pentru modificări. Ulterior se va putea încărca versiunea modificată înapoi în Trilium.",
+    "print_note": "Imprimare notiță",
+    "re_render_note": "Reinterpretare notiță",
+    "save_revision": "Salvează revizia",
+    "search_in_note": "Caută în notiță"
   },
   "note_erasure_timeout": {
-    "deleted_notes_erased": "",
+    "deleted_notes_erased": "Notițele șterse au fost eliminate permanent.",
     "erase_deleted_notes_now": "Elimină notițele șterse acum",
-    "erase_notes_after_x_seconds": "",
-    "manual_erasing_description": "",
-    "note_erasure_description": "",
-    "note_erasure_timeout_title": ""
+    "erase_notes_after_x_seconds": "Elimină notițele șterse după X secunde",
+    "manual_erasing_description": "Se poate rula o eliminare manuală (fără a lua în considerare timpul definit mai sus):",
+    "note_erasure_description": "Notițele șterse (precum și atributele, reviziile) sunt prima oară doar marcate drept șterse și este posibil să fie recuperate din ecranul Notițe recente. După o perioadă de timp, notițele șterse vor fi „eliminate”, caz în care conținutul lor nu se poate recupera. Această setare permite configurarea duratei de timp dintre ștergerea și eliminarea notițelor.",
+    "note_erasure_timeout_title": "Timpul de eliminare automată a notițelor șterse"
   },
   "note_info_widget": {
     "calculate": "",
