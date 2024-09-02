@@ -210,7 +210,7 @@
   "password_not_set": {
     "title": "La contraseña no está establecida",
     "body1": "Las notas protegidas se cifran mediante una contraseña de usuario, pero la contraseña aún no se ha establecido.",
-    "body2": "Para poder proteger notas, dé clic <a class=\"open-password-options-button\" href=\"javascript:\">aquí</a> para abrir el diálogo de Opciones y establecer tu contraseña.</a>"
+    "body2": "Para poder proteger notas, dé clic <a class=\"open-password-options-button\" href=\"javascript:\">aquí</a> para abrir el diálogo de Opciones y establecer tu contraseña."
   },
   "prompt": {
     "title": "Aviso",
@@ -476,7 +476,7 @@
     "rename_note": "Renombrar nota",
     "rename_note_title_to": "Renombrar título de la nota a",
     "new_note_title": "nuevo título de nota",
-    "click_help_icon": "Haga clic en el icono de ayuda a la derecha para ver todas las opciones.",
+    "click_help_icon": "Haga clic en el icono de ayuda a la derecha para ver todas las opciones",
     "evaluated_as_js_string": "El valor dado se evalúa como una cadena de JavaScript y, por lo tanto, se puede enriquecer con contenido dinámico a través de la variable <code>note</code> inyectada (se cambia el nombre de la nota). Ejemplos:",
     "example_note": "<code>Nota</code>: todas las notas coincidentes son renombradas a 'Nota'",
     "example_new_title": "<code>NUEVO: ${note.title}</code> - los títulos de las notas coincidentes tienen el prefijo 'NUEVO: '",

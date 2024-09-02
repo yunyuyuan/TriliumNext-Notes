@@ -827,73 +827,73 @@
     "this_note_was_originally_taken_from": "Această notiță a fost preluată original de la:"
   },
   "note_type_chooser": {
-    "modal_body": "",
-    "modal_title": "",
-    "templates": ""
+    "modal_body": "Selectați tipul notiței/șablonul pentru noua notiță:",
+    "modal_title": "Selectați tipul notiței",
+    "templates": "Șabloane:"
   },
   "onclick_button": {
-    "no_click_handler": ""
+    "no_click_handler": "Butonul „{{componentId}}” nu are nicio acțiune la clic definită"
   },
   "options_widget": {
-    "options_change_saved": "",
-    "options_status": ""
+    "options_change_saved": "Schimbarea opțiunilor a fost înregistrată.",
+    "options_status": "Starea opțiunilor"
   },
   "order_by": {
     "asc": "Ascendent (implicit)",
-    "children_count": "",
-    "content_and_attachments_and_revisions_size": "",
-    "content_and_attachments_size": "",
-    "content_size": "",
-    "date_created": "",
-    "date_modified": "",
+    "children_count": "Numărul subnotițelor",
+    "content_and_attachments_and_revisions_size": "Dimensiunea conținutului notiței incluzând atașamentele și reviziile",
+    "content_and_attachments_size": "Dimensiunea conținutului notiței incluzând atașamente",
+    "content_size": "Dimensiunea conținutului notiței",
+    "date_created": "Data creării",
+    "date_modified": "Data ultimei modificări",
     "desc": "Descendent",
-    "order_by": "",
-    "owned_label_count": "",
-    "owned_relation_count": "",
-    "parent_count": "",
-    "random": "",
-    "relevancy": "",
-    "revision_count": "",
-    "target_relation_count": "",
-    "title": ""
+    "order_by": "Ordonează după",
+    "owned_label_count": "Numărul de etichete",
+    "owned_relation_count": "Numărul de relații",
+    "parent_count": "Numărul de clone",
+    "random": "Ordine aleatorie",
+    "relevancy": "Relevanță (implicit)",
+    "revision_count": "Numărul de revizii",
+    "target_relation_count": "Numărul de relații către notiță",
+    "title": "Titlu"
   },
   "owned_attribute_list": {
-    "owned_attributes": ""
+    "owned_attributes": "Atribute proprii"
   },
   "password": {
-    "alert_message": "",
-    "change_password": "",
-    "change_password_heading": "",
-    "for_more_info": "",
-    "heading": "",
-    "new_password": "",
-    "new_password_confirmation": "",
-    "old_password": "",
-    "password_changed_success": "",
-    "password_mismatch": "",
-    "protected_session_timeout": "",
-    "protected_session_timeout_description": "",
-    "protected_session_timeout_label": "",
-    "reset_confirmation": "",
-    "reset_link": "",
-    "reset_success_message": "",
-    "set_password": "",
-    "set_password_heading": "",
-    "wiki": ""
+    "alert_message": "Aveți grijă să nu uitați parola. Parola este utilizată pentru a accesa interfața web și pentru a cripta notițele protejate. Dacă uitați parola, toate notițele protejate se vor pierde pentru totdeauna.",
+    "change_password": "Schimbă parola",
+    "change_password_heading": "Schimbarea parolei",
+    "for_more_info": "pentru mai multe informații.",
+    "heading": "Parolă",
+    "new_password": "Parolă nouă",
+    "new_password_confirmation": "Confirmarea noii parole",
+    "old_password": "Parola veche",
+    "password_changed_success": "Parola a fost schimbată. Trilium se va reîncărca după apăsarea butonului OK.",
+    "password_mismatch": "Noile parole nu coincid.",
+    "protected_session_timeout": "Timpul de expirare a sesiunii protejate",
+    "protected_session_timeout_description": "Timpul de expirare a sesiunii protejate este o perioadă de timp după care sesiunea protejată este ștearsă din memoria navigatorului. Aceasta este măsurată de la timpul ultimei interacțiuni cu notițele protejate. Vezi",
+    "protected_session_timeout_label": "Timpul de expirare a sesiunii protejate (în secunde)",
+    "reset_confirmation": "Prin resetarea parolei se va pierde pentru totdeauna accesul la notițele protejate existente. Sigur doriți resetarea parolei?",
+    "reset_link": "click aici pentru a o reseta.",
+    "reset_success_message": "Parola a fost resetată. Setați o nouă parolă",
+    "set_password": "Setează parola",
+    "set_password_heading": "Schimbarea parolei",
+    "wiki": "wiki"
   },
   "password_not_set": {
-    "body1": "",
-    "body2": "",
-    "title": ""
+    "body1": "Notițele protejate sunt criptate utilizând parola de utilizator, dar nu a fost setată nicio parolă.",
+    "body2": "Pentru a putea să protejați notițe, clic <a class=\"open-password-options-button\" href=\"javascript:\">aici</a> pentru a deschide ecranul de opțiuni și pentru a seta parola.",
+    "title": "Parola nu este setată"
   },
   "promoted_attributes": {
-    "add_new_attribute": "",
-    "open_external_link": "",
-    "promoted_attributes": "",
-    "remove_this_attribute": "",
-    "unknown_attribute_type": "",
-    "unknown_label_type": "",
-    "url_placeholder": ""
+    "add_new_attribute": "Adaugă un nou atribut",
+    "open_external_link": "Deschide legătură externă",
+    "promoted_attributes": "Atribute promovate",
+    "remove_this_attribute": "Elimină acest atribut",
+    "unknown_attribute_type": "Tip de atribut necunoscut „{{type}}”",
+    "unknown_label_type": "Tip de etichetă necunoscut „{{type}}”",
+    "url_placeholder": "http://siteweb..."
   },
   "prompt": {
     "defaultTitle": "",
@@ -901,81 +901,81 @@
     "title": ""
   },
   "protected_session": {
-    "enter_password_instruction": "",
-    "start_session_button": ""
+    "enter_password_instruction": "Afișarea notițelor protejate necesită introducerea parolei:",
+    "start_session_button": "Deschide sesiunea protejată"
   },
   "protected_session_password": {
-    "close_label": "",
-    "form_label": "",
-    "help_title": "",
-    "modal_title": "",
-    "start_button": ""
+    "close_label": "Închide",
+    "form_label": "Pentru a putea continua cu acțiunea cerută este nevoie să fie pornită sesiunea protejată prin introducerea parolei:",
+    "help_title": "Informații despre notițe protejate",
+    "modal_title": "Sesiune protejată",
+    "start_button": "Pornește sesiunea protejată <kbd>enter</kbd>"
   },
   "protected_session_status": {
-    "active": "",
-    "inactive": ""
+    "active": "Sesiunea protejată este activă. Clic pentru a închide sesiunea protejată.",
+    "inactive": "Clic pentru a porni sesiunea protejată"
   },
   "recent_changes": {
-    "confirm_undelete": "",
-    "deleted_notes_message": "",
-    "erase_notes_button": "",
-    "no_changes_message": "",
-    "title": "",
-    "undelete_link": ""
+    "confirm_undelete": "Doriți să restaurați această notiță și subnotițele ei?",
+    "deleted_notes_message": "Notițele șterse au fost eliminate.",
+    "erase_notes_button": "Elimină notițele șterse",
+    "no_changes_message": "Încă nicio schimbare...",
+    "title": "Modificări recente",
+    "undelete_link": "restaurare"
   },
   "relation_map": {
-    "cannot_match_transform": "",
-    "click_on_canvas_to_place_new_note": "",
-    "confirm_remove_relation": "",
-    "connection_exists": "",
-    "default_new_note_title": "",
-    "edit_title": "",
-    "enter_new_title": "",
-    "enter_title_of_new_note": "",
-    "note_already_in_diagram": "",
-    "note_not_found": "",
-    "open_in_new_tab": "",
-    "remove_note": "",
-    "remove_relation": "",
-    "rename_note": "",
-    "specify_new_relation_name": "",
-    "start_dragging_relations": ""
+    "cannot_match_transform": "Nu s-a putut identifica transformarea: {{transform}}",
+    "click_on_canvas_to_place_new_note": "Clic pentru a plasa o nouă notiță",
+    "confirm_remove_relation": "Doriți ștergerea relației?",
+    "connection_exists": "Deja există conexiunea „{{name}}” dintre aceste notițe.",
+    "default_new_note_title": "notiță nouă",
+    "edit_title": "Editare titlu",
+    "enter_new_title": "Introduceți noul titlu:",
+    "enter_title_of_new_note": "Introduceți titlul noii notițe",
+    "note_already_in_diagram": "Notița „{{title}}” deja se află pe diagramă.",
+    "note_not_found": "Notița „{{noteId}}” nu a putut fi găsită!",
+    "open_in_new_tab": "Deschide într-un tab nou",
+    "remove_note": "Șterge notița",
+    "remove_relation": "Șterge relația",
+    "rename_note": "Redenumește notița",
+    "specify_new_relation_name": "Introduceți denumirea noii relații (caractere permise: alfanumerice, două puncte și underline):",
+    "start_dragging_relations": "Glisați relațiile de aici peste o altă notiță."
   },
   "relation_map_buttons": {
-    "create_child_note_title": "",
-    "reset_pan_zoom_title": "",
-    "zoom_in_title": "",
-    "zoom_out_title": ""
+    "create_child_note_title": "Crează o subnotiță și adaug-o în harta relațiilor",
+    "reset_pan_zoom_title": "Resetează poziția și zoom-ul la valorile implicite",
+    "zoom_in_title": "Mărire",
+    "zoom_out_title": "Micșorare"
   },
   "rename_label": {
-    "name_title": "",
-    "new_name_placeholder": "",
-    "old_name_placeholder": "",
-    "rename_label": "",
-    "rename_label_from": "",
-    "to": ""
+    "name_title": "Caracterele permise sunt alfanumerice, underline și două puncte.",
+    "new_name_placeholder": "noul nume",
+    "old_name_placeholder": "vechiul nume",
+    "rename_label": "Redenumește eticheta",
+    "rename_label_from": "Redenumește eticheta de la",
+    "to": "La"
   },
   "rename_note": {
-    "api_docs": "",
-    "click_help_icon": "",
-    "evaluated_as_js_string": "",
-    "example_date_prefix": "",
-    "example_new_title": "",
-    "example_note": "",
-    "new_note_title": "",
-    "rename_note": "",
-    "rename_note_title_to": ""
+    "api_docs": "Vedeți documentația API pentru <a href='https://zadam.github.io/trilium/backend_api/Note.html'>notițe</a> și <a href='https://day.js.org/docs/en/display/format'>proprietăților dateCreatedObj / utcDateCreatedObj</a> pentru detalii.",
+    "click_help_icon": "Clic pe iconița de ajutor din partea dreapta pentru a vedea toate opțiunile",
+    "evaluated_as_js_string": "Valoare introdusă este evaluată prin JavaScript și poate fi astfel îmbogățită cu conținut dinamic prin intermediul variabilei injectate <code>note</code> (notița ce este redenumită). Exemple:",
+    "example_date_prefix": "<code>${note.dateCreatedObj.format('MM-DD:')}: ${note.title}</code> - notițele găsite sunt prefixate cu luna și ziua creării notiței",
+    "example_new_title": "<code>NOU: ${note.title}</code> - notițele identificate sunt prefixate cu „NOU: ”",
+    "example_note": "<code>Notiță</code> - toate notițele identificate sunt redenumite în „Notiță”",
+    "new_note_title": "noul titlu al notiței",
+    "rename_note": "Redenumește notița",
+    "rename_note_title_to": "Redenumește notița în"
   },
   "rename_relation": {
-    "allowed_characters": "",
-    "new_name": "",
-    "old_name": "",
-    "rename_relation": "",
-    "rename_relation_from": "",
-    "to": ""
+    "allowed_characters": "Se permit caractere alfanumerice, underline și două puncte.",
+    "new_name": "noul nume",
+    "old_name": "vechiul nume",
+    "rename_relation": "Redenumește relația",
+    "rename_relation_from": "Redenumește relația din",
+    "to": "În"
   },
   "render": {
-    "note_detail_render_help_1": "",
+    "note_detail_render_help_1": "Această notă informativă este afișată deoarece această notiță de tip „Randare HTML” nu are relația necesară pentru a funcționa corespunzător.",
     "note_detail_render_help_2": ""
   },
   "revisions": {

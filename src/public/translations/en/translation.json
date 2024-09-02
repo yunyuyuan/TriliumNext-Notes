@@ -210,7 +210,7 @@
   "password_not_set": {
     "title": "Password is not set",
     "body1": "Protected notes are encrypted using a user password, but password has not been set yet.",
-    "body2": "To be able to protect notes, click <a class=\"open-password-options-button\" href=\"javascript:\">here</a> to open the Options dialog and set your password.</a>"
+    "body2": "To be able to protect notes, click <a class=\"open-password-options-button\" href=\"javascript:\">here</a> to open the Options dialog and set your password."
   },
   "prompt": {
     "title": "Prompt",
@@ -228,7 +228,7 @@
     "title": "Recent changes",
     "erase_notes_button": "Erase deleted notes now",
     "deleted_notes_message": "Deleted notes have been erased.",
-    "no_changes_message": "No changes yet ...",
+    "no_changes_message": "No changes yet...",
     "undelete_link": "undelete",
     "confirm_undelete": "Do you want to undelete this note and its sub-notes?"
   },
@@ -750,7 +750,7 @@
     "promoted_attributes": "Promoted Attributes",
     "url_placeholder": "http://website...",
     "open_external_link": "Open external link",
-    "unknown_label_type": "Unknown labelType '{{type}}'",
+    "unknown_label_type": "Unknown label type '{{type}}'",
     "unknown_attribute_type": "Unknown attribute type '{{type}}'",
     "add_new_attribute": "Add new attribute",
     "remove_this_attribute": "Remove this attribute"
