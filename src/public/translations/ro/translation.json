@@ -827,7 +827,6 @@
     "this_note_was_originally_taken_from": "Această notiță a fost preluată original de la:"
   },
   "note_type_chooser": {
-    "dropdown_trigger": "",
     "modal_body": "",
     "modal_title": "",
     "templates": ""
@@ -987,7 +986,6 @@
     "delete_all_revisions": "",
     "delete_button": "",
     "download_button": "",
-    "dropdown_trigger": "",
     "file_size": "",
     "help_title": "",
     "mime": "",

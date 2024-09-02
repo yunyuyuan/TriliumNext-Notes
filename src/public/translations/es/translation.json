@@ -205,7 +205,6 @@
   "note_type_chooser": {
     "modal_title": "Elija el tipo de nota",
     "modal_body": "Elija el tipo de nota/plantilla de la nueva nota:",
-    "dropdown_trigger": "Activador desplegable",
     "templates": "Plantillas:"
   },
   "password_not_set": {
@@ -238,7 +237,6 @@
     "delete_all_revisions": "Eliminar todas las revisiones de esta nota.",
     "delete_all_button": "Eliminar todas las revisiones",
     "help_title": "Ayuda sobre revisiones de notas",
-    "dropdown_trigger": "Activador desplegable",
     "revision_last_edited": "Esta revisión se editó por última vez en {{date}}",
     "confirm_delete_all": "¿Quiere eliminar todas las revisiones de esta nota? Esta acción borrará el título y el contenido de la revisión, pero aún conservará los metadatos de la revisión.",
     "no_revisions": "Aún no hay revisiones para esta nota...",

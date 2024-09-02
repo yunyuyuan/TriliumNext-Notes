@@ -205,7 +205,6 @@
   "note_type_chooser": {
     "modal_title": "选择笔记类型",
     "modal_body": "选择新笔记的类型或模板：",
-    "dropdown_trigger": "下拉触发",
     "templates": "模板:"
   },
   "password_not_set": {
@@ -238,7 +237,6 @@
     "delete_all_revisions": "删除此笔记的所有历史版本",
     "delete_all_button": "删除所有历史版本",
     "help_title": "关于笔记历史版本的帮助",
-    "dropdown_trigger": "下拉触发器",
     "revision_last_edited": "此历史版本上次编辑于 {{date}}",
     "confirm_delete_all": "您是否要删除此笔记的所有历史版本？此操作将擦除历史版本的标题和内容，但仍将保留历史版本的元数据。",
     "no_revisions": "此笔记暂无历史版本...",

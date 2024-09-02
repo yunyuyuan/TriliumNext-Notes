@@ -205,7 +205,6 @@
   "note_type_chooser": {
     "modal_title": "Choose note type",
     "modal_body": "Choose note type / template of the new note:",
-    "dropdown_trigger": "Dropdown trigger",
     "templates": "Templates:"
   },
   "password_not_set": {
@@ -238,7 +237,6 @@
     "delete_all_revisions": "Delete all revisions of this note",
     "delete_all_button": "Delete all revisions",
     "help_title": "Help on Note revisions",
-    "dropdown_trigger": "Dropdown trigger",
     "revision_last_edited": "This revision was last edited on {{date}}",
     "confirm_delete_all": "Do you want to delete all revisions of this note? This action will erase revision title and content, but still preserve revision metadata.",
     "no_revisions": "No revisions for this note yet...",

@@ -54,7 +54,7 @@ const TPL = `
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
                 <div class="dropdown">
-                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown">${t("revisions.dropdown_trigger")}</button>
+                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown"></button>
 
                     <div class="revision-list dropdown-menu" style="position: static; height: 100%; overflow: auto;"></div>
                 </div>
