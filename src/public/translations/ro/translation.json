@@ -687,112 +687,112 @@
     "textImportedAsText": "Importă HTML, Markdown și TXT ca notițe de tip text dacă este neclar din metainformații"
   },
   "include_archived_notes": {
-    "include_archived_notes": ""
+    "include_archived_notes": "Include notițele arhivate"
   },
   "include_note": {
-    "box_size_full": "",
-    "box_size_medium": "",
-    "box_size_prompt": "",
-    "box_size_small": "",
-    "button_include": "",
-    "dialog_title": "",
-    "label_note": "",
-    "placeholder_search": ""
+    "box_size_full": "complet (căsuța va afișa întregul text)",
+    "box_size_medium": "mediu (~ 30 de rânduri)",
+    "box_size_prompt": "Dimensiunea căsuței notiței incluse:",
+    "box_size_small": "mică (~ 10 rânduri)",
+    "button_include": "Include notița",
+    "dialog_title": "Includere notița",
+    "label_note": "Notiță",
+    "placeholder_search": "căutați notița după denumirea ei"
   },
   "info": {
-    "closeButton": "",
-    "modalTitle": "",
-    "okButton": ""
+    "closeButton": "Închide",
+    "modalTitle": "Mesaj informativ",
+    "okButton": "OK"
   },
   "inherited_attribute_list": {
-    "no_inherited_attributes": "",
-    "title": ""
+    "no_inherited_attributes": "Niciun atribut moștenit.",
+    "title": "Atribute moștenite"
   },
   "jump_to_note": {
-    "search_button": "",
-    "search_placeholder": ""
+    "search_button": "Caută în întregul conținut <kbd>Ctrl+Enter</kbd>",
+    "search_placeholder": "căutați o notiță după denumirea ei"
   },
   "left_pane_toggle": {
-    "hide_panel": "",
-    "show_panel": ""
+    "hide_panel": "Ascunde panoul",
+    "show_panel": "Afișează panoul"
   },
   "limit": {
     "limit": "Limită",
     "take_first_x_results": "Obține doar primele X rezultate."
   },
   "markdown_import": {
-    "dialog_title": "",
-    "import_button": "",
-    "import_success": "",
-    "modal_body_text": ""
+    "dialog_title": "Importă Markdown",
+    "import_button": "Importă Ctrl+Enter",
+    "import_success": "Conținutul Markdown a fost importat în document.",
+    "modal_body_text": "Din cauza limitărilor la nivel de navigator, nu este posibilă citirea clipboard-ului din JavaScript. Inserați Markdown-ul pentru a-l importa în caseta de mai jos și dați clic pe butonul Import"
   },
   "max_content_width": {
-    "apply_changes_description": "",
-    "default_description": "",
-    "max_width_label": "",
-    "reload_button": "",
-    "reload_description": "",
-    "title": ""
+    "apply_changes_description": "Pentru a aplica schimbările de lățime a conținutului, dați click pe",
+    "default_description": "În mod implicit Trilium limitează lățimea conținutului pentru a îmbunătăți lizibilitatea pentru ferestrele maximizate pe ecrane late.",
+    "max_width_label": "Lungimea maximă a conținutului în pixeli",
+    "reload_button": "reîncarcă interfața",
+    "reload_description": "schimbări din opțiunile de afișare",
+    "title": "Lățime conținut"
   },
   "mobile_detail_menu": {
-    "delete_this_note": "",
-    "error_cannot_get_branch_id": "",
-    "error_unrecognized_command": "",
-    "insert_child_note": ""
+    "delete_this_note": "Șterge această notiță",
+    "error_cannot_get_branch_id": "Nu s-a putut obține branchId-ul pentru calea „{{notePath}}”",
+    "error_unrecognized_command": "Comandă nerecunoscută „{{command}}”",
+    "insert_child_note": "Inserează subnotiță"
   },
   "move_note": {
-    "clone_note_new_parent": "",
-    "move_note": "",
-    "move_note_new_parent": "",
-    "nothing_will_happen": "",
-    "on_all_matched_notes": "",
-    "target_parent_note": "",
-    "to": ""
+    "clone_note_new_parent": "clonează notița la noul părinte dacă notița are mai multe clone/ramuri (când nu este clar care ramură trebuie ștearsă)",
+    "move_note": "Mută notița",
+    "move_note_new_parent": "mută notița în noul părinte dacă notița are unul singur (ramura veche este ștearsă și o ramură nouă este creată în noul părinte)",
+    "nothing_will_happen": "nu se va întampla nimic dacă notița nu poate fi mutată la notița destinație (deoarece s-ar crea un ciclu în arbore)",
+    "on_all_matched_notes": "Pentru toate notițele găsite",
+    "target_parent_note": "notița părinte destinație",
+    "to": "la"
   },
   "move_pane_button": {
-    "move_left": "",
-    "move_right": ""
+    "move_left": "Mută la stânga",
+    "move_right": "Mută la dreapta"
   },
   "move_to": {
-    "dialog_title": "",
-    "error_no_path": "",
-    "move_button": "",
-    "move_success_message": "",
-    "notes_to_move": "",
-    "search_placeholder": "",
-    "target_parent_note": ""
+    "dialog_title": "Mută notițele în...",
+    "error_no_path": "Nicio cale la care să poată fi mutate.",
+    "move_button": "Mută la notița selectată <kbd>enter</kbd>",
+    "move_success_message": "Notițele selectate au fost mutate în",
+    "notes_to_move": "Notițe de mutat",
+    "search_placeholder": "căutați notița după denumirea ei",
+    "target_parent_note": "Notița părinte destinație"
   },
   "native_title_bar": {
-    "disabled": "",
-    "enabled": "",
-    "title": ""
+    "disabled": "dezactivată",
+    "enabled": "activată",
+    "title": "Bară de titlu nativă (necesită repornirea aplicației)"
   },
   "network_connections": {
-    "check_for_updates": "",
-    "network_connections_title": ""
+    "check_for_updates": "Verifică automat pentru actualizări",
+    "network_connections_title": "Conexiuni la rețea"
   },
   "note_actions": {
-    "convert_into_attachment": "",
-    "delete_note": "",
-    "export_note": "",
-    "import_files": "",
-    "note_attachments": "",
-    "note_source": "",
-    "open_note_custom": "",
-    "open_note_externally": "",
-    "open_note_externally_title": "",
-    "print_note": "",
-    "re_render_note": "",
-    "save_revision": "",
-    "search_in_note": ""
+    "convert_into_attachment": "Convertește în atașament",
+    "delete_note": "Șterge notița",
+    "export_note": "Exportă notița",
+    "import_files": "Importă fișiere",
+    "note_attachments": "Atașamente notițe",
+    "note_source": "Sursa notiței",
+    "open_note_custom": "Deschide notiță personalizată",
+    "open_note_externally": "Deschide notița extern",
+    "open_note_externally_title": "Fișierul va fi deschis într-o aplicație externă și urmărită pentru modificări. Ulterior se va putea încărca versiunea modificată înapoi în Trilium.",
+    "print_note": "Imprimare notiță",
+    "re_render_note": "Reinterpretare notiță",
+    "save_revision": "Salvează revizia",
+    "search_in_note": "Caută în notiță"
   },
   "note_erasure_timeout": {
-    "deleted_notes_erased": "",
+    "deleted_notes_erased": "Notițele șterse au fost eliminate permanent.",
     "erase_deleted_notes_now": "Elimină notițele șterse acum",
-    "erase_notes_after_x_seconds": "",
-    "manual_erasing_description": "",
-    "note_erasure_description": "",
-    "note_erasure_timeout_title": ""
+    "erase_notes_after_x_seconds": "Elimină notițele șterse după X secunde",
+    "manual_erasing_description": "Se poate rula o eliminare manuală (fără a lua în considerare timpul definit mai sus):",
+    "note_erasure_description": "Notițele șterse (precum și atributele, reviziile) sunt prima oară doar marcate drept șterse și este posibil să fie recuperate din ecranul Notițe recente. După o perioadă de timp, notițele șterse vor fi „eliminate”, caz în care conținutul lor nu se poate recupera. Această setare permite configurarea duratei de timp dintre ștergerea și eliminarea notițelor.",
+    "note_erasure_timeout_title": "Timpul de eliminare automată a notițelor șterse"
   },
   "note_info_widget": {
     "calculate": "",

@@ -132,7 +132,7 @@
     "pasteNotes": "pegar notas como subnotas en la nota activa (que se puede mover o clonar dependiendo de si se copió o cortó en el portapapeles)",
     "deleteNotes": "eliminar nota/subárbol",
     "editingNotes": "Editando notas",
-    "editNoteTitle": "",
+    "editNoteTitle": "en el panel de árbol cambiará del panel de árbol al título de la nota. Ingresar desde el título de la nota cambiará el foco al editor de texto. <kbd>Ctrl+.</kbd> cambiará de nuevo del editor al panel de árbol",
     "createEditLink": "crear/editar enlace externo",
     "createInternalLink": "crear enlace interno",
     "followLink": "siga el enlace debajo del cursor",
@@ -470,8 +470,8 @@
     "to": "a",
     "target_parent_note": "nota padre objetivo",
     "on_all_matched_notes": "En todas las notas coincidentes",
-    "move_note_new_parent": "mover la nota al nuevo padre si la nota tiene solo un padre (es decir, se elimina la ubicación anterior y se crea una nueva ubicación en el nuevo padre)",
-    "clone_note_new_parent": "clonar nota al nuevo padre si la nota tiene múltiples clones/ubicaciones (no está claro qué ubicación se debe eliminar)",
+    "move_note_new_parent": "",
+    "clone_note_new_parent": "",
     "nothing_will_happen": "No pasará nada si la nota no se puede mover a la nota de destino (es decir, esto crearía un ciclo de árbol)"
   },
   "rename_note": {
@@ -661,7 +661,7 @@
   "mobile_detail_menu": {
     "insert_child_note": "Insertar nota hijo",
     "delete_this_note": "Eliminar esta nota",
-    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePad}}'",
+    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePath}}'",
     "error_unrecognized_command": "Comando no reconocido {{command}}"
   },
   "basic_properties": {
@@ -1092,11 +1092,11 @@
   "highlights_list": {
     "title": "Lista de aspectos destacados",
     "description": "Puede personalizar la lista de aspectos destacados que se muestra en el panel derecho:",
-    "bold": "",
-    "italic": "",
-    "underline": "",
-    "color": "",
-    "bg_color": "",
+    "bold": "Texto en negrita",
+    "italic": "Texto en cursiva",
+    "underline": "Texto subrayado",
+    "color": "Texto con color",
+    "bg_color": "Texto con color de fondo",
     "visibility_title": "Visibilidad de la lista de aspectos destacados",
     "visibility_description": "Puede ocultar el widget de aspectos destacados por nota agregando una etiqueta #hideHighlightWidget.",
     "shortcut_info": "Puede configurar un método abreviado de teclado para alternar rápidamente el panel derecho (incluidos los aspectos destacados) en Opciones -> Atajos (nombre 'toggleRightPane')."

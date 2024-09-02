@@ -1,6 +1,6 @@
 # TriliumNext Notes
 
-[English](https://github.com/TriliumNext/Notes/blob/master/README.md) | [Chinese](https://github.com/TriliumNext/Notes/blob/master/README-ZH_CN.md) | [Russian](https://github.com/TriliumNext/Notes/blob/master/README.ru.md) | [Japanese](https://github.com/TriliumNext/Notes/blob/master/README.ja.md) | [Italian](https://github.com/TriliumNext/Notes/blob/master/README.it.md)
+[English](https://github.com/TriliumNext/Notes/blob/master/README.md) | [Chinese](https://github.com/TriliumNext/Notes/blob/master/README-ZH_CN.md) | [Russian](https://github.com/TriliumNext/Notes/blob/master/README.ru.md) | [Japanese](https://github.com/TriliumNext/Notes/blob/master/README.ja.md) | [Italian](https://github.com/TriliumNext/Notes/blob/master/README.it.md) | [Spanish](https://github.com/TriliumNext/Notes/blob/master/README.es.md)
 
 TriliumNext Notes is an open-source, cross-platform hierarchical note taking application with focus on building large personal knowledge bases.
 
@@ -27,7 +27,7 @@ Feel free to join our official conversations. We would love to hear what feature
 
 ## 🎁 Features
 
-* Notes can be arranged into arbitrarily deep tree. Single note can be placed into multiple places in the tree (see [cloning](https://triliumnext.github.io/Docs/Wiki/cloning-notes)
+* Notes can be arranged into arbitrarily deep tree. Single note can be placed into multiple places in the tree (see [cloning](https://triliumnext.github.io/Docs/Wiki/cloning-notes))
 * Rich WYSIWYG note editing including e.g. tables, images and [math](https://triliumnext.github.io/Docs/Wiki/text-notes) with markdown [autoformat](https://triliumnext.github.io/Docs/Wiki/text-notes#autoformat)
 * Support for editing [notes with source code](https://triliumnext.github.io/Docs/Wiki/code-notes), including syntax highlighting
 * Fast and easy [navigation between notes](https://triliumnext.github.io/Docs/Wiki/note-navigation), full text search and [note hoisting](https://triliumnext.github.io/Docs/Wiki/note-hoisting)
@@ -83,7 +83,8 @@ You can also read [Patterns of personal knowledge base](https://triliumnext.gith
 ## 💻 Contribute
 
 Clone locally and run
-```
+
+```shell
 npm install
 npm run start-server
 ```
