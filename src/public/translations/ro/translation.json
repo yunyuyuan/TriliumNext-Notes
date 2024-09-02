@@ -509,7 +509,7 @@
     "opml_version_2": "OPML v2.0 - permite și HTML"
   },
   "fast_search": {
-    "description": "Căutarea rapidă dezactivează căutarea la nivel de conținut al notițelor cu scopul de a îmbunutăți performanța de căutare pentru baze de date mari.",
+    "description": "Căutarea rapidă dezactivează căutarea la nivel de conținut al notițelor cu scopul de a îmbunătăți performanța de căutare pentru baze de date mari.",
     "fast_search": "Căutare rapidă"
   },
   "file": {
@@ -896,9 +896,9 @@
     "url_placeholder": "http://siteweb..."
   },
   "prompt": {
-    "defaultTitle": "",
-    "ok": "",
-    "title": ""
+    "defaultTitle": "Aviz",
+    "ok": "OK <kbd>enter</kbd>",
+    "title": "Aviz"
   },
   "protected_session": {
     "enter_password_instruction": "Afișarea notițelor protejate necesită introducerea parolei:",
@@ -976,85 +976,85 @@
   },
   "render": {
     "note_detail_render_help_1": "Această notă informativă este afișată deoarece această notiță de tip „Randare HTML” nu are relația necesară pentru a funcționa corespunzător.",
-    "note_detail_render_help_2": ""
+    "note_detail_render_help_2": "Notița de tipul „Render HTML” este utilizată pentru <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/scripts.html\">scriptare</a>. Pe scurt, se folosește o notiță de tip cod HTML (opțional cu niște JavaScript) și această notiță o va randa. Pentru a funcționa, trebuie definită o <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/attributes.html\">relație</a> denumită „renderNote” ce indică notița HTML de randat."
   },
   "revisions": {
-    "confirm_delete": "",
-    "confirm_delete_all": "",
-    "confirm_restore": "",
-    "delete_all_button": "",
-    "delete_all_revisions": "",
-    "delete_button": "",
-    "download_button": "",
-    "file_size": "",
-    "help_title": "",
-    "mime": "",
-    "no_revisions": "",
-    "note_revisions": "",
-    "preview": "",
-    "preview_not_available": "",
-    "restore_button": "",
-    "revision_deleted": "",
-    "revision_last_edited": "",
-    "revision_restored": "",
-    "revisions_deleted": ""
+    "confirm_delete": "Doriți ștergerea acestei revizii? Această acțiune va șterge titlul reviziei și conținutul, dar va păstra metainformațiile.",
+    "confirm_delete_all": "Doriți ștergerea tuturor reviziilor acestei notițe? Acest lucru va șterge titlurile și conținuturile reviziilor, dar va păstra metainformațiile.",
+    "confirm_restore": "Doriți restaurarea acestei revizii? Acest lucru va suprascrie titlul și conținutul curent cu cele ale acestei revizii.",
+    "delete_all_button": "Șterge toate reviziile",
+    "delete_all_revisions": "Șterge toate reviziile acestei notițe",
+    "delete_button": "Șterge revizia",
+    "download_button": "Descarcă",
+    "file_size": "Dimensiune fișier:",
+    "help_title": "Informații despre reviziile notițelor",
+    "mime": "MIME:",
+    "no_revisions": "Nu există încă nicio revizie pentru această notiță...",
+    "note_revisions": "Revizii ale notiței",
+    "preview": "Previzualizare:",
+    "preview_not_available": "Nu este disponibilă o previzualizare pentru acest tip de notiță.",
+    "restore_button": "Restaurează revizia",
+    "revision_deleted": "Revizia notiței a fost ștearsă.",
+    "revision_last_edited": "Revizia a fost ultima oară modificată pe {{date}}",
+    "revision_restored": "Revizia notiței a fost restaurată.",
+    "revisions_deleted": "Notița reviziei a fost ștearsă."
   },
   "revisions_button": {
-    "note_revisions": ""
+    "note_revisions": "Revizii ale notiței"
   },
   "revisions_snapshot_interval": {
-    "note_revisions_snapshot_description": "",
-    "note_revisions_snapshot_interval_title": "",
-    "snapshot_time_interval_label": ""
+    "note_revisions_snapshot_description": "Intervalul de salvare a reviziilor este timpul în secunde după care se crează o nouă revizie a unei notițe. Vedeți <a href=\"https://triliumnext.github.io/Docs/Wiki/note-revisions.html\" class=\"external\">wiki-ul</a> pentru mai multe informații.",
+    "note_revisions_snapshot_interval_title": "Intervalul de salvare a reviziilor",
+    "snapshot_time_interval_label": "Intervalul de salvare a reviziilor (în secunde)"
   },
   "ribbon": {
-    "edited_notes_message": "",
-    "promoted_attributes_message": "",
-    "widgets": ""
+    "edited_notes_message": "Tab-ul panglicii „Notițe editate” se va deschide automat pentru notițele zilnice",
+    "promoted_attributes_message": "Tab-ul panglicii „Atribute promovate” se va deschide automat dacă pentru notița curentă există astfel de atribute",
+    "widgets": "Widget-uri ale panglicii"
   },
   "script_executor": {
-    "execute_query": "",
-    "execute_script": "",
-    "query": "",
-    "script": ""
+    "execute_query": "Execută interogarea",
+    "execute_script": "Execută scriptul",
+    "query": "Interogare",
+    "script": "Script"
   },
   "search_definition": {
-    "action": "",
-    "actions_executed": "",
-    "add_search_option": "",
-    "ancestor": "",
-    "debug": "",
-    "debug_description": "",
-    "enter": "",
-    "fast_search": "",
-    "fast_search_description": "",
-    "include_archived": "",
-    "include_archived_notes_description": "",
-    "limit": "",
-    "limit_description": "",
-    "order_by": "",
-    "save_to_note": "",
-    "search": "",
-    "search_execute": "",
-    "search_note_saved": "",
-    "search_parameters": "",
-    "search_script": "",
-    "search_string": "",
-    "unknown_search_option": ""
+    "action": "acțiune",
+    "actions_executed": "Acțiunile au fost executate.",
+    "add_search_option": "Adaugă opțiune de căutare:",
+    "ancestor": "ascendent",
+    "debug": "depanare",
+    "debug_description": "Modul de depanare va afișa informații adiționale în consolă pentru a ajuta la depanarea interogărilor complexe",
+    "enter": "enter",
+    "fast_search": "căutare rapidă",
+    "fast_search_description": "Căutarea rapidă dezactivează căutarea la nivel de conținut al notițelor cu scopul de a îmbunătăți performanța de căutare pentru baze de date mari.",
+    "include_archived": "include arhivate",
+    "include_archived_notes_description": "Notițele arhivate sunt excluse în mod implicit din rezultatele de căutare, această opțiune le include.",
+    "limit": "limită",
+    "limit_description": "Limitează numărul de rezultate",
+    "order_by": "ordonează după",
+    "save_to_note": "Salvează în notiță",
+    "search": "Căutare",
+    "search_execute": "Caută și execută acțiunile",
+    "search_note_saved": "Notița de căutare a fost salvată în {{- notePathTitle}}",
+    "search_parameters": "Parametrii de căutare",
+    "search_script": "script de căutare",
+    "search_string": "șir de căutat",
+    "unknown_search_option": "Opțiune de căutare necunoscută „{{searchOptionName}}”"
   },
   "search_engine": {
-    "baidu": "",
-    "bing": "",
-    "custom_name_label": "",
-    "custom_name_placeholder": "",
-    "custom_search_engine_info": "",
-    "custom_url_label": "",
-    "custom_url_placeholder": "",
-    "duckduckgo": "",
-    "google": "",
-    "predefined_templates_label": "",
-    "save_button": "",
-    "title": ""
+    "baidu": "Baidu",
+    "bing": "Bing",
+    "custom_name_label": "Denumirea motorului de căutare personalizat",
+    "custom_name_placeholder": "Personalizați denumirea motorului de căutare",
+    "custom_search_engine_info": "Un motor de căutare personalizat necesită un nume și un URL. Dacă aceastea nu sunt setate, atunci DuckDuckGo va fi folosit ca motor implicit.",
+    "custom_url_label": "URL-ul motorului de căutare trebuie să includă „{keyword}” ca substituent pentru termenul căutat.",
+    "custom_url_placeholder": "Personalizați URL-ul motorului de căutare",
+    "duckduckgo": "DuckDuckGo",
+    "google": "Google",
+    "predefined_templates_label": "Motoare de căutare predefinite",
+    "save_button": "Salvează",
+    "title": "Motor de căutare"
   },
   "search_script": {
     "description1": "",
