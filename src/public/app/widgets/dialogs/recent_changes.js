@@ -15,14 +15,12 @@ const TPL = `
     <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t('recent_changes.title')}</h5>
+                <h5 class="modal-title flex-grow-1">${t('recent_changes.title')}</h5>
                 
                 <button class="erase-deleted-notes-now-button btn btn-sm" style="padding: 0 10px">
                     ${t('recent_changes.erase_notes_button')}</button>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="recent-changes-content"></div>
@@ -34,6 +32,8 @@ const TPL = `
 export default class RecentChangesDialog extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
+        bootstrap.Modal.getOrCreateInstance(this.$widget);
+
         this.$content = this.$widget.find(".recent-changes-content");
         this.$eraseDeletedNotesNow = this.$widget.find(".erase-deleted-notes-now-button");
         this.$eraseDeletedNotesNow.on("click", () => {
@@ -45,7 +45,7 @@ export default class RecentChangesDialog extends BasicWidget {
         });
     }
 
-    async showRecentChangesEvent({ancestorNoteId}) {
+    async showRecentChangesEvent({ ancestorNoteId }) {
         this.ancestorNoteId = ancestorNoteId;
 
         await this.refresh();

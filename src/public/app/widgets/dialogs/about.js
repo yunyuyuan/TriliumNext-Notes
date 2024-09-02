@@ -4,12 +4,12 @@ import { t } from "../../services/i18n.js";
 import BasicWidget from "../basic_widget.js";
 
 const TPL = `
-<div class="about-dialog modal fade mx-auto" tabindex="-1">
-    <div class="modal-dialog modal-lg">
+<div class="about-dialog modal fade mx-auto" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">${t("about.title")}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-left: 0;" />
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-left: 0;"></button>
             </div>
             <div class="modal-body">
                 <table class="table table-borderless text-nowrap">

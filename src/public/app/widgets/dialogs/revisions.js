@@ -48,9 +48,7 @@ const TPL = `
 
                 <button class="help-button" type="button" data-help-page="note-revisions.html" title="${t("revisions.help_title")}">?</button>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
                 <div class="dropdown">
@@ -84,6 +82,8 @@ export default class RevisionsDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
+        bootstrap.Modal.getOrCreateInstance(this.$widget);
+
         this.$list = this.$widget.find(".revision-list");
         this.$listDropdown = this.$widget.find(".revision-list-dropdown");
         this.$content = this.$widget.find(".revision-content");
@@ -131,7 +131,7 @@ export default class RevisionsDialog extends BasicWidget {
         });
     }
 
-    async showRevisionsEvent({noteId = appContext.tabManager.getActiveContextNoteId()}) {
+    async showRevisionsEvent({ noteId = appContext.tabManager.getActiveContextNoteId() }) {
         utils.openDialog(this.$widget);
 
         await this.loadRevisions(noteId);
@@ -241,7 +241,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (this.$content.find('span.math-tex').length > 0) {
                 await libraryLoader.requireLibrary(libraryLoader.KATEX);
 
-                renderMathInElement(this.$content[0], {trust: true});
+                renderMathInElement(this.$content[0], { trust: true });
             }
         } else if (revisionItem.type === 'code') {
             this.$content.html($("<pre>").text(fullRevision.content));

@@ -123,7 +123,6 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
             if (note) {
                 appContext.tabManager.getActiveContext().setNote(note.noteId);
-                this.hideDropdown();
             }
             else {
                 toastService.showError(t("calendar.cannot_find_day_note"));

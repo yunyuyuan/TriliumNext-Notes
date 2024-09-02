@@ -397,45 +397,80 @@ table.promoted-attributes-in-tooltip td, table.promoted-attributes-in-tooltip th
     font-size: var(--main-font-size) !important;
 }
 
-.bs-tooltip-bottom .arrow::before { border-bottom-color: var(--main-border-color) !important; }
-.bs-tooltip-top .arrow::before    { border-top-color: var(--main-border-color) !important; }
-.bs-tooltip-left .arrow::before   { border-left-color: var(--main-border-color) !important; }
-.bs-tooltip-right .arrow::before  { border-right-color: var(--main-border-color) !important; }
-
-.bs-tooltip-bottom .arrow::after { border-bottom-color: var(--tooltip-background-color) !important; }
-.bs-tooltip-top .arrow::after    { border-top-color: var(--tooltip-background-color) !important; }
-.bs-tooltip-left .arrow::after   { border-left-color: var(--tooltip-background-color) !important; }
-.bs-tooltip-right .arrow::after  { border-right-color: var(--tooltip-background-color) !important; }
-
-.tooltip .arrow::after {
+.tooltip-trigger {
     position: absolute;
-    content: '';
-    border-color: transparent;
-    border-style: solid;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
 }
 
-.bs-tooltip-auto[x-placement^='left'] .arrow::after,
-.bs-tooltip-left .arrow::after {
+.bs-tooltip-bottom .tooltip-arrow::before { border-bottom-color: var(--main-border-color) !important; }
+.bs-tooltip-top .tooltip-arrow::before    { border-top-color: var(--main-border-color) !important; }
+.bs-tooltip-left .tooltip-arrow::before   { border-left-color: var(--main-border-color) !important; }
+.bs-tooltip-right .tooltip-arrow::before  { border-right-color: var(--main-border-color) !important; }
+
+.bs-tooltip-bottom .tooltip-arrow::after { border-bottom-color: var(--tooltip-background-color) !important; }
+.bs-tooltip-top .tooltip-arrow::after    { border-top-color: var(--tooltip-background-color) !important; }
+.bs-tooltip-left .tooltip-arrow::after   { border-left-color: var(--tooltip-background-color) !important; }
+.bs-tooltip-right .tooltip-arrow::after  { border-right-color: var(--tooltip-background-color) !important; }
+
+.bs-tooltip-auto[data-popper-placement^='left'] .tooltip-arrow::before,
+.bs-tooltip-left .tooltip-arrow::before {
     left: -1px;
     border-width: 0.4rem 0 0.4rem 0.4rem;
+    border-right-color: var(--main-border-color) !important;
 }
 
-.bs-tooltip-auto[x-placement^='bottom'] .arrow::after,
-.bs-tooltip-bottom .arrow::after {
+.bs-tooltip-auto[data-popper-placement^='bottom'] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
     bottom: -1px;
     border-width: 0 0.4rem 0.4rem;
+    border-right-color: var(--main-border-color) !important;
 }
 
-.bs-tooltip-auto[x-placement^='right'] .arrow::after,
-.bs-tooltip-right .arrow::after {
+.bs-tooltip-auto[data-popper-placement^='right'] .tooltip-arrow::before,
+.bs-tooltip-right .tooltip-arrow::before {
     right: -1px;
     border-width: 0.4rem 0.4rem 0.4rem 0;
+    border-right-color: var(--main-border-color) !important;
 }
 
-.bs-tooltip-auto[x-placement^='top'] .arrow::after,
-.bs-tooltip-top .arrow::after {
+.bs-tooltip-auto[data-popper-placement^='top'] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
     top: -1px;
     border-width: 0.4rem 0.4rem 0;
+    border-right-color: var(--main-border-color) !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^='left'] .tooltip-arrow::after,
+.bs-tooltip-left .tooltip-arrow::after {
+    left: -1px;
+    border-width: 0.4rem 0 0.4rem 0.4rem;
+    border-right-color: var(--tooltip-background-color) !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^='bottom'] .tooltip-arrow::after,
+.bs-tooltip-bottom .tooltip-arrow::after {
+    bottom: -1px;
+    border-width: 0 0.4rem 0.4rem;
+    border-right-color: var(--tooltip-background-color) !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^='right'] .tooltip-arrow::after,
+.bs-tooltip-right .tooltip-arrow::after {
+    right: -1px;
+    border-width: 0.4rem 0.4rem 0.4rem 0;
+    border-right-color: var(--tooltip-background-color) !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^='top'] .tooltip-arrow::after,
+.bs-tooltip-top .tooltip-arrow::after {
+    top: -1px;
+    border-width: 0.4rem 0.4rem 0;
+    border-right-color: var(--tooltip-background-color) !important;
 }
 
 .note-tooltip.tooltip .arrow {
@@ -667,7 +702,7 @@ a.external:not(.no-arrow):after, a[href^="http://"]:not(.no-arrow):after, a[href
 }
 
 .modal-header {
-    padding: 0.7rem 1rem 0 1rem !important; /* make modal header padding slightly smaller */
+    padding: 0.5rem 1rem 0.5rem 1rem !important; /* make modal header padding slightly smaller */
 }
 
 #toast-container {
@@ -1092,7 +1127,6 @@ textarea {
 
 .jump-to-note-dialog .modal-header {
     align-items: center;
-    padding-bottom: 1rem !important;
 }
 
 .jump-to-note-dialog .modal-body {

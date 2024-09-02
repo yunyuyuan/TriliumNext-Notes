@@ -258,9 +258,9 @@ export default class GlobalMenuWidget extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
 
-        this.$dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find("[data-bs-toggle='dropdown']"));
+        this.dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find("[data-bs-toggle='dropdown']"));
 
-        this.$tooltip = new bootstrap.Tooltip(this.$widget.find("[data-bs-toggle='tooltip']"), { trigger: "hover" });
+        this.tooltip = new bootstrap.Tooltip(this.$widget.find("[data-bs-toggle='tooltip']"), { trigger: "hover" });
 
         this.$widget.find(".show-about-dialog-button").on('click', () => this.triggerCommand("openAboutDialog"));
 
@@ -276,7 +276,7 @@ export default class GlobalMenuWidget extends BasicWidget {
                 return;
             }
 
-            this.$dropdown.toggle();
+            this.dropdown.toggle();
         });
         this.$widget.on('click', '.dropdown-submenu', e => {
             e.stopPropagation();
@@ -295,10 +295,10 @@ export default class GlobalMenuWidget extends BasicWidget {
         this.$zoomState = this.$widget.find(".zoom-state");
         this.$widget.on('show.bs.dropdown', () => {
             this.updateZoomState();
-            this.$tooltip.hide();
-            this.$tooltip.disable();
+            this.tooltip.hide();
+            this.tooltip.disable();
         });
-        this.$widget.on('hide.bs.dropdown', () => this.$tooltip.enable());
+        this.$widget.on('hide.bs.dropdown', () => this.tooltip.enable());
 
         this.$widget.find(".zoom-buttons").on("click",
             // delay to wait for the actual zoom change
@@ -348,10 +348,10 @@ export default class GlobalMenuWidget extends BasicWidget {
     }
 
     activeContextChangedEvent() {
-        this.$dropdown.hide();
+        this.dropdown.hide();
     }
 
     noteSwitchedEvent() {
-        this.$dropdown.hide();
+        this.dropdown.hide();
     }
 }
