@@ -198,7 +198,7 @@
   },
   "markdown_import": {
     "dialog_title": "Markdown 导入",
-    "modal_body_text": "由于浏览器沙箱的限制，无法直接从 JavaScript 读取剪贴板内容。请将要导入的 Markdown 文本粘贴到下面的文本框中，然后点击导入按钮。",
+    "modal_body_text": "由于浏览器沙箱的限制，无法直接从 JavaScript 读取剪贴板内容。请将要导入的 Markdown 文本粘贴到下面的文本框中，然后点击导入按钮",
     "import_button": "导入 Ctrl+回车",
     "import_success": "Markdown 内容已成功导入文档。"
   },
