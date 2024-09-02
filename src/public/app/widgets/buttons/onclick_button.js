@@ -7,7 +7,6 @@ export default class OnClickButtonWidget extends AbstractButtonWidget {
 
         if (this.settings.onClick) {
             this.$widget.on("click", e => {
-                e.stopPropagation();
                 this.$widget.tooltip("hide");
 
                 this.settings.onClick(this, e);
