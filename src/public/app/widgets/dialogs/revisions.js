@@ -274,7 +274,7 @@ export default class RevisionsDialog extends BasicWidget {
             }
 
             this.$content.html($table);
-        } else if (revisionItem.type === 'canvas') {
+        } else if ([ "canvas", "mindMap" ].includes(revisionItem.type)) {
             const encodedTitle = encodeURIComponent(revisionItem.title);
 
             this.$content.html($("<img>")
