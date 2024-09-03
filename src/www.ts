@@ -144,7 +144,17 @@ function startHttpServer() {
         }
 
         if (utils.isElectron()) {
-            import("electron").then(({ dialog }) => {
+            import("electron").then(({ app, dialog }) => {
+                // Not all situations require showing an error dialog. When Trilium is already open,
+                // clicking the shortcut, the software icon, or the taskbar icon, or when creating a new window, 
+                // should simply focus on the existing window or open a new one, without displaying an error message.
+                if ("code" in error && error.code == 'EADDRINUSE') {
+                    const isNewWindow = process.argv.includes('--new-window');
+                    if (isNewWindow || !app.requestSingleInstanceLock()) {
+                        console.error(message);
+                        process.exit(1);
+                    }
+                }
                 dialog.showErrorBox("Error while initializing the server", message);
                 process.exit(1);
             });
