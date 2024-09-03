@@ -473,7 +473,7 @@ table.promoted-attributes-in-tooltip td, table.promoted-attributes-in-tooltip th
     border-top-color: var(--tooltip-background-color) !important;
 }
 
-.note-tooltip.tooltip .arrow {
+.note-tooltip.tooltip .tooltip-arrow {
     display: none;
 }
 
