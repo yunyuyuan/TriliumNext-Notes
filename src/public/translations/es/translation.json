@@ -645,6 +645,9 @@
   "hide_floating_buttons_button": {
     "button_title": "Ocultar botones"
   },
+  "svg_export_button": {
+    "button_title": "Exportar diagrama como SVG"
+  },
   "relation_map_buttons": {
     "create_child_note_title": "Crear una nueva nota hijo y agregarla a este mapa de relaciones",
     "reset_pan_zoom_title": "Restablecer la panorámica y el zoom a las coordenadas y ampliación iniciales",
@@ -1078,7 +1081,7 @@
     "save_button": "Guardar"
   },
   "tray": {
-    "title": "Bandeja",
+    "title": "Bandeja de sistema",
     "enable_tray": "Habilitar bandeja (es necesario reiniciar Trilium para que este cambio surta efecto)"
   },
   "heading_style": {

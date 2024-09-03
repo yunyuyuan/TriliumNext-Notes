@@ -18,7 +18,7 @@ No hay pasos de migración especiales para migrar de una instancia de zadam/Tril
 
 ## 💬 Discuta con nosotros
 
-Siéntase libre de unirse a nuestras conversaciones oficiales. ¡Nos encantaría escuchar de las características, sugerencias o problemas pueda tener!
+Siéntase libre de unirse a nuestras conversaciones oficiales. ¡Nos encantaría escuchar de las características, sugerencias o problemas que pueda tener!
 
 - [Matrix](https://matrix.to/#/#triliumnext:matrix.org) (Para discusiones síncronas)
   - La sala `General` es replicada a [XMPP](xmpp:discuss@trilium.thisgreat.party?join)
