@@ -23,17 +23,17 @@ const TPL = `
     <div class="modal-dialog" style="max-width: 500px;" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t("note_type_chooser.modal_title")}</h5>
+                <h5 class="modal-title me-auto">${t("note_type_chooser.modal_title")}</h5>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;"></button>
             </div>
             <div class="modal-body">
                 ${t("note_type_chooser.modal_body")}
 
-                <div class="dropdown">
-                    <button class="note-type-dropdown-trigger" type="button" style="display: none;" data-toggle="dropdown"></button>
+                <div class="dropdown" style="display: flex;">
+                    <button class="note-type-dropdown-trigger" type="button" style="display: none;"
+                            data-bs-toggle="dropdown" data-bs-display="static">
+                    </button>
 
                     <div class="note-type-dropdown dropdown-menu"></div>
                 </div>
@@ -53,13 +53,14 @@ export default class NoteTypeChooserDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
+
         this.$noteTypeDropdown = this.$widget.find(".note-type-dropdown");
-        this.$noteTypeDropdownTrigger = this.$widget.find(".note-type-dropdown-trigger");
-        this.$noteTypeDropdownTrigger.dropdown();
+        this.dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find(".note-type-dropdown-trigger"));
 
         this.$widget.on("hidden.bs.modal", () => {
             if (this.resolve) {
-                this.resolve({success: false});
+                this.resolve({ success: false });
             }
 
             if (this.$originalFocused) {
@@ -94,7 +95,7 @@ export default class NoteTypeChooserDialog extends BasicWidget {
         });
     }
 
-    async chooseNoteTypeEvent({callback}) {
+    async chooseNoteTypeEvent({ callback }) {
         this.$originalFocused = $(':focus');
 
         const noteTypes = await noteTypesService.getNoteTypeItems();
@@ -116,11 +117,11 @@ export default class NoteTypeChooserDialog extends BasicWidget {
             }
         }
 
-        this.$noteTypeDropdownTrigger.dropdown('show');
+        this.dropdown.show();
 
         this.$originalDialog = glob.activeDialog;
-        glob.activeDialog = this.$widget;
-        this.$widget.modal();
+        glob.activeDialog = this.modal;
+        this.modal.show();
 
         this.$noteTypeDropdown.find(".dropdown-item:first").focus();
 
@@ -139,6 +140,6 @@ export default class NoteTypeChooserDialog extends BasicWidget {
         });
         this.resolve = null;
 
-        this.$widget.modal("hide");
+        this.modal.hide();
     }
 }

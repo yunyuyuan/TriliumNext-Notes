@@ -9,13 +9,11 @@ const TPL = `
     <div class="modal-dialog modal-lg" style="max-width: 1000px" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t('add_link.add_link')}</h5>
+                <h5 class="modal-title me-auto">${t('add_link.add_link')}</h5>
 
                 <button type="button" class="help-button" title="${t('add_link.help_on_links')}" data-help-page="links.html">?</button>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="${t('add_link.close')}" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="${t('add_link.close')}" style="margin-left: 0 !important;"></button>
             </div>
             <form class="add-link-form">
                 <div class="modal-body">
@@ -62,6 +60,8 @@ const TPL = `
 export default class AddLinkDialog extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
+        bootstrap.Modal.getOrCreateInstance(this.$widget);
+
         this.$form = this.$widget.find(".add-link-form");
         this.$autoComplete = this.$widget.find(".add-link-note-autocomplete");
         this.$linkTitle = this.$widget.find(".link-title");

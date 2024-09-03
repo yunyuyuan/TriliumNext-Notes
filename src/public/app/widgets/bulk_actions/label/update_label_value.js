@@ -21,11 +21,11 @@ const TPL = `
     </td>
     <td class="button-column">
         <div class="dropdown help-dropdown">
-            <span class="bx bx-help-circle icon-action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+            <span class="bx bx-help-circle icon-action" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
             <div class="dropdown-menu dropdown-menu-right p-4">
                 <p>${t("update_label_value.help_text")}</p>
                 
-                <p>${t("update_label_value.help_text_note")}</p>
+                ${t("update_label_value.help_text_note")}
             </div> 
         </div>
     

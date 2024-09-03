@@ -18,11 +18,11 @@ const TPL = `
     </td>
     <td class="button-column">
         <div class="dropdown help-dropdown">
-            <span class="bx bx-help-circle icon-action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+            <span class="bx bx-help-circle icon-action" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
             <div class="dropdown-menu dropdown-menu-right p-4">
                 <p>${t('move_note.on_all_matched_notes')}:</p>
                 
-                <ul>
+                <ul style="margin-bottom: 0;">
                     <li>${t('move_note.move_note_new_parent')}</li>
                     <li>${t('move_note.clone_note_new_parent')}</li>
                     <li>${t('move_note.nothing_will_happen')}</li>

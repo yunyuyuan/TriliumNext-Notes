@@ -40,18 +40,14 @@ const TPL = `
             <div class="modal-header">
                 <h5 class="modal-title mr-auto">${t('bulk_actions.bulk_actions')}</h5>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="${t('bulk_actions.close')}">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="${t('bulk_actions.close')}"></button>
             </div>
             <div class="modal-body">
                 <h4>${t('bulk_actions.affected_notes')}: <span class="affected-note-count">0</span></h4>
 
                 <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="include-descendants form-check-input" type="checkbox" value="">
-                        ${t('bulk_actions.include_descendants')}
-                    </label>
+                    <input class="include-descendants form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">${t('bulk_actions.include_descendants')}</label>
                 </div>
 
                 <h4>${t('bulk_actions.available_actions')}</h4>
@@ -72,6 +68,7 @@ const TPL = `
 export default class BulkActionsDialog extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
+        bootstrap.Modal.getOrCreateInstance(this.$widget);
 
         this.$includeDescendants = this.$widget.find(".include-descendants");
         this.$includeDescendants.on("change", () => this.refresh());

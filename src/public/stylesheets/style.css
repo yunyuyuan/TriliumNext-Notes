@@ -881,7 +881,7 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
     background-color: inherit;
 }
 
-[data-toggle="tooltip"]:not(.button-widget) span {
+[data-bs-toggle="tooltip"]:not(.button-widget) span {
     padding-bottom: 0;
     border-bottom: 1px dotted;
 }
