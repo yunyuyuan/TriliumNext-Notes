@@ -14,7 +14,7 @@ const TPL_ELECTRON = `
 <div class="options-section">
     <h4>${t('spellcheck.title')}</h4>
 
-    <p>App restart is required after change.</p>
+    <p>${t("spellcheck.restart-required")}</p>
 
     <label>
         <input type="checkbox" class="spell-check-enabled">
