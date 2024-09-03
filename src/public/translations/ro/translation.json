@@ -38,7 +38,7 @@
     "search_note": "căutați notița după nume"
   },
   "add_relation": {
-    "add_relation": "Adăugare relație",
+    "add_relation": "Adaugă relație",
     "allowed_characters": "Sunt permise doar caractere alfanumerice, underline și două puncte.",
     "create_relation_on_all_matched_notes": "Crează relația pentru toate notițele găsite",
     "relation_name": "denumirea relației",
@@ -50,8 +50,8 @@
     "depth_eq": "exact {{count}}",
     "depth_gt": "mai mare decât {{count}}",
     "depth_label": "adâncime",
-    "depth_lt": "mai puțin de {{depth}}",
-    "direct_children": "copil direct",
+    "depth_lt": "mai puțin de {{count}}",
+    "direct_children": "subnotiță directă",
     "label": "Părinte",
     "placeholder": "căutați notița după nume"
   },
