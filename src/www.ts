@@ -59,9 +59,11 @@ async function startTrilium() {
 
     log.info(JSON.stringify(appInfo, null, 2));
 
+    // for perf. issues it's good to know the rough configuration
     const cpuInfos = (await import('os')).cpus();
     if (cpuInfos && cpuInfos[0] !== undefined) { // https://github.com/zadam/trilium/pull/3957
-        log.info(`CPU model: ${cpuInfos[0].model}, logical cores: ${cpuInfos.length} freq: ${cpuInfos[0].speed} Mhz`); // for perf. issues it's good to know the rough configuration
+        const cpuModel = (cpuInfos[0].model || "").trimEnd();
+        log.info(`CPU model: ${cpuModel}, logical cores: ${cpuInfos.length}, freq: ${cpuInfos[0].speed} Mhz`);
     }
 
     const httpServer = startHttpServer();
