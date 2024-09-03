@@ -8,13 +8,10 @@ const TPL = `
         <div class="modal-content">
             <form class="prompt-dialog-form">
                 <div class="modal-header">
-                    <h5 class="prompt-title modal-title mr-auto">${t("prompt.title")}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="prompt-title modal-title">${t("prompt.title")}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                </div>
+                <div class="modal-body"></div>
                 <div class="modal-footer">
                     <button class="prompt-dialog-ok-button btn btn-primary btn-sm">${t("prompt.ok")}</button>
                 </div>
@@ -33,6 +30,7 @@ export default class PromptDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
         this.$dialogBody = this.$widget.find(".modal-body");
         this.$form = this.$widget.find(".prompt-dialog-form");
         this.$question = null;
@@ -61,7 +59,7 @@ export default class PromptDialog extends BasicWidget {
             e.preventDefault();
             this.resolve(this.$answer.val());
 
-            this.$widget.modal('hide');
+            this.modal.hide();
         });
     }
 

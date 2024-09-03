@@ -23,9 +23,8 @@ const TPL = `
     <div class="modal-dialog" style="max-width: 500px;" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title me-auto">${t("note_type_chooser.modal_title")}</h5>
-
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;"></button>
+                <h5 class="modal-title">${t("note_type_chooser.modal_title")}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 ${t("note_type_chooser.modal_body")}

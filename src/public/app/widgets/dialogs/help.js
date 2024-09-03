@@ -7,7 +7,7 @@ const TPL = `
     <div class="modal-dialog" role="document" style="min-width: 100%; height: 100%; margin: 0;">
         <div class="modal-content" style="height: auto;">
             <div class="modal-header">
-                <h5 class="modal-title me-auto">${t('help.fullDocumentation')}</h5>
+                <h5 class="modal-title">${t('help.fullDocumentation')}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="${t('help.close')}"></button>
             </div>
             <div class="modal-body" style="overflow: auto; height: calc(100vh - 70px);">
@@ -152,7 +152,6 @@ const TPL = `
 export default class HelpDialog extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
-        bootstrap.Modal.getOrCreateInstance(this.$widget);
     }
 
     showHelpEvent() {

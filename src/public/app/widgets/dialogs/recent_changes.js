@@ -16,10 +16,7 @@ const TPL = `
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title flex-grow-1">${t('recent_changes.title')}</h5>
-                
-                <button class="erase-deleted-notes-now-button btn btn-sm" style="padding: 0 10px">
-                    ${t('recent_changes.erase_notes_button')}</button>
-                
+                <button class="erase-deleted-notes-now-button btn btn-sm" style="padding: 0 10px">${t('recent_changes.erase_notes_button')}</button>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -32,7 +29,7 @@ const TPL = `
 export default class RecentChangesDialog extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
-        bootstrap.Modal.getOrCreateInstance(this.$widget);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
 
         this.$content = this.$widget.find(".recent-changes-content");
         this.$eraseDeletedNotesNow = this.$widget.find(".erase-deleted-notes-now-button");
@@ -93,7 +90,7 @@ export default class RecentChangesDialog extends BasicWidget {
                                 if (await dialogService.confirm(text)) {
                                     await server.put(`notes/${change.noteId}/undelete`);
 
-                                    this.$widget.modal('hide');
+                                    this.modal.hide();
 
                                     await ws.waitForMaxKnownEntityChangeId();
 

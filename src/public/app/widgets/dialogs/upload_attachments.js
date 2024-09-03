@@ -47,7 +47,7 @@ export default class UploadAttachmentsDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
-        bootstrap.Modal.getOrCreateInstance(this.$widget);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
 
         this.$form = this.$widget.find(".upload-attachment-form");
         this.$noteTitle = this.$widget.find(".upload-attachment-note-title");
@@ -96,7 +96,7 @@ export default class UploadAttachmentsDialog extends BasicWidget {
             shrinkImages: boolToString(this.$shrinkImagesCheckbox),
         };
 
-        this.$widget.modal('hide');
+        this.modal.hide();
 
         await importService.uploadFiles('attachments', parentNoteId, files, options);
     }

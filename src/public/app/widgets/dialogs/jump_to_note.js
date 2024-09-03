@@ -12,7 +12,6 @@ const TPL = `<div class="jump-to-note-dialog modal mx-auto" tabindex="-1" role="
                 <div class="input-group">
                     <input class="jump-to-note-autocomplete form-control" placeholder="${t('jump_to_note.search_placeholder')}">
                 </div>
-
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -36,7 +35,7 @@ export default class JumpToNoteDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
-        bootstrap.Modal.getOrCreateInstance(this.$widget);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
 
         this.$autoComplete = this.$widget.find(".jump-to-note-autocomplete");
         this.$results = this.$widget.find(".jump-to-note-results");
@@ -96,6 +95,6 @@ export default class JumpToNoteDialog extends BasicWidget {
 
         this.triggerCommand('searchNotes', { searchString });
 
-        this.$widget.modal('hide');
+        this.modal.hide();
     }
 }

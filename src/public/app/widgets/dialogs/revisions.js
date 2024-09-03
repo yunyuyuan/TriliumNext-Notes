@@ -41,13 +41,10 @@ const TPL = `
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title flex-grow-1">${t("revisions.note_revisions")}</h5>
-
                 <button class="revisions-erase-all-revisions-button btn btn-sm"
                         title="${t("revisions.delete_all_revisions")}"
                         style="padding: 0 10px 0 10px;" type="button">${t("revisions.delete_all_button")}</button>
-
                 <button class="help-button" type="button" data-help-page="note-revisions.html" title="${t("revisions.help_title")}">?</button>
-
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
@@ -84,7 +81,7 @@ export default class RevisionsDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
-        bootstrap.Modal.getOrCreateInstance(this.$widget);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
 
         this.$list = this.$widget.find(".revision-list");
         this.$listDropdown = this.$widget.find(".revision-list-dropdown");
@@ -113,7 +110,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (await dialogService.confirm(text)) {
                 await server.remove(`notes/${this.note.noteId}/revisions`);
 
-                this.$widget.modal('hide');
+                this.modal.hide();
 
                 toastService.showMessage(t("revisions.revisions_deleted"));
             }
@@ -193,7 +190,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (await dialogService.confirm(text)) {
                 await server.post(`revisions/${revisionItem.revisionId}/restore`);
 
-                this.$widget.modal('hide');
+                this.modal.hide();
 
                 toastService.showMessage(t("revisions.revision_restored"));
             }
