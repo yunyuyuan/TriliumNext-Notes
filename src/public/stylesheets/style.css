@@ -421,14 +421,14 @@ table.promoted-attributes-in-tooltip td, table.promoted-attributes-in-tooltip th
 .bs-tooltip-left .tooltip-arrow::before {
     left: -1px;
     border-width: 0.4rem 0 0.4rem 0.4rem;
-    border-right-color: var(--main-border-color) !important;
+    border-left-color: var(--main-border-color) !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^='bottom'] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
     bottom: -1px;
     border-width: 0 0.4rem 0.4rem;
-    border-right-color: var(--main-border-color) !important;
+    border-bottom-color: var(--main-border-color) !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^='right'] .tooltip-arrow::before,
@@ -442,21 +442,21 @@ table.promoted-attributes-in-tooltip td, table.promoted-attributes-in-tooltip th
 .bs-tooltip-top .tooltip-arrow::before {
     top: -1px;
     border-width: 0.4rem 0.4rem 0;
-    border-right-color: var(--main-border-color) !important;
+    border-top-color: var(--main-border-color) !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^='left'] .tooltip-arrow::after,
 .bs-tooltip-left .tooltip-arrow::after {
     left: -1px;
     border-width: 0.4rem 0 0.4rem 0.4rem;
-    border-right-color: var(--tooltip-background-color) !important;
+    border-left-color: var(--tooltip-background-color) !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^='bottom'] .tooltip-arrow::after,
 .bs-tooltip-bottom .tooltip-arrow::after {
     bottom: -1px;
     border-width: 0 0.4rem 0.4rem;
-    border-right-color: var(--tooltip-background-color) !important;
+    border-bottom-color: var(--tooltip-background-color) !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^='right'] .tooltip-arrow::after,
@@ -470,7 +470,7 @@ table.promoted-attributes-in-tooltip td, table.promoted-attributes-in-tooltip th
 .bs-tooltip-top .tooltip-arrow::after {
     top: -1px;
     border-width: 0.4rem 0.4rem 0;
-    border-right-color: var(--tooltip-background-color) !important;
+    border-top-color: var(--tooltip-background-color) !important;
 }
 
 .note-tooltip.tooltip .arrow {

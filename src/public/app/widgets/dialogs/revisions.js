@@ -40,7 +40,7 @@ const TPL = `
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t("revisions.note_revisions")}</h5>
+                <h5 class="modal-title flex-grow-1">${t("revisions.note_revisions")}</h5>
 
                 <button class="revisions-erase-all-revisions-button btn btn-sm"
                         title="${t("revisions.delete_all_revisions")}"
@@ -52,7 +52,9 @@ const TPL = `
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
                 <div class="dropdown">
-                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown"></button>
+                    <button class="revision-list-dropdown" type="button" style="display: none;"
+                            data-bs-toggle="dropdown" data-bs-display="static">
+                    </button>
 
                     <div class="revision-list dropdown-menu" style="position: static; height: 100%; overflow: auto;"></div>
                 </div>
@@ -274,7 +276,7 @@ export default class RevisionsDialog extends BasicWidget {
             }
 
             this.$content.html($table);
-        } else if ([ "canvas", "mindMap" ].includes(revisionItem.type)) {
+        } else if (["canvas", "mindMap"].includes(revisionItem.type)) {
             const encodedTitle = encodeURIComponent(revisionItem.title);
 
             this.$content.html($("<img>")
