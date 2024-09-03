@@ -45,9 +45,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="main-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -65,9 +63,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="tree-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -85,9 +81,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="detail-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -105,9 +99,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="monospace-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>

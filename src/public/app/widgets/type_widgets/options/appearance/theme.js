@@ -15,7 +15,9 @@ const TPL = `
         
         <div class="col-6">
             <label>${t("theme.override_theme_fonts_label")}</label>
-            <input type="checkbox" class="override-theme-fonts form-control">
+            <div class="form-check">
+                <input type="checkbox" class="override-theme-fonts form-check-input">
+            </div>
         </div>
     </div>
 </div>`;

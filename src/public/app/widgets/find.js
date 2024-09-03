@@ -47,24 +47,18 @@ const TPL = `
     <div class="find-widget-box">
         <div class="input-group find-widget-search-term-input-group">
             <input type="text" class="form-control find-widget-search-term-input">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary bx bxs-chevron-up find-widget-previous-button" type="button"></button>
-                <button class="btn btn-outline-secondary bx bxs-chevron-down find-widget-next-button" type="button"></button>
-            </div>
+            <button class="btn btn-outline-secondary bx bxs-chevron-up find-widget-previous-button" type="button"></button>
+            <button class="btn btn-outline-secondary bx bxs-chevron-down find-widget-next-button" type="button"></button>
         </div>
         
         <div class="form-check">
-            <label tabIndex="-1" class="form-check-label">
-                <input type="checkbox" class="form-check-input find-widget-case-sensitive-checkbox"> 
-                case sensitive
-            </label>
+            <input type="checkbox" class="form-check-input find-widget-case-sensitive-checkbox"> 
+            <label tabIndex="-1" class="form-check-label">case sensitive</label>
         </div>
 
         <div class="form-check">
-            <label tabIndex="-1" class="form-check-label">
-                <input type="checkbox" class="form-check-input find-widget-match-words-checkbox"> 
-                match words
-            </label>
+            <input type="checkbox" class="form-check-input find-widget-match-words-checkbox">
+            <label tabIndex="-1" class="form-check-label">match words</label>
         </div>
         
         <div class="find-widget-found-wrapper">

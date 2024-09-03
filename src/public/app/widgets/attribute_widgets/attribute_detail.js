@@ -97,7 +97,7 @@ const TPL = `
         <tr class="attr-row-promoted"
             title="${t('attribute_detail.promoted_title')}">
             <th>${t('attribute_detail.promoted')}</th>
-            <td><input type="checkbox" class="attr-input-promoted form-control form-control-sm" /></td>
+            <td><input type="checkbox" class="attr-input-promoted form-check" /></td>
         </tr>
         <tr class="attr-row-promoted-alias">
             <th title="${t('attribute_detail.promoted_alias_title')}">${t('attribute_detail.promoted_alias')}</th>
@@ -134,9 +134,7 @@ const TPL = `
             <td>
                 <div class="input-group">
                     <input type="number" class="form-control attr-input-number-precision" style="text-align: right">
-                    <div class="input-group-append">
-                        <span class="input-group-text">${t('attribute_detail.digits')}</span>
-                    </div>
+                    <span class="input-group-text">${t('attribute_detail.digits')}</span>
                 </div>
             </td>
         </tr>
@@ -150,7 +148,7 @@ const TPL = `
         </tr>
         <tr title="${t('attribute_detail.inheritable_title')}">
             <th>${t('attribute_detail.inheritable')}</th>
-            <td><input type="checkbox" class="attr-input-inheritable form-control form-control-sm" /></td>
+            <td><input type="checkbox" class="attr-input-inheritable form-check" /></td>
         </tr>
     </table>
 
@@ -349,7 +347,7 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
         this.$rowTargetNote = this.$widget.find('.attr-row-target-note');
         this.$inputTargetNote = this.$widget.find('.attr-input-target-note');
 
-        noteAutocompleteService.initNoteAutocomplete(this.$inputTargetNote, {allowCreatingNotes: true})
+        noteAutocompleteService.initNoteAutocomplete(this.$inputTargetNote, { allowCreatingNotes: true })
             .on('autocomplete:noteselected', (event, suggestion, dataset) => {
                 if (!suggestion.notePath) {
                     return false;
@@ -403,7 +401,7 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
         });
     }
 
-    async showAttributeDetail({allAttributes, attribute, isOwned, x, y, focus}) {
+    async showAttributeDetail({ allAttributes, attribute, isOwned, x, y, focus }) {
         if (!attribute) {
             this.hide();
 
@@ -545,7 +543,7 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
             }
         }
 
-        return {left, right};
+        return { left, right };
     }
 
     async saveAndClose() {
@@ -589,19 +587,19 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
     }
 
     async updateRelatedNotes() {
-        let {results, count} = await server.post('search-related', this.attribute);
+        let { results, count } = await server.post('search-related', this.attribute);
 
         for (const res of results) {
             res.noteId = res.notePathArray[res.notePathArray.length - 1];
         }
 
-        results = results.filter(({noteId}) => noteId !== this.noteId);
+        results = results.filter(({ noteId }) => noteId !== this.noteId);
 
         if (results.length === 0) {
             this.$relatedNotesContainer.hide();
         } else {
             this.$relatedNotesContainer.show();
-            this.$relatedNotesTitle.text(t("attribute_detail.other_notes_with_name", {attributeType: this.attribute.type, attributeName: this.attribute.name}));
+            this.$relatedNotesTitle.text(t("attribute_detail.other_notes_with_name", { attributeType: this.attribute.type, attributeName: this.attribute.name }));
 
             this.$relatedNotesList.empty();
 
@@ -611,7 +609,7 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
 
             for (const note of displayedNotes) {
                 const notePath = note.getBestNotePathString(hoistedNoteId);
-                const $noteLink = await linkService.createLink(notePath, {showNotePath: true});
+                const $noteLink = await linkService.createLink(notePath, { showNotePath: true });
 
                 this.$relatedNotesList.append(
                     $("<li>").append($noteLink)
@@ -619,7 +617,7 @@ export default class AttributeDetailWidget extends NoteContextAwareWidget {
             }
 
             if (results.length > DISPLAYED_NOTES) {
-                this.$relatedNotesMoreNotes.show().text(t("attribute_detail.and_more", {count: count - DISPLAYED_NOTES}));
+                this.$relatedNotesMoreNotes.show().text(t("attribute_detail.and_more", { count: count - DISPLAYED_NOTES }));
             } else {
                 this.$relatedNotesMoreNotes.hide();
             }

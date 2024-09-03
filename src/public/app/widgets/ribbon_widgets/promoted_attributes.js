@@ -71,7 +71,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
         const promotedDefAttrs = note.getPromotedDefinitionAttributes();
 
         if (promotedDefAttrs.length === 0) {
-            return {show: false};
+            return { show: false };
         }
 
         return {
@@ -167,7 +167,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
                             return;
                         }
 
-                        attributeValues = attributeValues.map(attribute => ({value: attribute}));
+                        attributeValues = attributeValues.map(attribute => ({ value: attribute }));
 
                         $input.autocomplete({
                             appendTo: document.querySelector('body'),
@@ -229,9 +229,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
                     .prop("title", t("promoted_attributes.open_external_link"))
                     .on('click', () => window.open($input.val(), '_blank'));
 
-                $input.after($("<div>")
-                    .addClass("input-group-append")
-                    .append($openButton));
+                $input.after($openButton);
             }
             else {
                 ws.logError(t("promoted_attributes.unknown_label_type", { type: definitionAttr.labelType }));
@@ -244,7 +242,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
 
             if (utils.isDesktop()) {
                 // no need to wait for this
-                noteAutocompleteService.initNoteAutocomplete($input, {allowCreatingNotes: true});
+                noteAutocompleteService.initNoteAutocomplete($input, { allowCreatingNotes: true });
 
                 $input.on('autocomplete:noteselected', (event, suggestion, dataset) => {
                     this.promotedAttributeChanged(event);
@@ -257,7 +255,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
             }
         }
         else {
-            ws.logError(t(`promoted_attributes.unknown_attribute_type`, {type: valueAttr.type}));
+            ws.logError(t(`promoted_attributes.unknown_attribute_type`, { type: valueAttr.type }));
             return;
         }
 
@@ -346,7 +344,7 @@ export default class PromotedAttributesWidget extends NoteContextAwareWidget {
         this.$widget.find(".promoted-attribute-input:first").focus();
     }
 
-    entitiesReloadedEvent({loadResults}) {
+    entitiesReloadedEvent({ loadResults }) {
         if (loadResults.getAttributeRows(this.componentId).find(attr => attributeService.isAffecting(attr, this.note))) {
             this.refresh();
         }
