@@ -18,12 +18,12 @@ const TPL = `
                     ${t('revisions_snapshot_limit.erase_excess_revision_snapshots')}</button>
 </div>`;
 
-export default class RevisionsSnapshotLimitOptions extends OptionsWidget {
+export default class RevisionSnapshotsLimitOptions extends OptionsWidget {
     doRender() {
         this.$widget = $(TPL);
-        this.$revisionsNumberLimit = this.$widget.find(".revision-snapshot-number-limit");
-        this.$revisionsNumberLimit.on('change', () => {
-            let revisionSnapshotNumberLimit = this.$revisionsNumberLimit.val();
+        this.$revisionSnapshotsNumberLimit = this.$widget.find(".revision-snapshot-number-limit");
+        this.$revisionSnapshotsNumberLimit.on('change', () => {
+            let revisionSnapshotNumberLimit = this.$revisionSnapshotsNumberLimit.val();
             if (!isNaN(revisionSnapshotNumberLimit) && revisionSnapshotNumberLimit >= -1) {
                 this.updateOption('revisionSnapshotNumberLimit', revisionSnapshotNumberLimit)
             } 
@@ -37,6 +37,6 @@ export default class RevisionsSnapshotLimitOptions extends OptionsWidget {
     }
 
     async optionsLoaded(options) {
-        this.$revisionsNumberLimit.val(options.revisionSnapshotNumberLimit);
+        this.$revisionSnapshotsNumberLimit.val(options.revisionSnapshotNumberLimit);
     }
 }
