@@ -23,6 +23,7 @@ import SearchEngineOptions from "./options/other/search_engine.js";
 import TrayOptions from "./options/other/tray.js";
 import NoteErasureTimeoutOptions from "./options/other/note_erasure_timeout.js";
 import RevisionsSnapshotIntervalOptions from "./options/other/revisions_snapshot_interval.js";
+import RevisionsSnapshotLimitOptions from "./options/other/revisions_snapshot_limit.js";
 import NetworkConnectionsOptions from "./options/other/network_connections.js";
 import AdvancedSyncOptions from "./options/advanced/sync.js";
 import DatabaseIntegrityCheckOptions from "./options/advanced/database_integrity_check.js";
@@ -88,6 +89,7 @@ const CONTENT_WIDGETS = {
         NoteErasureTimeoutOptions,
         AttachmentErasureTimeoutOptions,
         RevisionsSnapshotIntervalOptions,
+        RevisionsSnapshotLimitOptions,
         NetworkConnectionsOptions
     ],
     _optionsAdvanced: [

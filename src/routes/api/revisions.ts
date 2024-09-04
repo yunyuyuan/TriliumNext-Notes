@@ -2,6 +2,7 @@
 
 import beccaService from "../../becca/becca_service.js";
 import revisionService from "../../services/revisions.js";
+import optionService from "../../services/options.js";
 import utils from "../../services/utils.js";
 import sql from "../../services/sql.js";
 import cls from "../../services/cls.js";
@@ -112,6 +113,13 @@ function eraseRevision(req: Request) {
     eraseService.eraseRevisions([req.params.revisionId]);
 }
 
+function eraseAllExcessRevisions() {
+    let allNoteIds = sql.getRows('SELECT noteId FROM notes') as { noteId: string }[];
+    allNoteIds.forEach(row => {
+        becca.getNote(row.noteId)?.eraseExcessRevisions()
+    });
+}
+
 function restoreRevision(req: Request) {
     const revision = becca.getRevision(req.params.revisionId);
 
@@ -211,6 +219,7 @@ export default {
     downloadRevision,
     getEditedNotesOnDate,
     eraseAllRevisions,
+    eraseAllExcessRevisions,
     eraseRevision,
     restoreRevision
 };
