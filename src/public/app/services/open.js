@@ -183,8 +183,6 @@ async function openDirectory(directory) {
     }
 }
 
-const opendataDirectory = async (directory) => await openDirectory(directory);
-
 export default {
     download,
     downloadFileNote,
@@ -195,5 +193,5 @@ export default {
     openAttachmentExternally,
     openNoteCustom,
     openAttachmentCustom,
-    opendataDirectory
+    openDirectory
 }

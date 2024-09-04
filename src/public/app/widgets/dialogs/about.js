@@ -76,13 +76,12 @@ export default class AboutDialog extends BasicWidget {
         this.$buildRevision.attr('href', `https://github.com/TriliumNext/Notes/commit/${appInfo.buildRevision}`);
         if (utils.isElectron()) {
             this.$dataDirectory.html($('<a></a>', {
-                href: 'file:///' + appInfo.dataDirectory,
+                href: '#',
                 text: appInfo.dataDirectory,
-                target: '_blank'
             }));
             this.$dataDirectory.find("a").on('click', (event) => {
                 event.preventDefault();
-                openService.opendataDirectory(appInfo.dataDirectory);
+                openService.openDirectory(appInfo.dataDirectory);
             })
         } else {
             this.$dataDirectory.text(appInfo.dataDirectory);
