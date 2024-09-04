@@ -1614,15 +1614,19 @@ class BNote extends AbstractBeccaEntity<BNote> {
 
             revision.setContent(noteContent);
 
-            this.eraseExcessRevisions()
+            this.eraseExcessRevisionSnapshots()
             return revision;
         });
     }
 
     // Limit the number of Snapshots to revisionSnapshotNumberLimit
     // Delete older Snapshots that exceed the limit
-    eraseExcessRevisions() {
-        const revisionSnapshotNumberLimit = parseInt(optionService.getOption('revisionSnapshotNumberLimit'));
+    eraseExcessRevisionSnapshots() {
+        // lable has a higher priority
+        let revisionSnapshotNumberLimit = parseInt(this.getLabelValue("versioningLimit") ?? "");
+        if (!Number.isInteger(revisionSnapshotNumberLimit)) {
+            revisionSnapshotNumberLimit = parseInt(optionService.getOption('revisionSnapshotNumberLimit'));
+        }
         if (revisionSnapshotNumberLimit >= 0) {
             const revisions = this.getRevisions();
             if (revisions.length - revisionSnapshotNumberLimit > 0) {
