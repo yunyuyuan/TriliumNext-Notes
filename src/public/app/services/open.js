@@ -173,8 +173,6 @@ async function openDirectory(directory) {
             const res = await electron.shell.openPath(directory);
             if (res) {
                 console.error('Failed to open directory:', res);
-            } else {
-                console.log('Directory opened successfully.');
             }
         } else {
             console.error('Not running in an Electron environment.');
@@ -185,6 +183,7 @@ async function openDirectory(directory) {
     }
 }
 
+const opendataDirectory = async (directory) => await openDirectory(directory);
 
 export default {
     download,
@@ -196,5 +195,5 @@ export default {
     openAttachmentExternally,
     openNoteCustom,
     openAttachmentCustom,
-    openDirectory
+    opendataDirectory
 }
