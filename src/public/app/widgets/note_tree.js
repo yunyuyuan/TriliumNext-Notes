@@ -106,7 +106,7 @@ const TPL = `
                 title="Scroll to active note" 
                 data-trigger-command="scrollToActiveNote"></button>
         
-        <button class="tree-floating-button bx bx-cog tree-settings-button" 
+        <button class="tree-floating-button bx bxs-tree tree-settings-button" 
                 title="Tree settings"></button>
     </div>
     

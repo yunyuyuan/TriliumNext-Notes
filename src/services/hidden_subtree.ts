@@ -48,7 +48,7 @@ const HIDDEN_SUBTREE_DEFINITION: Item = {
     id: '_hidden',
     title: 'Hidden Notes',
     type: 'doc',
-    icon: 'bx bx-chip',
+    icon: 'bx bx-hide',
     // we want to keep the hidden subtree always last, otherwise there will be problems with e.g., keyboard navigation
     // over tree when it's in the middle
     notePosition: 999_999_999,
@@ -241,6 +241,7 @@ const HIDDEN_SUBTREE_DEFINITION: Item = {
             id: '_options',
             title: 'Options',
             type: 'book',
+            icon: 'bx-cog',
             children: [
                 { id: '_optionsAppearance', title: 'Appearance', type: 'contentWidget', icon: 'bx-layout' },
                 { id: '_optionsShortcuts', title: 'Shortcuts', type: 'contentWidget', icon: 'bxs-keyboard' },
