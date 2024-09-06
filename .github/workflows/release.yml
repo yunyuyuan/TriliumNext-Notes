@@ -67,13 +67,16 @@ jobs:
       - name: Rename the output artifact
         run: |
           mv upload/*.${{ matrix.os.extension }} "upload/TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.${{matrix.os.extension}}"
+          mv upload/*.zip "upload/TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.zip"
       - name: Publish test
         uses: softprops/action-gh-release@v2
         with:
           draft: true
           tag_name: test_release
           fail_on_unmatched_files: true
-          files: upload/*.${{matrix.os.extension}}
+          files: |
+            upload/*.${{matrix.os.extension}}
+            upload/*.zip
   build_linux_server-x64:
     name: Build Linux Server x86_64
     runs-on: ubuntu-latest
