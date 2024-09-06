@@ -68,7 +68,7 @@ jobs:
         run: |
           mv upload/*.${{ matrix.os.extension }} "upload/TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.${{matrix.os.extension}}"
           mv upload/*.zip "upload/TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.zip"
-      - name: Publish test
+      - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
           draft: true
@@ -98,8 +98,12 @@ jobs:
         run: |
           mkdir -p upload
           file=$(find dist -name '*.tar.xz' -print -quit)
-          cp "$file" "upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz"          
-      - uses: actions/upload-artifact@v4
+          cp "$file" "upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz"
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
         with:
-          name: TriliumNextNotes linux server x64
-          path: upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz
+          draft: true
+          tag_name: test_release
+          fail_on_unmatched_files: true
+          files: |
+            upload/*.xz
