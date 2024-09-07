@@ -7,8 +7,6 @@ on:
     paths-ignore:
       - "docs/**"
       - ".github/workflows/main-docker.yml"
-    tags:
-      - "v*"
   workflow_dispatch:    
 
 concurrency:

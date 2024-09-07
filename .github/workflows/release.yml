@@ -1,8 +1,8 @@
-name: Main
+name: Release
 on:
   push:
     tags:
-      - v*
+      - "v*"
   workflow_dispatch:    
 permissions:
   contents: write
