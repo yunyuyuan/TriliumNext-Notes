@@ -12,6 +12,8 @@ import utils from "./services/utils.js";
 import port from "./services/port.js";
 import host from "./services/host.js";
 import semver from "semver";
+import i18next from "i18next";
+import Backend from "i18next-fs-backend";
 
 // setup basic error handling even before requiring dependencies, since those can produce errors as well
 
@@ -56,6 +58,17 @@ async function startTrilium() {
     if (utils.isElectron()) {
         (await import('electron')).app.requestSingleInstanceLock();
     }
+
+    // Initialize translations
+    i18next.use(Backend).init({
+        lng: "ro",
+        fallbackLng: "en",
+        ns: "server",
+        backend: {
+            loadPath: "translations/{{lng}}/{{ns}}.json"
+        },
+        debug: true
+    });
 
     log.info(JSON.stringify(appInfo, null, 2));
 
