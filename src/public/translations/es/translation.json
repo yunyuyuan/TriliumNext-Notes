@@ -1046,7 +1046,7 @@
     "attachment_auto_deletion_description": "Los archivos adjuntos se eliminan (y borran) automáticamente si ya no se hace referencia a ellos en su nota después de un tiempo de espera definido.",
     "erase_attachments_after_x_seconds": "Borrar archivos adjuntos después de X segundos de no usarse en su nota",
     "manual_erasing_description": "También puede activar el borrado manualmente (sin considerar el tiempo de espera definido anteriormente):",
-    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota ",
+    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota",
     "unused_attachments_erased": "Los archivos adjuntos no utilizados se han eliminado."
   },
   "network_connections": {

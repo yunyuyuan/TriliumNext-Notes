@@ -77,7 +77,7 @@
     "attachment_auto_deletion_description": "Atașamentele se șterg automat (permanent) dacă nu sunt referențiate de către notița lor părinte după un timp prestabilit de timp.",
     "attachment_erasure_timeout": "Perioadă de ștergere a atașamentelor",
     "erase_attachments_after_x_seconds": "Șterge atașamentele după X secunde după ce acestea n-au mai fost folosite într-o notiță",
-    "erase_unused_attachments_now": "Se poate lansa o ștergere manuală (fără a mai considera perioada de grație definită anterior):",
+    "erase_unused_attachments_now": "Elimină atașamentele șterse acum",
     "manual_erasing_description": "Șterge acum toate atașamentele nefolosite din notițe",
     "unused_attachments_erased": "Atașamentele nefolosite au fost șterse."
   },
