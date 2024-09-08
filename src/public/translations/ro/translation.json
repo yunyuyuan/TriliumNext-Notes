@@ -1248,5 +1248,33 @@
   "note-map": {
     "button-link-map": "Harta legăturilor",
     "button-tree-map": "Harta ierarhiei"
+  },
+  "tree-context-menu": {
+    "advanced": "Opțiuni avansate",
+    "apply-bulk-actions": "Aplică acțiuni în masă",
+    "clone-to": "Clonare în...",
+    "collapse-subtree": "Minimizează subnotițele",
+    "convert-to-attachment": "Convertește în atașament",
+    "copy-clone": "Copiază/clonează",
+    "copy-note-path-to-clipboard": "Copiază calea notiței în clipboard",
+    "cut": "Decupează",
+    "delete": "Șterge",
+    "duplicate-subtree": "Dublifică ierarhia",
+    "edit-branch-prefix": "Editează prefixul ramurii",
+    "expand-subtree": "Expandează subnotițele",
+    "export": "Exportă",
+    "import-into-note": "Importă în notiță",
+    "insert-child-note": "Inserează subnotiță",
+    "insert-note-after": "Inserează după notiță",
+    "move-to": "Mutare la...",
+    "open-in-a-new-split": "Deschide în lateral",
+    "open-in-a-new-tab": "Deschide în tab nou",
+    "paste-after": "Lipește după notiță",
+    "paste-into": "Lipește în notiță",
+    "protect-subtree": "Protejează ierarhia",
+    "recent-changes-in-subtree": "Schimbări recente în ierarhie",
+    "search-in-subtree": "Caută în ierarhie",
+    "sort-by": "Ordonare după...",
+    "unprotect-subtree": "Deprotejează ierarhia"
   }
 }
