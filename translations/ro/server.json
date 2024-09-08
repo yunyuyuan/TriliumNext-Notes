@@ -154,5 +154,11 @@
   "share_404": {
     "heading": "Pagină negăsită",
     "title": "Pagină negăsită"
+  },
+  "share_page": {
+    "child-notes": "Subnotițe:",
+    "clipped-from": "Această notiță a fost decupată inițial de pe {{- url}}",
+    "no-content": "Această notiță nu are conținut.",
+    "parent": "părinte:"
   }
 }

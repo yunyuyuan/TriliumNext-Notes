@@ -151,5 +151,11 @@
   "share_404": {
     "title": "Not found",
     "heading": "Not found"
+  },
+  "share_page": {
+    "parent": "parent:",
+    "clipped-from": "This note was originally clipped from {{- url}}",
+    "child-notes": "Child notes:",
+    "no-content": "This note has no content."
   }
 }
