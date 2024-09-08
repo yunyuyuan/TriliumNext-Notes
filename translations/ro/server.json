@@ -117,7 +117,8 @@
     "next": "Mai departe",
     "redirecting": "În scurt timp veți fi redirecționat la aplicație.",
     "sync-from-desktop": "Am deja o instanță de desktop și aș dori o sincronizare cu aceasta",
-    "sync-from-server": "Am deja o instanță de server și doresc o sincronizare cu aceasta"
+    "sync-from-server": "Am deja o instanță de server și doresc o sincronizare cu aceasta",
+    "title": "Inițializare"
   },
   "setup_sync-from-desktop": {
     "description": "Acești pași trebuie urmați de pe aplicația de desktop:",
@@ -149,5 +150,9 @@
     "outstanding-items": "Elemente de sincronizat:",
     "outstanding-items-default": "-",
     "successful": "Sincronizarea a fost configurată cu succes. Poate dura ceva timp pentru a finaliza sincronizarea inițială. După efectuarea ei se va redirecționa către pagina de autentificare."
+  },
+  "share_404": {
+    "heading": "Pagină negăsită",
+    "title": "Pagină negăsită"
   }
 }

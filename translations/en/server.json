@@ -114,7 +114,8 @@
     "sync-from-server": "I have a server instance already, and I want to set up sync with it",
     "next": "Next",
     "init-in-progress": "Document initialization in progress",
-    "redirecting": "You will be shortly redirected to the application."
+    "redirecting": "You will be shortly redirected to the application.",
+    "title": "Setup"
   },
   "setup_sync-from-desktop": {
     "heading": "Sync from Desktop",
@@ -146,5 +147,9 @@
     "successful": "Sync has been correctly set up. It will take some time for the initial sync to finish. Once it's done, you'll be redirected to the login page.",
     "outstanding-items": "Outstanding sync items:",
     "outstanding-items-default": "N/A"
+  },
+  "share_404": {
+    "title": "Not found",
+    "heading": "Not found"
   }
 }
