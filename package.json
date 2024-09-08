@@ -71,7 +71,7 @@
     "debounce": "^2.1.0",
     "ejs": "^3.1.10",
     "electron-debug": "^4.0.1",
-    "electron-dl": "3.5.2",
+    "electron-dl": "^4.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "electron-window-state": "5.0.3",
     "escape-html": "1.0.3",
