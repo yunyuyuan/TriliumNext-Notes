@@ -1,1 +1,5 @@
-{}
+{
+  "keyboard-actions": {
+    "note-navigation": "Navigarea printre notițe"
+  }
+}
