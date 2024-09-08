@@ -98,5 +98,12 @@
     "password": "Password",
     "remember-me": "Remember me",
     "button": "Login"
+  },
+  "set_password": {
+    "heading": "Set password",
+    "description": "Before you can start using Trilium from web, you need to set a password first. You will then use this password to login.",
+    "password": "Password",
+    "password-confirmation": "Password confirmation",
+    "button": "Set password"
   }
 }
