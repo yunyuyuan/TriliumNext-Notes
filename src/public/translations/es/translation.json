@@ -1026,8 +1026,8 @@
     "title": "Tipos MIME disponibles en el menú desplegable"
   },
   "vim_key_bindings": {
-    "use_vim_keybindings_in_code_notes": "Utilizar combinaciones de teclas Vim en notas de código (no modo ex)",
-    "enable_vim_keybindings": "Habilitar combinaciones de teclas de Vim"
+    "use_vim_keybindings_in_code_notes": "",
+    "enable_vim_keybindings": ""
   },
   "wrap_lines": {
     "wrap_lines_in_code_notes": "Ajustar líneas en notas de código",

@@ -1026,8 +1026,8 @@
     "title": "Available MIME types in the dropdown"
   },
   "vim_key_bindings": {
-    "use_vim_keybindings_in_code_notes": "Use vim keybindings in code notes (no ex mode)",
-    "enable_vim_keybindings": "Enable Vim Keybindings"
+    "use_vim_keybindings_in_code_notes": "Vim keybindings",
+    "enable_vim_keybindings": "Enable Vim keybindings in code notes (no ex mode)"
   },
   "wrap_lines": {
     "wrap_lines_in_code_notes": "Wrap lines in code notes",
