@@ -1276,5 +1276,10 @@
     "export": "Export",
     "import-into-note": "Import into note",
     "apply-bulk-actions": "Apply bulk actions"
+  },
+  "shared_info": {
+    "shared_publicly": "This note is shared publicly on",
+    "shared_locally": "This note is shared locally on",
+    "help_link": "For help visit <a href=\"https://triliumnext.github.io/Docs/Wiki/sharing.html\">wiki</a>."
   }
 }
