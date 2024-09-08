@@ -1281,5 +1281,18 @@
     "shared_publicly": "This note is shared publicly on",
     "shared_locally": "This note is shared locally on",
     "help_link": "For help visit <a href=\"https://triliumnext.github.io/Docs/Wiki/sharing.html\">wiki</a>."
+  },
+  "note_types": {
+    "text": "Text",
+    "code": "Code",
+    "saved-search": "Saved Search",
+    "relation-map": "Relation Map",
+    "note-map": "Note Map",
+    "render-note": "Render Note",
+    "book": "Book",
+    "mermaid-diagram": "Mermaid Diagram",
+    "canvas": "Canvas",
+    "web-view": "Web View",
+    "mind-map": "Mind Map"
   }
 }

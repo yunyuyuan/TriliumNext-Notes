@@ -1281,5 +1281,18 @@
     "help_link": "Pentru informații vizitați <a href=\"https://triliumnext.github.io/Docs/Wiki/sharing.html\">wiki-ul</a>.",
     "shared_locally": "Această notiță este partajată local la",
     "shared_publicly": "Această notiță este partajată public la"
+  },
+  "note_types": {
+    "book": "Carte",
+    "canvas": "Schiță",
+    "code": "Cod sursă",
+    "mermaid-diagram": "Diagramă Mermaid",
+    "mind-map": "Hartă mentală",
+    "note-map": "Hartă notițe",
+    "relation-map": "Hartă relații",
+    "render-note": "Randare notiță",
+    "saved-search": "Căutare salvată",
+    "text": "Text",
+    "web-view": "Vizualizare web"
   }
 }
