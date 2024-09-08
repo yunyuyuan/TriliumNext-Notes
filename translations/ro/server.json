@@ -127,7 +127,8 @@
     "step3": "Clic pe categoria „Sincronizare”.",
     "step4": "Schimbați adresa server-ului către: {{- host}} și apăsați „Salvează”.",
     "step5": "Clic pe butonul „Testează sincronizarea” pentru a verifica dacă conexiunea a fost făcută cu succes.",
-    "step6": "După ce ați completat pașii, dați click {{- link}}."
+    "step6": "După ce ați completat pașii, dați click {{- link}}.",
+    "step6-here": "aici"
   },
   "setup_sync-from-server": {
     "back": "Înapoi",
@@ -140,7 +141,8 @@
     "proxy-server": "Server-ul proxy (opțional)",
     "proxy-server-placeholder": "https://<sistem>:<port>",
     "server-host": "Adresa server-ului Trilium",
-    "server-host-placeholder": "https://<sistem>:<port>"
+    "server-host-placeholder": "https://<sistem>:<port>",
+    "password-placeholder": "Parolă"
   },
   "setup_sync-in-progress": {
     "heading": "Sincronizare în curs",

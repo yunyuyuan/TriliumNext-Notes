@@ -97,7 +97,7 @@
                 <li><%= t("setup_sync-from-desktop.step3") %></li>
                 <li><%- t("setup_sync-from-desktop.step4", { host: '<span id="current-host"></span>'}) %></li>
                 <li><%= t("setup_sync-from-desktop.step5") %></li>
-                <li><%- t("setup_sync-from-desktop.step6", { link: '<a href="/">here</a>' }) %></li>
+                <li><%- t("setup_sync-from-desktop.step6", { link: `<a href="/">${t("setup_sync-from-desktop.step6-here")}</a>` }) %></li>
             </ol>
 
             <button type="button" data-bind="click: back" class="btn btn-secondary">Back</button>

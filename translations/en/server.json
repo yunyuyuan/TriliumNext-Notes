@@ -124,7 +124,8 @@
     "step3": "Click on Sync category.",
     "step4": "Change server instance address to: {{- host}} and click Save.",
     "step5": "Click \"Test sync\" button to verify connection is successful.",
-    "step6": "Once you've completed these steps, click {{- link}}."
+    "step6": "Once you've completed these steps, click {{- link}}.",
+    "step6-here": "here"
   },
   "setup_sync-from-server": {
     "heading": "Sync from Server",
