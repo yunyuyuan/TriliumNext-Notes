@@ -14,6 +14,7 @@ import custom from "./routes/custom.js";
 import error_handlers from "./routes/error_handlers.js";
 import { startScheduledCleanup } from "./services/erase.js";
 import sql_init from "./services/sql_init.js";
+import { t } from "i18next";
 
 await import('./services/handlers.js');
 await import('./becca/becca_loader.js');
@@ -28,6 +29,11 @@ sql_init.initializeDb();
 // view engine setup
 app.set('views', path.join(scriptDir, 'views'));
 app.set('view engine', 'ejs');
+
+app.use((req, res, next) => {
+    res.locals.t = t;
+    return next();
+});
 
 if (!utils.isElectron()) {
     app.use(compression()); // HTTP compression

@@ -93,5 +93,13 @@
     "unhoist": "Defocalizează complet",
     "zoom-in": "Mărește zoom-ul",
     "zoom-out": "Micșorează zoom-ul"
+  },
+  "login": {
+    "button": "Autentifică",
+    "heading": "Autentificare în Trilium",
+    "incorrect-password": "Parola nu este corectă. Încercați din nou.",
+    "password": "Parolă",
+    "remember-me": "Ține-mă minte",
+    "title": "Autentificare"
   }
 }

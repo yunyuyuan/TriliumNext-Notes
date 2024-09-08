@@ -90,5 +90,13 @@
     "force-save-revision": "Force creating / saving new note revision of the active note",
     "show-help": "Shows built-in Help / cheatsheet",
     "toggle-book-properties": "Toggle Book Properties"
+  },
+  "login": {
+    "title": "Login",
+    "heading": "Trilium login",
+    "incorrect-password": "Password is incorrect. Please try again.",
+    "password": "Password",
+    "remember-me": "Remember me",
+    "button": "Login"
   }
 }
