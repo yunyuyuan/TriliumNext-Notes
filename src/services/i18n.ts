@@ -1,6 +1,7 @@
 import i18next from "i18next";
 import Backend from "i18next-fs-backend";
 import options from "./options.js";
+import sql_init from "./sql_init.js";
 
 export async function initializeTranslations() {
   // Initialize translations
@@ -17,7 +18,9 @@ export async function initializeTranslations() {
 
 function getCurrentLanguage() {
   let language;
-  language = options.getOption("locale");  
+  if (sql_init.isDbInitialized()) {
+    language = options.getOption("locale");  
+  }
 
   if (!language) {
     console.info("Language option not found, falling back to en.");
