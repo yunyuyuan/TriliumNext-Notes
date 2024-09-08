@@ -105,5 +105,6 @@
     "password": "Password",
     "password-confirmation": "Password confirmation",
     "button": "Set password"
-  }
+  },
+  "javascript-required": "Trilium requires JavaScript to be enabled."
 }

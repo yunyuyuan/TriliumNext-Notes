@@ -108,5 +108,6 @@
     "description": "Înainte de a putea utiliza Trilium din navigator, trebuie mai întâi setată o parolă. Ulterior această parolă va fi folosită la autentificare.",
     "password": "Parolă",
     "password-confirmation": "Confirmarea parolei"
-  }
+  },
+  "javascript-required": "Trilium necesită JavaScript să fie activat pentru a putea funcționa."
 }
