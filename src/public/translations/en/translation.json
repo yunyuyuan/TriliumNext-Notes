@@ -1317,5 +1317,6 @@
     "template": "Template",
     "toggle-on-hint": "Make the note a template",
     "toggle-off-hint": "Remove the note as a template"
-  }
+  },
+  "open-help-page": "Open help page"
 }
