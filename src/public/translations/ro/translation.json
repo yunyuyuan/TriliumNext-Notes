@@ -142,8 +142,8 @@
     "icon_class": "valoarea acestei etichete este adăugată ca o clasă CSS la iconița notiței din ierarhia notițelor, fapt ce poate ajuta la identificarea vizuală mai rapidă a notițelor. Un exemplu ar fi „bx bx-home” pentru iconițe preluate din boxicons. Poate fi folosită în notițe de tip șablon.",
     "inbox": "locația implicită în care vor apărea noile notițe atunci când se crează o noitiță utilizând butonul „Crează notiță” din bara laterală, notițele vor fi create în interiorul notiței cu această etichetă.",
     "inherit": "atributele acestei notițe vor fi moștenite chiar dacă nu există o relație părinte-copil între notițe. A se vedea relația de tip șablon pentru un concept similar. De asemenea, a se vedea moștenirea atributelor în documentație.",
-    "inheritable": "Moștenibil",
-    "inheritable_title": "Atributele moștenibile vor fi moștenite tuturor descendenților acestei notițe.",
+    "inheritable": "Moștenibilă",
+    "inheritable_title": "Atributele moștenibile vor fi moștenite de către toți descendenții acestei notițe.",
     "inverse_relation": "Relație inversă",
     "inverse_relation_title": "Setare opțională pentru a defini relația inversă. Exemplu: Tată - Fiu sunt două relații inverse.",
     "is_owned_by_note": "este deținut(ă) de notița",
@@ -1220,7 +1220,7 @@
   },
   "vim_key_bindings": {
     "enable_vim_keybindings": "Activează combinațiile de taste Vim",
-    "use_vim_keybindings_in_code_notes": "Permite utilizarea combinațiilor de taste în stil Vim pentru notițeled e tip cod (fără modul ex)"
+    "use_vim_keybindings_in_code_notes": "Permite utilizarea combinațiilor de taste în stil Vim pentru notițele de tip cod (fără modul ex)"
   },
   "web_view": {
     "create_label": "Pentru a începe, creați o etichetă cu adresa URL de încorporat, e.g.  #webViewSrc=\"https://www.google.com\"",
