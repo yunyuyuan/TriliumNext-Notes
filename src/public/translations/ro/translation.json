@@ -1244,5 +1244,9 @@
   },
   "svg_export_button": {
     "button_title": "Exportă diagrama ca SVG"
+  },
+  "note-map": {
+    "button-link-map": "Harta legăturilor",
+    "button-tree-map": "Harta ierarhiei"
   }
 }
