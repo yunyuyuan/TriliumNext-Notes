@@ -1299,5 +1299,11 @@
     "image": "Imagine",
     "launcher": "Scurtătură",
     "widget": "Widget"
+  },
+  "protect_note": {
+    "toggle-off": "Deprotejează notița",
+    "toggle-off-hint": "Notița este protejată, click pentru a o deproteja",
+    "toggle-on": "Protejează notița",
+    "toggle-on-hint": "Notița nu este protejată, clic pentru a o proteja"
   }
 }

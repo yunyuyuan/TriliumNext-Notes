@@ -1299,5 +1299,11 @@
     "launcher": "Launcher",
     "doc": "Doc",
     "widget": "Widget"
+  },
+  "protect_note": {
+    "toggle-on": "Protect the note",
+    "toggle-off": "Unprotect the note",
+    "toggle-on-hint": "Note is not protected, click to make it protected",
+    "toggle-off-hint": "Note is protected, click to make it unprotected"
   }
 }
