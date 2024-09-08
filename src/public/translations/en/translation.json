@@ -1293,6 +1293,11 @@
     "mermaid-diagram": "Mermaid Diagram",
     "canvas": "Canvas",
     "web-view": "Web View",
-    "mind-map": "Mind Map"
+    "mind-map": "Mind Map",
+    "file": "File",
+    "image": "Image",
+    "launcher": "Launcher",
+    "doc": "Doc",
+    "widget": "Widget"
   }
 }

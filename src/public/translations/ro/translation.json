@@ -1293,6 +1293,11 @@
     "render-note": "Randare notiță",
     "saved-search": "Căutare salvată",
     "text": "Text",
-    "web-view": "Vizualizare web"
+    "web-view": "Vizualizare web",
+    "doc": "Document",
+    "file": "Fișier",
+    "image": "Imagine",
+    "launcher": "Scurtătură",
+    "widget": "Widget"
   }
 }
