@@ -7,7 +7,7 @@
     "collapse-subtree": "Collapses subtree of current note",
     "sort-child-notes": "Sort child notes",
     "creating-and-moving-notes": "Creating and moving notes",
-    "create-note-into-inbox": "Create and open in the inbox (if defined) or day note",
+    "create-note-into-inbox": "Create a note in the inbox (if defined) or day note",
     "delete-note": "Delete note",
     "move-note-up": "Move note up",
     "move-note-down": "Move note down",
