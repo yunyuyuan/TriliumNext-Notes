@@ -1305,5 +1305,12 @@
     "toggle-off-hint": "Notița este protejată, click pentru a o deproteja",
     "toggle-on": "Protejează notița",
     "toggle-on-hint": "Notița nu este protejată, clic pentru a o proteja"
+  },
+  "shared_switch": {
+    "inherited": "Nu se poate înlătura partajarea deoarece notița este partajată prin moștenirea de la o notiță părinte.",
+    "shared": "Partajată",
+    "shared-branch": "Această notiță există doar ca o notiță partajată, anularea partajării ar cauza ștergerea ei. Sigur doriți ștergerea notiței?",
+    "toggle-off-title": "Anulează partajarea notițeii",
+    "toggle-on-title": "Partajează notița"
   }
 }
