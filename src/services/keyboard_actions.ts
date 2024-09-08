@@ -4,6 +4,7 @@ import optionService from "./options.js";
 import log from "./log.js";
 import utils from "./utils.js";
 import { KeyboardShortcut } from './keyboard_actions_interface.js';
+import { t } from "i18next";
 
 const isMac = process.platform === "darwin";
 const isElectron = utils.isElectron();
@@ -19,7 +20,7 @@ const isElectron = utils.isElectron();
 
 const DEFAULT_KEYBOARD_ACTIONS: KeyboardShortcut[] = [
     {
-        separator: "Note navigation"
+        separator: t("keyboard-actions.note-navigation")
     },
     {
         actionName: "backInNoteHistory",
