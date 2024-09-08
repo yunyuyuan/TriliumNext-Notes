@@ -1312,5 +1312,10 @@
     "toggle-off-title": "Unshare the note",
     "shared-branch": "This note exists only as a shared note, unsharing would delete it. Do you want to continue and thus delete this note?",
     "inherited": "Note cannot be unshared here because it is shared through inheritance from an ancestor."
+  },
+  "template_switch": {
+    "template": "Template",
+    "toggle-on-hint": "Make the note a template",
+    "toggle-off-hint": "Remove the note as a template"
   }
 }

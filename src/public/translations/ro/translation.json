@@ -1312,5 +1312,10 @@
     "shared-branch": "Această notiță există doar ca o notiță partajată, anularea partajării ar cauza ștergerea ei. Sigur doriți ștergerea notiței?",
     "toggle-off-title": "Anulează partajarea notițeii",
     "toggle-on-title": "Partajează notița"
+  },
+  "template_switch": {
+    "template": "Șablon",
+    "toggle-off-hint": "Înlătură notița ca șablon",
+    "toggle-on-hint": "Marchează notița drept șablon"
   }
 }
