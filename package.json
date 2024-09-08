@@ -75,7 +75,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "electron-window-state": "5.0.3",
     "escape-html": "1.0.3",
-    "eslint": "^9.9.0",
+    "eslint": "^9.10.0",
     "express": "^4.19.2",
     "express-partial-content": "1.0.2",
     "express-rate-limit": "^7.3.1",
