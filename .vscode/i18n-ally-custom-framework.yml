@@ -26,6 +26,7 @@ scopeRangeRegex: "useTranslation\\(\\s*\\[?\\s*['\"`](.*?)['\"`]"
 refactorTemplates:
   - t("$1")
   - ${t("$1")}
+  - <%= t("$1") %>
 
 
 # If set to true, only enables this custom framework (will disable all built-in frameworks)
