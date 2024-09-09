@@ -222,7 +222,7 @@ const HIDDEN_SUBTREE_DEFINITION: Item = {
                         { id: '_lbJumpTo', title: 'Jump to Note', type: 'launcher', command: 'jumpToNote', icon: 'bx bx-send', attributes: [
                                 { type: 'label', name: 'desktopOnly' }
                             ] },
-                        { id: '_lbNoteMap', title: 'Note Map', type: 'launcher', targetNoteId: '_globalNoteMap', icon: 'bx bxl-graphql' },
+                        { id: '_lbNoteMap', title: 'Note Map', type: 'launcher', targetNoteId: '_globalNoteMap', icon: 'bx bxs-network-chart' },
                         { id: '_lbCalendar', title: 'Calendar', type: 'launcher', builtinWidget: 'calendar', icon: 'bx bx-calendar' },
                         { id: '_lbRecentChanges', title: 'Recent Changes', type: 'launcher', command: 'showRecentChanges', icon: 'bx bx-history', attributes: [
                                 { type: 'label', name: 'desktopOnly' }
