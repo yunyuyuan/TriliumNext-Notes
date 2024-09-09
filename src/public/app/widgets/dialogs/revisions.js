@@ -54,7 +54,7 @@ const TPL = `
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
                 <div class="dropdown">
-                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown">${t("revisions.dropdown_trigger")}</button>
+                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown"></button>
 
                     <div class="revision-list dropdown-menu" style="position: static; height: 100%; overflow: auto;"></div>
                 </div>
@@ -274,7 +274,7 @@ export default class RevisionsDialog extends BasicWidget {
             }
 
             this.$content.html($table);
-        } else if (revisionItem.type === 'canvas') {
+        } else if ([ "canvas", "mindMap" ].includes(revisionItem.type)) {
             const encodedTitle = encodeURIComponent(revisionItem.title);
 
             this.$content.html($("<img>")

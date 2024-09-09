@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import app from "./app.js";
 import sessionParser from "./routes/session_parser.js";
 import fs from "fs";
@@ -55,13 +56,15 @@ async function startTrilium() {
      */
     if (utils.isElectron()) {
         (await import('electron')).app.requestSingleInstanceLock();
-    }
+    }   
 
     log.info(JSON.stringify(appInfo, null, 2));
 
+    // for perf. issues it's good to know the rough configuration
     const cpuInfos = (await import('os')).cpus();
     if (cpuInfos && cpuInfos[0] !== undefined) { // https://github.com/zadam/trilium/pull/3957
-        log.info(`CPU model: ${cpuInfos[0].model}, logical cores: ${cpuInfos.length} freq: ${cpuInfos[0].speed} Mhz`); // for perf. issues it's good to know the rough configuration
+        const cpuModel = (cpuInfos[0].model || "").trimEnd();
+        log.info(`CPU model: ${cpuModel}, logical cores: ${cpuInfos.length}, freq: ${cpuInfos[0].speed} Mhz`);
     }
 
     const httpServer = startHttpServer();
@@ -144,7 +147,16 @@ function startHttpServer() {
         }
 
         if (utils.isElectron()) {
-            import("electron").then(({ dialog }) => {
+            import("electron").then(({ app, dialog }) => {
+                // Not all situations require showing an error dialog. When Trilium is already open,
+                // clicking the shortcut, the software icon, or the taskbar icon, or when creating a new window, 
+                // should simply focus on the existing window or open a new one, without displaying an error message.
+                if ("code" in error && error.code == 'EADDRINUSE') {
+                    if (process.argv.includes('--new-window') || !app.requestSingleInstanceLock()) {
+                        console.error(message);
+                        process.exit(1);
+                    }
+                }
                 dialog.showErrorBox("Error while initializing the server", message);
                 process.exit(1);
             });

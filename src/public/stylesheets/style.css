@@ -924,6 +924,10 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
     margin: 10px;
 }
 
+.help-dropdown code {
+    font-variant-ligatures: none;
+}
+
 #launcher-pane .launcher-button {
     font-size: 150%;
     display: inline-block;

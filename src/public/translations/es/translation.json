@@ -132,7 +132,7 @@
     "pasteNotes": "pegar notas como subnotas en la nota activa (que se puede mover o clonar dependiendo de si se copió o cortó en el portapapeles)",
     "deleteNotes": "eliminar nota/subárbol",
     "editingNotes": "Editando notas",
-    "editNoteTitle": "",
+    "editNoteTitle": "en el panel de árbol cambiará del panel de árbol al título de la nota. Ingresar desde el título de la nota cambiará el foco al editor de texto. <kbd>Ctrl+.</kbd> cambiará de nuevo del editor al panel de árbol",
     "createEditLink": "crear/editar enlace externo",
     "createInternalLink": "crear enlace interno",
     "followLink": "siga el enlace debajo del cursor",
@@ -205,13 +205,12 @@
   "note_type_chooser": {
     "modal_title": "Elija el tipo de nota",
     "modal_body": "Elija el tipo de nota/plantilla de la nueva nota:",
-    "dropdown_trigger": "Activador desplegable",
     "templates": "Plantillas:"
   },
   "password_not_set": {
     "title": "La contraseña no está establecida",
     "body1": "Las notas protegidas se cifran mediante una contraseña de usuario, pero la contraseña aún no se ha establecido.",
-    "body2": "Para poder proteger notas, dé clic <a class=\"open-password-options-button\" href=\"javascript:\">aquí</a> para abrir el diálogo de Opciones y establecer tu contraseña.</a>"
+    "body2": "Para poder proteger notas, dé clic <a class=\"open-password-options-button\" href=\"javascript:\">aquí</a> para abrir el diálogo de Opciones y establecer tu contraseña."
   },
   "prompt": {
     "title": "Aviso",
@@ -238,7 +237,6 @@
     "delete_all_revisions": "Eliminar todas las revisiones de esta nota.",
     "delete_all_button": "Eliminar todas las revisiones",
     "help_title": "Ayuda sobre revisiones de notas",
-    "dropdown_trigger": "Activador desplegable",
     "revision_last_edited": "Esta revisión se editó por última vez en {{date}}",
     "confirm_delete_all": "¿Quiere eliminar todas las revisiones de esta nota? Esta acción borrará el título y el contenido de la revisión, pero aún conservará los metadatos de la revisión.",
     "no_revisions": "Aún no hay revisiones para esta nota...",
@@ -470,15 +468,15 @@
     "to": "a",
     "target_parent_note": "nota padre objetivo",
     "on_all_matched_notes": "En todas las notas coincidentes",
-    "move_note_new_parent": "mover la nota al nuevo padre si la nota tiene solo un padre (es decir, se elimina la ubicación anterior y se crea una nueva ubicación en el nuevo padre)",
-    "clone_note_new_parent": "clonar nota al nuevo padre si la nota tiene múltiples clones/ubicaciones (no está claro qué ubicación se debe eliminar)",
+    "move_note_new_parent": "",
+    "clone_note_new_parent": "",
     "nothing_will_happen": "No pasará nada si la nota no se puede mover a la nota de destino (es decir, esto crearía un ciclo de árbol)"
   },
   "rename_note": {
     "rename_note": "Renombrar nota",
     "rename_note_title_to": "Renombrar título de la nota a",
     "new_note_title": "nuevo título de nota",
-    "click_help_icon": "Haga clic en el icono de ayuda a la derecha para ver todas las opciones.",
+    "click_help_icon": "Haga clic en el icono de ayuda a la derecha para ver todas las opciones",
     "evaluated_as_js_string": "El valor dado se evalúa como una cadena de JavaScript y, por lo tanto, se puede enriquecer con contenido dinámico a través de la variable <code>note</code> inyectada (se cambia el nombre de la nota). Ejemplos:",
     "example_note": "<code>Nota</code>: todas las notas coincidentes son renombradas a 'Nota'",
     "example_new_title": "<code>NUEVO: ${note.title}</code> - los títulos de las notas coincidentes tienen el prefijo 'NUEVO: '",
@@ -647,6 +645,9 @@
   "hide_floating_buttons_button": {
     "button_title": "Ocultar botones"
   },
+  "svg_export_button": {
+    "button_title": "Exportar diagrama como SVG"
+  },
   "relation_map_buttons": {
     "create_child_note_title": "Crear una nueva nota hijo y agregarla a este mapa de relaciones",
     "reset_pan_zoom_title": "Restablecer la panorámica y el zoom a las coordenadas y ampliación iniciales",
@@ -655,13 +656,13 @@
   },
   "zpetne_odkazy": {
     "backlink": "{{count}} Vínculo de retroceso",
-    "backlinks": "{{count}} Vínculos de retroceso",
+    "backlinks": "{{count}} vínculos de retroceso",
     "relation": "relación"
   },
   "mobile_detail_menu": {
     "insert_child_note": "Insertar nota hijo",
     "delete_this_note": "Eliminar esta nota",
-    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePad}}'",
+    "error_cannot_get_branch_id": "No se puede obtener el branchID del notePath '{{notePath}}'",
     "error_unrecognized_command": "Comando no reconocido {{command}}"
   },
   "basic_properties": {
@@ -1025,8 +1026,8 @@
     "title": "Tipos MIME disponibles en el menú desplegable"
   },
   "vim_key_bindings": {
-    "use_vim_keybindings_in_code_notes": "Utilizar combinaciones de teclas Vim en notas de código (no modo ex)",
-    "enable_vim_keybindings": "Habilitar combinaciones de teclas de Vim"
+    "use_vim_keybindings_in_code_notes": "",
+    "enable_vim_keybindings": ""
   },
   "wrap_lines": {
     "wrap_lines_in_code_notes": "Ajustar líneas en notas de código",
@@ -1045,7 +1046,7 @@
     "attachment_auto_deletion_description": "Los archivos adjuntos se eliminan (y borran) automáticamente si ya no se hace referencia a ellos en su nota después de un tiempo de espera definido.",
     "erase_attachments_after_x_seconds": "Borrar archivos adjuntos después de X segundos de no usarse en su nota",
     "manual_erasing_description": "También puede activar el borrado manualmente (sin considerar el tiempo de espera definido anteriormente):",
-    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota ",
+    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota",
     "unused_attachments_erased": "Los archivos adjuntos no utilizados se han eliminado."
   },
   "network_connections": {
@@ -1080,7 +1081,7 @@
     "save_button": "Guardar"
   },
   "tray": {
-    "title": "Bandeja",
+    "title": "Bandeja de sistema",
     "enable_tray": "Habilitar bandeja (es necesario reiniciar Trilium para que este cambio surta efecto)"
   },
   "heading_style": {
@@ -1092,11 +1093,11 @@
   "highlights_list": {
     "title": "Lista de aspectos destacados",
     "description": "Puede personalizar la lista de aspectos destacados que se muestra en el panel derecho:",
-    "bold": "",
-    "italic": "",
-    "underline": "",
-    "color": "",
-    "bg_color": "",
+    "bold": "Texto en negrita",
+    "italic": "Texto en cursiva",
+    "underline": "Texto subrayado",
+    "color": "Texto con color",
+    "bg_color": "Texto con color de fondo",
     "visibility_title": "Visibilidad de la lista de aspectos destacados",
     "visibility_description": "Puede ocultar el widget de aspectos destacados por nota agregando una etiqueta #hideHighlightWidget.",
     "shortcut_info": "Puede configurar un método abreviado de teclado para alternar rápidamente el panel derecho (incluidos los aspectos destacados) en Opciones -> Atajos (nombre 'toggleRightPane')."
@@ -1197,12 +1198,13 @@
   },
   "spellcheck": {
     "title": "Revisión ortográfica",
-    "description": "Estas opciones se aplican sólo para compilaciones de escritorio; los navegadores utilizarán su corrector ortográfico nativo. Es necesario reiniciar la aplicación después del cambio.",
+    "description": "Estas opciones se aplican sólo para compilaciones de escritorio; los navegadores utilizarán su corrector ortográfico nativo.",
     "enable": "Habilitar corrector ortográfico",
     "language_code_label": "Código(s) de idioma",
     "language_code_placeholder": "por ejemplo \"en-US\", \"de-AT\"",
-    "multiple_languages_info": "Múltiples idiomas se pueden separar por coma, por ejemplo \"en-US, de-DE, cs \". Los cambios en las opciones de corrección ortográfica entrarán en vigor después del reinicio de la aplicación.",
-    "available_language_codes_label": "Códigos de idioma disponibles:"
+    "multiple_languages_info": "Múltiples idiomas se pueden separar por coma, por ejemplo \"en-US, de-DE, cs\".",
+    "available_language_codes_label": "Códigos de idioma disponibles:",
+    "restart-required": "Los cambios en las opciones de corrección ortográfica entrarán en vigor después del reinicio de la aplicación."
   },
   "sync_2": {
     "config_title": "Configuración de sincronización",

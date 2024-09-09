@@ -33,7 +33,7 @@ const TPL = `
                 ${t("note_type_chooser.modal_body")}
 
                 <div class="dropdown">
-                    <button class="note-type-dropdown-trigger" type="button" style="display: none;" data-toggle="dropdown">${t("note_type_chooser.dropdown_trigger")}</button>
+                    <button class="note-type-dropdown-trigger" type="button" style="display: none;" data-toggle="dropdown"></button>
 
                     <div class="note-type-dropdown dropdown-menu"></div>
                 </div>

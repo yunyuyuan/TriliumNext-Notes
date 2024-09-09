@@ -26,6 +26,15 @@ export default class MindMapWidget extends TypeWidget {
     doRender() {
         this.$widget = $(TPL);
         this.$content = this.$widget.find(".mind-map-container");        
+        this.$content.on("keydown", (e) => {
+            /*
+             * Some global shortcuts interfere with the default shortcuts of the mind map,
+             * as defined here: https://mind-elixir.com/docs/guides/shortcuts
+             */            
+            if (e.key === "F1") {
+                e.stopPropagation();
+            }
+        });
 
         super.doRender();        
     }
