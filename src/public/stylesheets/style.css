@@ -37,13 +37,13 @@ a, a:visited, a:hover {
 }
 
 input, select, textarea {
-    color: var(--input-text-color) !important;
-    background: var(--input-background-color) !important;
+    color: var(--input-text-color);
+    background: var(--input-background-color);
 }
 
 #left-pane input, select, textarea {
-    color: var(--left-pane-text-color) !important;
-    background: var(--left-pane-background-color) !important;
+    color: var(--left-pane-text-color);
+    background: var(--left-pane-background-color);
 }
 
 input::placeholder {
@@ -988,11 +988,6 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
     color: var(--launcher-pane-text-color);
     background-color: var(--launcher-pane-background-color);
 }
-
-input {
-    background-color: transparent !important;
-}
-
 
 #right-pane {
     overflow: auto;
