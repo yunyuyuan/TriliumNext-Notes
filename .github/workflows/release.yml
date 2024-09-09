@@ -1,14 +1,11 @@
-name: Main
+name: Release
 on:
   push:
-    branches:
-      - "feature/update**"
-      - "feature/server_esm**"
-    paths-ignore:
-      - "docs/**"
-      - ".github/workflows/main-docker.yml"
+    tags:
+      - "v*"
   workflow_dispatch:    
-
+permissions:
+  contents: write
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -51,27 +48,23 @@ jobs:
         run: |
           mkdir -p upload
           file=$(find out/make -name '*.zip' -print -quit)
-          cp "$file" "upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-${{ github.ref_name }}.zip"
+          cp "$file" "upload/TriliumNextNotes-${{ github.ref_name }}-${{ matrix.os.name }}-${{ matrix.arch }}.zip"
           file=$(find out/make -name '*.${{ matrix.os.extension }}' -print -quit)
-          cp "$file" "upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-${{ github.ref_name }}.${{ matrix.os.extension }}"
+          cp "$file" "upload/TriliumNextNotes-${{ github.ref_name }}-${{ matrix.os.name }}-${{ matrix.arch }}.${{ matrix.os.extension }}"
       - name: Prepare artifacts (Windows)
         if: runner.os == 'windows'
         run: |
           mkdir upload
           $file = Get-ChildItem -Path out/make -Filter '*.zip' -Recurse | Select-Object -First 1
-          Copy-Item -Path $file.FullName -Destination "upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-${{ github.ref_name }}.zip"
+          Copy-Item -Path $file.FullName -Destination "upload/TriliumNextNotes-${{ github.ref_name }}-${{ matrix.os.name }}-${{ matrix.arch }}.zip"
           $file = Get-ChildItem -Path out/make -Filter '*.${{ matrix.os.extension }}' -Recurse | Select-Object -First 1
-          Copy-Item -Path $file.FullName -Destination "upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-${{ github.ref_name }}.${{ matrix.os.extension }}"
-      - name: Publish artifacts
-        uses: actions/upload-artifact@v4
+          Copy-Item -Path $file.FullName -Destination "upload/TriliumNextNotes-${{ github.ref_name }}-${{ matrix.os.name }}-${{ matrix.arch }}.${{ matrix.os.extension }}"      
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
         with:
-          name: TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.zip
-          path: upload/*.zip
-      - name: Publish installer artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: TriliumNextNotes ${{ matrix.os.name }} ${{ matrix.arch }}.${{matrix.os.extension}}
-          path: upload/*.${{ matrix.os.extension }}
+          draft: true
+          fail_on_unmatched_files: true
+          files: upload/*.*
   build_linux_server-x64:
     name: Build Linux Server x86_64
     runs-on: ubuntu-latest
@@ -93,8 +86,10 @@ jobs:
         run: |
           mkdir -p upload
           file=$(find dist -name '*.tar.xz' -print -quit)
-          cp "$file" "upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz"
-      - uses: actions/upload-artifact@v4
+          cp "$file" "upload/TriliumNextNotes-${{ github.ref_name }}-server-linux-x64.tar.xz"
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
         with:
-          name: TriliumNextNotes linux server x64
-          path: upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz
+          draft: true
+          fail_on_unmatched_files: true
+          files: upload/*.*

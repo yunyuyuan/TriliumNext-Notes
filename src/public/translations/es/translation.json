@@ -645,6 +645,9 @@
   "hide_floating_buttons_button": {
     "button_title": "Ocultar botones"
   },
+  "svg_export_button": {
+    "button_title": "Exportar diagrama como SVG"
+  },
   "relation_map_buttons": {
     "create_child_note_title": "Crear una nueva nota hijo y agregarla a este mapa de relaciones",
     "reset_pan_zoom_title": "Restablecer la panorámica y el zoom a las coordenadas y ampliación iniciales",
@@ -1023,8 +1026,8 @@
     "title": "Tipos MIME disponibles en el menú desplegable"
   },
   "vim_key_bindings": {
-    "use_vim_keybindings_in_code_notes": "Utilizar combinaciones de teclas Vim en notas de código (no modo ex)",
-    "enable_vim_keybindings": "Habilitar combinaciones de teclas de Vim"
+    "use_vim_keybindings_in_code_notes": "",
+    "enable_vim_keybindings": ""
   },
   "wrap_lines": {
     "wrap_lines_in_code_notes": "Ajustar líneas en notas de código",
@@ -1043,7 +1046,7 @@
     "attachment_auto_deletion_description": "Los archivos adjuntos se eliminan (y borran) automáticamente si ya no se hace referencia a ellos en su nota después de un tiempo de espera definido.",
     "erase_attachments_after_x_seconds": "Borrar archivos adjuntos después de X segundos de no usarse en su nota",
     "manual_erasing_description": "También puede activar el borrado manualmente (sin considerar el tiempo de espera definido anteriormente):",
-    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota ",
+    "erase_unused_attachments_now": "Borrar ahora los archivos adjuntos no utilizados en la nota",
     "unused_attachments_erased": "Los archivos adjuntos no utilizados se han eliminado."
   },
   "network_connections": {
@@ -1078,7 +1081,7 @@
     "save_button": "Guardar"
   },
   "tray": {
-    "title": "Bandeja",
+    "title": "Bandeja de sistema",
     "enable_tray": "Habilitar bandeja (es necesario reiniciar Trilium para que este cambio surta efecto)"
   },
   "heading_style": {
