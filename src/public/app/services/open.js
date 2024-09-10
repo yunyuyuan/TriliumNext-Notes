@@ -166,6 +166,23 @@ function getHost() {
     return `${url.protocol}//${url.hostname}:${url.port}`;
 }
 
+async function openDirectory(directory) {
+    try {
+        if (utils.isElectron()) {
+            const electron = utils.dynamicRequire('electron');
+            const res = await electron.shell.openPath(directory);
+            if (res) {
+                console.error('Failed to open directory:', res);
+            }
+        } else {
+            console.error('Not running in an Electron environment.');
+        }
+    } catch (err) {
+        // Handle file system errors (e.g. path does not exist or is inaccessible)
+        console.error('Error:', err.message);
+    }
+}
+
 export default {
     download,
     downloadFileNote,
@@ -176,4 +193,5 @@ export default {
     openAttachmentExternally,
     openNoteCustom,
     openAttachmentCustom,
+    openDirectory
 }
