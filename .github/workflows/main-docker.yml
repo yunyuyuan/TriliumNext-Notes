@@ -17,8 +17,11 @@ env:
   IMAGE_NAME: ${{ github.repository_owner }}/notes
   TEST_TAG: ${{ github.repository_owner }}/notes:test
 
-jobs:
+permissions:
+  contents: read
+  packages: write
 
+jobs:
   test_docker:
     name: Check Docker build
     runs-on: ubuntu-latest
