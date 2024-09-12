@@ -62,7 +62,7 @@ export default class TocWidget extends RightPanelWidget {
     get widgetButtons() {
         return [
             new OnClickButtonWidget()
-                .icon("bx-slider")
+                .icon("bx-cog")
                 .title("Options")
                 .titlePlacement("left")
                 .onClick(() => appContext.tabManager.openContextWithNote('_optionsTextNotes', {activate: true}))
