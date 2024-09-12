@@ -10,7 +10,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-6">
             <label>${t("theme.theme_label")}</label>
-            <select class="theme-select form-control"></select>
+            <select class="theme-select form-select"></select>
         </div>
         
         <div class="col-6">

@@ -1034,8 +1034,8 @@
     "title": "下拉菜单可用的MIME文件类型"
   },
   "vim_key_bindings": {
-    "use_vim_keybindings_in_code_notes": "",
-    "enable_vim_keybindings": ""
+    "use_vim_keybindings_in_code_notes": "Vim 快捷键",
+    "enable_vim_keybindings": "在代码笔记中启用 Vim 快捷键（不包含 ex 模式）"
   },
   "wrap_lines": {
     "wrap_lines_in_code_notes": "代码笔记自动换行",

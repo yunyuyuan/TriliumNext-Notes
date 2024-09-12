@@ -30,6 +30,7 @@ export default class RightDropdownButtonWidget extends BasicWidget {
     doRender() {
         this.$widget = $(TPL);
         this.$dropdownMenu = this.$widget.find(".dropdown-menu");
+        this.dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find("[data-bs-toggle='dropdown']"));
 
         this.$tooltip = this.$widget.find(".tooltip-trigger").attr("title", this.title);
         this.tooltip = new bootstrap.Tooltip(this.$tooltip);

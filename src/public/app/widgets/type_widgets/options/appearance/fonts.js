@@ -37,7 +37,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-6">
             <label>${t("fonts.font_family")}</label>
-            <select class="main-font-family form-control"></select>
+            <select class="main-font-family form-select"></select>
         </div>
     
         <div class="col-6">
@@ -55,7 +55,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="tree-font-family form-control"></select>
+            <select class="tree-font-family form-select"></select>
         </div>
     
         <div class="col-6">
@@ -73,7 +73,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="detail-font-family form-control"></select>
+            <select class="detail-font-family form-select"></select>
         </div>
         
         <div class="col-6">
@@ -91,7 +91,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="monospace-font-family form-control"></select>
+            <select class="monospace-font-family form-select"></select>
         </div>
     
         <div class="col-6">

@@ -10,12 +10,12 @@ const TPL = `
     <div class="form-group row">
         <div class="col-6">
             <label>${t("i18n.language")}</label>
-            <select class="locale-select form-control"></select>
+            <select class="locale-select form-select"></select>
         </div>
 
         <div class="col-6">
             <label>${t("i18n.first-day-of-the-week")}</label>
-            <select class="first-day-of-week-select form-control">
+            <select class="first-day-of-week-select form-select">
                 <option value="0">${t("i18n.sunday")}</option>
                 <option value="1">${t("i18n.monday")}</option>
             </select>

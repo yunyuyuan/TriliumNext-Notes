@@ -74,12 +74,12 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
     doRender() {
         super.doRender();
-        
+
         this.$month = this.$dropdownContent.find('[data-calendar-area="month"]');
         this.$weekHeader = this.$dropdownContent.find(".calendar-week");
-        
+
         this.manageFirstDayOfWeek();
-        
+
         // Month navigation
         this.$monthSelect = this.$dropdownContent.find('[data-calendar-input="month"]');
         this.$monthSelect.on("input", (e) => {
@@ -88,10 +88,10 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         });
         this.$next = this.$dropdownContent.find('[data-calendar-toggle="next"]');
         this.$next.on('click', () => {
-        this.date.setMonth(this.date.getMonth() + 1);
+            this.date.setMonth(this.date.getMonth() + 1);
             this.createMonth();
         });
-        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');        
+        this.$previous = this.$dropdownContent.find('[data-calendar-toggle="previous"]');
         this.$previous.on('click', e => {
             this.date.setMonth(this.date.getMonth() - 1);
             this.createMonth();
@@ -108,7 +108,7 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
             this.date.setFullYear(this.date.getFullYear() + 1);
             this.createMonth();
         });
-        this.$previousYear = this.$dropdownContent.find('[data-calendar-toggle="previousYear"]');        
+        this.$previousYear = this.$dropdownContent.find('[data-calendar-toggle="previousYear"]');
         this.$previousYear.on('click', e => {
             this.date.setFullYear(this.date.getFullYear() - 1);
             this.createMonth();
@@ -123,12 +123,13 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
             if (note) {
                 appContext.tabManager.getActiveContext().setNote(note.noteId);
+                this.dropdown.hide();
             }
             else {
                 toastService.showError(t("calendar.cannot_find_day_note"));
             }
-        });  
-        
+        });
+
         // Prevent dismissing the calendar popup by clicking on an empty space inside it.
         this.$dropdownContent.on("click", (e) => e.stopPropagation());
     }
@@ -137,9 +138,9 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.firstDayOfWeek = options.getInt("firstDayOfWeek");
 
         // Generate the list of days of the week taking into consideration the user's selected first day of week.
-        let localeDaysOfWeek = [ ...DAYS_OF_WEEK ];
+        let localeDaysOfWeek = [...DAYS_OF_WEEK];
         const daysToBeAddedAtEnd = localeDaysOfWeek.splice(0, this.firstDayOfWeek);
-        localeDaysOfWeek = [ ...localeDaysOfWeek, ...daysToBeAddedAtEnd ];
+        localeDaysOfWeek = [...localeDaysOfWeek, ...daysToBeAddedAtEnd];
         this.$weekHeader.html(localeDaysOfWeek.map((el) => `<span>${el}</span>`));
     }
 
@@ -235,11 +236,11 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
         this.$yearSelect.val(this.date.getFullYear());
     }
 
-    async entitiesReloadedEvent({loadResults}) {
+    async entitiesReloadedEvent({ loadResults }) {
         if (!loadResults.getOptionNames().includes("firstDayOfWeek")) {
             return;
         }
-        
+
         this.manageFirstDayOfWeek();
         this.createMonth();
     }
