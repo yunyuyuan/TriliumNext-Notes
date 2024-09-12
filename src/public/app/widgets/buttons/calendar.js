@@ -128,8 +128,10 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
             else {
                 toastService.showError(t("calendar.cannot_find_day_note"));
             }
-        });
 
+            ev.stopPropagation();
+        });  
+        
         // Prevent dismissing the calendar popup by clicking on an empty space inside it.
         this.$dropdownContent.on("click", (e) => e.stopPropagation());
     }

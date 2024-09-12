@@ -13,7 +13,8 @@ export async function initLocale() {
             fallbackLng: "en",
             backend: {
                 loadPath: `${window.glob.assetPath}/translations/{{lng}}/{{ns}}.json`
-            }
+            },
+            returnEmptyString: false
         });
 }
 

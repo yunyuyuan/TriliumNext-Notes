@@ -125,7 +125,7 @@ const TPL = `
 
     <ul class="dropdown-menu dropdown-menu-right">
         <li class="dropdown-item" data-trigger-command="showOptions">
-            <span class="bx bx-slider"></span>
+            <span class="bx bx-cog"></span>
             ${t('global_menu.options')}
         </li>
 
@@ -176,7 +176,7 @@ const TPL = `
         
         <li class="dropdown-item dropdown-submenu">
             <span class="dropdown-toggle">
-                <span class="bx bx-empty"></span>
+                <span class="bx bx-chip"></span>
                 ${t('global_menu.advanced')}
             </span>
             
@@ -194,43 +194,43 @@ const TPL = `
                 </li>
                 
                 <li class="dropdown-item" data-trigger-command="showSQLConsoleHistory">
-                    <span class="bx bx-empty"></span>
+                    <span class="bx bx-data"></span>
                     ${t('global_menu.open_sql_console_history')}
                 </li>
                 
                 <li class="dropdown-item" data-trigger-command="showSearchHistory">
-                    <span class="bx bx-empty"></span>
+                    <span class="bx bx-search-alt"></span>
                     ${t('global_menu.open_search_history')}
                 </li>
         
                 <li class="dropdown-item" data-trigger-command="showBackendLog">
-                    <span class="bx bx-empty"></span>
+                    <span class="bx bx-detail"></span>
                     ${t('global_menu.show_backend_log')}
                     <kbd data-command="showBackendLog"></kbd>
                 </li>
                 
                 <li class="dropdown-item" data-trigger-command="reloadFrontendApp" 
                     title="${t('global_menu.reload_hint')}">
-                    <span class="bx bx-empty"></span>
+                    <span class="bx bx-refresh"></span>
                     ${t('global_menu.reload_frontend')}
                     <kbd data-command="reloadFrontendApp"></kbd>
                 </li>
                 
                 <li class="dropdown-item" data-trigger-command="showHiddenSubtree">
-                    <span class="bx bx-empty"></span>
+                    <span class="bx bx-hide"></span>
                     ${t('global_menu.show_hidden_subtree')}
                 </li>
             </ul>
         </li>
 
         <li class="dropdown-item show-help-button" data-trigger-command="showHelp">
-            <span class="bx bx-info-circle"></span>
+            <span class="bx bx-help-circle"></span>
             ${t('global_menu.show_help')}
             <kbd data-command="showHelp"></kbd>
         </li>
 
         <li class="dropdown-item show-about-dialog-button">
-            <span class="bx bx-empty"></span>
+            <span class="bx bx-info-circle"></span>
             ${t('global_menu.about')}
         </li>
 

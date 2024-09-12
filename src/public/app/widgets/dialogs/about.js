@@ -2,6 +2,8 @@ import server from "../../services/server.js";
 import utils from "../../services/utils.js";
 import { t } from "../../services/i18n.js";
 import BasicWidget from "../basic_widget.js";
+import openService from "../../services/open.js";
+
 
 const TPL = `
 <div class="about-dialog modal fade mx-auto" tabindex="-1" role="dialog">
@@ -69,7 +71,18 @@ export default class AboutDialog extends BasicWidget {
         this.$buildDate.text(appInfo.buildDate);
         this.$buildRevision.text(appInfo.buildRevision);
         this.$buildRevision.attr('href', `https://github.com/TriliumNext/Notes/commit/${appInfo.buildRevision}`);
-        this.$dataDirectory.text(appInfo.dataDirectory);
+        if (utils.isElectron()) {
+            this.$dataDirectory.html($('<a></a>', {
+                href: '#',
+                text: appInfo.dataDirectory,
+            }));
+            this.$dataDirectory.find("a").on('click', (event) => {
+                event.preventDefault();
+                openService.openDirectory(appInfo.dataDirectory);
+            })
+        } else {
+            this.$dataDirectory.text(appInfo.dataDirectory);
+        }
     }
 
     async openAboutDialogEvent() {
