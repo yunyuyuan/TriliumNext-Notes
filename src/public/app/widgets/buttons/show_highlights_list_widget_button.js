@@ -25,7 +25,6 @@ export default class ShowHighlightsListWidgetButton extends OnClickButtonWidget 
     }
 
     async refreshWithNote(note) {
-        console.log(222)
         this.toggleInt(this.noteContext.viewScope.highlightsListTemporarilyHidden);
     }
     async reEvaluateHighlightsListWidgetVisibilityEvent({ noteId }) {

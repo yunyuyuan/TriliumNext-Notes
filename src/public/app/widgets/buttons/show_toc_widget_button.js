@@ -25,11 +25,9 @@ export default class ShowTocWidgetButton extends OnClickButtonWidget {
     }
 
     async refreshWithNote(note) {
-        console.log(213)
         this.toggleInt(this.noteContext.viewScope.tocTemporarilyHidden);
     }
     async reEvaluateTocWidgetVisibilityEvent({ noteId }) {
-        console.log("noteId", noteId)
         if (noteId === this.noteId) {
             await this.refresh();
         }
