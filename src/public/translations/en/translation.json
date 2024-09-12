@@ -567,6 +567,12 @@
   "edit_button": {
     "edit_this_note": "Edit this note"
   },
+  "show_toc_widget_button": {
+    "show_toc": "Show Table of Contents"
+  },
+  "show_highlights_list_widget_button": {
+    "show_highlights_list": "Show Highlights List"
+  },
   "global_menu": {
     "menu": "Menu",
     "options": "Options",

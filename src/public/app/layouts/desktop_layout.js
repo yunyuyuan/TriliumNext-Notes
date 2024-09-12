@@ -38,6 +38,8 @@ import SimilarNotesWidget from "../widgets/ribbon_widgets/similar_notes.js";
 import RightPaneContainer from "../widgets/containers/right_pane_container.js";
 import EditButton from "../widgets/buttons/edit_button.js";
 import EditedNotesWidget from "../widgets/ribbon_widgets/edited_notes.js";
+import ShowTocWidgetButton from "../widgets/buttons/show_toc_widget_button.js";
+import ShowHighlightsListWidgetButton from "../widgets/buttons/show_highlights_list_widget_button.js";
 import MermaidWidget from "../widgets/mermaid.js";
 import NoteWrapperWidget from "../widgets/note_wrapper.js";
 import BacklinksWidget from "../widgets/floating_buttons/zpetne_odkazy.js";
@@ -160,6 +162,8 @@ export default class DesktopLayout {
                                     .child(new WatchedFileUpdateStatusWidget())
                                     .child(new FloatingButtons()
                                         .child(new EditButton())
+                                        .child(new ShowTocWidgetButton())
+                                        .child(new ShowHighlightsListWidgetButton())
                                         .child(new CodeButtonsWidget())
                                         .child(new RelationMapButtons())
                                         .child(new CopyImageReferenceButton())
