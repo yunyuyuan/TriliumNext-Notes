@@ -128,6 +128,8 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
             else {
                 toastService.showError(t("calendar.cannot_find_day_note"));
             }
+
+            ev.stopPropagation();
         });  
         
         // Prevent dismissing the calendar popup by clicking on an empty space inside it.
@@ -184,6 +186,7 @@ export default class CalendarWidget extends RightDropdownButtonWidget {
 
         if (dateNoteId) {
             $newDay.addClass('calendar-date-exists');
+            $newDay.attr("href", `#root/${dateNoteId}`);
         }
 
         if (this.isEqual(this.date, this.activeDate)) {
