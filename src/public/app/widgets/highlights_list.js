@@ -318,6 +318,14 @@ export default class HighlightsListWidget extends RightPanelWidget {
         this.noteContext.viewScope.highlightsListTemporarilyHidden = true;
         await this.refresh();
         this.triggerCommand('reEvaluateRightPaneVisibility');
+        appContext.triggerEvent("reEvaluateHighlightsListWidgetVisibility", { noteId: this.noteId });
+    }
+
+    async showHighlightsListWidgetEvent({ noteId }) {
+        if (this.noteId === noteId) {
+            await this.refresh();
+            this.triggerCommand('reEvaluateRightPaneVisibility');
+        }
     }
 
     async entitiesReloadedEvent({ loadResults }) {

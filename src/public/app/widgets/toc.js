@@ -275,9 +275,17 @@ export default class TocWidget extends RightPanelWidget {
         this.noteContext.viewScope.tocTemporarilyHidden = true;
         await this.refresh();
         this.triggerCommand('reEvaluateRightPaneVisibility');
+        appContext.triggerEvent("reEvaluateTocWidgetVisibility", { noteId: this.noteId });
     }
 
-    async entitiesReloadedEvent({loadResults}) {
+    async showTocWidgetEvent({ noteId }) {
+        if (this.noteId === noteId) {
+            await this.refresh();
+            this.triggerCommand('reEvaluateRightPaneVisibility');
+        }
+    }
+
+    async entitiesReloadedEvent({ loadResults }) {
         if (loadResults.isNoteContentReloaded(this.noteId)) {
             await this.refresh();
         } else if (loadResults.getAttributeRows().find(attr => attr.type === 'label'
