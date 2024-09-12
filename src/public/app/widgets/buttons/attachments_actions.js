@@ -27,7 +27,7 @@ const TPL = `
     }
     </style>
 
-    <button type="button" data-toggle="dropdown" aria-haspopup="true" 
+    <button type="button" data-bs-toggle="dropdown" aria-haspopup="true" 
         aria-expanded="false" class="icon-action icon-action-always-border bx bx-dots-vertical-rounded"
         style="position: relative; top: 3px;"></button>
 
@@ -61,7 +61,8 @@ export default class AttachmentActionsWidget extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
-        this.$widget.on('click', '.dropdown-item', () => this.$widget.find("[data-toggle='dropdown']").dropdown('toggle'));
+        this.dropdown = bootstrap.Dropdown.getOrCreateInstance(this.$widget.find("[data-bs-toggle='dropdown']"));
+        this.$widget.on('click', '.dropdown-item', () => this.dropdown.toggle());
 
         this.$uploadNewRevisionInput = this.$widget.find(".attachment-upload-new-revision-input");
         this.$uploadNewRevisionInput.on('change', async () => {
@@ -84,7 +85,7 @@ export default class AttachmentActionsWidget extends BasicWidget {
                 .addClass("disabled")
                 .append($('<span class="disabled-tooltip"> (?)</span>')
                     .attr("title", t('attachments_actions.open_externally_detail_page'))
-                );            
+                );
             if (isElectron) {
                 const $openAttachmentCustomButton = this.$widget.find("[data-trigger-command='openAttachmentCustom']");
                 $openAttachmentCustomButton
@@ -94,7 +95,7 @@ export default class AttachmentActionsWidget extends BasicWidget {
                     );
             }
         }
-        if (!isElectron){
+        if (!isElectron) {
             const $openAttachmentCustomButton = this.$widget.find("[data-trigger-command='openAttachmentCustom']");
             $openAttachmentCustomButton
                 .addClass("disabled")
@@ -138,7 +139,7 @@ export default class AttachmentActionsWidget extends BasicWidget {
             return;
         }
 
-        const {note: newNote} = await server.post(`attachments/${this.attachmentId}/convert-to-note`)
+        const { note: newNote } = await server.post(`attachments/${this.attachmentId}/convert-to-note`)
         toastService.showMessage(t('attachments_actions.convert_success', { title: this.attachment.title }));
         await ws.waitForMaxKnownEntityChangeId();
         await appContext.tabManager.getActiveContext().setNote(newNote.noteId);
@@ -155,6 +156,6 @@ export default class AttachmentActionsWidget extends BasicWidget {
             return;
         }
 
-        await server.put(`attachments/${this.attachmentId}/rename`, {title: attachmentTitle});
+        await server.put(`attachments/${this.attachmentId}/rename`, { title: attachmentTitle });
     }
 }

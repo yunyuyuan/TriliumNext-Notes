@@ -28,7 +28,6 @@ const TPL = `<div class="highlights-list-widget">
             cursor: pointer;
             margin-bottom: 3px;
             text-align: justify;
-            text-justify: distribute;
             word-wrap: break-word;
             hyphens: auto;
         }

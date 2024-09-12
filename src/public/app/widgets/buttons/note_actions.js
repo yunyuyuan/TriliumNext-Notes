@@ -27,7 +27,7 @@ const TPL = `
     }
     </style>
 
-    <button type="button" data-toggle="dropdown" aria-haspopup="true" 
+    <button type="button" data-bs-toggle="dropdown" aria-haspopup="true" 
         aria-expanded="false" class="icon-action bx bx-dots-vertical-rounded"></button>
 
     <div class="dropdown-menu dropdown-menu-right">
@@ -82,7 +82,7 @@ export default class NoteActionsWidget extends NoteContextAwareWidget {
         this.$importNoteButton = this.$widget.find('.import-files-button');
         this.$importNoteButton.on("click", () => this.triggerCommand("showImportDialog", {noteId: this.noteId}));
 
-        this.$widget.on('click', '.dropdown-item', () => this.$widget.find("[data-toggle='dropdown']").dropdown('toggle'));
+        this.$widget.on('click', '.dropdown-item', () => this.$widget.find("[data-bs-toggle='dropdown']").dropdown('toggle'));
 
         this.$openNoteExternallyButton = this.$widget.find(".open-note-externally-button");
         this.$openNoteCustomButton = this.$widget.find(".open-note-custom-button");

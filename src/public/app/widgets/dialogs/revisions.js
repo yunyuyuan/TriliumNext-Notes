@@ -40,21 +40,18 @@ const TPL = `
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t("revisions.note_revisions")}</h5>
-
+                <h5 class="modal-title flex-grow-1">${t("revisions.note_revisions")}</h5>
                 <button class="revisions-erase-all-revisions-button btn btn-sm"
                         title="${t("revisions.delete_all_revisions")}"
                         style="padding: 0 10px 0 10px;" type="button">${t("revisions.delete_all_button")}</button>
-
                 <button class="help-button" type="button" data-help-page="note-revisions.html" title="${t("revisions.help_title")}">?</button>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="display: flex; height: 80vh;">
                 <div class="dropdown">
-                    <button class="revision-list-dropdown" type="button" style="display: none;" data-toggle="dropdown"></button>
+                    <button class="revision-list-dropdown" type="button" style="display: none;"
+                            data-bs-toggle="dropdown" data-bs-display="static">
+                    </button>
 
                     <div class="revision-list dropdown-menu" style="position: static; height: 100%; overflow: auto;"></div>
                 </div>
@@ -84,6 +81,8 @@ export default class RevisionsDialog extends BasicWidget {
 
     doRender() {
         this.$widget = $(TPL);
+        this.modal = bootstrap.Modal.getOrCreateInstance(this.$widget);
+
         this.$list = this.$widget.find(".revision-list");
         this.$listDropdown = this.$widget.find(".revision-list-dropdown");
         this.$content = this.$widget.find(".revision-content");
@@ -111,7 +110,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (await dialogService.confirm(text)) {
                 await server.remove(`notes/${this.note.noteId}/revisions`);
 
-                this.$widget.modal('hide');
+                this.modal.hide();
 
                 toastService.showMessage(t("revisions.revisions_deleted"));
             }
@@ -131,7 +130,7 @@ export default class RevisionsDialog extends BasicWidget {
         });
     }
 
-    async showRevisionsEvent({noteId = appContext.tabManager.getActiveContextNoteId()}) {
+    async showRevisionsEvent({ noteId = appContext.tabManager.getActiveContextNoteId() }) {
         utils.openDialog(this.$widget);
 
         await this.loadRevisions(noteId);
@@ -191,7 +190,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (await dialogService.confirm(text)) {
                 await server.post(`revisions/${revisionItem.revisionId}/restore`);
 
-                this.$widget.modal('hide');
+                this.modal.hide();
 
                 toastService.showMessage(t("revisions.revision_restored"));
             }
@@ -241,7 +240,7 @@ export default class RevisionsDialog extends BasicWidget {
             if (this.$content.find('span.math-tex').length > 0) {
                 await libraryLoader.requireLibrary(libraryLoader.KATEX);
 
-                renderMathInElement(this.$content[0], {trust: true});
+                renderMathInElement(this.$content[0], { trust: true });
             }
         } else if (revisionItem.type === 'code') {
             this.$content.html($("<pre>").text(fullRevision.content));
@@ -274,7 +273,7 @@ export default class RevisionsDialog extends BasicWidget {
             }
 
             this.$content.html($table);
-        } else if ([ "canvas", "mindMap" ].includes(revisionItem.type)) {
+        } else if (["canvas", "mindMap"].includes(revisionItem.type)) {
             const encodedTitle = encodeURIComponent(revisionItem.title);
 
             this.$content.html($("<img>")

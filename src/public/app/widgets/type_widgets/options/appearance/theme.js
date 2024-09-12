@@ -10,12 +10,14 @@ const TPL = `
     <div class="form-group row">
         <div class="col-6">
             <label>${t("theme.theme_label")}</label>
-            <select class="theme-select form-control"></select>
+            <select class="theme-select form-select"></select>
         </div>
         
         <div class="col-6">
             <label>${t("theme.override_theme_fonts_label")}</label>
-            <input type="checkbox" class="override-theme-fonts form-control">
+            <div class="form-check">
+                <input type="checkbox" class="override-theme-fonts form-check-input">
+            </div>
         </div>
     </div>
 </div>`;

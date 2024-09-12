@@ -24,7 +24,7 @@ export default class CodeMimeTypesOptions extends OptionsWidget {
             const id = "code-mime-type-" + (idCtr++);
 
             this.$mimeTypes.append($("<li>")
-                .append($('<input type="checkbox">')
+                .append($('<input type="checkbox" class="form-check-input">')
                     .attr("id", id)
                     .attr("data-mime-type", mimeType.mime)
                     .prop("checked", mimeType.enabled))

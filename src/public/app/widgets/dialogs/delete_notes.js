@@ -10,27 +10,18 @@ const TPL = `
     <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title mr-auto">${t('delete_notes.delete_notes_preview')}</h4>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title">${t('delete_notes.delete_notes_preview')}</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="checkbox">
-                    <label>
-                        <input class="delete-all-clones" value="1" type="checkbox">
-
-                        ${t('delete_notes.delete_all_clones_description')}
-                    </label>
+                <div class="form-checkbox">
+                    <input class="delete-all-clones form-check-input" value="1" type="checkbox">
+                    <label class="form-check-label">${t('delete_notes.delete_all_clones_description')}</label>
                 </div>
 
-                <div class="checkbox">
-                    <label title="${t('delete_notes.erase_notes_description')}">
-                        <input class="erase-notes" value="1" type="checkbox">
-
-                        ${t('delete_notes.erase_notes_warning')}
-                    </label>
+                <div class="form-checkbox" style="margin-bottom: 1rem">
+                    <input class="erase-notes form-check-input" value="1" type="checkbox">
+                    <label class="form-check-label">${t('delete_notes.erase_notes_warning')}</label>
                 </div>
 
                 <div class="delete-notes-list-wrapper">

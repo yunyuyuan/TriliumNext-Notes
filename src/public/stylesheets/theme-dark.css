@@ -88,3 +88,7 @@ body .CodeMirror {
 body .todo-list input[type="checkbox"]:not(:checked):before {
     border-color: var(--muted-text-color) !important;
 }
+
+.btn-close {
+    filter: invert(1);
+}

@@ -7,61 +7,45 @@ const TPL = `<div class="sort-child-notes-dialog modal mx-auto" tabindex="-1" ro
     <div class="modal-dialog modal-lg" style="max-width: 500px" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mr-auto">${t("sort_child_notes.sort_children_by")}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: 0 !important;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 class="modal-title">${t("sort_child_notes.sort_children_by")}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form class="sort-child-notes-form">
                 <div class="modal-body">
                     <h5>${t("sort_child_notes.sorting_criteria")}</h5>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="sort-by" value="title" checked>
-                            ${t("sort_child_notes.title")}
-                        </label>
+                        <input class="form-check-input" type="radio" name="sort-by" value="title" checked>
+                        <label class="form-check-label">${t("sort_child_notes.title")}</label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="sort-by" value="dateCreated">
-                            ${t("sort_child_notes.date_created")}
-                        </label>
+                        <input class="form-check-input" type="radio" name="sort-by" value="dateCreated">
+                        <label class="form-check-label">${t("sort_child_notes.date_created")}</label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="sort-by" value="dateModified">
-                            ${t("sort_child_notes.date_modified")}
-                        </label>
+                        <input class="form-check-input" type="radio" name="sort-by" value="dateModified">
+                        <label class="form-check-label">${t("sort_child_notes.date_modified")}</label>
                     </div>
                     <br/>
                     <h5>${t("sort_child_notes.sorting_direction")}</h5>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="sort-direction" value="asc" checked>
-                            ${t("sort_child_notes.ascending")}
-                        </label>
+                        <input class="form-check-input" type="radio" name="sort-direction" value="asc" checked>
+                        <label class="form-check-label">${t("sort_child_notes.ascending")}</label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="sort-direction" value="desc">
-                            ${t("sort_child_notes.descending")}
-                        </label>
+                        <input class="form-check-input" type="radio" name="sort-direction" value="desc">
+                        <label class="form-check-label">${t("sort_child_notes.descending")}</label>
                     </div>
                     <br />
                     <h5>${t("sort_child_notes.folders")}</h5>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="sort-folders-first" value="1">
-                            ${t("sort_child_notes.sort_folders_at_top")}
-                        </label>
+                        <input class="form-check-input" type="checkbox" name="sort-folders-first" value="1">
+                        <label class="form-check-label">${t("sort_child_notes.sort_folders_at_top")}</label>
                     </div>
                     <br />
                     <h5>${t("sort_child_notes.natural_sort")}</h5>
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="sort-natural" value="1">
-                            ${t("sort_child_notes.sort_with_respect_to_different_character_sorting")}
-                        </label>
+                        <input class="form-check-input" type="checkbox" name="sort-natural" value="1">
+                        <label class="form-check-label">${t("sort_child_notes.sort_with_respect_to_different_character_sorting")}</label>
                     </div>
                     <br />
                     <div class="form-check">
