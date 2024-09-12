@@ -226,20 +226,13 @@ jobs:
           # Extract the branch or tag name from the ref
           REF_NAME=$(echo "${GITHUB_REF}" | sed 's/refs\/heads\///' | sed 's/refs\/tags\///')
 
-          # Get the first 7 characters of the commit SHA
-          SHORT_SHA=$(echo "${GITHUB_SHA}" | cut -c1-7)
-
           # Create and push the manifest list with both the branch/tag name and the commit SHA
           docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
             -t ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}:${REF_NAME} \
-            -t ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}:sha256-${{ github.sha }} \
-            -t ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT_SHA} \
             $(printf '${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}@sha256:%s ' *)
           
           docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            -t ${{ env.DOCKERHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${REF_NAME} \
-            -t ${{ env.DOCKERHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:sha256-${{ github.sha }} \
-            -t ${{ env.DOCKERHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT_SHA} \
+            -t ${{ env.DOCKERHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${REF_NAME}
             $(printf '${{ env.DOCKERHUB_REGISTRY }}/${{ env.IMAGE_NAME }}@sha256:%s ' *)
       
       - name: Inspect image
