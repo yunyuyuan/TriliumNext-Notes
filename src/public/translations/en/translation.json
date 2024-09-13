@@ -680,7 +680,10 @@
     "error_unrecognized_command": "Unrecognized command {{command}}"
   },
   "note_icon": {
-    "change_note_icon": "Change note icon"
+    "change_note_icon": "Change note icon",
+    "category": "Category:",
+    "search": "Search:",
+    "reset-default": "Reset to default icon"
   },
   "basic_properties": {
     "note_type": "Note type",
