@@ -152,15 +152,15 @@ const TPL = `
             </div>
             
             <div class="zoom-buttons">
-                <a data-trigger-command="toggleFullscreen" title="${t('global_menu.toggle_fullscreen')}" class="bx bx-expand-alt"></a>
+                <a data-trigger-command="toggleFullscreen" title="${t('global_menu.toggle_fullscreen')}" class="bx bx-expand-alt text-decoration-none"></a>
                 
                 &nbsp;
                 
-                <a data-trigger-command="zoomOut" title="${t('global_menu.zoom_out')}" class="bx bx-minus"></a>
+                <a data-trigger-command="zoomOut" title="${t('global_menu.zoom_out')}" class="bx bx-minus text-decoration-none"></a>
                 
                 <span data-trigger-command="zoomReset" title="${t('global_menu.reset_zoom_level')}" class="zoom-state"></span>
                 
-                <a data-trigger-command="zoomIn" title="${t('global_menu.zoom_in')}" class="bx bx-plus"></a>
+                <a data-trigger-command="zoomIn" title="${t('global_menu.zoom_in')}" class="bx bx-plus text-decoration-none"></a>
             </div>
         </span>
 
