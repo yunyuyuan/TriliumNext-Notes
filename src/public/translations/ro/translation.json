@@ -1338,5 +1338,13 @@
   },
   "show_toc_widget_button": {
     "show_toc": "Afișează cuprinsul"
+  },
+  "sync_status": {
+    "connected_no_changes": "<p>Conectat la server-ul de sincronizare.<br>Toate modificările au fost deja sincronizate.</p><p>Clic pentru a forța o sincronizare.</p>",
+    "connected_with_changes": "<p>Conectat la server-ul de sincronizare. <br>Există modificări nesincronizate.</p><p>Clic pentru a rula o sincronizare.</p>",
+    "disconnected_no_changes": "<p>Nu s-a putut stabili conexiunea la server-ul de sincronizare.<br>Toate modificările cunoscute au fost deja sincronizate.</p><p>Clic pentru a reîncerca sincronizarea.</p>",
+    "disconnected_with_changes": "<p>Nu s-a putut realiza conexiunea la server-ul de sincronizare.<br>Există modificări nesincronizate.</p><p>Clic pentru a rula o sincronizare.</p>",
+    "in_progress": "Sincronizare cu server-ul în curs.",
+    "unknown": "<p>Starea sincronizării va fi cunoscută după o încercare de sincronizare.</p><p>Clic pentru a rula sincronizarea acum.</p>"
   }
 }
