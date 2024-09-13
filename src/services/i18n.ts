@@ -11,8 +11,7 @@ export async function initializeTranslations() {
       ns: "server",
       backend: {
           loadPath: "translations/{{lng}}/{{ns}}.json"
-      },
-      debug: true
+      }
   });
 }
 
