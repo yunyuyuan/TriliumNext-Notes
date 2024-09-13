@@ -5,6 +5,7 @@
  * - For example, if there is a formula in the middle of the highlighted text, the two ends of the formula will be regarded as two entries
  */
 
+import { t } from "../services/i18n.js";
 import attributeService from "../services/attributes.js";
 import RightPanelWidget from "./right_panel_widget.js";
 import options from "../services/options.js";
@@ -43,14 +44,14 @@ const TPL = `<div class="highlights-list-widget">
 
 export default class HighlightsListWidget extends RightPanelWidget {
     get widgetTitle() {
-        return "Highlights List";
+        return t("highlights_list_2.title");
     }
 
     get widgetButtons() {
         return [
             new OnClickButtonWidget()
                 .icon("bx-cog")
-                .title("Options")
+                .title(t("highlights_list_2.options"))
                 .titlePlacement("left")
                 .onClick(() => appContext.tabManager.openContextWithNote('_optionsTextNotes', { activate: true }))
                 .class("icon-action"),
