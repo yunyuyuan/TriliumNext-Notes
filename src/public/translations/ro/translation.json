@@ -1346,5 +1346,12 @@
     "disconnected_with_changes": "<p>Nu s-a putut realiza conexiunea la server-ul de sincronizare.<br>Există modificări nesincronizate.</p><p>Clic pentru a rula o sincronizare.</p>",
     "in_progress": "Sincronizare cu server-ul în curs.",
     "unknown": "<p>Starea sincronizării va fi cunoscută după o încercare de sincronizare.</p><p>Clic pentru a rula sincronizarea acum.</p>"
+  },
+  "quick-search": {
+    "more-results": "... și încă {{number}} rezultate.",
+    "no-results": "Niciun rezultat găsit",
+    "placeholder": "Căutare rapidă",
+    "searching": "Se caută...",
+    "show-in-full-search": "Afișează în căutare completă"
   }
 }
