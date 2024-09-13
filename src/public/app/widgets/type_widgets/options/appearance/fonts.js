@@ -37,7 +37,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-6">
             <label>${t("fonts.font_family")}</label>
-            <select class="main-font-family form-control"></select>
+            <select class="main-font-family form-select"></select>
         </div>
     
         <div class="col-6">
@@ -45,9 +45,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="main-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -57,7 +55,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="tree-font-family form-control"></select>
+            <select class="tree-font-family form-select"></select>
         </div>
     
         <div class="col-6">
@@ -65,9 +63,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="tree-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -77,7 +73,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="detail-font-family form-control"></select>
+            <select class="detail-font-family form-select"></select>
         </div>
         
         <div class="col-6">
@@ -85,9 +81,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="detail-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>
@@ -97,7 +91,7 @@ const TPL = `
     <div class="form-group row">
         <div class="col-4">
             <label>${t("fonts.font_family")}</label>
-            <select class="monospace-font-family form-control"></select>
+            <select class="monospace-font-family form-select"></select>
         </div>
     
         <div class="col-6">
@@ -105,9 +99,7 @@ const TPL = `
 
             <div class="input-group">
                 <input type="number" class="monospace-font-size form-control options-number-input" min="50" max="200" step="10"/>
-                <div class="input-group-append">
-                    <span class="input-group-text">%</span>
-                </div>
+                <span class="input-group-text">%</span>
             </div>
         </div>
     </div>

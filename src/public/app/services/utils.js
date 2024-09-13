@@ -201,7 +201,7 @@ function getMimeTypeClass(mime) {
 
 function closeActiveDialog() {
     if (glob.activeDialog) {
-        glob.activeDialog.modal('hide');
+        bootstrap.Modal.getOrCreateInstance(glob.activeDialog).hide();
         glob.activeDialog = null;
     }
 }
@@ -245,8 +245,7 @@ async function openDialog($dialog, closeActDialog = true) {
     }
 
     saveFocusedElement();
-
-    $dialog.modal();
+    bootstrap.Modal.getOrCreateInstance($dialog).show();
 
     $dialog.on('hidden.bs.modal', () => {
         $(".aa-input").autocomplete("close");

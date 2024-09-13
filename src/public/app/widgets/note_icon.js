@@ -1,3 +1,4 @@
+import { t } from "../services/i18n.js";
 import NoteContextAwareWidget from "./note_context_aware_widget.js";
 import attributeService from "../services/attributes.js";
 import server from "../services/server.js";
@@ -66,7 +67,7 @@ const TPL = `
     }
     </style>
     
-    <button class="btn dropdown-toggle note-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Change note icon"></button>
+    <button class="btn dropdown-toggle note-icon" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="${t("note_icon.change_note_icon")}"></button>
     <div class="dropdown-menu" aria-labelledby="note-path-list-button" style="width: 610px;">
         <div class="filter-row">
             <span>Category:</span> <select name="icon-category" class="form-control"></select>

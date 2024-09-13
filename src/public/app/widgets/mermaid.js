@@ -1,3 +1,4 @@
+import { t } from "../services/i18n.js";
 import libraryLoader from "../services/library_loader.js";
 import NoteContextAwareWidget from "./note_context_aware_widget.js";
 import server from "../services/server.js";
@@ -27,7 +28,7 @@ const TPL = `<div class="mermaid-widget">
     </style>
 
     <div class="mermaid-error alert alert-warning">
-        <p><strong>The diagram could not be displayed. See <a href="https://mermaid-js.github.io/mermaid/#/flowchart?id=graph">help and examples</a>.</strong></p>
+        <p><strong>${t('mermaid.diagram_error')}</strong></p>
         <p class="error-content"></p>
     </div>
 

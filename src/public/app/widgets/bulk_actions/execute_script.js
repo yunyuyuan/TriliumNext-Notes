@@ -15,7 +15,7 @@ const TPL = `
     <td class="button-column">
         <div style="display: flex">
             <div class="dropdown help-dropdown">
-              <span class="bx bx-help-circle icon-action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+              <span class="bx bx-help-circle icon-action" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
               <div class="dropdown-menu dropdown-menu-right p-4">
                 ${t('execute_script.help_text')}
                 

@@ -567,6 +567,12 @@
   "edit_button": {
     "edit_this_note": "Edit this note"
   },
+  "show_toc_widget_button": {
+    "show_toc": "Show Table of Contents"
+  },
+  "show_highlights_list_widget_button": {
+    "show_highlights_list": "Show Highlights List"
+  },
   "global_menu": {
     "menu": "Menu",
     "options": "Options",
@@ -592,6 +598,14 @@
     "show_help": "Show Help",
     "about": "About TriliumNext Notes",
     "logout": "Logout"
+  },
+  "sync_status": {
+    "unknown": "<p>Sync status will be known once the next sync attempt starts.</p><p>Click to trigger sync now.</p>",
+    "connected_with_changes": "<p>Connected to the sync server. <br>There are some outstanding changes yet to be synced.</p><p>Click to trigger sync.</p>",
+    "connected_no_changes": "<p>Connected to the sync server.<br>All changes have been already synced.</p><p>Click to trigger sync.</p>",
+    "disconnected_with_changes": "<p>Establishing the connection to the sync server was unsuccessful.<br>There are some outstanding changes yet to be synced.</p><p>Click to trigger sync.</p>",
+    "disconnected_no_changes": "<p>Establishing the connection to the sync server was unsuccessful.<br>All known changes have been synced.</p><p>Click to trigger sync.</p>",
+    "in_progress": "Sync with the server is in progress."
   },
   "left_pane_toggle": {
     "show_panel": "Show panel",
@@ -664,6 +678,9 @@
     "delete_this_note": "Delete this note",
     "error_cannot_get_branch_id": "Cannot get branchId for notePath '{{notePath}}'",
     "error_unrecognized_command": "Unrecognized command {{command}}"
+  },
+  "note_icon": {
+    "change_note_icon": "Change note icon"
   },
   "basic_properties": {
     "note_type": "Note type",
@@ -1325,5 +1342,16 @@
     "toggle-on-hint": "Make the note a template",
     "toggle-off-hint": "Remove the note as a template"
   },
-  "open-help-page": "Open help page"
+  "open-help-page": "Open help page",
+  "find": {
+    "case_sensitive": "case sensitive",
+    "match_words": "match words"
+  },
+  "highlights_list_2": {
+    "title": "Highlights List",
+    "options": "Options"
+  },
+  "mermaid": {
+    "diagram_error": "The diagram could not be displayed. See <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">help and examples</a>."
+  }
 }
