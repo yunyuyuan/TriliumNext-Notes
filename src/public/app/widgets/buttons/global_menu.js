@@ -70,6 +70,7 @@ const TPL = `
         background-color: var(--button-background-color);
         padding: 3px;
         margin-left: 3px;
+        text-decoration: none;
     }
     
     .global-menu .zoom-buttons a:hover {
@@ -152,15 +153,15 @@ const TPL = `
             </div>
             
             <div class="zoom-buttons">
-                <a data-trigger-command="toggleFullscreen" title="${t('global_menu.toggle_fullscreen')}" class="bx bx-expand-alt text-decoration-none"></a>
+                <a data-trigger-command="toggleFullscreen" title="${t('global_menu.toggle_fullscreen')}" class="bx bx-expand-alt"></a>
                 
                 &nbsp;
                 
-                <a data-trigger-command="zoomOut" title="${t('global_menu.zoom_out')}" class="bx bx-minus text-decoration-none"></a>
+                <a data-trigger-command="zoomOut" title="${t('global_menu.zoom_out')}" class="bx bx-minus"></a>
                 
                 <span data-trigger-command="zoomReset" title="${t('global_menu.reset_zoom_level')}" class="zoom-state"></span>
                 
-                <a data-trigger-command="zoomIn" title="${t('global_menu.zoom_in')}" class="bx bx-plus text-decoration-none"></a>
+                <a data-trigger-command="zoomIn" title="${t('global_menu.zoom_in')}" class="bx bx-plus"></a>
             </div>
         </span>
 
