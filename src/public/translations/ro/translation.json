@@ -1318,5 +1318,25 @@
     "toggle-off-hint": "Înlătură notița ca șablon",
     "toggle-on-hint": "Marchează notița drept șablon"
   },
-  "open-help-page": "Deschide pagina de informații"
+  "open-help-page": "Deschide pagina de informații",
+  "find": {
+    "match_words": "doar cuvinte întregi",
+    "case_sensitive": "ține cont de majuscule"
+  },
+  "highlights_list_2": {
+    "options": "Setări",
+    "title": "Listă de evidențieri"
+  },
+  "mermaid": {
+    "diagram_error": "Diagrama nu a putut fi afișată. Vedeți <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">informații și exemple pe site-ul oficial</a>."
+  },
+  "note_icon": {
+    "change_note_icon": "Schimbă iconița notiței"
+  },
+  "show_highlights_list_widget_button": {
+    "show_highlights_list": "Afișează lista de evidențieri"
+  },
+  "show_toc_widget_button": {
+    "show_toc": "Afișează cuprinsul"
+  }
 }
