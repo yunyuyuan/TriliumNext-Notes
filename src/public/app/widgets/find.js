@@ -3,6 +3,7 @@
  * https://github.com/antoniotejada/Trilium-FindWidget
  */
 
+import { t } from "../services/i18n.js";
 import NoteContextAwareWidget from "./note_context_aware_widget.js";
 import FindInText from "./find_in_text.js";
 import FindInCode from "./find_in_code.js";
@@ -53,12 +54,12 @@ const TPL = `
         
         <div class="form-check">
             <input type="checkbox" class="form-check-input find-widget-case-sensitive-checkbox"> 
-            <label tabIndex="-1" class="form-check-label">case sensitive</label>
+            <label tabIndex="-1" class="form-check-label">${t('find.case_sensitive')}</label>
         </div>
 
         <div class="form-check">
             <input type="checkbox" class="form-check-input find-widget-match-words-checkbox">
-            <label tabIndex="-1" class="form-check-label">match words</label>
+            <label tabIndex="-1" class="form-check-label">${t('find.match_words')}</label>
         </div>
         
         <div class="find-widget-found-wrapper">
@@ -273,7 +274,7 @@ export default class FindWidget extends NoteContextAwareWidget {
 
     async entitiesReloadedEvent({loadResults}) {
         if (loadResults.isNoteContentReloaded(this.noteId)) {
-            this.$totalFound.text("?")  
-        } 
+            this.$totalFound.text("?")
+        }
     }
 }
