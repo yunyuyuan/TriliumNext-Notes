@@ -1365,5 +1365,8 @@
     "save-changes": "Salvează și aplică modificările",
     "scroll-active-title": "Mergi la notița activă",
     "tree-settings-title": "Setări ale ierarhiei notițelor"
+  },
+  "title_bar_buttons": {
+    "window-on-top": "Menține fereastra mereu vizibilă"
   }
 }

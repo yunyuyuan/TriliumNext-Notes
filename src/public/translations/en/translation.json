@@ -1365,5 +1365,8 @@
     "automatically-collapse-notes": "Automatically collapse notes",
     "automatically-collapse-notes-title": "Notes will be collapsed after period of inactivity to declutter the tree.",
     "save-changes": "Save & apply changes"
+  },
+  "title_bar_buttons": {
+    "window-on-top": "Keep this window on top."
   }
 }
