@@ -1343,5 +1343,8 @@
   "highlights_list_2": {
     "title": "高亮列表",
     "options": "选项"
+  },
+  "mermaid": {
+    "diagram_error": "图表无法显示。 请参考 <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">帮助文档和示例</a>。"
   }
 }
