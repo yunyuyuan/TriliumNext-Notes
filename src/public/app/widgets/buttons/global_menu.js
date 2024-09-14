@@ -70,6 +70,7 @@ const TPL = `
         background-color: var(--button-background-color);
         padding: 3px;
         margin-left: 3px;
+        text-decoration: none;
     }
     
     .global-menu .zoom-buttons a:hover {

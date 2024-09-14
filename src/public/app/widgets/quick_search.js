@@ -5,6 +5,7 @@ import froca from "../services/froca.js";
 import utils from "../services/utils.js";
 import appContext from "../components/app_context.js";
 import shortcutService from "../services/shortcuts.js";
+import { t } from "../services/i18n.js";
 
 const TPL = `
 <div class="quick-search input-group input-group-sm">
@@ -35,7 +36,7 @@ const TPL = `
     </button>
     <div class="dropdown-menu dropdown-menu-left"></div>
   </div>
-  <input type="text" class="form-control form-control-sm search-string" placeholder="Quick search">
+  <input type="text" class="form-control form-control-sm search-string" placeholder="${t("quick-search.placeholder")}">
 </div>`;
 
 const MAX_DISPLAYED_NOTES = 15;
@@ -94,7 +95,7 @@ export default class QuickSearchWidget extends BasicWidget {
         }
 
         this.$dropdownMenu.empty();
-        this.$dropdownMenu.append('<span class="dropdown-item disabled"><span class="bx bx-loader bx-spin"></span> Searching ...</span>');
+        this.$dropdownMenu.append(`<span class="dropdown-item disabled"><span class="bx bx-loader bx-spin"></span>${t("quick-search.searching")}</span>`);
 
         const { searchResultNoteIds, error } = await server.get(`quick-search/${encodeURIComponent(searchString)}`);
 
@@ -115,7 +116,7 @@ export default class QuickSearchWidget extends BasicWidget {
         this.$dropdownMenu.empty();
 
         if (displayedNoteIds.length === 0) {
-            this.$dropdownMenu.append('<span class="dropdown-item disabled">No results found</span>');
+            this.$dropdownMenu.append(`<span class="dropdown-item disabled">${t("quick-search.no-results")}</span>`);
         }
 
         for (const note of await froca.getNotes(displayedNoteIds)) {
@@ -140,11 +141,12 @@ export default class QuickSearchWidget extends BasicWidget {
         }
 
         if (searchResultNoteIds.length > MAX_DISPLAYED_NOTES) {
-            this.$dropdownMenu.append(`<span class="dropdown-item disabled">... and ${searchResultNoteIds.length - MAX_DISPLAYED_NOTES} more results.</span>`);
+            const numRemainingResults = (searchResultNoteIds.length - MAX_DISPLAYED_NOTES);
+            this.$dropdownMenu.append(`<span class="dropdown-item disabled">${t("quick-search.more-results", { number: numRemainingResults })}</span>`);
         }
 
         const $showInFullButton = $('<a class="dropdown-item" tabindex="0">')
-            .append($('<button class="btn btn-sm">Show in full search</button>'));
+            .append($(`<button class="btn btn-sm">${t("quick-search.show-in-full-search")}</button>`));
 
         this.$dropdownMenu.append($showInFullButton);
 

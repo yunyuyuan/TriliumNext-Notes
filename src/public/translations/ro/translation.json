@@ -1318,5 +1318,55 @@
     "toggle-off-hint": "Înlătură notița ca șablon",
     "toggle-on-hint": "Marchează notița drept șablon"
   },
-  "open-help-page": "Deschide pagina de informații"
+  "open-help-page": "Deschide pagina de informații",
+  "find": {
+    "match_words": "doar cuvinte întregi",
+    "case_sensitive": "ține cont de majuscule"
+  },
+  "highlights_list_2": {
+    "options": "Setări",
+    "title": "Listă de evidențieri"
+  },
+  "mermaid": {
+    "diagram_error": "Diagrama nu a putut fi afișată. Vedeți <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">informații și exemple pe site-ul oficial</a>."
+  },
+  "note_icon": {
+    "change_note_icon": "Schimbă iconița notiței",
+    "category": "Categorie:",
+    "reset-default": "Resetează la iconița implicită",
+    "search": "Căutare:"
+  },
+  "show_highlights_list_widget_button": {
+    "show_highlights_list": "Afișează lista de evidențieri"
+  },
+  "show_toc_widget_button": {
+    "show_toc": "Afișează cuprinsul"
+  },
+  "sync_status": {
+    "connected_no_changes": "<p>Conectat la server-ul de sincronizare.<br>Toate modificările au fost deja sincronizate.</p><p>Clic pentru a forța o sincronizare.</p>",
+    "connected_with_changes": "<p>Conectat la server-ul de sincronizare. <br>Există modificări nesincronizate.</p><p>Clic pentru a rula o sincronizare.</p>",
+    "disconnected_no_changes": "<p>Nu s-a putut stabili conexiunea la server-ul de sincronizare.<br>Toate modificările cunoscute au fost deja sincronizate.</p><p>Clic pentru a reîncerca sincronizarea.</p>",
+    "disconnected_with_changes": "<p>Nu s-a putut realiza conexiunea la server-ul de sincronizare.<br>Există modificări nesincronizate.</p><p>Clic pentru a rula o sincronizare.</p>",
+    "in_progress": "Sincronizare cu server-ul în curs.",
+    "unknown": "<p>Starea sincronizării va fi cunoscută după o încercare de sincronizare.</p><p>Clic pentru a rula sincronizarea acum.</p>"
+  },
+  "quick-search": {
+    "more-results": "... și încă {{number}} rezultate.",
+    "no-results": "Niciun rezultat găsit",
+    "placeholder": "Căutare rapidă",
+    "searching": "Se caută...",
+    "show-in-full-search": "Afișează în căutare completă"
+  },
+  "note_tree": {
+    "automatically-collapse-notes": "Minimează automat notițele",
+    "automatically-collapse-notes-title": "Notițele vor fi minimizate automat după o perioadă de inactivitate pentru a simplifica ierarhia notițelor.",
+    "collapse-title": "Minimizează ierarhia de notițe",
+    "hide-archived-notes": "Ascunde notițele arhivate",
+    "save-changes": "Salvează și aplică modificările",
+    "scroll-active-title": "Mergi la notița activă",
+    "tree-settings-title": "Setări ale ierarhiei notițelor"
+  },
+  "title_bar_buttons": {
+    "window-on-top": "Menține fereastra mereu vizibilă"
+  }
 }

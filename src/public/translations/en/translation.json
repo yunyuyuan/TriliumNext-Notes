@@ -683,7 +683,10 @@
     "error_unrecognized_command": "Unrecognized command {{command}}"
   },
   "note_icon": {
-    "change_note_icon": "Change note icon"
+    "change_note_icon": "Change note icon",
+    "category": "Category:",
+    "search": "Search:",
+    "reset-default": "Reset to default icon"
   },
   "basic_properties": {
     "note_type": "Note type",
@@ -1356,5 +1359,24 @@
   },
   "mermaid": {
     "diagram_error": "The diagram could not be displayed. See <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">help and examples</a>."
+  },
+  "quick-search": {
+    "placeholder": "Quick search",
+    "searching": "Searching...",
+    "no-results": "No results found",
+    "more-results": "... and {{number}} more results.",
+    "show-in-full-search": "Show in full search"
+  },
+  "note_tree": {
+    "collapse-title": "Collapse note tree",
+    "scroll-active-title": "Scroll to active note",
+    "tree-settings-title": "Tree settings",
+    "hide-archived-notes": "Hide archived notes",
+    "automatically-collapse-notes": "Automatically collapse notes",
+    "automatically-collapse-notes-title": "Notes will be collapsed after period of inactivity to declutter the tree.",
+    "save-changes": "Save & apply changes"
+  },
+  "title_bar_buttons": {
+    "window-on-top": "Keep this window on top."
   }
 }

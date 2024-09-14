@@ -1,7 +1,4 @@
 {
-  "keyboard-actions": {
-    "note-navigation": "Navigarea printre notițe"
-  },
   "keyboard_actions": {
     "activate-next-tab": "Activează tab-ul din dreapta",
     "activate-previous-tab": "Activează tab-ul din stânga",
