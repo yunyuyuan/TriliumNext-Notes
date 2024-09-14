@@ -237,7 +237,8 @@
     "help_text_body1": "Pentru a adăuga o etichetă doar scrieți, spre exemplu, <code>#piatră</code> sau <code>#an = 2020</code> dacă se dorește adăugarea unei valori",
     "help_text_body2": "Pentru relații, scrieți <code>author = @</code> ce va afișa o autocompletare pentru identificarea notiței dorite.",
     "help_text_body3": "În mod alternativ, se pot adăuga etichete și relații utilizând butonul <code>+</code> din partea dreaptă.",
-    "save_attributes": "Salvează atributele <enter>"
+    "save_attributes": "Salvează atributele <enter>",
+    "placeholder": "Aici puteți introduce etichete și relații"
   },
   "backend_log": {
     "refresh": "Reîmprospătare"
