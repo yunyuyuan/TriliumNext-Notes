@@ -8,7 +8,8 @@ import openService from "../../services/open.js";
 import protectedSessionHolder from "../../services/protected_session_holder.js";
 import BasicWidget from "../basic_widget.js";
 import dialogService from "../../services/dialog.js";
-
+import OnClickButtonWidget from "../buttons/onclick_button.js";
+import options from "../../services/options.js";
 const TPL = `
 <div class="revisions-dialog modal fade mx-auto" tabindex="-1" role="dialog">
     <style>
@@ -66,6 +67,11 @@ const TPL = `
                     <div class="revision-content"></div>
                 </div>
             </div>
+            <div class="modal-footer py-0">
+                <span class="revisions-snapshot-interval flex-grow-1 my-0 py-0"></span>
+                <span class="maximum-revisions-for-current-note flex-grow-1 my-0 py-0"></span>
+                <button class="revision-settings-button icon-action bx bx-cog my-0 py-0" title="${t("revisions.settings")}"></button>
+            </div>
         </div>
     </div>
 </div>`;
@@ -89,7 +95,9 @@ export default class RevisionsDialog extends BasicWidget {
         this.$title = this.$widget.find(".revision-title");
         this.$titleButtons = this.$widget.find(".revision-title-buttons");
         this.$eraseAllRevisionsButton = this.$widget.find(".revisions-erase-all-revisions-button");
-
+        this.$snapshotInterval = this.$widget.find(".revisions-snapshot-interval");
+        this.$maximumRevisions = this.$widget.find(".maximum-revisions-for-current-note");
+        this.$revisionSettingsButton = this.$widget.find(".revision-settings-button")
         this.$listDropdown.dropdown();
 
         this.$listDropdown.parent().on('hide.bs.dropdown', e => {
@@ -128,6 +136,10 @@ export default class RevisionsDialog extends BasicWidget {
 
             this.setContentPane();
         });
+
+        this.$revisionSettingsButton.on('click', async () => {
+            appContext.tabManager.openContextWithNote('_optionsOther', {activate: true});
+        });
     }
 
     async showRevisionsEvent({ noteId = appContext.tabManager.getActiveContextNoteId() }) {
@@ -165,6 +177,17 @@ export default class RevisionsDialog extends BasicWidget {
         }
 
         this.$eraseAllRevisionsButton.toggle(this.revisionItems.length > 0);
+
+        // Show the footer of the revisions dialog
+        this.$snapshotInterval.text(t("revisions.snapshot_interval", { seconds: options.getInt('revisionSnapshotTimeInterval') }))
+        let revisionsNumberLimit = parseInt(this.note.getLabelValue("versioningLimit") ?? "");
+        if (!Number.isInteger(revisionsNumberLimit)) {
+            revisionsNumberLimit = parseInt(options.getInt('revisionSnapshotNumberLimit'));
+        }
+        if (revisionsNumberLimit === -1) {
+            revisionsNumberLimit = "∞"
+        }
+        this.$maximumRevisions.text(t("revisions.maximum_revisions", { number: revisionsNumberLimit }))
     }
 
     async setContentPane() {
