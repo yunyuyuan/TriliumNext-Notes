@@ -138,7 +138,7 @@ export default class RevisionsDialog extends BasicWidget {
         });
 
         this.$revisionSettingsButton.on('click', async () => {
-            appContext.tabManager.openContextWithNote('_optionsOther', {activate: true});
+            appContext.tabManager.openContextWithNote('_optionsOther', { activate: true });
         });
     }
 
@@ -268,12 +268,19 @@ export default class RevisionsDialog extends BasicWidget {
         } else if (revisionItem.type === 'code') {
             this.$content.html($("<pre>").text(fullRevision.content));
         } else if (revisionItem.type === 'image') {
-            this.$content.html($("<img>")
-                // the reason why we put this inline as base64 is that we do not want to let user copy this
-                // as a URL to be used in a note. Instead, if they copy and paste it into a note, it will be uploaded as a new note
-                .attr("src", `data:${fullRevision.mime};base64,${fullRevision.content}`)
-                .css("max-width", "100%")
-                .css("max-height", "100%"));
+            if (fullRevision.mime === "image/svg+xml") {
+                this.$content.html($("<img>")
+                    .attr("src", `data:${fullRevision.mime};utf8,${fullRevision.content}`)
+                    .css("max-width", "100%")
+                    .css("max-height", "100%"));
+            } else {
+                this.$content.html($("<img>")
+                    // the reason why we put this inline as base64 is that we do not want to let user copy this
+                    // as a URL to be used in a note. Instead, if they copy and paste it into a note, it will be uploaded as a new note
+                    .attr("src", `data:${fullRevision.mime};base64,${fullRevision.content}`)
+                    .css("max-width", "100%")
+                    .css("max-height", "100%"));
+            }
         } else if (revisionItem.type === 'file') {
             const $table = $("<table cellpadding='10'>")
                 .append($("<tr>").append(
