@@ -114,7 +114,7 @@ function eraseRevision(req: Request) {
 }
 
 function eraseAllExcessRevisions() {
-    let allNoteIds = sql.getRows('SELECT noteId FROM notes') as { noteId: string }[];
+    let allNoteIds = sql.getRows("SELECT noteId FROM notes WHERE SUBSTRING(noteId, 1, 1) != '_'") as { noteId: string }[];
     allNoteIds.forEach(row => {
         becca.getNote(row.noteId)?.eraseExcessRevisionSnapshots()
     });
