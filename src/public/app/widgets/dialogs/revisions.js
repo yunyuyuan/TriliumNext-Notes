@@ -269,8 +269,9 @@ export default class RevisionsDialog extends BasicWidget {
             this.$content.html($("<pre>").text(fullRevision.content));
         } else if (revisionItem.type === 'image') {
             if (fullRevision.mime === "image/svg+xml") {
+                let encodedSVG = encodeURIComponent(fullRevision.content); //Base64 of other format images may be embedded in svg
                 this.$content.html($("<img>")
-                    .attr("src", `data:${fullRevision.mime};utf8,${fullRevision.content}`)
+                    .attr("src", `data:${fullRevision.mime};utf8,${encodedSVG}`)
                     .css("max-width", "100%")
                     .css("max-height", "100%"));
             } else {
