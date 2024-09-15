@@ -8,8 +8,8 @@ import openService from "../../services/open.js";
 import protectedSessionHolder from "../../services/protected_session_holder.js";
 import BasicWidget from "../basic_widget.js";
 import dialogService from "../../services/dialog.js";
-import OnClickButtonWidget from "../buttons/onclick_button.js";
 import options from "../../services/options.js";
+
 const TPL = `
 <div class="revisions-dialog modal fade mx-auto" tabindex="-1" role="dialog">
     <style>
@@ -91,6 +91,7 @@ export default class RevisionsDialog extends BasicWidget {
 
         this.$list = this.$widget.find(".revision-list");
         this.$listDropdown = this.$widget.find(".revision-list-dropdown");
+        this.listDropdown = bootstrap.Dropdown.getOrCreateInstance(this.$listDropdown);
         this.$content = this.$widget.find(".revision-content");
         this.$title = this.$widget.find(".revision-title");
         this.$titleButtons = this.$widget.find(".revision-title-buttons");
@@ -98,14 +99,20 @@ export default class RevisionsDialog extends BasicWidget {
         this.$snapshotInterval = this.$widget.find(".revisions-snapshot-interval");
         this.$maximumRevisions = this.$widget.find(".maximum-revisions-for-current-note");
         this.$revisionSettingsButton = this.$widget.find(".revision-settings-button")
-        this.$listDropdown.dropdown();
+        this.listDropdown.show();
 
         this.$listDropdown.parent().on('hide.bs.dropdown', e => {
-            // prevent closing dropdown by clicking outside
-            if (e.clickEvent) {
-                e.preventDefault();
-            }
+            // Prevent closing dropdown by pressing ESC and clicking outside
+            e.preventDefault();
         });
+
+        document.addEventListener('keydown', e => {
+            // Close the revision dialog when revision element is focused and ESC is pressed
+            if (e.key === 'Escape' ||
+                e.target.classList.contains(['dropdown-item', 'active'])) {
+                this.modal.hide();
+            }
+        }, true)
 
         this.$widget.on('shown.bs.modal', () => {
             this.$list.find(`[data-revision-id="${this.revisionId}"]`)
@@ -122,11 +129,6 @@ export default class RevisionsDialog extends BasicWidget {
 
                 toastService.showMessage(t("revisions.revisions_deleted"));
             }
-        });
-
-        this.$list.on('click', '.dropdown-item', e => {
-            e.preventDefault();
-            return false;
         });
 
         this.$list.on('focus', '.dropdown-item', e => {
@@ -165,7 +167,7 @@ export default class RevisionsDialog extends BasicWidget {
             );
         }
 
-        this.$listDropdown.dropdown('show');
+        this.listDropdown.show();
 
         if (this.revisionItems.length > 0) {
             if (!this.revisionId) {
