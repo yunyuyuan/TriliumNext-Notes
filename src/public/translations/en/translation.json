@@ -660,6 +660,9 @@
   "hide_floating_buttons_button": {
     "button_title": "Hide buttons"
   },
+  "show_floating_buttons_button": {
+    "button_title": "Show buttons"
+  },
   "svg_export_button": {
     "button_title": "Export diagram as SVG"
   },
