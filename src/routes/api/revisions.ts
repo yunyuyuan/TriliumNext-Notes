@@ -2,7 +2,6 @@
 
 import beccaService from "../../becca/becca_service.js";
 import revisionService from "../../services/revisions.js";
-import optionService from "../../services/options.js";
 import utils from "../../services/utils.js";
 import sql from "../../services/sql.js";
 import cls from "../../services/cls.js";
@@ -147,6 +146,8 @@ function restoreRevision(req: Request) {
             }
 
             note.title = revision.title;
+            note.mime = revision.mime;
+            note.type = revision.type as any;
             note.setContent(revisionContent, { forceSave: true });
         });
     }
