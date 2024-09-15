@@ -1109,7 +1109,7 @@ class BNote extends AbstractBeccaEntity<BNote> {
     }
 
     getRevisions(): BRevision[] {
-        return sql.getRows<RevisionRow>("SELECT * FROM revisions WHERE noteId = ?", [this.noteId])
+        return sql.getRows<RevisionRow>("SELECT * FROM revisions WHERE noteId = ? ORDER BY revisions.utcDateCreated ASC", [this.noteId])
             .map(row => new BRevision(row));
     }
 
