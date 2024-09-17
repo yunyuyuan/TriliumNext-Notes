@@ -175,7 +175,7 @@ const editorConfig = {
     toolbar: {
         items: []
     },
-    placeholder: "Type the labels and relations here",
+    placeholder: t("attribute_editor.placeholder"),
     mention: mentionSetup
 };
 

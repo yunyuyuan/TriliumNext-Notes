@@ -280,7 +280,9 @@ export default class GlobalMenuWidget extends BasicWidget {
             this.dropdown.toggle();
         });
         this.$widget.on('click', '.dropdown-submenu', e => {
-            e.stopPropagation();
+            if ($(e.target).children(".dropdown-menu").length === 1 || $(e.target).hasClass('dropdown-toggle')) {
+                e.stopPropagation();
+            }
         })
 
         this.$widget.find(".global-menu-button-update-available").append(

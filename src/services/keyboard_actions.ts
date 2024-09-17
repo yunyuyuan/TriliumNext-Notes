@@ -18,6 +18,10 @@ const isElectron = utils.isElectron();
  * e.g. CTRL-C in note tree does something a bit different from CTRL-C in the text editor.
  */
 
+if (!t("keyboard_actions.note-navigation")) {
+    throw new Error("Keyboard actions loaded before translations.");
+}
+
 const DEFAULT_KEYBOARD_ACTIONS: KeyboardShortcut[] = [
     {
         separator: t("keyboard_actions.note-navigation")

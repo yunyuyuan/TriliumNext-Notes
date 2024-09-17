@@ -411,7 +411,8 @@
     "add_new_label": "Add new label <kbd data-command=\"addNewLabel\"></kbd>",
     "add_new_relation": "Add new relation <kbd data-command=\"addNewRelation\"></kbd>",
     "add_new_label_definition": "Add new label definition",
-    "add_new_relation_definition": "Add new relation definition"
+    "add_new_relation_definition": "Add new relation definition",
+    "placeholder": "Type the labels and relations here"
   },
   "abstract_bulk_action": {
     "remove_this_search_action": "Remove this search action"
@@ -661,6 +662,9 @@
   },
   "hide_floating_buttons_button": {
     "button_title": "Hide buttons"
+  },
+  "show_floating_buttons_button": {
+    "button_title": "Show buttons"
   },
   "svg_export_button": {
     "button_title": "Export diagram as SVG"
