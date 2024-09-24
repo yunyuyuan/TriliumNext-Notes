@@ -1372,5 +1372,24 @@
   },
   "title_bar_buttons": {
     "window-on-top": "Keep this window on top."
+  },
+  "note_detail": {
+    "could_not_find_typewidget": "Could not find typeWidget for type '{{type}}'"
+  },
+  "note_title": {
+    "placeholder": "type note's title here..."
+  },
+  "search_result": {
+    "no_notes_found": "No notes have been found for given search parameters.",
+    "search_not_executed": "Search has not been executed yet. Click on \"Search\" button above to see the results."
+  },
+  "spacer": {
+    "configure_launchbar": "Configure Launchbar"
+  },
+  "sql_result": {
+    "no_rows": "No rows have been returned for this query"
+  },
+  "sql_table_schemas": {
+    "tables": "Tables"
   }
 }
