@@ -1,3 +1,4 @@
+import { t } from "../services/i18n.js";
 import NoteContextAwareWidget from "./note_context_aware_widget.js";
 import protectedSessionHolder from "../services/protected_session_holder.js";
 import SpacedUpdate from "../services/spaced_update.js";
@@ -155,7 +156,7 @@ export default class NoteDetailWidget extends NoteContextAwareWidget {
 
     getTypeWidget() {
         if (!this.typeWidgets[this.type]) {
-            throw new Error(`Could not find typeWidget for type '${this.type}'`);
+            throw new Error(t(`note_detail.could_not_find_typewidget`, { type: this.type }));
         }
 
         return this.typeWidgets[this.type];

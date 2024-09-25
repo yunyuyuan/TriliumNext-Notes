@@ -408,7 +408,8 @@
     "add_new_label": "添加新标签 <kbd data-command=\"addNewLabel\"></kbd>",
     "add_new_relation": "添加新关系 <kbd data-command=\"addNewRelation\"></kbd>",
     "add_new_label_definition": "添加新标签定义",
-    "add_new_relation_definition": "添加新关系定义"
+    "add_new_relation_definition": "添加新关系定义",
+    "placeholder": "在此输入标签和关系"
   },
   "abstract_bulk_action": {
     "remove_this_search_action": "删除此搜索操作"
@@ -659,6 +660,9 @@
   "hide_floating_buttons_button": {
     "button_title": "隐藏按钮"
   },
+  "show_floating_buttons_button": {
+    "button_title": "显示按钮"
+  },
   "svg_export_button": {
     "button_title": "导出SVG格式图片"
   },
@@ -680,7 +684,10 @@
     "error_unrecognized_command": "无法识别的命令 {{command}}"
   },
   "note_icon": {
-    "change_note_icon": "更改笔记图标"
+    "change_note_icon": "更改笔记图标",
+    "category": "类别:",
+    "search": "搜索:",
+    "reset-default": "重置为默认图标"
   },
   "basic_properties": {
     "note_type": "笔记类型",
@@ -1346,5 +1353,43 @@
   },
   "mermaid": {
     "diagram_error": "图表无法显示。 请参考 <a href=\"https://mermaid-js.github.io/mermaid/#/flowchart?id=graph\">帮助文档和示例</a>。"
+  },
+  "quick-search": {
+    "placeholder": "快速搜索",
+    "searching": "正在搜索...",
+    "no-results": "未找到结果",
+    "more-results": "... 以及另外 {{number}} 个结果。",
+    "show-in-full-search": "在完整的搜索界面中显示"
+  },
+  "note_tree": {
+    "collapse-title": "折叠笔记树",
+    "scroll-active-title": "滚动到活动笔记",
+    "tree-settings-title": "树设置",
+    "hide-archived-notes": "隐藏已归档笔记",
+    "automatically-collapse-notes": "自动折叠笔记",
+    "automatically-collapse-notes-title": "笔记在一段时间内未使用将被折叠，以减少树形结构的杂乱。",
+    "save-changes": "保存并应用更改"
+  },
+  "title_bar_buttons": {
+    "window-on-top": "保持此窗口置顶"
+  },
+  "note_detail": {
+    "could_not_find_typewidget": "找不到类型为 '{{type}}' 的 typeWidget"
+  },
+  "note_title": {
+    "placeholder": "请输入笔记标题..."
+  },
+  "search_result": {
+    "no_notes_found": "没有找到符合搜索条件的笔记。",
+    "search_not_executed": "尚未执行搜索。请点击上方的\"搜索\"按钮查看结果。"
+  },
+  "spacer": {
+    "configure_launchbar": "配置启动栏"
+  },
+  "sql_result": {
+    "no_rows": "此查询没有返回任何数据"
+  },
+  "sql_table_schemas": {
+    "tables": "表"
   }
 }
