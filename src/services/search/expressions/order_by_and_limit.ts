@@ -68,8 +68,16 @@ class OrderByAndLimitExp extends Expression {
                     return larger;
                 }
 
+                
+                // if both are dates, then parse them for dates comparison
+                if (typeof valA === "string" && this.isDate(valA) &&
+                    typeof valB === "string" && this.isDate(valB)) {
+                    valA = new Date(valA);
+                    valB = new Date(valB);
+                }
+
                 // if both are numbers, then parse them for numerical comparison
-                if (typeof valA === "string" && this.isNumber(valA) &&
+                else if (typeof valA === "string" && this.isNumber(valA) &&
                     typeof valB === "string" && this.isNumber(valB)) {
                     valA = parseFloat(valA);
                     valB = parseFloat(valB);
@@ -97,6 +105,10 @@ class OrderByAndLimitExp extends Expression {
         noteSet.sorted = true;
 
         return noteSet;
+    }
+
+    isDate(date: number | string) {
+      return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
     }
 
     isNumber(x: number | string) {
