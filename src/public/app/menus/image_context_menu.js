@@ -22,22 +22,28 @@ function setupContextMenu($image) {
                     command: "copyImageReferenceToClipboard",
                     uiIcon: "bx bx-empty"
                 },
-                {title: "Copy image to clipboard", command: "copyImageToClipboard", uiIcon: "bx bx-empty"},
+                { title: "Copy image to clipboard", command: "copyImageToClipboard", uiIcon: "bx bx-empty" },
             ],
-            selectMenuItemHandler: async ({command}) => {
+            selectMenuItemHandler: async ({ command }) => {
                 if (command === 'copyImageReferenceToClipboard') {
                     imageService.copyImageReferenceToClipboard($image);
                 } else if (command === 'copyImageToClipboard') {
                     try {
-                        const imageUrl = $image.attr('src');
-                        const response = await fetch(imageUrl);
-                        const blob = await response.blob();
-                        const arrayBuffer = await blob.arrayBuffer();
-                        const buffer = Buffer.from(arrayBuffer);
                         const nativeImage = utils.dynamicRequire('electron').nativeImage;
                         const clipboard = utils.dynamicRequire('electron').clipboard;
-                        const image = nativeImage.createFromBuffer(buffer);
-                        clipboard.writeImage(image);
+
+                        const response = await fetch(
+                            $image.attr('src')
+                        );
+                        const blob = await response.blob();
+
+                        clipboard.writeImage(
+                            nativeImage.createFromBuffer(
+                                Buffer.from(
+                                    await blob.arrayBuffer()
+                                )
+                            )
+                        );
                     } catch (error) {
                         console.error('Failed to copy image to clipboard:', error);
                     }
