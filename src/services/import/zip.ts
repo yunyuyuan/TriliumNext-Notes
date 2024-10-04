@@ -456,12 +456,11 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
             return;
         }
 
-        let { mime } = noteMeta ? noteMeta : detectFileTypeAndMime(taskContext, filePath);
+        let { mime, type } = noteMeta ? noteMeta : detectFileTypeAndMime(taskContext, filePath);
+        type = resolveNoteType(type);
         if (mime == null) {
             throw new Error("Unable to resolve mime type.");
         }
-
-        let type = resolveNoteType(noteMeta?.type);
 
         if (type !== 'file' && type !== 'image') {
             content = content.toString("utf-8");
