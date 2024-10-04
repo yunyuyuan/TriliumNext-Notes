@@ -478,7 +478,7 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
             // only skeleton was created because of altered order of cloned notes in ZIP, we need to update
             // https://github.com/zadam/trilium/issues/2440
             if (note.type === undefined) {
-                note.type = type;
+                note.type = type as NoteType;
                 note.mime = mime;
                 note.title = noteTitle || "";
                 note.isProtected = isProtected;
@@ -503,7 +503,7 @@ async function importZip(taskContext: TaskContext, fileBuffer: Buffer, importRoo
                 title: noteTitle || "",
                 content: content,
                 noteId,
-                type,
+                type: type as NoteType,
                 mime,
                 prefix: noteMeta?.prefix || '',
                 isExpanded: !!noteMeta?.isExpanded,
