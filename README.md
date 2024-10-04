@@ -82,12 +82,18 @@ You can also read [Patterns of personal knowledge base](https://triliumnext.gith
 
 ## 💻 Contribute
 
-Clone locally and run
+### Code
 
 ```shell
+git clone https://github.com/TriliumNext/Notes.git
+cd Notes
 npm install
 npm run start-server
 ```
+
+### Documentation
+
+Head on over to our [Docs repo](https://github.com/TriliumNext/Docs)
 
 ## 👏 Shoutouts
 
