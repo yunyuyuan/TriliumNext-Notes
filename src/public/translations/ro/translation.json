@@ -784,7 +784,7 @@
     "open_note_externally_title": "Fișierul va fi deschis într-o aplicație externă și urmărită pentru modificări. Ulterior se va putea încărca versiunea modificată înapoi în Trilium.",
     "print_note": "Imprimare notiță",
     "re_render_note": "Reinterpretare notiță",
-    "save_revision": "Salvează revizia",
+    "save_revision": "Salvează o nouă revizie",
     "search_in_note": "Caută în notiță"
   },
   "note_erasure_timeout": {
