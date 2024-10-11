@@ -5,10 +5,12 @@ on:
     - cron: '0 2 * * *' # run at 2 AM UTC
   # This can be used to allow manually triggering nightlies from the web interface
   workflow_dispatch:
-
+env:
+  GITHUB_UPLOAD_URL: https://uploads.github.com/repos/TriliumNext/Notes/releases/179589950/assets{?name,label}
+  GITHUB_RELEASE_ID: 179589950
 jobs:
   nightly-electron:
-    name: Deploy nightly
+    name: Deploy nightly    
     strategy:
       fail-fast: false
       matrix:
@@ -23,7 +25,7 @@ jobs:
           - name: windows
             image: windows-latest
             extension: exe
-    runs-on: ${{ matrix.os.image }}
+    runs-on: ${{ matrix.os.image }}    
     steps:
       - uses: actions/checkout@v4
       - name: Set up node & dependencies
@@ -71,16 +73,16 @@ jobs:
       - name: Deploy release
         uses: WebFreak001/deploy-nightly@v3.1.0
         with:
-          # upload_url:  # find out this value by opening https://api.github.com/repos/<owner>/<repo>/releases in your browser and copy the full "upload_url" value including the {?name,label} part
-          # release_id:  # same as above (id can just be taken out the upload_url, it's used to find old releases)
+          upload_url: ${{ env.GITHUB_UPLOAD_URL }}
+          release_id: ${{ env.GITHUB_RELEASE_ID }}
           asset_path: upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}.zip # path to archive to upload
           asset_name: TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-nightly.zip # name to upload the release as, use $$ to insert date (YYYYMMDD) and 6 letter commit hash
           asset_content_type: application/zip # required by GitHub API
       - name: Deploy installer release
         uses: WebFreak001/deploy-nightly@v3.1.0
         with:
-          # upload_url:  # find out this value by opening https://api.github.com/repos/<owner>/<repo>/releases in your browser and copy the full "upload_url" value including the {?name,label} part
-          # release_id:  # same as above (id can just be taken out the upload_url, it's used to find old releases)
+          upload_url: ${{ env.GITHUB_UPLOAD_URL }}
+          release_id: ${{ env.GITHUB_RELEASE_ID }}
           asset_path: upload/TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}.${{ matrix.os.extension }} # path to archive to upload
           asset_name: TriliumNextNotes-${{ matrix.os.name }}-${{ matrix.arch }}-nightly.${{ matrix.os.extension }} # name to upload the release as, use $$ to insert date (YYYYMMDD) and 6 letter commit hash
           asset_content_type: application/zip # required by GitHub API
@@ -115,8 +117,8 @@ jobs:
       - name: Deploy release
         uses: WebFreak001/deploy-nightly@v3.1.0
         with:
-          # upload_url:  # find out this value by opening https://api.github.com/repos/<owner>/<repo>/releases in your browser and copy the full "upload_url" value including the {?name,label} part
-          # release_id:  # same as above (id can just be taken out the upload_url, it's used to find old releases)
+          upload_url: ${{ env.GITHUB_UPLOAD_URL }}
+          release_id: ${{ env.GITHUB_RELEASE_ID }}
           asset_path: upload/TriliumNextNotes-linux-x64-${{ github.ref_name }}.tar.xz # path to archive to upload
           asset_name: TriliumNextNotes-linux-x64-nightly.zip # name to upload the release as, use $$ to insert date (YYYYMMDD) and 6 letter commit hash
           asset_content_type: application/zip # required by GitHub API
