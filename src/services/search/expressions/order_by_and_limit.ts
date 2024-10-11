@@ -46,8 +46,8 @@ class OrderByAndLimitExp extends Expression {
 
         notes.sort((a, b) => {
             for (const {valueExtractor, smaller, larger} of this.orderDefinitions) {
-                let valA = valueExtractor.extract(a);
-                let valB = valueExtractor.extract(b);
+                let valA: string | number | Date | null = valueExtractor.extract(a);
+                let valB: string | number | Date | null = valueExtractor.extract(b);
 
                 if (valA === undefined) {
                     valA = null;
@@ -108,7 +108,7 @@ class OrderByAndLimitExp extends Expression {
     }
 
     isDate(date: number | string) {
-      return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
+      return !isNaN(new Date(date).getTime());
     }
 
     isNumber(x: number | string) {
