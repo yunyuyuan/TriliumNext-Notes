@@ -3,6 +3,7 @@ import ZoomFactorOptions from "./options/appearance/zoom_factor.js";
 import NativeTitleBarOptions from "./options/appearance/native_title_bar.js";
 import ThemeOptions from "./options/appearance/theme.js";
 import FontsOptions from "./options/appearance/fonts.js";
+import OpenNoteActionOptions from "./options/appearance/open_note_action.js";
 import MaxContentWidthOptions from "./options/appearance/max_content_width.js";
 import KeyboardShortcutsOptions from "./options/shortcuts.js";
 import HeadingStyleOptions from "./options/text_notes/heading_style.js";
@@ -58,6 +59,7 @@ const CONTENT_WIDGETS = {
     _optionsAppearance: [
         LocalizationOptions,
         ThemeOptions,
+        OpenNoteActionOptions,
         FontsOptions,
         ZoomFactorOptions,
         NativeTitleBarOptions,

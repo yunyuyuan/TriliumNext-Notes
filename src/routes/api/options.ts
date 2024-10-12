@@ -18,6 +18,7 @@ const ALLOWED_OPTIONS = new Set([
     'syncServerTimeout',
     'syncProxy',
     'hoistedNoteId',
+    'openNoteAction',
     'mainFontSize',
     'mainFontFamily',
     'treeFontSize',

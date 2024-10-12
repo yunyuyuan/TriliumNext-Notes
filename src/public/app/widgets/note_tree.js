@@ -375,10 +375,14 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
 
                 this.clearSelectedNodes();
 
-                const notePath = treeService.getNotePath(data.node);
+                if (options.get('openNoteAction') === 'new') {
+                    const notePath = treeService.getNotePath(data.node);
 
-                const activeNoteContext = appContext.tabManager.getActiveContext();
-                await activeNoteContext.setNote(notePath);
+                    const activeNoteContext = appContext.tabManager.getActiveContext();
+                    await activeNoteContext.setNote(notePath);
+                } else {
+                    await appContext.tabManager.activateOrOpenNote(data.node.data.noteId);
+                }
             },
             expand: (event, data) => this.setExpanded(data.node.data.branchId, true),
             collapse: (event, data) => this.setExpanded(data.node.data.branchId, false),

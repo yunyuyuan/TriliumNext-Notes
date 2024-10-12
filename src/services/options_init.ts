@@ -61,6 +61,7 @@ const defaultOptions: DefaultOption[] = [
     { name: 'detailFontSize', value: '110', isSynced: false },
     { name: 'monospaceFontFamily', value: 'theme', isSynced: false },
     { name: 'monospaceFontSize', value: '110', isSynced: false },
+    { name: 'openNoteAction', value: 'new', isSynced: false },
     { name: 'spellCheckEnabled', value: 'true', isSynced: false },
     { name: 'spellCheckLanguageCode', value: 'en-US', isSynced: false },
     { name: 'imageMaxWidthHeight', value: '2000', isSynced: true },
